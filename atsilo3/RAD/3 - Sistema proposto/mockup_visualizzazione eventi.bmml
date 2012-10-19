@@ -13,7 +13,7 @@
     </control>
     <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="75" y="97" w="232" h="132" measuredW="771" measuredH="485" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
-        <src>../../logo1.png</src>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
       </controlProperties>
     </control>
     <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="283" y="235" w="654" h="360" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
