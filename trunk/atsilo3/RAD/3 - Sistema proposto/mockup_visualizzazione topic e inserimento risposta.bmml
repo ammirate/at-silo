@@ -13,7 +13,7 @@
     </control>
     <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="75" y="97" w="232" h="132" measuredW="771" measuredH="485" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
-        <src>../../../../../../Universit%25C3%25A0/IS/Progetto/atsilo3/logo1.png</src>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
       </controlProperties>
     </control>
     <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="283" y="235" w="654" h="487" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
@@ -32,7 +32,7 @@
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Image" x="0" y="17" w="40" h="40" measuredW="512" measuredH="512" zOrder="0" locked="false" isInGroup="16">
           <controlProperties>
             <bold>true</bold>
-            <src>../../../../../../Universit%25C3%25A0/IS/Progetto/atsilo3/User-icon.png</src>
+            <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/User-icon.png</src>
           </controlProperties>
         </control>
         <control controlID="1" controlTypeID="com.balsamiq.mockups::Tooltip" x="40" y="0" w="132" h="35" measuredW="76" measuredH="0" zOrder="1" locked="false" isInGroup="16">
@@ -64,7 +64,7 @@
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Image" x="0" y="17" w="40" h="40" measuredW="512" measuredH="512" zOrder="0" locked="false" isInGroup="21">
           <controlProperties>
             <bold>true</bold>
-            <src>../../../../../../Universit%25C3%25A0/IS/Progetto/atsilo3/User-icon.png</src>
+            <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/User-icon.png</src>
           </controlProperties>
         </control>
         <control controlID="1" controlTypeID="com.balsamiq.mockups::Tooltip" x="40" y="0" w="132" h="35" measuredW="103" measuredH="0" zOrder="1" locked="false" isInGroup="21">
@@ -80,7 +80,7 @@
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Image" x="0" y="17" w="40" h="40" measuredW="512" measuredH="512" zOrder="0" locked="false" isInGroup="22">
           <controlProperties>
             <bold>true</bold>
-            <src>../../../../../../Universit%25C3%25A0/IS/Progetto/atsilo3/User-icon.png</src>
+            <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/User-icon.png</src>
           </controlProperties>
         </control>
         <control controlID="1" controlTypeID="com.balsamiq.mockups::Tooltip" x="40" y="0" w="132" h="35" measuredW="106" measuredH="0" zOrder="1" locked="false" isInGroup="22">
@@ -96,7 +96,7 @@
         <control controlID="0" controlTypeID="com.balsamiq.mockups::Image" x="0" y="17" w="40" h="40" measuredW="512" measuredH="512" zOrder="0" locked="false" isInGroup="23">
           <controlProperties>
             <bold>true</bold>
-            <src>../../../../../../Universit%25C3%25A0/IS/Progetto/atsilo3/User-icon.png</src>
+            <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/User-icon.png</src>
           </controlProperties>
         </control>
         <control controlID="1" controlTypeID="com.balsamiq.mockups::Tooltip" x="40" y="0" w="221" h="35" measuredW="206" measuredH="0" zOrder="1" locked="false" isInGroup="23">
