@@ -22,57 +22,111 @@
         <text>Cosa%20succede%20a%20scuola...</text>
       </controlProperties>
     </control>
-    <control controlID="10" controlTypeID="com.balsamiq.mockups::StickyNote" x="742" y="409" w="109" h="148" measuredW="109" measuredH="123" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::StickyNote" x="828" y="391" w="109" h="148" measuredW="109" measuredH="123" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Come%20con%20gli%20avatar%20per%20gli%20utenti%20si%20seleziona%20un%27icona%20per%20gli%20eventi</text>
       </controlProperties>
     </control>
-    <control controlID="15" controlTypeID="com.balsamiq.mockups::IconLabel" x="307" y="250" w="-1" h="-1" measuredW="56" measuredH="69" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::StickyNote" x="810" y="255" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
+        <text>Il%20creatore%20di%20un%20evento%20cliccandoci%20pu%F2%20modificarlo</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Calendar" x="337" y="250" w="227" h="181" measuredW="96" measuredH="96" zOrder="7" locked="false" isInGroup="-1"/>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::IconLabel" x="950" y="206" w="54" h="-1" measuredW="48" measuredH="63" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>8</size>
         <text>Evento%201</text>
       </controlProperties>
     </control>
-    <control controlID="16" controlTypeID="com.balsamiq.mockups::IconLabel" x="307" y="334" w="-1" h="-1" measuredW="58" measuredH="69" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::IconLabel" x="950" y="262" w="54" h="-1" measuredW="48" measuredH="63" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>8</size>
         <text>Evento%202</text>
       </controlProperties>
     </control>
-    <control controlID="17" controlTypeID="com.balsamiq.mockups::IconLabel" x="307" y="418" w="-1" h="-1" measuredW="57" measuredH="69" zOrder="8" locked="false" isInGroup="-1">
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::IconLabel" x="950" y="319" w="54" h="-1" measuredW="48" measuredH="63" zOrder="10" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>8</size>
         <text>Evento%203</text>
       </controlProperties>
     </control>
-    <control controlID="20" controlTypeID="com.balsamiq.mockups::Image" x="371" y="289" w="17" h="16" measuredW="77" measuredH="79" zOrder="9" locked="false" isInGroup="-1"/>
-    <control controlID="21" controlTypeID="com.balsamiq.mockups::Tooltip" x="388" y="250" w="169" h="33" measuredW="110" measuredH="51" zOrder="10" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Image" x="993" y="232" w="11" h="11" measuredW="77" measuredH="79" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Tooltip" x="1004" y="206" w="114" h="22" measuredW="112" measuredH="0" zOrder="12" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>8</size>
         <text>descrizione%20evento</text>
         <tooltipDirection>SW</tooltipDirection>
       </controlProperties>
     </control>
-    <control controlID="22" controlTypeID="com.balsamiq.mockups::Label" x="477" y="283" w="80" h="21" measuredW="67" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="1064" y="228" w="53" h="14" measuredW="44" measuredH="15" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>8</size>
         <text>Data%20e%20ora</text>
       </controlProperties>
     </control>
-    <control controlID="23" controlTypeID="com.balsamiq.mockups::Arrow" x="397" y="305" w="65" h="23" measuredW="150" measuredH="100" zOrder="12" locked="false" isInGroup="-1">
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Arrow" x="1010" y="243" w="43" h="15" measuredW="150" measuredH="100" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <direction>top</direction>
       </controlProperties>
     </control>
-    <control controlID="24" controlTypeID="com.balsamiq.mockups::StickyNote" x="476" y="308" w="-1" h="-1" measuredW="109" measuredH="123" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::StickyNote" x="1064" y="246" w="100" h="97" measuredW="109" measuredH="123" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Avatar%20organizzatore%20evento</text>
       </controlProperties>
     </control>
-    <control controlID="25" controlTypeID="com.balsamiq.mockups::IconLabel" x="288" y="504" w="-1" h="-1" measuredW="94" measuredH="69" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::IconLabel" x="937" y="377" w="73" h="-1" measuredW="62" measuredH="63" zOrder="16" locked="false" isInGroup="-1">
       <controlProperties>
+        <size>8</size>
         <text>Nuovo%20evento...</text>
       </controlProperties>
     </control>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::VCurly" x="397" y="507" w="180" h="62" measuredW="180" measuredH="140" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::VCurly" x="1010" y="379" w="121" h="42" measuredW="180" measuredH="140" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <direction>left</direction>
         <text>E%27%20visualizzato%20solo%20se%20si%20hanno%20i%20permessi%20necessari</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::StickyNote" x="189" y="421" w="109" h="202" measuredW="109" measuredH="123" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cliccando%20su%20un%20giorno%20del%20calendario%20si%20pu%F2%20creare%20un%20evento%20o%20se%20gi%E0%20esiste%20visualizzarne%20tutte%20le%20informazioni</text>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Arrow" x="271" y="369" w="51" h="63" measuredW="150" measuredH="100" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Arrow" x="564" y="263" w="49" h="21" measuredW="150" measuredH="100" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <curvature>1</curvature>
+        <direction>top</direction>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::FieldSet" x="595" y="299" w="200" h="281" measuredW="200" measuredH="170" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo/nuovo%20evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Icon" x="610" y="316" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="22" locked="false" isInGroup="-1"/>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="662" y="330" w="-1" h="-1" measuredW="82" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Scegli%20icona...</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::TextInput" x="613" y="387" w="-1" h="-1" measuredW="55" measuredH="27" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo...</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::TextInput" x="613" y="425" w="-1" h="-1" measuredW="41" measuredH="27" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Data</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::TextArea" x="604" y="467" w="182" h="105" measuredW="200" measuredH="140" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Descrizione%20dell%27evento</text>
       </controlProperties>
     </control>
   </controls>
