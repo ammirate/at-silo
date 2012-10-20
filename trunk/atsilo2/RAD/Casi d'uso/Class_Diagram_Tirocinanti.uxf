@@ -120,11 +120,23 @@
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>710</x>
-      <y>260</y>
+      <y>270</y>
       <w>190</w>
-      <h>60</h>
+      <h>50</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;170;40</additional_attributes>
+    <additional_attributes>30;30;170;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>340</x>
+      <y>10</y>
+      <w>460</w>
+      <h>530</h>
+    </coordinates>
+    <panel_attributes>Pacchetto Tirocinanti
+</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
