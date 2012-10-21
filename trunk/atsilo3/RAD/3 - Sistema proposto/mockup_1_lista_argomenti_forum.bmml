@@ -102,5 +102,6 @@
         <text>Nuovi%20Messaggi%2C%20FAQ%2C%20Regolamento%2C%20Comunit%E0%2C%20Profilo%20Personale%2C%20Cerca%20nel%20forum</text>
       </controlProperties>
     </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1140" y="264" w="-1" h="332" measuredW="16" measuredH="100" zOrder="23" locked="false" isInGroup="-1"/>
   </controls>
 </mockup>

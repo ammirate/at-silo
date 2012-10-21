@@ -1,0 +1,301 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2240" measuredH="1384" mockupW="2175" mockupH="1364">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="65" y="20" w="1119" h="624" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@SiLo%20-%20Bacheca%20Questionari%0Ahttp%3A//www.unisa.it/vivere_il_campus/asilo/</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="75" y="97" w="232" h="132" measuredW="771" measuredH="485" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="290" y="271" w="873" h="339" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Title" x="440" y="132" w="444" h="-1" measuredW="369" measuredH="50" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bacheca%20Questionari</text>
+      </controlProperties>
+    </control>
+    <control controlID="66" controlTypeID="com.balsamiq.mockups::List" x="65" y="271" w="208" h="141" measuredW="100" measuredH="128" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>3</selectedIndex>
+        <text>Home%0AAttivit%E0%20Didattiche%0AEventi%0AQuestionari%0APagamenti%0AForum</text>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::Icon" x="326" y="303" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CopyIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::SubTitle" x="409" y="303" w="-1" h="-1" measuredW="203" measuredH="33" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::Label" x="412" y="335" w="-1" h="-1" measuredW="203" measuredH="21" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Breve%20descrizione%20del%20questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="70" controlTypeID="com.balsamiq.mockups::IconLabel" x="829" y="293" w="-1" h="-1" measuredW="48" measuredH="69" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Apri</text>
+      </controlProperties>
+    </control>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::IconLabel" x="929" y="293" w="-1" h="-1" measuredW="50" measuredH="69" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::IconLabel" x="1030" y="293" w="-1" h="-1" measuredW="54" measuredH="69" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancella</text>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::HRule" x="307" y="366" w="799" h="-1" measuredW="100" measuredH="10" zOrder="11" locked="false" isInGroup="-1"/>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Icon" x="328" y="401" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CopyIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::SubTitle" x="411" y="401" w="-1" h="-1" measuredW="203" measuredH="33" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::Label" x="414" y="433" w="-1" h="-1" measuredW="203" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Breve%20descrizione%20del%20questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::IconLabel" x="831" y="391" w="-1" h="-1" measuredW="48" measuredH="69" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Apri</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::IconLabel" x="931" y="391" w="-1" h="-1" measuredW="50" measuredH="69" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::IconLabel" x="1032" y="391" w="-1" h="-1" measuredW="54" measuredH="69" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancella</text>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::HRule" x="309" y="464" w="799" h="-1" measuredW="100" measuredH="10" zOrder="18" locked="false" isInGroup="-1"/>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::Icon" x="326" y="499" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>CopyIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::SubTitle" x="409" y="499" w="-1" h="-1" measuredW="203" measuredH="33" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Label" x="412" y="531" w="-1" h="-1" measuredW="203" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Breve%20descrizione%20del%20questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::IconLabel" x="829" y="489" w="-1" h="-1" measuredW="48" measuredH="69" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Apri</text>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::IconLabel" x="929" y="489" w="-1" h="-1" measuredW="50" measuredH="69" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::IconLabel" x="1030" y="489" w="-1" h="-1" measuredW="54" measuredH="69" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancella</text>
+      </controlProperties>
+    </control>
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::HRule" x="307" y="562" w="799" h="-1" measuredW="100" measuredH="10" zOrder="25" locked="false" isInGroup="-1"/>
+    <control controlID="88" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1147" y="271" w="-1" h="339" measuredW="16" measuredH="100" zOrder="26" locked="false" isInGroup="-1"/>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Arrow" x="1068" y="320" w="-1" h="-1" measuredW="150" measuredH="100" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Alert" x="1129" y="420" w="-1" h="-1" measuredW="200" measuredH="127" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancella%20Questionario%0AConfermi%20la%20cancellazione%20di%20questo%20questionario%3F%0ANo%2C%20Si</text>
+      </controlProperties>
+    </control>
+    <control controlID="92" controlTypeID="com.balsamiq.mockups::IconLabel" x="1012" y="175" w="-1" h="-1" measuredW="117" measuredH="69" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nuovo%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="93" controlTypeID="com.balsamiq.mockups::Arrow" x="950" y="299" w="411" h="67" measuredW="150" measuredH="100" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="94" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="1349" y="365" w="891" h="535" measuredW="450" measuredH="400" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@silo%20-%20Modifica%20Questionario%20-%20Titolo%20Questionario%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="96" controlTypeID="com.balsamiq.mockups::Image" x="1361" y="449" w="232" h="132" measuredW="771" measuredH="485" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="97" controlTypeID="com.balsamiq.mockups::Title" x="1710" y="490" w="-1" h="-1" measuredW="378" measuredH="50" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="98" controlTypeID="com.balsamiq.mockups::List" x="1353" y="623" w="208" h="141" measuredW="100" measuredH="128" zOrder="34" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>3</selectedIndex>
+        <text>Home%0AAttivit%E0%20Didattiche%0AEventi%0AQuestionari%0APagamenti%0AForum</text>
+      </controlProperties>
+    </control>
+    <control controlID="101" controlTypeID="com.balsamiq.mockups::Canvas" x="1585" y="623" w="630" h="244" measuredW="100" measuredH="70" zOrder="35" locked="false" isInGroup="-1"/>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="2204" y="623" w="-1" h="244" measuredW="16" measuredH="100" zOrder="36" locked="false" isInGroup="-1"/>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1585" y="623" w="619" h="29" measuredW="555" measuredH="29" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Aggiungi%20campo%2C%20Modifica%20Campo%2C%20Cancella%20Campo%2C%20Salva%2C%20Vedi%20Anteprima</text>
+      </controlProperties>
+    </control>
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::FieldSet" x="1612" y="672" w="557" h="170" measuredW="200" measuredH="170" zOrder="38" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Domanda%20n%B01%20-%20Testo%20della%20domanda</text>
+      </controlProperties>
+    </control>
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::CheckBox" x="1653" y="700" w="-1" h="-1" measuredW="82" measuredH="22" zOrder="39" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="106" controlTypeID="com.balsamiq.mockups::CheckBox" x="1653" y="734" w="-1" h="-1" measuredW="85" measuredH="22" zOrder="40" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="107" controlTypeID="com.balsamiq.mockups::CheckBox" x="1653" y="764" w="-1" h="-1" measuredW="84" measuredH="22" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%203</text>
+      </controlProperties>
+    </control>
+    <control controlID="108" controlTypeID="com.balsamiq.mockups::CheckBox" x="1654" y="798" w="85" h="22" measuredW="85" measuredH="22" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%204</text>
+      </controlProperties>
+    </control>
+    <control controlID="109" controlTypeID="com.balsamiq.mockups::Arrow" x="840" y="518" w="74" h="182" measuredW="150" measuredH="100" zOrder="43" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="110" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="71" y="706" w="1119" h="678" measuredW="450" measuredH="400" zOrder="44" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@silo%20-%20Titolo%20del%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::Image" x="75" y="783" w="232" h="132" measuredW="771" measuredH="485" zOrder="45" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::Title" x="455" y="817" w="444" h="-1" measuredW="395" measuredH="50" zOrder="46" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20del%20Questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::List" x="65" y="923" w="208" h="141" measuredW="100" measuredH="128" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>3</selectedIndex>
+        <text>Home%0AAttivit%E0%20Didattiche%0AEventi%0AQuestionari%0APagamenti%0AForum</text>
+      </controlProperties>
+    </control>
+    <control controlID="115" controlTypeID="com.balsamiq.mockups::FieldSet" x="357" y="923" w="749" h="170" measuredW="200" measuredH="170" zOrder="48" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Domanda%20n%B01%20-%20Testo%20della%20domanda</text>
+      </controlProperties>
+    </control>
+    <control controlID="116" controlTypeID="com.balsamiq.mockups::CheckBox" x="398" y="951" w="-1" h="-1" measuredW="82" measuredH="22" zOrder="49" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="117" controlTypeID="com.balsamiq.mockups::CheckBox" x="398" y="985" w="-1" h="-1" measuredW="85" measuredH="22" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="118" controlTypeID="com.balsamiq.mockups::CheckBox" x="398" y="1015" w="-1" h="-1" measuredW="84" measuredH="22" zOrder="51" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%203</text>
+      </controlProperties>
+    </control>
+    <control controlID="119" controlTypeID="com.balsamiq.mockups::CheckBox" x="399" y="1049" w="85" h="22" measuredW="85" measuredH="22" zOrder="52" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%204</text>
+      </controlProperties>
+    </control>
+    <control controlID="120" controlTypeID="com.balsamiq.mockups::FieldSet" x="357" y="1120" w="749" h="170" measuredW="200" measuredH="170" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Domanda%20n%B02%20-%20Testo%20della%20domanda</text>
+      </controlProperties>
+    </control>
+    <control controlID="121" controlTypeID="com.balsamiq.mockups::CheckBox" x="398" y="1148" w="-1" h="-1" measuredW="82" measuredH="22" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="122" controlTypeID="com.balsamiq.mockups::CheckBox" x="398" y="1182" w="-1" h="-1" measuredW="85" measuredH="22" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="123" controlTypeID="com.balsamiq.mockups::CheckBox" x="398" y="1212" w="-1" h="-1" measuredW="84" measuredH="22" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%203</text>
+      </controlProperties>
+    </control>
+    <control controlID="124" controlTypeID="com.balsamiq.mockups::CheckBox" x="399" y="1246" w="85" h="22" measuredW="85" measuredH="22" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%204</text>
+      </controlProperties>
+    </control>
+    <control controlID="125" controlTypeID="com.balsamiq.mockups::ButtonBar" x="307" y="868" w="868" h="29" measuredW="412" measuredH="29" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Sottometti%20Questionario%2C%20Annulla%20Sottomissione%20Questionario%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="126" controlTypeID="com.balsamiq.mockups::Arrow" x="521" y="885" w="77" h="110" measuredW="150" measuredH="100" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="127" controlTypeID="com.balsamiq.mockups::Alert" x="455" y="1004" w="-1" h="-1" measuredW="200" measuredH="113" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sottometti%0AConfermi%20la%20sottomissione%3F%0ANo%2C%20Si</text>
+      </controlProperties>
+    </control>
+    <control controlID="128" controlTypeID="com.balsamiq.mockups::Arrow" x="762" y="878" w="-1" h="-1" measuredW="150" measuredH="100" zOrder="61" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="129" controlTypeID="com.balsamiq.mockups::Alert" x="852" y="983" w="-1" h="-1" measuredW="200" measuredH="113" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Annulla%0ASicuro%20di%20Annullare%3F%0ANo%2C%20Si</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
