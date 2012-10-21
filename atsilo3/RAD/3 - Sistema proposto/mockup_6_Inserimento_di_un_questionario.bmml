@@ -1,0 +1,74 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1318" measuredH="886" mockupW="1282" mockupH="870">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="36" y="16" w="1282" h="870" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@silo%20-%20Modifica%20Questionario%20-%20Titolo%20Questionario%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="48" y="100" w="232" h="132" measuredW="771" measuredH="485" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Title" x="397" y="141" w="766" h="-1" measuredW="546" measuredH="50" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inserimento%20nuovo%20questionario</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::List" x="40" y="274" w="208" h="141" measuredW="100" measuredH="128" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>3</selectedIndex>
+        <text>Home%0AAttivit%E0%20Didattiche%0AEventi%0AQuestionari%0APagamenti%0AForum</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="336" y="274" w="935" h="497" measuredW="100" measuredH="70" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1255" y="274" w="-1" h="497" measuredW="16" measuredH="100" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::ButtonBar" x="336" y="274" w="919" h="29" measuredW="555" measuredH="29" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>-1</selectedIndex>
+        <text>Aggiungi%20campo%2C%20Modifica%20Campo%2C%20Cancella%20Campo%2C%20Salva%2C%20Vedi%20Anteprima</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::FieldSet" x="376" y="323" w="827" h="163" measuredW="200" measuredH="170" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Domanda%20n%B01%20-%20Testo%20della%20domanda</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::CheckBox" x="437" y="351" w="122" h="22" measuredW="82" measuredH="22" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%201</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::CheckBox" x="437" y="385" w="127" h="22" measuredW="85" measuredH="22" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%202</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::CheckBox" x="437" y="415" w="124" h="22" measuredW="84" measuredH="22" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%203</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::CheckBox" x="438" y="449" w="127" h="22" measuredW="85" measuredH="22" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Opzione%204</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::FieldSet" x="376" y="528" w="827" h="163" measuredW="200" measuredH="170" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Domanda%20n%B02%20-%20Testo%20della%20domanda</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::SubTitle" x="342" y="218" w="-1" h="-1" measuredW="70" measuredH="33" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::TextInput" x="427" y="221" w="844" h="-1" measuredW="79" measuredH="27" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
