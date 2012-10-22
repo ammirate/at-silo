@@ -5,10 +5,10 @@
         <backgroundAlpha>1</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="44" y="26" w="164" h="103" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="44" y="26" w="164" h="103" measuredW="848" measuredH="528" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
-        <src>./SVN/at-silo/atsilo1/Task%2520incompleti/Mockups/Micco/Uni/Ingegneria%2520del%2520Software/%252540silo/assets/%252540silo1.png</src>
+        <src>./assets/logo.png</src>
         <text/>
       </controlProperties>
     </control>

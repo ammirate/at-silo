@@ -1,14 +1,14 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1390" measuredH="595" mockupW="1333" mockupH="584">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1292" measuredH="595" mockupW="1235" mockupH="584">
   <controls>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="57" y="11" w="1235" h="584" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>1</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="99" y="22" w="172" h="103" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="99" y="22" w="172" h="103" measuredW="848" measuredH="528" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
-        <src>./Uni/Ingegneria%2520del%2520Software/%252540silo/assets/%252540silo1.png</src>
+        <src>./assets/logo.png</src>
         <text/>
       </controlProperties>
     </control>
@@ -33,7 +33,7 @@
       </controlProperties>
     </control>
     <control controlID="18" controlTypeID="com.balsamiq.mockups::HelpButton" x="1259" y="83" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="4" locked="false" isInGroup="-1"/>
-    <control controlID="19" controlTypeID="com.balsamiq.mockups::LinkBar" x="966" y="84" w="-1" h="-1" measuredW="424" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::LinkBar" x="832" y="84" w="-1" h="-1" measuredW="424" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10027008</color>
         <selectedIndex>1</selectedIndex>

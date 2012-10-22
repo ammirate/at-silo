@@ -1,14 +1,14 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1394" measuredH="595" mockupW="1285" mockupH="584">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1292" measuredH="595" mockupW="1183" mockupH="584">
   <controls>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="109" y="11" w="1183" h="584" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>1</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="123" y="26" w="172" h="103" measuredW="77" measuredH="79" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="123" y="26" w="172" h="103" measuredW="848" measuredH="528" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
-        <src>./Uni/Ingegneria%2520del%2520Software/%252540silo/assets/%252540silo1.png</src>
+        <src>./assets/logo.png</src>
         <text/>
       </controlProperties>
     </control>
@@ -33,7 +33,7 @@
       </controlProperties>
     </control>
     <control controlID="18" controlTypeID="com.balsamiq.mockups::HelpButton" x="1259" y="83" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="5" locked="false" isInGroup="-1"/>
-    <control controlID="19" controlTypeID="com.balsamiq.mockups::LinkBar" x="966" y="84" w="-1" h="-1" measuredW="428" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::LinkBar" x="826" y="84" w="-1" h="-1" measuredW="428" measuredH="21" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10027008</color>
         <selectedIndex>1</selectedIndex>
@@ -119,12 +119,24 @@
         <text>Annulla</text>
       </controlProperties>
     </control>
-    <control controlID="75" controlTypeID="com.balsamiq.mockups::DataGrid" x="333" y="169" w="521" h="117" measuredW="341" measuredH="113" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::ComboBox" x="573" y="178" w="-1" h="-1" measuredW="112" measuredH="23" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
-        <hLines>false</hLines>
-        <text>Cognome%2C%20Nome%2CData%20Accetazione%20%0ABianco%2C%20Gianluca%2C%2022/05/2010%0ARomano%2C%20Alessandro%2C22/05/2010%0AFesta%2C%20Giovanni%2C22/05/2010</text>
-        <underline>false</underline>
-        <vLines>false</vLines>
+        <text>Alfredo%20Borgo</text>
+      </controlProperties>
+    </control>
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::TextArea" x="331" y="174" w="197" h="30" measuredW="200" measuredH="140" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Scegliere%20bambino%20da%20smistare</text>
+      </controlProperties>
+    </control>
+    <control controlID="76" controlTypeID="com.balsamiq.mockups::TextArea" x="331" y="219" w="203" h="26" measuredW="200" measuredH="140" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Classe%20a%20cui%20verra%20assegnato</text>
+      </controlProperties>
+    </control>
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::TextArea" x="573" y="215" w="99" h="30" measuredW="200" measuredH="140" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Classe%201</text>
       </controlProperties>
     </control>
   </controls>
