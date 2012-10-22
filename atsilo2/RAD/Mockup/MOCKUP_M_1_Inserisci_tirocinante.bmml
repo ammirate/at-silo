@@ -9,7 +9,7 @@
     <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="123" y="26" w="172" h="103" measuredW="848" measuredH="528" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
-        <src>./assets/%2540silo.png</src>
+        <src>../../../../mockups/%2540silo.png</src>
         <text/>
       </controlProperties>
     </control>
@@ -269,12 +269,12 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="60" controlTypeID="com.balsamiq.mockups::CallOut" x="45" y="46" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="41" locked="false" isInGroup="-1">
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::CallOut" x="45" y="46" w="-1" h="-1" measuredW="37" measuredH="37" zOrder="41" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="61" controlTypeID="com.balsamiq.mockups::CallOut" x="1340" y="207" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="42" locked="false" isInGroup="-1">
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::CallOut" x="1340" y="207" w="-1" h="-1" measuredW="39" measuredH="43" zOrder="42" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
