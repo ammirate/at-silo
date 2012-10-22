@@ -14,12 +14,12 @@
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::TitleWindow" x="221" y="105" w="940" h="490" measuredW="450" measuredH="400" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Mostra%20elenco%20insegnanti</text>
+        <text/>
         <topheight>26</topheight>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="221" y="574" w="146" h="21" measuredW="153" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="221" y="574" w="192" h="21" measuredW="153" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <text>%20UTENTE%3A%20Amministratore</text>
       </controlProperties>
@@ -85,23 +85,12 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="55" controlTypeID="com.balsamiq.mockups::Label" x="227" y="544" w="301" h="27" measuredW="290" measuredH="21" zOrder="13" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>Nota%3A%20i%20campi%20contrassegnati%20da%20%20%20%20sono%20obbligatori.</text>
-      </controlProperties>
-    </control>
-    <control controlID="56" controlTypeID="com.balsamiq.mockups::Label" x="401" y="539" w="20" h="27" measuredW="12" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
-      <controlProperties>
-        <color>13369344</color>
-        <text>*</text>
-      </controlProperties>
-    </control>
-    <control controlID="67" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1141" y="158" w="-1" h="407" measuredW="16" measuredH="100" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1141" y="158" w="-1" h="407" measuredW="16" measuredH="100" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <value>100</value>
       </controlProperties>
     </control>
-    <control controlID="68" controlTypeID="com.balsamiq.mockups::DataGrid" x="244" y="179" w="521" h="117" measuredW="341" measuredH="113" zOrder="16" locked="false" isInGroup="-1">
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::DataGrid" x="244" y="179" w="521" h="117" measuredW="341" measuredH="113" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <hLines>false</hLines>
         <text>Cognome%2C%20Nome%2CData%20inizio%2C%20Data%20fine%2C%0ABianco%2C%20Gianluca%2C%2022/05/2010%2C22/08/2010%0ARomano%2C%20Alessandro%2C22/05/2010%2C22/08/2010%0AFesta%2C%20Giovanni%2C22/05/2010%2C22/08/2010</text>
