@@ -19,7 +19,7 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="221" y="574" w="173" h="21" measuredW="153" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="221" y="574" w="192" h="21" measuredW="153" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
         <text>%20UTENTE%3A%20Amministratore</text>
       </controlProperties>
@@ -47,7 +47,7 @@
         <text>silo</text>
       </controlProperties>
     </control>
-    <control controlID="21" controlTypeID="com.balsamiq.mockups::Label" x="269" y="65" w="97" h="33" measuredW="102" measuredH="33" zOrder="7" locked="false" isInGroup="-1">
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::Label" x="269" y="65" w="118" h="33" measuredW="102" measuredH="33" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <color>472931</color>
@@ -75,7 +75,7 @@
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
-        <selectedIndex>0</selectedIndex>
+        <selectedIndex>2</selectedIndex>
         <size>14</size>
         <text>Full-Time%2C%20Part-Time%20Mattina%2C%20Part-Time%20Mattina%20con%20Pasto%2CPart-Time%20Pomeridiano</text>
       </controlProperties>
