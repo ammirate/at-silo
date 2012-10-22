@@ -1,0 +1,680 @@
+Chechlist CASI D'USO:
+
+
+25 - 26 - 29 - 34 problemi con l'include se li apri puoi vedere da te che sta nella parte centrale e non nella entry come devo comportarmi???
+
+
+38 - 39 - 40 problemi per le entry conditon e nel 40 non c'è exception
+
+
+
+UC_A_1_6_16_Ricerca avanzata del personale asilo da personale
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_2_UtenteVisualizzaStatoPropriaIscrizione
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_3_IscrizioneAltraUtenza
+
+[X] Il nome è coerente con il contenuto
+[X] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[ ] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_4_IscrizionePersonaleStudenti
+
+[X] Il nome è coerente con il contenuto
+[X] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[ ] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_5_IscrizioneComune
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[ ] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_7_8_visualizzazione candidati per idoneità
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_9_10_Visualizzazioni candidati per stato
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_11_12_13_Controllo iscritti in base ai servizi erogati
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_14_15_17_18_Ricerca avanzata iscritto da personale asilo
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[x] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_19_20_21_Controllo lista degli appartenenti ad una categoria di utenti
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_22_Ordina risultati ricerca
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[ ] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_23_Ricerca avanzata
+
+[X] Il nome è coerente con il contenuto
+[X] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_24_ImpiegatoVisualizzaUtentiPerCategoria
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[ ] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_25_Licenziamento personale asilo
+
+[x] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[ ] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_26_Licenziamento impiegato di segreteria da parte di un altro impiegato di segreteria
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_27_Aggiungi nuovo Personale educativo
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_28_Modifica dati Impiegato di Segreteria
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[ ] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[X] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_29_Licenziamento impiegato di segreteria da parte del delegato del rettore
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_34_Modifica dati personale educativo
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_36_Ricerca avanzata iscritto da personale docente
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_37_Ricerca avanzata personale docente da utente genitore
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_38_rinuncia candidatura iscrizione
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_39_rinuncia idoneità iscrizione
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_40_ritiro scolastico
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_41_Utente visualizza informazioni
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_42_accetazione bambino
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[ ] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[x] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_43_pubblicazione graduatoria
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_44_ModificaDatiUtente
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[x] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[X] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[X] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_45_ImpiegatoModificaDatiUtente
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[x] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[X] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[X] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_46_CreazioneAccount
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[ ] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_47_Visualizzazione scheda di un utente con informazioni personali
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[X] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
+
+UC_A_48_Visualizzazione scheda di un iscritto da parte di un amministratore
+
+[X] Il nome è coerente con il contenuto
+[ ] Ha lo stesso nome dello scenario generalizzato
+[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I requisiti qualitativi sono misurabili
+[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
