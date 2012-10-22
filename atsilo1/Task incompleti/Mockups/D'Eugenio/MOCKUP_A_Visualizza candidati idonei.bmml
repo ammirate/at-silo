@@ -117,9 +117,9 @@
         <text>Candidati%20idonei</text>
       </controlProperties>
     </control>
-    <control controlID="164" controlTypeID="com.balsamiq.mockups::DataGrid" x="374" y="211" w="399" h="107" measuredW="128" measuredH="113" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="164" controlTypeID="com.balsamiq.mockups::DataGrid" x="374" y="211" w="399" h="107" measuredW="202" measuredH="113" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Name%2C%20Cognome%0AGiada%2C%20Mattei%0ALuigi%2C%20Cipriani%0AMatteo%2C%20Lavagnoli</text>
+        <text>Name%2C%20Cognome%2C%20Punteggio%0AGiada%2C%20Mattei%2C%2050.1%0ALuigi%2C%20Cipriani%2C%2050.0%0AMatteo%2C%20Lavagnoli%2C%2046.7</text>
       </controlProperties>
     </control>
   </controls>
