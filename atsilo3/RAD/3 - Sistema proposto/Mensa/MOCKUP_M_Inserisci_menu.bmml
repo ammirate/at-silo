@@ -1,0 +1,148 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1322" measuredH="1063" mockupW="1219" mockupH="798">
+  <controls>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="114" y="346" w="217" h="153" measuredW="771" measuredH="485" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <src>./IS%2520-%2520Asilo/atsilo3/logo1.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TitleWindow" x="320" y="490" w="984" h="490" measuredW="450" measuredH="400" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <topheight>26</topheight>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="309" y="917" w="-1" h="-1" measuredW="67" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20UTENTE%3A%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="125" y="609" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>13421772</color>
+        <size>14</size>
+        <state>selected</state>
+        <text>GESTIONE%20MENSA%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="320" y="490" w="984" h="29" measuredW="416" measuredH="30" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <italic>false</italic>
+        <selectedIndex>0</selectedIndex>
+        <size>14</size>
+        <text>Inserisci%20men%F9%2C%20Modifica%20men%F9%20classe%2C%20%20Elenco%20men%F9</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::List" x="126" y="632" w="183" h="97" measuredW="100" measuredH="126" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <color>15594478</color>
+        <hasHeader>false</hasHeader>
+        <rowHeight>23</rowHeight>
+        <selectedIndex>0</selectedIndex>
+        <text>Inserisci%20men%F9%0AModifica%20men%F9%20classe%0AModifica%20men%F9%20singolo%0AElenco%20men%F9</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::ComboBox" x="537" y="556" w="95" h="-1" measuredW="84" measuredH="23" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Svezzati%0ASemisvezzati%0ALattanti</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Label" x="335" y="557" w="-1" h="-1" measuredW="187" measuredH="21" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Seleziona%20la%20categoria%20del%20Men%F9</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::PointyButton" x="352" y="684" w="70" h="-1" measuredW="53" measuredH="27" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Primo</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::PointyButton" x="352" y="746" w="-1" h="-1" measuredW="71" measuredH="27" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Secondo</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::PointyButton" x="351" y="810" w="-1" h="-1" measuredW="73" measuredH="27" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Contorno</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::PointyButton" x="352" y="872" w="73" h="-1" measuredW="56" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>center</direction>
+        <menuIcon>false</menuIcon>
+        <text>Frutta</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::ComboBox" x="537" y="605" w="95" h="-1" measuredW="69" measuredH="23" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>closed</state>
+        <text>Luned%EC</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="335" y="606" w="-1" h="-1" measuredW="103" measuredH="21" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Seleziona%20Giorno</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="335" y="645" w="-1" h="-1" measuredW="86" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inserisci%20Men%F9</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="684" w="179" h="-1" measuredW="79" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="746" w="179" h="-1" measuredW="79" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="808" w="179" h="-1" measuredW="79" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::TextInput" x="453" y="870" w="179" h="-1" measuredW="79" measuredH="27" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Button" x="991" y="906" w="133" h="27" measuredW="91" measuredH="27" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Salva%20Men%F9</text>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Button" x="1144" y="906" w="-1" h="-1" measuredW="133" measuredH="27" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Annulla%20Operazione</text>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="103" y="265" w="1219" h="798" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@Silo%20-%20Mensa%20-%20Inserisci%20Menu%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Title" x="569" y="387" w="-1" h="-1" measuredW="473" measuredH="50" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Mensa%20-%20Inserimento%20Menu%20</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
