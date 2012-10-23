@@ -199,7 +199,7 @@
         <text>3</text>
       </controlProperties>
     </control>
-    <control controlID="98" controlTypeID="com.balsamiq.mockups::Image" x="283" y="935" w="183" h="130" measuredW="1280" measuredH="960" zOrder="45" locked="false" isInGroup="-1">
+    <control controlID="98" controlTypeID="com.balsamiq.mockups::Image" x="283" y="935" w="183" h="130" measuredW="77" measuredH="79" zOrder="45" locked="false" isInGroup="-1">
       <controlProperties>
         <src>./asilo.jpeg</src>
         <text/>
@@ -208,6 +208,11 @@
     <control controlID="99" controlTypeID="com.balsamiq.mockups::Label" x="512" y="935" w="594" h="132" measuredW="157" measuredH="21" zOrder="46" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Corpo%20dell%27attivit%E0%20didattica</text>
+      </controlProperties>
+    </control>
+    <control controlID="100" controlTypeID="com.balsamiq.mockups::IconLabel" x="1001" y="160" w="-1" h="-1" measuredW="137" measuredH="69" zOrder="47" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Nuova%20Attivit%E0%20Didattica</text>
       </controlProperties>
     </control>
   </controls>
