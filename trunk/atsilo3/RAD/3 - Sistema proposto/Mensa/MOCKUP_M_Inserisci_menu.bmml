@@ -45,7 +45,7 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>0</selectedIndex>
-        <text>Inserisci%20men%F9%0AModifica%20men%F9%20classe%0AElenco%20men%F9</text>
+        <text>Inserisci%20men%F9%0AElenco%20men%F9</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
