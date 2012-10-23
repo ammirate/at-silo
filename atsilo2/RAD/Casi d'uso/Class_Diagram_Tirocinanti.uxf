@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>100</x>
+      <x>60</x>
       <y>110</y>
       <w>140</w>
       <h>120</h>
@@ -16,7 +16,7 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>530</x>
+      <x>490</x>
       <y>40</y>
       <w>190</w>
       <h>50</h>
@@ -28,7 +28,7 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>540</x>
+      <x>500</x>
       <y>120</y>
       <w>190</w>
       <h>50</h>
@@ -40,7 +40,7 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>460</x>
+      <x>420</x>
       <y>190</y>
       <w>190</w>
       <h>50</h>
@@ -52,7 +52,7 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>550</x>
+      <x>510</x>
       <y>270</y>
       <w>190</w>
       <h>50</h>
@@ -64,7 +64,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>170</x>
+      <x>130</x>
       <y>40</y>
       <w>380</w>
       <h>130</h>
@@ -75,7 +75,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>170</x>
+      <x>130</x>
       <y>110</y>
       <w>390</w>
       <h>60</h>
@@ -86,7 +86,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>170</x>
+      <x>130</x>
       <y>120</y>
       <w>310</w>
       <h>110</h>
@@ -97,7 +97,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>170</x>
+      <x>130</x>
       <y>120</y>
       <w>400</w>
       <h>190</h>
@@ -108,7 +108,7 @@
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>830</x>
+      <x>790</x>
       <y>270</y>
       <w>160</w>
       <h>120</h>
@@ -119,7 +119,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>710</x>
+      <x>670</x>
       <y>270</y>
       <w>190</w>
       <h>50</h>
@@ -130,7 +130,7 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>340</x>
+      <x>300</x>
       <y>10</y>
       <w>460</w>
       <h>530</h>
