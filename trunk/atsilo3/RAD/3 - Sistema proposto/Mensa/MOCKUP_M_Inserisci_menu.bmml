@@ -1,6 +1,6 @@
 <mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1322" measuredH="1063" mockupW="1219" mockupH="798">
   <controls>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="114" y="346" w="217" h="153" measuredW="771" measuredH="485" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="114" y="346" w="217" h="153" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
         <src>./IS%2520-%2520Asilo/atsilo3/logo1.png</src>
@@ -45,7 +45,7 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>0</selectedIndex>
-        <text>Inserisci%20men%F9%0AModifica%20men%F9%20classe%0AModifica%20men%F9%20singolo%0AElenco%20men%F9</text>
+        <text>Inserisci%20men%F9%0AModifica%20men%F9%20classe%0AElenco%20men%F9</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
