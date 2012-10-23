@@ -16,7 +16,8 @@ CASI D'USO
 +- (  5) Aggiungi tirocinante
 +- (  6) Modifica tirocinante
 +- ( 6a) Rimuovi tirocinante
-+- (  7) Visualizza tirocinanti
++- ( 7a) Visualizza tirocinanti (impiegato)
++- ( 7b) Visualizza tirocinanti (r.s.)
 +- ( 22) Feedback allocazione tirocinanti	[A]
 +- ( 23) Richiesta tirocinanti
 
@@ -26,7 +27,7 @@ CASI D'USO
 ++ ( 16) Risolvi modifica piano-pasto		[M]
 |+- (16a) Approva modifica piano-pasto		[A]
 |+- (16b) Rifiuta modifica piano-pasto		[A]
-+- ( 24) Modifica piano-pasto			[A]
++- ( 13) Modifica piano-pasto			[A]
 
 + Orario
 +- ( 15) Elenco orario
