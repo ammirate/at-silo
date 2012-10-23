@@ -104,4 +104,37 @@
 </panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>830</x>
+      <y>220</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Genitore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>650</x>
+      <y>220</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;40;190;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>280</x>
+      <y>10</y>
+      <w>490</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>Menù Impiegato</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
