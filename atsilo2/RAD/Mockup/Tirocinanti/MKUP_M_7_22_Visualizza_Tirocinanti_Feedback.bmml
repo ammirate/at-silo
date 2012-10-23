@@ -20,7 +20,7 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="308" y="570" w="-1" h="-1" measuredW="64" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="308" y="568" w="-1" h="-1" measuredW="64" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <text>%20UTENTE%3A</text>
       </controlProperties>
@@ -98,7 +98,7 @@
         <text>GESTIONE%20TIROCINANTI%20%20%20%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="124" y="358" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="124" y="384" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <color>13421772</color>
@@ -107,13 +107,13 @@
         <text>GESTIONE%20MENSA%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="125" w="984" h="29" measuredW="735" measuredH="30" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="125" w="984" h="29" measuredW="772" measuredH="30" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
-        <selectedIndex>2</selectedIndex>
+        <selectedIndex>3</selectedIndex>
         <size>14</size>
-        <text>Aggiungi%20Scheda%20Tirocinante%2C%20Modifica%20Scheda%20Tirocinante%2C%20Visualizza%20Tirocinanti%2C%20Richiedi%20Tirocinante</text>
+        <text>Aggiungi%20Tirocinante%2C%20Modifica%20Tirocinante%2C%20Elimina%20Tirocinante%2C%20Visualizza%20Tirocinanti%2C%20Richiedi%20Tirocinante</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="16" locked="false" isInGroup="-1">
@@ -121,7 +121,7 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="34" controlTypeID="com.balsamiq.mockups::List" x="125" y="255" w="183" h="97" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::List" x="125" y="255" w="183" h="123" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <alternateRowColor>16777215</alternateRowColor>
         <borderStyle>square</borderStyle>
@@ -130,8 +130,8 @@
         <hrefs>MOCKUP_M_1_Inserisci_tirocinante%26bm%3BMOCKUP_M_1_Inserisci_tirocinante.bmml%26bm%3BMOCKUP_M_1_Inserisci_tirocinante.bmml%26bm%3BMOCKUP_M_1_Inserisci_tirocinante.bmml%2CMOCKUP_M_2_Modifica_Tirocinante%26bm%3BMOCKUP_M_2_Modifica_Tirocinante.bmml%26bm%3BMOCKUP_M_2_Modifica_Tirocinante.bmml%26bm%3BMOCKUP_M_2_Modifica_Tirocinante.bmml%2C%2C</hrefs>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2218%2C250%2C201%2C273%22%20href%3D%22MOCKUP_M_1_Inserisci_tirocinante.bmml%22%20alt%3D%22MOCKUP_M_1_Inserisci_tirocinante%22%20id%3D%2234_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%2218%2C273%2C201%2C296%22%20href%3D%22MOCKUP_M_2_Modifica_Tirocinante.bmml%22%20alt%3D%22MOCKUP_M_2_Modifica_Tirocinante%22%20id%3D%2234_1%22/%3E%0A</map>
         <rowHeight>23</rowHeight>
-        <selectedIndex>-1</selectedIndex>
-        <text>Aggiungi%20Scheda%20Tirocinante%0AModifica%20Scheda%20Tirocinante%0AVisualizza%20Tirocinanti%0ARichiedi%20Tirocinante</text>
+        <selectedIndex>3</selectedIndex>
+        <text>Aggiungi%20Tirocinante%0AModifica%20Tirocinante%0AElimina%20Tirocinante%0AVisualizza%20Tirocinanti%0ARichiedi%20Tirocinante</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
@@ -176,7 +176,7 @@
         <borderStyle>square</borderStyle>
       </controlProperties>
     </control>
-    <control controlID="69" controlTypeID="com.balsamiq.mockups::Button" x="1449" y="358" w="195" h="27" measuredW="158" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="69" controlTypeID="com.balsamiq.mockups::Button" x="1449" y="388" w="195" h="27" measuredW="158" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <color>13421772</color>
@@ -272,13 +272,13 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="82" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1633" y="125" w="984" h="29" measuredW="735" measuredH="30" zOrder="36" locked="false" isInGroup="-1">
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1633" y="125" w="984" h="29" measuredW="772" measuredH="30" zOrder="36" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
-        <selectedIndex>2</selectedIndex>
+        <selectedIndex>3</selectedIndex>
         <size>14</size>
-        <text>Aggiungi%20Scheda%20Tirocinante%2C%20Modifica%20Scheda%20Tirocinante%2C%20Visualizza%20Tirocinanti%2C%20Richiedi%20Tirocinante</text>
+        <text>Aggiungi%20Tirocinante%2C%20Modifica%20Tirocinante%2C%20Elimina%20Tirocinante%2C%20Visualizza%20Tirocinanti%2C%20Richiedi%20Tirocinante</text>
       </controlProperties>
     </control>
     <control controlID="83" controlTypeID="com.balsamiq.mockups::Label" x="1633" y="568" w="-1" h="-1" measuredW="64" measuredH="21" zOrder="37" locked="false" isInGroup="-1">
@@ -291,7 +291,7 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="85" controlTypeID="com.balsamiq.mockups::List" x="1450" y="255" w="183" h="97" measuredW="100" measuredH="126" zOrder="39" locked="false" isInGroup="-1">
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::List" x="1450" y="255" w="183" h="123" measuredW="100" measuredH="126" zOrder="39" locked="false" isInGroup="-1">
       <controlProperties>
         <alternateRowColor>16777215</alternateRowColor>
         <borderStyle>square</borderStyle>
@@ -300,8 +300,8 @@
         <hrefs>MOCKUP_M_1_Inserisci_tirocinante%26bm%3BMOCKUP_M_1_Inserisci_tirocinante.bmml%26bm%3BMOCKUP_M_1_Inserisci_tirocinante.bmml%26bm%3BMOCKUP_M_1_Inserisci_tirocinante.bmml%2CMOCKUP_M_2_Modifica_Tirocinante%26bm%3BMOCKUP_M_2_Modifica_Tirocinante.bmml%26bm%3BMOCKUP_M_2_Modifica_Tirocinante.bmml%26bm%3BMOCKUP_M_2_Modifica_Tirocinante.bmml%2C%2C</hrefs>
         <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221343%2C250%2C1526%2C273%22%20href%3D%22MOCKUP_M_1_Inserisci_tirocinante.bmml%22%20alt%3D%22MOCKUP_M_1_Inserisci_tirocinante%22%20id%3D%2285_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%221343%2C273%2C1526%2C296%22%20href%3D%22MOCKUP_M_2_Modifica_Tirocinante.bmml%22%20alt%3D%22MOCKUP_M_2_Modifica_Tirocinante%22%20id%3D%2285_1%22/%3E%0A</map>
         <rowHeight>23</rowHeight>
-        <selectedIndex>-1</selectedIndex>
-        <text>Aggiungi%20Scheda%20Tirocinante%0AModifica%20Scheda%20Tirocinante%0AVisualizza%20Tirocinanti%0ARichiedi%20Tirocinante</text>
+        <selectedIndex>3</selectedIndex>
+        <text>Aggiungi%20Tirocinante%0AModifica%20Tirocinante%0AElimina%20Tirocinante%0AVisualizza%20Tirocinanti%0ARichiedi%20Tirocinante</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
@@ -373,12 +373,12 @@
         <text>Visualizzazione%20tirocinanti%20con%20la%20possibilit%E0%20di%20inserire%20FEEDBACK%20da%20inviare%20al%20responsabile%20scientifico%0A22</text>
       </controlProperties>
     </control>
-    <control controlID="120" controlTypeID="com.balsamiq.mockups::CallOut" x="1467" y="606" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="49" locked="false" isInGroup="-1">
+    <control controlID="120" controlTypeID="com.balsamiq.mockups::CallOut" x="1467" y="606" w="-1" h="-1" measuredW="36" measuredH="40" zOrder="49" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="121" controlTypeID="com.balsamiq.mockups::CallOut" x="2687" y="196" w="-1" h="-1" measuredW="39" measuredH="40" zOrder="50" locked="false" isInGroup="-1">
+    <control controlID="121" controlTypeID="com.balsamiq.mockups::CallOut" x="2687" y="196" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="50" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
