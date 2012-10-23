@@ -128,15 +128,14 @@
     <additional_attributes>30;30;170;30</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Class</type>
+    <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>300</x>
+      <x>230</x>
       <y>10</y>
-      <w>460</w>
-      <h>530</h>
+      <w>550</w>
+      <h>460</h>
     </coordinates>
-    <panel_attributes>Pacchetto Tirocinanti
-</panel_attributes>
+    <panel_attributes>Pacchetto Tirocinanti</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
