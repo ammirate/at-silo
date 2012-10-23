@@ -89,7 +89,7 @@
         <text>GESTIONE%20ORARI%09%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="26" controlTypeID="com.balsamiq.mockups::Button" x="124" y="307" w="215" h="27" measuredW="214" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Button" x="124" y="283" w="215" h="27" measuredW="214" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <color>13421772</color>
@@ -97,7 +97,7 @@
         <text>GESTIONE%20TIROCINANTI%20%20%20%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="124" y="340" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="124" y="316" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <color>13421772</color>
@@ -105,13 +105,13 @@
         <text>GESTIONE%20MENSA%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="379" measuredH="30" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="256" measuredH="30" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <selectedIndex>2</selectedIndex>
         <size>14</size>
-        <text>Inserisci%20orario%2C%20Modifica%20orario%2C%20Visualizza%20orario</text>
+        <text>Modifica%20orario%2C%20Visualizza%20orario</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="16" locked="false" isInGroup="-1">
@@ -119,15 +119,15 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="33" controlTypeID="com.balsamiq.mockups::List" x="125" y="224" w="183" h="74" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::List" x="125" y="224" w="183" h="52" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <alternateRowColor>16777215</alternateRowColor>
         <borderStyle>square</borderStyle>
         <color>15594478</color>
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
-        <selectedIndex>-1</selectedIndex>
-        <text>Inserisci%20orario%0AModifica%20orario%0AVisualizza%20orario</text>
+        <selectedIndex>1</selectedIndex>
+        <text>Modifica%20orario%0AVisualizza%20orario</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
@@ -146,7 +146,7 @@
         <text>2C</text>
       </controlProperties>
     </control>
-    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="521" y="190" w="-1" h="-1" measuredW="60" measuredH="26" zOrder="20" locked="false" isInGroup="-1">
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="521" y="190" w="-1" h="-1" measuredW="62" measuredH="26" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <size>18</size>
