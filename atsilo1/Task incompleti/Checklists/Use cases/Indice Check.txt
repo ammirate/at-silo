@@ -1,0 +1,33 @@
+UC_A_1_14_15_17_18_Ricerca avanzata iscritto da personale asilo
+UC_A_2_UtenteVisualizzaStatoPropriaIscrizione
+UC_A_3_IscrizioneAltraUtenza
+UC_A_4_IscrizionePersonaleStudenti
+UC_A_5_IscrizioneComune
+x UC_A_6_19_Ricerca avanzata del personale asilo da personale asilo
+UC_A_7_8_visualizzazione candidati per idoneità
+UC_A_9_10_Visualizzazioni candidati per stato
+x UC_A_16_Ricerca avanzata del personale asilo da personale amministrativo
+x UC_A_22_Ordina risultati ricerca   attori
+x UC_A_23_Ricerca avanzata
+UC_A_24_ImpiegatoVisualizzaUtentiPerCategoria
+UC_A_25_Licenziamento personale asilo
+UC_A_26_Licenziamento impiegato di segreteria da parte di un altro impiegato di segreteria
+UC_A_27_Aggiungi nuovo Personale educativo
+UC_A_28_Modifica dati Impiegato di Segreteria
+UC_A_29_Licenziamento impiegato di segreteria da parte del delegato del rettore
+UC_A_34_Modifica dati personale educativo
+UC_A_36_Ricerca avanzata iscritto da personale docente
+UC_A_37_Ricerca avanzata personale docente da utente genitore
+UC_A_38_rinuncia candidatura iscrizione
+UC_A_39_rinuncia idoneità iscrizione
+UC_A_40_ritiro scolastico
+UC_A_41_Utente visualizza informazioni
+x UC_A_42_accetazione bambino  attori
+UC_A_43_pubblicazione graduatoria
+UC_A_44_ModificaDatiUtente
+UC_A_45_ImpiegatoModificaDatiUtente
+UC_A_46_CreazioneAccount
+UC_A_47_Visualizzazione scheda di un utente con informazioni personali
+UC_A_48_Visualizzazione scheda di un iscritto da parte di un amministratore
+UC_A_49_Inserimento specifiche bando
+UC_A_50_modifiche specifiche bando 
