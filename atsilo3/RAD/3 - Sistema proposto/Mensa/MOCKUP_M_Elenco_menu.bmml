@@ -21,13 +21,13 @@
         <text>GESTIONE%20MENSA%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="327" y="235" w="984" h="29" measuredW="406" measuredH="30" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="327" y="235" w="984" h="29" measuredW="236" measuredH="30" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <selectedIndex>3</selectedIndex>
         <size>14</size>
-        <text>Inserisci%20men%F9%2C%20Modifica%20men%F9%20classe%2C%20Elenco%20men%F9</text>
+        <text>Inserisci%20men%F9%2C%20Elenco%20men%F9</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="5" locked="false" isInGroup="-1">
@@ -43,7 +43,7 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>3</selectedIndex>
-        <text>Inserisci%20men%F9%0AModifica%20men%F9%20classe%0AElenco%20men%F9</text>
+        <text>Inserisci%20men%F9%0AElenco%20men%F9</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
@@ -113,7 +113,7 @@
         </control>
       </groupChildrenDescriptors>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::Image" x="121" y="82" w="217" h="153" measuredW="771" measuredH="485" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Image" x="121" y="82" w="217" h="153" measuredW="77" measuredH="79" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
         <src>./IS%2520-%2520Asilo/atsilo3/logo1.png</src>
@@ -123,6 +123,16 @@
     <control controlID="48" controlTypeID="com.balsamiq.mockups::Title" x="576" y="123" w="-1" h="-1" measuredW="383" measuredH="50" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Mensa%20-%20Elenco%20Menu%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Button" x="670" y="299" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Button" x="755" y="299" w="-1" h="-1" measuredW="62" measuredH="27" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Elimina</text>
       </controlProperties>
     </control>
   </controls>
