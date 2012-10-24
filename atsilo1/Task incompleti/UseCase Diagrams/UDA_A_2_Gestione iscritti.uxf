@@ -5,7 +5,7 @@
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>1050</x>
-      <y>210</y>
+      <y>200</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -17,7 +17,7 @@
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>1150</x>
-      <y>270</y>
+      <y>260</y>
       <w>120</w>
       <h>40</h>
     </coordinates>
@@ -29,7 +29,7 @@ bg=blue</panel_attributes>
     <type>com.umlet.element.Package</type>
     <coordinates>
       <x>310</x>
-      <y>120</y>
+      <y>110</y>
       <w>610</w>
       <h>480</h>
     </coordinates>
@@ -41,7 +41,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Actor</type>
     <coordinates>
       <x>90</x>
-      <y>290</y>
+      <y>280</y>
       <w>120</w>
       <h>120</h>
     </coordinates>
@@ -53,7 +53,7 @@ amministrativo</panel_attributes>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>430</x>
-      <y>200</y>
+      <y>190</y>
       <w>160</w>
       <h>70</h>
     </coordinates>
@@ -67,7 +67,7 @@ servizi erogati
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>420</x>
-      <y>290</y>
+      <y>280</y>
       <w>170</w>
       <h>70</h>
     </coordinates>
@@ -80,7 +80,7 @@ candidati per  idoneità
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>430</x>
-      <y>380</y>
+      <y>370</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -93,7 +93,7 @@ candidati per stato
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>430</x>
-      <y>470</y>
+      <y>460</y>
       <w>170</w>
       <h>80</h>
     </coordinates>
@@ -107,7 +107,7 @@ per categoria
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>750</x>
-      <y>150</y>
+      <y>140</y>
       <w>130</w>
       <h>60</h>
     </coordinates>
@@ -120,7 +120,7 @@ ricerca
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>760</x>
-      <y>510</y>
+      <y>500</y>
       <w>120</w>
       <h>50</h>
     </coordinates>
@@ -132,7 +132,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>170</x>
-      <y>210</y>
+      <y>200</y>
       <w>280</w>
       <h>140</h>
     </coordinates>
@@ -143,18 +143,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>170</x>
-      <y>300</y>
-      <w>270</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>30;30;250;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>170</x>
-      <y>300</y>
+      <y>290</y>
       <w>280</w>
       <h>140</h>
     </coordinates>
@@ -165,7 +154,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>170</x>
-      <y>300</y>
+      <y>290</y>
       <w>280</w>
       <h>230</h>
     </coordinates>
@@ -175,30 +164,19 @@ sistema</panel_attributes>
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>100</x>
-      <y>460</y>
-      <w>100</w>
+      <x>90</x>
+      <y>450</y>
+      <w>120</w>
       <h>120</h>
     </coordinates>
-    <panel_attributes>genitore??</panel_attributes>
+    <panel_attributes>Utente del sistema</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>170</x>
-      <y>430</y>
-      <w>110</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
-    <additional_attributes>90;30;30;80</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
       <x>560</x>
-      <y>150</y>
+      <y>140</y>
       <w>210</w>
       <h>110</h>
     </coordinates>
@@ -210,7 +188,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>560</x>
-      <y>150</y>
+      <y>140</y>
       <w>210</w>
       <h>190</h>
     </coordinates>
@@ -222,7 +200,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>550</x>
-      <y>150</y>
+      <y>140</y>
       <w>220</w>
       <h>280</h>
     </coordinates>
@@ -234,7 +212,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>560</x>
-      <y>150</y>
+      <y>140</y>
       <w>210</w>
       <h>360</h>
     </coordinates>
@@ -246,7 +224,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>550</x>
-      <y>220</y>
+      <y>210</y>
       <w>230</w>
       <h>330</h>
     </coordinates>
@@ -258,7 +236,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>560</x>
-      <y>300</y>
+      <y>290</y>
       <w>220</w>
       <h>250</h>
     </coordinates>
@@ -270,7 +248,7 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>550</x>
-      <y>390</y>
+      <y>380</y>
       <w>230</w>
       <h>160</h>
     </coordinates>
@@ -282,12 +260,23 @@ sistema</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>570</x>
-      <y>480</y>
+      <y>470</y>
       <w>210</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extends&gt;&gt;</panel_attributes>
     <additional_attributes>30;30;190;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>160</x>
+      <y>300</y>
+      <w>290</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;180;270;30</additional_attributes>
   </element>
 </diagram>
