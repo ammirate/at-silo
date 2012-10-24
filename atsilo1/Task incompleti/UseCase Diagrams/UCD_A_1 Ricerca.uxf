@@ -70,8 +70,8 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>120</x>
-      <y>390</y>
+      <x>660</x>
+      <y>430</y>
       <w>200</w>
       <h>80</h>
     </coordinates>
@@ -82,8 +82,8 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>560</x>
-      <y>390</y>
+      <x>410</x>
+      <y>430</y>
       <w>180</w>
       <h>50</h>
     </coordinates>
@@ -116,60 +116,60 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>170</x>
-      <y>440</y>
-      <w>60</w>
-      <h>140</h>
+      <x>180</x>
+      <y>480</y>
+      <w>590</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>40;30;30;120</additional_attributes>
+    <additional_attributes>570;30;30;90</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>610</x>
-      <y>410</y>
-      <w>80</w>
-      <h>190</h>
+      <x>480</x>
+      <y>450</y>
+      <w>210</w>
+      <h>150</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;60;170</additional_attributes>
+    <additional_attributes>30;30;190;130</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>270</x>
-      <y>390</y>
-      <w>310</w>
-      <h>80</h>
+      <y>410</y>
+      <w>160</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Specializza
 lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>290;30;30;60</additional_attributes>
+    <additional_attributes>140;50;30;40</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>260</x>
-      <y>300</y>
-      <w>140</w>
-      <h>120</h>
+      <x>460</x>
+      <y>290</y>
+      <w>390</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>120;30;30;100</additional_attributes>
+    <additional_attributes>70;50;70;50;370;150</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>470</x>
-      <y>300</y>
-      <w>150</w>
-      <h>120</h>
+      <x>410</x>
+      <y>310</y>
+      <w>134</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>40;30;120;100</additional_attributes>
+    <additional_attributes>60;30;90;120</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -198,14 +198,14 @@ lt=&lt;&lt;-</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
+      <x>370</x>
       <y>200</y>
-      <w>132</w>
+      <w>128</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>Specializza
 lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>80;100;70;30</additional_attributes>
+    <additional_attributes>70;100;60;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -218,5 +218,75 @@ lt=&lt;&lt;-</panel_attributes>
     <panel_attributes>Specializza
 lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>30;100;160;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>90</x>
+      <y>310</y>
+      <w>180</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Ric. Av. iscritto da Genitore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>280</y>
+      <w>150</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Specializza
+lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130;40;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>110</x>
+      <y>410</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Visualizza schde utente
+ da amministratore </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>200</x>
+      <y>310</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>200;30;30;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>170</x>
+      <y>460</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;30;110</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>410</y>
+      <w>128</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Specializza
+lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;50;100;50</additional_attributes>
   </element>
 </diagram>
