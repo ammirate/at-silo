@@ -157,12 +157,12 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="46" controlTypeID="com.balsamiq.mockups::CallOut" x="1336" y="574" w="-1" h="-1" measuredW="39" measuredH="37" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::CallOut" x="1336" y="574" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="61" y="25" w="-1" h="-1" measuredW="37" measuredH="43" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="61" y="25" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
@@ -268,6 +268,18 @@
       <controlProperties>
         <size>16</size>
         <text>NO</text>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::TextArea" x="912" y="404" w="261" h="61" measuredW="200" measuredH="140" zOrder="41" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Label" x="872" y="405" w="-1" h="-1" measuredW="35" measuredH="22" zOrder="42" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Altro</text>
       </controlProperties>
     </control>
   </controls>
