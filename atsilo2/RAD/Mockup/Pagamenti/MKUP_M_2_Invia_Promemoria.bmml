@@ -78,6 +78,7 @@
         <italic>false</italic>
         <menuIcon>false</menuIcon>
         <size>14</size>
+        <state>selected</state>
         <text>GESTIONE%20PAGAMENTI%20%20%20%20</text>
       </controlProperties>
     </control>
@@ -113,7 +114,7 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>1</selectedIndex>
-        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AEffettua%20Sconto%0AFattura%20Pagamento%0ARegistra%20Pagamento</text>
+        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AFattura%20Pagamento%0AVariazioni%20Extra%0ARegistra%20Pagamento</text>
       </controlProperties>
     </control>
     <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="719" measuredH="30" zOrder="15" locked="false" isInGroup="-1">
@@ -122,7 +123,7 @@
         <italic>false</italic>
         <selectedIndex>1</selectedIndex>
         <size>14</size>
-        <text>Stato%20Pagamenti%2C%20Invio%20Promemoria%2C%20Effettua%20Sconto%2C%20Fattura%20Pagamento%2C%20Registra%20Pagamento</text>
+        <text>Stato%20Pagamenti%2CInvio%20Promemoria%2CFattura%20Pagamento%2CVariazioni%20Extra%2CRegistra%20Pagamento</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="17" locked="false" isInGroup="-1">
@@ -186,7 +187,7 @@
         <text>%20%0AIl%20promemoria%20pagamento%20%E8%20stato%20inviato%0AOK</text>
       </controlProperties>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="1415" y="288" w="-1" h="-1" measuredW="39" measuredH="43" zOrder="29" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="1415" y="288" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="29" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>

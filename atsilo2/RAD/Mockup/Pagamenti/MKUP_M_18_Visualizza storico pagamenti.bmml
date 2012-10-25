@@ -105,7 +105,7 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>3</selectedIndex>
-        <text>Effettua%20Pagamento%0AVisualizza%20storico%20pagamenti</text>
+        <text>Fatture%20pagamenti%0AVisualizza%20storico%20pagamenti</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
@@ -114,18 +114,18 @@
         <color>13421772</color>
       </controlProperties>
     </control>
-    <control controlID="59" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="371" measuredH="30" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="362" measuredH="30" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <selectedIndex>1</selectedIndex>
         <size>14</size>
-        <text>Effettua%20Pagamento%2C%20Visualizza%20storico%20Pagamenti</text>
+        <text>Fatture%20Pagamenti%2C%20Visualizza%20storico%20Pagamenti</text>
       </controlProperties>
     </control>
     <control controlID="60" controlTypeID="com.balsamiq.mockups::DataGrid" x="387" y="234" w="-1" h="-1" measuredW="846" measuredH="113" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>DESCRIZIONE%20TASSA%20v%2C%20DESCRIZIONE%20RATA%2C%20DATA%20SCADENZA%2C%20DATA%20PAGAMENTO%2C%20IMPORTO%20DOVUTO%2C%20IMPORTO%20PAGATO%0ATassa%20Regionale%2C%20Rata%20unica%2C%2030/09/12%2C%2012/09/12%2C%2030%u20AC%2C%2030%u20AC%0ARetta%20Settembre%20FULLTIME%2C%20Rata%20mensile%2C%2015/09/12%2C%2012/09/12%2C%20300%u20AC%2C%20300%u20AC%0ARetta%20Settembre%20FULLTIME%2C%20Rata%20mensile%2C%2015/10/12%2C%2006/10/12%2C%20300%u20AC%2C%20300%u20AC</text>
+        <text>DESCRIZIONE%20TASSA%20v%2C%20DESCRIZIONE%20RATA%2C%20DATA%20SCADENZA%2C%20DATA%20PAGAMENTO%2C%20IMPORTO%20DOVUTO%2C%20IMPORTO%20PAGATO%0ATassa%20Regionale%2C%20Rata%20unica%2C%2030/09/12%2C%2012/09/12%2C%2030%u20AC%2C%2030%u20AC%0ARetta%20Settembre%20FULLTIME%2C%20Rata%20mensile%2C%2015/09/12%2C%2012/09/12%2C%20300%u20AC%2C%20300%u20AC%0ARetta%20Ottobre%20FULLTIME%2C%20Rata%20mensile%2C%2015/10/12%2C%2006/10/12%2C%20300%u20AC%2C%20300%u20AC</text>
       </controlProperties>
     </control>
     <control controlID="61" controlTypeID="com.balsamiq.mockups::Label" x="684" y="196" w="-1" h="-1" measuredW="204" measuredH="24" zOrder="19" locked="false" isInGroup="-1">
