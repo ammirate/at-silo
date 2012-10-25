@@ -110,15 +110,15 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>0</selectedIndex>
-        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AEffettua%20Sconto%0AFattura%20Pagamento%0ARegistra%20Pagamento</text>
+        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AFattura%20Pagamento%0AVariazioni%20Extra%0ARegistra%20Pagamento</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="723" measuredH="30" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="719" measuredH="30" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <size>14</size>
-        <text>Stato%20Pagamenti%2C%20Email%20Promemoria%2C%20Effettua%20Sconto%2C%20Fattura%20Pagamento%2C%20Registra%20Pagamento</text>
+        <text>Stato%20Pagamenti%2CInvio%20Promemoria%2CFattura%20Pagamento%2CVariazioni%20Extra%2CRegistra%20Pagamento</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="17" locked="false" isInGroup="-1">
@@ -126,11 +126,13 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="33" controlTypeID="com.balsamiq.mockups::DataGrid" x="380" y="196" w="822" h="334" measuredW="405" measuredH="131" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::DataGrid" x="380" y="196" w="822" h="317" measuredW="407" measuredH="148" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
+        <alternateRowColor>15134199</alternateRowColor>
         <hLines>true</hLines>
-        <rowHeight>27</rowHeight>
-        <text>Name%20%2C%20Cognome%20%5Ev%2C%20Codice%20Fiscale%20%5Ev%2C%20Stato%20Pagamento%20%5Ev%0AGiacomo%2C%20Guilizzoni%2C%20GUZG12R423F%2C%20Retta%20Da%20Pagare%0AMarco%2C%20Bottoni%2C%20MRCG12R423F%2C%20Retta%20Pagata%0AMariah%2C%20Rossi%2C%20MARG12R423F%2C%20Retta%20Pagata%0AValeria%2C%20Liberti%2C%20VALG12R423F%2C%20Retta%20Da%20Pagare</text>
+        <rowHeight>31</rowHeight>
+        <size>14</size>
+        <text>Name%20%2C%20Cognome%20%5Ev%2C%20Codice%20Fiscale%20%5Ev%2C%20Stato%20Pagamento%20%5Ev%0AGiacomo%2C%20Guilizzoni%2C%20GUZN12R423F%2C%20Retta%20Da%20Pagare%0AMarco%2C%20Bottoni%2C%20MRCA12R423D%2C%20Retta%20Pagata%0AMariah%2C%20Rossi%2C%20MARG12R423X%2C%20Retta%20Pagata%0AValeria%2C%20Liberti%2C%20VALS22R423F%2C%20Retta%20Da%20Pagare</text>
         <value>0</value>
         <verticalScrollbar>true</verticalScrollbar>
       </controlProperties>

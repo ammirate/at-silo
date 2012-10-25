@@ -111,16 +111,16 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>4</selectedIndex>
-        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AEffettua%20Sconto%0AFattura%20Pagamento%0ARegistra%20Pagamento</text>
+        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AFattura%20Pagamento%0AVariazioni%20Extra%0ARegistra%20Pagamento</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="723" measuredH="30" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="719" measuredH="30" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <selectedIndex>4</selectedIndex>
         <size>14</size>
-        <text>Stato%20Pagamenti%2C%20Email%20Promemoria%2C%20Effettua%20Sconto%2C%20Fattura%20Pagamento%2C%20Registra%20Pagamento</text>
+        <text>Stato%20Pagamenti%2CInvio%20Promemoria%2CFattura%20Pagamento%2CVariazioni%20Extra%2CRegistra%20Pagamento</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="17" locked="false" isInGroup="-1">
@@ -254,7 +254,7 @@
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
         <selectedIndex>4</selectedIndex>
-        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AEffettua%20Sconto%0AFattura%20Pagamento%0ARegistra%20Pagamento</text>
+        <text>Stato%20Pagamenti%0AInvio%20Promemoria%0AFattura%20Pagamento%0AVariazioni%20Extra%0ARegistra%20Pagamento</text>
       </controlProperties>
     </control>
     <control controlID="72" controlTypeID="com.balsamiq.mockups::TitleWindow" x="1643" y="105" w="984" h="490" measuredW="450" measuredH="400" zOrder="35" locked="false" isInGroup="-1">
@@ -264,13 +264,13 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="73" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1643" y="129" w="984" h="29" measuredW="723" measuredH="30" zOrder="36" locked="false" isInGroup="-1">
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1643" y="129" w="984" h="29" measuredW="719" measuredH="30" zOrder="36" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <selectedIndex>4</selectedIndex>
         <size>14</size>
-        <text>Stato%20Pagamenti%2C%20Email%20Promemoria%2C%20Effettua%20Sconto%2C%20Fattura%20Pagamento%2C%20Registra%20Pagamento</text>
+        <text>Stato%20Pagamenti%2CInvio%20Promemoria%2CFattura%20Pagamento%2CVariazioni%20Extra%2CRegistra%20Pagamento</text>
       </controlProperties>
     </control>
     <control controlID="74" controlTypeID="com.balsamiq.mockups::Label" x="1643" y="572" w="-1" h="-1" measuredW="125" measuredH="21" zOrder="37" locked="false" isInGroup="-1">
@@ -329,12 +329,12 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="1393" y="11" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="46" locked="false" isInGroup="-1">
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="1393" y="11" w="-1" h="-1" measuredW="39" measuredH="37" zOrder="46" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="87" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="21" w="-1" h="-1" measuredW="37" measuredH="43" zOrder="47" locked="false" isInGroup="-1">
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="21" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="47" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
