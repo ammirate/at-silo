@@ -104,7 +104,7 @@
         <color>15594478</color>
         <hasHeader>false</hasHeader>
         <rowHeight>23</rowHeight>
-        <selectedIndex>3</selectedIndex>
+        <selectedIndex>0</selectedIndex>
         <text>Fattura%20mensile%0AVisualizza%20storico%20pagamenti</text>
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
@@ -114,45 +114,34 @@
         <color>13421772</color>
       </controlProperties>
     </control>
-    <control controlID="59" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="342" measuredH="30" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="129" w="984" h="29" measuredW="352" measuredH="30" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
-        <selectedIndex>1</selectedIndex>
+        <selectedIndex>0</selectedIndex>
         <size>14</size>
-        <text>Fattura%20Mensile%2C%20Visualizza%20storico%20Pagamenti</text>
+        <text>Fattura%20mensile%20%2CVisualizza%20storico%20Pagamenti</text>
       </controlProperties>
     </control>
-    <control controlID="60" controlTypeID="com.balsamiq.mockups::DataGrid" x="387" y="234" w="-1" h="-1" measuredW="846" measuredH="113" zOrder="18" locked="false" isInGroup="-1">
-      <controlProperties>
-        <text>DESCRIZIONE%20TASSA%20v%2C%20DESCRIZIONE%20RATA%2C%20DATA%20SCADENZA%2C%20DATA%20PAGAMENTO%2C%20IMPORTO%20DOVUTO%2C%20IMPORTO%20PAGATO%0ATassa%20Regionale%2C%20Rata%20unica%2C%2030/09/12%2C%2012/09/12%2C%2030%u20AC%2C%2030%u20AC%0ARetta%20Settembre%20FULLTIME%2C%20Rata%20mensile%2C%2015/09/12%2C%2012/09/12%2C%20300%u20AC%2C%20300%u20AC%0ARetta%20Ottobre%20FULLTIME%2C%20Rata%20mensile%2C%2015/10/12%2C%2006/10/12%2C%20300%u20AC%2C%20300%u20AC</text>
-      </controlProperties>
-    </control>
-    <control controlID="61" controlTypeID="com.balsamiq.mockups::Label" x="684" y="196" w="-1" h="-1" measuredW="204" measuredH="24" zOrder="19" locked="false" isInGroup="-1">
-      <controlProperties>
-        <bold>true</bold>
-        <size>16</size>
-        <text>Anno%20scolastico%202012/2013</text>
-      </controlProperties>
-    </control>
-    <control controlID="62" controlTypeID="com.balsamiq.mockups::Canvas" x="387" y="344" w="846" h="30" measuredW="100" measuredH="70" zOrder="20" locked="false" isInGroup="-1">
-      <controlProperties>
-        <color>14540253</color>
-      </controlProperties>
-    </control>
-    <control controlID="63" controlTypeID="com.balsamiq.mockups::Paragraph" x="1023" y="349" w="200" h="23" measuredW="200" measuredH="80" zOrder="21" locked="false" isInGroup="-1">
-      <controlProperties>
-        <align>right</align>
-        <size>14</size>
-        <text>*Totale*%3A%20630%u20AC</text>
-      </controlProperties>
-    </control>
-    <control controlID="64" controlTypeID="com.balsamiq.mockups::Button" x="1095" y="436" w="130" h="27" measuredW="90" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="64" controlTypeID="com.balsamiq.mockups::Button" x="565" y="514" w="110" h="27" measuredW="81" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10667209</color>
         <size>14</size>
-        <text>INDIETRO</text>
+        <text>STAMPA</text>
       </controlProperties>
     </control>
+    <control controlID="65" controlTypeID="com.balsamiq.mockups::FieldSet" x="349" y="181" w="561" h="313" measuredW="200" measuredH="170" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*Fattura%20%20OTTOBRE%202012*</text>
+      </controlProperties>
+    </control>
+    <control controlID="66" controlTypeID="com.balsamiq.mockups::Paragraph" x="360" y="205" w="514" h="289" measuredW="200" measuredH="80" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <size>14</size>
+        <text>Nome%3A%20ALESSIA%0ACognome%3A%20BRIGNOLA%0ACodice%20Fiscale%3A%20BRGALS66BXD7382A%0AIndirizzo%3A%20VIA%20BENEDETTO%20CROCE%2C%2012%2C%2081100%20CASERTA%20%28CE%29%0A%20%0ANumero%20transazione%3A%200983651536771%0AScadenza%20Pagamento%3A%2015/10/12%0A%20%0AFascia%20oraria%20di%20appartenenza%3A%20PART-TIME%20MATTUTINA%20%288%3A30-13%3A30%29%0AImporto%20retta%20di%20base%3A%20150%u20AC%0A%20%0ATotale%20servizi%20Extra%3A%2030%u20AC%0ADetrazioni%20Sconto%3A%20N/D%0A%20%0A%20%0A*IMPORTO%20TOTALE*%20%3A%20180%u20AC</text>
+      </controlProperties>
+    </control>
+    <control controlID="67" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="894" y="188" w="-1" h="304" measuredW="16" measuredH="100" zOrder="21" locked="false" isInGroup="-1"/>
   </controls>
 </mockup>
