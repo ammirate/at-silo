@@ -121,37 +121,37 @@
         <color>6710886</color>
       </controlProperties>
     </control>
-    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="406" y="256" w="-1" h="-1" measuredW="162" measuredH="22" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Label" x="406" y="256" w="-1" h="-1" measuredW="196" measuredH="22" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
-        <text>Indicare%20pasto%20alternativo</text>
+        <text>Indicare%20piano%20pasto%20alternativo</text>
       </controlProperties>
     </control>
-    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="412" y="325" w="-1" h="-1" measuredW="65" measuredH="22" zOrder="19" locked="false" isInGroup="-1">
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Label" x="412" y="321" w="-1" h="-1" measuredW="65" measuredH="22" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
         <text>Allega%20file</text>
       </controlProperties>
     </control>
-    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextInput" x="483" y="323" w="412" h="-1" measuredW="71" measuredH="27" zOrder="20" locked="false" isInGroup="-1">
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextInput" x="483" y="319" w="412" h="-1" measuredW="71" measuredH="27" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <italic>true</italic>
         <text>Opzionale</text>
       </controlProperties>
     </control>
-    <control controlID="41" controlTypeID="com.balsamiq.mockups::Icon" x="859" y="324" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="21" locked="false" isInGroup="-1">
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Icon" x="861" y="322" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <icon>ArchiveIcon%7Csmall</icon>
       </controlProperties>
     </control>
-    <control controlID="42" controlTypeID="com.balsamiq.mockups::Button" x="649" y="419" w="-1" h="-1" measuredW="66" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Button" x="758" y="484" w="-1" h="-1" measuredW="66" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10667209</color>
         <size>14</size>
         <text>Annulla</text>
       </controlProperties>
     </control>
-    <control controlID="43" controlTypeID="com.balsamiq.mockups::Button" x="519" y="419" w="-1" h="-1" measuredW="112" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Button" x="610" y="484" w="-1" h="-1" measuredW="112" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <color>10667209</color>
         <size>14</size>
@@ -178,14 +178,35 @@
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="61" y="25" w="-1" h="-1" measuredW="37" measuredH="37" zOrder="27" locked="false" isInGroup="-1">
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::CallOut" x="61" y="25" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="27" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="50" controlTypeID="com.balsamiq.mockups::TextInput" x="572" y="254" w="323" h="-1" measuredW="79" measuredH="27" zOrder="28" locked="false" isInGroup="-1">
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::TextInput" x="610" y="254" w="287" h="-1" measuredW="76" measuredH="27" zOrder="28" locked="false" isInGroup="-1">
       <controlProperties>
-        <text/>
+        <italic>true</italic>
+        <text>Es%3A%20celiaco</text>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Label" x="408" y="387" w="-1" h="-1" measuredW="302" measuredH="22" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>14</size>
+        <text>Applicare%20la%20modifica%20per%20l%27intero%20anno%20scolastico%3F</text>
+      </controlProperties>
+    </control>
+    <control controlID="52" controlTypeID="com.balsamiq.mockups::CheckBox" x="740" y="384" w="-1" h="-1" measuredW="42" measuredH="25" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <italic>true</italic>
+        <size>16</size>
+        <state>selected</state>
+        <text>SI</text>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::CheckBox" x="797" y="384" w="-1" h="-1" measuredW="49" measuredH="25" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>NO</text>
       </controlProperties>
     </control>
   </controls>

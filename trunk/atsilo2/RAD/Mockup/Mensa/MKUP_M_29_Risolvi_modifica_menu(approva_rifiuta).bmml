@@ -6,10 +6,10 @@
         <borderStyle>square</borderStyle>
       </controlProperties>
     </control>
-    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="123" y="26" w="172" h="103" measuredW="848" measuredH="528" zOrder="5" locked="false" isInGroup="-1">
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="123" y="26" w="172" h="103" measuredW="77" measuredH="79" zOrder="5" locked="false" isInGroup="-1">
       <controlProperties>
         <borderStyle>none</borderStyle>
-        <src>../assets/%2540silo.png</src>
+        <src>../assets/%252540silo.png</src>
         <text/>
       </controlProperties>
     </control>
@@ -303,11 +303,11 @@
         <text>*%7Bcolor%3A%23003399%7DRICHIESTA%20MODIFICA%20MENU%27%7Bcolor%7D*</text>
       </controlProperties>
     </control>
-    <control controlID="77" controlTypeID="com.balsamiq.mockups::Paragraph" x="1760" y="253" w="843" h="126" measuredW="200" measuredH="80" zOrder="43" locked="false" isInGroup="-1">
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Paragraph" x="1761" y="236" w="843" h="145" measuredW="200" measuredH="80" zOrder="43" locked="false" isInGroup="-1">
       <controlProperties>
         <color>3355443</color>
         <size>16</size>
-        <text>*NOME%3A*%20Gianmarco%20%09%20%09*COGNOME%3A*%20Scialla%20%09%20%20%20%20*CODICE%20FISCALE*%3A%20SCLGMC12B10B963A%0A%20%0A*TIPOLOGIA*%3A%20Lattante%20%09%09*CLASSE*%3A%201A%0A%20%0A*MENU%27%20CORRENTE%3A*%20Normale%20%09%09*MENU%27%20RICHIESTO%3A*%20Celiaco</text>
+        <text>*NOME%3A*%20Gianmarco%20%09%20%09*COGNOME%3A*%20Scialla%20%09%20%20%20%20*CODICE%20FISCALE*%3A%20SCLGMC12B10B963A%0A%20%0A*TIPOLOGIA*%3A%20Lattante%20%09%09*CLASSE*%3A%201A%0A%20%0A*MENU%27%20CORRENTE%3A*%20Normale%20%09%09*MENU%27%20RICHIESTO%3A*%20Celiaco%0A%20%0A*DURATA%20VARIAZIONE*%3A%20Permanente</text>
       </controlProperties>
     </control>
     <control controlID="78" controlTypeID="com.balsamiq.mockups::Button" x="2046" y="491" w="107" h="27" measuredW="90" measuredH="27" zOrder="44" locked="false" isInGroup="-1">
@@ -330,7 +330,7 @@
         <text>APPROVATA%0ALa%20richiesta%20di%20modifica%20men%F9%20per%20GIANMARCO%20SCIALLA%20%E8%20stata%20approvata%0AOK</text>
       </controlProperties>
     </control>
-    <control controlID="81" controlTypeID="com.balsamiq.mockups::CallOut" x="2153" y="605" w="-1" h="-1" measuredW="38" measuredH="39" zOrder="47" locked="false" isInGroup="-1">
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::CallOut" x="2153" y="605" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="47" locked="false" isInGroup="-1">
       <controlProperties>
         <text>3</text>
       </controlProperties>
@@ -353,17 +353,17 @@
         <text>_in%20caso%20di%20approvazione_</text>
       </controlProperties>
     </control>
-    <control controlID="85" controlTypeID="com.balsamiq.mockups::CallOut" x="1420" y="26" w="-1" h="-1" measuredW="39" measuredH="40" zOrder="51" locked="false" isInGroup="-1">
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::CallOut" x="1420" y="26" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="51" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="25" w="-1" h="-1" measuredW="36" measuredH="43" zOrder="52" locked="false" isInGroup="-1">
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="25" w="-1" h="-1" measuredW="37" measuredH="40" zOrder="52" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="87" controlTypeID="com.balsamiq.mockups::Label" x="1760" y="372" w="-1" h="-1" measuredW="379" measuredH="24" zOrder="53" locked="false" isInGroup="-1">
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Label" x="1761" y="389" w="-1" h="-1" measuredW="379" measuredH="24" zOrder="53" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <color>3355443</color>
