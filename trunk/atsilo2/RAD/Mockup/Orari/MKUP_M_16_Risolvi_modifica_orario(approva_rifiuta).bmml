@@ -303,11 +303,11 @@
         <text>*%7Bcolor%3A%23336666%7DRICHIESTA%20MODIFICA%20ORARIO%7Bcolor%7D*</text>
       </controlProperties>
     </control>
-    <control controlID="77" controlTypeID="com.balsamiq.mockups::Paragraph" x="1760" y="248" w="843" h="145" measuredW="200" measuredH="80" zOrder="43" locked="false" isInGroup="-1">
+    <control controlID="77" controlTypeID="com.balsamiq.mockups::Paragraph" x="1760" y="236" w="843" h="186" measuredW="200" measuredH="80" zOrder="43" locked="false" isInGroup="-1">
       <controlProperties>
         <color>3355443</color>
         <size>16</size>
-        <text>*NOME%3A*%20Gianmarco%20%09%20%09*COGNOME%3A*%20Scialla%20%09%20%20%20%20*CODICE%20FISCALE*%3A%20SCLGMC12B10B963A%0A%20%0A*TIPOLOGIA*%3A%20Lattante%20%09%09*CLASSE*%3A%201A%0A%20%0A*FASCIA%20ORARIA%20CORRENTE%3A*%20Full-time%20%09%09%0A%20%0A*FASCIA%20ORARIA%20MODIFICATA%3A*%20Part-time%20Pomeridiana%20%2813%3A30-16%3A30%29%09%09*PASTO%3A*%20No</text>
+        <text>*NOME%3A*%20Gianmarco%20%09%20%09*COGNOME%3A*%20Scialla%20%09%20%20%20%20*CODICE%20FISCALE*%3A%20SCLGMC12B10B963A%0A%20%0A*TIPOLOGIA*%3A%20Lattante%20%09%09*CLASSE*%3A%201A%0A%20%0A*FASCIA%20ORARIA%20CORRENTE%3A*%20Full-time%20%09%09%0A%20%0A*FASCIA%20ORARIA%20MODIFICATA%3A*%20Part-time%20Pomeridiana%20%2813%3A00-16%3A30%29%09%09*PASTO%3A*%20Si%0A%20%0A*DURATA%20VARIAZIONE*%3A%20Permanente</text>
       </controlProperties>
     </control>
     <control controlID="78" controlTypeID="com.balsamiq.mockups::Button" x="2046" y="491" w="107" h="27" measuredW="90" measuredH="27" zOrder="44" locked="false" isInGroup="-1">
@@ -330,7 +330,7 @@
         <text>APPROVATA%0ALa%20richiesta%20di%20modifica%20orario%20per%20GIANMARCO%20SCIALLA%20%E8%20stata%20approvata%0AOK</text>
       </controlProperties>
     </control>
-    <control controlID="81" controlTypeID="com.balsamiq.mockups::CallOut" x="2153" y="605" w="-1" h="-1" measuredW="38" measuredH="39" zOrder="47" locked="false" isInGroup="-1">
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::CallOut" x="2153" y="605" w="-1" h="-1" measuredW="38" measuredH="43" zOrder="47" locked="false" isInGroup="-1">
       <controlProperties>
         <text>3</text>
       </controlProperties>
@@ -353,12 +353,12 @@
         <text>_in%20caso%20di%20approvazione_</text>
       </controlProperties>
     </control>
-    <control controlID="85" controlTypeID="com.balsamiq.mockups::CallOut" x="1420" y="26" w="-1" h="-1" measuredW="39" measuredH="37" zOrder="51" locked="false" isInGroup="-1">
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::CallOut" x="1420" y="26" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="51" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="25" w="-1" h="-1" measuredW="36" measuredH="39" zOrder="52" locked="false" isInGroup="-1">
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="25" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="52" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>

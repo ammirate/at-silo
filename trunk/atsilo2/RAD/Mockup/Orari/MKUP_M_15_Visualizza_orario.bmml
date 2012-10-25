@@ -131,14 +131,14 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="339" y="243" w="926" h="182" measuredW="639" measuredH="263" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="374" y="250" w="814" h="182" measuredW="639" measuredH="263" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
-        <align>center</align>
+        <align>left</align>
         <bold>false</bold>
         <selectedIndex>-1</selectedIndex>
         <size>13</size>
-        <text>COGNOME%20v%2C%20NOME%2C%20%20TIPOLOGIA%2C%20CLASSE%20%2C%20ORARIO%2C%20PASTO%0ABorromini%2C%20Nicola%2C%20Lattante%2C%202C%2C%20Full%20time%20%288%3A30%20-16%3A30%29%2C%20%5BX%5D%0AD%27Errico%2C%20Marina%2C%20Lattante%2C%202C%2C%20Part-time%20mattutina%20%288%3A30-13%3A30%29%2C%20%5Bx%5D%0AGigliola%2C%20Alfredo%2C%20Semi-svezzato%2C%202C%2C%20Altro%20%2810-14%29%2C%5Bx%5D%0AMinturno%2C%20Sonia%2C%20Svezzato%2C%202C%2C%20Full%20time%20%288%3A30%20-16%3A30%29%2C%5Bx%5D%0ASaputo%2C%20Alessandra%2C%20Semi-svezzato%2C%202C%2C%20Part-time%20pomeridiano%20%2813%3A30%20-%2016%3A30%29%2C%20%5B%5D%0A%20%0A%20%0A%20%0A%7B20L%2C%2020L%2C%2020%2C%2015%2C%2030L%7D</text>
-        <verticalScrollbar>false</verticalScrollbar>
+        <text>COGNOME%20v%2C%20NOME%2C%20%20TIPOLOGIA%2C%20CLASSE%20%2C%20ORARIO%2C%20PASTO%0ABorromini%2C%20Nicola%2C%20Lattante%2C%202C%2C%20Full%20time%20%288%3A30%20-16%3A30%29%2C%20%5BX%5D%0AD%27Errico%2C%20Marina%2C%20Lattante%2C%202C%2C%20Part-time%20mattutina%20%288%3A30-13%3A30%29%2C%20%5Bx%5D%0AGigliola%2C%20Alfredo%2C%20Semi-svezzato%2C%202C%2C%20Altro%20%2810-14%29%2C%5Bx%5D%0AMinturno%2C%20Sonia%2C%20Svezzato%2C%202C%2C%20Full%20time%20%288%3A30%20-16%3A30%29%2C%5Bx%5D%0ASaputo%2C%20Alessandra%2C%20Semi-svezzato%2C%202C%2C%20Part-time%20pomeridiano%20%2813%3A30%20-%2016%3A30%29%2C%20%5B%5D%0A%20%0A%20%0A%20</text>
+        <verticalScrollbar>true</verticalScrollbar>
       </controlProperties>
     </control>
     <control controlID="36" controlTypeID="com.balsamiq.mockups::ComboBox" x="594" y="192" w="56" h="-1" measuredW="50" measuredH="23" zOrder="19" locked="false" isInGroup="-1">
