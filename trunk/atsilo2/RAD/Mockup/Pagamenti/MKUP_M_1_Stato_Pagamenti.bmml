@@ -126,15 +126,23 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="33" controlTypeID="com.balsamiq.mockups::DataGrid" x="380" y="196" w="822" h="317" measuredW="407" measuredH="148" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::DataGrid" x="380" y="226" w="822" h="287" measuredW="471" measuredH="148" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <alternateRowColor>15134199</alternateRowColor>
         <hLines>true</hLines>
         <rowHeight>31</rowHeight>
         <size>14</size>
-        <text>Name%20%2C%20Cognome%20%5Ev%2C%20Codice%20Fiscale%20%5Ev%2C%20Stato%20Pagamento%20%5Ev%0AGiacomo%2C%20Guilizzoni%2C%20GUZN12R423F%2C%20Retta%20Da%20Pagare%0AMarco%2C%20Bottoni%2C%20MRCA12R423D%2C%20Retta%20Pagata%0AMariah%2C%20Rossi%2C%20MARG12R423X%2C%20Retta%20Pagata%0AValeria%2C%20Liberti%2C%20VALS22R423F%2C%20Retta%20Da%20Pagare</text>
+        <text>Name%20%2C%20Cognome%20%5Ev%2C%20Codice%20Fiscale%20%5Ev%2C%20Stato%20Pagamento%20%5Ev%2C%20Importo%0AGiacomo%2C%20Guilizzoni%2C%20GUZN12R423F%2C%20Retta%20Da%20Pagare%2C%20%20310%u20AC%0AMarco%2C%20Bottoni%2C%20MRCA12R423D%2C%20Retta%20Pagata%2C%20300%u20AC%0AMariah%2C%20Rossi%2C%20MARG12R423X%2C%20Retta%20Pagata%2C%20150%u20AC%0AValeria%2C%20Liberti%2C%20VALS22R423F%2C%20Retta%20Da%20Pagare%2C%20165%u20AC</text>
         <value>0</value>
         <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Label" x="665" y="186" w="-1" h="-1" measuredW="222" measuredH="24" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>3355443</color>
+        <size>16</size>
+        <text>PAGAMENTI%20OTTOBRE%202012</text>
       </controlProperties>
     </control>
   </controls>
