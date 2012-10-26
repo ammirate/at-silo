@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>20</x>
+      <x>200</x>
       <y>140</y>
       <w>90</w>
       <h>40</h>
@@ -15,8 +15,8 @@
   <element>
     <type>com.umlet.element.custom.InitialState</type>
     <coordinates>
-      <x>50</x>
-      <y>60</y>
+      <x>210</x>
+      <y>50</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -26,13 +26,13 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>30</x>
-      <y>50</y>
+      <x>190</x>
+      <y>40</y>
       <w>50</w>
-      <h>110</h>
+      <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>30;90;30;30</additional_attributes>
+    <additional_attributes>30;100;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.State</type>
@@ -60,30 +60,16 @@ COMPILABILE</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>280</x>
+      <x>260</x>
       <y>110</y>
-      <w>122</w>
+      <w>140</w>
       <h>94</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 TIME
 TRIGGED
 </panel_attributes>
-    <additional_attributes>100;50;30;50</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>80</x>
-      <y>110</y>
-      <w>130</w>
-      <h>94</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-TIME 
-TRIGGED
-</panel_attributes>
-    <additional_attributes>110;50;30;50</additional_attributes>
+    <additional_attributes>120;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -97,18 +83,6 @@ TRIGGED
 TIME 
 TRIGGED</panel_attributes>
     <additional_attributes>70;110;70;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.State</type>
-    <coordinates>
-      <x>190</x>
-      <y>140</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>INSERIMENTO
-</panel_attributes>
-    <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
