@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>10</x>
+      <x>20</x>
       <y>150</y>
       <w>90</w>
       <h>40</h>
@@ -15,7 +15,7 @@
   <element>
     <type>com.umlet.element.custom.InitialState</type>
     <coordinates>
-      <x>40</x>
+      <x>50</x>
       <y>70</y>
       <w>20</w>
       <h>20</h>
@@ -26,7 +26,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>20</x>
+      <x>30</x>
       <y>60</y>
       <w>50</w>
       <h>110</h>
@@ -37,18 +37,19 @@
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>370</x>
+      <x>380</x>
       <y>150</y>
-      <w>90</w>
+      <w>110</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>ATTIVATO</panel_attributes>
+    <panel_attributes>ATTIVATO
+COMPILABILE</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>180</x>
+      <x>190</x>
       <y>270</y>
       <w>100</w>
       <h>40</h>
@@ -59,7 +60,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>270</x>
+      <x>280</x>
       <y>140</y>
       <w>120</w>
       <h>50</h>
@@ -70,7 +71,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>70</x>
+      <x>80</x>
       <y>140</y>
       <w>130</w>
       <h>50</h>
@@ -81,7 +82,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>200</x>
+      <x>210</x>
       <y>160</y>
       <w>50</w>
       <h>130</h>
@@ -92,7 +93,7 @@
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>180</x>
+      <x>190</x>
       <y>450</y>
       <w>100</w>
       <h>40</h>
@@ -103,7 +104,7 @@
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>180</x>
+      <x>190</x>
       <y>150</y>
       <w>120</w>
       <h>40</h>
@@ -117,75 +118,30 @@
     <coordinates>
       <x>360</x>
       <y>160</y>
-      <w>50</w>
-      <h>330</h>
+      <w>122</w>
+      <h>150</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>30;30;30;310</additional_attributes>
+    <panel_attributes>lt=&lt;-
+TIME
+TRIGGED</panel_attributes>
+    <additional_attributes>70;30;70;130</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>250</x>
-      <y>440</y>
-      <w>160</w>
+      <x>260</x>
+      <y>260</y>
+      <w>190</w>
       <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>140;30;30;30</additional_attributes>
+    <additional_attributes>170;30;30;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>430</x>
-      <y>140</y>
-      <w>150</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>130;30;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.State</type>
-    <coordinates>
-      <x>560</x>
+      <x>420</x>
       <y>150</y>
-      <w>90</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>COMPILATO</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>620</x>
-      <y>140</y>
-      <w>130</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>110;30;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.State</type>
-    <coordinates>
-      <x>730</x>
-      <y>150</y>
-      <w>130</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>SOTTOMESSO
- NEL 
-SISTEMA
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>370</x>
-      <y>160</y>
       <w>130</w>
       <h>160</h>
     </coordinates>
@@ -198,8 +154,8 @@ COMPILATO</panel_attributes>
   <element>
     <type>com.umlet.element.custom.FinalState</type>
     <coordinates>
-      <x>430</x>
-      <y>300</y>
+      <x>480</x>
+      <y>290</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
@@ -209,7 +165,7 @@ COMPILATO</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>140</x>
+      <x>150</x>
       <y>280</y>
       <w>110</w>
       <h>90</h>
@@ -220,7 +176,7 @@ COMPILATO</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>200</x>
+      <x>210</x>
       <y>280</y>
       <w>90</w>
       <h>90</h>
@@ -231,7 +187,7 @@ COMPILATO</panel_attributes>
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>90</x>
+      <x>100</x>
       <y>350</y>
       <w>90</w>
       <h>40</h>
@@ -244,7 +200,7 @@ DATA
   <element>
     <type>com.umlet.element.custom.State</type>
     <coordinates>
-      <x>260</x>
+      <x>270</x>
       <y>350</y>
       <w>110</w>
       <h>40</h>
@@ -256,7 +212,7 @@ CONTENUTO</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>100</x>
+      <x>110</x>
       <y>360</y>
       <w>110</w>
       <h>110</h>
@@ -267,7 +223,7 @@ CONTENUTO</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>230</x>
+      <x>240</x>
       <y>360</y>
       <w>100</w>
       <h>110</h>
@@ -276,25 +232,118 @@ CONTENUTO</panel_attributes>
     <additional_attributes>30;90;80;30</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>760</x>
-      <y>170</y>
-      <w>50</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>30;110;30;30</additional_attributes>
-  </element>
-  <element>
     <type>com.umlet.element.custom.FinalState</type>
     <coordinates>
-      <x>780</x>
-      <y>280</y>
+      <x>690</x>
+      <y>160</y>
       <w>20</w>
       <h>20</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>460</x>
+      <y>140</y>
+      <w>120</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>370</x>
+      <y>160</y>
+      <w>50</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;120;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>260</x>
+      <y>250</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;140;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.State</type>
+    <coordinates>
+      <x>560</x>
+      <y>150</y>
+      <w>90</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>CONCLUSO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>620</x>
+      <y>140</y>
+      <w>90</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>70;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>460</y>
+      <w>410</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>390;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>160</y>
+      <w>122</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+TIME 
+TRIGGED</panel_attributes>
+    <additional_attributes>70;30;70;330</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>260</x>
+      <y>410</y>
+      <w>230</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+TIME 
+TRIGGED
+</panel_attributes>
+    <additional_attributes>210;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>440</x>
+      <y>160</y>
+      <w>50</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;300</additional_attributes>
   </element>
 </diagram>
