@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>70</x>
+      <y>0</y>
+      <w>80</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>UtenteForum</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>100</x>
+      <y>120</y>
+      <w>20</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>40</y>
+      <w>50</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;80</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>170</x>
+      <y>20</y>
+      <w>131</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+CercaForum</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>220</x>
+      <y>120</y>
+      <w>20</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>200</x>
+      <y>60</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>290</x>
+      <y>20</y>
+      <w>101</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+ControlForum</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+
+drawCircle(w2,26, 26);
+
+drawLine(w2, 52, w2 + 6, 52 - 4);
+drawLine(w2, 52, w2 + 6, 52 + 4);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>310</x>
+      <y>70</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>330</x>
+      <y>130</y>
+      <w>20</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>90</x>
+      <y>110</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ricerca()</panel_attributes>
+    <additional_attributes>130;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>210</x>
+      <y>140</y>
+      <w>140</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+CercaForum
+premuto</panel_attributes>
+    <additional_attributes>120;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>400</x>
+      <y>10</y>
+      <w>131</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+VisualizzaLista
+Argomenti</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>530</x>
+      <y>20</y>
+      <w>131</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+ControlArgomenti</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+
+drawCircle(w2,26, 26);
+
+drawLine(w2, 52, w2 + 6, 52 - 4);
+drawLine(w2, 52, w2 + 6, 52 + 4);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>450</x>
+      <y>300</y>
+      <w>20</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>570</x>
+      <y>230</y>
+      <w>20</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>70</y>
+      <w>50</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;230</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>550</x>
+      <y>70</y>
+      <w>50</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;160</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>210</y>
+      <w>270</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+cercaChiave()</panel_attributes>
+    <additional_attributes>250;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>440</x>
+      <y>330</y>
+      <w>150</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+genera()</panel_attributes>
+    <additional_attributes>30;50;130;50</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>650</x>
+      <y>20</y>
+      <w>121</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Argomento</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+drawCircle(width / 2,26, 26);
+
+setLineThickness(2);
+drawLine(width / 2 - 26, 52, width / 2 + 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>700</x>
+      <y>220</y>
+      <w>20</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>680</x>
+      <y>70</y>
+      <w>50</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;150</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>240</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&gt;
+cerca()</panel_attributes>
+    <additional_attributes>30;50;140;50</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>760</x>
+      <y>20</y>
+      <w>131</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+RicercaForm</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>790</x>
+      <y>60</y>
+      <w>50</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>810</x>
+      <y>180</y>
+      <w>20</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>150</y>
+      <w>500</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+genera()</panel_attributes>
+    <additional_attributes>480;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>90</x>
+      <y>170</y>
+      <w>740</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+sottomette()</panel_attributes>
+    <additional_attributes>720;50;30;50</additional_attributes>
+  </element>
+</diagram>
