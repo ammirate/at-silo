@@ -61,23 +61,29 @@ COMPILABILE</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>280</x>
-      <y>130</y>
-      <w>120</w>
-      <h>50</h>
+      <y>110</y>
+      <w>122</w>
+      <h>94</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>100;30;30;30</additional_attributes>
+    <panel_attributes>lt=&lt;-
+TIME
+TRIGGED
+</panel_attributes>
+    <additional_attributes>100;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>80</x>
-      <y>130</y>
+      <y>110</y>
       <w>130</w>
-      <h>50</h>
+      <h>94</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>110;30;30;30</additional_attributes>
+    <panel_attributes>lt=&lt;-
+TIME 
+TRIGGED
+</panel_attributes>
+    <additional_attributes>110;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -166,12 +172,14 @@ COMPILATO</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>460</x>
-      <y>130</y>
-      <w>120</w>
-      <h>50</h>
+      <y>110</y>
+      <w>122</w>
+      <h>94</h>
     </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>100;30;30;30</additional_attributes>
+    <panel_attributes>lt=&lt;-
+TIEM
+ TRIGGED</panel_attributes>
+    <additional_attributes>100;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.State</type>
