@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1546" measuredH="600" mockupW="1501" mockupH="589">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1546" measuredH="595" mockupW="1501" mockupH="584">
   <controls>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="109" y="11" w="1183" h="584" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -13,7 +13,7 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="8" controlTypeID="com.balsamiq.mockups::TitleWindow" x="322" y="110" w="984" h="490" measuredW="450" measuredH="400" zOrder="13" locked="false" isInGroup="-1">
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::TitleWindow" x="306" y="104" w="984" h="490" measuredW="450" measuredH="400" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Gestione%20Tirocinanti</text>
         <topheight>26</topheight>
@@ -259,12 +259,12 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="60" controlTypeID="com.balsamiq.mockups::CallOut" x="45" y="46" w="-1" h="-1" measuredW="37" measuredH="43" zOrder="39" locked="false" isInGroup="-1">
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::CallOut" x="45" y="46" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="39" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="61" controlTypeID="com.balsamiq.mockups::CallOut" x="1340" y="207" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="40" locked="false" isInGroup="-1">
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::CallOut" x="1340" y="207" w="-1" h="-1" measuredW="39" measuredH="43" zOrder="40" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
