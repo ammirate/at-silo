@@ -1,0 +1,8 @@
+Ragazzi
+da domani mattina in poi lavorerete sulla cartella RAD di svn e non piu su ATSILO3 in ogni sottosezione troverete comunque le cartelle atsilo1 , atsilo2 e atsilo3.
+ad esempio i casi d'uso saranno in
+RAD>UseCase>Atsilo3
+;)
+i vostri lavori li ho spostati tutti io nella cartella opportuna
+
+a presto
