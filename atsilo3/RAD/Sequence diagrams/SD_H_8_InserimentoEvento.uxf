@@ -326,7 +326,7 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>357</x>
-      <y>322</y>
+      <y>343</y>
       <w>258</w>
       <h>49</h>
     </coordinates>
@@ -455,5 +455,31 @@ for (String textline : textlines) {
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>21;21;21;70</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>357</x>
+      <y>294</y>
+      <w>146</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+EVENTO 
+SOTTOMESSO</panel_attributes>
+    <additional_attributes>21;35;133;35</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>357</x>
+      <y>329</y>
+      <w>258</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+DATI
+EVENTO</panel_attributes>
+    <additional_attributes>21;35;245;35</additional_attributes>
   </element>
 </diagram>
