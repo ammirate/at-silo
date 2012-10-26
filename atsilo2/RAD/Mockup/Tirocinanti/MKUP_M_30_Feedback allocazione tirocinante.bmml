@@ -98,7 +98,7 @@
         <text>GESTIONE%20TIROCINANTI%20%20%20%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="124" y="384" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Button" x="123" y="365" w="195" h="27" measuredW="158" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <color>13421772</color>
@@ -107,13 +107,13 @@
         <text>GESTIONE%20MENSA%20%20</text>
       </controlProperties>
     </control>
-    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="125" w="984" h="29" measuredW="772" measuredH="30" zOrder="14" locked="false" isInGroup="-1">
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::ButtonBar" x="308" y="125" w="984" h="29" measuredW="620" measuredH="30" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <italic>false</italic>
         <selectedIndex>3</selectedIndex>
         <size>14</size>
-        <text>Aggiungi%20Tirocinante%2C%20Modifica%20Tirocinante%2C%20Elimina%20Tirocinante%2C%20Visualizza%20Tirocinanti%2C%20Richiedi%20Tirocinante</text>
+        <text>Aggiungi%20Tirocinante%2C%20Modifica%20Tirocinante%2C%20Elimina%20Tirocinante%2C%20Visualizza%20Tirocinanti</text>
       </controlProperties>
     </control>
     <control controlID="32" controlTypeID="com.balsamiq.mockups::HRule" x="348" y="57" w="100" h="-1" measuredW="100" measuredH="10" zOrder="16" locked="false" isInGroup="-1">
@@ -121,7 +121,7 @@
         <backgroundAlpha>0.5</backgroundAlpha>
       </controlProperties>
     </control>
-    <control controlID="34" controlTypeID="com.balsamiq.mockups::List" x="125" y="255" w="183" h="123" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::List" x="125" y="255" w="183" h="101" measuredW="100" measuredH="126" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <alternateRowColor>16777215</alternateRowColor>
         <borderStyle>square</borderStyle>
@@ -384,12 +384,12 @@
         <text>VAI</text>
       </controlProperties>
     </control>
-    <control controlID="130" controlTypeID="com.balsamiq.mockups::CallOut" x="1385" y="19" w="-1" h="-1" measuredW="39" measuredH="40" zOrder="50" locked="false" isInGroup="-1">
+    <control controlID="130" controlTypeID="com.balsamiq.mockups::CallOut" x="1385" y="19" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="50" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="131" controlTypeID="com.balsamiq.mockups::CallOut" x="47" y="7" w="-1" h="-1" measuredW="37" measuredH="37" zOrder="51" locked="false" isInGroup="-1">
+    <control controlID="131" controlTypeID="com.balsamiq.mockups::CallOut" x="47" y="7" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="51" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>

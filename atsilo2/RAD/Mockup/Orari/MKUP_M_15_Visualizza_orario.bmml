@@ -20,9 +20,9 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="308" y="572" w="-1" h="-1" measuredW="118" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="308" y="572" w="-1" h="-1" measuredW="125" measuredH="21" zOrder="15" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>%20UTENTE%3A%20Direttore</text>
+        <text>%20UTENTE%3A%20Impiegato</text>
       </controlProperties>
     </control>
     <control controlID="14" controlTypeID="com.balsamiq.mockups::Icon" x="534" y="69" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="6" locked="false" isInGroup="-1">
@@ -131,7 +131,7 @@
         <verticalScrollbar>false</verticalScrollbar>
       </controlProperties>
     </control>
-    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="374" y="250" w="814" h="182" measuredW="639" measuredH="263" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="374" y="250" w="814" h="182" measuredW="654" measuredH="263" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <align>left</align>
         <bold>false</bold>
@@ -159,6 +159,14 @@
         <menuIcon>false</menuIcon>
         <size>14</size>
         <text>INDIETRO</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Button" x="859" y="479" w="107" h="27" measuredW="81" measuredH="27" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10667209</color>
+        <menuIcon>false</menuIcon>
+        <size>14</size>
+        <text>STAMPA</text>
       </controlProperties>
     </control>
   </controls>
