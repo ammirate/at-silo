@@ -1,4 +1,4 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2655" measuredH="824" mockupW="2606" mockupH="813">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="3062" measuredH="1442" mockupW="3013" mockupH="1431">
   <controls>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="109" y="11" w="1183" h="584" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
@@ -270,10 +270,10 @@
         <icon>ExclamationPointIcon%7Cxsmall</icon>
       </controlProperties>
     </control>
-    <control controlID="68" controlTypeID="com.balsamiq.mockups::Label" x="369" y="237" w="-1" h="-1" measuredW="312" measuredH="22" zOrder="38" locked="false" isInGroup="-1">
+    <control controlID="68" controlTypeID="com.balsamiq.mockups::Label" x="369" y="237" w="-1" h="-1" measuredW="387" measuredH="22" zOrder="38" locked="false" isInGroup="-1">
       <controlProperties>
         <size>14</size>
-        <text>Richiesta%20modifica%20men%F9%20%5C%5BGIANMARCO%20SCIALLA%5C%5D</text>
+        <text>Richiesta%20modifica%20men%F9%20%5C%5BGIANMARCO%20SCIALLA%5C%5D%20N.1233490</text>
       </controlProperties>
     </control>
     <control controlID="69" controlTypeID="com.balsamiq.mockups::FieldSet" x="331" y="211" w="934" h="170" measuredW="200" measuredH="170" zOrder="37" locked="false" isInGroup="-1">
@@ -282,7 +282,7 @@
         <text>*AVVISI*</text>
       </controlProperties>
     </control>
-    <control controlID="71" controlTypeID="com.balsamiq.mockups::PointyButton" x="688" y="236" w="87" h="-1" measuredW="86" measuredH="27" zOrder="39" locked="false" isInGroup="-1">
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::PointyButton" x="762" y="237" w="87" h="-1" measuredW="86" measuredH="27" zOrder="39" locked="false" isInGroup="-1">
       <controlProperties>
         <color>4555150</color>
         <size>11</size>
@@ -330,45 +330,231 @@
         <text>APPROVATA%0ALa%20richiesta%20di%20modifica%20men%F9%20per%20GIANMARCO%20SCIALLA%20%E8%20stata%20approvata%0AOK</text>
       </controlProperties>
     </control>
-    <control controlID="81" controlTypeID="com.balsamiq.mockups::CallOut" x="2153" y="605" w="-1" h="-1" measuredW="38" measuredH="40" zOrder="47" locked="false" isInGroup="-1">
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::CallOut" x="2153" y="605" w="-1" h="-1" measuredW="38" measuredH="37" zOrder="47" locked="false" isInGroup="-1">
       <controlProperties>
         <text>3</text>
       </controlProperties>
     </control>
-    <control controlID="82" controlTypeID="com.balsamiq.mockups::Alert" x="2225" y="684" w="200" h="140" measuredW="200" measuredH="143" zOrder="48" locked="false" isInGroup="-1">
-      <controlProperties>
-        <hrefs/>
-        <text>RIFUTATA%0ALa%20richiesta%20di%20modifica%20men%F9%20per%20GIANMARCO%20SCIALLA%20%E8%20stata%20rifiutata%0AOK</text>
-      </controlProperties>
-    </control>
-    <control controlID="83" controlTypeID="com.balsamiq.mockups::Arrow" x="2230" y="605" w="138" h="79" measuredW="150" measuredH="100" zOrder="49" locked="false" isInGroup="-1">
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::Arrow" x="2230" y="605" w="138" h="248" measuredW="150" measuredH="100" zOrder="48" locked="false" isInGroup="-1">
       <controlProperties>
         <text>_in%20caso%20di%20rifiuto_</text>
       </controlProperties>
     </control>
-    <control controlID="84" controlTypeID="com.balsamiq.mockups::Arrow" x="1977" y="603" w="134" h="81" measuredW="150" measuredH="100" zOrder="50" locked="false" isInGroup="-1">
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::Arrow" x="1977" y="603" w="134" h="81" measuredW="150" measuredH="100" zOrder="49" locked="false" isInGroup="-1">
       <controlProperties>
         <curvature>1</curvature>
         <direction>bottom</direction>
         <text>_in%20caso%20di%20approvazione_</text>
       </controlProperties>
     </control>
-    <control controlID="85" controlTypeID="com.balsamiq.mockups::CallOut" x="1420" y="26" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="51" locked="false" isInGroup="-1">
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::CallOut" x="1420" y="26" w="-1" h="-1" measuredW="39" measuredH="39" zOrder="50" locked="false" isInGroup="-1">
       <controlProperties>
         <text>2</text>
       </controlProperties>
     </control>
-    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="25" w="-1" h="-1" measuredW="37" measuredH="40" zOrder="52" locked="false" isInGroup="-1">
+    <control controlID="86" controlTypeID="com.balsamiq.mockups::CallOut" x="49" y="25" w="-1" h="-1" measuredW="37" measuredH="39" zOrder="51" locked="false" isInGroup="-1">
       <controlProperties>
         <text>1</text>
       </controlProperties>
     </control>
-    <control controlID="87" controlTypeID="com.balsamiq.mockups::Label" x="1761" y="389" w="-1" h="-1" measuredW="379" measuredH="24" zOrder="53" locked="false" isInGroup="-1">
+    <control controlID="87" controlTypeID="com.balsamiq.mockups::Label" x="1761" y="389" w="-1" h="-1" measuredW="379" measuredH="24" zOrder="52" locked="false" isInGroup="-1">
       <controlProperties>
         <bold>true</bold>
         <color>3355443</color>
         <size>16</size>
         <text>ALLEGATO%3A%20%5BCertificato_medico_SciallaGianmarco%5D</text>
+      </controlProperties>
+    </control>
+    <control controlID="88" controlTypeID="com.balsamiq.mockups::Canvas" x="1512" y="858" w="1183" h="584" measuredW="100" measuredH="70" zOrder="53" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <borderStyle>square</borderStyle>
+      </controlProperties>
+    </control>
+    <control controlID="89" controlTypeID="com.balsamiq.mockups::Button" x="1527" y="1113" w="195" h="27" measuredW="158" measuredH="27" zOrder="54" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>13421772</color>
+        <size>14</size>
+        <state>selected</state>
+        <text>GESTIONE%20MENSA%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::Button" x="1527" y="1080" w="215" h="27" measuredW="214" measuredH="27" zOrder="55" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>13421772</color>
+        <size>14</size>
+        <text>GESTIONE%20TIROCINANTI%20%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="91" controlTypeID="com.balsamiq.mockups::Button" x="1527" y="1048" w="191" h="27" measuredW="152" measuredH="27" zOrder="56" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <color>13421772</color>
+        <size>14</size>
+        <state>up</state>
+        <text>GESTIONE%20ORARI%09%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="92" controlTypeID="com.balsamiq.mockups::Button" x="1527" y="1016" w="188" h="27" measuredW="200" measuredH="27" zOrder="57" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>left</align>
+        <bold>false</bold>
+        <color>13421772</color>
+        <italic>false</italic>
+        <menuIcon>false</menuIcon>
+        <size>14</size>
+        <state>up</state>
+        <text>GESTIONE%20PAGAMENTI%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="93" controlTypeID="com.balsamiq.mockups::Image" x="1526" y="873" w="172" h="103" measuredW="77" measuredH="79" zOrder="58" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <src>../../../../../../../../Universit%25C3%25A0/IS/PROGETTO%2520%252540silo/at-silo/atsilo2/RAD/Mockup/Orari/%252540silo.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="94" controlTypeID="com.balsamiq.mockups::Icon" x="1937" y="916" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="59" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <color>3355443</color>
+        <icon>ScreenIcon%7Csmall</icon>
+      </controlProperties>
+    </control>
+    <control controlID="95" controlTypeID="com.balsamiq.mockups::Label" x="1717" y="869" w="60" h="57" measuredW="46" measuredH="50" zOrder="60" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>false</bold>
+        <color>14706278</color>
+        <size>40</size>
+        <text>@</text>
+      </controlProperties>
+    </control>
+    <control controlID="96" controlTypeID="com.balsamiq.mockups::HelpButton" x="2662" y="930" w="-1" h="-1" measuredW="18" measuredH="18" zOrder="61" locked="false" isInGroup="-1"/>
+    <control controlID="97" controlTypeID="com.balsamiq.mockups::LinkBar" x="2369" y="931" w="-1" h="-1" measuredW="283" measuredH="21" zOrder="62" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10027008</color>
+        <selectedIndex>1</selectedIndex>
+        <text>Home%2C%20Management%2C%20Comunicazioni%2C%20Blog</text>
+      </controlProperties>
+    </control>
+    <control controlID="98" controlTypeID="com.balsamiq.mockups::Label" x="1753" y="866" w="-1" h="-1" measuredW="60" measuredH="50" zOrder="63" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+        <size>40</size>
+        <text>silo</text>
+      </controlProperties>
+    </control>
+    <control controlID="99" controlTypeID="com.balsamiq.mockups::Label" x="1761" y="912" w="-1" h="-1" measuredW="174" measuredH="33" zOrder="64" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>472931</color>
+        <size>24</size>
+        <text>MANAGEMENT</text>
+      </controlProperties>
+    </control>
+    <control controlID="100" controlTypeID="com.balsamiq.mockups::SearchBox" x="2530" y="891" w="138" h="-1" measuredW="120" measuredH="25" zOrder="65" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>search</text>
+      </controlProperties>
+    </control>
+    <control controlID="101" controlTypeID="com.balsamiq.mockups::TitleWindow" x="1711" y="952" w="984" h="490" measuredW="450" measuredH="400" zOrder="66" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Gestione%20Men%F9</text>
+        <topheight>26</topheight>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::ButtonBar" x="1711" y="976" w="984" h="29" measuredW="235" measuredH="30" zOrder="67" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <italic>false</italic>
+        <selectedIndex>0</selectedIndex>
+        <size>14</size>
+        <text>Modifica%20men%F9%2C%20Elenco%20men%F9</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::Label" x="1711" y="1419" w="-1" h="-1" measuredW="125" measuredH="21" zOrder="68" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20UTENTE%3A%20Impiegato</text>
+      </controlProperties>
+    </control>
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::HRule" x="1751" y="904" w="100" h="-1" measuredW="100" measuredH="10" zOrder="69" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+      </controlProperties>
+    </control>
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::List" x="1529" y="1136" w="183" h="52" measuredW="100" measuredH="126" zOrder="70" locked="false" isInGroup="-1">
+      <controlProperties>
+        <alternateRowColor>16777215</alternateRowColor>
+        <borderStyle>square</borderStyle>
+        <color>15594478</color>
+        <hasHeader>false</hasHeader>
+        <rowHeight>23</rowHeight>
+        <selectedIndex>0</selectedIndex>
+        <text>Modifica%20men%F9%0AElenco%20men%F9</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="106" controlTypeID="com.balsamiq.mockups::Button" x="2217" y="1338" w="107" h="27" measuredW="87" measuredH="27" zOrder="71" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10667209</color>
+        <menuIcon>false</menuIcon>
+        <size>14</size>
+        <text>ANNULLA</text>
+      </controlProperties>
+    </control>
+    <control controlID="107" controlTypeID="com.balsamiq.mockups::Button" x="2086" y="1338" w="107" h="27" measuredW="61" measuredH="27" zOrder="72" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10667209</color>
+        <menuIcon>false</menuIcon>
+        <size>14</size>
+        <text>INVIA</text>
+      </controlProperties>
+    </control>
+    <control controlID="108" controlTypeID="com.balsamiq.mockups::Arrow" x="2695" y="1182" w="152" h="147" measuredW="150" measuredH="100" zOrder="73" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <leftArrow>false</leftArrow>
+        <rightArrow>true</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="109" controlTypeID="com.balsamiq.mockups::FieldSet" x="1763" y="1042" w="873" h="259" measuredW="200" measuredH="170" zOrder="74" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <text>*%7Bcolor%3A%23336666%7DRICHIESTA%20MODIFICA%20MENU%27%20%7Bcolor%7D*%20N.1249329</text>
+      </controlProperties>
+    </control>
+    <control controlID="110" controlTypeID="com.balsamiq.mockups::Paragraph" x="1790" y="1075" w="772" h="28" measuredW="200" measuredH="80" zOrder="75" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+        <size>16</size>
+        <text>*NOME%3A*%20Gianmarco%20%09%20%09*COGNOME%3A*%20Scialla%20%09%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::TextArea" x="1996" y="1123" w="563" h="129" measuredW="200" measuredH="140" zOrder="76" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+        <verticalScrollbar>true</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::Label" x="1790" y="1131" w="-1" h="-1" measuredW="191" measuredH="24" zOrder="77" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Inserire%20motivazione%20rifiuto</text>
+      </controlProperties>
+    </control>
+    <control controlID="113" controlTypeID="com.balsamiq.mockups::CallOut" x="2826" y="1010" w="-1" h="-1" measuredW="39" measuredH="43" zOrder="78" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>4</text>
+      </controlProperties>
+    </control>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::Alert" x="2862" y="1080" w="200" h="140" measuredW="200" measuredH="143" zOrder="79" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs/>
+        <text>RIFUTATA%0ALa%20richiesta%20di%20modifica%20men%F9%20per%20GIANMARCO%20SCIALLA%20%E8%20stata%20rifiutata%0AOK</text>
       </controlProperties>
     </control>
   </controls>
