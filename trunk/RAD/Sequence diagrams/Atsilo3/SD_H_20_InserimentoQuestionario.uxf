@@ -458,4 +458,16 @@ for (String textline : textlines) {
      VisualizzaMessaggio()</panel_attributes>
     <additional_attributes>21;35;609;35</additional_attributes>
   </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>399</x>
+      <y>329</y>
+      <w>146</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+ DatiRicevuti</panel_attributes>
+    <additional_attributes>21;35;133;35</additional_attributes>
+  </element>
 </diagram>
