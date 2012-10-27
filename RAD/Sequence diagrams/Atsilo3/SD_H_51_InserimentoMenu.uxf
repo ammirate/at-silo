@@ -483,4 +483,17 @@ genera()</panel_attributes>
 Messaggio Conferma</panel_attributes>
     <additional_attributes>30;50;830;50</additional_attributes>
   </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>340</x>
+      <y>390</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+ DatiRicevuti
+</panel_attributes>
+    <additional_attributes>30;50;200;50</additional_attributes>
+  </element>
 </diagram>
