@@ -280,7 +280,8 @@ SalvaDati()</panel_attributes>
       <w>738</w>
       <h>531</h>
     </coordinates>
-    <panel_attributes>SD_A_42_Accetazione Bambino</panel_attributes>
+    <panel_attributes>SD_A_42_Accetazione Bambino
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -476,7 +477,7 @@ for (String textline : textlines) {
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-CambiaStato()</panel_attributes>
+AssegnaClasse()</panel_attributes>
     <additional_attributes>261;45;126;45;27;45</additional_attributes>
   </element>
   <element>
