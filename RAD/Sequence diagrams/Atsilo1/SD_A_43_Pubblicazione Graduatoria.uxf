@@ -488,7 +488,7 @@ for (String textline : textlines) {
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
-Cambiostato()</panel_attributes>
+assegnatoPosizione()</panel_attributes>
     <additional_attributes>333;45;126;45;27;45</additional_attributes>
   </element>
   <element>
@@ -553,7 +553,7 @@ for (String textline : textlines) {
       <x>594</x>
       <y>144</y>
       <w>18</w>
-      <h>153</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -567,7 +567,7 @@ for (String textline : textlines) {
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
-Cambiostato()</panel_attributes>
+rendiIdoneo()</panel_attributes>
     <additional_attributes>216;45;27;45</additional_attributes>
   </element>
   <element>
@@ -580,17 +580,6 @@ Cambiostato()</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>27;27;27;90</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.SeqDestroyMark</type>
-    <coordinates>
-      <x>585</x>
-      <y>288</y>
-      <w>18</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
