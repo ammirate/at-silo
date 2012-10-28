@@ -105,12 +105,12 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>225</x>
-      <y>90</y>
+      <y>99</y>
       <w>44</w>
-      <h>107</h>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;90</additional_attributes>
+    <additional_attributes>27;27;27;81</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
@@ -258,7 +258,7 @@ Submit()</panel_attributes>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
-ControllaDati()</panel_attributes>
+SalvaDati()</panel_attributes>
     <additional_attributes>27;45;144;45</additional_attributes>
   </element>
   <element>
@@ -304,40 +304,6 @@ ControllaDati()</panel_attributes>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>27;27;27;99</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>468</x>
-      <y>27</y>
-      <w>109</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>// Modify the text below and
-// observe the element preview.
-Conferma
-Punteggio</panel_attributes>
-    <additional_attributes/>
-    <custom_code>int w2 = width / 2;
-drawCircle(w2,26, 26);
-
-setLineThickness(2);
-drawLine(w2 - 26, 0, w2 - 26, 52);
-
-boolean instance = false;
-
-for(String textline : textlines) {
-	instance |= (textline.contains(":"));
-}
-
-
-int y=textHeight();
-float zf = getHandler().getZoomFactor();
-for (String textline : textlines) {
-	String toPrint = (instance) ? ("_" + textline + "_") : textline;
-
-	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
-}</custom_code>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -404,7 +370,7 @@ for (String textline : textlines) {
     <type>CustomElementImpl</type>
     <coordinates>
       <x>207</x>
-      <y>27</y>
+      <y>36</y>
       <w>100</w>
       <h>91</h>
     </coordinates>
@@ -445,5 +411,84 @@ for (String textline : textlines) {
     <panel_attributes>lt=&lt;-
 InsertDati()</panel_attributes>
     <additional_attributes>360;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>486</x>
+      <y>45</y>
+      <w>109</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Conferma
+Punteggio</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>612</x>
+      <y>36</y>
+      <w>100</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Domanda</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+
+drawCircle(w2,26, 26);
+
+drawLine(w2, 52, w2 + 6, 52 - 4);
+drawLine(w2, 52, w2 + 6, 52 + 4);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>369</x>
+      <y>90</y>
+      <w>359</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+Cambiostato()</panel_attributes>
+    <additional_attributes>297;27;297;225;27;225</additional_attributes>
   </element>
 </diagram>
