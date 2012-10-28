@@ -59,14 +59,14 @@ for (String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>216</x>
+      <x>189</x>
       <y>36</y>
-      <w>100</w>
+      <w>154</w>
       <h>73</h>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
-Gestore Iscrizioni</panel_attributes>
+GestioneIscrizioniControl</panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
 
@@ -183,17 +183,17 @@ for (String textline : textlines) {
     <coordinates>
       <x>243</x>
       <y>171</y>
-      <w>134</w>
+      <w>143</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>117;45;27;45</additional_attributes>
+    <additional_attributes>126;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>360</x>
+      <x>369</x>
       <y>207</y>
       <w>18</w>
       <h>153</h>
@@ -292,12 +292,13 @@ confirm</panel_attributes>
     <coordinates>
       <x>306</x>
       <y>36</y>
-      <w>109</w>
-      <h>64</h>
+      <w>136</w>
+      <h>91</h>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
-Form Dati</panel_attributes>
+Compilazione
+ iscrizione form</panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
 drawCircle(w2,26, 26);
@@ -325,36 +326,36 @@ for (String textline : textlines) {
     <coordinates>
       <x>27</x>
       <y>198</y>
-      <w>350</w>
+      <w>359</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 InsertData()</panel_attributes>
-    <additional_attributes>333;45;27;45</additional_attributes>
+    <additional_attributes>342;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>27</x>
       <y>234</y>
-      <w>350</w>
+      <w>359</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 Submit()</panel_attributes>
-    <additional_attributes>333;45;27;45</additional_attributes>
+    <additional_attributes>342;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>243</x>
       <y>270</y>
-      <w>134</w>
+      <w>143</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 ControllaDati()</panel_attributes>
-    <additional_attributes>27;45;117;45</additional_attributes>
+    <additional_attributes>27;45;126;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -415,13 +416,13 @@ ControllaDati()</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>342</x>
-      <y>72</y>
+      <x>351</x>
+      <y>99</y>
       <w>44</w>
-      <h>152</h>
+      <h>125</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;135</additional_attributes>
+    <additional_attributes>27;27;27;108</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
