@@ -471,12 +471,45 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>369</x>
-      <y>81</y>
-      <w>330</w>
-      <h>198</h>
+      <y>216</y>
+      <w>278</w>
+      <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 CambiaStato()</panel_attributes>
-    <additional_attributes>270;27;270;180;27;180</additional_attributes>
+    <additional_attributes>261;45;126;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>630</x>
+      <y>207</y>
+      <w>18</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqDestroyMark</type>
+    <coordinates>
+      <x>621</x>
+      <y>261</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>612</x>
+      <y>63</y>
+      <w>44</w>
+      <h>161</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;144</additional_attributes>
   </element>
 </diagram>
