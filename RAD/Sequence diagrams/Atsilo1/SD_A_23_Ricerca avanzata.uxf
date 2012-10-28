@@ -2,21 +2,10 @@
 <diagram program="umlet" version="11.5.1">
   <zoom_level>9</zoom_level>
   <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>117</x>
-      <y>81</y>
-      <w>44</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;81</additional_attributes>
-  </element>
-  <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
     <coordinates>
-      <x>243</x>
-      <y>423</y>
+      <x>108</x>
+      <y>225</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
@@ -26,14 +15,14 @@
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>90</x>
-      <y>36</y>
+      <x>72</x>
+      <y>18</y>
       <w>118</w>
       <h>73</h>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
-Bottone Iscrizione</panel_attributes>
+Form Login</panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
 drawCircle(w2,26, 26);
@@ -60,13 +49,13 @@ for (String textline : textlines) {
     <type>CustomElementImpl</type>
     <coordinates>
       <x>216</x>
-      <y>36</y>
-      <w>100</w>
+      <y>18</y>
+      <w>118</w>
       <h>73</h>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
-Gestore Iscrizioni</panel_attributes>
+Controller Dati Login</panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
 
@@ -92,10 +81,10 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>135</x>
-      <y>162</y>
+      <x>117</x>
+      <y>144</y>
       <w>18</w>
-      <h>36</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -103,32 +92,21 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>9</x>
-      <y>45</y>
+      <x>0</x>
+      <y>36</y>
       <w>108</w>
       <h>108</h>
     </coordinates>
-    <panel_attributes> Utente del sistema</panel_attributes>
+    <panel_attributes>Utente del sistema</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>18</x>
-      <y>99</y>
-      <w>44</w>
-      <h>62</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>36</x>
-      <y>144</y>
+      <x>18</x>
+      <y>126</y>
       <w>18</w>
-      <h>324</h>
+      <h>432</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -136,19 +114,312 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>234</x>
-      <y>81</y>
+      <x>252</x>
+      <y>63</y>
       <w>44</w>
-      <h>116</h>
+      <h>107</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;99</additional_attributes>
+    <additional_attributes>27;27;27;90</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>252</x>
+      <x>270</x>
+      <y>162</y>
+      <w>18</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>108</x>
+      <y>135</y>
+      <w>179</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>162;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>423</x>
+      <y>270</y>
+      <w>44</w>
+      <h>323</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;306</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>441</x>
+      <y>225</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>9</x>
+      <y>99</y>
+      <w>125</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+InsertData()</panel_attributes>
+    <additional_attributes>108;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>387</x>
+      <y>18</y>
+      <w>109</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Menu Utente</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqDestroyMark</type>
+    <coordinates>
+      <x>261</x>
+      <y>234</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>9</x>
+      <y>0</y>
+      <w>1044</w>
+      <h>576</h>
+    </coordinates>
+    <panel_attributes>SD_A_23_Ricerca avanzata</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>738</x>
+      <y>54</y>
+      <w>44</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;243</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>423</x>
+      <y>54</y>
+      <w>44</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;171</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>945</x>
+      <y>18</y>
+      <w>109</w>
+      <h>82</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Finestra 
+Dati ricercati</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>540</x>
+      <y>18</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Controller Opzione scelta</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+
+drawCircle(w2,26, 26);
+
+drawLine(w2, 52, w2 + 6, 52 - 4);
+drawLine(w2, 52, w2 + 6, 52 + 4);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>693</x>
+      <y>18</y>
+      <w>154</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Form Ricerca avanzata</panel_attributes>
+    <additional_attributes/>
+    <custom_code>int w2 = width / 2;
+drawCircle(w2,26, 26);
+
+setLineThickness(2);
+drawLine(w2 - 26, 0, w2 - 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>9</x>
+      <y>117</y>
+      <w>125</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Submit()</panel_attributes>
+    <additional_attributes>108;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>108</x>
+      <y>153</y>
+      <w>179</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Autentication()</panel_attributes>
+    <additional_attributes>162;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>261</x>
       <y>180</y>
+      <w>197</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>180;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>9</x>
+      <y>225</y>
+      <w>449</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Submit()</panel_attributes>
+    <additional_attributes>432;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>576</x>
+      <y>54</y>
+      <w>44</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;225</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>594</x>
+      <y>279</y>
       <w>18</w>
       <h>45</h>
     </coordinates>
@@ -156,67 +427,193 @@ for (String textline : textlines) {
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>126</x>
-      <y>144</y>
-      <w>143</w>
-      <h>63</h>
+      <x>594</x>
+      <y>369</y>
+      <w>18</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-&lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>126;45;27;45</additional_attributes>
+    <panel_attributes/>
+    <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>234</x>
-      <y>198</y>
+      <x>432</x>
+      <y>243</y>
+      <w>179</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>162;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>585</x>
+      <y>261</y>
+      <w>188</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>171;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>756</x>
+      <y>297</y>
+      <w>18</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>576</x>
+      <y>297</y>
       <w>44</w>
-      <h>125</h>
+      <h>89</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;108</additional_attributes>
+    <additional_attributes>27;27;27;72</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>243</x>
-      <y>171</y>
-      <w>134</w>
+      <x>9</x>
+      <y>306</y>
+      <w>764</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+Submit()</panel_attributes>
+    <additional_attributes>747;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>585</x>
+      <y>333</y>
+      <w>188</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+SendData()</panel_attributes>
+    <additional_attributes>27;45;171;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqDestroyMark</type>
+    <coordinates>
+      <x>765</x>
+      <y>396</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>585</x>
+      <y>432</y>
+      <w>431</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>117;45;27;45</additional_attributes>
+    <additional_attributes>414;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>981</x>
+      <y>72</y>
+      <w>44</w>
+      <h>413</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;396</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>360</x>
-      <y>207</y>
+      <x>999</x>
+      <y>468</y>
       <w>18</w>
-      <h>153</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>252</x>
-      <y>306</y>
+      <x>18</x>
+      <y>477</y>
+      <w>998</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+confirm</panel_attributes>
+    <additional_attributes>27;45;981;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqDestroyMark</type>
+    <coordinates>
+      <x>594</x>
+      <y>504</y>
       <w>18</w>
-      <h>126</h>
+      <h>18</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>585</x>
+      <y>378</y>
+      <w>323</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+GetData()</panel_attributes>
+    <additional_attributes>306;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>99</x>
+      <y>63</y>
+      <w>44</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;81</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>873</x>
+      <y>63</y>
+      <w>44</w>
+      <h>368</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;351</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>396</x>
-      <y>36</y>
+      <x>846</x>
+      <y>18</y>
       <w>109</w>
       <h>82</h>
     </coordinates>
@@ -255,10 +652,10 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>441</x>
-      <y>369</y>
+      <x>891</x>
+      <y>414</y>
       <w>18</w>
-      <h>27</h>
+      <h>45</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -266,113 +663,20 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>27</x>
-      <y>117</y>
-      <w>125</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-pressed</panel_attributes>
-    <additional_attributes>108;45;27;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>27</x>
-      <y>405</y>
-      <w>629</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-confirm</panel_attributes>
-    <additional_attributes>27;45;612;45</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>306</x>
-      <y>36</y>
-      <w>109</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>// Modify the text below and
-// observe the element preview.
-Form Dati</panel_attributes>
-    <additional_attributes/>
-    <custom_code>int w2 = width / 2;
-drawCircle(w2,26, 26);
-
-setLineThickness(2);
-drawLine(w2 - 26, 0, w2 - 26, 52);
-
-boolean instance = false;
-
-for(String textline : textlines) {
-	instance |= (textline.contains(":"));
-}
-
-
-int y=textHeight();
-float zf = getHandler().getZoomFactor();
-for (String textline : textlines) {
-	String toPrint = (instance) ? ("_" + textline + "_") : textline;
-
-	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
-}</custom_code>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>27</x>
-      <y>198</y>
-      <w>350</w>
+      <x>9</x>
+      <y>288</y>
+      <w>764</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 InsertData()</panel_attributes>
-    <additional_attributes>333;45;27;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>27</x>
-      <y>234</y>
-      <w>350</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-Submit()</panel_attributes>
-    <additional_attributes>333;45;27;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>243</x>
-      <y>270</y>
-      <w>134</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-ControllaDati()</panel_attributes>
-    <additional_attributes>27;45;117;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>243</x>
-      <y>342</y>
-      <w>215</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-&lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>198;45;27;45</additional_attributes>
+    <additional_attributes>747;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
     <coordinates>
-      <x>351</x>
-      <y>351</y>
+      <x>1008</x>
+      <y>522</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
@@ -382,246 +686,24 @@ ControllaDati()</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>423</x>
-      <y>369</y>
-      <w>44</w>
-      <h>188</h>
+      <x>585</x>
+      <y>405</y>
+      <w>323</w>
+      <h>63</h>
     </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;171</additional_attributes>
+    <panel_attributes>lt=&lt;-
+Data</panel_attributes>
+    <additional_attributes>27;45;306;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.InteractionFrame</type>
     <coordinates>
-      <x>9</x>
-      <y>9</y>
-      <w>693</w>
-      <h>531</h>
+      <x>0</x>
+      <y>0</y>
+      <w>1044</w>
+      <h>576</h>
     </coordinates>
-    <panel_attributes>SD_A_3_4_5_Iscrizione</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>423</x>
-      <y>72</y>
-      <w>44</w>
-      <h>323</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;306</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>342</x>
-      <y>72</y>
-      <w>44</w>
-      <h>152</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;135</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>18</x>
-      <y>441</y>
-      <w>44</w>
-      <h>116</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;99</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>594</x>
-      <y>36</y>
-      <w>109</w>
-      <h>73</h>
-    </coordinates>
-    <panel_attributes>// Modify the text below and
-// observe the element preview.
-Conferma Iscrizione</panel_attributes>
-    <additional_attributes/>
-    <custom_code>int w2 = width / 2;
-drawCircle(w2,26, 26);
-
-setLineThickness(2);
-drawLine(w2 - 26, 0, w2 - 26, 52);
-
-boolean instance = false;
-
-for(String textline : textlines) {
-	instance |= (textline.contains(":"));
-}
-
-
-int y=textHeight();
-float zf = getHandler().getZoomFactor();
-for (String textline : textlines) {
-	String toPrint = (instance) ? ("_" + textline + "_") : textline;
-
-	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
-}</custom_code>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>621</x>
-      <y>72</y>
-      <w>44</w>
-      <h>350</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;333</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.SeqObjectActive</type>
-    <coordinates>
-      <x>639</x>
-      <y>405</y>
-      <w>18</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>243</x>
-      <y>378</y>
-      <w>413</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-&lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>396;45;27;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.SeqDestroyMark</type>
-    <coordinates>
-      <x>630</x>
-      <y>459</y>
-      <w>18</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>234</x>
-      <y>297</y>
-      <w>114</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;
-           
-
-.
-
- StoreData()  </panel_attributes>
-    <additional_attributes>36;54;63;54;63;36;36;36</additional_attributes>
-  </element>
-  <element>
-    <type>CustomElementImpl</type>
-    <coordinates>
-      <x>486</x>
-      <y>36</y>
-      <w>109</w>
-      <h>82</h>
-    </coordinates>
-    <panel_attributes>// Modify the text below and
-// observe the element preview.
-Domanda iscrizione</panel_attributes>
-    <additional_attributes/>
-    <custom_code>//Modify the code below to define the element's behavior.
-//
-//Example:  Change the line
-//  y += printCenter(textline,y);
-//to
-//  y += 2*printCenter(textline,y);
-//and observe the element preview.
-
-drawCircle(width / 2,26, 26);
-
-setLineThickness(2);
-drawLine(width / 2 - 26, 52, width / 2 + 26, 52);
-
-boolean instance = false;
-
-for(String textline : textlines) {
-	instance |= (textline.contains(":"));
-}
-
-
-int y=textHeight();
-float zf = getHandler().getZoomFactor();
-for (String textline : textlines) {
-	String toPrint = (instance) ? ("_" + textline + "_") : textline;
-
-	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
-}</custom_code>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>522</x>
-      <y>72</y>
-      <w>44</w>
-      <h>341</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;324</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>522</x>
-      <y>387</y>
-      <w>44</w>
-      <h>170</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;153</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.SeqObjectActive</type>
-    <coordinates>
-      <x>540</x>
-      <y>396</y>
-      <w>18</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>243</x>
-      <y>360</y>
-      <w>314</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-
-&lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>297;45;27;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.SeqDestroyMark</type>
-    <coordinates>
-      <x>126</x>
-      <y>189</y>
-      <w>18</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes/>
+    <panel_attributes>SD_A_23_Ricerca avanzata</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

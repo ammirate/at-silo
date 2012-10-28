@@ -2,17 +2,6 @@
 <diagram program="umlet" version="11.5.1">
   <zoom_level>9</zoom_level>
   <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>108</x>
-      <y>81</y>
-      <w>44</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;81</additional_attributes>
-  </element>
-  <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
     <coordinates>
       <x>117</x>
@@ -103,12 +92,12 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.Actor</type>
     <coordinates>
-      <x>0</x>
-      <y>36</y>
+      <x>9</x>
+      <y>45</y>
       <w>72</w>
       <h>108</h>
     </coordinates>
-    <panel_attributes>Actor</panel_attributes>
+    <panel_attributes>Genitore</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -117,7 +106,7 @@ for (String textline : textlines) {
       <x>27</x>
       <y>144</y>
       <w>18</w>
-      <h>396</h>
+      <h>450</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -162,10 +151,10 @@ for (String textline : textlines) {
       <x>486</x>
       <y>288</y>
       <w>44</w>
-      <h>269</h>
+      <h>350</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;252</additional_attributes>
+    <additional_attributes>27;27;27;333</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
@@ -189,18 +178,6 @@ for (String textline : textlines) {
     <panel_attributes>lt=&lt;-
 InsertData()</panel_attributes>
     <additional_attributes>108;45;27;45</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>117</x>
-      <y>189</y>
-      <w>179</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-confermaValidità()</panel_attributes>
-    <additional_attributes>27;45;162;45</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
@@ -249,10 +226,10 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.custom.InteractionFrame</type>
     <coordinates>
-      <x>18</x>
+      <x>9</x>
       <y>0</y>
-      <w>1071</w>
-      <h>540</h>
+      <w>1089</w>
+      <h>621</h>
     </coordinates>
     <panel_attributes>SD_A_38_Rinuncia</panel_attributes>
     <additional_attributes/>
@@ -260,7 +237,7 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>837</x>
+      <x>765</x>
       <y>72</y>
       <w>44</w>
       <h>260</h>
@@ -282,8 +259,8 @@ for (String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>963</x>
-      <y>36</y>
+      <x>981</x>
+      <y>27</y>
       <w>109</w>
       <h>82</h>
     </coordinates>
@@ -316,9 +293,9 @@ for (String textline : textlines) {
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>639</x>
+      <x>630</x>
       <y>378</y>
-      <w>156</w>
+      <w>165</w>
       <h>107</h>
     </coordinates>
     <panel_attributes>lt=&lt;
@@ -329,12 +306,12 @@ for (String textline : textlines) {
 
 .
    RinunciaIscrizione()  </panel_attributes>
-    <additional_attributes>36;54;81;54;81;27;36;27</additional_attributes>
+    <additional_attributes>27;54;90;54;90;27;27;27</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>603</x>
+      <x>585</x>
       <y>36</y>
       <w>136</w>
       <h>64</h>
@@ -367,7 +344,7 @@ for (String textline : textlines) {
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>792</x>
+      <x>720</x>
       <y>36</y>
       <w>154</w>
       <h>64</h>
@@ -418,7 +395,7 @@ Submit()</panel_attributes>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-ControllaCredenziali()</panel_attributes>
+Autentication()</panel_attributes>
     <additional_attributes>162;45;27;45</additional_attributes>
   </element>
   <element>
@@ -448,7 +425,7 @@ Submit()</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>639</x>
+      <x>621</x>
       <y>72</y>
       <w>44</w>
       <h>242</h>
@@ -459,7 +436,7 @@ Submit()</panel_attributes>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>657</x>
+      <x>639</x>
       <y>297</y>
       <w>18</w>
       <h>45</h>
@@ -470,10 +447,10 @@ Submit()</panel_attributes>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>657</x>
+      <x>639</x>
       <y>378</y>
       <w>18</w>
-      <h>117</h>
+      <h>144</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -483,29 +460,29 @@ Submit()</panel_attributes>
     <coordinates>
       <x>495</x>
       <y>261</y>
-      <w>179</w>
+      <w>161</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>162;45;27;45</additional_attributes>
+    <additional_attributes>144;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>648</x>
+      <x>630</x>
       <y>279</y>
-      <w>224</w>
+      <w>170</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>207;45;27;45</additional_attributes>
+    <additional_attributes>153;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>855</x>
+      <x>783</x>
       <y>315</y>
       <w>18</w>
       <h>90</h>
@@ -516,7 +493,7 @@ Submit()</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>639</x>
+      <x>621</x>
       <y>315</y>
       <w>44</w>
       <h>80</h>
@@ -529,29 +506,29 @@ Submit()</panel_attributes>
     <coordinates>
       <x>18</x>
       <y>315</y>
-      <w>854</w>
+      <w>782</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 Submit()</panel_attributes>
-    <additional_attributes>837;45;27;45</additional_attributes>
+    <additional_attributes>765;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>648</x>
+      <x>630</x>
       <y>342</y>
-      <w>224</w>
+      <w>170</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 confermaRinuncia</panel_attributes>
-    <additional_attributes>27;45;207;45</additional_attributes>
+    <additional_attributes>27;45;153;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
     <coordinates>
-      <x>846</x>
+      <x>801</x>
       <y>396</y>
       <w>18</w>
       <h>18</h>
@@ -562,31 +539,31 @@ confermaRinuncia</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>648</x>
-      <y>432</y>
-      <w>377</w>
+      <x>630</x>
+      <y>468</y>
+      <w>413</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>360;45;27;45</additional_attributes>
+    <additional_attributes>396;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>990</x>
-      <y>90</y>
+      <x>1008</x>
+      <y>81</y>
       <w>44</w>
-      <h>395</h>
+      <h>422</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;27;378</additional_attributes>
+    <additional_attributes>27;27;27;405</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>1008</x>
-      <y>468</y>
+      <x>1026</x>
+      <y>486</y>
       <w>18</w>
       <h>63</h>
     </coordinates>
@@ -596,20 +573,20 @@ confermaRinuncia</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>18</x>
-      <y>468</y>
-      <w>1007</w>
+      <x>27</x>
+      <y>495</y>
+      <w>1016</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 confirm</panel_attributes>
-    <additional_attributes>27;45;990;45</additional_attributes>
+    <additional_attributes>27;45;999;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
     <coordinates>
-      <x>648</x>
-      <y>486</y>
+      <x>630</x>
+      <y>513</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
@@ -619,8 +596,104 @@ confirm</panel_attributes>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
     <coordinates>
-      <x>999</x>
-      <y>522</y>
+      <x>1035</x>
+      <y>540</y>
+      <w>18</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>432</y>
+      <w>314</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;destroy&gt;&gt;</panel_attributes>
+    <additional_attributes>297;45;27;45</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>108</x>
+      <y>81</y>
+      <w>44</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;81</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>909</x>
+      <y>81</y>
+      <w>44</w>
+      <h>395</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>27;27;27;378</additional_attributes>
+  </element>
+  <element>
+    <type>CustomElementImpl</type>
+    <coordinates>
+      <x>873</x>
+      <y>36</y>
+      <w>109</w>
+      <h>82</h>
+    </coordinates>
+    <panel_attributes>// Modify the text below and
+// observe the element preview.
+Domanda iscrizione</panel_attributes>
+    <additional_attributes/>
+    <custom_code>//Modify the code below to define the element's behavior.
+//
+//Example:  Change the line
+//  y += printCenter(textline,y);
+//to
+//  y += 2*printCenter(textline,y);
+//and observe the element preview.
+
+drawCircle(width / 2,26, 26);
+
+setLineThickness(2);
+drawLine(width / 2 - 26, 52, width / 2 + 26, 52);
+
+boolean instance = false;
+
+for(String textline : textlines) {
+	instance |= (textline.contains(":"));
+}
+
+
+int y=textHeight();
+float zf = getHandler().getZoomFactor();
+for (String textline : textlines) {
+	String toPrint = (instance) ? ("_" + textline + "_") : textline;
+
+	y += print(toPrint,(int)((getWidth() - textWidth(textline, true)) / (2 * zf)), y + 52);
+}</custom_code>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>927</x>
+      <y>459</y>
+      <w>18</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqDestroyMark</type>
+    <coordinates>
+      <x>936</x>
+      <y>477</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
