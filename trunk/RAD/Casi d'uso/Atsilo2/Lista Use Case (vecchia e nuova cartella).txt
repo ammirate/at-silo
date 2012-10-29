@@ -1,56 +1,68 @@
-Lista USE CASE vecchia cartella              [at-silo2>RAD>casi d'uso]
----- Team 2
+(team2)
+Lista USE CASE vecchia cartella  [cioè.... at-silo2>RAD>casi d'uso]
+_______________________________________________________________
+
+Legenda
+{OK} = File presente nella nuova cartella (ma i contenuti potrebbero essere diversi)
+{...} = Modifiche da effettuare nella nuova cartella
+
+____________________________________________________________________
 
 [Pacchetto PAGAMENTI]
 
-UC_M_1 stato pagamenti
-UC_M_2 invio promemoria
-UC_M_3 fattura pagamento
+UC_M_1 stato pagamenti	{OK}
+UC_M_2 invio promemoria	{OK}
+UC_M_3 fattura pagamento	{OK}
 UC_M_3a_fattura mensile    {da copiare nella nuova cartella}
 UC_M_9 variazioni extra	{da copiare...}
-UC_M_17 registra pagamento manuale 
-UC_M_18 Visualizza storico pagamenti
-UC_M_22 invio promemoria fattura 
-UC_M_23 Invio promemoria pagamento
+UC_M_17 registra pagamento manuale 	{OK}
+UC_M_18 Visualizza storico pagamenti	{OK}
+UC_M_22 invio promemoria fattura 	{OK}
+UC_M_23 Invio promemoria pagamento	{OK}
 
 
 [Pacchetto MENSA]
 
 UC_M_11 richiesta modifica pasto singolo {nome errato nella nuova cartella}
-UC_M_12 elenco menù
-UC_M_13	Modifica menù bambino
-UC_M_16 Modifica menù bambino singolo
-UC_M_16a approvazione modifica menù
-UC_M_16B rifiuto modifica menù
+UC_M_12 elenco menù	{OK}
+UC_M_13	Modifica menù bambino	{OK}
+UC_M_16 Modifica menù bambino singolo	{OK}
+UC_M_16a approvazione modifica menù	{OK}
+UC_M_16B rifiuto modifica menù	{OK}
 
 
 
 [Pacchetto Tirocinanti]
 
-UC_M_5 aggiungi tirocinante
-UC_M_6 modifica scheda tirocinante
-UC_M_6a elimina tirocinante
-UC_M_7 visualizza lista tirocinanti (a e b)
-UC_M_8 Richiesta tirocinante
-UC_M_30 feedback allocazione tirocinanti
+UC_M_5 aggiungi tirocinante	{OK}
+UC_M_6 modifica scheda tirocinante	{OK}
+UC_M_6a elimina tirocinante	{OK}
+UC_M_7 visualizza lista tirocinanti (a e b)	{OK}
+UC_M_8 Richiesta tirocinante	{OK}
+UC_M_30 feedback allocazione tirocinanti	{OK}
 
 
 [Pacchetto ORARI]
 
-UC_M_14 Modifica orario segreteria
-UC_M_15 visualizzazione orari
+UC_M_14 Modifica orario segreteria	{OK}
+UC_M_15 visualizzazione orari		{OK}
 UC_M_24 Inserisci fascia utenza oraria 	{da copiare..}
 UC_M_25 modifica fascia utenza oraria 	{da copiare..}
 UC_M_26 elimina fascia utenza oraria 	{da copiare..}
 UC_M_28 richiesta modifica orario singolo    {nome errato..}
-UC_M_29 Modifica orario bambino
-UC_M_29a approvazione modifica orario bambino
-UC_M_29b Rifiuto Modifica orario bambino
+UC_M_29 Modifica orario bambino	{OK}
+UC_M_29a approvazione modifica orario bambino	{OK}
+UC_M_29b Rifiuto Modifica orario bambino	{OK}
 
 
 
-DEPRECATI
-{da eliminare nella nuova cartella}
+[ALTRO]
+
+UC_M_21 Ordinamento	{OK}
+UC_M_27 Ricerca  {da copiare..}
+
+
+[DEPRECATI]   {da eliminare nella nuova cartella}
 
 UC_M_4 restituzione cauzione
 UC_M_10 Modifica classe menù
