@@ -1,0 +1,59 @@
+Lista USE CASE vecchia cartella              [at-silo2>RAD>casi d'uso]
+---- Team 2
+
+[Pacchetto PAGAMENTI]
+
+UC_M_1 stato pagamenti
+UC_M_2 invio promemoria
+UC_M_3 fattura pagamento
+UC_M_3a_fattura mensile    {da copiare nella nuova cartella}
+UC_M_9 variazioni extra	{da copiare...}
+UC_M_17 registra pagamento manuale 
+UC_M_18 Visualizza storico pagamenti
+UC_M_22 invio promemoria fattura 
+UC_M_23 Invio promemoria pagamento
+
+
+[Pacchetto MENSA]
+
+UC_M_11 richiesta modifica pasto singolo {nome errato nella nuova cartella}
+UC_M_12 elenco menù
+UC_M_13	Modifica menù bambino
+UC_M_16 Modifica menù bambino singolo
+UC_M_16a approvazione modifica menù
+UC_M_16B rifiuto modifica menù
+
+
+
+[Pacchetto Tirocinanti]
+
+UC_M_5 aggiungi tirocinante
+UC_M_6 modifica scheda tirocinante
+UC_M_6a elimina tirocinante
+UC_M_7 visualizza lista tirocinanti (a e b)
+UC_M_8 Richiesta tirocinante
+UC_M_30 feedback allocazione tirocinanti
+
+
+[Pacchetto ORARI]
+
+UC_M_14 Modifica orario segreteria
+UC_M_15 visualizzazione orari
+UC_M_24 Inserisci fascia utenza oraria 	{da copiare..}
+UC_M_25 modifica fascia utenza oraria 	{da copiare..}
+UC_M_26 elimina fascia utenza oraria 	{da copiare..}
+UC_M_28 richiesta modifica orario singolo    {nome errato..}
+UC_M_29 Modifica orario bambino
+UC_M_29a approvazione modifica orario bambino
+UC_M_29b Rifiuto Modifica orario bambino
+
+
+
+DEPRECATI
+{da eliminare nella nuova cartella}
+
+UC_M_4 restituzione cauzione
+UC_M_10 Modifica classe menù
+UC_M_9 Inserisci menù
+UC_M_19 Paga
+UC_M_20 Pagamento Manuale
