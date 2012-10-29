@@ -18,8 +18,8 @@ CASI D'USO
 +- ( 6a) Rimuovi tirocinante
 +- ( 7a) Visualizza tirocinanti (impiegato)
 +- ( 7b) Visualizza tirocinanti (r.s.)
-+- ( 22) Feedback allocazione tirocinanti	[A]
-+- ( 23) Richiesta tirocinanti
++- ( 30) Feedback allocazione tirocinanti	[A]
++- (  8) Richiesta tirocinanti
 
 + Mensa
 +- ( 12) Elenco piano-pasto
