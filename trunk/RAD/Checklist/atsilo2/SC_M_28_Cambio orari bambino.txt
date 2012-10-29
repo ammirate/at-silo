@@ -1,0 +1,31 @@
+Checklist SC_M_28
+Mariella Ferrara
+
+
+[V] Il nome dello scenario è consistente con il contenuto
+
+
+[V] Possiede dati che ne caratterizzano l'istanza
+
+
+[V] Non sono presenti riferimenti a elementi di interfaccia precisi
+
+[V] Il contesto è ben caratterizzato
+
+
+[V] Il sistema non è citato come attore
+
+
+[V] Si fa sempre riferimento al sistema con il termine "il sistema"
+
+[V] È sempre chiaro l'utente che esegue le azioni elencate
+
+
+[V] Lo scenario possiede un identificativo univoco
+
+
+[X] Il file è nominato secondo la corretta nomenclatura
+----Il nome del corrispettivo UC è "Modifica Orario singolo (genitore)" mentre il file è nominato con "Cambio orari dati bambino"
+
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+----L'identificativo nello scenario è  riportato con SC 12 e non con il corretto SC_M_28

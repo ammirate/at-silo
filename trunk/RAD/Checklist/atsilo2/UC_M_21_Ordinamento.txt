@@ -1,0 +1,42 @@
+Checklist UC_M_21
+Mariella Ferrara
+
+
+[V] Il nome è coerente con il contenuto
+
+[ ] Ha lo stesso nome dello scenario generalizzato
+----Non esiste lo scenario per la modifica orario di segreteria, ma solo dalla parte del genitore
+
+[ ] Ha lo stesso ID dello scenario generalizzato
+
+[V] Non sono presenti attori multipli con congiunzione OR
+
+[V] Il file è nominato secondo la corretta nomenclatura
+
+[V] Tutte le azioni del sistema sono tabulate
+
+[V] Tutte le azioni del sistema sono indicate in modo esplicito
+
+[V] Il flusso degli eventi è coerente con i requisiti fuzionali
+
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+---Non presenti
+
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+---Non presenti
+
+[V] I requisiti qualitativi sono misurabili
+
+[V] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+
+[V] Le estensioni sono segnalate secondo le convenzioni previste
+
+[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
+ ---Non presenti
+
+[V] Entry e exit condition sono specificate
+ 
+[V] Il flusso degli eventi è correttamente numerato
+ 
+[V] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
