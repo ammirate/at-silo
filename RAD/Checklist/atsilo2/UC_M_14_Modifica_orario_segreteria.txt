@@ -2,6 +2,7 @@ Checklist UC_M_14
 Mariella Ferrara
 
 
+
 [V] Il nome è coerente con il contenuto
 
 [ ] Ha lo stesso nome dello scenario generalizzato
@@ -43,4 +44,6 @@ Mariella Ferrara
  
 [X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 --- la descrizione non è corretta. La modifica dell'orario E' DA PARTE DELLA SEGRETERIA
+
+NOTE: UC ridondante... Uguale allo UC 29
 
