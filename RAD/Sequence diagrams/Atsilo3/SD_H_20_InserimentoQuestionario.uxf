@@ -85,18 +85,18 @@ for (String textline : textlines) {
       <x>238</x>
       <y>147</y>
       <w>34</w>
-      <h>90</h>
+      <h>62</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>21;21;21;77</additional_attributes>
+    <additional_attributes>21;21;21;49</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
       <x>252</x>
-      <y>224</y>
+      <y>196</y>
       <w>14</w>
-      <h>315</h>
+      <h>343</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -317,7 +317,7 @@ for (String textline : textlines) {
       <x>644</x>
       <y>371</y>
       <w>14</w>
-      <h>161</h>
+      <h>168</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -326,7 +326,7 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>399</x>
-      <y>350</y>
+      <y>364</y>
       <w>258</w>
       <h>49</h>
     </coordinates>
@@ -371,7 +371,7 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>399</x>
-      <y>448</y>
+      <y>455</y>
       <w>370</w>
       <h>49</h>
     </coordinates>
@@ -385,7 +385,7 @@ for (String textline : textlines) {
       <x>756</x>
       <y>469</y>
       <w>14</w>
-      <h>56</h>
+      <h>63</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -438,25 +438,13 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>399</x>
-      <y>399</y>
+      <y>413</y>
       <w>258</w>
       <h>49</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
                 ACK</panel_attributes>
     <additional_attributes>21;35;245;35</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>147</x>
-      <y>476</y>
-      <w>622</w>
-      <h>49</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-     VisualizzaMessaggio()</panel_attributes>
-    <additional_attributes>21;35;609;35</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -469,5 +457,27 @@ for (String textline : textlines) {
     <panel_attributes>lt=&lt;-
  DatiRicevuti</panel_attributes>
     <additional_attributes>21;35;133;35</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>630</x>
+      <y>518</y>
+      <w>34</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;77</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>742</x>
+      <y>511</y>
+      <w>34</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>21;21;21;77</additional_attributes>
   </element>
 </diagram>
