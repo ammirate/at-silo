@@ -1,0 +1,49 @@
+Checklist UC_M_29b
+Mariella Ferrara
+
+
+[V] Il nome è coerente con il contenuto
+
+[ ] Ha lo stesso nome dello scenario generalizzato
+----Non esiste lo scenario corrispondente
+
+[ ] Ha lo stesso ID dello scenario generalizzato
+----Non esiste lo scenario corrispondente
+
+[V] Non sono presenti attori multipli con congiunzione OR
+
+[v] Il file è nominato secondo la corretta nomenclatura
+
+[V] Tutte le azioni del sistema sono tabulate
+
+[V] Tutte le azioni del sistema sono indicate in modo esplicito
+
+[V] Il flusso degli eventi è coerente con i requisiti fuzionali
+
+[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+---Non presenti
+
+[ ] Le inclusioni sono segnalate secondo le convenzioni previste
+---Non presenti
+
+[ ] I requisiti qualitativi sono misurabili
+---non presenti
+
+[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+---non presenti
+
+[ ] Le estensioni sono segnalate secondo le convenzioni previste
+ ---Non presenti
+
+[V] Le specializzazioni sono segnalate secondo le convenzioni previste
+
+[V] Entry e exit condition sono specificate
+ 
+[V] Il flusso degli eventi è correttamente numerato
+ 
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+---non è presente l'ID nella didascalia
+
+
+
+
