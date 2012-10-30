@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-23T21:26:00</meta:creation-date><meta:editing-duration>PT3M30S</meta:editing-duration><meta:editing-cycles>3</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-10-23T21:41:33</dc:date><meta:document-statistic meta:table-count="3" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="38" meta:word-count="64" meta:character-count="440" meta:non-whitespace-character-count="404"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-23T21:26:00</meta:creation-date><meta:editing-duration>PT5M29S</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-10-24T09:09:30</dc:date><meta:document-statistic meta:table-count="3" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="42" meta:word-count="83" meta:character-count="563" meta:non-whitespace-character-count="512"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">7900</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="long">2071</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">16094</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="long">2298</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">18357</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="long">8461</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">8909</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">20324</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="long">2071</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">7900</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">20426</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">16360</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">4976</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">22156</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">2298</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">16094</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">20653</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">24553</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -120,11 +120,11 @@
    <style:paragraph-properties style:text-autospace="ideograph-alpha" style:line-break="strict" style:writing-mode="lr-tb" style:font-independent-line-spacing="false">
     <style:tab-stops/>
    </style:paragraph-properties>
-   <style:text-properties style:use-window-font-color="true" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN"/>
+   <style:text-properties style:use-window-font-color="true" fo:font-size="12pt" fo:language="it" fo:country="IT" style:letter-kerning="true" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN"/>
   </style:default-style>
   <style:default-style style:family="paragraph">
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="1.251cm" style:writing-mode="page"/>
-   <style:text-properties style:use-window-font-color="true" style:font-name="Times New Roman" fo:font-size="12pt" fo:language="en" fo:country="US" style:letter-kerning="true" style:font-name-asian="Droid Sans" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Lohit Hindi" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2"/>
+   <style:text-properties style:use-window-font-color="true" style:font-name="Times New Roman" fo:font-size="12pt" fo:language="it" fo:country="IT" style:letter-kerning="true" style:font-name-asian="Droid Sans" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Lohit Hindi" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2"/>
   </style:default-style>
   <style:default-style style:family="table">
    <style:table-properties table:border-model="collapsing"/>
@@ -306,40 +306,41 @@
   </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Footer">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Designosaur3" fo:language="it" fo:country="IT" fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic" text:display="true"/>
+  </style:style>
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Footer">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties style:font-name="Designosaur3" fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic" text:display="true"/>
   </style:style>
-  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.503cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Designosaur" style:font-size-asian="10.5pt"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.503cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Designosaur" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Designosaur" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Designosaur" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Droid Sans Mono" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.388cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Designosaur" style:font-size-asian="10.5pt"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="0.201cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Designosaur" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties style:font-name="Designosaur" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
-   <style:text-properties style:font-name="Droid Sans Mono" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="-0.097cm" fo:margin-right="0.004cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
@@ -349,9 +350,50 @@
    <style:paragraph-properties fo:margin-left="0.004cm" fo:margin-right="0.205cm" fo:text-align="end" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Droid Sans Mono" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Footer">
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.503cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Heading_20_1">
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+   <style:text-properties style:font-name="Droid Sans Mono" fo:language="it" fo:country="IT" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0.004cm" fo:margin-right="0.205cm" fo:text-align="end" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Droid Sans Mono" fo:language="it" fo:country="IT" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0.201cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.388cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" style:font-size-asian="10.5pt"/>
+  </style:style>
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.503cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" style:font-size-asian="10.5pt"/>
+  </style:style>
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="-0.097cm" fo:margin-right="0.004cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" style:font-size-asian="10.5pt"/>
+  </style:style>
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Footer">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:font-name="Designosaur3" fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic" text:display="true"/>
+   <style:text-properties style:font-name="Designosaur3" fo:language="it" fo:country="IT" fo:font-style="italic" style:font-style-asian="italic" style:font-style-complex="italic" text:display="true"/>
   </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
@@ -359,14 +401,14 @@
    </style:page-layout-properties>
    <style:header-style/>
    <style:footer-style>
-    <style:header-footer-properties fo:min-height="0cm" fo:margin-top="0.499cm"/>
+    <style:header-footer-properties fo:min-height="0cm" fo:margin-left="0cm" fo:margin-right="0cm" fo:margin-top="0.499cm"/>
    </style:footer-style>
   </style:page-layout>
  </office:automatic-styles>
  <office:master-styles>
   <style:master-page style:name="Standard" style:page-layout-name="pm1">
    <style:footer>
-    <text:p text:style-name="P1">Progetto @silo - Team 2<text:tab/><text:tab/>Pagina <text:page-number text:select-page="current">1</text:page-number> di <text:page-count>1</text:page-count></text:p>
+    <text:p text:style-name="P1">Progetto @silo - Management Team<text:tab/><text:tab/>Pagina <text:page-number text:select-page="current">1</text:page-number> di <text:page-count>1</text:page-count></text:p>
    </style:footer>
   </style:master-page>
  </office:master-styles>
@@ -384,7 +426,7 @@
    <text:user-field-decls>
     <text:user-field-decl office:value-type="string" office:string-value="&quot;&quot;" text:name="Meeting"/>
    </text:user-field-decls>
-   <text:h text:style-name="Heading_20_1" text:outline-level="1">Agenda<text:line-break/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-input text:name="MeetingName" text:description="" office:value-type="string">Analisi dei Requisiti</text:variable-input></text:h>
+   <text:h text:style-name="P15" text:outline-level="1">Agenda<text:line-break/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-input text:name="MeetingName" text:description="" office:value-type="string">Analisi dei Requisiti</text:variable-input></text:h>
    <table:table table:name="Riepilogo" table:style-name="Riepilogo">
     <table:table-column table:style-name="Riepilogo.A"/>
     <table:table-column table:style-name="Riepilogo.B"/>
@@ -392,25 +434,25 @@
     <table:table-column table:style-name="Riepilogo.D"/>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P8">Incontro:</text:p>
+      <text:p text:style-name="P20">Incontro:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P4"><text:variable-get text:name="MeetingName">Analisi dei Requisiti</text:variable-get></text:p>
+      <text:p text:style-name="P13"><text:variable-get text:name="MeetingName">Analisi dei Requisiti</text:variable-get></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P5">Data:</text:p>
+      <text:p text:style-name="P16">Data:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7"><text:text-input text:description="">24/10/12, 9.15</text:text-input></text:p>
+      <text:p text:style-name="P21"><text:text-input text:description="">24/10/12, 9.15</text:text-input></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P8">Luogo:</text:p>
+      <text:p text:style-name="P20">Luogo:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P3"><text:text-input text:description="">Aula P3
-Invariante 13C
+      <text:p text:style-name="P22"><text:text-input text:description="">Lab. Sistemi
+Invariante 12B
 Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
@@ -418,37 +460,37 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P8">Moderatore:</text:p>
+      <text:p text:style-name="P20">Moderatore:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P3"><text:text-input text:description="">Franco Giulio</text:text-input></text:p>
+      <text:p text:style-name="P22"><text:text-input text:description="">Franco Giulio</text:text-input></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P8">Time-Keeper:</text:p>
+      <text:p text:style-name="P20">Time-Keeper:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P3"><text:text-input text:description="">Franco Giulio</text:text-input></text:p>
+      <text:p text:style-name="P22"><text:text-input text:description="">Franco Giulio</text:text-input></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P8">Minute-Keeper:</text:p>
+      <text:p text:style-name="P20">Minute-Keeper:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P3"><text:text-input text:description="">Ferrara Mariella</text:text-input></text:p>
+      <text:p text:style-name="P22"><text:text-input text:description="">Ferrara Mariella</text:text-input></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P8">Convocati:</text:p>
+      <text:p text:style-name="P20">Convocati:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
       <table:table table:name="Tabella1" table:style-name="Tabella1">
@@ -456,113 +498,129 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
        <table:table-column table:style-name="Tabella1.B"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Di Costanzo</text:p>
+         <text:p text:style-name="P23">Di Costanzo</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Luca</text:p>
-        </table:table-cell>
-       </table:table-row>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Durante</text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Francesco</text:p>
+         <text:p text:style-name="P23">Luca</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Ferrara</text:p>
+         <text:p text:style-name="P23">Durante</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Mariella</text:p>
-        </table:table-cell>
-       </table:table-row>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Franco</text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Giulio</text:p>
+         <text:p text:style-name="P23">Francesco</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Lomasto</text:p>
+         <text:p text:style-name="P23">Ferrara</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Luigi</text:p>
-        </table:table-cell>
-       </table:table-row>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Nastro</text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Francesco</text:p>
+         <text:p text:style-name="P23">Mariella</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Parisi</text:p>
+         <text:p text:style-name="P23">Franco</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Marco</text:p>
+         <text:p text:style-name="P23">Giulio</text:p>
+        </table:table-cell>
+       </table:table-row>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P23">Lomasto</text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P23">Luigi</text:p>
+        </table:table-cell>
+       </table:table-row>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P23">Nastro</text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P23">Francesco</text:p>
+        </table:table-cell>
+       </table:table-row>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P23">Parisi</text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P23">Marco</text:p>
         </table:table-cell>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P3"/>
+      <text:p text:style-name="P22"/>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P14"/>
    <table:table table:name="Tabella2" table:style-name="Tabella2">
     <table:table-column table:style-name="Tabella2.A"/>
     <table:table-column table:style-name="Tabella2.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P10"/>
+      <text:p text:style-name="P18"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B1" office:value-type="string">
-      <text:p text:style-name="P5">Agenda</text:p>
+      <text:p text:style-name="P16">Agenda</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P12">9.15</text:p>
+      <text:p text:style-name="P19">9.25</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B2" office:value-type="string">
-      <text:p text:style-name="P6">Casi d&apos;uso e mockup - Stato dell&apos;arte</text:p>
+      <text:p text:style-name="P17">Modello dinamico, selezione casi da analizzare</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
-      <text:p text:style-name="P12">9.45</text:p>
+      <text:p text:style-name="P19">9.35</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
-      <text:p text:style-name="P6">Nuovi requisiti emersi</text:p>
+      <text:p text:style-name="P17">Nuovi requisiti emersi</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
-      <text:p text:style-name="P12">10.15</text:p>
+      <text:p text:style-name="P19">9.50</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
-      <text:p text:style-name="P6">Modello ad oggetti</text:p>
+      <text:p text:style-name="P17">Casi d&apos;uso e mockup - Stato dell&apos;arte</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
-      <text:p text:style-name="P12">10.45</text:p>
+      <text:p text:style-name="P19">10.15</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
-      <text:p text:style-name="P6">Conclusioni</text:p>
+      <text:p text:style-name="P17">Modello dinamico</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
+      <text:p text:style-name="P19">10.30</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
+      <text:p text:style-name="P17">Modello ad oggetti</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
+      <text:p text:style-name="P19">10.45</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
+      <text:p text:style-name="P17">Conclusioni</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P14"/>
   </office:text>
  </office:body>
 </office:document>
