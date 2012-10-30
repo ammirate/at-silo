@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>40</x>
+      <y>160</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Impiegato</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>140</y>
+      <w>330</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;60;310;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>50</y>
+      <w>350</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;150;330;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>430</x>
+      <y>150</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Modifica Piano-Pasto Singolo
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>450</x>
+      <y>60</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Visualizza Piano-Pasto
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>830</x>
+      <y>220</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Genitore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>660</x>
+      <y>220</y>
+      <w>200</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;120;180;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>280</x>
+      <y>10</y>
+      <w>490</w>
+      <h>410</h>
+    </coordinates>
+    <panel_attributes>Piano-Pasto</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>370</x>
+      <y>320</y>
+      <w>320</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Richiesta Modifica Pasto Singolo
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>400</x>
+      <y>230</y>
+      <w>260</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Modifica Piano-Pasto Segreteria
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>120</x>
+      <y>170</y>
+      <w>300</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;280;80</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Interface</type>
+    <coordinates>
+      <x>1200</x>
+      <y>0</y>
+      <w>80</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Interface
+--
+Operation1
+Operation2</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
