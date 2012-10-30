@@ -13,8 +13,8 @@ ____________________________________________________________________
 UC_M_1 stato pagamenti	{OK}
 UC_M_2 invio promemoria	{OK}
 UC_M_3 fattura pagamento	{OK}
-UC_M_3a_fattura mensile    {da copiare nella nuova cartella}
-UC_M_9 variazioni extra	{da copiare...}
+UC_M_3a_fattura mensile    {COPIATO}
+UC_M_9 variazioni extra	{COPIATO}
 UC_M_17 registra pagamento manuale 	{OK}
 UC_M_18 Visualizza storico pagamenti	{OK}
 UC_M_22 invio promemoria fattura 	{OK}
@@ -46,10 +46,10 @@ UC_M_30 feedback allocazione tirocinanti	{OK}
 
 UC_M_14 Modifica orario segreteria	{OK}
 UC_M_15 visualizzazione orari		{OK}
-UC_M_24 Inserisci fascia utenza oraria 	{da copiare..}
-UC_M_25 modifica fascia utenza oraria 	{da copiare..}
-UC_M_26 elimina fascia utenza oraria 	{da copiare..}
-UC_M_28 richiesta modifica orario singolo    {nome errato..}
+UC_M_24 Inserisci fascia utenza oraria 	{COPIATO}
+UC_M_25 modifica fascia utenza oraria 	{COPIATO}
+UC_M_26 elimina fascia utenza oraria 	{COPIATO}
+UC_M_28 richiesta modifica orario singolo    {ok}
 UC_M_29 Modifica orario bambino	{OK}
 UC_M_29a approvazione modifica orario bambino	{OK}
 UC_M_29b Rifiuto Modifica orario bambino	{OK}
@@ -59,10 +59,10 @@ UC_M_29b Rifiuto Modifica orario bambino	{OK}
 [ALTRO]
 
 UC_M_21 Ordinamento	{OK}
-UC_M_27 Ricerca  {da copiare..}
+UC_M_27 Ricerca  {COPIATO}
 
 
-[DEPRECATI]   {da eliminare nella nuova cartella}
+[DEPRECATI]   {da eliminare nella nuova cartella} ->ELIMINATI
 
 UC_M_4 restituzione cauzione
 UC_M_10 Modifica classe menù
