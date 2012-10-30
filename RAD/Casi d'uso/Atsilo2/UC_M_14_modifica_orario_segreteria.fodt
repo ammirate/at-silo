@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2009-04-16T11:32:02.64</meta:creation-date><meta:editing-duration>PT3M37S</meta:editing-duration><meta:editing-cycles>9</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-10-28T15:53:51.01</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="18" meta:word-count="125" meta:character-count="875" meta:non-whitespace-character-count="767"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
+ <office:meta><meta:creation-date>2009-04-16T11:32:02.64</meta:creation-date><meta:editing-duration>PT3M37S</meta:editing-duration><meta:editing-cycles>10</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-10-30T10:11:29.14</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="21" meta:word-count="149" meta:character-count="1025" meta:non-whitespace-character-count="896"/><dc:creator>Mariella </dc:creator><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="int">4614</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">13423</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">11042</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">1923</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">33579</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">16069</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">9001</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">8140</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="int">4614</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">18036</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">11040</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">23883</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">14732</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">1923</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">33577</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">17990</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">240933</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">316078</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -229,22 +229,22 @@
   <style:style style:name="Tabella33.B1" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
   </style:style>
-  <style:style style:name="Tabella33.2" style:family="table-row">
-   <style:table-row-properties style:min-row-height="0.683cm"/>
-  </style:style>
   <style:style style:name="Tabella33.A2" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Tabella33.B2" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
-  <style:style style:name="Tabella33.4" style:family="table-row">
-   <style:table-row-properties style:min-row-height="2.947cm"/>
+  <style:style style:name="Tabella33.3" style:family="table-row">
+   <style:table-row-properties style:min-row-height="0.683cm"/>
   </style:style>
   <style:style style:name="Tabella33.5" style:family="table-row">
-   <style:table-row-properties style:min-row-height="0.826cm"/>
+   <style:table-row-properties style:min-row-height="2.947cm"/>
   </style:style>
   <style:style style:name="Tabella33.6" style:family="table-row">
+   <style:table-row-properties style:min-row-height="0.826cm"/>
+  </style:style>
+  <style:style style:name="Tabella33.7" style:family="table-row">
    <style:table-row-properties style:min-row-height="1.296cm"/>
   </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Table_20_Contents">
@@ -278,11 +278,23 @@
     <style:tab-stops/>
    </style:paragraph-properties>
   </style:style>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="0004d2ae" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties officeooo:paragraph-rsid="0004d2ae"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties officeooo:rsid="0013c123" officeooo:paragraph-rsid="0004d2ae"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="0001adff"/>
   </style:style>
   <style:style style:name="T2" style:family="text">
    <style:text-properties officeooo:rsid="0003ad25"/>
+  </style:style>
+  <style:style style:name="T3" style:family="text">
+   <style:text-properties officeooo:rsid="0004d2ae"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" style:num-suffix="." style:num-format="I">
@@ -368,7 +380,15 @@
       <text:p text:style-name="Table_20_Contents">Modifica Orario da Segreteria</text:p>
      </table:table-cell>
     </table:table-row>
-    <table:table-row table:style-name="Tabella33.2">
+    <table:table-row table:style-name="Tabella33.1">
+     <table:table-cell table:style-name="Tabella33.A2" office:value-type="string">
+      <text:p text:style-name="P8"><text:span text:style-name="T3">Specializza</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
+      <text:p text:style-name="P9"><text:span text:style-name="T3">N.D.</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella33.3">
      <table:table-cell table:style-name="Tabella33.A2" office:value-type="string">
       <text:p text:style-name="P1">Attori partecipanti</text:p>
      </table:table-cell>
@@ -376,7 +396,7 @@
       <text:p text:style-name="Table_20_Contents">Impiegato</text:p>
      </table:table-cell>
     </table:table-row>
-    <table:table-row table:style-name="Tabella33.2">
+    <table:table-row table:style-name="Tabella33.3">
      <table:table-cell table:style-name="Tabella33.A2" office:value-type="string">
       <text:p text:style-name="P1">Entry condition</text:p>
      </table:table-cell>
@@ -385,7 +405,7 @@
       <text:p text:style-name="Table_20_Contents">Un genitore recatosi in segreteria richiede la modifica dell&apos;orario del proprio figlio.</text:p>
      </table:table-cell>
     </table:table-row>
-    <table:table-row table:style-name="Tabella33.4">
+    <table:table-row table:style-name="Tabella33.5">
      <table:table-cell table:style-name="Tabella33.A2" office:value-type="string">
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
@@ -394,12 +414,12 @@
       <text:p text:style-name="Table_20_Contents"/>
       <text:p text:style-name="P2">2. il sistema mostra le opzioni possibili per la modifica dell&apos;orario.</text:p>
       <text:p text:style-name="Table_20_Contents"/>
-      <text:p text:style-name="Table_20_Contents">3. l&apos;<text:span text:style-name="T2">impiegato</text:span> setta le nuove impostazioni.</text:p>
+      <text:p text:style-name="Table_20_Contents">3. l&apos;<text:span text:style-name="T2">impiegato</text:span> setta le nuove impostazioni <text:span text:style-name="T3">e conferma</text:span>.</text:p>
       <text:p text:style-name="Table_20_Contents"/>
       <text:p text:style-name="P3">4. il sistema verifica e conferma le nuove impostazioni.</text:p>
      </table:table-cell>
     </table:table-row>
-    <table:table-row table:style-name="Tabella33.5">
+    <table:table-row table:style-name="Tabella33.6">
      <table:table-cell table:style-name="Tabella33.A2" office:value-type="string">
       <text:p text:style-name="P1">Exit condition</text:p>
      </table:table-cell>
@@ -407,12 +427,12 @@
       <text:p text:style-name="Table_20_Contents">In caso di successo l&apos;impiegato visualizza il nuovo orario.</text:p>
      </table:table-cell>
     </table:table-row>
-    <table:table-row table:style-name="Tabella33.6">
+    <table:table-row table:style-name="Tabella33.7">
      <table:table-cell table:style-name="Tabella33.A2" office:value-type="string">
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list35673437" text:style-name="L1">
+      <text:list xml:id="list30155650" text:style-name="L1">
        <text:list-header>
         <text:p text:style-name="P7">Nel caso di un errore utente, il sistema mostra all’utente un messaggio di errore che indica l&apos;errore verificatosi. </text:p>
        </text:list-header>
@@ -424,11 +444,11 @@
       <text:p text:style-name="P1">Requisiti qualitativi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"/>
+      <text:p text:style-name="P10">Il sistema deve visualizzare la form contenente le opzioni possibili entro 20 secondi dalla sua richiesta.<text:line-break/>Il sistema deve visualizzare il messaggio di errore o il nuovo orario entro 20 secondi.</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P5"><text:span text:style-name="T1">UC_M_14_modifica_orario_segreteria</text:span>: Permette ai genitori degli iscritti di modificare l&apos;orario dei propri figli scegliendo tra le fasce consentite.</text:p>
+   <text:p text:style-name="P5"><text:span text:style-name="T1">UC_M_14_modifica_orario_segreteria</text:span>: <text:span text:style-name="T3">L&apos;impiegato modifica l&apos;orario del bambino</text:span></text:p>
   </office:text>
  </office:body>
 </office:document>
