@@ -1,0 +1,6 @@
+[ ] Il diagramma comprende 2 o più casi d'uso
+[ ] I casi d'uso presenti nel diagramma esistono
+[ ] Gli attori citati sono gli stessi presenti nei casi d'uso corrispondenti
+[ ] Inclusioni, estensioni e specializzazioni rispecchiano i casi d'uso
+
+ALTRE ANNOTAZIONI:
