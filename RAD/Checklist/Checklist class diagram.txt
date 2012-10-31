@@ -1,0 +1,5 @@
+[ ] Le generalizzazioni sono coerenti a quanto dichiarato nel RAD
+[ ] Tutte le entità individuate sono presenti nel diagramma
+	o, tra tutti i diagrammi, devono figurare tutte le entità
+
+ALTRE ANNOTAZIONI:
