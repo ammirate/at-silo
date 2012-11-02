@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-31T01:29:03</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-01T18:24:39</dc:date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>3</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="3" meta:word-count="102" meta:character-count="688" meta:non-whitespace-character-count="588"/><dc:creator>Mariella </dc:creator></office:meta>
+ <office:meta><meta:creation-date>2012-10-31T01:29:03</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-02T17:05:26.60</dc:date><meta:editing-duration>PT7S</meta:editing-duration><meta:editing-cycles>5</meta:editing-cycles><dc:creator>Mariella </dc:creator><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="3" meta:word-count="101" meta:character-count="686" meta:non-whitespace-character-count="587"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
@@ -13,8 +13,8 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">3000</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">3069</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">4646</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">3768</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">1790</config:config-item>
      <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">20167</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">903332</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">938395</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -454,6 +454,9 @@
    <style:paragraph-properties fo:line-height="150%" fo:text-align="justify" style:justify-single-word="false" style:text-autospace="none"/>
    <style:text-properties style:font-name="Times New Roman" officeooo:paragraph-rsid="000dc8a4"/>
   </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties style:font-name="Arial" fo:font-size="11pt" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="11pt" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="11pt"/>
   </style:style>
@@ -505,8 +508,8 @@
    </text:sequence-decls>
    <text:h text:style-name="Heading_20_3" text:outline-level="3">Flusso di controllo interno</text:h>
    <text:p text:style-name="Text_20_body"/>
-   <text:p text:style-name="P1">Il sistema @asilo verrà utilizzato da una molteplicità di utenti , quindi esso dovrà garantire efficienza e coerenza per ogni utente di qualsiasi tipologia che si connetta al sistema.</text:p>
-   <text:p text:style-name="P2"><text:span text:style-name="T8">Sui Client sarà eseguita un’applicazione che utilizza un flusso di controllo di tipo Event-driven, in cui il ciclo principale attende un evento esterno; </text:span><text:span text:style-name="T6">Una volta che l&apos;evento ha luogo, il programma invia all&apos;handler le caratteristiche dell&apos;event</text:span><text:span text:style-name="T6">o</text:span><text:span text:style-name="T7"> </text:span><text:span text:style-name="T9"><text:s/>ed </text:span><text:span text:style-name="T8">esso viene spedito all’oggetto appropriato. Questo tipo di flusso di controllo ci permetterà di sfruttare una migliore efficienza delle interfacce grafiche, le quali risulteranno molto più flessibili </text:span><text:span text:style-name="T10">ed usabili per gli utenti.</text:span></text:p>
+   <text:p text:style-name="P3">Il sistema @silo verrà utilizzato da una molteplicità di utenti, quindi esso dovrà garantire efficienza e coerenza per ogni utente di qualsiasi tipologia che si connetta al sistema.</text:p>
+   <text:p text:style-name="P3"><text:span text:style-name="T8">Sui Client sarà eseguita un’applicazione che utilizza un flusso di controllo di tipo Event-driven, in cui il ciclo principale attende un evento esterno; </text:span><text:span text:style-name="T6">Una volta che l&apos;evento ha luogo, il programma invia all&apos;handler le caratteristiche dell&apos;evento</text:span><text:span text:style-name="T7"> </text:span><text:span text:style-name="T9"><text:s/>ed </text:span><text:span text:style-name="T8">esso viene spedito all’oggetto appropriato. Questo tipo di flusso di controllo ci permetterà di sfruttare una migliore efficienza delle interfacce grafiche, le quali risulteranno molto più flessibili </text:span><text:span text:style-name="T10">ed usabili per gli utenti.</text:span></text:p>
   </office:text>
  </office:body>
 </office:document>
