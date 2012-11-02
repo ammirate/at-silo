@@ -28,12 +28,12 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>625</x>
+      <x>620</x>
       <y>300</y>
       <w>100</w>
       <h>55</h>
     </coordinates>
-    <panel_attributes>Gestione HOME
+    <panel_attributes>Gestione FEEDBACK
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -132,12 +132,12 @@
   <element>
     <type>com.umlet.element.Interface</type>
     <coordinates>
-      <x>645</x>
+      <x>640</x>
       <y>320</y>
-      <w>50</w>
+      <w>60</w>
       <h>45</h>
     </coordinates>
-    <panel_attributes>Gestione Home
+    <panel_attributes>Gestione Feedback
 </panel_attributes>
     <additional_attributes/>
   </element>
