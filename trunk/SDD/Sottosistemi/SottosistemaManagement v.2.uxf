@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>5</zoom_level>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>290</x>
+      <y>260</y>
+      <w>505</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>APPLICATION LOGIC LAYER
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>405</x>
+      <y>105</y>
+      <w>255</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>INTERFACE LAYER
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>540</x>
+      <y>310</y>
+      <w>90</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*Gestione ORARI*
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>490</x>
+      <y>135</y>
+      <w>85</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Management interface
+fg=blue
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>305</x>
+      <y>310</y>
+      <w>95</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*Gestione PAGAMENTI*
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>175</y>
+      <w>24</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=.&lt;</panel_attributes>
+    <additional_attributes>15;85;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>380</x>
+      <y>465</y>
+      <w>285</w>
+      <h>85</h>
+    </coordinates>
+    <panel_attributes>DATA MANAGEMENT LAYER
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Text</type>
+    <coordinates>
+      <x>650</x>
+      <y>515</y>
+      <w>50</w>
+      <h>10</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>435</x>
+      <y>385</y>
+      <w>24</w>
+      <h>89</h>
+    </coordinates>
+    <panel_attributes>lt=.&lt;</panel_attributes>
+    <additional_attributes>15;80;15;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>655</x>
+      <y>310</y>
+      <w>95</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*Gestione TIROCINANTI*
+fg=blue
+bg=gra</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>420</x>
+      <y>310</y>
+      <w>95</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>*Gestione MENSA*
+fg=blue
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>215</x>
+      <y>40</y>
+      <w>620</w>
+      <h>550</h>
+    </coordinates>
+    <panel_attributes>*Sottosistema MANAGEMENT*
+--
+fg=gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
