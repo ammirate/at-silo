@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-31T00:56:52</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-02T12:25:40.50</dc:date><meta:editing-duration>PT1M3S</meta:editing-duration><meta:editing-cycles>5</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="16" meta:word-count="265" meta:character-count="1853" meta:non-whitespace-character-count="1592"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-31T00:56:52</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-03T09:12:05.08</dc:date><meta:editing-duration>PT1M3S</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="15" meta:word-count="265" meta:character-count="1851" meta:non-whitespace-character-count="1592"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">2859</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="int">1773</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">18314</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">7191</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">34980</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">15268</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">3000</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">3791</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="int">1773</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">2859</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">20085</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">10049</config:config-item>
-     <config:config-item config:name="ZoomType" config:type="short">1</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">22786</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">4764</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">34978</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">15266</config:config-item>
+     <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="ZoomFactor" config:type="short">191</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">100</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">966189</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">995913</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -448,29 +448,60 @@
    <style:paragraph-properties fo:line-height="150%"/>
    <style:text-properties officeooo:paragraph-rsid="000d0669"/>
   </style:style>
-  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:line-height="150%"/>
+   <style:text-properties officeooo:rsid="001e8a4d" officeooo:paragraph-rsid="000d0669"/>
+  </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:text-properties officeooo:paragraph-rsid="000d0669"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Heading_20_1">
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Heading_20_1">
    <style:paragraph-properties fo:break-before="page"/>
    <style:text-properties officeooo:paragraph-rsid="000d0669"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:paragraph-rsid="000ebe2d"/>
-  </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:line-height="150%"/>
-   <style:text-properties officeooo:rsid="001e8a4d" officeooo:paragraph-rsid="000d0669"/>
   </style:style>
   <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:line-height="150%" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:rsid="001e8a4d" officeooo:paragraph-rsid="000d0669"/>
   </style:style>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="100%"/>
+   <style:text-properties fo:color="#000000" style:font-name="TimesNewRomanPSMT" fo:font-size="12pt" fo:font-weight="normal" officeooo:paragraph-rsid="000ebe2d" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="100%"/>
+   <style:text-properties officeooo:rsid="001e8a4d" officeooo:paragraph-rsid="000ebe2d"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:line-height="100%"/>
+   <style:text-properties officeooo:paragraph-rsid="000ebe2d"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:line-height="100%"/>
    <style:text-properties officeooo:paragraph-rsid="000d0669"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Heading_20_1">
-   <style:paragraph-properties fo:break-before="page"/>
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:line-height="100%"/>
+   <style:text-properties officeooo:rsid="001e8a4d" officeooo:paragraph-rsid="000d0669"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:line-height="100%" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties officeooo:rsid="001e8a4d" officeooo:paragraph-rsid="000d0669"/>
+  </style:style>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:line-height="100%" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties officeooo:paragraph-rsid="000d0669"/>
+  </style:style>
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Heading_20_2">
+   <style:paragraph-properties fo:margin-left="0.688cm" fo:margin-right="0cm" fo:line-height="100%" fo:text-indent="-0.66cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties officeooo:paragraph-rsid="000d0669"/>
+  </style:style>
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Heading_20_1">
+   <style:paragraph-properties fo:line-height="100%" fo:break-before="page"/>
    <style:text-properties officeooo:paragraph-rsid="000d0669"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
@@ -522,35 +553,24 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:h text:style-name="P3" text:outline-level="1"><text:span text:style-name="T2">1</text:span>. Introduzione</text:h>
-   <text:p text:style-name="P1">L’obiettivo del documento SDD è quello di far fronte a tutti i problemi del sistema proposto fornendo un’architettura vantaggiosa, che possa rendere il sistema più efficiente possibile. A tale scopo si specificheranno quali caratteristiche e requisiti dovranno essere migliorati e definiti. Si forniranno così informazioni sulla configurazione hardware e software del sistema.</text:p>
-   <text:h text:style-name="P2" text:outline-level="2"><text:span text:style-name="T4">1</text:span><text:span text:style-name="T3">.1 </text:span><text:span text:style-name="T7"><text:s/></text:span><text:span text:style-name="T3">Scopo del sistema</text:span></text:h>
-   <text:p text:style-name="P4"><text:span text:style-name="T6"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T6">Il sistema “At-silo” nasce con l&apos;obiettivo di migliorare ed ottimizzare il servizio di asilo nido messo</text:span></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T6"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T5"><text:s/></text:span><text:span text:style-name="T9">a disposizione dall&apos;università di Fisciano</text:span>, inoltre una particolare caratteristica del sistema riguarda </text:p>
-   <text:p text:style-name="P4"/>
-   <text:p text:style-name="P4">la possibilità <text:span text:style-name="T2">di interagire, in modo intuitivo, da parte del genitore sia per consultare informazioni </text:span></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T2"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T2">personali riguardanti il proprio figlio, e sia </text:span><text:span text:style-name="T1">per consultare i servizi messi a disposizione</text:span><text:span text:style-name="T2"> </text:span><text:span text:style-name="T1">tramite </text:span></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T1"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T1">l&apos;accesso al sistema previa </text:span><text:span text:style-name="T8">identificazione</text:span>. A tale scopo il software richiede la presenza di requisiti </text:p>
-   <text:p text:style-name="P4"/>
-   <text:p text:style-name="P4">minimi per prestazioni e portabilità. </text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T8"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T8">I</text:span>n particolare:</text:p>
-   <text:p text:style-name="P4"/>
-   <text:p text:style-name="P4"><text:span text:style-name="T10">Adattabilità e Portabilità</text:span>: avendo come requisito non funzionale l&apos;Usabilità, le interfacce </text:p>
-   <text:p text:style-name="P4"/>
-   <text:p text:style-name="P4">dovranno essere intuitive e semplici su ogni sistema software e hardware utilizzato, per questo </text:p>
-   <text:p text:style-name="P4"/>
-   <text:p text:style-name="P4">motivo verranno utilizzate le tecnologie <text:span text:style-name="T1">JDBC per quando riguarda la connettività ai server e la loro </text:span></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T1"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T1">gestione tramite il package Servlet e il protocollo HTTP per lo scambio di informazioni via WEB </text:span></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T1"/></text:p>
-   <text:p text:style-name="P4"><text:span text:style-name="T1">tra client e server.</text:span></text:p>
-   <text:p text:style-name="P5"/>
-   <text:p text:style-name="P6"><text:s/><text:span text:style-name="T10">Tempi di Risposta e Prestazioni</text:span>: avendo come requisito non funzionale le Performance, le interrogazioni al Database devono risultare rapide, inoltre il sistema dovrà favorire il requisito di Robustezza, ossia la resistenza all&apos;immissione di input non validi. altri requisiti non funzionali da sviluppare in dettaglio saranno Affidabilità, Sicurezza e Modularità per gli utenti. Tenendo conto dei costi prefissati, il tutto si riassume in un unica tecnologia MySQL.</text:p>
+   <text:h text:style-name="P15" text:outline-level="1"><text:span text:style-name="T2">1</text:span>. Introduzione</text:h>
+   <text:p text:style-name="P10">L’obiettivo del documento SDD è quello di far fronte a tutti i problemi del sistema proposto fornendo un’architettura vantaggiosa, che possa rendere il sistema più efficiente possibile. A tale scopo si specificheranno quali caratteristiche e requisiti dovranno essere migliorati e definiti. Si forniranno così informazioni sulla configurazione hardware e software del sistema.</text:p>
+   <text:p text:style-name="P13"/>
+   <text:h text:style-name="P14" text:outline-level="2"><text:span text:style-name="T4">1</text:span><text:span text:style-name="T3">.1 </text:span><text:span text:style-name="T7"><text:s/></text:span><text:span text:style-name="T3">Scopo del sistema</text:span></text:h>
+   <text:p text:style-name="P7">Il sistema “At-silo” nasce con l&apos;obiettivo di migliorare ed ottimizzare il servizio di asilo nido messo</text:p>
+   <text:p text:style-name="P9"><text:span text:style-name="T9">a disposizione dall&apos;università di Fisciano</text:span>, inoltre una particolare caratteristica del sistema riguarda </text:p>
+   <text:p text:style-name="P9">la possibilità <text:span text:style-name="T2">di interagire, in modo intuitivo, da parte del genitore sia per consultare informazioni </text:span></text:p>
+   <text:p text:style-name="P9"><text:span text:style-name="T2">personali riguardanti il proprio figlio, e sia </text:span><text:span text:style-name="T1">per consultare i servizi messi a disposizione</text:span><text:span text:style-name="T2"> </text:span><text:span text:style-name="T1">tramite </text:span></text:p>
+   <text:p text:style-name="P9"><text:span text:style-name="T1">l&apos;accesso al sistema previa </text:span><text:span text:style-name="T8">identificazione</text:span>. A tale scopo il software richiede la presenza di requisiti </text:p>
+   <text:p text:style-name="P9">minimi per prestazioni e portabilità. <text:span text:style-name="T8">I</text:span>n particolare:</text:p>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"><text:span text:style-name="T10">Adattabilità e Portabilità</text:span>: avendo come requisito non funzionale l&apos;Usabilità, le interfacce </text:p>
+   <text:p text:style-name="P9">dovranno essere intuitive e semplici su ogni sistema software e hardware utilizzato, per questo </text:p>
+   <text:p text:style-name="P9">motivo verranno utilizzate le tecnologie <text:span text:style-name="T1">JDBC per quando riguarda la connettività ai server e la loro </text:span></text:p>
+   <text:p text:style-name="P8">gestione tramite il package Servlet e il protocollo HTTP per lo scambio di informazioni via WEB </text:p>
+   <text:p text:style-name="P8">tra client e server.</text:p>
+   <text:p text:style-name="P11"/>
+   <text:p text:style-name="P12"><text:span text:style-name="T10">Tempi di Risposta e Prestazioni</text:span>: avendo come requisito non funzionale le Performance, le interrogazioni al Database devono risultare rapide, inoltre il sistema dovrà favorire il requisito di Robustezza, ossia la resistenza all&apos;immissione di input non validi. altri requisiti non funzionali da sviluppare in dettaglio saranno Affidabilità, Sicurezza e Modularità per gli utenti. Tenendo conto dei costi prefissati, il tutto si riassume in un unica tecnologia MySQL.</text:p>
   </office:text>
  </office:body>
 </office:document>
