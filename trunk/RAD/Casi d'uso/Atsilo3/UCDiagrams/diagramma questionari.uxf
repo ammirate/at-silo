@@ -191,18 +191,6 @@ questionari</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>675</x>
-      <y>117</y>
-      <w>118</w>
-      <h>395</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>54;378;72;27</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
       <x>468</x>
       <y>531</y>
       <w>233</w>
