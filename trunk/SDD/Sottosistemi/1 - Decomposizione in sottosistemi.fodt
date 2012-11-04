@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-31T01:01:30</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-02T20:38:28.47</dc:date><meta:editing-duration>PT2M26S</meta:editing-duration><meta:editing-cycles>9</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="3" meta:object-count="0" meta:page-count="4" meta:paragraph-count="25" meta:word-count="310" meta:character-count="2099" meta:non-whitespace-character-count="1834"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-31T01:01:30</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-04T21:32:27.36</dc:date><meta:editing-duration>PT2M26S</meta:editing-duration><meta:editing-cycles>10</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="4" meta:object-count="0" meta:page-count="5" meta:paragraph-count="35" meta:word-count="445" meta:character-count="2966" meta:non-whitespace-character-count="2584"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">88794</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">121213</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">34980</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">14183</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">31415</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">12943</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">21509</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">93633</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">21500</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">127025</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">88794</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">34978</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">102976</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">121213</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">31413</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">134154</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
-     <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
+     <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="ZoomFactor" config:type="short">100</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">110</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1488382</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1588548</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -464,56 +464,89 @@
    <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
+   <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
+   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
   </style:style>
   <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties fo:font-size="13pt" fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0012df9c" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:font-size="13pt" fo:font-style="italic" officeooo:rsid="0012df9c" officeooo:paragraph-rsid="0013403f" style:font-size-asian="13pt" style:font-style-asian="italic" style:font-size-complex="13pt" style:font-style-complex="italic"/>
   </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
-   <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties fo:font-size="13pt" fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:text-properties officeooo:paragraph-rsid="000f4aa6"/>
-  </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:text-properties officeooo:paragraph-rsid="00106f4c"/>
-  </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:text-properties fo:font-weight="normal" officeooo:paragraph-rsid="00106f4c" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
-   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
-  </style:style>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
-   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-style-complex="normal"/>
-  </style:style>
-  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
-   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
-  </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
-   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-style-complex="normal"/>
-  </style:style>
-  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
    <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0017c9bf" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
+   <style:text-properties fo:font-size="13pt" fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0016b5fe" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties fo:font-size="13pt" fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0016b5fe" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L6">
+   <style:text-properties fo:font-size="13pt" fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0016b5fe" officeooo:paragraph-rsid="0017c9bf" style:font-size-asian="13pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties fo:font-size="13pt" fo:font-style="italic" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="0016b5fe" officeooo:paragraph-rsid="0017c9bf" style:font-size-asian="13pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:text-properties officeooo:paragraph-rsid="000f4aa6"/>
+  </style:style>
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:text-properties officeooo:paragraph-rsid="00106f4c"/>
+  </style:style>
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:text-properties fo:font-weight="normal" officeooo:paragraph-rsid="00106f4c" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="none" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L6">
+   <style:text-properties fo:font-style="normal" officeooo:rsid="000f4aa6" officeooo:paragraph-rsid="0017c9bf" style:font-style-asian="normal" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0013403f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
    <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0016b5fe" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+  <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L6">
+   <style:text-properties fo:font-style="normal" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00132ca2" officeooo:paragraph-rsid="0017c9bf" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
    <style:text-properties fo:font-size="13pt" fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0012df9c" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties fo:font-size="13pt" fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0012df9c" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+  <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties fo:font-size="13pt" fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="0016b5fe" officeooo:paragraph-rsid="0016b5fe" style:font-size-asian="13pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="13pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="000f4aa6"/>
@@ -537,25 +570,40 @@
    <style:text-properties fo:font-weight="bold" officeooo:rsid="0016b5fe" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T8" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="0012df9c" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="0017c9bf" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T9" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="00132ca2" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="0012df9c" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T10" style:family="text">
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="0016b5fe" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="00132ca2" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T11" style:family="text">
-   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="0016b5fe" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T12" style:family="text">
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="0017c9bf" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="T13" style:family="text">
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="00183d44" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="T14" style:family="text">
+   <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
+  </style:style>
+  <style:style style:name="T15" style:family="text">
    <style:text-properties officeooo:rsid="0016b5fe"/>
+  </style:style>
+  <style:style style:name="T16" style:family="text">
+   <style:text-properties officeooo:rsid="0017c9bf"/>
   </style:style>
   <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Graphics">
    <style:graphic-properties style:mirror="none" fo:clip="rect(0cm, 0cm, 0cm, 0cm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
   </style:style>
   <style:style style:name="fr2" style:family="graphic" style:parent-style-name="Graphics">
    <style:graphic-properties style:vertical-pos="top" style:vertical-rel="paragraph" style:horizontal-pos="center" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0cm, 0cm, 0cm, 0cm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
+  </style:style>
+  <style:style style:name="fr3" style:family="graphic" style:parent-style-name="Graphics">
+   <style:graphic-properties style:vertical-pos="from-top" style:vertical-rel="paragraph" style:horizontal-pos="from-left" style:horizontal-rel="paragraph" style:mirror="none" fo:clip="rect(0cm, 0cm, 0cm, 0cm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
@@ -610,6 +658,214 @@
    </text:list-level-style-number>
   </text:list-style>
   <text:list-style style:name="L2">
+   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+  </text:list-style>
+  <text:list-style style:name="L3">
+   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+  </text:list-style>
+  <text:list-style style:name="L4">
+   <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="2" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="3" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="4" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="5" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="6" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="7" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="8" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="9" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="10" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+  </text:list-style>
+  <text:list-style style:name="L5">
+   <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="2" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="3" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="4" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="5" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="6" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="7" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="8" text:style-name="Bullet_20_Symbols" text:bullet-char="◦">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="9" text:style-name="Bullet_20_Symbols" text:bullet-char="▪">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+   <text:list-level-style-bullet text:level="10" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-bullet>
+  </text:list-style>
+  <text:list-style style:name="L6">
    <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
      <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
@@ -1079,29 +1335,29 @@
      </draw:image>
     </draw:frame></text:p>
    <text:p text:style-name="P4">La decomposizione prevista per il sistema è composta da cinque sottosistemi che si occupano di gestirne aspetti e funzionalità differenti:</text:p>
-   <text:list xml:id="list40351952" text:style-name="L1">
+   <text:list xml:id="list41283891" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P12"><text:span text:style-name="T3">Presentation</text:span><text:span text:style-name="T1">: raccoglie i sottosistemi adibiti alla gestione delle interfacce grafiche:</text:span></text:p>
+     <text:p text:style-name="P21"><text:span text:style-name="T3">Presentation</text:span><text:span text:style-name="T1">: raccoglie i sottosistemi adibiti alla gestione delle interfacce grafiche:</text:span></text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P13"><text:span text:style-name="T4">Application</text:span><text:span text:style-name="T2">: si occupa della gestione della logica applicativa del sistema;</text:span></text:p>
+     <text:p text:style-name="P22"><text:span text:style-name="T4">Application</text:span><text:span text:style-name="T2">: si occupa della gestione della logica applicativa del sistema;</text:span></text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P14"><text:span text:style-name="T4">Beans</text:span><text:span text:style-name="T2">: si occupa della gestione e dello scambio dei dati tra i sistemi;</text:span></text:p>
+     <text:p text:style-name="P23"><text:span text:style-name="T4">Beans</text:span><text:span text:style-name="T2">: si occupa della gestione e dello scambio dei dati tra i sistemi;</text:span></text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P14"><text:span text:style-name="T4">Storage</text:span><text:span text:style-name="T2">: sistema che gestisce ed immagazzina i dati persistenti:</text:span></text:p>
+     <text:p text:style-name="P23"><text:span text:style-name="T4">Storage</text:span><text:span text:style-name="T2">: sistema che gestisce ed immagazzina i dati persistenti:</text:span></text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P14"><text:span text:style-name="T4">Exception</text:span><text:span text:style-name="T2">: gestione delle eccezioni del sistema.</text:span></text:p>
+     <text:p text:style-name="P23"><text:span text:style-name="T4">Exception</text:span><text:span text:style-name="T2">: gestione delle eccezioni del sistema.</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P4"/>
    <text:p text:style-name="P4"><text:soft-page-break/></text:p>
-   <text:p text:style-name="P8">Sottosistema Management</text:p>
-   <text:list xml:id="list40349881" text:style-name="L2">
+   <text:p text:style-name="P12">Sottosistema Management</text:p>
+   <text:list xml:id="list41293747" text:style-name="L2">
     <text:list-item>
-     <text:p text:style-name="P15"><draw:frame draw:style-name="fr2" draw:name="immagini2" text:anchor-type="paragraph" svg:width="17.842cm" svg:height="15.79cm" draw:z-index="0"><draw:image>
+     <text:p text:style-name="P24"><draw:frame draw:style-name="fr2" draw:name="immagini2" text:anchor-type="paragraph" svg:width="17.842cm" svg:height="15.79cm" draw:z-index="0"><draw:image>
         <office:binary-data>/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRof
          Hh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwh
          MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAAR
@@ -2334,36 +2590,36 @@
          FFABRRRQB//Z
         </office:binary-data>
        </draw:image>
-      </draw:frame> <text:span text:style-name="T11">Interface layer</text:span></text:p>
+      </draw:frame> <text:span text:style-name="T14">Interface layer</text:span></text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P17"><text:span text:style-name="T5">Management Interface: </text:span><text:span text:style-name="T8">interfacce grafiche con cui i vari utenti </text:span><text:span text:style-name="T9">gestori del servizio</text:span><text:span text:style-name="T8"> interagiscono con il sistema.</text:span></text:p>
+       <text:p text:style-name="P26"><text:span text:style-name="T5">Management Interface: </text:span><text:span text:style-name="T9">interfacce grafiche con cui i vari utenti </text:span><text:span text:style-name="T10">gestori del servizio</text:span><text:span text:style-name="T9"> interagiscono con il sistema.</text:span></text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P19">Application Logic Layer</text:p>
+     <text:p text:style-name="P29">Application Logic Layer</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P17"><text:span text:style-name="T6">Gestione Pagamenti</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che si occupa di gestire il controllo e la visualizzazione dei pagamenti effettuati dagli utenti</text:span></text:p>
+       <text:p text:style-name="P26"><text:span text:style-name="T6">Gestione Pagamenti</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che si occupa di gestire il controllo e la visualizzazione dei pagamenti effettuati dagli utenti</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P17"><text:span text:style-name="T6">Gestione Mensa</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che permette di richiedere ed effettuare modifiche al piano-pasto dei bambini.</text:span></text:p>
+       <text:p text:style-name="P26"><text:span text:style-name="T6">Gestione Mensa</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che permette di richiedere ed effettuare modifiche al piano-pasto dei bambini.</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P17"><text:span text:style-name="T6">Gestione Orari</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che permette di richiedere ed effettuare modifiche alla fascia oraria di utenza dei bambini.</text:span></text:p>
+       <text:p text:style-name="P26"><text:span text:style-name="T6">Gestione Orari</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che permette di richiedere ed effettuare modifiche alla fascia oraria di utenza dei bambini.</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P17"><text:span text:style-name="T6">Gestione Tirocinanti</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che si occupa di gestire il periodo di tirocinio di studenti di Scienze della Formazione.</text:span></text:p>
+       <text:p text:style-name="P26"><text:span text:style-name="T6">Gestione Tirocinanti</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che si occupa di gestire il periodo di tirocinio di studenti di Scienze della Formazione.</text:span></text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P10">Data Management layer</text:p>
-     <text:p text:style-name="P21"><text:soft-page-break/>Sottosistema <text:span text:style-name="T12">Feedback</text:span></text:p>
+     <text:p text:style-name="P15">Data Management layer</text:p>
+     <text:p text:style-name="P32"><text:soft-page-break/>Sottosistema <text:span text:style-name="T15">Feedback</text:span></text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P22"><draw:frame draw:style-name="fr2" draw:name="immagini3" text:anchor-type="paragraph" svg:width="17.365cm" svg:height="16.554cm" draw:z-index="2"><draw:image>
+   <text:p text:style-name="P33"><draw:frame draw:style-name="fr2" draw:name="immagini3" text:anchor-type="paragraph" svg:width="17.365cm" svg:height="16.554cm" draw:z-index="2"><draw:image>
       <office:binary-data>/9j/4AAQSkZJRgABAgAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRof
        Hh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwh
        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAAR
@@ -3622,35 +3878,410 @@
        AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/2Q==
       </office:binary-data>
      </draw:image>
-    </draw:frame><text:span text:style-name="T12"/></text:p>
-   <text:list xml:id="list40533517" text:continue-numbering="true" text:style-name="L2">
+    </draw:frame></text:p>
+   <text:list xml:id="list41448040" text:continue-numbering="true" text:style-name="L2">
     <text:list-item>
-     <text:p text:style-name="P16"><text:s/><text:span text:style-name="T11">Interface layer</text:span></text:p>
+     <text:p text:style-name="P25"><text:s/><text:span text:style-name="T14">Interface layer</text:span></text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P18"><text:span text:style-name="T7">Feedback</text:span><text:span text:style-name="T5"> Interface: </text:span><text:span text:style-name="T8">interfacce grafiche con cui i vari utenti </text:span><text:span text:style-name="T9">gestori del servizio</text:span><text:span text:style-name="T8"> interagiscono con il sistema.</text:span></text:p>
+       <text:p text:style-name="P27"><text:span text:style-name="T7">Feedback</text:span><text:span text:style-name="T5"> Interface: </text:span><text:span text:style-name="T9">interfacce grafiche con cui i vari utenti </text:span><text:span text:style-name="T10">gestori del servizio</text:span><text:span text:style-name="T9"> interagiscono con il sistema.</text:span></text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P20">Application Logic Layer</text:p>
+     <text:p text:style-name="P30">Application Logic Layer</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P18"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Eventi</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che si occupa di gestire il controllo e la visualizzazione de</text:span><text:span text:style-name="T10">gli</text:span><text:span text:style-name="T9"> </text:span><text:span text:style-name="T10">eventi</text:span><text:span text:style-name="T9"> </text:span><text:span text:style-name="T10">creati dagli utenti</text:span></text:p>
+       <text:p text:style-name="P27"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Eventi</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che si occupa di gestire il controllo e la visualizzazione de</text:span><text:span text:style-name="T11">gli</text:span><text:span text:style-name="T10"> </text:span><text:span text:style-name="T11">eventi</text:span><text:span text:style-name="T10"> </text:span><text:span text:style-name="T11">creati dagli utenti</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P18"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Pubblicazione Menu </text:span><text:span text:style-name="T6">Mensa</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che permette </text:span><text:span text:style-name="T10">ad uno specifico utente</text:span><text:span text:style-name="T9"> di </text:span><text:span text:style-name="T10">manutere il menu della mensa , inserendolo ,modificandolo e cancellandolo. Inoltre permette la visualizzazione del menu a tutti gli utenti.</text:span></text:p>
+       <text:p text:style-name="P27"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Pubblicazione Menu </text:span><text:span text:style-name="T6">Mensa</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che permette </text:span><text:span text:style-name="T11">ad uno specifico utente</text:span><text:span text:style-name="T10"> di </text:span><text:span text:style-name="T11">manutere il menu della mensa , inserendolo ,modificandolo e cancellandolo. Inoltre permette la visualizzazione del menu a tutti gli utenti.</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P18"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Questionari</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che permette di </text:span><text:span text:style-name="T10">gestire i questionari, inserendoli, modificandoli per un particolare utente, compilarli e visualizzare le statistiche per altri utenti.</text:span></text:p>
+       <text:p text:style-name="P27"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Questionari</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che permette di </text:span><text:span text:style-name="T11">gestire i questionari, inserendoli, modificandoli per un particolare utente, compilarli e visualizzare le statistiche per altri utenti.</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P18"><text:soft-page-break/><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Registro</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T9">modulo che si occupa di gestire </text:span><text:span text:style-name="T10">in maniera computerizzata un registro standard cartaceo. Permette anche all&apos;utente psico-pedagogo di visionare le attività svolte dall&apos;educatore.</text:span></text:p>
+       <text:p text:style-name="P27"><text:soft-page-break/><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T7">Registro</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che si occupa di gestire </text:span><text:span text:style-name="T11">in maniera computerizzata un registro standard cartaceo. Permette anche all&apos;utente psico-pedagogo di visionare le attività svolte dall&apos;educatore.</text:span></text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P11"><text:span text:style-name="T12">Data Management layer</text:span></text:p>
+     <text:p text:style-name="P17">Data Management layer</text:p>
+     <text:p text:style-name="P17"/>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="P18"/>
+   <text:p text:style-name="P20"><text:span text:style-name="T16">Sottosistema accessi</text:span></text:p>
+   <text:list xml:id="list41340921" text:style-name="L6">
+    <text:list-item>
+     <text:p text:style-name="P16"><draw:frame draw:style-name="fr3" draw:name="immagini4" text:anchor-type="paragraph" svg:x="0.097cm" svg:y="0.183cm" svg:width="17cm" svg:height="20.013cm" draw:z-index="3"><draw:image>
+        <office:binary-data>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
+        </office:binary-data>
+       </draw:image>
+      </draw:frame><text:span text:style-name="T14">Interface layer</text:span></text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P28"><text:span text:style-name="T7">Feedback</text:span><text:span text:style-name="T5"> Interface: </text:span><text:span text:style-name="T9">interfacce grafiche con cui i vari utenti </text:span><text:span text:style-name="T10">gestori del servizio</text:span><text:span text:style-name="T9"> interagiscono con il sistema.</text:span></text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P31"><text:soft-page-break/>Application Logic Layer</text:p>
+     <text:list>
+      <text:list-item>
+       <text:p text:style-name="P28"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T8">Login</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che si occupa di gestire il controllo </text:span><text:span text:style-name="T12">del login da parte degli utenti</text:span></text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P28"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T8">Iscritti</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che </text:span><text:span text:style-name="T12">si occupa di gestire l&apos;iscrizione degli utenti al sistema e di controllarne lo stato</text:span></text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P28"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T8">Iscritti e Dati Personali</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che permette di </text:span><text:span text:style-name="T11">gestire </text:span><text:span text:style-name="T12">(aggiungere, cancellare, modificare, visualizzare) i dati <text:s/></text:span><text:span text:style-name="T13">e le informazioni </text:span><text:span text:style-name="T12">relativ</text:span><text:span text:style-name="T13">e</text:span><text:span text:style-name="T12"> agli utenti del sistema</text:span></text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P28"><text:span text:style-name="T6">Gestione </text:span><text:span text:style-name="T8">Personale</text:span><text:span text:style-name="T5">: </text:span><text:span text:style-name="T10">modulo che si occupa di gestire </text:span><text:span text:style-name="T13">gli utenti che fanno parte del personale asilo (modifica, cancellazione, aggiunta)</text:span></text:p>
+      </text:list-item>
+      <text:list-item>
+       <text:p text:style-name="P28"><text:span text:style-name="T8">Gestione Ricerca</text:span><text:span text:style-name="T12">: modulo che si occupa di gestire, attraverso dei parametri, la ricerca e la visualizzazione dei dati appartenenti a utenti del sistema</text:span></text:p>
+      </text:list-item>
+     </text:list>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P19"><text:span text:style-name="T16">Data Management layer</text:span></text:p>
     </text:list-item>
    </text:list>
   </office:text>
