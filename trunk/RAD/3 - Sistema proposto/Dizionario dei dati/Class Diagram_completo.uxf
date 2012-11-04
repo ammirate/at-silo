@@ -26,12 +26,12 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>330</x>
-      <y>210</y>
+      <x>400</x>
+      <y>240</y>
       <w>70</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>Genitore</panel_attributes>
+    <panel_attributes>Iscritto</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -98,7 +98,7 @@ settimanale</panel_attributes>
       <w>110</w>
       <h>30</h>
     </coordinates>
-    <panel_attributes>Iscritto</panel_attributes>
+    <panel_attributes>Genitore</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -448,45 +448,6 @@ m2= n
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>340</x>
-      <y>120</y>
-      <w>50</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-
-m1=1..2
-m2=1..1
-</panel_attributes>
-    <additional_attributes>30;30;30;90</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>410</x>
-      <y>120</y>
-      <w>50</w>
-      <h>110</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-
-m1=1..*
-m2=1..1
-</panel_attributes>
-    <additional_attributes>30;30;30;90</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>410</x>
-      <y>210</y>
-      <w>60</w>
-      <h>30</h>
-    </coordinates>
-    <panel_attributes>Bambino</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
       <x>80</x>
       <y>100</y>
       <w>50</w>
@@ -719,7 +680,7 @@ tirocinate</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>540</x>
+      <x>550</x>
       <y>290</y>
       <w>100</w>
       <h>30</h>
@@ -731,17 +692,17 @@ tirocinate</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>190</x>
-      <y>210</y>
+      <y>220</y>
       <w>360</w>
-      <h>180</h>
+      <h>170</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;160;340;160;340;30</additional_attributes>
+    <additional_attributes>30;150;340;150;340;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>550</x>
+      <x>560</x>
       <y>220</y>
       <w>50</w>
       <h>90</h>
@@ -752,13 +713,13 @@ tirocinate</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>610</x>
+      <x>620</x>
       <y>270</y>
-      <w>130</w>
+      <w>120</w>
       <h>120</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>30;30;110;30;110;100</additional_attributes>
+    <additional_attributes>30;30;100;30;100;100</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -781,5 +742,30 @@ tirocinate</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>30;30;30;130</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>410</x>
+      <y>120</y>
+      <w>50</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m1= 1
+m2= n
+</panel_attributes>
+    <additional_attributes>30;30;30;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>430</x>
+      <y>120</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;30;100;100;100</additional_attributes>
   </element>
 </diagram>
