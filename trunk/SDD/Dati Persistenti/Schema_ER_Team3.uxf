@@ -5,7 +5,7 @@
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>854</x>
-      <y>420</y>
+      <y>406</y>
       <w>161</w>
       <h>105</h>
     </coordinates>
@@ -26,7 +26,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>539</x>
-      <y>420</y>
+      <y>406</y>
       <w>140</w>
       <h>91</h>
     </coordinates>
@@ -45,14 +45,13 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>210</x>
-      <y>322</y>
+      <y>308</y>
       <w>161</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>Psico-pedagogo
 --
 InserisciProgrammaEducativo()
-CreaEvento()
 ModificaEvento()
 --
 -Cognome
@@ -66,7 +65,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>217</x>
-      <y>588</y>
+      <y>574</y>
       <w>140</w>
       <h>91</h>
     </coordinates>
@@ -84,7 +83,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>728</x>
-      <y>602</y>
+      <y>588</y>
       <w>105</w>
       <h>70</h>
     </coordinates>
@@ -100,7 +99,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>392</x>
-      <y>441</y>
+      <y>427</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -112,7 +111,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>336</x>
-      <y>476</y>
+      <y>462</y>
       <w>111</w>
       <h>174</h>
     </coordinates>
@@ -123,7 +122,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>455</x>
-      <y>448</y>
+      <y>434</y>
       <w>97</w>
       <h>34</h>
     </coordinates>
@@ -134,7 +133,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>728</x>
-      <y>441</y>
+      <y>427</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -146,7 +145,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>658</x>
-      <y>448</y>
+      <y>434</y>
       <w>83</w>
       <h>34</h>
     </coordinates>
@@ -157,7 +156,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>791</x>
-      <y>448</y>
+      <y>434</y>
       <w>76</w>
       <h>34</h>
     </coordinates>
@@ -168,7 +167,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>567</x>
-      <y>609</y>
+      <y>595</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -180,7 +179,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>273</x>
-      <y>525</y>
+      <y>511</y>
       <w>34</w>
       <h>76</h>
     </coordinates>
@@ -191,7 +190,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>630</x>
-      <y>616</y>
+      <y>602</y>
       <w>111</w>
       <h>34</h>
     </coordinates>
@@ -202,7 +201,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>588</x>
-      <y>490</y>
+      <y>476</y>
       <w>34</w>
       <h>132</h>
     </coordinates>
@@ -213,7 +212,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>252</x>
-      <y>490</y>
+      <y>476</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -225,7 +224,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>273</x>
-      <y>406</y>
+      <y>392</y>
       <w>34</w>
       <h>97</h>
     </coordinates>
@@ -236,7 +235,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>882</x>
-      <y>196</y>
+      <y>182</y>
       <w>140</w>
       <h>56</h>
     </coordinates>
@@ -251,7 +250,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>882</x>
-      <y>42</y>
+      <y>28</y>
       <w>140</w>
       <h>56</h>
     </coordinates>
@@ -267,7 +266,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>910</x>
-      <y>126</y>
+      <y>112</y>
       <w>84</w>
       <h>42</h>
     </coordinates>
@@ -279,7 +278,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>931</x>
-      <y>147</y>
+      <y>133</y>
       <w>34</w>
       <h>62</h>
     </coordinates>
@@ -290,7 +289,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>931</x>
-      <y>77</y>
+      <y>63</y>
       <w>34</w>
       <h>62</h>
     </coordinates>
@@ -301,7 +300,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>910</x>
-      <y>301</y>
+      <y>287</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -313,7 +312,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>931</x>
-      <y>336</y>
+      <y>322</y>
       <w>34</w>
       <h>97</h>
     </coordinates>
@@ -324,7 +323,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>931</x>
-      <y>231</y>
+      <y>217</y>
       <w>34</w>
       <h>83</h>
     </coordinates>
@@ -335,7 +334,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>504</x>
-      <y>182</y>
+      <y>168</y>
       <w>105</w>
       <h>70</h>
     </coordinates>
@@ -352,7 +351,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>770</x>
-      <y>308</y>
+      <y>294</y>
       <w>139</w>
       <h>125</h>
     </coordinates>
@@ -364,7 +363,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>707</x>
-      <y>301</y>
+      <y>287</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -376,7 +375,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>756</x>
-      <y>182</y>
+      <y>168</y>
       <w>28</w>
       <h>35</h>
     </coordinates>
@@ -387,7 +386,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>539</x>
-      <y>231</y>
+      <y>217</y>
       <w>181</w>
       <h>111</h>
     </coordinates>
@@ -398,7 +397,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>266</x>
-      <y>217</y>
+      <y>203</y>
       <w>34</w>
       <h>118</h>
     </coordinates>
@@ -409,7 +408,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>308</x>
-      <y>189</y>
+      <y>175</y>
       <w>209</w>
       <h>34</h>
     </coordinates>
@@ -420,7 +419,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>245</x>
-      <y>182</y>
+      <y>168</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -432,7 +431,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>707</x>
-      <y>196</y>
+      <y>182</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -444,7 +443,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>770</x>
-      <y>203</y>
+      <y>189</y>
       <w>125</w>
       <h>34</h>
     </coordinates>
@@ -455,7 +454,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>588</x>
-      <y>203</y>
+      <y>189</y>
       <w>132</w>
       <h>34</h>
     </coordinates>
@@ -466,13 +465,16 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>266</x>
-      <y>42</y>
+      <y>28</y>
       <w>105</w>
-      <h>56</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Questionario
 --
-Data
+PathName
+PeriodoAnnuale
+Anno
+FlagRinuncia
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
@@ -480,7 +482,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>0</x>
-      <y>154</y>
+      <y>140</y>
       <w>161</w>
       <h>84</h>
     </coordinates>
@@ -500,7 +502,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>560</x>
-      <y>42</y>
+      <y>28</y>
       <w>140</w>
       <h>56</h>
     </coordinates>
@@ -516,7 +518,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>679</x>
-      <y>49</y>
+      <y>35</y>
       <w>90</w>
       <h>34</h>
     </coordinates>
@@ -528,7 +530,7 @@ bg=orange</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>756</x>
-      <y>42</y>
+      <y>28</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -540,7 +542,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>819</x>
-      <y>49</y>
+      <y>35</y>
       <w>76</w>
       <h>34</h>
     </coordinates>
@@ -551,7 +553,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>427</x>
-      <y>42</y>
+      <y>28</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -563,7 +565,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>490</x>
-      <y>49</y>
+      <y>35</y>
       <w>83</w>
       <h>34</h>
     </coordinates>
@@ -574,7 +576,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>350</x>
-      <y>49</y>
+      <y>35</y>
       <w>90</w>
       <h>34</h>
     </coordinates>
@@ -585,7 +587,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>56</x>
-      <y>49</y>
+      <y>35</y>
       <w>90</w>
       <h>118</h>
     </coordinates>
@@ -596,7 +598,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
       <x>133</x>
-      <y>42</y>
+      <y>28</y>
       <w>84</w>
       <h>56</h>
     </coordinates>
@@ -608,7 +610,7 @@ bg=gray</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>196</x>
-      <y>49</y>
+      <y>35</y>
       <w>83</w>
       <h>34</h>
     </coordinates>
