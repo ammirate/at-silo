@@ -1,4 +1,4 @@
-[ ] Il diagramma è coerente con i casi d'uso rappresentati
+﻿[ ] Il diagramma è coerente con i casi d'uso rappresentati
 [ ] Tutte le interazioni rispettano le euristiche di Bruegge-Dutoit sui sequence diagrams
 [ ] È presente almeno un Boundary
 [ ] È presente almeno un Control
@@ -12,3 +12,4 @@
 [ ] Gli stereotipi sono utilizzati in modo corretto.
 
 ALTRE ANNOTAZIONI:
+Conferma punteggio deve essere allineato
