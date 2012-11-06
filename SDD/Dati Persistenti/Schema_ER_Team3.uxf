@@ -75,7 +75,9 @@ Settimanale
 InserisciAttività()
 ModificaAttività()
 --
--Settimana
+-SettimanaN°
+-ObiettivoSettimanale
+-Descrizione
 bg=orange</panel_attributes>
     <additional_attributes/>
   </element>
