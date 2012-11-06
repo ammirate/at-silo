@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-30T22:41:59</meta:creation-date><meta:editing-duration>PT2M5S</meta:editing-duration><meta:editing-cycles>2</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><meta:document-statistic meta:table-count="3" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="35" meta:word-count="47" meta:character-count="365" meta:non-whitespace-character-count="344"/><dc:date>2012-10-30T23:06:53</dc:date></office:meta>
+ <office:meta><meta:creation-date>2012-10-30T22:41:59</meta:creation-date><meta:editing-duration>PT2M5S</meta:editing-duration><meta:editing-cycles>3</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-11-06T18:58:16</dc:date><meta:document-statistic meta:table-count="3" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="39" meta:word-count="76" meta:character-count="536" meta:non-whitespace-character-count="490"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">13215</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="long">2298</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">4927</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="long">1233</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">18374</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">11904</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">11906</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">7511</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">20324</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="long">2298</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">13215</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">20671</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">25118</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">10629</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">9185</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">1233</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">4927</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">19606</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">16831</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -316,28 +316,32 @@
    <style:text-properties style:font-name="Designosaur" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.388cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Designosaur" style:font-size-asian="10.5pt"/>
   </style:style>
   <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-left="0.201cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties style:font-name="Designosaur" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties style:font-name="Designosaur" style:font-size-asian="10.5pt"/>
-  </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties style:font-name="Designosaur" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
    <style:text-properties style:font-name="Droid Sans Mono" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0.388cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" style:font-size-asian="10.5pt"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0.201cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Designosaur" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="-0.097cm" fo:margin-right="0.004cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Designosaur" fo:language="it" fo:country="IT" style:font-size-asian="10.5pt"/>
   </style:style>
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-left="0.004cm" fo:margin-right="0.205cm" fo:text-align="end" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties style:font-name="Droid Sans Mono" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
   <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Designosaur" fo:font-weight="normal" style:font-size-asian="10.5pt" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="0.004cm" fo:margin-right="0.205cm" fo:text-align="end" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Droid Sans Mono" fo:font-weight="bold" style:font-size-asian="10.5pt" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
@@ -366,7 +370,7 @@
    <text:user-field-decls>
     <text:user-field-decl office:value-type="string" office:string-value="&quot;&quot;" text:name="Meeting"/>
    </text:user-field-decls>
-   <text:h text:style-name="Heading_20_1" text:outline-level="1">Agenda<text:line-break/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-input text:name="MeetingName" text:description="" office:value-type="string">Design del Sistema</text:variable-input></text:h>
+   <text:h text:style-name="Heading_20_1" text:outline-level="1">Agenda<text:line-break/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-get text:name="MeetingName"/><text:variable-input text:name="MeetingName" text:description="" office:value-type="string">Design degli Oggetti</text:variable-input></text:h>
    <table:table table:name="Riepilogo" table:style-name="Riepilogo">
     <table:table-column table:style-name="Riepilogo.A"/>
     <table:table-column table:style-name="Riepilogo.B"/>
@@ -374,21 +378,21 @@
     <table:table-column table:style-name="Riepilogo.D"/>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7">Incontro:</text:p>
+      <text:p text:style-name="P9">Incontro:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P3"><text:variable-get text:name="MeetingName">Design del Sistema</text:variable-get></text:p>
+      <text:p text:style-name="P3"><text:variable-get text:name="MeetingName">Design degli Oggetti</text:variable-get></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
       <text:p text:style-name="P4">Data:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P6"><text:text-input text:description="">31/10/2012, 9.15</text:text-input></text:p>
+      <text:p text:style-name="P8"><text:text-input text:description="">7/11/2012, 9.25</text:text-input></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7">Luogo:</text:p>
+      <text:p text:style-name="P9">Luogo:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
       <text:p text:style-name="P2"><text:text-input text:description="">Lab. Sistemi
@@ -400,7 +404,7 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7">Moderatore:</text:p>
+      <text:p text:style-name="P9">Moderatore:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
       <text:p text:style-name="P2"><text:text-input text:description="">Franco Giulio</text:text-input></text:p>
@@ -410,17 +414,17 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7">Time-Keeper:</text:p>
+      <text:p text:style-name="P9">Time-Keeper:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P2"><text:text-input text:description="">Ferrara Mariella</text:text-input></text:p>
+      <text:p text:style-name="P2"><text:text-input text:description="">Durante Francesco</text:text-input></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7">Minute-Keeper:</text:p>
+      <text:p text:style-name="P9">Minute-Keeper:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
       <text:p text:style-name="P2"><text:text-input text:description="">Franco Giulio</text:text-input></text:p>
@@ -430,7 +434,7 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
     </table:table-row>
     <table:table-row table:style-name="Riepilogo.1">
      <table:table-cell table:style-name="Riepilogo.A1" office:value-type="string">
-      <text:p text:style-name="P7">Convocati:</text:p>
+      <text:p text:style-name="P9">Convocati:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Riepilogo.A1" table:number-columns-spanned="3" office:value-type="string">
       <table:table table:name="Tabella1" table:style-name="Tabella1">
@@ -438,58 +442,58 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
        <table:table-column table:style-name="Tabella1.B"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Di Costanzo</text:p>
+         <text:p text:style-name="P10">Di Costanzo</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Luca</text:p>
-        </table:table-cell>
-       </table:table-row>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Durante</text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Francesco</text:p>
+         <text:p text:style-name="P10">Luca</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Ferrara</text:p>
+         <text:p text:style-name="P10">Durante</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Mariella</text:p>
-        </table:table-cell>
-       </table:table-row>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Franco</text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Giulio</text:p>
+         <text:p text:style-name="P10">Francesco</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Lomasto</text:p>
+         <text:p text:style-name="P10">Ferrara</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Luigi</text:p>
-        </table:table-cell>
-       </table:table-row>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Nastro</text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Francesco</text:p>
+         <text:p text:style-name="P10">Mariella</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Parisi</text:p>
+         <text:p text:style-name="P10">Franco</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-         <text:p text:style-name="P11">Marco</text:p>
+         <text:p text:style-name="P10">Giulio</text:p>
+        </table:table-cell>
+       </table:table-row>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P10">Lomasto</text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P10">Luigi</text:p>
+        </table:table-cell>
+       </table:table-row>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P10">Nastro</text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P10">Francesco</text:p>
+        </table:table-cell>
+       </table:table-row>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P10">Parisi</text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
+         <text:p text:style-name="P10">Marco</text:p>
         </table:table-cell>
        </table:table-row>
       </table:table>
@@ -505,7 +509,7 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
     <table:table-column table:style-name="Tabella2.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P10"/>
+      <text:p text:style-name="P7"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B1" office:value-type="string">
       <text:p text:style-name="P4">Agenda</text:p>
@@ -513,26 +517,42 @@ Facoltà di Scienze MM.FF.NN.</text:text-input></text:p>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P12">9.25</text:p>
+      <text:p text:style-name="P11">9.25</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B2" office:value-type="string">
-      <text:p text:style-name="P5">Baseline del RAD</text:p>
+      <text:p text:style-name="P5">System Design - Obiettivi di design</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
-      <text:p text:style-name="P12">9.40</text:p>
+      <text:p text:style-name="P11">9.35</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
-      <text:p text:style-name="P5">System Design - Assegnazione responsabilità</text:p>
+      <text:p text:style-name="P5">System Design - Divisione in sottosistemi</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
-      <text:p text:style-name="P12">10.00</text:p>
+      <text:p text:style-name="P11">9.45</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
-      <text:p text:style-name="P5">Conclusioni</text:p>
+      <text:p text:style-name="P5">System Design - Design dei dati persistenti</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
+      <text:p text:style-name="P11">10.00</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
+      <text:p text:style-name="P5">Object Design - Presentazione</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A3" office:value-type="string">
+      <text:p text:style-name="P11">10.30</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.B3" office:value-type="string">
+      <text:p text:style-name="P5">Assegnazione responsabilità</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
