@@ -1,18 +1,25 @@
 [ ] Ogni obiettivo di design può essere mappato sui requisiti non funzionali
 [ ] I tradeoffs fanno riferimento ai design goals citati
 [ ] Il rationale per la scelta dell'architettura di sistema è specificato, ed è coerente con i tradeoff applicati
-[ ] Il deployment rispecchia le effettive necessità del committente
+[X] Il deployment rispecchia le effettive necessità del committente
+			Manca nel deployment il forum per la gestione dei feedback
 [ ] Il flusso di controllo interno è coerente con il layering applicato
 [ ] Il flusso di controllo esterno è coerente con il deployment applicato
-[ ] Per ogni criticità individuata, in termini di concorrenza, è specificata una gestione o una transazione.
-[ ] Il mapping tra hardware e software è coerente con il deployment individuato
-[ ] I software di terze parti utilizzati e richiesti sono completamente specificati (produttore, nome, versione)
-[ ] Lo schema di database individuato è coerente con gli oggetti individuati nel RAD
-[ ] Gli attributi assegnati alle entità consentono il salvataggio di tutti i dati indicati nel RAD
-[ ] Qualora una entità possedesse attributi non trattati nel RAD, è riportato il motivo di tale scelta
-[ ] Le relazioni individuate consentono la realizzazione di tutti i casi d'uso indicati nel RAD
-[ ] Il controllo degli accessi rispetta la politica need-to-know
-[ ] Le scelte di sicurezza sono motivate da obiettivi di design
-[ ] I requisiti di performance del sistema sono rispondenti a quanto espresso nel RAD
-[ ] Le condizioni di Boundary gestiscono tutti i possibili fallimenti interni al sistema
-[ ] Le condizioni di Boundary gestiscono tutti i possibili fallimenti interni al sistema
+[X] Per ogni criticità individuata, in termini di concorrenza, è specificata una gestione o una transazione
+[X] Il mapping tra hardware e software è coerente con il deployment individuato
+			E' indicata la presenza di un client stand-Alone non attualmente presente
+[X] I software di terze parti utilizzati e richiesti sono completamente specificati (produttore, nome, versione)
+			Non sono indicati produttori e versioni
+[Mancante] Lo schema di database individuato è coerente con gli oggetti individuati nel RAD
+[Mancante] Gli attributi assegnati alle entità consentono il salvataggio di tutti i dati indicati nel RAD
+[Mancante] Qualora una entità possedesse attributi non trattati nel RAD, è riportato il motivo di tale scelta
+[Mancante] Le relazioni individuate consentono la realizzazione di tutti i casi d'uso indicati nel RAD
+[Mancante] Il controllo degli accessi rispetta la politica need-to-know
+[Mancante] Le scelte di sicurezza sono motivate da obiettivi di design
+[Mancante] I requisiti di performance del sistema sono rispondenti a quanto espresso nel RAD
+[X] Le condizioni di Boundary gestiscono tutti i possibili fallimenti interni al sistema
+[X] Le condizioni di Boundary gestiscono tutti i possibili fallimenti interni al sistema
+			sono indicati tutti i fallimenti, ma non come verranno gestiti
+			
+			
+Nota: non tutti i file aderiscono al template.
