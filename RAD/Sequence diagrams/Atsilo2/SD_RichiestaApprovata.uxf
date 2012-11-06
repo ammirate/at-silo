@@ -171,9 +171,9 @@ for (String textline : textlines) {
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
       <x>550</x>
-      <y>280</y>
+      <y>190</y>
       <w>20</w>
-      <h>60</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -229,10 +229,10 @@ for (String textline : textlines) {
       <x>530</x>
       <y>80</y>
       <w>50</w>
-      <h>220</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;30;30;200</additional_attributes>
+    <additional_attributes>30;30;30;110</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -341,20 +341,20 @@ Apre</panel_attributes>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-&lt;&lt;Create&gt;&gt;</panel_attributes>
+Mostra</panel_attributes>
     <additional_attributes>260;50;30;50</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>290</x>
+      <x>40</x>
       <y>310</y>
-      <w>420</w>
+      <w>670</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Preme</panel_attributes>
-    <additional_attributes>400;50;30;50</additional_attributes>
+    <additional_attributes>650;50;30;50</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
@@ -395,18 +395,6 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>290</x>
-      <y>200</y>
-      <w>170</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-Salva</panel_attributes>
-    <additional_attributes>30;50;150;50</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>290</x>
       <y>280</y>
       <w>280</w>
       <h>70</h>
@@ -414,5 +402,17 @@ Salva</panel_attributes>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Salva</panel_attributes>
     <additional_attributes>30;50;260;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>290</x>
+      <y>210</y>
+      <w>280</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+              &lt;&lt;create&gt;&gt;</panel_attributes>
+    <additional_attributes>260;50;30;50</additional_attributes>
   </element>
 </diagram>
