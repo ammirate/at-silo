@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-28T19:39:55.27</meta:creation-date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>2</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-10-28T20:20:23.57</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="49" meta:word-count="299" meta:character-count="2279" meta:non-whitespace-character-count="2026"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-28T19:39:55.27</meta:creation-date><meta:editing-duration>PT2M17S</meta:editing-duration><meta:editing-cycles>5</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/58f22d5-270d05a-e2abed1-ea17a85-9b5702</meta:generator><dc:date>2012-11-07T08:40:23.43</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="49" meta:word-count="301" meta:character-count="2280" meta:non-whitespace-character-count="2026"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">10583</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">31665</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">34980</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">14183</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">27857</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">11305</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">22458</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">3718</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">18815</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">22865</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">10583</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">34978</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">24765</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">31665</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">27855</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">42968</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1407453</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1500279</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -191,6 +191,7 @@ dispatcher.executeDispatch(document, &quot;.uno:Paste&quot;, &quot;&quot;, 0, Ar
 
 end sub
 
+      
       
       </ooo:source-code>
      </ooo:module>
@@ -478,34 +479,41 @@ end sub
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties officeooo:paragraph-rsid="001463d5"/>
   </style:style>
-  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" style:text-autospace="none"/>
-   <style:text-properties fo:font-size="12pt" officeooo:paragraph-rsid="001579dd" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
-  </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" officeooo:paragraph-rsid="001579dd" style:font-name-asian="Arial1" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-name-complex="Arial1" style:font-size-complex="12pt" style:font-style-complex="normal"/>
-  </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties officeooo:rsid="001463d5" officeooo:paragraph-rsid="001463d5"/>
   </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties fo:font-size="12pt" officeooo:paragraph-rsid="001579dd" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties fo:font-size="12pt" officeooo:rsid="001463d5" officeooo:paragraph-rsid="001463d5" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" style:text-autospace="none"/>
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" officeooo:paragraph-rsid="001579dd" style:font-name-asian="Arial1" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-name-complex="Arial1" style:font-size-complex="12pt" style:font-style-complex="normal"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" officeooo:paragraph-rsid="001579dd" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-size-complex="12pt" style:font-style-complex="normal"/>
+  </style:style>
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" style:text-autospace="none"/>
+   <style:text-properties fo:font-size="12pt" officeooo:paragraph-rsid="001579dd" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" officeooo:paragraph-rsid="001579dd" style:font-name-asian="Arial1" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-name-complex="Arial1" style:font-size-complex="12pt" style:font-style-complex="normal"/>
   </style:style>
   <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Heading">
    <style:text-properties fo:font-size="12pt" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
   <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties fo:font-size="12pt" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties fo:font-size="12pt" officeooo:rsid="00135f6d" officeooo:paragraph-rsid="001579dd" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" style:text-autospace="none"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" officeooo:rsid="00135f6d" officeooo:paragraph-rsid="001579dd" style:font-name-asian="Arial1" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-name-complex="Arial1" style:font-size-complex="12pt" style:font-style-complex="normal"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="001463d5"/>
@@ -524,6 +532,12 @@ end sub
   </style:style>
   <style:style style:name="T6" style:family="text">
    <style:text-properties fo:font-size="12pt" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="T7" style:family="text">
+   <style:text-properties fo:font-style="italic" officeooo:rsid="001579dd" style:font-style-asian="italic" style:font-style-complex="italic"/>
+  </style:style>
+  <style:style style:name="T8" style:family="text">
+   <style:text-properties fo:font-style="italic" fo:font-weight="bold" officeooo:rsid="001579dd" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-style-complex="italic" style:font-weight-complex="bold"/>
   </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
@@ -562,169 +576,169 @@ end sub
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">ProgrammaEducativo</text:p>
+      <text:p text:style-name="P4">ProgrammaEducativo</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
-      <text:p text:style-name="P6">Entity</text:p>
+      <text:p text:style-name="P4">Entity</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P6">Il Programma Educativo è un piano settimanale di attività deciso dallo PsicoPedagogo che gli Educatori Didattici dovranno seguire</text:p>
+      <text:p text:style-name="P4">Il Programma Educativo è un piano settimanale di attività deciso dallo PsicoPedagogo che gli Educatori Didattici dovranno seguire</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">StoricoControl</text:p>
+      <text:p text:style-name="P4">StoricoControl</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B3" office:value-type="string">
-      <text:p text:style-name="P6">Control</text:p>
+      <text:p text:style-name="P4">Control</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C3" office:value-type="string">
-      <text:p text:style-name="P6">StoricoControl si occupa di generare il report storico delle attività dalle date in input che l&apos;utente passa tramite il form StoricoForm</text:p>
+      <text:p text:style-name="P4">StoricoControl si occupa di generare il report storico delle attività dalle date in input che l&apos;utente passa tramite il form StoricoForm</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">AttivitàForm</text:p>
+      <text:p text:style-name="P4">AttivitàForm</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B4" office:value-type="string">
-      <text:p text:style-name="P6">Boundary</text:p>
+      <text:p text:style-name="P4">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C4" office:value-type="string">
-      <text:p text:style-name="P6">Form usata per inserire l&apos;attività giornaliera svolta dall&apos;educatore didattico con la sua classe di bambini.</text:p>
+      <text:p text:style-name="P4">Form usata per inserire l&apos;attività giornaliera svolta dall&apos;educatore didattico con la sua classe di bambini.</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">SottomettiAttivitaButton</text:p>
+      <text:p text:style-name="P4">SottomettiAttivitaButton</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B5" office:value-type="string">
-      <text:p text:style-name="P6">Boundary</text:p>
+      <text:p text:style-name="P4">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C5" office:value-type="string">
-      <text:p text:style-name="P6">Bottone che permette la sottomissione e l&apos;inserimento dei dati digitati nella Form AttivitàForm</text:p>
+      <text:p text:style-name="P4">Bottone che permette la sottomissione e l&apos;inserimento dei dati digitati nella Form AttivitàForm</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">ModificaAttivitaButton</text:p>
+      <text:p text:style-name="P4">ModificaAttivitaButton</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B6" office:value-type="string">
-      <text:p text:style-name="P6">Boundary</text:p>
+      <text:p text:style-name="P4">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C6" office:value-type="string">
-      <text:p text:style-name="P6">Bottone che permette la modifica di un&apos;attività inserita dall&apos;educatore didattico o dallo psicopedagogo. Apre una form AttivitaForm con i dati da modificare.</text:p>
+      <text:p text:style-name="P4">Bottone che permette la modifica di un&apos;attività inserita dall&apos;educatore didattico o dallo psicopedagogo. Apre una form AttivitaForm con i dati da modificare.</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">GeneraStoricoButton</text:p>
+      <text:p text:style-name="P4">GeneraStoricoButton</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B7" office:value-type="string">
-      <text:p text:style-name="P6">Boundary</text:p>
+      <text:p text:style-name="P4">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C7" office:value-type="string">
-      <text:p text:style-name="P6">Bottone che permette di generare lo storico delle attività partendo da due date in input prese dal form StoricoForm</text:p>
+      <text:p text:style-name="P4">Bottone che permette di generare lo storico delle attività partendo da due date in input prese dal form StoricoForm</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">SottomettiPianoDidatticoButton</text:p>
+      <text:p text:style-name="P4">SottomettiPianoDidatticoButton</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P6">Boundary</text:p>
+      <text:p text:style-name="P4">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P6">Bottone che permette la sottomissione del piano didattico settimanale deciso dallo psicopedagogo</text:p>
+      <text:p text:style-name="P4">Bottone che permette la sottomissione del piano didattico settimanale deciso dallo psicopedagogo</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.2">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">StoricoForm</text:p>
+      <text:p text:style-name="P4">StoricoForm</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
+      <text:p text:style-name="P4">Boundary</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
+      <text:p text:style-name="P4">Form nella quale si scelgono la data di inizio e di fine per generare il report con le attività</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella1.10">
+     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
+      <text:p text:style-name="P4">AggiungiAttivitaButton</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
+      <text:p text:style-name="P4">Boundary</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
+      <text:p text:style-name="P4">Bottone che permetta l&apos;aggiunta di un nuovo campo attività per inserire altre attività svolte dall&apos;educatore didattico o volute dallo psicopedagogo in un piano</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella1.10">
+     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
+      <text:p text:style-name="P11">Registro</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
+      <text:p text:style-name="P3"><text:drop-down text:name="Tipo di dato"><text:label text:current-selected="true" text:value="Entity"/><text:label text:value="Control"/><text:label text:value="Boundary"/>Entity</text:drop-down></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
+      <text:p text:style-name="P11">Sostituisce il vero e proprio registro cartaceo dell&apos;educatore : presenta per ogni giorno le attività quotidiane svolte e le assenze della classe</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella1.10">
+     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
+      <text:p text:style-name="P11">Attività</text:p>
+      <text:p text:style-name="P11"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
+      <text:p text:style-name="P3">Entity</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
+      <text:p text:style-name="P11">Attività inserita dall&apos;Educatore per inviare feedback allo psicopedagogo,oppure inserito dallo PsicoPedagogo per comporre il programmaEducativo per le <text:s/>classi</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella1.10">
+     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
+      <text:p text:style-name="P12">RegistroButton</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
+      <text:p text:style-name="P3">Boundary</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
+      <text:p text:style-name="P7">Bottone usato dall<text:span text:style-name="T3">&apos;</text:span><text:span text:style-name="T4">educatore o dallo psicopedagogo</text:span><text:span text:style-name="T3"> </text:span>per iniziare <text:span text:style-name="T2">gli use case della sezione Registro</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella1.10">
+     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
+      <text:p text:style-name="P12">ClasseButton</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
       <text:p text:style-name="P6">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P6">Form nella quale si scelgono la data di inizio e di fine per generare il report con le attività</text:p>
+      <text:p text:style-name="P8"><text:span text:style-name="T2">Bottone </text:span><text:s/>usat<text:span text:style-name="T2">o</text:span> <text:span text:style-name="T5">dall&apos;educatore </text:span><text:span text:style-name="T2">per selezionare la classe per </text:span><text:span text:style-name="T5">cui iniziare gli use case </text:span><text:span text:style-name="T8">inserimento attività didattica</text:span><text:span text:style-name="T5">, </text:span><text:span text:style-name="T8">modifica attività didattica</text:span><text:span text:style-name="T5">, </text:span><text:span text:style-name="T8">visualizza storico registro</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.10">
      <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P6">AggiungiAttivitaButton</text:p>
+      <text:p text:style-name="P12">AttivitàOdiernaButton</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P6">Boundary</text:p>
+      <text:p text:style-name="P3">Boundary</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P6">Bottone che permetta l&apos;aggiunta di un nuovo campo attività per inserire altre attività svolte dall&apos;educatore didattico o volute dallo psicopedagogo in un piano</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella1.10">
-     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P5"><text:span text:style-name="T2">Registro</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P5"><text:drop-down text:name="Tipo di dato"><text:label text:current-selected="true" text:value="Entity"/><text:label text:value="Control"/><text:label text:value="Boundary"/>Entity</text:drop-down></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P5"><text:span text:style-name="T2">Sostituisce il vero e proprio registro cartaceo dell&apos;educatore : presenta per ogni giorno le attività quotidiane svolte e le assenze della classe</text:span></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella1.10">
-     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P5"><text:span text:style-name="T2">Attività</text:span></text:p>
-      <text:p text:style-name="P5"><text:span text:style-name="T2"/></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P5">Entity</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P5"><text:span text:style-name="T2">Attività inserita dall&apos;Educatore per inviare feedback allo psicopedagogo,oppure inserito dallo PsicoPedagogo per comporre il programmaEducativo per le <text:s/>classi</text:span></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella1.10">
-     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P7"><text:span text:style-name="T2">RegistroButton</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P5">Boundary</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P2">Bottone usato dall<text:span text:style-name="T3">&apos;</text:span><text:span text:style-name="T4">educatore o dallo psicopedagogo</text:span><text:span text:style-name="T3"> </text:span>per iniziare <text:span text:style-name="T2">gli use case della sezione Registro</text:span></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella1.10">
-     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P7"><text:span text:style-name="T2">ClasseButton</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P8">Boundary</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P3"><text:span text:style-name="T2">Bottone </text:span><text:s/>usat<text:span text:style-name="T2">o</text:span> <text:span text:style-name="T5">dall&apos;educatore </text:span><text:span text:style-name="T2">per selezionare la classe per </text:span><text:span text:style-name="T5">cui iniziaregli <text:s/>use case inserimento attività didattica, modifica attività didattica,visualizza storico registro</text:span></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella1.10">
-     <table:table-cell table:style-name="Tabella1.A15" office:value-type="string">
-      <text:p text:style-name="P7"><text:span text:style-name="T2">AttivitàOdiernaButton</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.B15" office:value-type="string">
-      <text:p text:style-name="P5">Boundary</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.C15" office:value-type="string">
-      <text:p text:style-name="P2">Bottone usato dall<text:span text:style-name="T3">&apos;</text:span><text:span text:style-name="T4">educatore</text:span><text:span text:style-name="T3"> </text:span>per iniziare lo use case<text:span text:style-name="T3"> </text:span><text:span text:style-name="T4">inserimento attività didattica</text:span></text:p>
+      <text:p text:style-name="P7">Bottone usato dall<text:span text:style-name="T3">&apos;</text:span><text:span text:style-name="T4">educatore</text:span><text:span text:style-name="T3"> </text:span>per iniziare lo use case<text:span text:style-name="T3"> </text:span><text:span text:style-name="T4">inserimento attività didattica</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <text:soft-page-break/>
     <table:table-row table:style-name="Tabella1.10">
      <table:table-cell table:style-name="Tabella1.A16" office:value-type="string">
-      <text:p text:style-name="P5"><text:span text:style-name="T2">RegistroControl</text:span></text:p>
+      <text:p text:style-name="P11">RegistroControl</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B16" office:value-type="string">
-      <text:p text:style-name="P5">Control</text:p>
+      <text:p text:style-name="P3">Control</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C16" office:value-type="string">
-      <text:p text:style-name="P5">Gestisce l<text:span text:style-name="T5">e</text:span> funzion<text:span text:style-name="T5">alità</text:span> <text:span text:style-name="T5">del registro</text:span>. Questo oggetto è creato quando un<text:span text:style-name="T5">o</text:span> <text:span text:style-name="T5">PsicoPedagogo</text:span> <text:span text:style-name="T5">o un&apos;educatore </text:span>seleziona il bottone “<text:span text:style-name="T5">RegistroButton</text:span>”.</text:p>
+      <text:p text:style-name="P3">Gestisce l<text:span text:style-name="T5">e</text:span> funzion<text:span text:style-name="T5">alità</text:span> <text:span text:style-name="T5">del registro</text:span>. Questo oggetto è creato quando un<text:span text:style-name="T5">o</text:span> <text:span text:style-name="T5">PsicoPedagogo</text:span> <text:span text:style-name="T5">o un&apos;educatore </text:span>seleziona il bottone “<text:span text:style-name="T5">RegistroButton</text:span>”.</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
