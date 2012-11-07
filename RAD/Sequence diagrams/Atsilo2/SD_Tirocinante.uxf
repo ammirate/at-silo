@@ -145,7 +145,7 @@ for (String textline : textlines) {
     <panel_attributes>// Modify the text below and
 // observe the element preview.
 Aggiunta 
-Bottom
+Button
 </panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
