@@ -1,0 +1,8 @@
+[X] Il diagramma comprende 2 o pi√π casi d'uso
+[X] I casi d'uso presenti nel diagramma esistono
+[ ] Gli attori citati sono gli stessi presenti nei casi d'uso corrispondenti
+[ ] Inclusioni, estensioni e specializzazioni rispecchiano i casi d'uso
+
+ALTRE ANNOTAZIONI:
+"Delegato rettore" può davvero fare tutto ciò??
+UC e UCD non sono coerenti [sono previste negli UCD inclusioni non specificate nei casi d'uso].
