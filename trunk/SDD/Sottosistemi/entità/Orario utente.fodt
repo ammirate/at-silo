@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-05T15:08:31</meta:creation-date><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-11-07T20:41:35</dc:date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="4" meta:word-count="101" meta:character-count="642" meta:non-whitespace-character-count="545"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-07T18:42:01</meta:creation-date><meta:editing-duration>PT18M23S</meta:editing-duration><meta:editing-cycles>5</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-11-07T21:07:20</dc:date><meta:document-statistic meta:table-count="2" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="16" meta:word-count="22" meta:character-count="165" meta:non-whitespace-character-count="159"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../home/giulio/.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T18:42:01"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">21184</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">13725</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="long">2304</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">18374</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">11904</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">4646</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">3002</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">6796</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">3311</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">2304</config:config-item>
      <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">21183</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">13723</config:config-item>
-     <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">20676</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">11903</config:config-item>
+     <config:config-item config:name="ZoomType" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="ZoomFactor" config:type="short">85</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">98</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
@@ -99,7 +99,9 @@
  </office:settings>
  <office:scripts>
   <office:script script:language="ooo:Basic">
-   <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <ooo:library-embedded ooo:name="Standard"/>
+   </ooo:libraries>
   </office:script>
  </office:scripts>
  <office:font-face-decls>
@@ -158,12 +160,6 @@
    <style:paragraph-properties text:number-lines="false" text:line-number="0"/>
    <style:text-properties style:font-size-asian="12pt" style:font-name-complex="Lohit Hindi1"/>
   </style:style>
-  <style:style style:name="Heading_20_3" style:display-name="Heading 3" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="3" style:class="text">
-   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" fo:text-indent="-0.559cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties style:font-name="Times New Roman2" fo:font-size="14pt" fo:font-weight="bold" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
-  </style:style>
   <style:style style:name="Intestazioni_20_prima_20_pagina" style:display-name="Intestazioni prima pagina" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <style:paragraph-properties fo:margin-top="0.3cm" fo:margin-bottom="0cm" fo:line-height="150%" fo:text-align="end" style:justify-single-word="false" style:page-number="auto"/>
    <style:text-properties fo:letter-spacing="0.035cm" style:font-size-asian="10.5pt"/>
@@ -198,20 +194,26 @@
    <style:text-properties fo:font-size="16pt" fo:font-weight="bold" style:font-size-asian="16pt" style:font-weight-asian="bold" style:font-size-complex="16pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="Heading_20_1" style:display-name="Heading 1" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="1" style:class="text" style:master-page-name="">
-   <style:paragraph-properties fo:orphans="0" fo:widows="0" style:page-number="auto" fo:break-before="auto" fo:break-after="auto" fo:background-color="transparent" style:shadow="none">
+   <style:paragraph-properties fo:orphans="0" fo:widows="0" style:page-number="auto" fo:break-before="page" fo:background-color="transparent" style:shadow="none">
     <style:tab-stops/>
     <style:background-image/>
    </style:paragraph-properties>
    <style:text-properties style:font-name="Times New Roman2" fo:font-size="115%" fo:font-weight="bold" style:font-size-asian="115%" style:font-weight-asian="bold" style:font-size-complex="115%" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="Heading_20_2" style:display-name="Heading 2" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="2" style:class="text" style:master-page-name="">
-   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0cm" fo:text-indent="-0.66cm" style:auto-text-indent="false" style:page-number="auto">
+   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0.42cm" fo:margin-bottom="0.21cm" fo:text-indent="-0.66cm" style:auto-text-indent="false" style:page-number="auto">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties style:font-name="Times New Roman3" fo:font-size="14pt" fo:font-style="normal" fo:font-weight="bold" style:font-size-asian="14pt" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-style-complex="italic" style:font-weight-complex="bold"/>
   </style:style>
+  <style:style style:name="Heading_20_3" style:display-name="Heading 3" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="3" style:class="text">
+   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0.319cm" fo:margin-bottom="0.21cm" fo:text-indent="-0.559cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties style:font-name="Times New Roman2" fo:font-size="14pt" fo:font-weight="bold" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+  </style:style>
   <style:style style:name="Heading_20_4" style:display-name="Heading 4" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="4" style:class="text">
-   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0.4cm" fo:margin-bottom="0cm" fo:text-indent="-0.46cm" style:auto-text-indent="false">
+   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0.21cm" fo:margin-bottom="0.21cm" fo:text-indent="-0.46cm" style:auto-text-indent="false">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties fo:font-size="85%" fo:font-style="italic" fo:font-weight="bold" style:font-size-asian="85%" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-size-complex="85%" style:font-style-complex="italic" style:font-weight-complex="bold"/>
@@ -281,7 +283,7 @@
    </style:paragraph-properties>
   </style:style>
   <style:style style:name="Heading_20_5" style:display-name="Heading 5" style:family="paragraph" style:parent-style-name="Heading" style:next-style-name="Text_20_body" style:default-outline-level="5" style:class="text">
-   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0.319cm" fo:margin-bottom="0.21cm" fo:text-indent="-0.259cm" style:auto-text-indent="false">
+   <style:paragraph-properties fo:margin="100%" fo:margin-left="0.76cm" fo:margin-right="0cm" fo:margin-top="0.101cm" fo:margin-bottom="0.21cm" fo:text-indent="-0.259cm" style:auto-text-indent="false">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties fo:font-size="85%" fo:font-weight="bold" style:font-size-asian="85%" style:font-weight-asian="bold" style:font-size-complex="85%" style:font-weight-complex="bold"/>
@@ -384,65 +386,75 @@
     </style:list-level-properties>
    </text:outline-level-style>
   </text:outline-style>
-  <text:list-style style:name="Numerazione_20_rischi" style:display-name="Numerazione rischi">
-   <text:list-level-style-number text:level="1" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="2" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="3" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="4" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="5" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="6" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="7" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="8" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="9" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="10" text:style-name="Strong_20_Emphasis" style:num-prefix="Rischio " style:num-suffix=":" style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.799cm" fo:text-indent="-0.501cm" fo:margin-left="1cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-  </text:list-style>
   <text:notes-configuration text:note-class="footnote" style:num-format="1" text:start-value="0" text:footnotes-position="page" text:start-numbering-at="document"/>
   <text:notes-configuration text:note-class="endnote" style:num-format="i" text:start-value="0"/>
   <text:linenumbering-configuration text:number-lines="false" text:offset="0.499cm" style:num-format="1" text:number-position="left" text:increment="5"/>
  </office:styles>
  <office:automatic-styles>
-  <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:line-height="150%"/>
+  <style:style style:name="Tabella1" style:family="table">
+   <style:table-properties style:width="17cm" fo:margin-top="0cm" fo:margin-bottom="0.21cm" table:align="margins" style:may-break-between-rows="false"/>
+  </style:style>
+  <style:style style:name="Tabella1.A" style:family="table-column">
+   <style:table-column-properties style:column-width="3.401cm" style:rel-column-width="13107*"/>
+  </style:style>
+  <style:style style:name="Tabella1.A1" style:family="table-cell">
+   <style:table-cell-properties fo:background-color="#e6e6ff" fo:padding="0.097cm" fo:border-left="none" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
+  <style:style style:name="Tabella1.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="none"/>
+  </style:style>
+  <style:style style:name="Tabella1.B2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="none"/>
+  </style:style>
+  <style:style style:name="Tabella1.3" style:family="table-row">
+   <style:table-row-properties style:min-row-height="0.314cm"/>
+  </style:style>
+  <style:style style:name="Tabella1.A3" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="none"/>
+  </style:style>
+  <style:style style:name="Tabella1.A4" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.B4" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.C4" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.D4" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.E4" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.A5" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.B5" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.C5" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.D5" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.E5" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella2" style:family="table">
+   <style:table-properties style:width="17cm" table:align="margins"/>
+  </style:style>
+  <style:style style:name="Tabella2.A" style:family="table-column">
+   <style:table-column-properties style:column-width="17cm" style:rel-column-width="65535*"/>
+  </style:style>
+  <style:style style:name="Tabella2.1" style:family="table-row">
+   <style:table-row-properties fo:keep-together="always"/>
+  </style:style>
+  <style:style style:name="Tabella2.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="none"/>
   </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
@@ -463,10 +475,152 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:h text:style-name="Heading_20_2" text:outline-level="2">Sicurezza</text:h>
-   <text:p text:style-name="Text_20_body">Per garantire un buon standard di sicurezza il software “At-silo” si avvale di diverse protezioni.</text:p>
-   <text:p text:style-name="Text_20_body">Il primo sistema di protezione dati è l’autenticazione. Gli User-ID e password devono essere fornite dall’amministratore per i dipendenti, mentre per i genitori è il sistema che auto genererà il nome utente e la password. Il nome utente resterà uguale mentre per la password se il genitore vuole cambiarla potrà farlo.</text:p>
-   <text:p text:style-name="Text_20_body">Il sistema provvederà a creare gli account necessari ed a dare loro i corretti privilegi. E&apos; quindi impossibile per qualsiasi utente, che sia genitore o personale, manipolare dati che non rientrano nei loro privilegi.</text:p>
+   <table:table table:name="Tabella1" table:style-name="Tabella1">
+    <table:table-column table:style-name="Tabella1.A" table:number-columns-repeated="5"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.A1" table:number-columns-spanned="5" office:value-type="string">
+      <text:h text:style-name="Heading_20_4" text:outline-level="4">Orario utente</text:h>
+     </table:table-cell>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Descrizione:</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.B2" table:number-columns-spanned="4" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Tabella cui sono memorizzate le informazioni riguardanti gli intervalli del servizi</text:p>
+     </table:table-cell>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella1.3">
+     <table:table-cell table:style-name="Tabella1.A3" table:number-columns-spanned="5" office:value-type="string">
+      <text:p text:style-name="Spacer"/>
+     </table:table-cell>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+     <table:covered-table-cell/>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D4" office:value-type="string">
+      <text:p text:style-name="Table_20_Heading">NOME</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D4" office:value-type="string">
+      <text:p text:style-name="Table_20_Heading">TIPO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D4" office:value-type="string">
+      <text:p text:style-name="Table_20_Heading">NULL</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D4" office:value-type="string">
+      <text:p text:style-name="Table_20_Heading">KEY</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E4" office:value-type="string">
+      <text:p text:style-name="Table_20_Heading">DEFAULT</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">ID</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">integer</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">SÌ</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Primary</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Data inizio</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Date</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">SÌ</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Data fine</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Date</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">SÌ</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Descrizione</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(30)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">SÌ</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:h text:style-name="Heading_20_5" text:outline-level="5">Descrizione degli attributi</text:h>
+   <table:table table:name="Tabella2" table:style-name="Tabella2">
+    <table:table-column table:style-name="Tabella2.A"/>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">ID</text:p>
+      <text:p text:style-name="Definizione_20_Valore">numero SERVIZIO.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Data inizio</text:p>
+      <text:p text:style-name="Definizione_20_Valore">data inizio SERVIZIO.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Data fine</text:p>
+      <text:p text:style-name="Definizione_20_Valore">data di fine SERVIZIO.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Descrizione</text:p>
+      <text:p text:style-name="Definizione_20_Valore">descrizione SERVIZIO.</text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="Text_20_body"/>
   </office:text>
  </office:body>
 </office:document>
