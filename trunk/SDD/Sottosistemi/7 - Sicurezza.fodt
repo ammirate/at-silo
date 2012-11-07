@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-05T15:05:21</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-06T21:07:42.30</dc:date><meta:editing-duration>PT47M11S</meta:editing-duration><meta:editing-cycles>10</meta:editing-cycles><meta:document-statistic meta:table-count="7" meta:image-count="0" meta:object-count="0" meta:page-count="7" meta:paragraph-count="157" meta:word-count="376" meta:character-count="4473" meta:non-whitespace-character-count="4253"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-05T15:05:21</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-07T14:32:55.14</dc:date><meta:editing-duration>PT47M11S</meta:editing-duration><meta:editing-cycles>11</meta:editing-cycles><meta:document-statistic meta:table-count="12" meta:image-count="0" meta:object-count="0" meta:page-count="12" meta:paragraph-count="228" meta:word-count="469" meta:character-count="5745" meta:non-whitespace-character-count="5503"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">88900</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">299085</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">33339</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">14422</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">34980</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">14183</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">14434</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">99228</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">13845</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">245461</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">88900</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">33338</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">103320</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">299085</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">34978</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">313267</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1004364</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1182101</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -607,6 +607,126 @@
   <style:style style:name="Tabella7.B2" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
+  <style:style style:name="Tabella8" style:family="table">
+   <style:table-properties style:width="17.013cm" fo:margin-left="0cm" table:align="left"/>
+  </style:style>
+  <style:style style:name="Tabella8.A" style:family="table-column">
+   <style:table-column-properties style:column-width="4.759cm"/>
+  </style:style>
+  <style:style style:name="Tabella8.B" style:family="table-column">
+   <style:table-column-properties style:column-width="5.851cm"/>
+  </style:style>
+  <style:style style:name="Tabella8.C" style:family="table-column">
+   <style:table-column-properties style:column-width="6.403cm"/>
+  </style:style>
+  <style:style style:name="Tabella8.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella8.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella8.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella8.C2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella9" style:family="table">
+   <style:table-properties style:width="17.013cm" fo:margin-left="0cm" table:align="left"/>
+  </style:style>
+  <style:style style:name="Tabella9.A" style:family="table-column">
+   <style:table-column-properties style:column-width="4.759cm"/>
+  </style:style>
+  <style:style style:name="Tabella9.B" style:family="table-column">
+   <style:table-column-properties style:column-width="5.851cm"/>
+  </style:style>
+  <style:style style:name="Tabella9.C" style:family="table-column">
+   <style:table-column-properties style:column-width="6.403cm"/>
+  </style:style>
+  <style:style style:name="Tabella9.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella9.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella9.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella9.C2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella10" style:family="table">
+   <style:table-properties style:width="17.013cm" fo:margin-left="0cm" table:align="left"/>
+  </style:style>
+  <style:style style:name="Tabella10.A" style:family="table-column">
+   <style:table-column-properties style:column-width="4.759cm"/>
+  </style:style>
+  <style:style style:name="Tabella10.B" style:family="table-column">
+   <style:table-column-properties style:column-width="5.851cm"/>
+  </style:style>
+  <style:style style:name="Tabella10.C" style:family="table-column">
+   <style:table-column-properties style:column-width="6.403cm"/>
+  </style:style>
+  <style:style style:name="Tabella10.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella10.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella10.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella10.C2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella11" style:family="table">
+   <style:table-properties style:width="17.013cm" fo:margin-left="0cm" table:align="left"/>
+  </style:style>
+  <style:style style:name="Tabella11.A" style:family="table-column">
+   <style:table-column-properties style:column-width="4.759cm"/>
+  </style:style>
+  <style:style style:name="Tabella11.B" style:family="table-column">
+   <style:table-column-properties style:column-width="5.851cm"/>
+  </style:style>
+  <style:style style:name="Tabella11.C" style:family="table-column">
+   <style:table-column-properties style:column-width="6.403cm"/>
+  </style:style>
+  <style:style style:name="Tabella11.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella11.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella11.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella11.C2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella12" style:family="table">
+   <style:table-properties style:width="17.013cm" fo:margin-left="0cm" table:align="left"/>
+  </style:style>
+  <style:style style:name="Tabella12.A" style:family="table-column">
+   <style:table-column-properties style:column-width="4.759cm"/>
+  </style:style>
+  <style:style style:name="Tabella12.B" style:family="table-column">
+   <style:table-column-properties style:column-width="5.851cm"/>
+  </style:style>
+  <style:style style:name="Tabella12.C" style:family="table-column">
+   <style:table-column-properties style:column-width="6.403cm"/>
+  </style:style>
+  <style:style style:name="Tabella12.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella12.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella12.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella12.C2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:paragraph-rsid="000ad76d"/>
   </style:style>
@@ -628,231 +748,304 @@
    <style:text-properties officeooo:paragraph-rsid="000d6a0f"/>
   </style:style>
   <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f"/>
+  </style:style>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:paragraph-rsid="000b5392"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-  </style:style>
   <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:line-height="150%" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
   </style:style>
   <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:line-height="150%" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties officeooo:paragraph-rsid="000c2667"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:line-height="150%"/>
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:line-height="150%" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties officeooo:paragraph-rsid="000c2667"/>
   </style:style>
   <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:line-height="150%"/>
+  </style:style>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:line-height="150%"/>
    <style:text-properties officeooo:paragraph-rsid="000c2667"/>
   </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:paragraph-properties fo:margin-top="0.64cm" fo:margin-bottom="0.21cm" style:contextual-spacing="false" fo:line-height="150%"/>
    <style:text-properties fo:font-size="16pt" style:font-size-asian="16pt" style:font-size-complex="16pt"/>
-  </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
   </style:style>
   <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:paragraph-rsid="000ad76d"/>
   </style:style>
   <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:paragraph-rsid="000b5392"/>
+   <style:text-properties officeooo:paragraph-rsid="000ad76d"/>
   </style:style>
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:paragraph-rsid="000c2667"/>
+   <style:text-properties officeooo:paragraph-rsid="000b5392"/>
   </style:style>
   <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:paragraph-rsid="000c5129"/>
+   <style:text-properties officeooo:paragraph-rsid="000c2667"/>
   </style:style>
   <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="00094c71" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:paragraph-rsid="000c5129"/>
   </style:style>
   <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="000b5392" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="00094c71" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="000c2667" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="000b5392" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="00094c71" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:paragraph-rsid="000c2667" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000b5392" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="00094c71" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000c5129" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000b5392" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000c6a6b" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000c5129" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000d6a0f" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000c6a6b" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="000d6a0f" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="000ad76d" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="000b5392" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="000ad76d" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="000c2667" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="000b5392" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c2667" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:paragraph-rsid="000c2667" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000c5129" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c2667" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000b5392" officeooo:paragraph-rsid="000b5392" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000c5129" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000b5392" officeooo:paragraph-rsid="000c5129" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000b5392" officeooo:paragraph-rsid="000b5392" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c5129" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000b5392" officeooo:paragraph-rsid="000c5129" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c6a6b" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c5129" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c5129" officeooo:paragraph-rsid="000d6a0f" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c6a6b" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000ad76d"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c5129" officeooo:paragraph-rsid="000d6a0f" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000b5392"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="000c6a6b" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000c5129"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000c6a6b"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000ad76d"/>
   </style:style>
   <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000d6a0f"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000b5392"/>
   </style:style>
   <style:style style:name="P43" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c2667"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000c5129"/>
   </style:style>
   <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c5129"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000c6a6b"/>
   </style:style>
   <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c6a6b"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="000d6a0f"/>
   </style:style>
   <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000b5392" officeooo:paragraph-rsid="000b5392"/>
+   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c2667"/>
   </style:style>
   <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000b5392" officeooo:paragraph-rsid="000c2667"/>
+   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c5129"/>
   </style:style>
   <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000b5392" officeooo:paragraph-rsid="000c5129"/>
+   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c6a6b"/>
   </style:style>
   <style:style style:name="P49" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c5129"/>
+   <style:text-properties officeooo:rsid="000b5392" officeooo:paragraph-rsid="000b5392"/>
   </style:style>
   <style:style style:name="P50" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c6a6b"/>
+   <style:text-properties officeooo:rsid="000b5392" officeooo:paragraph-rsid="000c2667"/>
   </style:style>
   <style:style style:name="P51" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000b5392" officeooo:paragraph-rsid="000c5129"/>
+  </style:style>
+  <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c5129"/>
+  </style:style>
+  <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="000c6a6b"/>
+  </style:style>
+  <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
    <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="000d6a0f"/>
   </style:style>
-  <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties officeooo:paragraph-rsid="000c5129"/>
-  </style:style>
-  <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties officeooo:paragraph-rsid="000c6a6b"/>
-  </style:style>
-  <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties officeooo:paragraph-rsid="000d6a0f"/>
-  </style:style>
-  <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f"/>
-  </style:style>
-  <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:break-before="page"/>
-   <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f"/>
-  </style:style>
-  <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Heading_20_2">
-   <style:paragraph-properties fo:margin-top="0.64cm" fo:margin-bottom="0.21cm" style:contextual-spacing="false" fo:line-height="150%"/>
-   <style:text-properties fo:font-size="16pt" style:font-size-asian="16pt" style:font-size-complex="16pt"/>
-  </style:style>
-  <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="000c6a6b" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
    <style:text-properties officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="000c6a6b"/>
   </style:style>
-  <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
    <style:text-properties officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="000d6a0f"/>
   </style:style>
-  <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
    <style:text-properties officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="000f534c"/>
   </style:style>
-  <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="000c6a6b"/>
-  </style:style>
-  <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
    <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f"/>
+  </style:style>
+  <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:break-before="page"/>
+   <style:text-properties officeooo:paragraph-rsid="000c5129"/>
+  </style:style>
+  <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:break-before="page"/>
+   <style:text-properties officeooo:paragraph-rsid="000c6a6b"/>
+  </style:style>
+  <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:break-before="page"/>
+   <style:text-properties officeooo:paragraph-rsid="000d6a0f"/>
+  </style:style>
+  <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:break-before="page"/>
+   <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="000d6a0f"/>
+  </style:style>
+  <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="000d6a0f"/>
+  </style:style>
+  <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="00120995"/>
+  </style:style>
+  <style:style style:name="P66" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:break-before="page"/>
+   <style:text-properties officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P67" style:family="paragraph" style:parent-style-name="Heading_20_2">
+   <style:paragraph-properties fo:margin-top="0.64cm" fo:margin-bottom="0.21cm" style:contextual-spacing="false" fo:line-height="150%"/>
+   <style:text-properties fo:font-size="16pt" style:font-size-asian="16pt" style:font-size-complex="16pt"/>
+  </style:style>
+  <style:style style:name="P68" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000f534c" officeooo:paragraph-rsid="000f534c"/>
+  </style:style>
+  <style:style style:name="P69" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="000d6a0f"/>
+  </style:style>
+  <style:style style:name="P70" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P71" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="00120995"/>
+  </style:style>
+  <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="001100ce" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="14pt" fo:font-weight="bold" officeooo:rsid="00094c71" officeooo:paragraph-rsid="00120995" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="001100ce" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000c6a6b" officeooo:paragraph-rsid="00120995" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000d6a0f" officeooo:paragraph-rsid="00120995"/>
+  </style:style>
+  <style:style style:name="P78" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P79" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000ad76d" officeooo:paragraph-rsid="00120995"/>
+  </style:style>
+  <style:style style:name="P80" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P81" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c2667" officeooo:paragraph-rsid="00120995"/>
+  </style:style>
+  <style:style style:name="P82" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="P83" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:rsid="000c5129" officeooo:paragraph-rsid="00120995"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties fo:font-size="12pt" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
@@ -884,6 +1077,12 @@
   <style:style style:name="T10" style:family="text">
    <style:text-properties officeooo:rsid="000f534c"/>
   </style:style>
+  <style:style style:name="T11" style:family="text">
+   <style:text-properties officeooo:rsid="001100ce"/>
+  </style:style>
+  <style:style style:name="T12" style:family="text">
+   <style:text-properties officeooo:rsid="00120995"/>
+  </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -903,87 +1102,87 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:h text:style-name="P13" text:outline-level="2">Sicurezza e controllo degli accessi</text:h>
-   <text:p text:style-name="P11"><text:span text:style-name="T1">Il sistema “At-silo” prevede un&apos;autenticazione che sia stata confermata attraverso la mail ricevuta quando si è fatta la registrazione al sistema. L&apos;autenticazione avviene attraverso l&apos;inserimento, </text:span><text:span text:style-name="T2">da parte dell&apos;utente</text:span><text:span text:style-name="T1"> all&apos;interno d</text:span><text:span text:style-name="T2">i una </text:span><text:span text:style-name="T1">apposita interfaccia di login, di un username e di una password. La verifica della correttezza delle credenziali inserite è verificata attraverso una query al </text:span><text:span text:style-name="T2">database</text:span><text:span text:style-name="T1"> contenente la lista degli utenti registrati al sistema, dei loro username e </text:span><text:span text:style-name="T2">della loro</text:span><text:span text:style-name="T1"> password finalizzata a garantire la sicurezza del sistema. La suddetta interfaccia di login è costituita da un campo di testo per l&apos;username, un campo di testo per la password e un bottone di login </text:span><text:span text:style-name="T2">[si fa </text:span><text:span text:style-name="T1">riferimento </text:span><text:span text:style-name="T2">allo</text:span><text:span text:style-name="T1"> use</text:span><text:span text:style-name="T2">-</text:span><text:span text:style-name="T1">case </text:span><text:span text:style-name="T2">del </text:span><text:span text:style-name="T1">login]. Ogni utente può appartenere solo ad uno dei gruppi elencati, ed a seconda del gruppo di appartenenza il sistema provvede a fornirgli gli strumenti adeguati, impedendo che possa eseguire operazioni non appartenenti al suo livello utente. Le politiche di accesso vengono riportate di seguito con lo scopo di rendere chiare le operazioni consentite ad ogni livello utente.</text:span> </text:p>
-   <text:p text:style-name="P11"/>
+   <text:h text:style-name="P14" text:outline-level="2">Sicurezza e controllo degli accessi</text:h>
+   <text:p text:style-name="P12"><text:span text:style-name="T1">Il sistema “At-silo” prevede un&apos;autenticazione che sia stata confermata attraverso la mail ricevuta quando si è fatta la registrazione al sistema. L&apos;autenticazione avviene attraverso l&apos;inserimento, </text:span><text:span text:style-name="T2">da parte dell&apos;utente</text:span><text:span text:style-name="T1"> all&apos;interno d</text:span><text:span text:style-name="T2">i una </text:span><text:span text:style-name="T1">apposita interfaccia di login, di un username e di una password. La verifica della correttezza delle credenziali inserite è verificata attraverso una query al </text:span><text:span text:style-name="T2">database</text:span><text:span text:style-name="T1"> contenente la lista degli utenti registrati al sistema, dei loro username e </text:span><text:span text:style-name="T2">della loro</text:span><text:span text:style-name="T1"> password finalizzata a garantire la sicurezza del sistema. La suddetta interfaccia di login è costituita da un campo di testo per l&apos;username, un campo di testo per la password e un bottone di login </text:span><text:span text:style-name="T2">[si fa </text:span><text:span text:style-name="T1">riferimento </text:span><text:span text:style-name="T2">allo</text:span><text:span text:style-name="T1"> use</text:span><text:span text:style-name="T2">-</text:span><text:span text:style-name="T1">case </text:span><text:span text:style-name="T2">del </text:span><text:span text:style-name="T1">login]. Ogni utente può appartenere solo ad uno dei gruppi elencati, ed a seconda del gruppo di appartenenza il sistema provvede a fornirgli gli strumenti adeguati, impedendo che possa eseguire operazioni non appartenenti al suo livello utente. Le politiche di accesso vengono riportate di seguito con lo scopo di rendere chiare le operazioni consentite ad ogni livello utente.</text:span> </text:p>
+   <text:p text:style-name="P12"/>
    <table:table table:name="Tabella1" table:style-name="Tabella1">
     <table:table-column table:style-name="Tabella1.A"/>
     <table:table-column table:style-name="Tabella1.B"/>
     <table:table-column table:style-name="Tabella1.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P22">Attore / Entità</text:p>
+      <text:p text:style-name="P23">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P27"><text:span text:style-name="T3">Is</text:span><text:span text:style-name="T4">crizione</text:span></text:p>
+      <text:p text:style-name="P28"><text:span text:style-name="T3">Is</text:span><text:span text:style-name="T4">crizione</text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C1" office:value-type="string">
-      <text:p text:style-name="P31">Bando</text:p>
+      <text:p text:style-name="P32">Bando</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P38">Genitore</text:p>
+      <text:p text:style-name="P41">Genitore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P14"><text:span text:style-name="T5">C</text:span><text:span text:style-name="T4">reaAccount()</text:span></text:p>
-      <text:p text:style-name="P43">CancellaAccount()</text:p>
-      <text:p text:style-name="P43">ModicaAccount()</text:p>
+      <text:p text:style-name="P15"><text:span text:style-name="T5">C</text:span><text:span text:style-name="T4">reaAccount()</text:span></text:p>
+      <text:p text:style-name="P46">CancellaAccount()</text:p>
+      <text:p text:style-name="P46">ModicaAccount()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P43">InviaBando()</text:p>
-      <text:p text:style-name="P43">RinunciaCandidatura()</text:p>
-      <text:p text:style-name="P43"/>
+      <text:p text:style-name="P46">InviaBando()</text:p>
+      <text:p text:style-name="P46">RinunciaCandidatura()</text:p>
+      <text:p text:style-name="P46"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P38">Personale amministrativo</text:p>
+      <text:p text:style-name="P41">Personale amministrativo</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P14"/>
+      <text:p text:style-name="P15"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P43">InserisciBando()</text:p>
-      <text:p text:style-name="P43">InserisciSpecificheGraduatoria()</text:p>
-      <text:p text:style-name="P43">ModificaSpecificheGraduatoria()</text:p>
+      <text:p text:style-name="P46">InserisciBando()</text:p>
+      <text:p text:style-name="P46">InserisciSpecificheGraduatoria()</text:p>
+      <text:p text:style-name="P46">ModificaSpecificheGraduatoria()</text:p>
       <text:p text:style-name="P3">PubblicaGraduatoria()</text:p>
-      <text:p text:style-name="P43">VisualizzaGraduatoria()</text:p>
-      <text:p text:style-name="P43">VisualizzaUtentiPerIdoneità()</text:p>
+      <text:p text:style-name="P46">VisualizzaGraduatoria()</text:p>
+      <text:p text:style-name="P46">VisualizzaUtentiPerIdoneità()</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P38">Personale formazione</text:p>
+      <text:p text:style-name="P41">Personale formazione</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P14"/>
+      <text:p text:style-name="P15"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P15"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
+      <text:p text:style-name="P16"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P38">Direttore</text:p>
+      <text:p text:style-name="P41">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P14"/>
+      <text:p text:style-name="P15"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P43">InserisciBando()</text:p>
-      <text:p text:style-name="P43">InserisciSpecificheGraduatoria()</text:p>
-      <text:p text:style-name="P43">ModificaSpecificheGraduatoria()</text:p>
+      <text:p text:style-name="P46">InserisciBando()</text:p>
+      <text:p text:style-name="P46">InserisciSpecificheGraduatoria()</text:p>
+      <text:p text:style-name="P46">ModificaSpecificheGraduatoria()</text:p>
       <text:p text:style-name="P3">PubblicaGraduatoria()</text:p>
-      <text:p text:style-name="P43">VisualizzaGraduatoria()</text:p>
-      <text:p text:style-name="P43">VisualizzaUtentiPerIdoneità()</text:p>
+      <text:p text:style-name="P46">VisualizzaGraduatoria()</text:p>
+      <text:p text:style-name="P46">VisualizzaUtentiPerIdoneità()</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P9"/>
-   <text:p text:style-name="P12"/>
    <text:p text:style-name="P10"/>
-   <text:p text:style-name="P10"/>
+   <text:p text:style-name="P13"/>
+   <text:p text:style-name="P11"/>
+   <text:p text:style-name="P11"/>
    <text:p text:style-name="P1"/>
    <table:table table:name="Tabella2" table:style-name="Tabella2">
     <table:table-column table:style-name="Tabella2.A"/>
@@ -992,101 +1191,101 @@
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P23">Attore / Entità</text:p>
+      <text:p text:style-name="P24">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P35">Bambino</text:p>
+      <text:p text:style-name="P36">Bambino</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.C1" office:value-type="string">
-      <text:p text:style-name="P33">Genitore</text:p>
+      <text:p text:style-name="P34">Genitore</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P39">Genitore</text:p>
+      <text:p text:style-name="P42">Genitore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P17"><text:span text:style-name="T5">V</text:span><text:span text:style-name="T4">isualizzaStatoPropriaIscrizione()</text:span></text:p>
-      <text:p text:style-name="P43">CancellaIscrizione()</text:p>
-      <text:p text:style-name="P43">RitiroBambino()</text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">V</text:span><text:span text:style-name="T4">isualizzaStatoPropriaIscrizione()</text:span></text:p>
+      <text:p text:style-name="P46">CancellaIscrizione()</text:p>
+      <text:p text:style-name="P46">RitiroBambino()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
-      <text:p text:style-name="P16"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaPropri</text:span><text:span text:style-name="T5">Dati</text:span><text:span text:style-name="T4">()</text:span></text:p>
+      <text:p text:style-name="P17"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaPropri</text:span><text:span text:style-name="T5">Dati</text:span><text:span text:style-name="T4">()</text:span></text:p>
+      <text:p text:style-name="P49">VisualizzaDatiFiglio()</text:p>
+      <text:p text:style-name="P49">VisualizzaDatiFigli()</text:p>
+      <text:p text:style-name="P49">ModifcaPropriDati()</text:p>
+      <text:p text:style-name="P17"><text:span text:style-name="T5">Modific</text:span><text:span text:style-name="T6">a</text:span><text:span text:style-name="T5">DatiFiglio()</text:span></text:p>
+      <text:p text:style-name="P46">RicercaAltroGenitore()</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P42">Personale amministrativo</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
+      <text:p text:style-name="P43">AccettazioneBambino()</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizza</text:span><text:span text:style-name="T5">Dati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T4">()</text:span></text:p>
+      <text:p text:style-name="P50">VisualizzaDatiFigli()</text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">ModifcaDati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T5">()</text:span></text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Modific</text:span><text:span text:style-name="T6">a</text:span><text:span text:style-name="T5">DatiFiglio()</text:span></text:p>
+      <text:p text:style-name="P50">VisualizzaStatoPagamenti()</text:p>
+      <text:p text:style-name="P46">RicercaGenitore()</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P42">Personale formazione</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
+      <text:p text:style-name="P46">VisualizzaDatiGenitore()</text:p>
       <text:p text:style-name="P46">VisualizzaDatiFiglio()</text:p>
-      <text:p text:style-name="P46">VisualizzaDatiFigli()</text:p>
-      <text:p text:style-name="P46">ModifcaPropriDati()</text:p>
-      <text:p text:style-name="P16"><text:span text:style-name="T5">Modific</text:span><text:span text:style-name="T6">a</text:span><text:span text:style-name="T5">DatiFiglio()</text:span></text:p>
-      <text:p text:style-name="P43">RicercaAltroGenitore()</text:p>
+      <text:p text:style-name="P46">RicercaGenitore()</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P39">Personale amministrativo</text:p>
+      <text:p text:style-name="P42">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
-      <text:p text:style-name="P40">AccettazioneBambino()</text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
+      <text:p text:style-name="P43">AccettazioneBambino()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizza</text:span><text:span text:style-name="T5">Dati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T4">()</text:span></text:p>
-      <text:p text:style-name="P47">VisualizzaDatiFigli()</text:p>
-      <text:p text:style-name="P17"><text:span text:style-name="T5">ModifcaDati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T5">()</text:span></text:p>
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Modific</text:span><text:span text:style-name="T6">a</text:span><text:span text:style-name="T5">DatiFiglio()</text:span></text:p>
-      <text:p text:style-name="P47">VisualizzaStatoPagamenti()</text:p>
-      <text:p text:style-name="P43">RicercaGenitore()</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P39">Personale formazione</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
-      <text:p text:style-name="P43">VisualizzaDatiGenitore()</text:p>
-      <text:p text:style-name="P43">VisualizzaDatiFiglio()</text:p>
-      <text:p text:style-name="P43">RicercaGenitore()</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P39">Direttore</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizzaIscritti()</text:span></text:p>
-      <text:p text:style-name="P40">AccettazioneBambino()</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizza</text:span><text:span text:style-name="T5">Dati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T4">()</text:span></text:p>
-      <text:p text:style-name="P47">VisualizzaDatiFigli()</text:p>
-      <text:p text:style-name="P17"><text:span text:style-name="T5">ModifcaDati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T5">()</text:span></text:p>
-      <text:p text:style-name="P17"><text:span text:style-name="T5">Modific</text:span><text:span text:style-name="T6">a</text:span><text:span text:style-name="T5">DatiFiglio()</text:span></text:p>
-      <text:p text:style-name="P47">VisualizzaStatoPagamenti()</text:p>
-      <text:p text:style-name="P43">RicercaGenitore()</text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Vi</text:span><text:span text:style-name="T4">sualizza</text:span><text:span text:style-name="T5">Dati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T4">()</text:span></text:p>
+      <text:p text:style-name="P50">VisualizzaDatiFigli()</text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">ModifcaDati</text:span><text:span text:style-name="T6">Genitore</text:span><text:span text:style-name="T5">()</text:span></text:p>
+      <text:p text:style-name="P18"><text:span text:style-name="T5">Modific</text:span><text:span text:style-name="T6">a</text:span><text:span text:style-name="T5">DatiFiglio()</text:span></text:p>
+      <text:p text:style-name="P50">VisualizzaStatoPagamenti()</text:p>
+      <text:p text:style-name="P46">RicercaGenitore()</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P7"/>
    <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
-   <text:p text:style-name="P8"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P9"/>
    <table:table table:name="Tabella3" table:style-name="Tabella3">
     <table:table-column table:style-name="Tabella3.A"/>
     <table:table-column table:style-name="Tabella3.B"/>
@@ -1094,346 +1293,729 @@
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A1" office:value-type="string">
-      <text:p text:style-name="P24">Attore / Entità</text:p>
+      <text:p text:style-name="P25">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A1" office:value-type="string">
-      <text:p text:style-name="P35">Personale formazione</text:p>
+      <text:p text:style-name="P36">Personale formazione</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.C1" office:value-type="string">
-      <text:p text:style-name="P35">Personale amministrativo</text:p>
+      <text:p text:style-name="P36">Personale amministrativo</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P40">Genitore</text:p>
+      <text:p text:style-name="P43">Genitore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P44">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
-      <text:p text:style-name="P49">VisualizzaSchedaPersFormazione()</text:p>
+      <text:p text:style-name="P47">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
+      <text:p text:style-name="P52">VisualizzaSchedaPersFormazione()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.C2" office:value-type="string">
-      <text:p text:style-name="P49"/>
-      <text:p text:style-name="P44"/>
+      <text:p text:style-name="P52"/>
+      <text:p text:style-name="P47"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P40">Personale amministrativo</text:p>
+      <text:p text:style-name="P43">Personale amministrativo</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P44">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
-      <text:p text:style-name="P49">VisualizzaSchedaPersFormazione()</text:p>
-      <text:p text:style-name="P49">AggiungiPersonaleFormazione()</text:p>
-      <text:p text:style-name="P49">LicenziaPersonaleFormazione()</text:p>
-      <text:p text:style-name="P49">ModificaDatiPersonaleFormazione()</text:p>
+      <text:p text:style-name="P47">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
+      <text:p text:style-name="P52">VisualizzaSchedaPersFormazione()</text:p>
+      <text:p text:style-name="P52">AggiungiPersonaleFormazione()</text:p>
+      <text:p text:style-name="P52">LicenziaPersonaleFormazione()</text:p>
+      <text:p text:style-name="P52">ModificaDatiPersonaleFormazione()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.C2" office:value-type="string">
-      <text:p text:style-name="P18"><text:span text:style-name="T6">Ricerca</text:span><text:span text:style-name="T7">PersAmministrativo</text:span><text:span text:style-name="T6">()</text:span></text:p>
-      <text:p text:style-name="P49">VisualizzaPersAmministrativo()</text:p>
-      <text:p text:style-name="P49">ModificaPersAmministrativo()</text:p>
-      <text:p text:style-name="P49"/>
+      <text:p text:style-name="P19"><text:span text:style-name="T6">Ricerca</text:span><text:span text:style-name="T7">PersAmministrativo</text:span><text:span text:style-name="T6">()</text:span></text:p>
+      <text:p text:style-name="P52">VisualizzaPersAmministrativo()</text:p>
+      <text:p text:style-name="P52">ModificaPersAmministrativo()</text:p>
+      <text:p text:style-name="P52"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P40">Personale formazione</text:p>
+      <text:p text:style-name="P43">Personale formazione</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P44">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
-      <text:p text:style-name="P49">VisualizzaSchedaPersFormazione()</text:p>
-      <text:p text:style-name="P49">ModificaDatiPersonaleFormazione()</text:p>
+      <text:p text:style-name="P47">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
+      <text:p text:style-name="P52">VisualizzaSchedaPersFormazione()</text:p>
+      <text:p text:style-name="P52">ModificaDatiPersonaleFormazione()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.C2" office:value-type="string">
-      <text:p text:style-name="P44"/>
+      <text:p text:style-name="P47"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P40">Direttore</text:p>
+      <text:p text:style-name="P43">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P44">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
-      <text:p text:style-name="P49">VisualizzaSchedaPersFormazione()</text:p>
-      <text:p text:style-name="P49">AggiungiPersonaleFormazione()</text:p>
-      <text:p text:style-name="P49">LicenziaPersonaleFormazione()</text:p>
-      <text:p text:style-name="P49">ModificaDatiPersonaleFormazione()</text:p>
+      <text:p text:style-name="P47">Ri<text:span text:style-name="T7">cercaPersonaleFormazione</text:span>()</text:p>
+      <text:p text:style-name="P52">VisualizzaSchedaPersFormazione()</text:p>
+      <text:p text:style-name="P52">AggiungiPersonaleFormazione()</text:p>
+      <text:p text:style-name="P52">LicenziaPersonaleFormazione()</text:p>
+      <text:p text:style-name="P52">ModificaDatiPersonaleFormazione()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.C2" office:value-type="string">
-      <text:p text:style-name="P18"><text:span text:style-name="T6">Ricerca</text:span><text:span text:style-name="T7">PersAmministrativo</text:span><text:span text:style-name="T6">()</text:span></text:p>
-      <text:p text:style-name="P49">VisualizzaPersAmministrativo()</text:p>
-      <text:p text:style-name="P49">ModificaPersAmministrativo()</text:p>
-      <text:p text:style-name="P49">AggiungiPersAmministrativo()</text:p>
-      <text:p text:style-name="P49">LicenziaPersAmministrativo()</text:p>
+      <text:p text:style-name="P19"><text:span text:style-name="T6">Ricerca</text:span><text:span text:style-name="T7">PersAmministrativo</text:span><text:span text:style-name="T6">()</text:span></text:p>
+      <text:p text:style-name="P52">VisualizzaPersAmministrativo()</text:p>
+      <text:p text:style-name="P52">ModificaPersAmministrativo()</text:p>
+      <text:p text:style-name="P52">AggiungiPersAmministrativo()</text:p>
+      <text:p text:style-name="P52">LicenziaPersAmministrativo()</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="P4"/>
-   <text:p text:style-name="P52"/>
+   <text:p text:style-name="P59"/>
    <table:table table:name="Tabella4" table:style-name="Tabella4">
     <table:table-column table:style-name="Tabella4.A"/>
     <table:table-column table:style-name="Tabella4.B"/>
     <table:table-column table:style-name="Tabella4.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A1" office:value-type="string">
-      <text:p text:style-name="P25">Attore / Entità</text:p>
+      <text:p text:style-name="P26">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.A1" office:value-type="string">
-      <text:p text:style-name="P58">Registro</text:p>
+      <text:p text:style-name="P39">Registro</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.C1" office:value-type="string">
-      <text:p text:style-name="P58">ProgrammaEducativoSettimanale</text:p>
+      <text:p text:style-name="P39">ProgrammaEducativoSettimanale</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P41">Genitore</text:p>
+      <text:p text:style-name="P44">Genitore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaStoricoRegistro()</text:p>
+      <text:p text:style-name="P55">VisualizzaStoricoRegistro()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.C2" office:value-type="string">
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P45"/>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P48"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P60">Psico-pedagogo</text:p>
+      <text:p text:style-name="P55">Psico-pedagogo</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaStoricoRegistro()</text:p>
+      <text:p text:style-name="P55">VisualizzaStoricoRegistro()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.C2" office:value-type="string">
-      <text:p text:style-name="P60">InserisciProgrammaSettimanale()</text:p>
-      <text:p text:style-name="P60">ModificaProgrammaSettimanale()</text:p>
-      <text:p text:style-name="P60">VisualizzaProgrammaSettimanale()</text:p>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P50"/>
+      <text:p text:style-name="P55">InserisciProgrammaSettimanale()</text:p>
+      <text:p text:style-name="P55">ModificaProgrammaSettimanale()</text:p>
+      <text:p text:style-name="P55">VisualizzaProgrammaSettimanale()</text:p>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P53"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P60">Educatore Didattico</text:p>
+      <text:p text:style-name="P55">Educatore Didattico</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaStoricoRegistro()</text:p>
-      <text:p text:style-name="P62"><text:span text:style-name="T10">Inserisci()</text:span></text:p>
-      <text:p text:style-name="P62"><text:span text:style-name="T10">Modifica()</text:span></text:p>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
+      <text:p text:style-name="P55">VisualizzaStoricoRegistro()</text:p>
+      <text:p text:style-name="P68">Inserisci()</text:p>
+      <text:p text:style-name="P68">Modifica()</text:p>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.C2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaProgrammaSettimanale()</text:p>
+      <text:p text:style-name="P55">VisualizzaProgrammaSettimanale()</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P41">Direttore</text:p>
+      <text:p text:style-name="P44">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.A2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaStoricoRegistro()</text:p>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
+      <text:p text:style-name="P55">VisualizzaStoricoRegistro()</text:p>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.C2" office:value-type="string">
-      <text:p text:style-name="P45"/>
+      <text:p text:style-name="P48"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="P5"/>
-   <text:p text:style-name="P53"/>
+   <text:p text:style-name="P60"/>
    <table:table table:name="Tabella5" table:style-name="Tabella5">
     <table:table-column table:style-name="Tabella5.A"/>
     <table:table-column table:style-name="Tabella5.B"/>
     <table:table-column table:style-name="Tabella5.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella5.A1" office:value-type="string">
-      <text:p text:style-name="P25">Attore / Entità</text:p>
+      <text:p text:style-name="P26">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.A1" office:value-type="string">
-      <text:p text:style-name="P58">Attività</text:p>
+      <text:p text:style-name="P39">Attività</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.C1" office:value-type="string">
-      <text:p text:style-name="P58">Questionario</text:p>
+      <text:p text:style-name="P39">Questionario</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P41">Genitore</text:p>
+      <text:p text:style-name="P44">Genitore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaAttivitàOdierna()</text:p>
+      <text:p text:style-name="P55">VisualizzaAttivitàOdierna()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.C2" office:value-type="string">
-      <text:p text:style-name="P60">CompilaQuestionario()</text:p>
-      <text:p text:style-name="P60">VisualizzaListaQuestionari()</text:p>
-      <text:p text:style-name="P60">RicercaQuestionario()</text:p>
-      <text:p text:style-name="P45"/>
+      <text:p text:style-name="P55">CompilaQuestionario()</text:p>
+      <text:p text:style-name="P55">VisualizzaListaQuestionari()</text:p>
+      <text:p text:style-name="P55">RicercaQuestionario()</text:p>
+      <text:p text:style-name="P48"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P64">EventPlanner</text:p>
+      <text:p text:style-name="P58">EventPlanner</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaAttivitàOdierna()</text:p>
-      <text:p text:style-name="P60">AggiungiAttività()</text:p>
-      <text:p text:style-name="P60">ModificaAttività()</text:p>
+      <text:p text:style-name="P55">VisualizzaAttivitàOdierna()</text:p>
+      <text:p text:style-name="P55">AggiungiAttività()</text:p>
+      <text:p text:style-name="P55">ModificaAttività()</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.C2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaListaQuestionari()</text:p>
-      <text:p text:style-name="P60">InserisciQuestionario()</text:p>
-      <text:p text:style-name="P60">ModificaQuestionario()</text:p>
-      <text:p text:style-name="P60">EliminaQuestionario()</text:p>
-      <text:p text:style-name="P60">VisualizzaDettagliQuestionario()</text:p>
-      <text:p text:style-name="P60">VisualizzaStatistiche()</text:p>
-      <text:p text:style-name="P60">RicercaQuestionario()</text:p>
-      <text:p text:style-name="P50"/>
+      <text:p text:style-name="P55">VisualizzaListaQuestionari()</text:p>
+      <text:p text:style-name="P55">InserisciQuestionario()</text:p>
+      <text:p text:style-name="P55">ModificaQuestionario()</text:p>
+      <text:p text:style-name="P55">EliminaQuestionario()</text:p>
+      <text:p text:style-name="P55">VisualizzaDettagliQuestionario()</text:p>
+      <text:p text:style-name="P55">VisualizzaStatistiche()</text:p>
+      <text:p text:style-name="P55">RicercaQuestionario()</text:p>
+      <text:p text:style-name="P53"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P61">Educatore Didattico</text:p>
+      <text:p text:style-name="P56">Educatore Didattico</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P60">InserisciAttivitàInRegistro()</text:p>
-      <text:p text:style-name="P60">ModificaAttivitàInRegistro()</text:p>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
+      <text:p text:style-name="P55">InserisciAttivitàInRegistro()</text:p>
+      <text:p text:style-name="P55">ModificaAttivitàInRegistro()</text:p>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.C2" office:value-type="string">
-      <text:p text:style-name="P60">VisualizzaProgrammaSettimanale()</text:p>
+      <text:p text:style-name="P55">VisualizzaProgrammaSettimanale()</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P41">Direttore</text:p>
+      <text:p text:style-name="P44">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.A2" office:value-type="string">
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.C2" office:value-type="string">
-      <text:p text:style-name="P45"/>
+      <text:p text:style-name="P48"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="P5"/>
-   <text:p text:style-name="P53"/>
+   <text:p text:style-name="P60"/>
    <table:table table:name="Tabella6" table:style-name="Tabella6">
     <table:table-column table:style-name="Tabella6.A"/>
     <table:table-column table:style-name="Tabella6.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella6.A1" office:value-type="string">
-      <text:p text:style-name="P25">Attore / Entità</text:p>
+      <text:p text:style-name="P26">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella6.B1" office:value-type="string">
-      <text:p text:style-name="P58">Evento</text:p>
+      <text:p text:style-name="P39">Evento</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella6.A2" office:value-type="string">
-      <text:p text:style-name="P41">Genitore</text:p>
+      <text:p text:style-name="P44">Genitore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella6.B2" office:value-type="string">
-      <text:p text:style-name="P64">VisualizzaEvento()</text:p>
-      <text:p text:style-name="P64"/>
-      <text:p text:style-name="P64"/>
+      <text:p text:style-name="P58">VisualizzaEvento()</text:p>
+      <text:p text:style-name="P58"/>
+      <text:p text:style-name="P58"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella6.A2" office:value-type="string">
-      <text:p text:style-name="P64">UtenteAutenticato</text:p>
+      <text:p text:style-name="P58">UtenteAutenticato</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella6.B2" office:value-type="string">
-      <text:p text:style-name="P50"><text:span text:style-name="T8">Visualizza</text:span><text:span text:style-name="T9">ListaEventi()</text:span></text:p>
-      <text:p text:style-name="P64">RicercaEvento()</text:p>
-      <text:p text:style-name="P64"/>
+      <text:p text:style-name="P53"><text:span text:style-name="T8">Visualizza</text:span><text:span text:style-name="T9">ListaEventi()</text:span></text:p>
+      <text:p text:style-name="P58">RicercaEvento()</text:p>
+      <text:p text:style-name="P58"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella6.A2" office:value-type="string">
-      <text:p text:style-name="P64">EventPlanner</text:p>
+      <text:p text:style-name="P58">EventPlanner</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella6.B2" office:value-type="string">
-      <text:p text:style-name="P50"><text:span text:style-name="T8">Inserisci</text:span><text:span text:style-name="T9">Evento()</text:span></text:p>
-      <text:p text:style-name="P64">ModificaEvento()</text:p>
-      <text:p text:style-name="P64">EliminaEvento()</text:p>
-      <text:p text:style-name="P60"/>
+      <text:p text:style-name="P53"><text:span text:style-name="T8">Inserisci</text:span><text:span text:style-name="T9">Evento()</text:span></text:p>
+      <text:p text:style-name="P58">ModificaEvento()</text:p>
+      <text:p text:style-name="P58">EliminaEvento()</text:p>
+      <text:p text:style-name="P55"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella6.A2" office:value-type="string">
-      <text:p text:style-name="P41">Direttore</text:p>
+      <text:p text:style-name="P44">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella6.B2" office:value-type="string">
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
-      <text:p text:style-name="P60"/>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
+      <text:p text:style-name="P55"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P55"/>
-   <text:p text:style-name="P55">*Nota: una specializzazione di un attore può effettuare le operazioni solo a lui dedicate mentre un attore generalizzato ingloba le funzionalità degli attori che generalizza.</text:p>
-   <text:p text:style-name="P55"/>
-   <text:p text:style-name="P55"/>
-   <text:p text:style-name="P56"/>
+   <text:p text:style-name="P7"/>
+   <text:p text:style-name="P7">*Nota: una specializzazione di un attore può effettuare le operazioni solo a lui dedicate mentre un attore generalizzato ingloba le funzionalità degli attori che generalizza.</text:p>
+   <text:p text:style-name="P7"/>
+   <text:p text:style-name="P7"/>
+   <text:p text:style-name="P62"/>
    <table:table table:name="Tabella7" table:style-name="Tabella7">
     <table:table-column table:style-name="Tabella7.A"/>
     <table:table-column table:style-name="Tabella7.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella7.A1" office:value-type="string">
-      <text:p text:style-name="P26">Attore / Entità</text:p>
+      <text:p text:style-name="P27">Attore / Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.B1" office:value-type="string">
-      <text:p text:style-name="P59">Menu</text:p>
+      <text:p text:style-name="P40">Menu</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella7.A2" office:value-type="string">
-      <text:p text:style-name="P64">UtenteAutenticato</text:p>
+      <text:p text:style-name="P58">UtenteAutenticato</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.B2" office:value-type="string">
-      <text:p text:style-name="P64">VisualizzaMenu()</text:p>
-      <text:p text:style-name="P64"/>
-      <text:p text:style-name="P64"/>
+      <text:p text:style-name="P58">VisualizzaMenu()</text:p>
+      <text:p text:style-name="P58"/>
+      <text:p text:style-name="P58"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella7.A2" office:value-type="string">
-      <text:p text:style-name="P64">Impiegato</text:p>
+      <text:p text:style-name="P58">Impiegato</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.B2" office:value-type="string">
-      <text:p text:style-name="P64">InserimentoMenu()</text:p>
-      <text:p text:style-name="P64">ModificaMenu()</text:p>
-      <text:p text:style-name="P64">EliminaMenu()</text:p>
-      <text:p text:style-name="P64"/>
+      <text:p text:style-name="P58">InserimentoMenu()</text:p>
+      <text:p text:style-name="P58">ModificaMenu()</text:p>
+      <text:p text:style-name="P58">EliminaMenu()</text:p>
+      <text:p text:style-name="P58"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella7.A2" office:value-type="string">
-      <text:p text:style-name="P64">EventPlanner</text:p>
+      <text:p text:style-name="P58">EventPlanner</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.B2" office:value-type="string">
-      <text:p text:style-name="P61"/>
-      <text:p text:style-name="P61"/>
-      <text:p text:style-name="P61"/>
+      <text:p text:style-name="P56"/>
+      <text:p text:style-name="P56"/>
+      <text:p text:style-name="P56"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella7.A2" office:value-type="string">
-      <text:p text:style-name="P42">Direttore</text:p>
+      <text:p text:style-name="P45">Direttore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.B2" office:value-type="string">
-      <text:p text:style-name="P61"/>
-      <text:p text:style-name="P61"/>
-      <text:p text:style-name="P61"/>
+      <text:p text:style-name="P56"/>
+      <text:p text:style-name="P56"/>
+      <text:p text:style-name="P56"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P66"/>
+   <table:table table:name="Tabella8" table:style-name="Tabella8">
+    <table:table-column table:style-name="Tabella8.A"/>
+    <table:table-column table:style-name="Tabella8.B"/>
+    <table:table-column table:style-name="Tabella8.C"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella8.A1" office:value-type="string">
+      <text:p text:style-name="P72">Attore / Entità</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.A1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Piano-Pasto</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.C1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Extra</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P78">Genitore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">RichiestaModificaPastoSingolo()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.C2" office:value-type="string">
+      <text:p text:style-name="P80"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P76"><text:span text:style-name="T11">Impiegato Asilo</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">VisualizzaPianoPasto()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaPianoPastoSingolo()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaPianoPastoSegreteria()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.C2" office:value-type="string">
+      <text:p text:style-name="P82"><text:span text:style-name="T11">VariazioniExtra()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">Responsabile Scientifico</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.C2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P78">Direttore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">VisualizzaPianoPasto()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaPianoPastoSingolo()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaPianoPastoSegreteria()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella8.C2" office:value-type="string">
+      <text:p text:style-name="P80"/>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="P64"/>
+   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P66"/>
+   <table:table table:name="Tabella9" table:style-name="Tabella9">
+    <table:table-column table:style-name="Tabella9.A"/>
+    <table:table-column table:style-name="Tabella9.B"/>
+    <table:table-column table:style-name="Tabella9.C"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella9.A1" office:value-type="string">
+      <text:p text:style-name="P72">Attore / Entità</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.A1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Orario</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.C1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Orario Utenza</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P78">Genitore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">RichiestaModificaOrarioSingolo()</text:span></text:p>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.C2" office:value-type="string">
+      <text:p text:style-name="P80"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P76"><text:span text:style-name="T11">Impiegato Asilo</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaOrarioBambino()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaOrarioSegreteria()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">VisualizzaOrario()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.C2" office:value-type="string">
+      <text:p text:style-name="P82"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">Responsabile Scientifico</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.C2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P78">Direttore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaOrarioBambino()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">ModificaOrarioSegreteria()</text:span></text:p>
+      <text:p text:style-name="P70"><text:span text:style-name="T11">VisualizzaOrario()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella9.C2" office:value-type="string">
+      <text:p text:style-name="P80"><text:span text:style-name="T11">InserisciFasciaOraria()</text:span></text:p>
+      <text:p text:style-name="P80"><text:span text:style-name="T11">ModificaFasciaOraria()</text:span></text:p>
+      <text:p text:style-name="P80"><text:span text:style-name="T11">RimuoviFasciaOraria()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="P64"/>
+   <text:p text:style-name="P66"/>
+   <table:table table:name="Tabella10" table:style-name="Tabella10">
+    <table:table-column table:style-name="Tabella10.A"/>
+    <table:table-column table:style-name="Tabella10.B"/>
+    <table:table-column table:style-name="Tabella10.C"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella10.A1" office:value-type="string">
+      <text:p text:style-name="P72">Attore / Entità</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.A1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Richiesta</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.C1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Promemoria</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P78">Genitore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.C2" office:value-type="string">
+      <text:p text:style-name="P80"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P76"><text:span text:style-name="T11">Impiegato Asilo</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.C2" office:value-type="string">
+      <text:p text:style-name="P82"><text:span text:style-name="T11">InviaPromemoria()</text:span></text:p>
+      <text:p text:style-name="P82"><text:span text:style-name="T11">PromemoriaPagamento()</text:span></text:p>
+      <text:p text:style-name="P82"><text:span text:style-name="T11">PromemoriaFattura()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">Responsabile Scientifico</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.C2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P78">Direttore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella10.C2" office:value-type="string">
+      <text:p text:style-name="P83"><text:span text:style-name="T11">InviaPromemoria()</text:span></text:p>
+      <text:p text:style-name="P83"><text:span text:style-name="T11">PromemoriaPagamento()</text:span></text:p>
+      <text:p text:style-name="P83"><text:span text:style-name="T11">PromemoriaFattura()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="P64"/>
+   <text:p text:style-name="P66"/>
+   <table:table table:name="Tabella11" table:style-name="Tabella11">
+    <table:table-column table:style-name="Tabella11.A"/>
+    <table:table-column table:style-name="Tabella11.B"/>
+    <table:table-column table:style-name="Tabella11.C"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella11.A1" office:value-type="string">
+      <text:p text:style-name="P72">Attore / Entità</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.A1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Fattura</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.C1" office:value-type="string">
+      <text:p text:style-name="P74"><text:span text:style-name="T11">Pagamento</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P78">Genitore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P80"><text:span text:style-name="T11">VisualizzaFatturaMensile()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.C2" office:value-type="string">
+      <text:p text:style-name="P80"><text:span text:style-name="T11">VisualizzaStoricoPagamenti()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P76"><text:span text:style-name="T11">Impiegato Asilo</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.C2" office:value-type="string">
+      <text:p text:style-name="P82"><text:span text:style-name="T11">StatoPagamento()</text:span></text:p>
+      <text:p text:style-name="P82"><text:span text:style-name="T11">RegistraPagamentoManuale()</text:span></text:p>
+      <text:p text:style-name="P83"><text:span text:style-name="T12">FatturaPagamento()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P70"><text:span text:style-name="T11">Responsabile Scientifico</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.C2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P78">Direttore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.A2" office:value-type="string">
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+      <text:p text:style-name="P70"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella11.C2" office:value-type="string">
+      <text:p text:style-name="P80"/>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="P66"/>
+   <table:table table:name="Tabella12" table:style-name="Tabella12">
+    <table:table-column table:style-name="Tabella12.A"/>
+    <table:table-column table:style-name="Tabella12.B"/>
+    <table:table-column table:style-name="Tabella12.C"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella12.A1" office:value-type="string">
+      <text:p text:style-name="P73">Attore / Entità</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.A1" office:value-type="string">
+      <text:p text:style-name="P75"><text:span text:style-name="T12">Tirocinante</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.C1" office:value-type="string">
+      <text:p text:style-name="P75"><text:span text:style-name="T12">Feedback Tirocinante</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P79">Genitore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P81"><text:span text:style-name="T11"/></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.C2" office:value-type="string">
+      <text:p text:style-name="P81"><text:span text:style-name="T11"/></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P77"><text:span text:style-name="T11">Impiegato Asilo</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P71"/>
+      <text:p text:style-name="P71"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.C2" office:value-type="string">
+      <text:p text:style-name="P83"><text:span text:style-name="T12"/></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P71"><text:span text:style-name="T11">Responsabile Scientifico</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P71"><text:span text:style-name="T12">AggiungiTirocinante()</text:span></text:p>
+      <text:p text:style-name="P71"><text:span text:style-name="T12">ModificaTirocinante()</text:span></text:p>
+      <text:p text:style-name="P71"><text:span text:style-name="T12">RimuoviTirocinante()</text:span></text:p>
+      <text:p text:style-name="P71"><text:span text:style-name="T12">VisualizzaTirocinanti()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.C2" office:value-type="string">
+      <text:p text:style-name="P71"><text:span text:style-name="T12">FeedbackTirocinanti()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P79">Direttore</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.A2" office:value-type="string">
+      <text:p text:style-name="P71"><text:span text:style-name="T12">VisualizzaTirocinanti()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella12.C2" office:value-type="string">
+      <text:p text:style-name="P71"><text:span text:style-name="T12">FeedbackTirocinanti()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:p text:style-name="P65"/>
   </office:text>
  </office:body>
 </office:document>
