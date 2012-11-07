@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="11.5.1">
-  <zoom_level>3</zoom_level>
+  <zoom_level>5</zoom_level>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>387</x>
-      <y>192</y>
-      <w>30</w>
-      <h>18</h>
+      <x>515</x>
+      <y>275</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -15,54 +15,54 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>372</x>
-      <y>156</y>
-      <w>35</w>
-      <h>41</h>
+      <x>490</x>
+      <y>215</y>
+      <w>59</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>9;9;30;9;30;36</additional_attributes>
+    <additional_attributes>15;15;50;15;50;60</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>393</x>
-      <y>201</y>
-      <w>14</w>
-      <h>47</h>
+      <x>525</x>
+      <y>290</y>
+      <w>24</w>
+      <h>79</h>
     </coordinates>
     <panel_attributes>m2=  N</panel_attributes>
-    <additional_attributes>9;9;9;42</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>465</x>
-      <y>60</y>
-      <w>38</w>
-      <h>21</h>
-    </coordinates>
-    <panel_attributes>N</panel_attributes>
-    <additional_attributes>33;15;9;15</additional_attributes>
+    <additional_attributes>15;15;15;70</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>645</x>
-      <y>267</y>
-      <w>14</w>
-      <h>89</h>
+      <y>55</y>
+      <w>64</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>N</panel_attributes>
+    <additional_attributes>55;25;15;25</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>945</x>
+      <y>400</y>
+      <w>24</w>
+      <h>149</h>
     </coordinates>
     <panel_attributes>m1=  1</panel_attributes>
-    <additional_attributes>9;9;9;84</additional_attributes>
+    <additional_attributes>15;15;15;140</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>639</x>
-      <y>351</y>
-      <w>30</w>
-      <h>18</h>
+      <x>935</x>
+      <y>540</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Compila</panel_attributes>
     <additional_attributes/>
@@ -70,32 +70,32 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>660</x>
-      <y>351</y>
-      <w>80</w>
-      <h>14</h>
+      <x>970</x>
+      <y>540</y>
+      <w>134</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2= N</panel_attributes>
-    <additional_attributes>9;9;75;9</additional_attributes>
+    <additional_attributes>15;15;125;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>654</x>
-      <y>210</y>
-      <w>74</w>
-      <h>41</h>
+      <x>960</x>
+      <y>305</y>
+      <w>124</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>69;9;9;9;9;36</additional_attributes>
+    <additional_attributes>115;15;15;15;15;60</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>723</x>
-      <y>207</y>
-      <w>30</w>
-      <h>24</h>
+      <x>1075</x>
+      <y>300</y>
+      <w>50</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Emette
 </panel_attributes>
@@ -104,21 +104,21 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>744</x>
-      <y>153</y>
-      <w>71</w>
-      <h>71</h>
+      <x>1110</x>
+      <y>210</y>
+      <w>119</w>
+      <h>119</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>66;9;66;66;9;66</additional_attributes>
+    <additional_attributes>110;15;110;110;15;110</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>507</x>
-      <y>414</y>
-      <w>60</w>
-      <h>24</h>
+      <x>715</x>
+      <y>645</y>
+      <w>100</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Classe
 --
@@ -132,10 +132,10 @@ fg=red
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>390</x>
-      <y>477</y>
-      <w>30</w>
-      <h>18</h>
+      <x>520</x>
+      <y>755</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Riguarda
 </panel_attributes>
@@ -144,21 +144,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>396</x>
-      <y>429</y>
-      <w>14</w>
-      <h>53</h>
+      <x>530</x>
+      <y>670</y>
+      <w>24</w>
+      <h>94</h>
     </coordinates>
     <panel_attributes>m1= 1 </panel_attributes>
-    <additional_attributes>9;9;9;48</additional_attributes>
+    <additional_attributes>15;15;15;85</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>369</x>
-      <y>408</y>
-      <w>45</w>
-      <h>30</h>
+      <x>485</x>
+      <y>635</y>
+      <w>75</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Evento
 --
@@ -174,21 +174,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>366</x>
-      <y>429</y>
-      <w>71</w>
-      <h>113</h>
+      <x>480</x>
+      <y>670</y>
+      <w>119</w>
+      <h>189</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>9;9;9;108;66;108</additional_attributes>
+    <additional_attributes>15;15;15;180;110;180</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>432</x>
-      <y>525</y>
-      <w>36</w>
-      <h>24</h>
+      <x>590</x>
+      <y>830</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Organizza
 </panel_attributes>
@@ -197,22 +197,22 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>459</x>
-      <y>528</y>
-      <w>59</w>
-      <h>26</h>
+      <x>635</x>
+      <y>835</y>
+      <w>99</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>m2= 1
 bg=gray</panel_attributes>
-    <additional_attributes>9;9;54;9;54;21</additional_attributes>
+    <additional_attributes>15;15;90;15;90;35</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>495</x>
-      <y>549</y>
-      <w>54</w>
-      <h>45</h>
+      <x>695</x>
+      <y>870</y>
+      <w>90</w>
+      <h>75</h>
     </coordinates>
     <panel_attributes>EducatoreDidattico
 --
@@ -226,68 +226,56 @@ fg=red
     <additional_attributes/>
   </element>
   <element>
-    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
-    <coordinates>
-      <x>513</x>
-      <y>474</y>
-      <w>36</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>Insegna in
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>522</x>
-      <y>489</y>
-      <w>14</w>
-      <h>65</h>
+      <x>740</x>
+      <y>770</y>
+      <w>24</w>
+      <h>109</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;9;9;60</additional_attributes>
+    <additional_attributes>15;15;15;100</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>522</x>
-      <y>429</y>
-      <w>14</w>
-      <h>50</h>
+      <x>740</x>
+      <y>670</y>
+      <w>24</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>9;9;9;45</additional_attributes>
+    <additional_attributes>15;15;15;75</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>411</x>
-      <y>477</y>
-      <w>35</w>
-      <h>14</h>
+      <x>555</x>
+      <y>755</y>
+      <w>59</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=N</panel_attributes>
-    <additional_attributes>9;9;30;9</additional_attributes>
+    <additional_attributes>15;15;50;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>261</x>
-      <y>576</y>
-      <w>14</w>
-      <h>38</h>
+      <x>305</x>
+      <y>915</y>
+      <w>24</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>m2=  N</panel_attributes>
-    <additional_attributes>9;9;9;33</additional_attributes>
+    <additional_attributes>15;15;15;55</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>252</x>
-      <y>561</y>
-      <w>36</w>
-      <h>24</h>
+      <x>290</x>
+      <y>890</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Composizione
 </panel_attributes>
@@ -296,10 +284,10 @@ fg=red
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>249</x>
-      <y>609</y>
-      <w>45</w>
-      <h>30</h>
+      <x>285</x>
+      <y>970</y>
+      <w>75</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Attività
 --
@@ -314,21 +302,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>279</x>
-      <y>564</y>
-      <w>53</w>
-      <h>14</h>
+      <x>335</x>
+      <y>895</y>
+      <w>89</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>48;9;9;9</additional_attributes>
+    <additional_attributes>80;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>327</x>
-      <y>552</y>
-      <w>45</w>
-      <h>30</h>
+      <x>415</x>
+      <y>875</y>
+      <w>75</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Registro
 --
@@ -342,21 +330,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>363</x>
-      <y>564</y>
-      <w>65</w>
-      <h>14</h>
+      <x>475</x>
+      <y>895</y>
+      <w>109</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=N</panel_attributes>
-    <additional_attributes>9;9;60;9</additional_attributes>
+    <additional_attributes>15;15;100;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>423</x>
-      <y>561</y>
-      <w>36</w>
-      <h>24</h>
+      <x>575</x>
+      <y>890</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Compila
 </panel_attributes>
@@ -365,32 +353,32 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>450</x>
-      <y>564</y>
-      <w>50</w>
-      <h>14</h>
+      <x>620</x>
+      <y>895</y>
+      <w>84</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=1</panel_attributes>
-    <additional_attributes>9;9;45;9</additional_attributes>
+    <additional_attributes>15;15;75;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>213</x>
-      <y>615</y>
-      <w>41</w>
-      <h>14</h>
+      <x>225</x>
+      <y>980</y>
+      <w>70</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>m2=N</panel_attributes>
-    <additional_attributes>9;9;36;9</additional_attributes>
+    <additional_attributes>15;15;60;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>186</x>
-      <y>612</y>
-      <w>36</w>
-      <h>24</h>
+      <x>180</x>
+      <y>975</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Gestione
 </panel_attributes>
@@ -399,26 +387,29 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>150</x>
-      <y>564</y>
-      <w>41</w>
-      <h>65</h>
+      <x>120</x>
+      <y>895</y>
+      <w>69</w>
+      <h>109</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>9;9;9;60;36;60</additional_attributes>
+    <additional_attributes>15;15;15;100;60;100</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>126</x>
-      <y>534</y>
-      <w>60</w>
-      <h>39</h>
+      <x>80</x>
+      <y>845</y>
+      <w>100</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>ProgrammaEducativo
 Settimanale
 --
 -Settimana
+-
+-
+-
 bg=gray
 fg=red
 </panel_attributes>
@@ -427,21 +418,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>150</x>
-      <y>486</y>
-      <w>14</w>
-      <h>53</h>
+      <x>120</x>
+      <y>765</y>
+      <w>24</w>
+      <h>89</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>9;48;9;9</additional_attributes>
+    <additional_attributes>15;80;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>141</x>
-      <y>471</y>
-      <w>36</w>
-      <h>24</h>
+      <x>105</x>
+      <y>740</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Creazione</panel_attributes>
     <additional_attributes/>
@@ -449,21 +440,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>150</x>
-      <y>411</y>
-      <w>38</w>
-      <h>65</h>
+      <x>120</x>
+      <y>640</y>
+      <w>64</w>
+      <h>109</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;60;9;9;33;9</additional_attributes>
+    <additional_attributes>15;100;15;15;55;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>183</x>
-      <y>396</y>
-      <w>69</w>
-      <h>45</h>
+      <x>175</x>
+      <y>615</y>
+      <w>115</w>
+      <h>75</h>
     </coordinates>
     <panel_attributes>Psico-pedagogo
 --
@@ -479,21 +470,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>243</x>
-      <y>411</y>
-      <w>50</w>
-      <h>14</h>
+      <x>275</x>
+      <y>640</y>
+      <w>84</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>45;9;9;9</additional_attributes>
+    <additional_attributes>75;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>288</x>
-      <y>408</y>
-      <w>36</w>
-      <h>24</h>
+      <x>350</x>
+      <y>635</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Organizza
 </panel_attributes>
@@ -502,21 +493,21 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>315</x>
-      <y>411</y>
-      <w>59</w>
-      <h>14</h>
+      <x>395</x>
+      <y>640</y>
+      <w>99</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=N</panel_attributes>
-    <additional_attributes>9;9;54;9</additional_attributes>
+    <additional_attributes>15;15;90;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>237</x>
-      <y>84</y>
-      <w>36</w>
-      <h>21</h>
+      <x>265</x>
+      <y>95</y>
+      <w>60</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>Riguardante
 </panel_attributes>
@@ -525,24 +516,25 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>246</x>
-      <y>60</y>
-      <w>14</w>
-      <h>29</h>
+      <x>280</x>
+      <y>55</y>
+      <w>24</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>9;9;9;24</additional_attributes>
+    <additional_attributes>15;15;15;40</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>231</x>
-      <y>27</y>
-      <w>45</w>
-      <h>42</h>
+      <x>255</x>
+      <y>0</y>
+      <w>75</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Questionario
 --
+ID
 Nome
 Descrizione
 PathName
@@ -556,10 +548,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>78</x>
-      <y>366</y>
-      <w>54</w>
-      <h>33</h>
+      <x>0</x>
+      <y>565</y>
+      <w>90</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Responsabile
 Questionari
@@ -575,32 +567,32 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>306</x>
-      <y>135</y>
-      <w>29</w>
-      <h>14</h>
+      <x>380</x>
+      <y>180</y>
+      <w>49</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=1</panel_attributes>
-    <additional_attributes>9;9;24;9</additional_attributes>
+    <additional_attributes>15;15;40;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>357</x>
-      <y>69</y>
-      <w>32</w>
-      <h>74</h>
+      <x>465</x>
+      <y>70</y>
+      <w>54</w>
+      <h>124</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>27;9;9;9;9;69</additional_attributes>
+    <additional_attributes>45;15;15;15;15;115</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>384</x>
-      <y>69</y>
-      <w>30</w>
-      <h>18</h>
+      <x>510</x>
+      <y>70</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Paga</panel_attributes>
     <additional_attributes/>
@@ -608,21 +600,21 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>405</x>
-      <y>63</y>
-      <w>32</w>
-      <h>21</h>
+      <x>545</x>
+      <y>60</y>
+      <w>54</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>N</panel_attributes>
-    <additional_attributes>9;15;27;15</additional_attributes>
+    <additional_attributes>15;25;45;25</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>498</x>
-      <y>63</y>
-      <w>30</w>
-      <h>24</h>
+      <x>700</x>
+      <y>60</y>
+      <w>50</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Possiede</panel_attributes>
     <additional_attributes/>
@@ -630,54 +622,21 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>519</x>
-      <y>60</y>
-      <w>38</w>
-      <h>21</h>
+      <x>735</x>
+      <y>55</y>
+      <w>64</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
-    <additional_attributes>9;15;33;15</additional_attributes>
+    <additional_attributes>15;25;55;25</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>726</x>
-      <y>264</y>
-      <w>30</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes>Invia</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>669</x>
-      <y>264</y>
-      <w>62</w>
-      <h>14</h>
-    </coordinates>
-    <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>9;9;57;9</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>747</x>
-      <y>264</y>
-      <w>107</w>
-      <h>14</h>
-    </coordinates>
-    <panel_attributes>m1=N</panel_attributes>
-    <additional_attributes>102;9;9;9</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
-    <coordinates>
-      <x>393</x>
-      <y>378</y>
-      <w>36</w>
-      <h>18</h>
+      <x>525</x>
+      <y>585</y>
+      <w>60</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Appartiene
 </panel_attributes>
@@ -686,21 +645,21 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>402</x>
-      <y>261</y>
-      <w>14</w>
-      <h>122</h>
+      <x>540</x>
+      <y>390</y>
+      <w>24</w>
+      <h>204</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;117;9;9</additional_attributes>
+    <additional_attributes>15;195;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>468</x>
-      <y>252</y>
-      <w>30</w>
-      <h>18</h>
+      <x>650</x>
+      <y>375</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Riguarda
 </panel_attributes>
@@ -709,32 +668,32 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>537</x>
-      <y>303</y>
-      <w>14</w>
-      <h>44</h>
+      <x>765</x>
+      <y>460</y>
+      <w>24</w>
+      <h>74</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>9;39;9;9</additional_attributes>
+    <additional_attributes>15;65;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>537</x>
-      <y>267</y>
-      <w>14</w>
-      <h>35</h>
+      <x>765</x>
+      <y>400</y>
+      <w>24</w>
+      <h>59</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;30;9;9</additional_attributes>
+    <additional_attributes>15;50;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>531</x>
-      <y>297</y>
-      <w>30</w>
-      <h>15</h>
+      <x>755</x>
+      <y>450</y>
+      <w>50</w>
+      <h>25</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -742,21 +701,21 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>423</x>
-      <y>246</y>
-      <w>50</w>
-      <h>21</h>
+      <x>575</x>
+      <y>365</y>
+      <w>84</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
-    <additional_attributes>45;15;9;15</additional_attributes>
+    <additional_attributes>75;25;15;25</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>516</x>
-      <y>141</y>
-      <w>42</w>
-      <h>24</h>
+      <x>730</x>
+      <y>190</y>
+      <w>70</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Consegna e 
 puo ritirare</panel_attributes>
@@ -765,43 +724,43 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>528</x>
-      <y>156</y>
-      <w>14</w>
-      <h>92</h>
+      <x>750</x>
+      <y>215</y>
+      <w>24</w>
+      <h>154</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;9;9;87</additional_attributes>
+    <additional_attributes>15;15;15;145</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>372</x>
-      <y>144</y>
-      <w>149</w>
-      <h>14</h>
+      <x>490</x>
+      <y>195</y>
+      <w>249</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>9;9;144;9</additional_attributes>
+    <additional_attributes>15;15;240;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>663</x>
-      <y>267</y>
-      <w>83</w>
-      <h>56</h>
+      <x>975</x>
+      <y>400</y>
+      <w>139</w>
+      <h>94</h>
     </coordinates>
     <panel_attributes>m1=   1</panel_attributes>
-    <additional_attributes>9;9;9;51;78;51</additional_attributes>
+    <additional_attributes>15;15;15;85;130;85</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>741</x>
-      <y>309</y>
-      <w>30</w>
-      <h>18</h>
+      <x>1105</x>
+      <y>470</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -809,21 +768,21 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>762</x>
-      <y>309</y>
-      <w>92</w>
-      <h>14</h>
+      <x>1140</x>
+      <y>470</y>
+      <w>154</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=N</panel_attributes>
-    <additional_attributes>9;9;87;9</additional_attributes>
+    <additional_attributes>15;15;145;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>819</x>
-      <y>354</y>
-      <w>30</w>
-      <h>18</h>
+      <x>1235</x>
+      <y>545</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -831,54 +790,54 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>768</x>
-      <y>354</y>
-      <w>56</w>
-      <h>14</h>
+      <x>1150</x>
+      <y>545</y>
+      <w>94</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=1</panel_attributes>
-    <additional_attributes>51;9;9;9</additional_attributes>
+    <additional_attributes>85;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>840</x>
-      <y>336</y>
-      <w>35</w>
-      <h>32</h>
+      <x>1270</x>
+      <y>515</y>
+      <w>59</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>30;9;30;27;9;27</additional_attributes>
+    <additional_attributes>50;15;50;45;15;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>489</x>
-      <y>246</y>
-      <w>38</w>
-      <h>21</h>
+      <x>685</x>
+      <y>365</y>
+      <w>64</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
-    <additional_attributes>33;15;9;15</additional_attributes>
+    <additional_attributes>55;25;15;25</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>420</x>
-      <y>378</y>
-      <w>116</w>
-      <h>41</h>
+      <x>570</x>
+      <y>585</y>
+      <w>194</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;9;111;9;111;36</additional_attributes>
+    <additional_attributes>15;15;185;15;185;60</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>252</x>
-      <y>228</y>
-      <w>30</w>
-      <h>18</h>
+      <x>290</x>
+      <y>335</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -886,32 +845,32 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>273</x>
-      <y>162</y>
-      <w>71</w>
-      <h>80</h>
+      <x>325</x>
+      <y>225</y>
+      <w>119</w>
+      <h>134</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>66;9;66;75;9;75</additional_attributes>
+    <additional_attributes>110;15;110;125;15;125</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>114</x>
-      <y>234</y>
-      <w>71</w>
-      <h>65</h>
+      <x>60</x>
+      <y>345</y>
+      <w>119</w>
+      <h>109</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>9;9;9;60;66;60</additional_attributes>
+    <additional_attributes>15;15;15;100;110;100</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>87</x>
-      <y>306</y>
-      <w>30</w>
-      <h>18</h>
+      <x>15</x>
+      <y>465</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -919,32 +878,32 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>93</x>
-      <y>234</y>
-      <w>14</w>
-      <h>77</h>
+      <x>25</x>
+      <y>345</y>
+      <w>25</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>9;9;9;72</additional_attributes>
+    <additional_attributes>15;15;15;120</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>93</x>
-      <y>315</y>
-      <w>14</w>
-      <h>56</h>
+      <x>25</x>
+      <y>480</y>
+      <w>25</w>
+      <h>95</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;9;9;51</additional_attributes>
+    <additional_attributes>15;15;15;85</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>180</x>
-      <y>285</y>
-      <w>30</w>
-      <h>18</h>
+      <x>170</x>
+      <y>430</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -952,32 +911,32 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>123</x>
-      <y>228</y>
-      <w>134</w>
-      <h>14</h>
+      <x>75</x>
+      <y>335</y>
+      <w>224</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>9;9;129;9</additional_attributes>
+    <additional_attributes>15;15;215;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>186</x>
-      <y>294</y>
-      <w>15</w>
-      <h>107</h>
+      <x>175</x>
+      <y>445</y>
+      <w>32</w>
+      <h>179</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
-    <additional_attributes>9;102;9;9</additional_attributes>
+    <additional_attributes>20;170;20;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>585</x>
-      <y>210</y>
-      <w>30</w>
-      <h>18</h>
+      <x>845</x>
+      <y>305</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha un</panel_attributes>
     <additional_attributes/>
@@ -985,32 +944,32 @@ puo ritirare</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>123</x>
-      <y>210</y>
-      <w>467</w>
-      <h>14</h>
+      <x>75</x>
+      <y>305</y>
+      <w>779</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=1</panel_attributes>
-    <additional_attributes>462;9;114;9;9;9</additional_attributes>
+    <additional_attributes>770;15;190;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>606</x>
-      <y>210</y>
-      <w>47</w>
-      <h>41</h>
+      <x>880</x>
+      <y>305</y>
+      <w>79</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;9;42;9;42;36</additional_attributes>
+    <additional_attributes>15;15;70;15;70;60</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Note</type>
     <coordinates>
-      <x>276</x>
-      <y>285</y>
-      <w>69</w>
-      <h>39</h>
+      <x>330</x>
+      <y>430</y>
+      <w>115</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>Note..
 l'entita, rappresenta il vincolo
@@ -1023,123 +982,21 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>612</x>
-      <y>492</y>
-      <w>14</w>
-      <h>62</h>
-    </coordinates>
-    <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>9;57;9;9</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
-    <coordinates>
-      <x>603</x>
-      <y>483</y>
-      <w>36</w>
-      <h>18</h>
-    </coordinates>
-    <panel_attributes>Appartiene
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>558</x>
-      <y>420</y>
-      <w>68</w>
-      <h>68</h>
-    </coordinates>
-    <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>63;63;63;9;9;9</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
-    <coordinates>
-      <x>693</x>
-      <y>552</y>
-      <w>36</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>Presenza
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>597</x>
-      <y>549</y>
-      <w>51</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>Bambino
---
--Nome
--Cognome
--CodiceFiscale
-bg=gray
-fg=red
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>768</x>
-      <y>552</y>
-      <w>51</w>
-      <h>27</h>
-    </coordinates>
-    <panel_attributes>Assenza
---
--Data
-bg=gray
-fg=red
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>720</x>
-      <y>555</y>
-      <w>53</w>
-      <h>14</h>
-    </coordinates>
-    <panel_attributes>m2=N</panel_attributes>
-    <additional_attributes>9;9;48;9</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>639</x>
-      <y>555</y>
-      <w>59</w>
-      <h>14</h>
-    </coordinates>
-    <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>9;9;54;9</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>342</x>
-      <y>573</y>
-      <w>14</w>
-      <h>41</h>
+      <x>440</x>
+      <y>910</y>
+      <w>24</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>9;36;9;9</additional_attributes>
+    <additional_attributes>15;60;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>333</x>
-      <y>609</y>
-      <w>36</w>
-      <h>24</h>
+      <x>425</x>
+      <y>970</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Ha un
 </panel_attributes>
@@ -1148,25 +1005,26 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>429</y>
-      <w>206</w>
-      <h>197</h>
+      <x>470</x>
+      <y>670</y>
+      <w>344</w>
+      <h>329</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>9;192;201;192;201;9</additional_attributes>
+    <additional_attributes>15;320;335;320;335;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>99</x>
-      <y>36</y>
-      <w>45</w>
-      <h>30</h>
+      <x>25</x>
+      <y>15</y>
+      <w>85</w>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>Domande
+    <panel_attributes>DomandaQuestionario
 --
-Descrizione
+-ID
+-Descrizione
 bg=gray
 fg=red</panel_attributes>
     <additional_attributes/>
@@ -1174,25 +1032,26 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>135</x>
-      <y>42</y>
-      <w>41</w>
-      <h>14</h>
+      <x>95</x>
+      <y>25</y>
+      <w>69</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=N
 </panel_attributes>
-    <additional_attributes>9;9;36;9</additional_attributes>
+    <additional_attributes>15;15;60;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>99</x>
-      <y>123</y>
-      <w>45</w>
-      <h>30</h>
+      <x>5</x>
+      <y>160</y>
+      <w>105</w>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>CampoDomanda
+    <panel_attributes>CampoDomandaQuestionario
 --
+ID
 Tipo
 Valore
 Descrizione
@@ -1204,10 +1063,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>171</x>
-      <y>39</y>
-      <w>36</w>
-      <h>24</h>
+      <x>155</x>
+      <y>20</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Composizione</panel_attributes>
     <additional_attributes/>
@@ -1215,34 +1074,34 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>198</x>
-      <y>42</y>
-      <w>38</w>
-      <h>14</h>
+      <x>200</x>
+      <y>25</y>
+      <w>64</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=1
 </panel_attributes>
-    <additional_attributes>9;9;33;9</additional_attributes>
+    <additional_attributes>15;15;55;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>111</x>
-      <y>96</y>
-      <w>14</w>
-      <h>32</h>
+      <x>55</x>
+      <y>115</y>
+      <w>25</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>m1=  N
 </panel_attributes>
-    <additional_attributes>9;27;9;9</additional_attributes>
+    <additional_attributes>15;45;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>102</x>
-      <y>87</y>
-      <w>36</w>
-      <h>18</h>
+      <x>40</x>
+      <y>100</y>
+      <w>60</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Composizione</panel_attributes>
     <additional_attributes/>
@@ -1250,25 +1109,26 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>111</x>
-      <y>57</y>
-      <w>14</w>
-      <h>35</h>
+      <x>55</x>
+      <y>50</y>
+      <w>25</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>m2= 1
 </panel_attributes>
-    <additional_attributes>9;30;9;9</additional_attributes>
+    <additional_attributes>15;50;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>162</x>
-      <y>180</y>
-      <w>45</w>
-      <h>27</h>
+      <x>130</x>
+      <y>255</y>
+      <w>85</w>
+      <h>45</h>
     </coordinates>
-    <panel_attributes>Risposta
+    <panel_attributes>Risposta Questionario
 --
+ID
 Valore
 
 bg=gray
@@ -1278,22 +1138,22 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>135</x>
-      <y>129</y>
-      <w>41</w>
-      <h>14</h>
+      <x>95</x>
+      <y>170</y>
+      <w>69</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2= 1
 </panel_attributes>
-    <additional_attributes>36;9;9;9</additional_attributes>
+    <additional_attributes>60;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>171</x>
-      <y>129</y>
-      <w>30</w>
-      <h>18</h>
+      <x>155</x>
+      <y>170</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Ha una</panel_attributes>
     <additional_attributes/>
@@ -1301,34 +1161,34 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>177</x>
-      <y>138</y>
-      <w>14</w>
-      <h>47</h>
+      <x>165</x>
+      <y>185</y>
+      <w>24</w>
+      <h>79</h>
     </coordinates>
     <panel_attributes>m1=  1
 </panel_attributes>
-    <additional_attributes>9;42;9;9</additional_attributes>
+    <additional_attributes>15;70;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>252</x>
-      <y>156</y>
-      <w>83</w>
-      <h>32</h>
+      <x>290</x>
+      <y>215</y>
+      <w>139</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>m2= 1
 </panel_attributes>
-    <additional_attributes>9;27;9;9;78;9</additional_attributes>
+    <additional_attributes>15;45;15;15;130;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>246</x>
-      <y>183</y>
-      <w>30</w>
-      <h>18</h>
+      <x>280</x>
+      <y>260</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Inserisce</panel_attributes>
     <additional_attributes/>
@@ -1336,22 +1196,22 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>198</x>
-      <y>183</y>
-      <w>53</w>
-      <h>14</h>
+      <x>200</x>
+      <y>260</y>
+      <w>89</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=  N
 </panel_attributes>
-    <additional_attributes>9;9;48;9</additional_attributes>
+    <additional_attributes>15;15;80;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>339</x>
-      <y>258</y>
-      <w>36</w>
-      <h>18</h>
+      <x>435</x>
+      <y>385</y>
+      <w>60</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Effettua
 </panel_attributes>
@@ -1360,32 +1220,32 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>348</x>
-      <y>162</y>
-      <w>14</w>
-      <h>101</h>
+      <x>450</x>
+      <y>225</y>
+      <w>24</w>
+      <h>169</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>9;96;9;9</additional_attributes>
+    <additional_attributes>15;160;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>348</x>
-      <y>267</y>
-      <w>14</w>
-      <h>80</h>
+      <x>450</x>
+      <y>400</y>
+      <w>24</w>
+      <h>134</h>
     </coordinates>
     <panel_attributes>m2=  N</panel_attributes>
-    <additional_attributes>9;9;9;75</additional_attributes>
+    <additional_attributes>15;15;15;125</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>447</x>
-      <y>348</y>
-      <w>36</w>
-      <h>18</h>
+      <x>615</x>
+      <y>535</y>
+      <w>60</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Modifica
 </panel_attributes>
@@ -1394,43 +1254,43 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>369</x>
-      <y>348</y>
-      <w>83</w>
-      <h>14</h>
+      <x>485</x>
+      <y>535</y>
+      <w>139</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=1</panel_attributes>
-    <additional_attributes>78;9;9;9</additional_attributes>
+    <additional_attributes>130;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>474</x>
-      <y>348</y>
-      <w>47</w>
-      <h>14</h>
+      <x>660</x>
+      <y>535</y>
+      <w>79</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>42;9;9;9</additional_attributes>
+    <additional_attributes>70;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>477</x>
-      <y>306</y>
-      <w>53</w>
-      <h>41</h>
+      <x>665</x>
+      <y>465</y>
+      <w>89</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>48;36;48;9;9;9</additional_attributes>
+    <additional_attributes>80;60;80;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>450</x>
-      <y>306</y>
-      <w>36</w>
-      <h>18</h>
+      <x>620</x>
+      <y>465</y>
+      <w>60</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Riguarda
 </panel_attributes>
@@ -1439,21 +1299,21 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>417</x>
-      <y>261</y>
-      <w>38</w>
-      <h>59</h>
+      <x>565</x>
+      <y>390</y>
+      <w>64</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>33;54;9;54;9;9</additional_attributes>
+    <additional_attributes>55;90;15;90;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>690</x>
-      <y>390</y>
-      <w>42</w>
-      <h>30</h>
+      <x>1020</x>
+      <y>605</y>
+      <w>70</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Orario Utente
 --
@@ -1470,10 +1330,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>594</x>
-      <y>390</y>
-      <w>36</w>
-      <h>24</h>
+      <x>860</x>
+      <y>605</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Basato
 </panel_attributes>
@@ -1482,32 +1342,32 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>621</x>
-      <y>393</y>
-      <w>74</w>
-      <h>14</h>
+      <x>905</x>
+      <y>610</y>
+      <w>124</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>69;9;9;9</additional_attributes>
+    <additional_attributes>115;15;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>555</x>
-      <y>348</y>
-      <w>62</w>
-      <h>47</h>
+      <x>795</x>
+      <y>535</y>
+      <w>104</w>
+      <h>79</h>
     </coordinates>
     <panel_attributes>m1= N</panel_attributes>
-    <additional_attributes>9;9;57;9;57;42</additional_attributes>
+    <additional_attributes>15;15;95;15;95;70</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>516</x>
-      <y>342</y>
-      <w>48</w>
-      <h>30</h>
+      <x>730</x>
+      <y>525</y>
+      <w>80</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Servizio
 --
@@ -1523,10 +1383,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>522</x>
-      <y>243</y>
-      <w>48</w>
-      <h>33</h>
+      <x>740</x>
+      <y>360</y>
+      <w>80</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>DomandaIscrizione
 --
@@ -1541,10 +1401,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>390</x>
-      <y>243</y>
-      <w>42</w>
-      <h>27</h>
+      <x>520</x>
+      <y>360</y>
+      <w>70</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>Bambino
 --
@@ -1558,10 +1418,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>330</x>
-      <y>138</y>
-      <w>51</w>
-      <h>33</h>
+      <x>420</x>
+      <y>185</y>
+      <w>85</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Genitore
 --
@@ -1575,15 +1435,15 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>432</x>
-      <y>60</y>
-      <w>42</w>
-      <h>30</h>
+      <x>590</x>
+      <y>55</y>
+      <w>70</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Retta
 --
+-ID
 -Importo
-
 -Extra
 bg=gray
 fg=red
@@ -1593,10 +1453,10 @@ fg=red
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>552</x>
-      <y>60</y>
-      <w>42</w>
-      <h>30</h>
+      <x>790</x>
+      <y>55</y>
+      <w>70</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Extra
 --
@@ -1612,10 +1472,10 @@ fg=red
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>636</x>
-      <y>246</y>
-      <w>42</w>
-      <h>30</h>
+      <x>930</x>
+      <y>365</y>
+      <w>70</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>Personale Asilo
 --
@@ -1630,10 +1490,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>789</x>
-      <y>138</y>
-      <w>42</w>
-      <h>24</h>
+      <x>1185</x>
+      <y>185</y>
+      <w>70</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Fattura
 --
@@ -1646,28 +1506,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>849</x>
-      <y>261</y>
-      <w>42</w>
-      <h>24</h>
-    </coordinates>
-    <panel_attributes>Promemoria Mail
---
--Indirizzo mail
--oggetto
--corpo mail
-
-bg=gray
-fg=red</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>849</x>
-      <y>306</y>
-      <w>42</w>
-      <h>39</h>
+      <x>1285</x>
+      <y>465</y>
+      <w>70</w>
+      <h>65</h>
     </coordinates>
     <panel_attributes>Tirocinante
 --
@@ -1684,10 +1526,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>735</x>
-      <y>351</y>
-      <w>42</w>
-      <h>24</h>
+      <x>1095</x>
+      <y>540</y>
+      <w>70</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Feedback
 --
@@ -1700,10 +1542,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>333</x>
-      <y>342</y>
-      <w>45</w>
-      <h>36</h>
+      <x>425</x>
+      <y>525</y>
+      <w>75</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Richiesta
 --
@@ -1720,13 +1562,14 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>246</x>
-      <y>267</y>
-      <w>45</w>
-      <h>36</h>
+      <x>280</x>
+      <y>400</y>
+      <w>75</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Bando
 --
+-ID
 -data inizio
 -data fine
 bg=gray
@@ -1736,15 +1579,16 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>87</x>
-      <y>210</y>
-      <w>45</w>
-      <h>33</h>
+      <x>15</x>
+      <y>305</y>
+      <w>75</w>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Account
 --
 -Usurname
 -Password
+-Stato
 bg=gray
 fg=red</panel_attributes>
     <additional_attributes/>
@@ -1752,10 +1596,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>285</x>
-      <y>135</y>
-      <w>30</w>
-      <h>18</h>
+      <x>345</x>
+      <y>180</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Effettua
 </panel_attributes>
@@ -1764,10 +1608,10 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>234</x>
-      <y>132</y>
-      <w>36</w>
-      <h>24</h>
+      <x>260</x>
+      <y>175</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Compilazione
 --
@@ -1778,32 +1622,32 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>261</x>
-      <y>135</y>
-      <w>29</w>
-      <h>14</h>
+      <x>305</x>
+      <y>180</y>
+      <w>49</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m1=N</panel_attributes>
-    <additional_attributes>9;9;24;9</additional_attributes>
+    <additional_attributes>15;15;40;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>246</x>
-      <y>96</y>
-      <w>14</w>
-      <h>41</h>
+      <x>280</x>
+      <y>115</y>
+      <w>24</w>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>9;36;9;9</additional_attributes>
+    <additional_attributes>15;60;15;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>765</x>
-      <y>450</y>
-      <w>54</w>
-      <h>48</h>
+      <x>1145</x>
+      <y>705</y>
+      <w>90</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Menu Mensa
 --
@@ -1822,10 +1666,10 @@ fg=red
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>441</x>
-      <y>477</y>
-      <w>36</w>
-      <h>24</h>
+      <x>605</x>
+      <y>755</y>
+      <w>60</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>Partecipazione
 --
@@ -1838,10 +1682,10 @@ fg=red
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>447</x>
-      <y>420</y>
-      <w>30</w>
-      <h>18</h>
+      <x>615</x>
+      <y>655</y>
+      <w>50</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Partecipa</panel_attributes>
     <additional_attributes/>
@@ -1849,23 +1693,124 @@ fg=red
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>468</x>
-      <y>420</y>
-      <w>44</w>
-      <h>14</h>
+      <x>650</x>
+      <y>655</y>
+      <w>74</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>m2=N</panel_attributes>
-    <additional_attributes>9;9;39;9</additional_attributes>
+    <additional_attributes>15;15;65;15</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>453</x>
-      <y>429</y>
-      <w>14</w>
-      <h>53</h>
+      <x>625</x>
+      <y>670</y>
+      <w>24</w>
+      <h>94</h>
     </coordinates>
     <panel_attributes>m1= 1 </panel_attributes>
-    <additional_attributes>9;9;9;48</additional_attributes>
+    <additional_attributes>15;15;15;85</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>735</x>
+      <y>745</y>
+      <w>50</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Insegna in
+--
+
+bg=gray
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>670</x>
+      <y>250</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Presenza
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>575</x>
+      <y>255</y>
+      <w>104</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>m1=1</panel_attributes>
+    <additional_attributes>15;105;95;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>715</x>
+      <y>255</y>
+      <w>89</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>m2=N</panel_attributes>
+    <additional_attributes>15;15;80;15</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>795</x>
+      <y>250</y>
+      <w>85</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>Assenza
+--
+-Data
+bg=gray
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>505</x>
+      <y>670</y>
+      <w>324</w>
+      <h>159</h>
+    </coordinates>
+    <panel_attributes>m1=  N</panel_attributes>
+    <additional_attributes>15;15;15;150;315;150</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.EER_Rel_Diamond</type>
+    <coordinates>
+      <x>820</x>
+      <y>800</y>
+      <w>60</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Organizza
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>835</x>
+      <y>385</y>
+      <w>104</w>
+      <h>424</h>
+    </coordinates>
+    <panel_attributes>m2= 1
+bg=gray</panel_attributes>
+    <additional_attributes>15;415;15;350;20;15;95;15</additional_attributes>
   </element>
 </diagram>
