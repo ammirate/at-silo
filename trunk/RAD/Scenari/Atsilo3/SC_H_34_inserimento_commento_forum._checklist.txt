@@ -1,14 +1,16 @@
-[ ] Il nome dello scenario è consistente con il contenuto
-[ ] Possiede dati che ne caratterizzano l'istanza
+[X] Il nome dello scenario è consistente con il contenuto
+[X] Possiede dati che ne caratterizzano l'istanza
 [ ] Non sono presenti riferimenti a elementi di interfaccia precisi
-[ ] Il contesto è ben caratterizzato
-[ ] Il sistema non è citato come attore
-[ ] Si fa sempre riferimento al sistema con il termine "il sistema"
+[X] Il contesto è ben caratterizzato
+[X] Il sistema non è citato come attore
+[X] Si fa sempre riferimento al sistema con il termine "il sistema"
 [ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
-[ ] Lo scenario possiede un identificativo univoco
-[ ] Il file è nominato secondo la corretta nomenclatura
-[ ] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
-[ ] Partecipano allo scenario solo attori riportati nel paragrafo "Attori"
-[ ] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
+[X] Lo scenario possiede un identificativo univoco
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+[X] Partecipano allo scenario solo attori riportati nel paragrafo "Attori"
+[X] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
 
 ALTRE ANNOTAZIONI:
+Nel punto 7 del flusso degli eventi si parla chiaramente di "form", essendo uno scenario credo sia un dettaglio da rimuovere.
+Nel punto 9 del flusso degli eventi � utilizzata la dicitura "l'utente".

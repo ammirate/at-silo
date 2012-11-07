@@ -1,14 +1,19 @@
 [ ] Il nome dello scenario è consistente con il contenuto
 [ ] Possiede dati che ne caratterizzano l'istanza
 [ ] Non sono presenti riferimenti a elementi di interfaccia precisi
-[ ] Il contesto è ben caratterizzato
+[X] Il contesto è ben caratterizzato
 [ ] Il sistema non è citato come attore
-[ ] Si fa sempre riferimento al sistema con il termine "il sistema"
+[X] Si fa sempre riferimento al sistema con il termine "il sistema"
 [ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
-[ ] Lo scenario possiede un identificativo univoco
-[ ] Il file è nominato secondo la corretta nomenclatura
+[X] Lo scenario possiede un identificativo univoco
+[X] Il file è nominato secondo la corretta nomenclatura
 [ ] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 [ ] Partecipano allo scenario solo attori riportati nel paragrafo "Attori"
 [ ] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
 
 ALTRE ANNOTAZIONI:
+Forse il nome dello scenario non � sufficientemente indicativo.
+L'attore "dipendente dell'asilo" va sostituito con un attore esistente nel sistema, presumibilmente "personale amministrativo" o "impiegato di segreteria".
+Nell'inserimento dei dati non sono specificati dati che inducono alla comprensione del tipo di dato inserito.
+Didascalia migliorabile.
+Credo che nei requisiti funzionali non sia stata ottimamente prevista la gestione dei menu e della mensa in generale.

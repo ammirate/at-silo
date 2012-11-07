@@ -1,14 +1,15 @@
-[ ] Il diagramma è coerente con i casi d'uso rappresentati
-[ ] Tutte le interazioni rispettano le euristiche di Bruegge-Dutoit sui sequence diagrams
-[ ] È presente almeno un Boundary
-[ ] È presente almeno un Control
-[ ] L'azione è iniziata da un attore
-[ ] A ogni chiamata sincrona corrisponde un messaggio di ritorno
+[X] Il diagramma è coerente con i casi d'uso rappresentati
+[X] Tutte le interazioni rispettano le euristiche di Bruegge-Dutoit sui sequence diagrams
+[X] È presente almeno un Boundary
+[X] È presente almeno un Control
+[X] L'azione è iniziata da un attore
+[X] A ogni chiamata sincrona corrisponde un messaggio di ritorno
 [ ] Le linee di vita non terminate sono allineate
 [ ] L'inizio della linea di vita è allineato al punto di ricezione del corrispondente messaggio di creazione
 [ ] La fine della linea di vita è allineata alla fine della linea di attività corrispondente al messaggio di distruzione
 [ ] L'inizio della barra di attività è allineato al punto di ricezione del corrispondente messaggio sincrono
 [ ] La fine della barra di attività è allineata al punto di partenza del corrispondente messaggio di ritorno
-[ ] Gli stereotipi sono utilizzati in modo corretto.
+[X] Gli stereotipi sono utilizzati in modo corretto.
 
 ALTRE ANNOTAZIONI:
+L'attore "UtenteForum" suppongo sia l'attore "Utente del sistema" o chi per esso...

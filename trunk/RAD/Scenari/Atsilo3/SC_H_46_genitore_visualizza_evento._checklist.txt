@@ -1,14 +1,20 @@
-[ ] Il nome dello scenario √® consistente con il contenuto
-[ ] Possiede dati che ne caratterizzano l'istanza
+[X] Il nome dello scenario √® consistente con il contenuto
+[X] Possiede dati che ne caratterizzano l'istanza
 [ ] Non sono presenti riferimenti a elementi di interfaccia precisi
-[ ] Il contesto √® ben caratterizzato
-[ ] Il sistema non √® citato come attore
+[X] Il contesto √® ben caratterizzato
+[X] Il sistema non √® citato come attore
 [ ] Si fa sempre riferimento al sistema con il termine "il sistema"
 [ ] √à sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
-[ ] Lo scenario possiede un identificativo univoco
-[ ] Il file √® nominato secondo la corretta nomenclatura
-[ ] √à presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+[X] Lo scenario possiede un identificativo univoco
+[X] Il file √® nominato secondo la corretta nomenclatura
+[X] √à presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 [ ] Partecipano allo scenario solo attori riportati nel paragrafo "Attori"
-[ ] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
+[X] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
 
 ALTRE ANNOTAZIONI:
+Assolutamente da rivedere sintassi e punteggiatura.
+Nel punto 4 del flusso degli eventi non c'è il chiaro riferimento al sistema, sembra che la lista degli eventi appaia sullo schermo per opera divina.
+Nel flusso degli eventi c'è chiaro riferimento a link, pulsanti e vari generi di interfaccia. Troppo specifico.
+Chi è Luca? [suppongo sia il figlio di Marta, ma credo sarebbe carino specificarlo, nonostante non sia un attore, oppure depennarlo direttamente]
+Forse la descrizione nella didascalia è migliorabile.
+Nei requisiti funzionali non è chiaramente specificato che anche un genitore può ricevere notifiche riguardanti gli eventi, ma sembra che la funzione sia esclusivamente dedicata al personale.
