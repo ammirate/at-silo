@@ -1,14 +1,15 @@
-[ ] Il nome dello scenario è consistente con il contenuto
-[ ] Possiede dati che ne caratterizzano l'istanza
-[ ] Non sono presenti riferimenti a elementi di interfaccia precisi
-[ ] Il contesto è ben caratterizzato
-[ ] Il sistema non è citato come attore
-[ ] Si fa sempre riferimento al sistema con il termine "il sistema"
-[ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
-[ ] Lo scenario possiede un identificativo univoco
-[ ] Il file è nominato secondo la corretta nomenclatura
-[ ] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
-[ ] Partecipano allo scenario solo attori riportati nel paragrafo "Attori"
-[ ] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
+﻿[x] Il nome dello scenario è consistente con il contenuto
+[x] Possiede dati che ne caratterizzano l'istanza
+[x] Non sono presenti riferimenti a elementi di interfaccia precisi
+[x] Il contesto è ben caratterizzato
+[x] Il sistema non è citato come attore
+[x] Si fa sempre riferimento al sistema con il termine "il sistema"
+[x] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
+[x] Lo scenario possiede un identificativo univoco
+[x] Il file è nominato secondo la corretta nomenclatura
+[x] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+[x] Partecipano allo scenario solo attori riportati nel paragrafo "Attori"
+[x] Tutte le funzioni del sistema descritte hanno un requisito funzionale corrispondente.
 
 ALTRE ANNOTAZIONI:
+è descritto come scenario 5
