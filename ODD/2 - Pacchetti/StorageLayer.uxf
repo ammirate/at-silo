@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>960</w>
+      <h>820</h>
+    </coordinates>
+    <panel_attributes>ATasiloStorageLayer
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>10</x>
+      <y>550</y>
+      <w>940</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Team3
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>10</x>
+      <y>30</y>
+      <w>940</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Team1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>10</x>
+      <y>290</y>
+      <w>940</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Team2
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>270</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBAccount
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>30</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Connection
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>500</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBBando
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>730</x>
+      <y>60</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBPersonaleAsilo
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>730</x>
+      <y>170</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBRetta
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>500</x>
+      <y>170</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBBambino
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>270</x>
+      <y>170</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBGenitori
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>20</x>
+      <y>170</y>
+      <w>210</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>DBDomandaIscrizione
+--
+ 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
