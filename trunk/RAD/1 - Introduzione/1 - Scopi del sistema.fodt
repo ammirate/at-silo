@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><meta:initial-creator>Giulio Franco</meta:initial-creator><meta:creation-date>2012-10-13T01:08:16</meta:creation-date><dc:date>2012-10-17T18:58:46.02</dc:date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>4</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="2" meta:word-count="220" meta:character-count="1486" meta:non-whitespace-character-count="1263"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><meta:initial-creator>Giulio Franco</meta:initial-creator><meta:creation-date>2012-10-13T01:08:16</meta:creation-date><dc:date>2012-11-09T08:46:07</dc:date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>5</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="5" meta:word-count="220" meta:character-count="1480" meta:non-whitespace-character-count="1263"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">2</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">2</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">22509</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">14584</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
+   <config:config-item-map-indexed config:name="Views">
+    <config:config-item-map-entry>
+     <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">3002</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">4205</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">22507</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">14582</config:config-item>
+     <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
+     <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
+     <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">80</config:config-item>
+     <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
+    </config:config-item-map-entry>
+   </config:config-item-map-indexed>
   </config:config-item-set>
   <config:config-item-set config:name="ooo:configuration-settings">
    <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
@@ -202,6 +218,12 @@
   <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:text-properties fo:language="it" fo:country="IT"/>
   </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Heading_20_2">
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -223,7 +245,10 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
    <text:h text:style-name="P2" text:outline-level="2">Scopi del sistema</text:h>
-   <text:p text:style-name="P1">Il sistema “At-silo” nasce con l&apos;obiettivo di migliorare ed ottimizzare il servizio di asilo nido messo a disposizione dall&apos;università di Fisciano. <text:line-break/><text:line-break/>L&apos;università offre ai suoi dipendenti ed agli utenti dell&apos;ateneo un servizio di asilo nido per tutti i bambini di età compresa fra i 3 e i 36 mesi. Per motivi storici parte dei posti disponibili ad ospitare i neonati sono messi a disposizione anche per i cittadini del comune di Fisciano.<text:line-break/>Il servizio è avanzato e flessibile, per permettere ai genitori dei bambini di svolgere un&apos;attività lavorativa presso l&apos;ateneo, dove gli orari non sono uniformi. <text:line-break/><text:line-break/>A causa di diversi problemi burocratici dovuti ad una complessa gestione dei dati da parte di più enti amministrativi, risulta difficile gestire l&apos;asilo nido ed accedere alle schede contenenti le generalità e le informazioni principali legate agli iscritti e beneficiari del servizio.<text:line-break/><text:line-break/>Per ovviare a queste difficoltà, viene proposto un sistema informatico che automatizzi i processi informativi e gestionali del servizio, semplificandone la fruizione e l&apos;amministrazione, mantenendo tutta la flessibilità che attualmente lo caratterizza. Inoltre per migliorare sensibilmente la qualità del servizio, verrà reso disponibile un sito web interattivo, attraverso il quale i genitori di tutti i bambini iscritti all&apos;asilo nido potranno compilare questionari e riportare feedback sui servizi offerti, facilitando lo scambio di informazioni fra la dirigenza ed i genitori.</text:p>
+   <text:p text:style-name="P1">Il sistema “At-silo” nasce con l&apos;obiettivo di migliorare ed ottimizzare il servizio di asilo nido messo a disposizione dall&apos;università di Fisciano. </text:p>
+   <text:p text:style-name="P1">L&apos;università offre ai suoi dipendenti ed agli utenti dell&apos;ateneo un servizio di asilo nido per tutti i bambini di età compresa fra i 3 e i 36 mesi. Per motivi storici parte dei posti disponibili ad ospitare i neonati sono messi a disposizione anche per i cittadini del comune di Fisciano.<text:line-break/>Il servizio è avanzato e flessibile, per permettere ai genitori dei bambini di svolgere un&apos;attività lavorativa presso l&apos;ateneo, dove gli orari non sono uniformi. </text:p>
+   <text:p text:style-name="P1">A causa di diversi problemi burocratici dovuti ad una complessa gestione dei dati da parte di più enti amministrativi, risulta difficile gestire l&apos;asilo nido ed accedere alle schede contenenti le generalità e le informazioni principali legate agli iscritti e beneficiari del servizio.</text:p>
+   <text:p text:style-name="P1">Per ovviare a queste difficoltà, viene proposto un sistema informatico che automatizzi i processi informativi e gestionali del servizio, semplificandone la fruizione e l&apos;amministrazione, mantenendo tutta la flessibilità che attualmente lo caratterizza. Inoltre per migliorare sensibilmente la qualità del servizio, verrà reso disponibile un sito web interattivo, attraverso il quale i genitori di tutti i bambini iscritti all&apos;asilo nido potranno compilare questionari e riportare feedback sui servizi offerti, facilitando lo scambio di informazioni fra la dirigenza ed i genitori.</text:p>
   </office:text>
  </office:body>
 </office:document>
