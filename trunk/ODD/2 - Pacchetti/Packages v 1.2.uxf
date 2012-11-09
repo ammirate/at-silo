@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>120</x>
+      <y>190</y>
+      <w>480</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*Application*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>300</x>
+      <y>0</y>
+      <w>510</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>*Presentation*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>380</x>
+      <y>80</y>
+      <w>50</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=.&lt;</panel_attributes>
+    <additional_attributes>30;130;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>40</y>
+      <w>320</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;300;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>40</y>
+      <w>50</w>
+      <h>900</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>30;30;30;880</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1010</x>
+      <y>710</y>
+      <w>110</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=.&lt;</panel_attributes>
+    <additional_attributes>30;220;90;220;90;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>150</x>
+      <y>840</y>
+      <w>890</w>
+      <h>630</h>
+    </coordinates>
+    <panel_attributes>*Beans*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>690</x>
+      <y>190</y>
+      <w>640</w>
+      <h>550</h>
+    </coordinates>
+    <panel_attributes>*Storage*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.Text</type>
+    <coordinates>
+      <x>790</x>
+      <y>760</y>
+      <w>100</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>370</x>
+      <y>560</y>
+      <w>240</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>*Exception*
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>580</y>
+      <w>390</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>30;30;370;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>0</x>
+      <y>890</y>
+      <w>170</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>30;30;150;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>380</y>
+      <w>50</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>30;30;30;460</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>480</x>
+      <y>640</y>
+      <w>460</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+</panel_attributes>
+    <additional_attributes>30;30;30;140;440;140;440;100</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>470</x>
+      <y>380</y>
+      <w>50</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=.&lt;</panel_attributes>
+    <additional_attributes>30;210;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>780</x>
+      <y>40</y>
+      <w>340</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>320;160;320;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>740</x>
+      <y>240</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Connection*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>530</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBRegistro*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>370</x>
+      <y>260</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Gestione Feedback*
+fg=#009933
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>160</x>
+      <y>260</y>
+      <w>170</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Gestione Management*
+fg=#009933
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1140</x>
+      <y>530</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBEventi*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>740</x>
+      <y>630</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBQuestionario*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>240</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBAccount*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1140</x>
+      <y>430</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBPagamenti*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>740</x>
+      <y>530</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBTirocinanti*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>630</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBMenùMensa*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>740</x>
+      <y>430</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBBambino*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1140</x>
+      <y>240</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBBando*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>740</x>
+      <y>330</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBPersonaleAsilo*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>1140</x>
+      <y>330</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBGenitore*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>330</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBRetta*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>430</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBServizi*
+--
+
+fg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>890</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Account*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>890</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Bambino*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>890</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*PersonaleAsilo*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>990</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Retta*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>990</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Genitore*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>1090</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Servizio*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>1090</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Pagamenti*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>850</x>
+      <y>890</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Domanda Iscrizione*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>1190</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Registro*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>1190</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Evento*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>1290</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Questionario*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>850</x>
+      <y>1290</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*CampoDomanda*
+*Questionario*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>890</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Bando*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>1290</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Domanda*
+*Questionario*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>1190</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Psicopedagogo*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>1290</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Responsabile*
+*Questionari*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>1290</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Risposta*
+*Questionario*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>850</x>
+      <y>1190</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Programma educativo*
+*settimanale*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>1190</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Feedback*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>990</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Orario Utente*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>680</x>
+      <y>1090</y>
+      <w>140</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Fattura*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>1090</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Extra*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>990</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Classe*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>850</x>
+      <y>1090</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Educatore Didattico*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>850</x>
+      <y>990</y>
+      <w>150</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Tirocinante*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>190</x>
+      <y>1380</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Assenza*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>350</x>
+      <y>1380</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*Attività*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>1380</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>*MenùMensa*
+--
+
+fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
