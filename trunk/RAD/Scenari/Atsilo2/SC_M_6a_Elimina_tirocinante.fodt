@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-15T20:33:37.07</meta:creation-date><dc:date>2012-11-09T17:53:47.28</dc:date><meta:editing-duration>PT4H39M8S</meta:editing-duration><meta:editing-cycles>19</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="17" meta:word-count="164" meta:character-count="1127" meta:non-whitespace-character-count="990"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-15T20:33:37.07</meta:creation-date><dc:date>2012-11-09T18:29:39.85</dc:date><meta:editing-duration>PT4H39M8S</meta:editing-duration><meta:editing-cycles>20</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="17" meta:word-count="164" meta:character-count="1136" meta:non-whitespace-character-count="999"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">4022</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">3810</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">34980</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">15004</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">14183</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">22957</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">17159</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">20228</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">16362</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">4022</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">3810</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">34978</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">19024</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">17992</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">14309</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">45135</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -343,7 +343,7 @@
       <text:p text:style-name="Text_20_body">Nome scenario:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B1" office:value-type="string">
-      <text:p text:style-name="P1">Elimina Tirocinante</text:p>
+      <text:p text:style-name="Text_20_body">Elimina Tirocinante</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella9.2">
@@ -359,7 +359,7 @@
       <text:p text:style-name="Text_20_body">Flusso degli eventi </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
-      <text:list xml:id="list37662414" text:style-name="L1">
+      <text:list xml:id="list38419263" text:style-name="L1">
        <text:list-item text:start-value="1">
         <text:p text:style-name="P4">Federica, responsabile scientifico, deve eliminare dal registro uno studente che ha completato la sua attività di tirocinio presso l&apos;asilo Mazzetti, dopo averne controllato i dati ai fini della documentazione finale.</text:p>
        </text:list-item>
@@ -367,39 +367,39 @@
         <text:p text:style-name="P4">Federica si connette alla rete e accede al sito <text:span text:style-name="T2">dell&apos;asilo Mazzetti.</text:span></text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P4">Federica inserisce username e password per la sua autenticazione</text:p>
+        <text:p text:style-name="P4">Federica inserisce username e password per la sua autenticazione.</text:p>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P4">Il sistema mostra una schermata con tutte le possibili operazioni</text:p>
+          <text:p text:style-name="P4">Il sistema mostra una schermata con tutte le possibili operazioni.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P4">Federica sceglie l&apos;area del sito riguardante l&apos;eliminazione dei tirocinanti dal sistema</text:p>
+        <text:p text:style-name="P4">Federica sceglie l&apos;area del sito riguardante l&apos;eliminazione dei tirocinanti dal sistema.</text:p>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P4">Il sistema mostra l&apos;elenco dei tirocinanti associati all&apos;asilo Mazzetti</text:p>
+          <text:p text:style-name="P4">Il sistema mostra l&apos;elenco dei tirocinanti associati all&apos;asilo Mazzetti.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P4">Federica seleziona la tirocinante “Mena De Rosa”, controlla i dati e sottomette al sistema la sua cancellazione</text:p>
+        <text:p text:style-name="P4">Federica seleziona la tirocinante “Mena De Rosa”, controlla i dati e sottomette al sistema la sua cancellazione.</text:p>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P4">Il sistema mostra un avviso di conferma per l&apos;operazione che andrà ad effettuare</text:p>
+          <text:p text:style-name="P4">Il sistema mostra un avviso di conferma per l&apos;operazione che andrà ad effettuare.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P4">Federica conferma l&apos;eliminazione</text:p>
+        <text:p text:style-name="P4">Federica conferma l&apos;eliminazione.</text:p>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P4">Il sistema elimina i dati relativi alla tirocinante e notifica l&apos;avvenuta cancellazione</text:p>
+          <text:p text:style-name="P4">Il sistema elimina i dati relativi alla tirocinante e notifica l&apos;avvenuta cancellazione.</text:p>
          </text:list-item>
         </text:list>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P4">Federica si disconnette dal sistema</text:p>
+        <text:p text:style-name="P4">Federica si disconnette dal sistema.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
