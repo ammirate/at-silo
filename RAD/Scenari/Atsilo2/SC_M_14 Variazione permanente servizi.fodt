@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-18T10:02:03.82</meta:creation-date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>7</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-09T18:03:35.06</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="23" meta:word-count="193" meta:character-count="1247" meta:non-whitespace-character-count="1087"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-18T10:02:03.82</meta:creation-date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>8</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-09T18:31:05.59</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="23" meta:word-count="193" meta:character-count="1248" meta:non-whitespace-character-count="1088"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">11642</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">11853</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">34980</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="int">14183</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">20004</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">11324</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">19417</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">18140</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">11642</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">11853</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">34978</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">25823</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">26035</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">796694</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">926369</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -246,15 +246,19 @@
   <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="000c2816"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-style="normal" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="000c2816"/>
   </style:style>
@@ -356,77 +360,77 @@
       <text:p text:style-name="Text_20_body">Flusso degli eventi </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
-      <text:list xml:id="list38148435" text:style-name="L1">
+      <text:list xml:id="list38437203" text:style-name="L1">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P5">Anna, madre di Giovanni, vuole modificare permanentemente la fascia utenza oraria di suo figlio, passando dalla fascia Full time a quella Part-time mattutina con pranzo compreso.</text:p>
-        <text:p text:style-name="P5"/>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P5">Anna accede al PC e si connette alla rete.</text:p>
-        <text:p text:style-name="P5"/>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P5">Anna accede al sito dell&apos;asilo Mazzetti.</text:p>
-        <text:p text:style-name="P5"/>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P5">Anna accede all&apos;area per le modifiche dell&apos;orario.</text:p>
-        <text:p text:style-name="P5"/>
-        <text:list>
-         <text:list-item>
-          <text:p text:style-name="P4">Il sistema visualizza le fasce orarie predefinite e un campo per settare gli orari personalizzati.</text:p>
-          <text:p text:style-name="P5"/>
-         </text:list-item>
-        </text:list>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P5">Anna setta le nuove impostazioni di orario permanenti per l&apos;intero anno scolastico e conferma il servizio mensa.</text:p>
-        <text:p text:style-name="P5"/>
-        <text:list>
-         <text:list-item>
-          <text:p text:style-name="P5">Il sistema visualizza un avviso di richiesta inviata.</text:p>
-          <text:p text:style-name="P5"/>
-         </text:list-item>
-        </text:list>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P5">Anna esce dal sito.</text:p>
-        <text:p text:style-name="P5"/>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P5">Luca, direttore dell&apos;asilo, accede al sito dell&apos;asilo Mazzetti.</text:p>
-        <text:p text:style-name="P5"/>
-        <text:list>
-         <text:list-item>
-          <text:p text:style-name="P5">Il sistema mostra una nuova notifica nell&apos;area comunicazioni.</text:p>
-          <text:p text:style-name="P5"/>
-         </text:list-item>
-        </text:list>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P6">Luca visualizza la notifica e prende visione della richiesta di</text:p>
-        <text:p text:style-name="P6"><text:s/>variazione permanente orario</text:p>
+        <text:p text:style-name="P6">Anna, madre di Giovanni, vuole modificare permanentemente la fascia utenza oraria di suo figlio, passando dalla fascia Full time a quella Part-time mattutina con pranzo compreso.</text:p>
         <text:p text:style-name="P6"/>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">Luca verifica i dati del bambino ed approva la modifica permanente.</text:p>
-        <text:p text:style-name="P5"/>
+        <text:p text:style-name="P6">Anna accede al PC e si connette alla rete.</text:p>
+        <text:p text:style-name="P6"/>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6">Anna accede al sito dell&apos;asilo Mazzetti.</text:p>
+        <text:p text:style-name="P6"/>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6">Anna accede all&apos;area per le modifiche dell&apos;orario.</text:p>
+        <text:p text:style-name="P6"/>
         <text:list>
          <text:list-item>
-          <text:p text:style-name="P6">Il sistema verifica i dati e memorizza le nuove impostazioni,</text:p>
-          <text:p text:style-name="P6"><text:s/>modificando l&apos;orario del bambino automaticamente.</text:p>
+          <text:p text:style-name="P5">Il sistema visualizza le fasce orarie predefinite e un campo per settare gli orari personalizzati.</text:p>
           <text:p text:style-name="P6"/>
          </text:list-item>
         </text:list>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5"><text:s/>Luca si disconnette dal sito.</text:p>
+        <text:p text:style-name="P6">Anna setta le nuove impostazioni di orario permanenti per l&apos;intero anno scolastico e conferma il servizio mensa.</text:p>
+        <text:p text:style-name="P6"/>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P6">Il sistema visualizza un avviso di richiesta inviata.</text:p>
+          <text:p text:style-name="P6"/>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6">Anna esce dal sito.</text:p>
+        <text:p text:style-name="P6"/>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6">Luca, direttore dell&apos;asilo, accede al sito dell&apos;asilo Mazzetti.</text:p>
+        <text:p text:style-name="P6"/>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P6">Il sistema mostra una nuova notifica nell&apos;area comunicazioni.</text:p>
+          <text:p text:style-name="P6"/>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P7">Luca visualizza la notifica e prende visione della richiesta di</text:p>
+        <text:p text:style-name="P7"><text:s/>variazione permanente orario.</text:p>
+        <text:p text:style-name="P7"/>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6">Luca verifica i dati del bambino ed approva la modifica permanente.</text:p>
+        <text:p text:style-name="P6"/>
+        <text:list>
+         <text:list-item>
+          <text:p text:style-name="P7">Il sistema verifica i dati e memorizza le nuove impostazioni,</text:p>
+          <text:p text:style-name="P7"><text:s/>modificando l&apos;orario del bambino automaticamente.</text:p>
+          <text:p text:style-name="P7"/>
+         </text:list-item>
+        </text:list>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6"><text:s/>Luca si disconnette dal sito.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P3">SC 14: Mamma Anna modifica permanentemente la fascia oraria di suo figlio.</text:p>
+   <text:p text:style-name="P4">SC 14: Mamma Anna modifica permanentemente la fascia oraria di suo figlio.</text:p>
   </office:text>
  </office:body>
 </office:document>
