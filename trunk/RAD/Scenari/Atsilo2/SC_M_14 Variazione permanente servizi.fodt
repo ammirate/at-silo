@@ -334,7 +334,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list2878706891" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P4">Anna, madre di Giovanni, vuole modificare permanentemente la fascia utenza oraria di suo figlio, passando dalla fascia Full time a quella Part-time mattutina con pranzo compreso.</text:p>
        </text:list-item>
        <text:list-item>

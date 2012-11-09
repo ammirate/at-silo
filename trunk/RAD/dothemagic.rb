@@ -41,7 +41,7 @@ def get_author(item, text)
 	m = xp.match(text)
 	if m && ["Azione_20_sistema", "Azione_20_attore"].index(m[1])
 		return m[1]
-	elsif item.match(/^(\d|\s|[\._-\)\(])*il sistema/i)
+	elsif item.match(/^(\d|\s|[-\._\)\(])*il sistema/i)
 		return "Azione_20_sistema"
 	else
 		return "Azione_20_attore"

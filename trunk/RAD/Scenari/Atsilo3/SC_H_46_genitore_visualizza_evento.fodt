@@ -348,7 +348,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
       <text:list xml:id="list15920330281" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P6">Marta, genitore di luca,mentre sta navigando all&apos; interno del sistema <text:s/>nel suo studio a casa, viene interrotta dalle grida di gioia del figlio che è appena tornato da scuola con il padre. Marta va incontro al figlio per salutarlo e chiedergli delle sue attività svolte all&apos; asilo.Luca le racconta della sua giornata e le parla di un nuovo evento :<text:span text:style-name="T3">&quot;Visita guidata&quot;.</text:span></text:p>
        </text:list-item>
        <text:list-item>

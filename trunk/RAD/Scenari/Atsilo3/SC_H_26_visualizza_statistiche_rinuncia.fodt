@@ -353,7 +353,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
       <text:list xml:id="list13194563921" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P7">Marco, responsabile dei questionari, sa che è giunto il momento di tirare le somme e capire con certezza ciò che la scuola deve cambiare per offrire servizi sempre migliori e quindi evitare rinunce di iscrizioni all&apos; asilo. Lo fa una volta loggatosi nel sistema attraverso lo studio e la visualizzazione delle statiche che vengono definite alla fine di ogni anno. </text:p>
        </text:list-item>
       </text:list>

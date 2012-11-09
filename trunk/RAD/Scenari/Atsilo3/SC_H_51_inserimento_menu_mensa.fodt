@@ -374,7 +374,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
       <text:list xml:id="list8943291901" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P10">Marco, dipendente dell&apos; asilo,mentre sta navigando all&apos; interno del sistema sistema nel suo ufficio, decide di caricare il nuovo menu settimanale della mensa<text:span text:style-name="T2">.</text:span></text:p>
        </text:list-item>
       </text:list>

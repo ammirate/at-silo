@@ -335,7 +335,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list984082941" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P3">Federica, responsabile scientifico, deve eliminare dal registro uno studente che ha completato la sua attività di tirocinio presso l&apos;asilo Mazzetti, dopo averne controllato i dati ai fini della documentazione finale.</text:p>
        </text:list-item>
        <text:list-item>
