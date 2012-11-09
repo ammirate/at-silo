@@ -340,7 +340,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list2853485971" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P4">Giulio è nella sua area personale del sistema per visualizzare , in seguito ad una modifica della scelta del servizio offerto dall&apos;asilo Nido, di quali servizi usufruisce Paola Scarpa.</text:p>
        </text:list-item>
       </text:list>

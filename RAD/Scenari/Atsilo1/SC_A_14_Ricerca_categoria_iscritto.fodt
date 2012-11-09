@@ -337,7 +337,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
       <text:list xml:id="list8048138171" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P4">Giulio, direttore dell&apos;asilo,deve <text:s/>visualizzare a quale categoria appartiene Antonia Somma, in seguito ad un erronea collocazione </text:p>
         <text:p text:style-name="P4"/>
        </text:list-item>

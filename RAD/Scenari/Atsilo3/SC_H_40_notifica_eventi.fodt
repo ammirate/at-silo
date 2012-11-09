@@ -360,7 +360,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
       <text:list xml:id="list2477907861" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P8">Marta, maestra dell&apos; asilo,mentre sta navigando all&apos; interno del sistema nel suo ufficio, sposta la sua attenzione <text:span text:style-name="T4">da quello che stava facendo alla notifica di un evento imminente.</text:span></text:p>
        </text:list-item>
       </text:list>

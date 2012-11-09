@@ -362,7 +362,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list2878706891" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P8">Paolo ha ricevuto una mail da Marco, genitore di Carmen, il quale richiede la rinuncia d&apos;iscrizione di sua figlia.</text:p>
        </text:list-item>
        <text:list-item>

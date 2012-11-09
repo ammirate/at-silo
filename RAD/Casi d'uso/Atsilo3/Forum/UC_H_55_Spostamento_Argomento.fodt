@@ -608,20 +608,20 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
       <text:list xml:id="list35445273" text:style-name="L1">
-       <text:list-item>
-        <text:p text:style-name="P11">.L&apos;utente seleziona un argomento</text:p>
+       <text:list-item text:start-value="1">
+        <text:p text:style-name="Azione_20_attore">.L&apos;utente seleziona un argomento</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P12">L&apos;utente seleziona la funzionalità di spostamento dell&apos;argomento</text:p>
+        <text:p text:style-name="Azione_20_attore">L&apos;utente seleziona la funzionalità di spostamento dell&apos;argomento</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P13">.Il sistema mostra le varie sezioni dove è possibile spostare l&apos;argomento</text:p>
+        <text:p text:style-name="Azione_20_sistema">.Il sistema mostra le varie sezioni dove è possibile spostare l&apos;argomento</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P12">.L&apos;utente seleziona una sezione dove spostare l&apos;argomento</text:p>
+        <text:p text:style-name="Azione_20_attore">.L&apos;utente seleziona una sezione dove spostare l&apos;argomento</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P13">.Il sistema memorizza l&apos;argomento nella sezione scelta dall&apos;utente</text:p>
+        <text:p text:style-name="Azione_20_sistema">.Il sistema memorizza l&apos;argomento nella sezione scelta dall&apos;utente</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>

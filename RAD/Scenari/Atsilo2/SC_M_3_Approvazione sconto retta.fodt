@@ -338,7 +338,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list984082941" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P3">Ettore dirigente dell&apos;asilo riceve una mail la quale dice che anche nell&apos;anno 2012/2013 dovrà applicare lo sconto al personale universitario sulla retta mensile dell&apos;asilo.</text:p>
        </text:list-item>
        <text:list-item>

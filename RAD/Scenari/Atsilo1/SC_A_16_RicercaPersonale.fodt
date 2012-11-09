@@ -337,7 +337,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list5259536691" text:style-name="L1">
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P4">Giulio è nella sua area personale del sistema <text:s/>&apos;Direttore&apos; per visualizzare, in seguito ad una revisione del personale docenti,se Luca Amato è stato aggiunto alla lista degli Insegnanti</text:p>
         <text:p text:style-name="P4"/>
        </text:list-item>

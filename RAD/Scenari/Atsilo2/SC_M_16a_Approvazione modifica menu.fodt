@@ -331,10 +331,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
       <text:list xml:id="list2878706891" text:style-name="L1">
-       <text:list-header>
-        <text:p text:style-name="P4"/>
-       </text:list-header>
-       <text:list-item>
+       <text:list-item text:start-value="1">
         <text:p text:style-name="P4">Antonella, mamma di un bimbo di 3 anni effettua il login al sistema per modificare il menù del giorno. </text:p>
        </text:list-item>
        <text:list-item>
