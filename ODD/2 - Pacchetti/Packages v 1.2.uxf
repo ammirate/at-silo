@@ -243,8 +243,8 @@ fg=#009933
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1140</x>
-      <y>530</y>
+      <x>740</x>
+      <y>630</y>
       <w>160</w>
       <h>70</h>
     </coordinates>
@@ -257,9 +257,9 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>740</x>
+      <x>940</x>
       <y>630</y>
-      <w>160</w>
+      <w>170</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>*DBQuestionario*
@@ -285,8 +285,8 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>1140</x>
-      <y>430</y>
+      <x>740</x>
+      <y>530</y>
       <w>160</w>
       <h>70</h>
     </coordinates>
@@ -299,7 +299,7 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>740</x>
+      <x>1140</x>
       <y>530</y>
       <w>160</w>
       <h>70</h>
@@ -313,9 +313,9 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>940</x>
+      <x>1140</x>
       <y>630</y>
-      <w>170</w>
+      <w>160</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>*DBMenùMensa*
@@ -327,9 +327,9 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>740</x>
+      <x>940</x>
       <y>430</y>
-      <w>160</w>
+      <w>170</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>*DBBambino*
@@ -383,9 +383,9 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>940</x>
-      <y>330</y>
-      <w>170</w>
+      <x>740</x>
+      <y>430</y>
+      <w>160</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>*DBRetta*
@@ -397,9 +397,9 @@ fg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>940</x>
+      <x>1140</x>
       <y>430</y>
-      <w>170</w>
+      <w>160</w>
       <h>70</h>
     </coordinates>
     <panel_attributes>*DBServizi*
@@ -803,6 +803,20 @@ fg=#CC3300</panel_attributes>
 --
 
 fg=#CC3300</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>940</x>
+      <y>330</y>
+      <w>170</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*DBDomandaIscrizione*
+--
+
+fg=blue</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
