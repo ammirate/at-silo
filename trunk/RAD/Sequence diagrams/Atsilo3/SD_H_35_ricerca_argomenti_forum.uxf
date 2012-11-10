@@ -40,11 +40,12 @@
       <x>180</x>
       <y>130</y>
       <w>131</w>
-      <h>81</h>
+      <h>101</h>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
-CercaForumButton</panel_attributes>
+InserimentoChiave
+Form</panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
 drawCircle(w2,26, 26);
@@ -82,12 +83,12 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>200</x>
-      <y>180</y>
+      <y>200</y>
       <w>50</w>
-      <h>110</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>30;30;30;90</additional_attributes>
+    <additional_attributes>30;30;30;70</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
@@ -162,11 +163,10 @@ ricerca()</panel_attributes>
       <x>210</x>
       <y>310</y>
       <w>180</w>
-      <h>94</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-CercaForumButton
-premuto</panel_attributes>
+ChiaveInserita()</panel_attributes>
     <additional_attributes>160;50;30;50</additional_attributes>
   </element>
   <element>
@@ -380,8 +380,7 @@ crea()</panel_attributes>
     </coordinates>
     <panel_attributes>// Modify the text below and
 // observe the element preview.
-InserimentoChiave
-Form
+CercaForumButton
 </panel_attributes>
     <additional_attributes/>
     <custom_code>int w2 = width / 2;
@@ -415,5 +414,18 @@ for (String textline : textlines) {
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>30;30;30;400</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>520</x>
+      <y>400</y>
+      <w>180</w>
+      <h>94</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+CercaForum
+ButtonPremuto</panel_attributes>
+    <additional_attributes>160;50;30;50</additional_attributes>
   </element>
 </diagram>
