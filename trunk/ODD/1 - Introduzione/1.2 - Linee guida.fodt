@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-07T00:29:36</meta:creation-date><meta:editing-duration>PT1H58M4S</meta:editing-duration><meta:editing-cycles>9</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-11-07T02:44:33</dc:date><meta:document-statistic meta:table-count="4" meta:image-count="0" meta:object-count="0" meta:page-count="3" meta:paragraph-count="104" meta:word-count="904" meta:character-count="3859" meta:non-whitespace-character-count="5001"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../../../../../../.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T00:29:35"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-07T00:29:36</meta:creation-date><meta:editing-duration>PT2H45M20S</meta:editing-duration><meta:editing-cycles>13</meta:editing-cycles><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><dc:date>2012-11-09T02:15:41</dc:date><meta:document-statistic meta:table-count="4" meta:image-count="0" meta:object-count="0" meta:page-count="4" meta:paragraph-count="114" meta:word-count="1034" meta:character-count="4175" meta:non-whitespace-character-count="5659"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../../../../../../.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T00:29:35"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">69473</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">91085</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">23086</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="long">15342</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">3244</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">79583</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">5579</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">93606</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">69473</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">91085</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="long">23084</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">84813</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">106426</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -442,14 +442,14 @@
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-  </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1"/>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2"/>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1"/>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2"/>
   <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
@@ -459,12 +459,20 @@
   <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L4">
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L6">
+   <style:text-properties style:text-underline-style="none"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L7">
+   <style:text-properties style:text-underline-style="none"/>
+  </style:style>
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L3"/>
-  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L4"/>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L5"/>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L3"/>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L4"/>
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L5"/>
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L6"/>
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L7"/>
   <style:style style:name="T1" style:family="text">
    <style:text-properties fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
@@ -746,6 +754,110 @@
     </style:list-level-properties>
    </text:list-level-style-number>
   </text:list-style>
+  <text:list-style style:name="L6">
+   <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="2" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="3" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="4" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="5" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="6" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="7" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="8" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="9" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="10" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+  </text:list-style>
+  <text:list-style style:name="L7">
+   <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="2" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="3" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="4" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="5" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="6" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="7" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="8" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="9" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+   <text:list-level-style-number text:level="10" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
+    </style:list-level-properties>
+   </text:list-level-style-number>
+  </text:list-style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -769,53 +881,53 @@
    <text:p text:style-name="Text_20_body">Nell&apos;implementazione del sistema, i programmatori dovranno attenersi alle linee guida di seguito definite.</text:p>
    <text:h text:style-name="Heading_20_3" text:outline-level="3">Classi e Interfacce Java</text:h>
    <text:p text:style-name="Text_20_body">Nella scrittura di codice per le classi Java, ci si atterrà allo standard [<text:bibliography-mark text:identifier="CCJPL" text:bibliography-type="www" text:organizations="Oracle" text:title="Code Conventions for the Java Programming Language" text:year="1999" text:url="http://www.oracle.com/technetwork/java/codeconv-138413.html">[CCJPL]</text:bibliography-mark>] nella sua interezza, con particolare attenzione a:</text:p>
-   <text:list xml:id="list537412834" text:style-name="L1">
+   <text:list xml:id="list129585166" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P3">Convenzioni sui nomi (cap. 9 dello standard);</text:p>
+     <text:p text:style-name="P4">Convenzioni sui nomi (cap. 9 dello standard);</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P3">Struttura dei file (cap. 3 dello standard);</text:p>
+     <text:p text:style-name="P4">Struttura dei file (cap. 3 dello standard);</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P3">Accesso alle variabili (sez. 10.1 dello standard)</text:p>
+     <text:p text:style-name="P4">Accesso alle variabili (sez. 10.1 dello standard)</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P3">Commenti speciali (sez. 10.5.4 dello standard)</text:p>
+     <text:p text:style-name="P4">Commenti speciali (sez. 10.5.4 dello standard)</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P3">Utilizzo degli spazi bianchi (cap. 8 dello standard)</text:p>
+     <text:p text:style-name="P4">Utilizzo degli spazi bianchi (cap. 8 dello standard)</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="Text_20_body">Si praticano, inoltre, le seguenti restrizioni e variazioni:</text:p>
-   <text:list xml:id="list1492777949" text:style-name="L2">
+   <text:list xml:id="list769445909" text:style-name="L2">
     <text:list-item>
-     <text:p text:style-name="P4">I commenti iniziali (sez. 3.1.2 dello standard) sono obbligatori, e <text:span text:style-name="T4">devono</text:span> avere la forma:</text:p>
+     <text:p text:style-name="P5">I commenti iniziali (sez. 3.1.2 dello standard) sono obbligatori, e <text:span text:style-name="T4">devono</text:span> avere la forma:</text:p>
     </text:list-item>
    </text:list>
    <table:table table:name="Tabella2" table:style-name="Tabella2">
     <table:table-column table:style-name="Tabella2.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">/*</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">NomeClasse</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">Breve descrizione della classe</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* Progetto @silo</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* Copyleft</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">Nome del responsabile</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T1"> &lt;</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">email del responsabile</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T1">&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>*/</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">/*</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">NomeClasse</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">Breve descrizione della classe</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* Progetto @silo</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* Copyleft</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>* </text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">Nome del responsabile</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T1"> &lt;</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T2">email del responsabile</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T1">&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s/>*/</text:span></text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:list xml:id="list554837079" text:continue-numbering="true" text:style-name="L2">
+   <text:list xml:id="list1445379750" text:continue-numbering="true" text:style-name="L2">
     <text:list-item>
-     <text:p text:style-name="P4">Tutte le variabili dovrebbero essere private (<text:span text:style-name="Monospace">private</text:span>). Ogni variabile non privata <text:span text:style-name="T4">deve</text:span><text:span text:style-name="T6"> essere preceduta da un commento, che spiega la ragione per cui tale variabile non è privata. Tutte le variabili che non vengono mai modificate dovrebbero essere dichiarate come costanti (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">final</text:span></text:span><text:span text:style-name="T6">).</text:span></text:p>
+     <text:p text:style-name="P5">Tutte le variabili dovrebbero essere private (<text:span text:style-name="Monospace">private</text:span>). Ogni variabile non privata <text:span text:style-name="T4">deve</text:span><text:span text:style-name="T6"> essere preceduta da un commento, che spiega la ragione per cui tale variabile non è privata. Tutte le variabili che non vengono mai modificate </text:span><text:span text:style-name="T4">dovrebbero</text:span><text:span text:style-name="T6"> essere dichiarate come costanti (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">final</text:span></text:span><text:span text:style-name="T6">).</text:span></text:p>
     </text:list-item>
     <text:list-item>
      <text:p text:style-name="P6">L&apos;uso dell&apos;operatore condizionale ternario è scoraggiato.</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P9"><text:span text:style-name="T6">Si </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6"> usare gli spazi per gestire l&apos;indentazione.<text:line-break/>L&apos;unità di indentazione è 4 spazi.<text:line-break/>Le tabulazioni sono di 8 spazi.</text:span></text:p>
+     <text:p text:style-name="P11"><text:span text:style-name="T6">Si </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6"> usare gli spazi per gestire l&apos;indentazione.<text:line-break/>L&apos;unità di indentazione è 4 spazi.<text:line-break/>Le tabulazioni sono di 8 spazi.</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:h text:style-name="Heading_20_3" text:outline-level="3">Base di dati</text:h>
@@ -825,12 +937,12 @@
    <text:h text:style-name="Heading_20_3" text:outline-level="3">Pagine Java lato Server (JSP)</text:h>
    <text:p text:style-name="Text_20_body"><text:span text:style-name="T6">Le pagine JSP </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6">, quando eseguite, produrre, in ogni circostanza, una documento conforme allo standard HTML versione 4.01 “strict” ([</text:span><text:span text:style-name="T6"><text:bibliography-mark text:identifier="HTML41" text:bibliography-type="www" text:author="Dave Raggett, Arnaud Le Hors, W3CIan Jacobs" text:organizations="W3C" text:title="HTML 4.01 Specification" text:year="1999" text:url="http://www.w3.org/TR/html401/">[HTML41]</text:bibliography-mark></text:span><text:span text:style-name="T6">]).</text:span></text:p>
    <text:p text:style-name="Text_20_body"><text:span text:style-name="T6">Le parti Java delle pagine </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6"> aderire alle convenzioni per la codifica in Java, con le seguenti puntualizzazioni:</text:span></text:p>
-   <text:list xml:id="list1951251204" text:style-name="L3">
+   <text:list xml:id="list409212199" text:style-name="L3">
     <text:list-item>
-     <text:p text:style-name="P10"><text:soft-page-break/><text:span text:style-name="T6">Il tag di apertura (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">&lt;%</text:span></text:span><text:span text:style-name="T6">) è seguito immediatamente dalla fine della riga;</text:span></text:p>
+     <text:p text:style-name="P12"><text:soft-page-break/><text:span text:style-name="T6">Il tag di apertura (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">&lt;%</text:span></text:span><text:span text:style-name="T6">) è seguito immediatamente dalla fine della riga;</text:span></text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P10"><text:span text:style-name="T6">Il tag di chiusura (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">%&gt;</text:span></text:span><text:span text:style-name="T6">) si trova all&apos;inizio di una riga;</text:span></text:p>
+     <text:p text:style-name="P12"><text:span text:style-name="T6">Il tag di chiusura (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">%&gt;</text:span></text:span><text:span text:style-name="T6">) si trova all&apos;inizio di una riga;</text:span></text:p>
     </text:list-item>
     <text:list-item>
      <text:p text:style-name="P7">È possibile emendare alle due regole precedenti, se il corpo del codice Java consiste in una singola istruzione:</text:p>
@@ -840,22 +952,22 @@
     <table:table-column table:style-name="Tabella1.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Accettabile --&gt; </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;% for (String par : paragraphs) {%&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;p class=&apos;item&apos;&gt;&lt;% out.print(par); %&gt;&lt;/p&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;% } %&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"/></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Non accettabile --&gt; </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;p class=&apos;item&apos;&gt;&lt;% List&lt;String&gt; paragraphs = getParagraphs();</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">out.print(paragraphs.get(i++));%&gt;&lt;/p&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Accettabile --&gt; </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;% for (String par : paragraphs) {%&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;p class=&apos;item&apos;&gt;&lt;% out.print(par); %&gt;&lt;/p&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;% } %&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"/></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Non accettabile --&gt; </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;p class=&apos;item&apos;&gt;&lt;% List&lt;String&gt; paragraphs = getParagraphs();</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">out.print(paragraphs.get(i++));%&gt;&lt;/p&gt;</text:span></text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P5">Il codice HTML, Javascript e CSS prodotto deve attenersi alle relative convenzioni.</text:p>
+   <text:p text:style-name="P2">Il codice HTML, Javascript e CSS prodotto deve attenersi alle relative convenzioni.</text:p>
    <text:h text:style-name="Heading_20_3" text:outline-level="3">Pagine HTML</text:h>
    <text:p text:style-name="Text_20_body"><text:span text:style-name="T6">Le pagine HTML, statiche e dinamiche, </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6"> essere totalmente aderenti allo standard HTML versione 4.01 “strict” ([</text:span><text:span text:style-name="T6"><text:bibliography-mark text:identifier="HTML41" text:bibliography-type="www" text:author="Dave Raggett, Arnaud Le Hors, W3CIan Jacobs" text:organizations="W3C" text:title="HTML 4.01 Specification" text:year="1999" text:url="http://www.w3.org/TR/html401/">[HTML41]</text:bibliography-mark></text:span><text:span text:style-name="T6">]).</text:span></text:p>
    <text:p text:style-name="Text_20_body"><text:span text:style-name="T6">Inoltre, il codice HTML statico </text:span><text:span text:style-name="T4">deve</text:span><text:span text:style-name="T6"> utilizzare l&apos;indentazione, per facilitare la lettura, secondo le seguenti regole:</text:span></text:p>
-   <text:list xml:id="list1338618869" text:style-name="L4">
+   <text:list xml:id="list670280053" text:style-name="L4">
     <text:list-item>
      <text:p text:style-name="P8">Un&apos;indentazione consiste in 4 spazi;</text:p>
     </text:list-item>
@@ -863,47 +975,47 @@
      <text:p text:style-name="P8">Ogni tag deve avere un&apos;indentazione maggiore o uguale del tag che lo contiene</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P11"><text:span text:style-name="T4">Non</text:span><text:span text:style-name="T6"> si </text:span><text:span text:style-name="T4">dovrebbero</text:span><text:span text:style-name="T6"> superare gli 8 livelli di indentazione;</text:span></text:p>
+       <text:p text:style-name="P13"><text:span text:style-name="T4">Non</text:span><text:span text:style-name="T6"> si </text:span><text:span text:style-name="T4">dovrebbero</text:span><text:span text:style-name="T6"> superare gli 8 livelli di indentazione;</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P11"><text:span text:style-name="T6">Qualora si superassero gli 8 livelli, </text:span><text:span text:style-name="T4">è possibile</text:span><text:span text:style-name="T6"> azzerare il livello di indentazione, portandolo a 0 anziché incrementarlo;</text:span></text:p>
+       <text:p text:style-name="P13"><text:span text:style-name="T6">Qualora si superassero gli 8 livelli, </text:span><text:span text:style-name="T4">è possibile</text:span><text:span text:style-name="T6"> azzerare il livello di indentazione, portandolo a 0 anziché incrementarlo;</text:span></text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P11"><text:span text:style-name="T6">Sebbene l&apos;uso dell&apos;indentazione sia arbitrario, ogni tag di chiusura </text:span><text:span text:style-name="T4">deve</text:span><text:span text:style-name="T6"> avere lo stesso livello di indentazione del corrispondente tag di apertura;</text:span></text:p>
+     <text:p text:style-name="P13"><text:span text:style-name="T6">Sebbene l&apos;uso dell&apos;indentazione sia arbitrario, ogni tag di chiusura </text:span><text:span text:style-name="T4">deve</text:span><text:span text:style-name="T6"> avere lo stesso livello di indentazione del corrispondente tag di apertura;</text:span></text:p>
     </text:list-item>
    </text:list>
    <table:table table:name="Tabella3" table:style-name="Tabella3">
     <table:table-column table:style-name="Tabella3.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A1" office:value-type="string">
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Accettabile --&gt; </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;div&gt;&lt;span&gt;&lt;nl&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;Uno&lt;/li&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="8"/>Due</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;/li&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;/nl&gt;&lt;/span&gt;&lt;/div&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"/></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Non accettabile --&gt; </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;div&gt;</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T7">&lt;span&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;nl&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;Uno&lt;/li&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="8"/>Due</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;/li&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;/nl&gt;</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T7">&lt;/span&gt;</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;/div&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Accettabile --&gt; </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;div&gt;&lt;span&gt;&lt;nl&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;Uno&lt;/li&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="8"/>Due</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;/li&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;/nl&gt;&lt;/span&gt;&lt;/div&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"/></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T2">&lt;!-- Non accettabile --&gt; </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;div&gt;</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T7">&lt;span&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;nl&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;Uno&lt;/li&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;li&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="8"/>Due</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;/li&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1"><text:s text:c="4"/>&lt;/nl&gt;</text:span></text:span><text:span text:style-name="Monospace"><text:span text:style-name="T7">&lt;/span&gt;</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T1">&lt;/div&gt;</text:span></text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:list xml:id="list1936368832" text:continue-numbering="true" text:style-name="L4">
+   <text:list xml:id="list1282100864" text:continue-numbering="true" text:style-name="L4">
     <text:list-item>
-     <text:p text:style-name="P11">I tag di commento devono seguire le stesse regole che si applicano ai tag normali;</text:p>
+     <text:p text:style-name="P13">I tag di commento devono seguire le stesse regole che si applicano ai tag normali;</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P11">Gli script e i fogli di stile incorporati, se non si completano in una sola riga di testo, <text:span text:style-name="T4">devono</text:span> partire dal livello 0 di indentazione.</text:p>
+     <text:p text:style-name="P13">Gli script e i fogli di stile incorporati, se non si completano in una sola riga di testo, <text:span text:style-name="T4">devono</text:span> partire dal livello 0 di indentazione.</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="Text_20_body">I fogli di stile e gli script incorporati nelle pagine <text:span text:style-name="T4">devono</text:span> rispettare le stesse linee guida che si applicano ai documenti dedicati.</text:p>
@@ -918,26 +1030,26 @@
     <table:table-column table:style-name="Tabella4.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A1" office:value-type="string">
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3">/**</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Descrizione breve</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Eventuale ulteriore descrizione</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Specifica degli argomenti del costruttore (@param)</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Metodo nomeMetodo1</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Descrizione breve</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Eventuale ulteriore descrizione</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica degli argomenti (@param)</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica dei risultati (@return)</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Metodo nomeMetodo2</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Descrizione breve</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Eventuale ulteriore descrizione</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica degli argomenti (@param)</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica dei risultati (@return)</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* </text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* …</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>*/</text:span></text:span></text:p>
-      <text:p text:style-name="P2"><text:span text:style-name="Monospace"><text:span text:style-name="T3">function ClasseX(a, b, c) {</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3">/**</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Descrizione breve</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Eventuale ulteriore descrizione</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Specifica degli argomenti del costruttore (@param)</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Metodo nomeMetodo1</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Descrizione breve</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Eventuale ulteriore descrizione</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica degli argomenti (@param)</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica dei risultati (@return)</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* Metodo nomeMetodo2</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Descrizione breve</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Eventuale ulteriore descrizione</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica degli argomenti (@param)</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* <text:s text:c="4"/>Specifica dei risultati (@return)</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* </text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>* …</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3"><text:s/>*/</text:span></text:span></text:p>
+      <text:p text:style-name="P3"><text:span text:style-name="Monospace"><text:span text:style-name="T3">function ClasseX(a, b, c) {</text:span></text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
@@ -945,22 +1057,48 @@
    <text:p text:style-name="Text_20_body">Tutti gli stili non inline <text:span text:style-name="T4">devono</text:span> essere collocati in fogli di stile separati.</text:p>
    <text:p text:style-name="Text_20_body">Ogni foglio di stile <text:span text:style-name="T4">deve</text:span> essere iniziato da un commento analogo a quello presente nei file Java.</text:p>
    <text:p text:style-name="Text_20_body">Ogni regola CSS <text:span text:style-name="T4">deve</text:span> essere formattata come segue:</text:p>
-   <text:list xml:id="list1318371123" text:style-name="L5">
+   <text:list xml:id="list1570317545" text:style-name="L5">
     <text:list-item>
-     <text:p text:style-name="P12">I selettori della regola si trovano a livello 0 di indentazione, uno per riga;</text:p>
+     <text:p text:style-name="P14">I selettori della regola si trovano a livello 0 di indentazione, uno per riga;</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P12">L&apos;ultimo selettore della regola è seguito da parentesi graffa aperta (<text:span text:style-name="Monospace">{</text:span>);</text:p>
+     <text:p text:style-name="P14">L&apos;ultimo selettore della regola è seguito da parentesi graffa aperta (<text:span text:style-name="Monospace">{</text:span>);</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P12">Le proprietà che costituiscono la regola sono listate una per riga e sono indentate rispetto ai selettori;</text:p>
+     <text:p text:style-name="P14">Le proprietà che costituiscono la regola sono listate una per riga e sono indentate rispetto ai selettori;</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P12">La regola è terminata da una parentesi graffa chiusa (<text:span text:style-name="Monospace">}</text:span>), collocata da sola su una riga;</text:p>
+     <text:p text:style-name="P14">La regola è terminata da una parentesi graffa chiusa (<text:span text:style-name="Monospace">}</text:span>), collocata da sola su una riga;</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="Text_20_body">Le proprietà e le regole poco chiare <text:span text:style-name="T4">dovrebbero</text:span> essere precedute da un commento esplicativo.</text:p>
    <text:p text:style-name="Text_20_body">Le regole <text:span text:style-name="T4">possono</text:span> essere divise in blocchi concettualmente legati, preceduti da commenti in stile Javadoc, che ne spiegano lo scopo, e seguiti da 2 righe bianche.</text:p>
+   <text:h text:style-name="Heading_20_3" text:outline-level="3"><text:soft-page-break/>Database SQL</text:h>
+   <text:p text:style-name="Text_20_body">Le tabelle del database <text:span text:style-name="T4">dovrebbero</text:span> essere in terza forma normale di Codd (3NF). Qualora non lo fossero, la cosa <text:span text:style-name="T4">deve</text:span><text:span text:style-name="T6"> essere documentata e motivata nello script di creazione del database.</text:span></text:p>
+   <text:p text:style-name="Text_20_body"><text:span text:style-name="T6">I nomi delle tabelle </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6"> seguire le seguenti regole:</text:span></text:p>
+   <text:list xml:id="list2014026127" text:style-name="L6">
+    <text:list-item>
+     <text:p text:style-name="P9">sono costituiti da sole lettere maiuscole;</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P15"><text:span text:style-name="T6">se il nome è costituito da più parole, queste sono separate da un underscore (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">_</text:span></text:span><text:span text:style-name="T6">);</text:span></text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P9">il nome deve essere un sostantivo singolare tratto dal dominio del problema ed esplicativo del contenuto.</text:p>
+    </text:list-item>
+   </text:list>
+   <text:p text:style-name="Text_20_body"><text:span text:style-name="T6">I nomi dei campi </text:span><text:span text:style-name="T4">devono</text:span><text:span text:style-name="T6"> seguire le seguenti regole:</text:span></text:p>
+   <text:list xml:id="list2044435767" text:style-name="L7">
+    <text:list-item>
+     <text:p text:style-name="P10">sono costituiti da sole lettere minuscole;</text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P16"><text:span text:style-name="T6">se il nome è costituito da più parole, queste sono separate da un underscore (</text:span><text:span text:style-name="Monospace"><text:span text:style-name="T6">_</text:span></text:span><text:span text:style-name="T6">);</text:span></text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P10">il nome deve essere un sostantivo singolare tratto dal dominio del problema ed esplicativo del contenuto.</text:p>
+    </text:list-item>
+   </text:list>
   </office:text>
  </office:body>
 </office:document>
