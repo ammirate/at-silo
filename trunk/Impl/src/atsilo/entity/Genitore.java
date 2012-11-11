@@ -4,6 +4,7 @@ public final class Genitore {
     private String codiceFiscale;
     private String nome;
     private String cognome;
+    private String indirizzo;
 
     public void setCodiceFiscale(String codiceFiscale) {
         this.codiceFiscale = codiceFiscale;
