@@ -14,7 +14,7 @@
           <size height='1.300498366355896' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='id1279d142-0ce4-46be-a80e-3d0f2c90415e'>
-          <property key='FirstVisibleIndex' value='0'/>
+          <property key='FirstVisibleIndex' value='5'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
           <size height='0.699501633644104' width='0.0'/>
         </contained>
@@ -48,7 +48,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='146.9661407470703' width='120.0'/>
       </contained>
-      <position x='555.0' y='180.0'/>
+      <position x='375.0' y='120.0'/>
       <property key='showPackage' value='false'/>
       <property key='lineColor' value='#a5a5a5'/>
       <property key='font' value='SansSerif,plain,11'/>
