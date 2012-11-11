@@ -1,5 +1,13 @@
 package atsilo.entity;
 
+/**
+ * 
+ * Classe Genitore
+ * Una classe di test a caso
+ * 
+ * @author Giulio Franco <giulio_franco@msn.com>
+ *
+ */
 public final class Genitore {
     private String codiceFiscale;
     private String nome;
