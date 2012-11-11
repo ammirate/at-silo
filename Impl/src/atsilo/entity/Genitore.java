@@ -9,17 +9,17 @@ package atsilo.entity;
  *
  */
 public final class Genitore {
-    private String codiceFiscale;
+    private String codiceFiscalO;
     private String nome;
     private String cognome;
     private String indirizzo;
 
-    public void setCodiceFiscale(String codiceFiscale) {
-        this.codiceFiscale = codiceFiscale;
+    public void setCodiceFiscalO(String codiceFiscale) {
+        this.codiceFiscalO = codiceFiscale;
     }
 
-    public String getCodiceFiscale() {
-        return codiceFiscale;
+    public String getCodiceFiscalO() {
+        return codiceFiscalO;
     }
 
     public void setNome(String nome) {
