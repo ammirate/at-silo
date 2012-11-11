@@ -29,4 +29,12 @@ public final class Genitore {
     public String getCognome() {
         return cognome;
     }
+
+    public void setIndirizzo(String indirizzo) {
+        this.indirizzo = indirizzo;
+    }
+
+    public String getIndirizzo() {
+        return indirizzo;
+    }
 }
