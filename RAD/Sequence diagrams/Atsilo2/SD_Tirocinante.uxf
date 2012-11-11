@@ -328,7 +328,7 @@ for (String textline : textlines) {
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>30</x>
-      <y>160</y>
+      <y>140</y>
       <w>160</w>
       <h>70</h>
     </coordinates>
@@ -340,7 +340,7 @@ Preme</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>160</x>
-      <y>180</y>
+      <y>160</y>
       <w>170</w>
       <h>94</h>
     </coordinates>
@@ -353,7 +353,7 @@ Preme</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>300</x>
-      <y>210</y>
+      <y>180</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
@@ -365,7 +365,7 @@ Preme</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>300</x>
-      <y>410</y>
+      <y>360</y>
       <w>390</w>
       <h>70</h>
     </coordinates>
@@ -411,7 +411,7 @@ SottometteForm</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>300</x>
-      <y>330</y>
+      <y>290</y>
       <w>260</w>
       <h>70</h>
     </coordinates>
@@ -423,7 +423,7 @@ SottometteForm</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>300</x>
-      <y>290</y>
+      <y>270</y>
       <w>150</w>
       <h>70</h>
     </coordinates>
