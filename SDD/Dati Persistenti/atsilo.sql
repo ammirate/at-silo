@@ -11,7 +11,6 @@
 CREATE TABLE IF NOT EXISTS `ACCOUNT` (
   `username` varchar(50)  NOT NULL,
   `password` varchar(256)  DEFAULT NULL,
-  `tipo_account` varchar(50)  DEFAULT NULL,
   `genitore` varchar(50)  DEFAULT NULL,
   `personale_asilo` varchar(50)  DEFAULT NULL,
   `psico_pedagogo` varchar(50)  DEFAULT NULL,
