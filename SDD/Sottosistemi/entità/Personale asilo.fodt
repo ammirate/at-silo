@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-07T18:42:01</meta:creation-date><meta:editing-duration>PT18M23S</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-09T15:50:29.79</dc:date><meta:document-statistic meta:table-count="2" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="30" meta:word-count="64" meta:character-count="474" meta:non-whitespace-character-count="439"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../home/giulio/.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T18:42:01"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-07T18:42:01</meta:creation-date><meta:editing-duration>PT18M23S</meta:editing-duration><meta:editing-cycles>7</meta:editing-cycles><meta:generator>LibreOffice/3.6$MacOSX_x86 LibreOffice_project/58f22d5-270d05a-e2abed1-ea17a85-9b5702</meta:generator><dc:date>2012-11-13T21:17:24</dc:date><meta:document-statistic meta:table-count="2" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="39" meta:word-count="77" meta:character-count="542" meta:non-whitespace-character-count="502"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../home/giulio/.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T18:42:01"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="int">1670</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">18348</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">21691</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">13307</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="int">1309</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">18360</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">8140</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">14161</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">6835</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="int">1670</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">20017</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">21689</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">9091</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">17348</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="int">1309</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">13307</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">19667</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">21445</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="ZoomFactor" config:type="short">76</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">150</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1992362</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2103798</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -491,6 +491,21 @@
   <style:style style:name="Tabella1.E8" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
+  <style:style style:name="Tabella1.A9" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.B9" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.C9" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.D9" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella1.E9" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
   <style:style style:name="Tabella2" style:family="table">
    <style:table-properties style:width="17cm" table:align="margins"/>
   </style:style>
@@ -506,8 +521,23 @@
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties officeooo:paragraph-rsid="001e66aa"/>
   </style:style>
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties officeooo:rsid="001e66aa" officeooo:paragraph-rsid="001e66aa"/>
+  </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties officeooo:paragraph-rsid="002019f6"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Definizione_20_Nome">
+   <style:text-properties officeooo:paragraph-rsid="002019f6"/>
+  </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Definizione_20_Valore">
+   <style:text-properties officeooo:paragraph-rsid="002019f6"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="001e66aa"/>
+  </style:style>
+  <style:style style:name="T2" style:family="text">
+   <style:text-properties officeooo:rsid="002019f6"/>
   </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
@@ -577,71 +607,88 @@
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Nome</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Varchar(20)</text:p>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(<text:span text:style-name="T2">5</text:span>0)</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">SÌ</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents"/>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"/>
+     <table:table-cell table:style-name="Tabella1.E9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">Null</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Cognome</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Varchar(30)</text:p>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3">Varchar(<text:span text:style-name="T2">5</text:span>0)</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">SÌ</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents"/>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"/>
+     <table:table-cell table:style-name="Tabella1.E9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">Null</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Codice Fiscale</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Varchar(15)</text:p>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3">Varchar(<text:span text:style-name="T2">5</text:span>0)</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">SÌ</text:p>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">NO</text:span></text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
-      <text:p text:style-name="P1"><text:span text:style-name="T1">Primary</text:span></text:p>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P2">Primary</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"/>
+     <table:table-cell table:style-name="Tabella1.E9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2"/></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Categoria appartenenza</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Varchar(20)</text:p>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3">Varchar(<text:span text:style-name="T2">5</text:span>0)</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">SÌ</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents"/>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E8" office:value-type="string">
+     <table:table-cell table:style-name="Tabella1.E9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">Null</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">Email</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3">Varchar(<text:span text:style-name="T2">5</text:span>0)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">Si</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D9" office:value-type="string">
       <text:p text:style-name="Table_20_Contents"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E9" office:value-type="string">
+      <text:p text:style-name="P3"><text:span text:style-name="T2">Null</text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
@@ -670,6 +717,12 @@
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
       <text:p text:style-name="Definizione_20_Nome">Categoria appartenenza</text:p>
       <text:p text:style-name="Definizione_20_Valore">categoria del PERSONALE ASILO che può essere scelta fra:IMPIEGATO SEGRETERIA,DIRETTORE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="P4"><text:span text:style-name="T2">Email</text:span></text:p>
+      <text:p text:style-name="P5"><text:span text:style-name="T2">email di un <text:s/>PERSONALE ASILO.</text:span></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
