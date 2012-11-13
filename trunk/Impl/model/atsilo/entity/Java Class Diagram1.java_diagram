@@ -16,15 +16,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='id3b3ad136-b4fd-4ec9-b86f-8b783693f4a3'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.885990858078003' width='0.0'/>
+          <size height='1.8408722877502441' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='idb0854f3d-11aa-4583-8b6b-82ce664eb435'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.1872849464416504' width='0.0'/>
+          <size height='0.23240351676940918' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='480.0' width='330.0'/>
+        <size height='510.0' width='330.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id0e6ca39a-af9f-4f85-918b-eff819a0134c'>
         <contained xmi:type='DI:GraphNode' xmi:id='id2c884991-2576-4d06-83d3-b4f2a5b3604b'>
@@ -46,7 +46,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='480.0' width='330.0'/>
+        <size height='510.0' width='330.0'/>
       </contained>
       <position x='15.0' y='-600.0'/>
       <property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
@@ -72,7 +72,7 @@
       <property key='operationShowParameters' value='0'/>
       <property key='excludeAttrFilter' value=''/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.entity;;###;;Genitore' presentation='SYMBOLIC'/>
-      <size height='480.0' width='330.0'/>
+      <size height='510.0' width='330.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='idc7362a35-f4d9-4b94-b56d-33b458be8d5a'>
       <contained xmi:type='DI:GraphNode' xmi:id='id7c8d9a65-6388-461c-adc4-4da0d95b529b'>
