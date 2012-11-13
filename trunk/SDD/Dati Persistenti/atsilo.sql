@@ -174,6 +174,7 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
   `id` int(11) NOT NULL,
   `data_presentazione` date DEFAULT NULL,
   `punteggio` varchar(50)  DEFAULT NULL,
+  `posizione` varchar(50)  DEFAULT NULL,
   `genitore` varchar(50)  DEFAULT NULL,
   `servizio` int(11) DEFAULT NULL,
   `bambino` varchar(50)  DEFAULT NULL,
