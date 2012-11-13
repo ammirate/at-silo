@@ -11,12 +11,12 @@
         <contained xmi:type='DI:GraphNode' xmi:id='idb8a84b9e-47e1-4397-a2da-9c2b6d61ea19'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='FieldCompartment'/>
-          <size height='0.9267242550849915' width='0.0'/>
+          <size height='0.9127438068389893' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='id3b3ad136-b4fd-4ec9-b86f-8b783693f4a3'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.8408722877502441' width='0.0'/>
+          <size height='1.8548526763916016' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='idb0854f3d-11aa-4583-8b6b-82ce664eb435'>
           <property key='FirstVisibleIndex' value='0'/>
