@@ -897,7 +897,7 @@ puo ritirare</panel_attributes>
     <coordinates>
       <x>280</x>
       <y>712</y>
-      <w>50</w>
+      <w>48</w>
       <h>288</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
@@ -1365,8 +1365,8 @@ fg=red</panel_attributes>
     <panel_attributes>DomandaIscrizione
 --
 -Data presentazione
--punteggio
-
+-Punteggio
+-Posizione
 -ID
 bg=gray
 fg=red</panel_attributes>
@@ -1655,11 +1655,11 @@ fg=red
     <coordinates>
       <x>920</x>
       <y>408</y>
-      <w>168</w>
+      <w>40</w>
       <h>184</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>24;168;152;24</additional_attributes>
+    <additional_attributes>24;168;24;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -1734,5 +1734,16 @@ bg=gray</panel_attributes>
     <panel_attributes>Insegna
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>920</x>
+      <y>408</y>
+      <w>168</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>m1=1</panel_attributes>
+    <additional_attributes>152;24;24;24</additional_attributes>
   </element>
 </diagram>
