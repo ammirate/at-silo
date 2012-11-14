@@ -1,25 +1,18 @@
 package atsilo.entity;
 
-<<<<<<< .mine
-public class PersonaleAsilo extends Utente{
+public class PersonaleAsilo extends Utente implements EventPlanner{
     
-=======
-public class PersonaleAsilo extends Utente {
-
->>>>>>> .r1309
-    private String categoriaAppartenza;
+    private String categoriaAppartenenza;
     
-    public PersonaleAsilo() {
+    public PersonaleAsilo(){
+        
     }
 
-<<<<<<< .mine
-=======
-    public void setCategoriaAppartenza(String categoriaAppartenza) {
-        this.categoriaAppartenza = categoriaAppartenza;
+    public void setCategoriaAppartenenza(String categoriaAppartenenza) {
+        this.categoriaAppartenenza = categoriaAppartenenza;
     }
->>>>>>> .r1309
 
-    public String getCategoriaAppartenza() {
-        return categoriaAppartenza;
+    public String getCategoriaAppartenenza() {
+        return categoriaAppartenenza;
     }
 }

@@ -39,39 +39,60 @@ public class Questionario {
     public Questionario() {
     }
 
-    public String getFlag_rinuncia() {
-    }
 
-    public String getNome() {
-    }
-
-    public void setDescrizione(String desc) {
-    }
-
-    public String getDescrizione() {
-    }
-
-    public String getPeriodo_inizio() {
-    }
-
-    public void setPathname(String path) {
+    public void setPeriodo_fine(String periodo_fine) {
+        this.periodo_fine = periodo_fine;
     }
 
     public String getPeriodo_fine() {
+        return periodo_fine;
     }
 
-    public String getPathname() {
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
-    public int getID() {
+    public String getDescrizione() {
+        return descrizione;
+    }
+
+    public void setFlag_rinuncia(String flag_rinuncia) {
+        this.flag_rinuncia = flag_rinuncia;
+    }
+
+    public String getFlag_rinuncia() {
+        return flag_rinuncia;
     }
 
     public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public void setPeriodo_fine(String p) {
+    public String getNome() {
+        return nome;
     }
 
-    public void setPeriodo_inizio(String p) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setPeriodo_inizio(String periodo_inizio) {
+        this.periodo_inizio = periodo_inizio;
+    }
+
+    public String getPeriodo_inizio() {
+        return periodo_inizio;
+    }
+
+    public void setPathname(String pathname) {
+        this.pathname = pathname;
+    }
+
+    public String getPathname() {
+        return pathname;
     }
 }
