@@ -20,6 +20,7 @@ public class Registro {
      * @attribute
      */
     private EducatoreDidattico educatoreDidattico;
+    private List<Attivita> listaAttivita;
 
     public Registro() {
     }
