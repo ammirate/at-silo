@@ -1,6 +1,8 @@
 package atsilo.entity;
 
 import java.sql.Date;
+import java.util.List;
+
 
 public class Extra {
     private float importo;
@@ -8,7 +10,8 @@ public class Extra {
     private String id;
     private Date dataInizio;
     private Date dataFine;
-    
+    private List<Retta> retteAssociate;
+
     public Extra(){}
 
             /**
@@ -80,6 +83,11 @@ public class Extra {
             public void setDataFine(Date dataFine) {
                     this.dataFine = dataFine;
             }
-            
-   
+
+
+
+
+    public List<Retta> getRetteAssociate() {
+        return retteAssociate;
+    }
 }
