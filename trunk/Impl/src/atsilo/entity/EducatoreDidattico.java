@@ -1,20 +1,25 @@
 package atsilo.entity;
-
-public class EducatoreDidattico extends Utente{
+import java.util.List;
+public class EducatoreDidattico extends Utente implements EventPlanner{
     /**
      * @attribute
      */
-    private String Titolo_di_studio;
+    private String TitoloDiStudio;
+    private List<Classe> classi;
 
 
     /**
      * @attribute
      */
-    public void setTitolo_di_studio(String Titolo_di_studio) {
-        this.Titolo_di_studio = Titolo_di_studio;
+    public void setTitoloDiStudio(String TitoloStudio) {
+        this.TitoloDiStudio = TitoloDiStudio;
     }
 
-    public String getTitolo_di_studio() {
-        return Titolo_di_studio;
+    public String getTitoloDiStudio() {
+        return TitoloDiStudio;
+    }
+    
+    public List<Classe> getClassi(){
+        return classi;
     }
 }

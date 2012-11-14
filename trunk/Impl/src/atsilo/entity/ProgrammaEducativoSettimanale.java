@@ -1,4 +1,5 @@
 package atsilo.entity;
+import java.util.List;
 
 public class ProgrammaEducativoSettimanale {
     /**
@@ -16,15 +17,12 @@ public class ProgrammaEducativoSettimanale {
      */
     private String obiettivi;
 
-    /**
-     * @attribute
-     */
     private Psicopedagogo psicopedagogo;
-
     /**
      * @attribute
      */
     private int id;
+    private List<Attivita> listaAttivita;
 
     public ProgrammaEducativoSettimanale() {
     }

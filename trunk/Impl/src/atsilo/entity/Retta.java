@@ -5,6 +5,7 @@ public class Retta {
     private float importo;
     private String id;
     private List<Extra> extra;
+    private Genitore genitore;
 
 
     public Retta(){}
@@ -25,5 +26,13 @@ public class Retta {
 
     public List<Extra> getExtra() {
         return extra;
+    }
+
+    public void setGenitore(Genitore genitore) {
+        this.genitore = genitore;
+    }
+
+    public Genitore getGenitore() {
+        return genitore;
     }
 }

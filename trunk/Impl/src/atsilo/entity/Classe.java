@@ -1,9 +1,12 @@
 package atsilo.entity;
+import java.util.List;
+
 
 public class Classe {
-    private String id;
     
-    private Registro registro;
+    private String id;
+    private List<EducatoreDidattico> educatori;
+    private List<Evento> eventi;
 
     Classe() {
     }
@@ -16,11 +19,20 @@ public class Classe {
         return id;
     }
 
-    public void setRegistro(Registro registro) {
-        this.registro = registro;
+
+    public void setEducatori(List<EducatoreDidattico> educatori) {
+        this.educatori = educatori;
     }
 
-    public Registro getRegistro() {
-        return registro;
+    public List<EducatoreDidattico> getEducatori() {
+        return educatori;
+    }
+
+    public void setEventi(List<Evento> eventi) {
+        this.eventi = eventi;
+    }
+
+    public List<Evento> getEventi() {
+        return eventi;
     }
 }

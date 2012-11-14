@@ -1,13 +1,15 @@
 package atsilo.entity;
 
 public class Servizio {
+    private String id;
     private String orarioInizio;
     private String orarioFine;
     private String pianoPasto;
     private Bambino bambino;
+    private OrarioUtente orarioUtente;
 
     public Servizio(){}
-    
+    //(id,orario_inizio,orario_fine,piano_pasto,BAMBINO,ORARIO_UTENTE
 
     public String getOrarioInizio() {
             return orarioInizio;

@@ -1,4 +1,6 @@
 package atsilo.entity;
+import java.sql.Date;
+import java.util.List;
 
 public class Bambino {
     /**
@@ -29,7 +31,7 @@ public class Bambino {
     /**
      * @attribute
      */
-    private Stirng Cognome;
+    private String Cognome;
 
     /**
      * @attribute
@@ -41,36 +43,81 @@ public class Bambino {
      */
     private String Codice_Fiscale;
 
+    private Assenza assenze;
+
     public Bambino() {
     }
 
-    public String getCodiceFiscale() {
-    }
 
-    public Date getDatadiNascita() {
-    }
-
-    public String getCognome() {
-    }
-
-    void setIndirizzo(String add) {
-    }
-
-    public String getCategoriaAppartenenza() {
-    }
-
-    public String getIndirizzo() {
-    }
-
-    public Genitore getGenitore() {
-    }
-
-    public int getClasse() {
-    }
-
-    void setCategoriaAppartenenza(String cat) {
+    public void setNome(String Nome) {
+        this.Nome = Nome;
     }
 
     public String getNome() {
+        return Nome;
+    }
+
+    public void setDataNascita(Date DataNascita) {
+        this.DataNascita = DataNascita;
+    }
+
+    public Date getDataNascita() {
+        return DataNascita;
+    }
+
+    public void setCategoriaAppartenenza(String CategoriaAppartenenza) {
+        this.CategoriaAppartenenza = CategoriaAppartenenza;
+    }
+
+    public String getCategoriaAppartenenza() {
+        return CategoriaAppartenenza;
+    }
+
+    public void setIndirizzo(String Indirizzo) {
+        this.Indirizzo = Indirizzo;
+    }
+
+    public String getIndirizzo() {
+        return Indirizzo;
+    }
+
+    public void setClasse(int Classe) {
+        this.Classe = Classe;
+    }
+
+    public int getClasse() {
+        return Classe;
+    }
+
+    public void setCognome(String Cognome) {
+        this.Cognome = Cognome;
+    }
+
+    public String getCognome() {
+        return Cognome;
+    }
+
+    public void setGenitore(Genitore Genitore) {
+        this.Genitore = Genitore;
+    }
+
+    public Genitore getGenitore() {
+        return Genitore;
+    }
+
+    public void setCodice_Fiscale(String Codice_Fiscale) {
+        this.Codice_Fiscale = Codice_Fiscale;
+    }
+
+    public String getCodice_Fiscale() {
+        return Codice_Fiscale;
+    }
+
+    public void setAssenze(List<Assenza> assenze) {
+        this.assenze = assenze;
+    }
+
+    public List<Assenza> getAssenze() {
+        return assenze;
     }
 }

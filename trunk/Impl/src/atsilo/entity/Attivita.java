@@ -14,7 +14,7 @@ public class Attivita {
     /**
      * @attribute
      */
-    private ProgrammaEducativoSettimanale programma_educativo_settimanale;
+    private ProgrammaEducativoSettimanale progEdSettimanale;
 
     /**
      * @attribute
@@ -47,11 +47,11 @@ public class Attivita {
     }
 
     public void setProgramma_educativo_settimanale(ProgrammaEducativoSettimanale programma_educativo_settimanale) {
-        this.programma_educativo_settimanale = programma_educativo_settimanale;
+        this.progEdSettimanale = programma_educativo_settimanale;
     }
 
     public ProgrammaEducativoSettimanale getProgramma_educativo_settimanale() {
-        return programma_educativo_settimanale;
+        return progEdSettimanale;
     }
 
     public void setTitolo(String titolo) {
