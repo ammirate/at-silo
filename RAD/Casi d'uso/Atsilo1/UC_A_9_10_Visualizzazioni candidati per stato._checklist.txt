@@ -1,6 +1,6 @@
 LINEE GUIDA FORMALI
 [ ] Ha lo stesso nome dello scenario generalizzato
-[ ] Ha lo stesso ID dello scenario generalizzato
+[x] Ha lo stesso ID dello scenario generalizzato
 [ ] Non sono presenti attori multipli con congiunzione OR
 [ ] Il file è nominato secondo la corretta nomenclatura
 [ ] Tutte le azioni del sistema sono tabulate

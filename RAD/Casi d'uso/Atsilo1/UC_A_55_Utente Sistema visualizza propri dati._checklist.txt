@@ -1,34 +1,36 @@
 LINEE GUIDA FORMALI
 [ ] Ha lo stesso nome dello scenario generalizzato
 [ ] Ha lo stesso ID dello scenario generalizzato
-[ ] Non sono presenti attori multipli con congiunzione OR
-[ ] Il file è nominato secondo la corretta nomenclatura
-[ ] Tutte le azioni del sistema sono tabulate
-[ ] Tutte le azioni del sistema sono indicate in modo esplicito ("Il sistema ...")
-[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
-[ ] Le inclusioni sono segnalate secondo le convenzioni previste
-[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
-[ ] Le estensioni sono segnalate secondo le convenzioni previste
-[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
-[ ] Entry e exit condition sono specificate
-[ ] Il flusso degli eventi è correttamente numerato
-[ ] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+[x] Non sono presenti attori multipli con congiunzione OR
+[x] Il file è nominato secondo la corretta nomenclatura
+[x] Tutte le azioni del sistema sono tabulate
+[x] Tutte le azioni del sistema sono indicate in modo esplicito ("Il sistema ...")
+[x] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[x] Le inclusioni sono segnalate secondo le convenzioni previste
+[x] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[x] Le estensioni sono segnalate secondo le convenzioni previste
+[x] Le specializzazioni sono segnalate secondo le convenzioni previste
+[x] Entry e exit condition sono specificate
+[x] Il flusso degli eventi è correttamente numerato
+[x] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 
 LINEE GUIDA SOSTANZIALI
-[ ] Il nome è coerente con il contenuto
-[ ] Il flusso degli eventi è coerente con i requisiti fuzionali
-[ ] I requisiti qualitativi sono misurabili
+[x] Il nome è coerente con il contenuto
+[x] Il flusso degli eventi è coerente con i requisiti fuzionali
+[x] I requisiti qualitativi sono misurabili
 [ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
-[ ] Si fa sempre riferimento al sistema con il termine "il sistema"
-[ ] Il caso d'uso realizza almeno un requisito funzionale
-[ ] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
-[ ] Il flusso degli eventi inizia con un'azione dell'attore iniziante
-[ ] Il flusso degli eventi contiene almeno
+[x] Si fa sempre riferimento al sistema con il termine "il sistema"
+[x] Il caso d'uso realizza almeno un requisito funzionale
+[x] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
+[x] Il flusso degli eventi inizia con un'azione dell'attore iniziante
+[x] Il flusso degli eventi contiene almeno
 	una visualizzazione di dati persistenti da parte del sistema o
 	il salvataggio di dati persistenti da parte del sistema
-[ ] Inclusione, estensione e specializzazione sono utilizzate in modo proprio
-[ ] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
-[ ] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
-[ ] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
+[x] Inclusione, estensione e specializzazione sono utilizzate in modo proprio
+[x] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
+[x] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
+[x] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
 
 ALTRE ANNOTAZIONI:
+non viene specificato l'attore
+entry condition troppo breve
