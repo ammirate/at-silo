@@ -1,89 +1,113 @@
 package atsilo.entity;
 
+import java.util.List;
+
 public class Genitore {
+    /**
+     * @attribute
+     */
+    private Date dataNascita;
 
-        private String nome;
-	private String cognome;
-	private String codFiscale;
-	private String telefono;
-	private String email;
-	private String dataNascita;
-	private String comuneNascita;
-	private String indirizzoResidenza;
-	private String categoriaAppartenenza;
-	
-	public Genitore() {
-	}
+    /**
+     * @attribute
+     */
+    private String CodiceFiscale;
 
-	public String getNome() {
-		return nome;
-	}
+    /**
+     * @attribute
+     */
+    private String ComuneNascita;
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    /**
+     * @attribute
+     */
+    private String Email;
 
-	public String getCognome() {
-		return cognome;
-	}
+    /**
+     * @attribute
+     */
+    private String indirizzoResidenza;
 
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
+    /**
+     * @attribute
+     */
+    private String tipo;
 
-	public String getCodFiscale() {
-		return codFiscale;
-	}
+    /**
+     * @attribute
+     */
+    private String Cognome;
 
-	public void setCodFiscale(String codFiscale) {
-		this.codFiscale = codFiscale;
-	}
+    /**
+     * @attribute
+     */
+    private String Telefono;
 
-	public String getTelefono() {
-		return telefono;
-	}
+    /**
+     * @attribute
+     */
+    private String nome;
+    
+    private  List<Bambino> figli;
+    
+    private List<Questionario> questionariCompilati;
 
-	public void setTelefono(String telefono) {
-		this.telefono = telefono;
-	}
+    public Genitore() {
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setIndirizzoResidenza(String add) {
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setTelefono(String t) {
+    }
 
-	public String getDataNascita() {
-		return dataNascita;
-	}
+    public String getTelefono() {
+    }
 
-	public void setDataNascita(String dataNascita) {
-		this.dataNascita = dataNascita;
-	}
+    public void setComuneNascita(String cm) {
+    }
 
-	public String getComuneNascita() {
-		return comuneNascita;
-	}
+    public String getEmail() {
+    }
 
-	public void setComuneNascita(String comuneNascita) {
-		this.comuneNascita = comuneNascita;
-	}
+    public String getTipo() {
+    }
 
-	public String getIndirizzoResidenza() {
-		return indirizzoResidenza;
-	}
+    public String getComuneNascita() {
+    }
 
-	public void setIndirizzoResidenza(String indirizzoResidenza) {
-		this.indirizzoResidenza = indirizzoResidenza;
-	}
+    public String getCognome() {
+    }
 
-	public String getCategoriaAppartenenza() {
-		return categoriaAppartenenza;
-	}
+    public String getIndirizzoResidenza() {
+    }
 
-	public void setCategoriaAppartenenza(String categoriaAppartenenza) {
-		this.categoriaAppartenenza = categoriaAppartenenza;
-	}
+    public String getCodiceFiscale() {
+    }
+
+    public void setEmail(String m) {
+    }
+
+    public String getNome() {
+    }
+
+    public Date getDataNascita() {
+    }
+
+    public void setCodiceFiscale(Object cf) {
+    }
+
+    public void addFiglio(Bambino bambino) {
+    }
+
+    public List<Bambino> getFigli() {
+        return null;
+    }
+
+    public void addQuestionarioCompilato(Questionario questionario) {
+    }
+
+    public List<Questionario> getQuestionariCompilati() {
+        return null;
+    }
 }
