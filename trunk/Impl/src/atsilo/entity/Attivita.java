@@ -14,7 +14,7 @@ public class Attivita {
     /**
      * @attribute
      */
-    private int programma_educativo_settimanale;
+    private ProgrammaEducativoSettimanale programma_educativo_settimanale;
 
     /**
      * @attribute
@@ -24,26 +24,49 @@ public class Attivita {
     /**
      * @attribute
      */
-    private int registro;
+    private Registro registro;
+
 
     public Attivita() {
+        
+    }
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
-    public int getProgramma_educativo_settimanale() {
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public void setCategoria(String cat) {
-    }
-
-    public int getRegistro() {
-    }
-
-    public String getTitolo() {
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
 
     public String getCategoria() {
+        return categoria;
     }
 
-    public void setTitolo(String tit) {
+    public void setProgramma_educativo_settimanale(ProgrammaEducativoSettimanale programma_educativo_settimanale) {
+        this.programma_educativo_settimanale = programma_educativo_settimanale;
+    }
+
+    public ProgrammaEducativoSettimanale getProgramma_educativo_settimanale() {
+        return programma_educativo_settimanale;
+    }
+
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
+
+    public String getTitolo() {
+        return titolo;
+    }
+
+    public void setRegistro(Registro registro) {
+        this.registro = registro;
+    }
+
+    public Registro getRegistro() {
+        return registro;
     }
 }

@@ -19,7 +19,7 @@ public class Registro {
     /**
      * @attribute
      */
-    private String educatore_didattico;
+    private EducatoreDidattico educatoreDidattico;
 
     public Registro() {
     }
@@ -27,7 +27,7 @@ public class Registro {
     public int getClasse() {
     }
 
-    public String getEducatore() {
+    public EducatoreDidattico getEducatore() {
     }
 
     public String getAnno() {

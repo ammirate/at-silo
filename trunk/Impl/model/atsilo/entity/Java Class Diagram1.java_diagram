@@ -809,15 +809,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='idcad3c3e4-1597-4cba-a644-882bfcac08c7'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.4873746633529663' width='0.0'/>
+          <size height='1.5076169967651367' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='idd7a2487c-f7a3-4622-8789-624de74b4510'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.20801618695259094' width='0.0'/>
+          <size height='0.18777382373809814' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='261.09326171875' width='154.0'/>
+        <size height='275.5693359375' width='154.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idc7bee30d-c904-4659-929d-c72d8835a8de'>
         <contained xmi:type='DI:GraphNode' xmi:id='id1b01a89b-6c67-445f-883c-32c53a5296e6'>
@@ -839,7 +839,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='261.09326171875' width='154.0'/>
+        <size height='275.5693359375' width='154.0'/>
       </contained>
       <position x='2755.0' y='0.0'/>
       <property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
@@ -865,7 +865,7 @@
       <property key='showInnerClasses' value='true'/>
       <property key='excludeMethodFilter' value=''/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.entity;;###;;Evento' presentation='SYMBOLIC'/>
-      <size height='261.09326171875' width='154.0'/>
+      <size height='275.5693359375' width='154.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='ide1fe6b3b-8041-4c92-b56c-7700bb06a358'>
       <anchorage xmi:id='id0142c06b-43cd-4a36-b83d-55935e08833c' graphEdge='id539a2383-d729-431f-b0c4-e031d8cfefcb'/>

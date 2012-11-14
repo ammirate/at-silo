@@ -34,7 +34,7 @@ public class Bambino {
     /**
      * @attribute
      */
-    private String Genitore;
+    private Genitore Genitore;
 
     /**
      * @attribute
@@ -62,7 +62,7 @@ public class Bambino {
     public String getIndirizzo() {
     }
 
-    public String getGenitore() {
+    public Genitore getGenitore() {
     }
 
     public int getClasse() {
@@ -71,6 +71,6 @@ public class Bambino {
     void setCategoriaAppartenenza(String cat) {
     }
 
-    String getNome() {
+    public String getNome() {
     }
 }
