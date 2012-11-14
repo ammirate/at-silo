@@ -1,98 +1,35 @@
 package atsilo.entity;
 
-public class Psicopedagogo {
-    /**
-     * @attribute
-     */
-    private String Cognome;
+public class Psicopedagogo extends Utente {
+
 
     /**
      * @attribute
      */
-    private Date data_di_nascita;
+    private String numeroClassi;
 
     /**
      * @attribute
      */
-    private String numero_classi;
+    private String titoloDiStudi;
 
-    /**
-     * @attribute
-     */
-    private String titolo_di_studio;
-
-    /**
-     * @attribute
-     */
-    private String Nome;
-
-    /**
-     * @attribute
-     */
-    private String Telefono;
-
-    /**
-     * @attribute
-     */
-    private String Indirizzo_di_residenza;
-
-    /**
-     * @attribute
-     */
-    private String Email;
-
-    /**
-     * @attribute
-     */
-    private String Comune_di_nascita;
-
-    /**
-     * @attribute
-     */
-    private String Codice_fiscale;
 
     public Psicopedagogo() {
     }
 
-    public String getComune_di_nascita() {
-    }
-
-    public String getNome() {
-    }
-
-    public void setTelefono(String t) {
-    }
-
-    public String setTitolo_di_studio() {
-    }
-
-    public String getCognome() {
-    }
-
-    public String getEmail() {
+    public void setNumeroClassi(String numeroClassi) {
+        this.numeroClassi = numeroClassi;
     }
 
     public String getNumeroClassi() {
+        return numeroClassi;
     }
 
-    public void setIndirizzo_di_residenza(String add) {
+    public void setTitoloDiStudi(String titoloDiStudi) {
+        this.titoloDiStudi = titoloDiStudi;
     }
 
-    public void setNumeroClassi(String n) {
-    }
-
-    public void setEmail(String m) {
-    }
-
-    public String getTelefono() {
-    }
-
-    public String getIndirizzo_di_residenza() {
-    }
-
-    public Date getData_di_nascita() {
-    }
-
-    public String getTitolo_di_studio() {
+    public String getTitoloDiStudi() {
+        return titoloDiStudi;
     }
 }
