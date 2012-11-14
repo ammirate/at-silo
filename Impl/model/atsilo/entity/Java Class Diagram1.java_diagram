@@ -962,7 +962,7 @@
           <size height='0.2545367181301117' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='217.6650390625' width='167.0'/>
+        <size height='135.0' width='167.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idbe38dca1-f00b-44a3-b82d-bd3ea9ff8e41'>
         <contained xmi:type='DI:GraphNode' xmi:id='id96698c62-1e8a-4d62-a232-7ee228c1b11d'>
@@ -984,7 +984,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='217.6650390625' width='167.0'/>
+        <size height='135.0' width='167.0'/>
       </contained>
       <position x='2188.0' y='0.0'/>
       <property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
@@ -1010,7 +1010,7 @@
       <property key='showInnerClasses' value='true'/>
       <property key='excludeMethodFilter' value=''/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.entity;;###;;ResponsabileQuestionario' presentation='SYMBOLIC'/>
-      <size height='217.6650390625' width='167.0'/>
+      <size height='135.0' width='167.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id23b39a18-bafc-41bf-86ea-4405bdfda45e'>
       <anchorage xmi:id='id04e63747-558a-43ca-99eb-a7c696dfdb15' graphEdge='id6be043f0-1725-49ef-886c-7af26eb639ac'/>
@@ -1395,7 +1395,7 @@
           <size height='0.15944713354110718' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='333.4736328125' width='176.0'/>
+        <size height='120.0' width='176.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idba53476f-71cb-4a8c-a6d4-db69916570f9'>
         <contained xmi:type='DI:GraphNode' xmi:id='id8307da84-ad08-4a1f-b018-6a206e4990c0'>
@@ -1417,7 +1417,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='333.4736328125' width='176.0'/>
+        <size height='120.0' width='176.0'/>
       </contained>
       <position x='582.0' y='0.0'/>
       <property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
@@ -1443,7 +1443,7 @@
       <property key='showInnerClasses' value='true'/>
       <property key='excludeMethodFilter' value=''/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.entity;;###;;Psicopedagogo' presentation='SYMBOLIC'/>
-      <size height='333.4736328125' width='176.0'/>
+      <size height='120.0' width='176.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id6bf7d798-fb17-44dc-97f9-33f93b0a679c'>
       <contained xmi:type='DI:GraphNode' xmi:id='id02bc6be3-a818-44f7-8a69-b4aea2ef4c9e'>
