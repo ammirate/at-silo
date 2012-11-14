@@ -6,8 +6,8 @@ public class DomandaIscrizione {
     private int iD;
     private int punteggio;
     private String posizione;
-    private String codFiscaleGenitore;
-    private String codFiscaleBambino;
+    private Genitore genitore;
+    private Bambino bambino;
 
     public DomandaIscrizione() {
     }
@@ -44,19 +44,20 @@ public class DomandaIscrizione {
             this.posizione = posizione;
     }
 
-    public String getCodFiscaleGenitore() {
-            return codFiscaleGenitore;
+
+    public void setGenitore(Genitore genitore) {
+        this.genitore = genitore;
     }
 
-    public void setCodFiscaleGenitore(String codFiscaleGenitore) {
-            this.codFiscaleGenitore = codFiscaleGenitore;
+    public Genitore getGenitore() {
+        return genitore;
     }
 
-    public String getCodFiscaleBambino() {
-            return codFiscaleBambino;
+    public void setBambino(Bambino bambino) {
+        this.bambino = bambino;
     }
 
-    public void setCodFiscaleBambino(String codFiscaleBambino) {
-            this.codFiscaleBambino = codFiscaleBambino;
+    public Bambino getBambino() {
+        return bambino;
     }
 }

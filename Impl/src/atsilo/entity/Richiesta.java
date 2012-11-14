@@ -6,8 +6,9 @@ public class Richiesta {
     private String menuRichiesto;
     private String orarioRichiesto;
     private String allegato;
-    
-    
+    private Genitore genitore;
+
+
     public Richiesta(){}
     
     public void setId(int id){this.id=id;}
@@ -24,7 +25,13 @@ public class Richiesta {
     
     public void setAllegato(String allegato){this.allegato=allegato;}
     public String getAllegato(){return this.allegato;}
-    
-    
-    
+
+
+    public void setGenitore(Genitore genitore) {
+        this.genitore = genitore;
+    }
+
+    public Genitore getGenitore() {
+        return genitore;
+    }
 }
