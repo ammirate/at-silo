@@ -2,6 +2,21 @@
 <diagram program="umlet" version="11.5.1">
   <zoom_level>10</zoom_level>
   <element>
+<<<<<<< .mine
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>1150</x>
+      <y>260</y>
+      <w>120</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Use case 2
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+=======
+>>>>>>> .r1236
     <type>com.umlet.element.Package</type>
     <coordinates>
       <x>310</x>
