@@ -19,7 +19,7 @@ public class ProgrammaEducativoSettimanale {
     /**
      * @attribute
      */
-    private String psicopedagogo;
+    Psicopedagogo psicopedagogo;
 
     /**
      * @attribute
@@ -38,8 +38,7 @@ public class ProgrammaEducativoSettimanale {
     public void setObiettivi(String o) {
     }
 
-    public String getPsicopedagogo() {
-    }
+  
 
     public void setSettimana(String s) {
     }
@@ -51,5 +50,13 @@ public class ProgrammaEducativoSettimanale {
     }
 
     public String getDescrizione() {
+    }
+
+    public void setPsicopedagogo(Psicopedagogo psicopedagogo) {
+        this.psicopedagogo = psicopedagogo;
+    }
+
+    public Psicopedagogo getPsicopedagogo() {
+        return psicopedagogo;
     }
 }
