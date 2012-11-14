@@ -2,7 +2,7 @@ package atsilo.entity;
 
 public class Utente {
     Date dataNascita;
-    private String nome,;
+    private String nome;
     private String cognome;
     private String codiceFiscale;
     private String email;
