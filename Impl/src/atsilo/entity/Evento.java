@@ -4,17 +4,17 @@ public class Evento {
     /**
      * @attribute
      */
-    private String personale_asilo;
+    private PersonaleAsilo personaleAsilo;
 
     /**
      * @attribute
      */
-    private String psicopedagogo;
+    private Psicopedagogo psicopedagogo;
 
     /**
      * @attribute
      */
-    private String educatore_didattico;
+    private EducatoreDidattico educatoreDidattico;
 
     /**
      * @attribute
@@ -34,13 +34,13 @@ public class Evento {
     public Evento() {
     }
 
-    public String getPersonale_asilo() {
+    public PersonaleAsilo getPersonaleAsilo() {
     }
 
     public Date getData() {
     }
 
-    public String getPsicopedagogo() {
+    public Psicopedagogo getPsicopedagogo() {
     }
 
     public String getDescrizione() {
@@ -50,5 +50,9 @@ public class Evento {
     }
 
     public void setDescrizione(String d) {
+    }
+
+    public EducatoreDidattico getEducatoreDidattico() {
+        return null;
     }
 }
