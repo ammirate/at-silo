@@ -2,7 +2,7 @@ package atsilo.entity;
 
 public class Bando {
     
-    private int iD;
+    private int id;
     private String dataInizio;
     private String dataFine;
     
@@ -10,11 +10,11 @@ public class Bando {
     }
 
     public int getiD() {
-            return iD;
+            return id;
     }
 
     public void setiD(int iD) {
-            this.iD = iD;
+            this.id = iD;
     }
 
     public String getDataInizio() {
