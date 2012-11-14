@@ -15,8 +15,9 @@ public class Account{
             private String userName;
             private String passWord;
             private String stato;
-            
-            public Account() {
+    private Utente owner;
+
+    public Account() {
             }
 
             public String getUserName() {
