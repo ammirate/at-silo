@@ -1,5 +1,11 @@
 package atsilo.entity;
 
+import atsilo.entity.Attivita;
+import atsilo.entity.EducatoreDidattico;
+import java.util.List;
+
+
+
 public class Registro {
     /**
      * @attribute
@@ -20,20 +26,49 @@ public class Registro {
      * @attribute
      */
     private EducatoreDidattico educatoreDidattico;
+    
     private List<Attivita> listaAttivita;
 
     public Registro() {
     }
 
-    public int getClasse() {
+    public void setClasse(int Classe) {
+        this.Classe = Classe;
     }
 
-    public EducatoreDidattico getEducatore() {
+    public int getClasse() {
+        return Classe;
+    }
+
+    public void setAnno(String anno) {
+        this.anno = anno;
     }
 
     public String getAnno() {
+        return anno;
     }
 
-    public int getID() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setEducatoreDidattico(EducatoreDidattico educatoreDidattico) {
+        this.educatoreDidattico = educatoreDidattico;
+    }
+
+    public EducatoreDidattico getEducatoreDidattico() {
+        return educatoreDidattico;
+    }
+
+    public void setListaAttivita(List<Attivita> listaAttivita) {
+        this.listaAttivita = listaAttivita;
+    }
+
+    public List<Attivita> getListaAttivita() {
+        return listaAttivita;
     }
 }
