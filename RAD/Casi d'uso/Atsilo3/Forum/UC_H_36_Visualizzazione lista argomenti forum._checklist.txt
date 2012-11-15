@@ -1,24 +1,24 @@
-LINEE GUIDA FORMALI
-[ ] Ha lo stesso nome dello scenario generalizzato
-[ ] Ha lo stesso ID dello scenario generalizzato
+﻿LINEE GUIDA FORMALI
+[X] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
 [X] Non sono presenti attori multipli con congiunzione OR
 [X] Il file è nominato secondo la corretta nomenclatura
 [X] Tutte le azioni del sistema sono tabulate
 [X] Tutte le azioni del sistema sono indicate in modo esplicito ("Il sistema ...")
 [X] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
 [X] Le inclusioni sono segnalate secondo le convenzioni previste
-[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
 [X] Le estensioni sono segnalate secondo le convenzioni previste
 [X] Le specializzazioni sono segnalate secondo le convenzioni previste
 [X] Entry e exit condition sono specificate
 [X] Il flusso degli eventi è correttamente numerato
-[x] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 
 LINEE GUIDA SOSTANZIALI
 [X] Il nome è coerente con il contenuto
 [X] Il flusso degli eventi è coerente con i requisiti fuzionali
 [X] I requisiti qualitativi sono misurabili
-[ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
+[X] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
 [X] Si fa sempre riferimento al sistema con il termine "il sistema"
 [X] Il caso d'uso realizza almeno un requisito funzionale
 [X] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
@@ -27,8 +27,8 @@ LINEE GUIDA SOSTANZIALI
 	una visualizzazione di dati persistenti da parte del sistema o
 	il salvataggio di dati persistenti da parte del sistema
 [X] Inclusione, estensione e specializzazione sono utilizzate in modo proprio
-[ ] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
-[ ] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
-[ ] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
+[X] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
+[X] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
+[X] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
 
 ALTRE ANNOTAZIONI:
