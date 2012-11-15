@@ -1,13 +1,13 @@
 LINEE GUIDA FORMALI
-[ ] Ha lo stesso nome dello scenario generalizzato
-[ ] Ha lo stesso ID dello scenario generalizzato
+[X] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
 [X] Non sono presenti attori multipli con congiunzione OR
 [X] Il file è nominato secondo la corretta nomenclatura
 [X] Tutte le azioni del sistema sono tabulate
 [X] Tutte le azioni del sistema sono indicate in modo esplicito ("Il sistema ...")
 [X] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
 [X] Le inclusioni sono segnalate secondo le convenzioni previste
-[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
 [X] Le estensioni sono segnalate secondo le convenzioni previste
 [X] Le specializzazioni sono segnalate secondo le convenzioni previste
 [X] Entry e exit condition sono specificate
@@ -16,21 +16,19 @@ LINEE GUIDA FORMALI
 
 LINEE GUIDA SOSTANZIALI
 [X] Il nome è coerente con il contenuto
-[ ] Il flusso degli eventi è coerente con i requisiti fuzionali
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
 [X] I requisiti qualitativi sono misurabili
-[ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
+[X] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
 [X] Si fa sempre riferimento al sistema con il termine "il sistema"
-[ ] Il caso d'uso realizza almeno un requisito funzionale
-[ ] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
+[X ] Il caso d'uso realizza almeno un requisito funzionale
+[X] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
 [X] Il flusso degli eventi inizia con un'azione dell'attore iniziante
 [X] Il flusso degli eventi contiene almeno
 	una visualizzazione di dati persistenti da parte del sistema o
 	il salvataggio di dati persistenti da parte del sistema
 [X] Inclusione, estensione e specializzazione sono utilizzate in modo proprio
-[ ] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
-[ ] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
+[X] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
+[X] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
 [X] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
 
-ALTRE ANNOTAZIONI:
-La ricerca di un evento non � chiaramente specificata nei requisiti funzionali, CREDO sia riconducibile alla visualizzazione di un evento ma non ne ho estrema certezza.
-Non sono sicuro che siano specificati tutti i campi del form [dipende da quanti e quali sono i campi nel form, e non esiste un mock-up a cui posso fare riferimento. Se il campo del form � unico il punto � ok, altrimenti va rivisto nel dettaglio]
+ALTRE ANNOTAZIONI
