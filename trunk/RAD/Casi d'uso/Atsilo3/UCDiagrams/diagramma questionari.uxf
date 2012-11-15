@@ -213,18 +213,6 @@ questionari</panel_attributes>
     <additional_attributes>162;54;27;27</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>513</x>
-      <y>108</y>
-      <w>179</w>
-      <h>179</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>162;27;27;162</additional_attributes>
-  </element>
-  <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>342</x>
