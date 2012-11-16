@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-21T17:21:26.51</meta:creation-date><meta:editing-duration>PT7M48S</meta:editing-duration><meta:editing-cycles>11</meta:editing-cycles><meta:generator>LibreOffice/3.6$MacOSX_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-10-29T21:23:46</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="31" meta:word-count="243" meta:character-count="1602" meta:non-whitespace-character-count="1399"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-21T17:21:26.51</meta:creation-date><meta:editing-duration>PT7M48S</meta:editing-duration><meta:editing-cycles>13</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-15T21:35:12.31</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="31" meta:word-count="245" meta:character-count="1620" meta:non-whitespace-character-count="1415"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">6650</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">29115</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">12776</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">43640</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">19263</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">19189</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">10160</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">8765</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">15732</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">6650</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">29113</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">19424</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">43639</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">19262</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1963071</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2077491</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -109,9 +109,9 @@
   <style:font-face style:name="OpenSymbol" svg:font-family="OpenSymbol"/>
   <style:font-face style:name="Times New Roman" svg:font-family="&apos;Times New Roman&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
   <style:font-face style:name="Arial" svg:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable"/>
+  <style:font-face style:name="Lucida Sans Unicode" svg:font-family="&apos;Lucida Sans Unicode&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
   <style:font-face style:name="Mangal" svg:font-family="Mangal" style:font-family-generic="system" style:font-pitch="variable"/>
   <style:font-face style:name="Microsoft YaHei" svg:font-family="&apos;Microsoft YaHei&apos;" style:font-family-generic="system" style:font-pitch="variable"/>
-  <style:font-face style:name="SimSun" svg:font-family="SimSun" style:font-family-generic="system" style:font-pitch="variable"/>
  </office:font-face-decls>
  <office:styles>
   <style:default-style style:family="graphic">
@@ -123,7 +123,7 @@
   </style:default-style>
   <style:default-style style:family="paragraph">
    <style:paragraph-properties fo:hyphenation-ladder-count="no-limit" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="1.251cm" style:writing-mode="page"/>
-   <style:text-properties style:use-window-font-color="true" style:font-name="Times New Roman" fo:font-size="12pt" fo:language="it" fo:country="IT" style:letter-kerning="true" style:font-name-asian="SimSun" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Mangal" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2"/>
+   <style:text-properties style:use-window-font-color="true" style:font-name="Times New Roman" fo:font-size="12pt" fo:language="it" fo:country="IT" style:letter-kerning="true" style:font-name-asian="Lucida Sans Unicode" style:font-size-asian="10.5pt" style:language-asian="zh" style:country-asian="CN" style:font-name-complex="Mangal" style:font-size-complex="12pt" style:language-complex="hi" style:country-complex="IN" fo:hyphenate="false" fo:hyphenation-remain-char-count="2" fo:hyphenation-push-char-count="2"/>
   </style:default-style>
   <style:default-style style:family="table">
    <style:table-properties table:border-model="collapsing"/>
@@ -457,22 +457,18 @@
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties style:font-name="Arial" fo:font-size="11pt" fo:font-style="italic" fo:font-weight="normal" style:font-size-asian="11pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="11pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="Numerazione_20_UC"/>
   <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2"/>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L1"/>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L1">
-   <style:text-properties officeooo:paragraph-rsid="001df43f"/>
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+   <style:text-properties officeooo:paragraph-rsid="001f0d52"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="Numerazione_20_UC"/>
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L1"/>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L1"/>
   <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties officeooo:rsid="001df43f" officeooo:paragraph-rsid="001df43f"/>
   </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L1"/>
-  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC"/>
   <style:style style:name="T1" style:family="text">
-   <style:text-properties officeooo:rsid="001df43f"/>
+   <style:text-properties officeooo:rsid="001f0d52"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-bullet text:level="1" text:style-name="Bullet_20_Symbols" text:bullet-char="•">
@@ -639,67 +635,52 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list1938761180" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list41472794" text:style-name="Numerazione_20_UC">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="Azione_20_attore"><text:s/>L&apos;utente accede alla pagina contente il form di compilazione.</text:p>
-        <text:p text:style-name="Azione_20_sistema"/>
+        <text:p text:style-name="P6"><text:s/>Genitore accede alla pagina contente il form di compilazione.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_sistema"><text:s/>Il sistema mostra la pagina richiesta ed attende un eventuale commit.</text:p>
-        <text:p text:style-name="Azione_20_attore"/>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="Azione_20_attore">L&apos;utente inizia la compilazione dei campi del richiedente:</text:p>
-       </text:list-item>
-      </text:list>
-      <text:list xml:id="list67861064" text:style-name="L1">
-       <text:list-item>
-        <text:p text:style-name="P6">Nome : stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P10">Cognome: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P7"><text:span text:style-name="T1">Codice Fiscale: stringa di caratteri</text:span></text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P6">Password: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P10">Conferma Password: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P6">telefono: sequenza di interi</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P10">email: stringa di caratteri</text:p>
+        <text:p text:style-name="P6">Genitore inizia la compilazione dei campi del richiedente:</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list1753910952" text:continue-list="list1938761180" text:style-name="Numerazione_20_UC">
-       <text:list-header>
-        <text:p text:style-name="Azione_20_sistema"/>
-       </text:list-header>
+      <text:list xml:id="list41502324" text:style-name="L1">
        <text:list-item>
-        <text:p text:style-name="P11">Sbarrando le caselle di interesse dichiara la situazione lavorativa ed eventuali rapporti con l&apos;Ateneo e/o comune di Fisciano.</text:p>
+        <text:p text:style-name="P8">Nome : stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P7">Cognome: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P9">Codice Fiscale: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P8">Password: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P7">Conferma Password: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P8">telefono: sequenza di interi</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P7">email: stringa di caratteri</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list235348549" text:continue-list="list67861064" text:style-name="L1">
-       <text:list-header>
-        <text:p text:style-name="P9"/>
-       </text:list-header>
-      </text:list>
-      <text:list xml:id="list600185923" text:continue-list="list1753910952" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list41483955" text:continue-list="list41472794" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P11">Sottomette la domanda.</text:p>
-        <text:p text:style-name="P8"/>
+        <text:p text:style-name="P6">Genitore <text:span text:style-name="T1">s</text:span>barra le caselle di interesse dichiara<text:span text:style-name="T1">ndo </text:span>la situazione lavorativa ed eventuali rapporti con l&apos;Ateneo e/o comune di Fisciano.</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P6">Genitore <text:span text:style-name="T1">s</text:span>ottomette la domanda.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_sistema"><text:s/>Il sistema registra un account auto-generato basandosi su dati anagrafici. Visualizza un messaggio di avvenuto invio e corretta compilazione dei campi invitando l&apos;utente a confermare <text:s/>l&apos;email nella propria casella di posta.</text:p>
-        <text:p text:style-name="Azione_20_attore"/>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11"><text:s/>L&apos;utente ottiene i dati dell&apos;account e conferma la propria e-mail.</text:p>
-        <text:p text:style-name="P8"/>
+        <text:p text:style-name="P4"><text:s/>Genitore ottiene i dati dell&apos;account e conferma la propria e-mail.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_sistema"><text:s/>Il sistema visualizza un messaggio di avvenuta conferma <text:s/>dell&apos;email, e corretta creazione dell&apos;account richiesto.</text:p>
@@ -720,7 +701,7 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list564218098" text:style-name="L2">
+      <text:list xml:id="list41502876" text:style-name="L2">
        <text:list-item text:start-value="1">
         <text:p text:style-name="P5">Nel caso di errata compilazione dei campi, il sistema mostra all’utente una schermata di errore e invita alla revisione del campo interrato</text:p>
        </text:list-item>
