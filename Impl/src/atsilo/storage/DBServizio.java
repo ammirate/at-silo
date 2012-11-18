@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.Servizio;
 
 public class DBServizio extends DBBeans {
@@ -8,4 +9,9 @@ public class DBServizio extends DBBeans {
     public DBServizio(){
         tabella= new Tabella("Servizio");
         super(tabella);
-    }}
+    }
+
+    public Servizio getServizio(Bambino b) {
+        return null;
+    }
+}
