@@ -43,6 +43,7 @@
          <string v="JSP"/>
          <string v="Java"/>
          <string v="Java-Modeling"/>
+         <string v="UML"/>
          <string v="WSDL"/>
          <string v="WSPolicy"/>
          <string v="XML"/>
