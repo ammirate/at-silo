@@ -18,4 +18,8 @@ public class DBRichiesta extends DBBeans {
     public List<Richiesta> getAllRichiesta(Genitore g) {
         return null;
     }
+
+    public boolean inserisci(Richiesta r) {
+        return true;
+    }
 }

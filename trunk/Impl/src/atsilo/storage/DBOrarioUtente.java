@@ -14,4 +14,8 @@ public class DBOrarioUtente extends DBBeans {
     public OrarioUtente getOrario(Servizio s) {
         return null;
     }
+
+    public boolean inserisci(OrarioUtente o) {
+        return true;
+    }
 }

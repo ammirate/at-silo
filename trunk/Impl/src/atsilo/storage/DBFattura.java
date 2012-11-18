@@ -14,4 +14,8 @@ public class DBFattura extends DBBeans {
     public Fattura getFattura(PersonaleAsilo pers) {
         return null;
     }
+
+    public boolean inserisci(Fattura f) {
+        return true;
+    }
 }
