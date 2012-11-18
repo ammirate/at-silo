@@ -8,4 +8,9 @@ public class DBTirocinante extends DBBeans {
     public DBTirocinante(){
         tabella= new Tabella("Tirocinante");
         super(tabella);
-    }}
+    }
+
+    public Tirocinante getTirocinante(PersonaleAsilo pers) {
+        return null;
+    }
+}
