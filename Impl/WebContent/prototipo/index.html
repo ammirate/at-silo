@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="css/indexStyle.css" />
+<title>Homepage</title>
+<script language="javascript">
+function verificaAccount(){
+	document.location="area_utente_genitore.html";
+	
+}
+</script>
+</head>
+
+<body>
+<div id="container" >
+<div id="immagine" style="text-align:center"><img src="tmp/logo.png" width="400" height="249" alt="Logo" /></div>
+<div id="formLogin">
+<form id="login" name="login" method="post" action="" onsubmit="return verificaAccount()">
+  <p>
+  Username
+  <input name="username" type="text" />
+  </p>
+  <p>
+    Password
+    <input name="password" type="text" />
+  </p>
+  <p>
+    Tipologia utente
+    <select name="tipologiaUtente">
+      <option value="genitore">genitore</option>
+      <option value="personale">personale</option>S
+    </select>
+  </p>
+  <p>
+    <input name="invia" type="submit" value="Accedi"  />
+  </p>
+</form>
+<p><a href="recupero_credenziali.html">Ha dimenticato le credenziali?</a></p>
+</div>
+<div id="bando">
+  <div>
+    <p><a href="file/bando.pdf"><img src="tmp/scaricaBando.jpg" width="125" height="29" alt="ScaricaBando" /></a></p>
+   
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  <div style="vertical-align:bottom "> <p ><a href="iscrizione.html"><img src="tmp/accediIscrizione.jpg" width="146" height="43" alt="Accedi all'area iscrizioni" /></a></p></div>
+ 
+</div>
+</div>
+</body>
+</html>
