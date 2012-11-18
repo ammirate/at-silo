@@ -13,4 +13,12 @@ public class DBExtra extends DBBeans {
 
     public Extra getExtra(Retta r) {
     }
+
+    public boolean inserisci(Extra e) {
+        return true;
+    }
+
+    public boolean delete(Extra e) {
+        return true;
+    }
 }

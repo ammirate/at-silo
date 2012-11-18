@@ -14,4 +14,12 @@ public class DBServizio extends DBBeans {
     public Servizio getServizio(Bambino b) {
         return null;
     }
+
+    public boolean inserisci(Servizio s, Bambino b) {
+        return true;
+    }
+
+    public boolean delete(Servizio s) {
+        return true;
+    }
 }

@@ -19,4 +19,11 @@ public class DBDomandaIscrizione extends DBBeans {
         return null;
     }
 
+    public boolean inserisci(DomandaIscrizione d) {
+        return true;
+    }
+
+    public boolean delete(DomandaIscrizione d) {
+        return true;
+    }
 }
