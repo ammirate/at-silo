@@ -1,0 +1,64 @@
+/* ----------------------------------------------------------------------------------------------------------
+
+    Output device: screen, projection
+
+    Author:     Nuvio (www.nuvio.cz)
+    Update:     2008-07-29, 18:30 GMT+1
+    Version:    2.2.6 (2008-07-13, 14:28 GMT+1)
+
+    Structure:
+        display; position; z-index; float; clear; width; height; overflow; margin; padding; border; background; align; font;
+
+    Content:
+    
+        1) HTML tags
+        2) HTML styles
+        3) Layout
+        4-1) Page: Homepage
+        5) Others
+
+---------------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------------
+
+    
+
+   /* ----------------------------------------------------------------------------------------------------------
+4-1) Page: Homepage-Login
+---------------------------------------------------------------------------------------------------------- */
+body {background:url("../design/bg.gif") 0 0 repeat-x; font:0.8em/1.5 "arial", sans-serif;}
+#container {
+	position: relative;
+	width:auto;
+	height:768px;
+}
+#immagine {
+	position:relative;
+	width:100%;
+	height:auto;
+	z-index:1;
+	left: 0%;
+	text-align: right;
+	top: 5%;
+}
+
+#formLogin {
+	position:absolute;
+	width:49%;
+	height:207px;
+	z-index:1;
+	text-align: right;
+	top: 40%;
+	float:left;
+}
+
+#bando {
+	position:absolute;
+	width:49%;
+	height:207px;
+	z-index:1;
+	right: 3px;
+	float:right;
+	text-align: left;
+	top: 40%;
+}
