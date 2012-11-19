@@ -28,4 +28,28 @@ public class ControlIscrizioneEDatiPersonali {
 
     void inserisciDomandaIscirizione(DomandaIscrizione iscrizione) {
     }
+
+    void inserisciPunteggio(DomandaIscrizione iscrizione) {
+    }
+
+    DomandaIscrizione eliminaDomandaIscrizione(DomandaIscirizione iscrizione) {
+        return null;
+    }
+
+    Bambino eliminaIscrizione(Bambino bambino) {
+        return null;
+    }
+
+    void inserisciIntervalloBando(Date inizio, Date fine) {
+    }
+
+    void modificaBando(Date inizio, Date fine) {
+    }
+
+    void modificaBando(Bando bando) {
+    }
+
+    Utente getUtente(Utente utente) {
+        return null;
+    }
 }
