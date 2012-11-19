@@ -9,39 +9,40 @@ import java.sql.Date;
 import java.util.List;
 
 public class ControlTirocinanti {
+    private static final ControlTirocinanti c;
 
-    public ControlTirocinanti(){
+    private ControlTirocinanti(){
         
     }
+    private static ControlTirocinanti getInstance(){
+        return c;
+    }
 
-
-    public void inserisciTirocinante(Date ddn, String nome, String cognome, String cF, String email, String cdn, 
-                                     String tel, String res, PersonaleAsilo p, int oreT, int oreL){
+    public void inserisciTirocinante(Tirocinante t){
         
     }
-    public void modificaTirocinante(Tirocinante t, Tirocinante newT){
+    public void modificaTirocinante(Tirocinante t){
         
     }
     public Tirocinante eliminaTirocinante(Tirocinante t){
-        
+        return null;
     }
-    public void inserisciAttivitaTirocinante(){
-        
+
+    public List<Tirocinante> getElencoTirocinanti(){
+        return null;
     }
-    public void modificaAttivitaTirocinante(){
-        
+    public List<Tirocinante> getTirocinante(Tirocinante t){
+        return null;
     }
-    public AttivitaTirocinante eliminaAttivitaTirocinante(){
-        
+    public List<Tirocinante> getTirocinantePerCF(String cf){
+        return null;
     }
-    public List<Tirocinante> visualizzaTirocinanti(){
-        
-    }
-    public void inserisciFeedback (int id, String descrizione, PersonaleAsilo p){
+    
+    public void inserisciFeedback (Feedback f){
         
     }
     public Feedback eliminaFeedback(Feedback f){
-        
+        return f;
     }
 
 }
