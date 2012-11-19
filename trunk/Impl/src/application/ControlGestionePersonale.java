@@ -1,6 +1,8 @@
 package application;
 
 public class ControlGestionePersonale {
+    private static final controlGestionePersonale ISTANCE;
+
     ControlGestionePersonale() {
     }
 
@@ -15,6 +17,10 @@ public class ControlGestionePersonale {
     }
 
     vodi modificaUtente(Genitore utente) {
+        return null;
+    }
+
+    public static ControlGestionePersonale getIstance() {
         return null;
     }
 }

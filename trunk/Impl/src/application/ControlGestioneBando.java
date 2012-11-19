@@ -1,6 +1,8 @@
 package application;
 
 public class ControlGestioneBando {
+    private static final controlGestioneBando ISTANCE;
+
     ControlGestioneBando() {
     }
 
@@ -11,5 +13,9 @@ public class ControlGestioneBando {
     }
 
     void modificaBando(Bando bando) {
+    }
+
+    public static ControlGestioneBando getIstance() {
+        return null;
     }
 }

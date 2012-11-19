@@ -16,15 +16,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='idbf387188-f5a6-4d38-b059-19250f3cf496'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.556851863861084' width='0.0'/>
+          <size height='1.5909373760223389' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='idea7b7272-5446-4bb9-9d0d-76fcc3c33a07'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.443148136138916' width='0.0'/>
+          <size height='0.40906262397766113' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='165.0' width='355.0'/>
+        <size height='210.0' width='355.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idcaf11cd3-b299-4169-8593-cddc764081c0'>
         <contained xmi:type='DI:GraphNode' xmi:id='idba1ca327-0ced-45a9-80ee-7e451aa3a2dd'>
@@ -46,7 +46,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='165.0' width='355.0'/>
+        <size height='210.0' width='355.0'/>
       </contained>
       <position x='180.0' y='0.0'/>
       <property key='showStereotype' value='false'/>
@@ -72,7 +72,7 @@
       <property key='showAttributeType' value='true'/>
       <property key='sortAttributesAlpha' value='true'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;application;;###;;ControlGestionePersonale' presentation='SYMBOLIC'/>
-      <size height='165.0' width='355.0'/>
+      <size height='210.0' width='355.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id7b8fbade-67ae-4e5d-970c-ec438138d888'>
       <contained xmi:type='DI:GraphNode' xmi:id='id245daa21-9692-4356-ba90-d8abdafb11c9'>
@@ -88,15 +88,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='id33bdca9d-669d-4a5e-a941-bd603bbd08ae'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.1707872152328491' width='0.0'/>
+          <size height='1.3480594158172607' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='id1b5603cf-94d6-49f4-a37b-40a207c6fcf1'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.8292127847671509' width='0.0'/>
+          <size height='0.6519405841827393' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='135.0' width='218.0'/>
+        <size height='154.98580932617188' width='218.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id5cce9a96-4753-4b44-af48-590bf8ad3bb5'>
         <contained xmi:type='DI:GraphNode' xmi:id='id2b3f089b-42d9-4cb3-b5eb-9fde18bde1c5'>
@@ -118,7 +118,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='135.0' width='218.0'/>
+        <size height='154.98580932617188' width='218.0'/>
       </contained>
       <position x='-971.0' y='-1.0'/>
       <property key='showStereotype' value='false'/>
@@ -144,7 +144,7 @@
       <property key='showAttributeType' value='true'/>
       <property key='sortAttributesAlpha' value='true'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;application;;###;;ControlLogin' presentation='SYMBOLIC'/>
-      <size height='135.0' width='218.0'/>
+      <size height='154.98580932617188' width='218.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='idbd424368-5f15-486e-a2c0-7c9400e77405'>
       <contained xmi:type='DI:GraphNode' xmi:id='id568ef3e0-769a-412c-bb94-9409894fe033'>
@@ -160,15 +160,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='id0861c7a6-2d81-4f36-8faa-5c7d86d89523'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.1707872152328491' width='0.0'/>
+          <size height='1.356297492980957' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='id4e5ffcc7-b08e-4b52-9e1c-f3c8a1b995e2'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.8292127847671509' width='0.0'/>
+          <size height='0.643702507019043' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='133.25357055664062' width='138.0'/>
+        <size height='154.09103393554688' width='138.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idc32cc44a-c763-4c35-94f9-4df48a8f8d99'>
         <contained xmi:type='DI:GraphNode' xmi:id='id6de7fb19-820e-4d67-ba81-0c4288a73a04'>
@@ -190,7 +190,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='133.25357055664062' width='138.0'/>
+        <size height='154.09103393554688' width='138.0'/>
       </contained>
       <position x='-300.0' y='0.0'/>
       <property key='showStereotype' value='false'/>
@@ -216,7 +216,7 @@
       <property key='showAttributeType' value='true'/>
       <property key='sortAttributesAlpha' value='true'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;application;;###;;ControlRicercaDati' presentation='SYMBOLIC'/>
-      <size height='133.25357055664062' width='138.0'/>
+      <size height='154.09103393554688' width='138.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='ida1d32d26-2b03-4cae-a357-9630f53525ab'>
       <contained xmi:type='DI:GraphNode' xmi:id='id7500ba68-e50f-4605-a394-13f8724794e7'>
@@ -232,15 +232,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='idaf657bfe-3b55-46c3-808b-a8fc9517a5c3'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.5379806756973267' width='0.0'/>
+          <size height='1.6232267618179321' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='idb9f0cbf5-909c-4b06-9d03-bb0bff2dc76f'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.46201932430267334' width='0.0'/>
+          <size height='0.37677323818206787' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='187.4131622314453' width='256.0'/>
+        <size height='211.86868286132812' width='256.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id594f1765-4d0b-445b-a836-0929f1a8d7c6'>
         <contained xmi:type='DI:GraphNode' xmi:id='id22c73602-ab7c-4273-9284-c2df3de80443'>
@@ -262,7 +262,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='187.4131622314453' width='256.0'/>
+        <size height='211.86868286132812' width='256.0'/>
       </contained>
       <position x='-121.0' y='2.9999771118164062'/>
       <property key='showAttributeStatic' value='true'/>
@@ -288,7 +288,7 @@
       <property key='sortAttributesAlpha' value='true'/>
       <property key='sortMethodsAlpha' value='true'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;application;;###;;ControlDatiPersonali' presentation='SYMBOLIC'/>
-      <size height='187.4131622314453' width='256.0'/>
+      <size height='211.86868286132812' width='256.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='ideaadc0e8-3028-4ecc-8d36-6ce3807526c9'>
       <contained xmi:type='DI:GraphNode' xmi:id='id995e891c-5ddf-4fc6-9d1f-b4e1669482eb'>
@@ -304,15 +304,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='id739c21e5-e9a4-40eb-a851-891995399b24'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.473364233970642' width='0.0'/>
+          <size height='1.4894087314605713' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='id54cd3750-eaa6-468f-8ab2-65bbfb567d3e'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.5266357660293579' width='0.0'/>
+          <size height='0.5105912685394287' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='153.0' width='270.0'/>
+        <size height='200.6351318359375' width='270.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='ida0329da8-b9e8-432c-ab22-8bebb04b0b00'>
         <contained xmi:type='DI:GraphNode' xmi:id='idef768bc2-81fb-43e7-8102-b86ba26f4c8c'>
@@ -334,7 +334,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='153.0' width='270.0'/>
+        <size height='200.6351318359375' width='270.0'/>
       </contained>
       <position x='563.0' y='-2.0'/>
       <property key='showAttributeStatic' value='true'/>
@@ -360,7 +360,7 @@
       <property key='sortAttributesAlpha' value='true'/>
       <property key='sortMethodsAlpha' value='true'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;application;;###;;ControlGestioneBando' presentation='SYMBOLIC'/>
-      <size height='153.0' width='270.0'/>
+      <size height='200.6351318359375' width='270.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id2e78ff3b-a5d7-4d6e-9898-d68a1240aca5'>
       <contained xmi:type='DI:GraphNode' xmi:id='id31184872-1c71-4044-bb0d-2a7250cf85c5'>
@@ -376,15 +376,15 @@
         <contained xmi:type='DI:GraphNode' xmi:id='idd2593d81-ae9f-4b10-8df3-3722435f5320'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
-          <size height='1.666697382926941' width='0.0'/>
+          <size height='1.7066923379898071' width='0.0'/>
         </contained>
         <contained xmi:type='DI:GraphNode' xmi:id='idb2dac890-70fd-4b6f-9c0f-d23d4eeb4f6e'>
           <property key='FirstVisibleIndex' value='0'/>
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
-          <size height='0.3333026170730591' width='0.0'/>
+          <size height='0.29330766201019287' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='228.10177612304688' width='378.0'/>
+        <size height='246.70339965820312' width='378.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idb50d4823-dcc1-4b4d-b52c-0be1cd8db164'>
         <contained xmi:type='DI:GraphNode' xmi:id='id52e71c32-354a-4731-9174-32b28455a6e1'>
@@ -406,7 +406,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='228.10177612304688' width='378.0'/>
+        <size height='246.70339965820312' width='378.0'/>
       </contained>
       <position x='-723.0' y='-2.0'/>
       <property key='showAttributeStatic' value='true'/>
@@ -432,7 +432,7 @@
       <property key='sortAttributesAlpha' value='true'/>
       <property key='sortMethodsAlpha' value='true'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;application;;###;;ControlIscrizione' presentation='SYMBOLIC'/>
-      <size height='228.10177612304688' width='378.0'/>
+      <size height='246.70339965820312' width='378.0'/>
     </contained>
     <property key='gridSize' value='15'/>
     <property key='antialiasText' value='true'/>

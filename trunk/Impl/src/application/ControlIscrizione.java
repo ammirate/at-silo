@@ -4,6 +4,8 @@ import atsilo.entity.DomandaIscrizione;
 
 public class ControlIscrizione {
 
+    private static final controlIscrizione ISTANCE;
+
     DomandaIscrizione getDomanda() {
         return null;
     }
@@ -26,5 +28,8 @@ public class ControlIscrizione {
     }
 
     ControlIscrizione() {
+    }
+
+    public static Controlscrizione getIstance() {
     }
 }
