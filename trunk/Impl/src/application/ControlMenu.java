@@ -7,11 +7,16 @@ import java.util.List;
 
 
 public class ControlMenu {
+    private static final ControlMenu cm;
 
-    public ControlMenu{
+    private ControlMenu(){
         
     }
-     public void inserisciMenuMensa (String id, String categoriaBambino, String tipologia, String primo, String secondo, String contorno, String frutta, Date data){
+    public static ControlMenu getIstance(){
+        return cm;         
+     }
+    
+     public void inserisciMenuMensa (MenuMensa m){
                           
                       }
           
