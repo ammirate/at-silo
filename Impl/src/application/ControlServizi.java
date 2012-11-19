@@ -5,27 +5,41 @@ import atsilo.entity.OrarioUtente;
 import atsilo.entity.Servizio;
 
 public class ControlServizi {
+private static final ControlServizi cs;
 
-public ControlServizi(){
+private ControlServizi(){
+    
+}
+private static ControlServizi getInstance(){
+    return cs;
+}
+public void inserisciServizio (Servizio s){
+    
+}
+public void modificaServizio(Servizio s){
     
 }
 
-public inserisciServizio (String orainizio, String orafino, String pianopasto, Bambino b, OrarioUtente o, String id){
+public void inserisciOrarioUtente(OrarioUtente o){
     
 }
-public void modificaServizio(Servizio s, Servizio newS){
+
+public void modificaOrarioUtente(OrarioUtente o){
     
 }
+
+public OrarioUtente eliminaOrarioUtente(int id){
+    return null;
+}
+
 public void modificaPianoPasto(String idServ, String pianopasto){
     
 }
-public eliminaPianoPasto(String idServ){
-    
-}
+
 public String visualizzaPianoPasto(String idServ){
-    
+    return null;
 }
-public void 
+
 
 
 
