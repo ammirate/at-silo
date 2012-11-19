@@ -197,12 +197,12 @@ pressed</panel_attributes>
     <coordinates>
       <x>18</x>
       <y>396</y>
-      <w>521</w>
+      <w>512</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 confirm</panel_attributes>
-    <additional_attributes>27;45;504;45</additional_attributes>
+    <additional_attributes>27;45;495;45</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
@@ -345,16 +345,16 @@ for (String textline : textlines) {
     <coordinates>
       <x>495</x>
       <y>54</y>
-      <w>53</w>
+      <w>44</w>
       <h>359</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;36;342</additional_attributes>
+    <additional_attributes>27;27;27;342</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>522</x>
+      <x>513</x>
       <y>396</y>
       <w>18</w>
       <h>63</h>
@@ -367,12 +367,12 @@ for (String textline : textlines) {
     <coordinates>
       <x>234</x>
       <y>360</y>
-      <w>305</w>
+      <w>296</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>288;45;27;45</additional_attributes>
+    <additional_attributes>279;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>

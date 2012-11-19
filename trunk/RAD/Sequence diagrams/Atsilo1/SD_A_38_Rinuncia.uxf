@@ -182,7 +182,7 @@ InsertData()</panel_attributes>
   <element>
     <type>CustomElementImpl</type>
     <coordinates>
-      <x>450</x>
+      <x>459</x>
       <y>36</y>
       <w>109</w>
       <h>64</h>
@@ -295,7 +295,7 @@ for (String textline : textlines) {
     <coordinates>
       <x>630</x>
       <y>378</y>
-      <w>165</w>
+      <w>164</w>
       <h>107</h>
     </coordinates>
     <panel_attributes>lt=&lt;
