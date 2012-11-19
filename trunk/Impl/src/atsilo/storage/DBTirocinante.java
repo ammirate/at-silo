@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import atsilo.entity.PersonaleAsilo;
 import atsilo.entity.Tirocinante;
 
 public class DBTirocinante extends DBBeans {
