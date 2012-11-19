@@ -5,8 +5,6 @@ import java.util.List;
 import java.sql.Date;
 
 public class ControlRegistro {
-
-    Registro registro;
     
     public ControlRegistro() {
         
@@ -15,6 +13,14 @@ public class ControlRegistro {
     public void inserisciRegistro(Registro registro){}
     
     public Registro getRegistro(Classe classe){
+        return null;
+    }
+    
+    public List<Bambino> getBambini(Classe classe){
+        return null;
+    }
+    
+    public List<Attivita> getAttivita(Date data){
         return null;
     }
     

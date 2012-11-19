@@ -12,13 +12,13 @@ public class ControlAssenza {
         
     public ControlAssenza() {}
 
-    public void inserisciAssenza(Bambino bambino, Date data){}
+    public void inserisciAssenza(Registro registro, Assenza assenza){}
     
-    public Assenza eliminaAssenza(Bambino bambino, Date data){
+    public Assenza eliminaAssenza(Registro registro, Assenza assenza){
         return null;
     }
             
-    public List<Assenza> getAssenzeGiorno(Date data){
+    public List<Assenza> getAssenzeGiorno(Registro registro, Date data){
         return null;  
     }
     

@@ -8,17 +8,20 @@ public class ControlDomandaQuestionario {
     public ControlDomandaQuestionario() {
     }
     
-    public void inserisciDomanda(DomandaQuestionario domanda){}
+    public void inserisciDomanda(String idQuestionario, DomandaQuestionario domanda){}
 
-    public void modificaDomanda(String idDomanda, DomandaQuestionario newDomanda){}
+    public void modificaDomanda(String idQuestionario,String idDomanda, DomandaQuestionario newDomanda){}
     
-    public DomandaQuestionario eliminaDomanda(String idDomanda){
+    public DomandaQuestionario eliminaDomanda(String idQuestionario, String idDomanda){
         return null;
     }
 
-    public void inserisciCampi(String idDomanda, List<CampoDomandaQuestionario> campi){}
+    public void inserisciCampi(String idQuestionario, String idDomanda, List<CampoDomandaQuestionario> campi){}
     
-    public List<CampoDomandaQuestionario> getCampi(String idDomanda){
+    public List<CampoDomandaQuestionario> getCampiDomanda(String idQuestionario,String idDomanda){
         return null;
     }
+    
+    public void setCampiDomanda(String idQuestionario,String idDomanda, List<CampoDomandaQuestionario> ){}
+    
 }
