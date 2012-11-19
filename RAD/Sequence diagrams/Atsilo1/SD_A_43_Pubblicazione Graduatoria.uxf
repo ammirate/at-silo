@@ -197,12 +197,12 @@ pressed</panel_attributes>
     <coordinates>
       <x>18</x>
       <y>396</y>
-      <w>521</w>
+      <w>512</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 confirm</panel_attributes>
-    <additional_attributes>27;45;504;45</additional_attributes>
+    <additional_attributes>27;45;495;45</additional_attributes>
   </element>
   <element>
     <type>CustomElementImpl</type>
@@ -310,16 +310,16 @@ SalvaDati()</panel_attributes>
     <coordinates>
       <x>495</x>
       <y>63</y>
-      <w>53</w>
+      <w>44</w>
       <h>350</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>27;27;36;333</additional_attributes>
+    <additional_attributes>27;27;27;333</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>522</x>
+      <x>513</x>
       <y>396</y>
       <w>18</w>
       <h>63</h>
@@ -332,12 +332,12 @@ SalvaDati()</panel_attributes>
     <coordinates>
       <x>234</x>
       <y>360</y>
-      <w>305</w>
+      <w>296</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 &lt;&lt;create&gt;&gt;</panel_attributes>
-    <additional_attributes>288;45;27;45</additional_attributes>
+    <additional_attributes>279;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqDestroyMark</type>
@@ -484,17 +484,17 @@ for (String textline : textlines) {
     <coordinates>
       <x>369</x>
       <y>270</y>
-      <w>350</w>
+      <w>341</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 assegnatoPosizione()</panel_attributes>
-    <additional_attributes>333;45;126;45;27;45</additional_attributes>
+    <additional_attributes>324;45;126;45;27;45</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>702</x>
+      <x>693</x>
       <y>180</y>
       <w>18</w>
       <h>153</h>
@@ -505,7 +505,7 @@ assegnatoPosizione()</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>684</x>
+      <x>675</x>
       <y>81</y>
       <w>44</w>
       <h>116</h>
