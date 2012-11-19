@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-16T15:37:52.84</meta:creation-date><dc:date>2012-10-25T16:57:56.20</dc:date><meta:editing-duration>PT23M38S</meta:editing-duration><meta:editing-cycles>13</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="19" meta:word-count="229" meta:character-count="1490" meta:non-whitespace-character-count="1285"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-16T15:37:52.84</meta:creation-date><dc:date>2012-11-19T12:53:39.88</dc:date><meta:editing-duration>PT23M38S</meta:editing-duration><meta:editing-cycles>14</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="19" meta:word-count="229" meta:character-count="1490" meta:non-whitespace-character-count="1285"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">5644</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">46639</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">17817</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">43640</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">19263</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">34987</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">2598</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">10790</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">19283</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">46637</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">17815</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">5644</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">43639</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">24906</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">922393</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">927893</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -275,30 +275,27 @@
    <style:paragraph-properties fo:margin-left="1.251cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:font-name="Times New Roman" fo:font-size="12pt" fo:letter-spacing="normal" fo:font-style="normal" fo:font-weight="normal" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
    <style:text-properties fo:color="#000000" style:font-name="Times New Roman"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:text-properties fo:color="#000000" style:font-name="Times New Roman"/>
-  </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:text-properties fo:color="#000000" style:font-name="Times New Roman" style:text-underline-style="none"/>
-  </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
    <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:font-name="Times New Roman" fo:font-size="12pt" fo:letter-spacing="normal" fo:font-style="normal" fo:font-weight="normal" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
    <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
    <style:text-properties fo:color="#000000" style:font-name="Times New Roman"/>
   </style:style>
-  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:font-name="Times New Roman" fo:font-size="12pt" fo:letter-spacing="normal" fo:font-style="normal" fo:font-weight="normal" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
    <style:paragraph-properties fo:margin-left="1.251cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
    <style:text-properties fo:color="#000000" style:font-name="Times New Roman"/>
   </style:style>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="1.251cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-variant="normal" fo:text-transform="none" fo:color="#000000" style:font-name="Times New Roman" fo:font-size="12pt" fo:letter-spacing="normal" fo:font-style="normal" fo:font-weight="normal" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:color="#000000" style:font-name="Times New Roman"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties style:text-underline-style="none"/>
@@ -376,7 +373,7 @@
   <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
  </office:master-styles>
  <office:body>
-  <office:text text:use-soft-page-breaks="true">
+  <office:text>
    <office:forms form:automatic-focus="false" form:apply-design-mode="false"/>
    <text:sequence-decls>
     <text:sequence-decl text:display-outline-level="0" text:name="Illustration"/>
@@ -409,55 +406,45 @@
       <text:p text:style-name="Text_20_body">Flusso degli eventi </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.B2" office:value-type="string">
-      <text:list xml:id="list36706541" text:style-name="L1">
+      <text:list xml:id="list32673633" text:style-name="L1">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P11"><text:span text:style-name="T4">Marco è un impiegato della segreteria dell&apos;asilo nido Mazzetti e vuole controllare i servizi offerti all&apos;iscritto Ciro Stabili con codice fiscale </text:span><text:span text:style-name="T3">STB CRI12A10A489O.</text:span></text:p>
-        <text:p text:style-name="P13"/>
+        <text:p text:style-name="P10"><text:span text:style-name="T4">Marco è un impiegato della segreteria dell&apos;asilo nido Mazzetti e vuole controllare i servizi offerti all&apos;iscritto Ciro Stabili con codice fiscale </text:span><text:span text:style-name="T3">STB CRI12A10A489O.</text:span></text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11">Marco accende il suo PC. </text:p>
-        <text:p text:style-name="P11"/>
+        <text:p text:style-name="P10">Marco accende il suo PC. </text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11">Marco si connette alla rete.</text:p>
-        <text:p text:style-name="P11"/>
+        <text:p text:style-name="P10">Marco si connette alla rete.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11">Marco accede al sito <text:span text:style-name="T1">dell&apos;asilo Mazzetti.</text:span></text:p>
-        <text:p text:style-name="P12"/>
+        <text:p text:style-name="P10">Marco accede al sito <text:span text:style-name="T1">dell&apos;asilo Mazzetti.</text:span></text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11">Marco effettua l&apos;autenticazione, inserendo “Marco” nel campo username e “De70Angelis” nel campo password.</text:p>
-        <text:p text:style-name="P11"/>
+        <text:p text:style-name="P10">Marco effettua l&apos;autenticazione, inserendo “Marco” nel campo username e “De70Angelis” nel campo password.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P14">Il sistema riconosce Marco come impiegato d&apos;ufficio.</text:p>
-        <text:p text:style-name="P11"/>
+        <text:p text:style-name="P12">Il sistema riconosce Marco come impiegato d&apos;ufficio.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11">Marco accede alla sezione <text:s/>Gestione degli iscritti e seleziona la voce ricerca avanzata di un iscritto all&apos;asilo.</text:p>
+        <text:p text:style-name="P10">Marco accede alla sezione <text:s/>Gestione degli iscritti e seleziona la voce ricerca avanzata di un iscritto all&apos;asilo.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P10">Il sistema visualizza la sezione per la ricerca avanzata.</text:p>
-        <text:p text:style-name="P11"/>
+        <text:p text:style-name="P15">Il sistema visualizza la sezione per la ricerca avanzata.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P11">7.Marco <text:s/>inserisce nel campo cognome “Stabili” e nel campo nome “Ciro”e preme sul tasto Ricerca.</text:p>
-        <text:p text:style-name="P11"/>
+        <text:p text:style-name="P10">7.Marco <text:s/>inserisce nel campo cognome “Stabili” e nel campo nome “Ciro”e preme sul tasto Ricerca.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P14">Il sistema mostra l&apos;elenco formato da 2 elementi avente i dati nei campi nome e cognome uguali, ma codice fiscale diverso.</text:p>
-        <text:p text:style-name="P14"/>
+        <text:p text:style-name="P12">Il sistema mostra l&apos;elenco formato da 2 elementi avente i dati nei campi nome e cognome uguali, ma codice fiscale diverso.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P15">Clicca sul pulsante affianco alla linea dei dati dell&apos;iscritto, avente codice fiscale <text:s/>“<text:span text:style-name="T3">STBCRI12A10A489O”, per visualizzare la Scheda personale iscritto.</text:span></text:p>
-        <text:p text:style-name="P16"/>
+        <text:p text:style-name="P14">Clicca sul pulsante affianco alla linea dei dati dell&apos;iscritto, avente codice fiscale <text:s/>“<text:span text:style-name="T3">STBCRI12A10A489O”, per visualizzare la Scheda personale iscritto.</text:span></text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P14"><text:span text:style-name="T3">.Il sistema visualizza una <text:s/>scheda con tutti i dati anagrafici dell&apos;iscritto inseriti durante l&apos;iscrizione, i dati del genitore che ha iscritto il bambino, visualizza affianco alla scritta Usufruisce del servizio mensa la scritta “NO”, <text:s/>vicino alla scritta Fascia oraria: “Full time” e vicino a Note: un campo di testo vuoto.</text:span></text:p>
+        <text:p text:style-name="P13">.Il sistema visualizza una <text:s/>scheda con tutti i dati anagrafici dell&apos;iscritto inseriti durante l&apos;iscrizione, i dati del genitore che ha iscritto il bambino, visualizza affianco alla scritta Usufruisce del servizio mensa la scritta “NO”, <text:s/>vicino alla scritta Fascia oraria: “Full time” e vicino a Note: un campo di testo vuoto.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P13"><text:soft-page-break/>Marco chiude il sistema.</text:p>
+        <text:p text:style-name="P11">Marco chiude il sistema.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
