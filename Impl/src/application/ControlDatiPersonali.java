@@ -1,6 +1,8 @@
 package application;
 
 public class ControlDatiPersonali {
+    private static final controlDati Personali
+
     ControlDatiPersonali() {
     }
 
@@ -17,6 +19,10 @@ public class ControlDatiPersonali {
     }
 
     Utente getUtente(Utente utente) {
+        return null;
+    }
+
+    public static ControlDatiPersonali getIstance() {
         return null;
     }
 }

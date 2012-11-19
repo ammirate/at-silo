@@ -2,11 +2,16 @@ package application;
 
 import atsilo.entity.Utente;
 
-public class ControlLogin {
+private class ControlLogin {
+    private static final controlLogin ISTANCE;
+
     ControlLogin() {
     }
 
     Boolean getValoreLogin(Utente utente) {
         return Boolean.TRUE;
+    }
+
+    public static ControlLogin getIstance() {
     }
 }
