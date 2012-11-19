@@ -9,3 +9,27 @@ public class DBEducatoreDidattico extends DBBeans {
         tabella= new Tabella("EducatoreDidattico");
         super(tabella);
     }}
+    public EducatoreDidattico ricercaEducatoreDidatticoNome(String nome){
+    EducatoreDidattico ed;
+    return ed;
+    }
+
+    public EducatoreDidattico ricercaEducatoreDidatticoTitoloStudio(String titoloS){
+    EducatoreDidattico ed;
+    return ed;
+    }
+    
+    public EducatoreDidattico ricercaEducatoreDidatticoCf(String cf){
+    EducatoreDidattico ed;
+    return ed;
+    }
+    
+    public EducatoreDidattico ricercaEducatoreDidatticoCognome(String cf){
+    EducatoreDidattico ed;
+    return ed;
+    }
+   
+    
+
+    
+}
