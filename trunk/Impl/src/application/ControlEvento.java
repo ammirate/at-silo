@@ -14,21 +14,21 @@ public class ControlEvento {
     public ControlEvento() {
     }
     
-    public void inserisciEvento(Evento evento){}
+    public void inserisciEvento(Registro registro, Evento evento){}
     
-    public void modificaEvento(Evento vecchioEvento, Evento nuovoEvento){}
+    public void modificaEvento(Registro registro, Evento vecchioEvento, Evento nuovoEvento){}
     
-    public Evento eliminaEvento(Evento evento){
+    public Evento eliminaEvento(Registro registro, Evento evento){
         return null;
     }
 
-    public void spostaEvento(Evento evento, Date newData){}
+    public void spostaEvento(Registro registro, Evento evento, Date newData){}
     
     public List<Evento> getEventiPerPersonale(PersonaleAsilo pers){
         return null;
     }
     
-    public List<Evento> getEventiInData(Date data){
+    public List<Evento> getEventiInData(Registro registro, Date data){
         return null;
     }
 }

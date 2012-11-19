@@ -11,19 +11,19 @@ public class ControlAttivita {
     public ControlAttivita() {
     }
     
-    public void inserisciAttivita(Attivita attivita){}
+    public void inserisciAttivita(Registro registro, Attivita attivita){}
     
-    public void modificaAttivita(String attivita, Attivita nuovaAttivita){}
+    public void modificaAttivita(Registro registro, String attivita, Attivita nuovaAttivita){}
     
-    public Attivita eliminaAttivita(String titolo){
+    public Attivita eliminaAttivita(Registro registro, String titolo){
         return null;
     }
     
-    public Attivita ricercaAttivitaPerTitolo(String titolo){
+    public Attivita ricercaAttivitaPerTitolo(Registro registro, String titolo){
         return null;
     }
     
-    public List<Attivita> ricercaAttivitaPerCategoria(String categoria){
+    public List<Attivita> ricercaAttivitaPerCategoria(Registro registro, String categoria){
         return null;
     }
     
