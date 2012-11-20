@@ -1,0 +1,91 @@
+div.text{
+	position: relative;
+	margin:0;
+	padding: 0 8px;
+	clear:both;
+	overflow:auto;
+	line-height: 17px;
+}
+
+div.text a{
+	font-weight: bold;
+	text-decoration: none;	
+}
+
+div.text a:hover{
+	text-decoration: underline;
+}
+
+div.text ul,ol{
+	margin:0;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding-left:30px;
+}
+
+div.text ul li{
+	list-style-image: url(../images/square.gif);
+}
+
+div.text ol{
+	list-style-image: none !important;
+}
+
+div.text ol li{
+	list-style-image: none !important;
+}
+
+div.text li{
+	margin-bottom: 6px;
+}
+
+div.text table{
+	border: none;
+	width:100%;
+	margin:0;
+	padding:0;
+}
+
+div.text tr{
+	margin:0;
+	padding:0;
+}
+
+div.text td{
+	margin:0;
+	padding: 2px;
+	border-bottom: 1px solid #DDD;
+}
+
+/***** style per le tabelle ****/
+
+
+table.griglia{
+}
+
+table.griglia td,table.griglia th{
+	border: 1px solid #DDD !important;			
+}
+
+table.griglia thead td,table.griglia thead th,table.griglia tfoot td,table.griglia tfoot th{
+	background-color: #DDD !important;
+	border:1px solid #999 !important;
+}
+    
+tr.riga_pari{
+	background-color: #EEE;	
+}
+	    
+tr.riga_dispari{
+	background-color: #EFEFFC;							
+}
+  
+table .in_evidenza{
+	background-color: #FF9900;
+	color: #fff;
+}
+
+img.left{
+	float:left;
+	margin:10px;
+}

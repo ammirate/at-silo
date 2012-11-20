@@ -1,0 +1,52 @@
+ul.channels{
+	float: none !important;
+	float: left;
+	display: block;
+	margin:0;
+	padding:0;
+	background-color: #666666;
+	height: 25px;
+	overflow: hidden;
+}
+
+ul.channels li{
+	position: relative;
+	float: right;
+	border-left: 1px solid #FFF;
+	width: 127px !important;	
+	width: 128px;
+	list-style-position: outside;
+	list-style-type: none;
+	list-style-image: none;
+	padding: 0;
+	margin: 0;
+	height: 25px;
+	line-height: 25px;
+	overflow: hidden;
+	display: block;
+}
+
+ul.channels li a{
+	position: relative;
+	display: block;
+	margin:0;
+	padding:0;
+/*	
+	padding-left: 8px;
+	padding-right: 8px;
+*/	
+	text-decoration: none;
+/* hack per ie6 */
+	float: left;
+/*	width: 111px;
+*/
+	text-align: center;	
+	height: 100%;
+	color: #fff;
+}
+
+ul.channels li a:hover{
+	color: #fff !important;
+	text-decoration: none;
+	background-color: #444;
+}

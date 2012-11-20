@@ -1,0 +1,82 @@
+ul.download{
+	margin:0;
+	padding: 0;
+}
+	
+
+ul.download li{
+	border-bottom: 1px solid #999;
+	list-style-position: outside;
+	list-style-type: none;
+	padding-left: 37px;
+	height: 37px;
+	min-height: 37px;
+	overflow: visible;
+}
+
+ul.download>li{
+	height: auto;
+}
+
+ul.download li a{
+	line-height: 1.5em;
+}
+
+ul.download li a:hover{
+	text-decoration: underline !important;
+}
+
+ul.download li span{
+	display:block;
+	overflow: visible;
+	font-size: 0.9em;
+	color: #555;
+	line-height: 1.2em;
+}
+/*
+.pdf{
+	background-image: url(../../../download/front/img/PDF.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.png{
+	background-image: url(../../../download/front/img/GENERICA.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.jpg{
+	background-image: url(../../../download/front/img/JPG.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.gif{
+	background-image: url(../../../download/front/img/GENERICA.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.zip{
+	background-image: url(../../../download/front/img/ZIP.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.doc,.docx{
+	background-image: url(../../../download/front/img/DOC.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.xls{
+	background-image: url(../../../download/front/img/XLS.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.ppt{
+	background-image: url(../../../download/front/img/PPT.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.txt{
+	background-image: url(../../../download/front/img/TXT.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+*/

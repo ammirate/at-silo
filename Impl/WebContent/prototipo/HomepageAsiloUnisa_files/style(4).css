@@ -1,0 +1,87 @@
+ul.download{
+	margin:0;
+	padding: 8px;
+}
+
+ul.download li{
+	margin:0;
+	padding: 0;
+	margin-top: 2.8px;
+	border-bottom: 1px solid #DDD;
+	list-style-position: outside;
+	list-style-type: none;
+	padding-left: 32px;
+	height: auto !important;
+	height: 34px;
+	min-height: 34px;
+	overflow: visible;
+}
+
+ul.download>li{
+	height: auto;
+}
+
+ul.download li a{
+	margin:0;
+	padding: 0;	
+	line-height: 1.5em;
+}
+
+ul.download li a:hover{
+	text-decoration: underline !important;
+}
+
+ul.download li span{
+	display:block;
+	overflow: hidden;
+	font-size: 0.9em;
+	color: #555;
+	line-height: 1.2em;
+}
+
+.pdf{
+	background-image: url(../images/PDF.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.png{
+	background-image: url(../images/IMG.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.jpg{
+	background-image: url(../images/IMG.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.gif{
+	background-image: url(../images/IMG.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.zip{
+	background-image: url(../images/ZIP.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.doc,.docx,.rtf{
+	background-image: url(../images/DOC.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.xls{
+	background-image: url(../images/XLS.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.ppt{
+	background-image: url(../images/PPT.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+.txt{
+	background-image: url(../images/TXT.png);
+	background-repeat: no-repeat;
+	background-position: 4px 4px;
+}
+

@@ -1,0 +1,840 @@
+/*
+template legenda
+*/
+.legenda1 {
+	font-size: 0.9em;
+	background-color: #E2FFBB;
+	color: #333333;
+	line-height: 15px;
+	padding: 2px;
+}
+
+.legenda2 {
+	font-size: 0.9em;
+	background-color: #DCDCDC;
+	color: #333333;
+	line-height: 15px;
+	padding: 2px;
+}
+
+.legenda3 {
+	font-size: 0.9em;
+	background-color: #E6E6FA;
+	color: #333333;
+	line-height: 15px;
+	padding: 2px;
+}
+
+/*
+EVENTO ROLLOVER
+*/
+#overmouseover {
+	background-color: #EDEDFB;
+}
+
+/*
+MESSAGGIO DI ERRORE
+*/
+.error {
+	font-size: 0.9em;
+	color: #FF0000;
+}
+
+/*
+template link form
+*/
+.tplBottomHelp {
+	font-size: 9px;
+	font-style: italic;
+	color: #333333;
+	line-height: 15px;
+	background-color: #ffffff;
+}
+
+/*
+template link form
+*/
+.tplLinkForm {
+	background-color: #FFFFFF;
+	border: 0px none #FFFFFF;
+	color: #194F8B;
+	text-decoration: underline;
+	text-align: left;
+	cursor: pointer;
+	font-family: Trebuchet MS;
+}
+
+.tplLinkForm:hover {
+	color:#003569;
+}
+
+/*
+template HEADER
+*/
+.tplHeader {
+	font-size: 0.8em;
+	color: #333333;
+}
+
+/*
+template legenda
+*/
+.tplLegenda {
+	font-size: 0.8em;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+/*
+template message
+*/
+.tplMessage {
+	font-size: 0.8em;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+/*per Estensione testo IE*/
+table td.tplMessage {
+	width: 100%\9;
+}
+
+/*
+template start wizard
+*/
+.tplStartWizard {
+	font-size: 0.8em;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+/*
+template master form
+*/
+.tplMasterForm {
+	font-size: 0.8em;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+a.tplMasterForm	{
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+a.tplMasterForm:link {
+	color: #003363;
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+a.tplMasterForm:visited {
+	color: #7E3F0C;
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+a.tplMasterForm:hover {
+	color: #32557B;
+	text-decoration: underline;
+}
+
+/*
+template form
+*/
+.tplForm {
+	color: #333333;
+	line-height: 15px;
+	background-color: #ffffff; /*width: 100px;*/
+}
+
+th.tplForm {
+	font-size: 0.8em;
+	color: #333333;
+	text-align: right;
+	padding-right: 3px;
+}
+
+INPUT.tplForm, select.tplForm {
+	color: #333333;
+	line-height: 15px;
+	background-color: #ffffff;
+	text-align: left;
+}
+
+/*
+template form note
+*/
+.tplFormNote {
+	font-size: 10px;
+	color: #333333;
+	line-height: 15px;
+	background-color: #ffffff;
+}
+
+/*
+template form submit
+*/
+INPUT.tplFormSubmit {
+	border: 1px outset #6289B8;
+	color: #333333;
+	background-color: #cccccc;
+	background-image: url(../images/th-bg.gif);
+	background-position: bottom;
+	height: 25px;
+	cursor: hand;
+	margin: 10px;
+	border: solid 1px #;
+}
+
+A.tplFormSubmit {
+	border: 1px outset #CCCCCC;
+	font-size: 0.9em;
+	color: #333333;
+	background-color: #cccccc;
+	background-image: url(../images/th-bg.gif);
+	background-position: bottom;
+	padding: 4px 2px 2px;
+	height: 25px;
+	text-decoration: none;
+	margin: 10px;
+}
+
+TD.tplFormSubmit {
+	text-align: center;
+}
+
+/*
+template lista
+*/
+.tplLista {
+	font-size: 0.8em;
+	color: #E53D18;
+	background-color: #ffffff;
+}
+
+A.tplLista	{
+	text-decoration: underline;
+}
+
+A.tplLista:link {
+	color: #003363;
+	text-decoration: underline;
+}
+
+A.tplLista:visited {
+	color: #7E3F0C;
+	text-decoration: underline;
+}
+
+A.tplLista:hover {
+	color: #32557B;
+	text-decoration: underline;
+}
+
+/*
+template titolo
+*/
+#titolo,.tplTitolo {
+	font-size: 0.8em;
+	color: #000;
+	background-color: #F3F3F4;
+	padding: 0px 5px;
+}
+
+td.content table tr td table {
+	width: 100%;
+}
+
+/*
+sottotitolo in tabella
+*/
+#sottotitolo {
+	font-size: 0.8em;
+	color: #000000;
+	background-color: #f4f2f2;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #ffffff;
+}
+
+/*
+template master
+*/
+TH.tplMaster {
+	font-size: 0.8em;
+	padding-right: 3px;
+	text-align: right;
+}
+
+.tplMaster {
+	border-collapse: collapse;
+	font-size: 0.9em; /*color: #00468B;*/
+	padding: 2px;
+	text-align: left;
+}
+
+A.tplMaster	{
+	text-decoration: underline;
+}
+
+A.tplMaster{
+	color: #003363;
+	text-decoration: underline;
+}
+
+A.tplMaster:visited {
+	color: #7E3F0C;
+	text-decoration: underline;
+}
+
+A.tplMaster:hover {
+	color: #32557B;
+	text-decoration: underline;
+}
+
+/*
+template detail
+*/
+.detail_table {
+	border-collapse: collapse;
+	font-size: 0.9em;
+	color: #333333;
+	line-height: 1.2em;
+	padding: 2px;
+}
+
+a.detail_table {
+	color: #E53D18;
+}
+
+table.detail_table {
+	border: 1px solid #929292;
+}
+
+td.cell_evidence {
+	background-color: #eeeeee;
+}
+
+TD.special, TD.detail_table_nested , td.detail_table, th.detail_table, table.detail_table, td.detail_table_buttom {
+	border-collapse: collapse;
+	padding: 3px;
+}
+
+TD.detail_table_nested {
+	font-size: 0.9em;
+	color: #333333;
+	border: 1px dotted #929292; /* text-align: left; */
+}
+
+th.detail_table,table.detail_table, tr.detail_table, td.detail_table_buttom {
+}
+
+TD.special {
+	border: 1px dotted #929292;
+}
+
+th.detail_table {
+	background-color: #F6F6F6;
+	border-left: 1px dotted #929292;
+	font-weight: bold;
+	margin: 0;
+	padding: 10px 5px 5px;
+	text-align: left;
+}
+
+   table.detail_table tr th.detail_table table tr th{
+	margin: 0;
+	padding: 1px;
+	float: right;
+}
+
+td.detail_table_middle,td.detail_table {
+	border: 1px dotted #929292;
+	line-height: 25px;
+	padding: 2px;
+}
+
+table.searchForm {
+	font-size: 0.9em;
+	;
+	border-color: #929292;
+	border-collapse: collapse;
+	background-color: #F6F6F6;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	width: 100%;
+}
+
+table.searchForm TH{
+	text-align: right;
+	width: 30%;
+	padding-right: 3px;
+}
+
+table.searchForm TD{
+	text-align: left;
+	width: 70%;
+}
+
+table.standardForm {
+	border-collapse: collapse;
+	font-size: 0.9em;
+	;
+	color: #333333;
+	line-height: 15px;
+	padding: 2px;
+	text-align: left;
+}
+
+table.master_table {
+	border-collapse: collapse;
+	font-size: 0.9em;
+	;
+	color: #333333;
+	line-height: 15px;
+	padding: 2px;
+	width: 100%;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #333333; /* text-align: left; */
+}
+
+table.master_table TH {
+	BORDER-TOP: #cccccc 1px solid;
+	border-right: #333333 1px solid;
+	text-align: left;
+	background-color: #eeeeee;
+	width: 30%;
+}
+
+table.master_table TD {
+	BORDER-TOP: #cccccc 1px solid;
+	text-align: left;
+	width: 70%;
+}
+
+.tplTitoloBrown {
+	font-size: 0.9em;
+	;
+	color: #FFFFFF;
+	line-height: 15px;
+	background-color: #BD6325;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #ffffff;
+}
+
+A.detail_table_middle,A.special,A.detail_table_nested,A.detail_table {
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+A.detail_table_middle:link,A.special:link,A.detail_table_nested:link,A.detail_table:link {
+	color: #003363;
+	text-decoration: underline;
+	font-size: 1em;
+}
+
+A.detail_table_middle:visited,A.special:visited,A.detail_table_nested:visited,A.detail_table:visited {
+	color: #32557B;
+	text-decoration: underline;
+}
+
+A.detail_table_middle:hover,A.special:hover,A.detail_table_nested:hover,A.detail_table:hover {
+	color: #32557B;
+	text-decoration: underline;
+}
+
+/*****************************
+ * CSS PER MENU DINAMICO
+ *****************************/
+/* POSIZIONAMENTO DELLE LABEL */
+div#menuContainer {
+	border-bottom: 1px solid #CCCCCC;
+	height: 20px;
+	height: 21px\9;
+	position: relative;
+}
+
+span.menuLabel {
+	position: absolute;
+	top: 0px;
+	width: 110px;
+}
+
+span.menuLabel#menu2 {
+	left: 110px;
+}
+
+span.menuLabel#menu3 {
+	left: 220px;
+}
+
+span.menuLabel#menu4 {
+	left: 330px;
+}
+
+span.menuLabel#menu5 {
+	left: 440px;
+}
+
+span.menuLabel#menu6 {
+	left: 550px;
+}
+
+/* proprietà del menu princpale */
+ul.topmenu, ul.topmenu ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul.topmenu {
+	width: 110px;
+}
+
+/* nasconde gli elementi di lista */
+ul.topmenu li {
+	list-style-type: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+li.toplevel a {display: block; text-decoration: none;}
+ul.topmenu li a:hover {
+	text-decoration: underline;
+}
+
+/* CSS per javascript */
+ul.visualizzato{
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 98%;
+}
+
+/* visualizzazione il primo menu sotto alla label */
+ul.visualizzatoPrimo{
+	display: block;
+	position: absolute;
+	top: 15px;
+	left: 0px;
+}
+
+ul.visualizzato li.secondlevel, ul.visualizzatoPrimo li.secondlevel{
+	width: 120;
+	display: inline;
+}
+
+ul.topmenu li.toplevel {
+	background-image: url("../images/tab_community.gif");
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+	font-size: 12px;
+	height: 20px;
+	padding: 0 3px;
+	text-align: center;
+}
+
+ul.topmenu li.secondlevel {
+	font-size: 0.9em;
+	;
+	color: #003366;
+	line-height: 15px;
+	background-color: #C4CEDC;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #FFFFFF;
+}
+
+.secondlevelparent {
+	display: block;
+	background-position: right center;
+	background-image: url(../images/freccialink.gif);
+	background-repeat: no-repeat;
+}
+
+a.linkmenuprincipale {
+	background-image: url("../images/tableft_community.gif");
+	background-position: left top;
+	background-repeat: no-repeat;
+	color: #001E52;
+	height: 16px;
+	line-height: 15px;
+	padding: 2px 0;
+	text-decoration: none;
+}
+
+A.linkmenusecondo {
+	text-decoration: none;
+	color: #00589F;
+}
+
+A.linkmenusecondo:visited {
+	text-decoration: none;
+	color: #00589F;
+}
+
+/* CSS dinamici NO EXPLORER */
+
+/* visualizzazione il primo menu sotto alla label */
+ul.topmenu > li:hover > ul {
+	top: 15px;
+	left: 0px;
+}
+
+/* CSS Bannerino K4U */
+.bannerino {
+	color: #fff;
+	font-size: 0.9em;
+	;
+background-color: #00589f;
+	margin: 3px;
+	padding: 2px;
+	border: solid 1px #000;
+}
+
+#dimensioni-bott {
+	width: 150px;
+}
+
+a.bianco:link, a.bianco:visited {
+	color: #fff;
+	text-decoration: none;
+	background-image: url(../assets/images/freccia-off.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+	padding: 5px 5px 5px 30px;
+	border: solid 1px #7fc6ff;
+}
+
+a.bianco:hover {
+	color: #000;
+	text-decoration: none;
+	background-color: #7fc6ff;
+	background-image: url(../assets/images/freccia-on.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	display: block;
+	padding: 5px 5px 5px 30px;
+	border: solid 1px #fff;
+}
+
+/* Classi per la gestione dei menu aperti/chiusi */
+.opened, .forceOpened {
+	display: block;
+}
+
+.closed{
+	display: none;
+}
+
+/* Classi per il calendario javascript */
+table.scw, .scw select {
+	padding: 1px;
+	vertical-align: middle;
+	border: ridge 2px;
+	font-size: 7pt;
+	font-weight: bold;
+	background-color: #FFFFFF;
+}
+
+td.scwDrag,td.scwHead {
+	padding: 0px 0px;
+	text-align: center;
+}
+
+td.scwDrag {
+	font-size: 6pt;
+}
+
+select.scwHead {
+	margin: 3px 1px;
+	text-align: center;
+}
+
+input.scwHead {
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 2px 1px;
+	font-weight: bold;
+	font-size: 5pt;
+	font-family: fixedSys;
+}
+
+td.scwWeekNumberHead,td.scwWeek {
+	padding: 0px;
+	text-align: center;
+	font-weight: bold;
+}
+
+td.scwNow,td.scwNowHover,td.scwNow:hover,td.scwNowDisabled {
+	padding: 0px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+table.scwCells {
+	text-align: right;
+	font-size: 7pt;
+	width: 96%;
+}
+
+td.scwCells,td.scwCellsHover,td.scwCells:hover,td.scwCellsDisabled,td.scwCellsExMonth,td.scwCellsExMonthHover,td.scwCellsExMonth:hover,td.scwCellsExMonthDisabled,td.scwCellsWeekend,td.scwCellsWeekendHover,td.scwCellsWeekend:hover,td.scwCellsWeekendDisabled,td.scwInputDate,td.scwInputDateHover,td.scwInputDate:hover,td.scwInputDateDisabled,td.scwWeekNo,td.scwWeeks
+	{
+	padding: 3px;
+	width: 14px;
+	height: 14px;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+/* Drag Handle */
+td.scwDrag {
+	background-color: #9999CC;
+	color: #CCCCFF;
+}
+
+/* Week number heading */
+td.scwWeekNumberHead {
+	color: #6666CC;
+}
+
+/* Week day headings */
+td.scwWeek {
+	color: #555555;
+}
+
+/* Week numbers */
+td.scwWeekNo {
+	background-color: #776677;
+	color: #CCCCCC;
+}
+
+/* Enabled Days */ /* Week Day */
+td.scwCells {
+	background-color: #CCCCCC;
+	color: #000000;
+}
+
+/* Day matching the input date */
+td.scwInputDate {
+	background-color: #CC9999;
+	color: #FF0000;
+}
+
+/* Weekend Day */
+td.scwCellsWeekend {
+	background-color: #CCCCCC;
+	color: #CC6666;
+}
+
+/* Day outside the current month */
+td.scwCellsExMonth {
+	background-color: #CCCCCC;
+	color: #666666;
+}
+
+/* Today selector */
+td.scwNow {
+	background-color: #336699;
+	color: #FFFFFF;
+	font-size: 8pt;
+}
+
+/* Clear Button */
+td.scwClear {
+	padding: 0px;
+}
+
+input.scwClear {
+	padding: 0px;
+	text-align: center;
+	font-size: 6pt;
+}
+
+/* MouseOver/Hover formatting
+       If you want to "turn off" any of the formatting
+       then just set to the same as the standard format
+       above.
+       Note: The reason that the following are
+       implemented using both a class and a :hover
+       pseudoclass is because Opera handles the rendering
+       involved in the class swap very poorly and IE6 
+       (and below) only implements pseudoclasses on the
+       anchor tag.*/ 
+/* Active cells */
+td.scwCells:hover,td.scwCellsHover {
+	background-color: #FFFF00;
+	cursor: pointer;
+	color: #000000;
+}
+
+/* Day matching the input date */
+td.scwInputDate:hover,td.scwInputDateHover {
+	background-color: #FFFF00;
+	cursor: pointer;
+	color: #000000;
+}
+
+/* Weekend cells */
+td.scwCellsWeekend:hover,td.scwCellsWeekendHover {
+	background-color: #FFFF00;
+	cursor: pointer;
+	color: #000000;
+}
+
+/* Day outside the current month */
+td.scwCellsExMonth:hover,td.scwCellsExMonthHover {
+	background-color: #FFFF00;
+	cursor: pointer;
+	color: #000000;
+}
+
+/* Today selector */
+td.scwNow:hover,td.scwNowHover {
+	color: #FFFF00;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* Disabled cells */ /* Week Day */ /* Day matching the input date */
+td.scwInputDateDisabled {
+	background-color: #999999;
+	color: #000000;
+}
+
+td.scwCellsDisabled {
+	background-color: #999999;
+	color: #000000;
+}
+
+/* Weekend Day */
+td.scwCellsWeekendDisabled {
+	background-color: #999999;
+	color: #CC6666;
+}
+
+/* Day outside the current month */
+td.scwCellsExMonthDisabled {
+	background-color: #999999;
+	color: #666666;
+}
+
+td.scwNowDisabled {
+	background-color: #6666CC;
+	color: #FFFFFF;
+}
+

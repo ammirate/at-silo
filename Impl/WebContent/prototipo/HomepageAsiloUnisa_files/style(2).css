@@ -1,0 +1,36 @@
+#page ul.links{
+	margin:0;
+	padding:0;
+}
+
+#page ul.links li{
+	border-bottom: 1px solid #999;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+	height: 25px;
+	line-height: 25px;
+	min-height: 25px;
+	overflow: visible;
+}
+
+#page ul.links>li{
+	height: auto;
+}
+
+#page ul.links li a{
+	display: block;
+	height: 100%;
+	padding-left: 10px;
+}
+
+#page ul.links li a:hover{
+	text-decoration: none;
+	background-color:  #EEE;
+	color: #000;	
+}
+
+.separator{
+	background-color: #666;
+}
