@@ -56,7 +56,7 @@ public class Database {
 	 * @return ritorna true se la chiusura della connessione al DataBase
 	 * avvenuta correttamente false altrimenti
 	 */
-	private boolean chiudiConnessione(){
+	public boolean chiudiConnessione(){
 		try{
 			statement.close();
 			resultSet = null;
