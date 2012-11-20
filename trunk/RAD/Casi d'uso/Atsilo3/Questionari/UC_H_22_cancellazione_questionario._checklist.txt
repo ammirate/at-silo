@@ -1,18 +1,18 @@
-LINEE GUIDA FORMALI
-[ ] Ha lo stesso nome dello scenario generalizzato
-[ ] Ha lo stesso ID dello scenario generalizzato
-[ ] Non sono presenti attori multipli con congiunzione OR
-[ ] Il file è nominato secondo la corretta nomenclatura
-[ ] Tutte le azioni del sistema sono tabulate
-[ ] Tutte le azioni del sistema sono indicate in modo esplicito ("Il sistema ...")
-[ ] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
-[ ] Le inclusioni sono segnalate secondo le convenzioni previste
-[ ] I punti di estensione sono elencati in un elenco con lettere latine minuscole
-[ ] Le estensioni sono segnalate secondo le convenzioni previste
-[ ] Le specializzazioni sono segnalate secondo le convenzioni previste
-[ ] Entry e exit condition sono specificate
-[ ] Il flusso degli eventi è correttamente numerato
-[ ] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+﻿LINEE GUIDA FORMALI
+[X] Ha lo stesso nome dello scenario generalizzato
+[X] Ha lo stesso ID dello scenario generalizzato
+[X] Non sono presenti attori multipli con congiunzione OR
+[X] Il file è nominato secondo la corretta nomenclatura
+[X] Tutte le azioni del sistema sono tabulate
+[X] Tutte le azioni del sistema sono indicate in modo esplicito ("Il sistema ...")
+[X] Eventuali inclusioni all'inizio del caso d'uso sono espresse nella entry condition
+[X] Le inclusioni sono segnalate secondo le convenzioni previste
+[X] I punti di estensione sono elencati in un elenco con lettere latine minuscole
+[X] Le estensioni sono segnalate secondo le convenzioni previste
+[X] Le specializzazioni sono segnalate secondo le convenzioni previste
+[X] Entry e exit condition sono specificate
+[X] Il flusso degli eventi è correttamente numerato
+[X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 
 LINEE GUIDA SOSTANZIALI
 [ ] Il nome è coerente con il contenuto
