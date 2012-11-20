@@ -1,7 +1,5 @@
 package atsilo.entity;
 
-import atsilo.entity.Attivita;
-import atsilo.entity.EducatoreDidattico;
 import java.util.List;
 
 
