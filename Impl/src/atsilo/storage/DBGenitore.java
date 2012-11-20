@@ -1,6 +1,9 @@
 package atsilo.storage;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.Genitore;
+
+import java.util.List;
 
 public class DBGenitore extends DBBeans {
     Tabella tabella;
@@ -10,14 +13,29 @@ public class DBGenitore extends DBBeans {
         super(tabella);
     }
     
-    public Genitore ricercaGenitoreCf(String cf){
+    public Genitore ricercaGenitorePerCf(String cf){
         Genitore g;
         return g;
     }
     
-    public Genitore ricercaGenitoreComune(String comune){
-        Genitore g;
+    public List<Genitore> ricercaGenitorePerComune(String comune){
+        List<Genitore> g;
         return g;
+    }
+    
+    public String ricercaEmailGenitore(Genitore g){
+        String s;
+        return s;
+    }
+    
+    public Bambino ricercaFiglio(){
+        Bambino b;
+        return b;
+    }
+    
+    public String getTipoGenitore(Genitore g){
+        String s;
+        return s;
     }
     
     
