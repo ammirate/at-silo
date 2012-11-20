@@ -6,8 +6,8 @@ import java.sql.Date;
 
 public class DBEvento extends DBBeans {
     
-    public DBEvento(){
-        super("Evento");
+    public DBEvento(Database db){
+        super("Evento",db);
     }
     
     public Evento ricercaEventoNome(String nome){

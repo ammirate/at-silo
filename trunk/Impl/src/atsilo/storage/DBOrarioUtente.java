@@ -5,8 +5,8 @@ import atsilo.entity.Servizio;
 
 public class DBOrarioUtente extends DBBeans {
     
-    public DBOrarioUtente(){
-        super("OrarioUtente");
+    public DBOrarioUtente(Database db){
+        super("OrarioUtente",db);
     }
 
     public OrarioUtente getOrario(Servizio s) {

@@ -7,8 +7,8 @@ public class DBBeans {
     final protected Tabella tabella;
     private Database db;
     
-    public DBBeans(String nomeTabella){
-        tabella=new Tabella(nomeTabella);
+    public DBBeans(String nomeTabella,Database database ){
+        tabella=new Tabella(nomeTabella,database);
         db=tabella.getDatabase();
     }
  

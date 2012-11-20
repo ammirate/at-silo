@@ -17,7 +17,6 @@ public class Database {
 	 */
 	public Database(){
 		connection = null;
-		apriConnessione();
 	}
 	
 	/**
@@ -25,7 +24,7 @@ public class Database {
 	 * @return ritorna true se la connessione al DataBase
 	 * avvenuta correttamente false altrimenti
 	 */
-	private boolean apriConnessione(){
+	public boolean apriConnessione(){
 		try{
 			Class.forName(driver);
 			connection = DriverManager.getConnection(url);

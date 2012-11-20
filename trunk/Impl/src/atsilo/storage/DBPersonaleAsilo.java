@@ -4,6 +4,6 @@ import atsilo.entity.PersonaleAsilo;
 
 public class DBPersonaleAsilo extends DBBeans {
     
-    public DBPersonaleAsilo(){
-        super("PersonaleAsilo");
+    public DBPersonaleAsilo(Database db){
+        super("PersonaleAsilo",db);
     }}

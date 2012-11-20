@@ -6,8 +6,8 @@ import atsilo.entity.Registro;
 
 public class DBAttivita extends DBBeans {
     
-    public DBAttivita(){
-        super("Attivita");
+    public DBAttivita(Database db){
+        super("Attivita",db);
     }
     
     public Attivita ricercaAttivitaTitolo(String titolo){

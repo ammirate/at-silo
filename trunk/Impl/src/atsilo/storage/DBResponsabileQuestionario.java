@@ -4,8 +4,8 @@ import atsilo.entity.ResponsabileQuestionario;
 
 public class DBResponsabileQuestionario extends DBBeans {
     
-    public DBResponsabileQuestionario(){
-        super("ResponsabileQuestionario");
+    public DBResponsabileQuestionario(Database db){
+        super("ResponsabileQuestionario",db);
     }
     
     public ResponsabileQuestionario ricercaRespQuestNome(String nome){

@@ -8,8 +8,8 @@ import java.util.List;
 
 public class DBRichiesta extends DBBeans {
     
-    public DBRichiesta(){
-        super("Richiesta");
+    public DBRichiesta(Database db){
+        super("Richiesta",db);
     }
 
     public Richiesta getAllRichiesta(Servizio s) {

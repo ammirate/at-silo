@@ -6,8 +6,8 @@ import atsilo.entity.Genitore;
 
 public class DBDomandaIscrizione extends DBBeans {
     
-    public DBDomandaIscrizione(){
-        super("DomandaIscrizione");
+    public DBDomandaIscrizione(Database db){
+        super("DomandaIscrizione",db);
     }
 
     public DomandaIscrizione getDomanda(Bambino b) {

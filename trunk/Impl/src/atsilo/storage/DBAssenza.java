@@ -4,7 +4,7 @@ import atsilo.entity.Assenza;
 
 public class DBAssenza extends DBBeans {
     
-    public DBAssenza(){
-        super("Assenza");
+    public DBAssenza(Database db){
+        super("Assenza",db);
     }
 }

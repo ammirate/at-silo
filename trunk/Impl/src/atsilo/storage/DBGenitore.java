@@ -4,8 +4,8 @@ import atsilo.entity.Genitore;
 
 public class DBGenitore extends DBBeans {
     
-    public DBGenitore(){
-        super("Genitore");
+    public DBGenitore(Database db){
+        super("Genitore",db);
     }
     
     public Genitore ricercaGenitoreCf(String cf){
