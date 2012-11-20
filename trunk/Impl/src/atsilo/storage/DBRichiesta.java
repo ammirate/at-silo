@@ -1,14 +1,15 @@
 package atsilo.storage;
 
+import atsilo.entity.Genitore;
 import atsilo.entity.Richiesta;
 import atsilo.entity.Servizio;
 
+import java.util.List;
+
 public class DBRichiesta extends DBBeans {
-    Tabella tabella;
     
     public DBRichiesta(){
-        tabella= new Tabella("Richiesta");
-        super(tabella);
+        super("Richiesta");
     }
 
     public Richiesta getAllRichiesta(Servizio s) {

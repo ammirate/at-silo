@@ -2,12 +2,9 @@ package atsilo.storage;
 
 import atsilo.entity.Bambino;
 
-public class DBBambino extends DBBeans {
-    Tabella tabella;
-    
+public class DBBambino extends DBBeans {    
     public DBBambino(){
-        tabella= new Tabella("Bambino");
-        super(tabella);
+        super("Bambino");
     }
     public Bambino getBambinoFromCF(String codiceFiscale){
         Bambino bambinoTemp;

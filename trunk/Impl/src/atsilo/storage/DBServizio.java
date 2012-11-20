@@ -4,11 +4,9 @@ import atsilo.entity.Bambino;
 import atsilo.entity.Servizio;
 
 public class DBServizio extends DBBeans {
-    Tabella tabella;
     
     public DBServizio(){
-        tabella= new Tabella("Servizio");
-        super(tabella);
+        super("Servizio");
     }
 
     public Servizio getServizio(Bambino b) {

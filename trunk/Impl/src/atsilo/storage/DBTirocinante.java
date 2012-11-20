@@ -4,11 +4,9 @@ import atsilo.entity.PersonaleAsilo;
 import atsilo.entity.Tirocinante;
 
 public class DBTirocinante extends DBBeans {
-    Tabella tabella;
     
     public DBTirocinante(){
-        tabella= new Tabella("Tirocinante");
-        super(tabella);
+        super("Tirocinante");
     }
 
     public Tirocinante getTirocinante(PersonaleAsilo pers) {

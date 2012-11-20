@@ -4,23 +4,19 @@ import atsilo.entity.Attivita;
 import atsilo.entity.ProgrammaEducativoSettimanale;
 import atsilo.entity.Registro;
 
-import java.util.List;
-
 public class DBAttivita extends DBBeans {
-    Tabella tabella;
     
     public DBAttivita(){
-        tabella= new Tabella("Attivita");
-        super(tabella);
+        super("Attivita");
     }
     
-    public List<Attivita> ricercaAttivitaTitolo(String titolo){
-        List<Attivita> a;
+    public Attivita ricercaAttivitaTitolo(String titolo){
+        Attivita a;
         return a;
     }
     
-    public List<Attivita> ricercaAttivitaPerCategoria(String cat){
-        List<Attivita> a;
+    public Attivita ricercaAttivitaCategoria(String cat){
+        Attivita a;
         return a;
     }
     
@@ -32,11 +28,6 @@ public class DBAttivita extends DBBeans {
     public Registro ricercaRegistroDiAppartenenza(Attivita a){
         Registro p;
         return p;
-    }
-    
-    public String ricercaCategoriaAppartenenza(Attivita a){
-        String s;
-        return s;
     }
     
 
