@@ -1,7 +1,9 @@
 package application;
 
+import atsilo.entity.Bambino;
+
 public class ControlDatiPersonali {
-    private static final controlDati Personali
+    private static final ControlDatiPersonali INSTANCE;
 
     ControlDatiPersonali() {
     }

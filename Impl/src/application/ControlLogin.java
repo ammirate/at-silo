@@ -3,7 +3,7 @@ package application;
 import atsilo.entity.Utente;
 
 private class ControlLogin {
-    private static final controlLogin ISTANCE;
+    private static final ControlLogin ISTANCE;
 
     ControlLogin() {
     }

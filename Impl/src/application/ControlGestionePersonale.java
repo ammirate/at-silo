@@ -1,7 +1,7 @@
 package application;
 
 public class ControlGestionePersonale {
-    private static final controlGestionePersonale ISTANCE;
+    private static final ControlGestionePersonale INSTANCE;
 
     ControlGestionePersonale() {
     }

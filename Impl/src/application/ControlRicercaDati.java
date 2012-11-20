@@ -1,16 +1,27 @@
 package application;
 
+import atsilo.entity.Utente;
+
+import java.util.List;
+
 public class ControlRicercaDati {
-    private static final controlRicercaDati ISTANCE;
+    private static final ControlRicercaDati ISTANCE;
 
     ControlRicercaDati() {
     }
 
-    List<Utente> getUtenteRicercato() {
-        return null;
-    }
 
     public static ControlRicercaDati getIstance() {
         return null;
     }
+
+   public List<Utente> getRicerca(String tipoRicercante, String tipoRicercato, List<String> campiRicerca) {
+    }
+   
+   /**
+    * Visualizzazione dell'utente. dovrebbe lanciare un boundary..
+    */
+   public void getUtenteRicercato() {
+       
+   }
 }
