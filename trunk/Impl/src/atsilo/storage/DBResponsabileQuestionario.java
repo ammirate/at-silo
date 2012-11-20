@@ -2,6 +2,8 @@ package atsilo.storage;
 
 import atsilo.entity.ResponsabileQuestionario;
 
+import java.util.List;
+
 public class DBResponsabileQuestionario extends DBBeans {
     Tabella tabella;
     
@@ -10,17 +12,17 @@ public class DBResponsabileQuestionario extends DBBeans {
         super(tabella);
     }
     
-    public ResponsabileQuestionario ricercaRespQuestNome(String nome){
+    public List<ResponsabileQuestionario> ricercaRespQuestPerNome(String nome){
+        List<ResponsabileQuestionario> r;
+        return r;
+    }
+    
+    public ResponsabileQuestionario ricercaRespQuestPerCf(String cf){
         ResponsabileQuestionario r;
         return r;
     }
     
-    public ResponsabileQuestionario ricercaRespQuestCf(String cf){
-        ResponsabileQuestionario r;
-        return r;
-    }
-    
-    public String ricercaEmailRespQuest(String cf){
+    public String ricercaEmailRespQuest(ResponsabileQuestionario r){
         String e;
         return e;
     } 

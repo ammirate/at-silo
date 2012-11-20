@@ -12,11 +12,11 @@ public class DBEvento extends DBBeans {
         super(tabella);
     }
     
-    public Evento ricercaEventoNome(String nome){
+    public Evento ricercaEventoPerNome(String nome){
         Evento e;
         return e;
     }
-    public Evento ricercaEventoData(Date data){
+    public Evento ricercaEventoPerData(Date data){
             Evento e;
             return e;
         }
