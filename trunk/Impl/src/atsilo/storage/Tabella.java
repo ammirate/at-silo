@@ -59,41 +59,44 @@ public class Tabella implements ManagerDB {
                                     e = e.getNextException();
                             }
                     }
-                    db.closeConnection();
+                    db.chiudiConnessione();
                     return tipo;
             }
 
     @Override
     public String getNomeTabella() {
         db = new  Database ();
-        db.closeConnection();
+        db.chiudiConnessione();
         return null;
     }
 
     @Override
     public void setNomeTabella(String newNome) {
         db = new  Database ();
-        db.closeConnection();
+        db.chiudiConnessione();
     }
 
     @Override
     public boolean insert(ArrayList<String> valori) {
         db = new  Database ();
-        db.closeConnection();
+        db.chiudiConnessione();
         return false;
     }
 
     @Override
     public ArrayList<String> select() {
         db = new  Database ();
-        db.closeConnection();
+        db.chiudiConnessione();
         return null;
     }
 
     @Override
     public boolean update(ArrayList<String> valori, ArrayList<String> campi) {
         db = new  Database ();
-        db.closeConnection();
+        db.chiudiConnessione();
         return false;
+    }
+    public Database getDatabase(){
+        return db;
     }
 }

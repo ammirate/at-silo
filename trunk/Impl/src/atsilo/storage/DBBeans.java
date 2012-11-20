@@ -5,13 +5,14 @@ import java.util.List;
 public class DBBeans {
    
     private Tabella tabella;
+    private Database db;
     
-    public DBBeans(Tabella tabella){
-        this.setTabella(tabella);
-        
+    public DBBeans(String nomeTabella){
+        tabella=new Tabella(nomeTabella);
+        db=tabella.getDatabase();
     }
  
-    public boolean setTabella(Tabella tabella){
+    public void setTabella(Tabella tabella){
         this.tabella=tabella;
     }
     public List<Object> getAll(Object RealBeans) {
@@ -30,6 +31,9 @@ public class DBBeans {
 
        //query inserimento account nel database
         
+    }
+    public Database getDatabase(){
+        return db;
     }
 
 }
