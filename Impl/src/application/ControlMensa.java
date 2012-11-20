@@ -10,16 +10,18 @@ public class ControlMensa {
         
     }
     public static final ControlMensa getInstance(){
-        return cme;
+        return null;
     }
-    public void inserisciPianoPasto(Servizio s, String pianopasto){
+    public boolean inserisciPianoPasto(Servizio s, String pianopasto){
+        return false;
         
     }
 
-    public void modificaPianoPasto(Servizio s, String pianopasto){
+    public boolean modificaPianoPasto(Servizio s, String pianopasto){
         
     }
-    public void eliminaPianoPasto(Servizio s){
+    public boolean eliminaPianoPasto(Servizio s){
+        return false;
         
     }
 

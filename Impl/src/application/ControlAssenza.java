@@ -12,7 +12,9 @@ public class ControlAssenza {
         
     public ControlAssenza() {}
 
-    public void inserisciAssenza(Registro registro, Assenza assenza){}
+    public boolean inserisciAssenza(Registro registro, Assenza assenza){
+        return false;
+    }
     
     public Assenza eliminaAssenza(Registro registro, Assenza assenza){
         return null;

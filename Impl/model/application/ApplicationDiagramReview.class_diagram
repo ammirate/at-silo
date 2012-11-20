@@ -2039,7 +2039,7 @@
     </contained>
     <contained xmi:type='DI:GraphEdge' xmi:id='idd58e4678-1d4c-46c0-b703-3c269a8ab8c8' anchor='iddc91a35d-7c63-4fd2-b312-1c2deb1f4133 iddc91a35d-7c63-4fd2-b312-1c2deb1f4133'>
       <contained xmi:type='DI:GraphNode' xmi:id='ide3b60640-baaa-4477-bc07-596d00afb7f1'>
-        <position x='-49.0' y='-25.47607421875'/>
+        <position x='-49.0' y='-46.9521484375'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idde09c61e-f535-458e-9e5d-55876877aa96'>
@@ -2320,11 +2320,11 @@
       <property key='EdgeType' value='1'/>
       <property key='lineWidth' value='1.0'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;application;;ControlDatiPersonali;;INSTANCE'/>
-      <waypoint x='-532.0' y='525.934326171875'/>
-      <waypoint x='-482.7724304199219' y='369.8951110839844'/>
-      <waypoint x='-341.64642333984375' y='369.8951110839844'/>
-      <waypoint x='-341.64642333984375' y='493.0061950683594'/>
-      <waypoint x='-532.0' y='525.934326171875'/>
+      <waypoint x='-498.5796203613281' y='420.0'/>
+      <waypoint x='-498.5796203613281' y='369.8951110839844'/>
+      <waypoint x='-345.64642333984375' y='369.8951110839844'/>
+      <waypoint x='-345.64642333984375' y='505.07073974609375'/>
+      <waypoint x='-404.0' y='505.07073974609375'/>
     </contained>
     <property key='PageOrientation' value='1'/>
     <property key='showClassifierOwnedEnds' value='false'/>

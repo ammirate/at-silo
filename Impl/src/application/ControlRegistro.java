@@ -10,7 +10,9 @@ public class ControlRegistro {
         
     }
     
-    public void inserisciRegistro(Registro registro){}
+    public boolean inserisciRegistro(Registro registro){
+        return false;
+    }
     
     public Registro getRegistro(Classe classe){
         return null;

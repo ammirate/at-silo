@@ -7,7 +7,9 @@ public class ControlRispostaQuestionario {
     public ControlRispostaQuestionario() {
     }
     
-    public void inserisciRisposta(RispostaQuestionario risposta){}
+    public boolean inserisciRisposta(RispostaQuestionario risposta){
+        return false;
+    }
     
     public String getValoreRisposta(String idDomanda){
         return null;

@@ -1,5 +1,8 @@
 package application;
 
+import atsilo.entity.Genitore;
+import atsilo.entity.PersonaleAsilo;
+
 public class ControlGestionePersonale {
     private static final ControlGestionePersonale INSTANCE;
 
@@ -10,14 +13,18 @@ public class ControlGestionePersonale {
         return null;
     }
 
-    void inserisciPesonaleAsilo(PersonaleAsilo personale) {
+    boolean inserisciPesonaleAsilo(PersonaleAsilo personale) {
+        return false;
+        
     }
 
-    void modificaPesonaleAsilo(PersonaleAsilo personale) {
+    boolean modificaPesonaleAsilo(PersonaleAsilo personale) {
+        return false;
+        
     }
-
-    vodi modificaUtente(Genitore utente) {
-        return null;
+    
+    boolean modificaUtente(Genitore utente) {
+        return false;
     }
 
     public static ControlGestionePersonale getIstance() {
