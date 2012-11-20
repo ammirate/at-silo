@@ -8,8 +8,8 @@ import java.util.List;
 
 public class DBRetta extends DBBeans {
     
-    public DBRetta(){
-        super("Retta");
+    public DBRetta(Database db){
+        super("Retta",db);
     }
 
     public List<Retta> getAllRetta(Genitore g) {

@@ -11,8 +11,8 @@ import java.util.List;
 
 public class DBFeedback extends DBBeans {
     
-    public DBFeedback(){
-        super("Feedback");
+    public DBFeedback(Database db){
+        super("Feedback",db);
     }
     
         public List<Feedback> ricercaFeedbackperImpiegato(PersonaleAsilo impiegato){

@@ -4,6 +4,6 @@ import atsilo.entity.DomandaQuestionario;
 
 public class DBDomandaQuestionario extends DBBeans {
     
-    public DBDomandaQuestionario(){
-        super("DomandaQuestionario");
+    public DBDomandaQuestionario(Database db){
+        super("DomandaQuestionario",db);
     }}

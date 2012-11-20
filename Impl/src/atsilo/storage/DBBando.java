@@ -4,6 +4,6 @@ import atsilo.entity.Bando;
 
 public class DBBando extends DBBeans {
     
-    public DBBando(){
-        super("Bando");
+    public DBBando(Database db){
+        super("Bando",db);
     }}

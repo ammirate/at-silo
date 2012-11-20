@@ -4,6 +4,6 @@ import atsilo.entity.Questionario;
 
 public class DBRegistro extends DBBeans {
     
-    public DBRegistro(){
-        super("Registro");
+    public DBRegistro(Database db){
+        super("Registro",db);
     }}

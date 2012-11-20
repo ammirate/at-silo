@@ -5,8 +5,8 @@ import atsilo.entity.Psicopedagogo;
 
 public class DBPsicopedagogo extends DBBeans {
     
-    public DBPsicopedagogo(){
-        super("Psicopedagogo");
+    public DBPsicopedagogo(Database db){
+        super("Psicopedagogo",db);
     }
 
     public Psicopedagogo ricercaPsicopedagogoCf(String cf){

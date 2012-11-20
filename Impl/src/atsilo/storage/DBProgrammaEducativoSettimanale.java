@@ -13,9 +13,8 @@ import java.util.List;
 
 public class DBProgrammaEducativoSettimanale extends DBBeans {
     
-    public DBProgrammaEducativoSettimanale(){
-        tabella= new Tabella("ProgrammaEducativoSettimanale");
-        super("ProgrammaEducativoSettimanale");
+    public DBProgrammaEducativoSettimanale(Database db){
+        super("ProgrammaEducativoSettimanale",db);
     }
      public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerAttività(Attivita attivita){
         List<ProgrammaEducativoSettimanale> programmi;

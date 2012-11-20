@@ -4,6 +4,6 @@ import atsilo.entity.EventPlanner;
 
 public class DBEventPlanner extends DBBeans {
     
-    public DBEventPlanner(){
-        super("EventPlanner");
+    public DBEventPlanner(Database db){
+        super("EventPlanner",db);
     }}

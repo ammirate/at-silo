@@ -5,8 +5,8 @@ import atsilo.entity.PersonaleAsilo;
 
 public class DBFattura extends DBBeans {
     
-    public DBFattura(){
-        super("Fattura");
+    public DBFattura(Database db){
+        super("Fattura",db);
     }
 
     public Fattura getFattura(PersonaleAsilo pers) {

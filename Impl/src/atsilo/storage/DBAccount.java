@@ -6,8 +6,8 @@ import java.util.List;
 
 public class DBAccount extends DBBeans {
     
-    public DBAccount(){
-        super("Account");
+    public DBAccount(Database db){
+        super("Account",db);
        
     }
    

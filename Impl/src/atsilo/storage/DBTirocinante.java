@@ -5,8 +5,8 @@ import atsilo.entity.Tirocinante;
 
 public class DBTirocinante extends DBBeans {
     
-    public DBTirocinante(){
-        super("Tirocinante");
+    public DBTirocinante(Database db){
+        super("Tirocinante",db);
     }
 
     public Tirocinante getTirocinante(PersonaleAsilo pers) {

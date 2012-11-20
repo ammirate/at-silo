@@ -16,12 +16,12 @@ public class Tabella implements ManagerDB {
     private ResultSetMetaData resMetaData;
     private static Logger logger = Logger.getLogger("global");
 
-    public Tabella(String nameTable){
+    public Tabella(String nameTable, Database database){
         nomeTabella=nameTable;
+        db=database;
     }
     
     public ArrayList<String> getTipoColonne(ArrayList<String> nomeAttributi){
-                    db = new  Database ();
                     ArrayList<String> tipo = null;
                     String query = "select ";
                     if(nomeAttributi!=null){
@@ -59,41 +59,35 @@ public class Tabella implements ManagerDB {
                                     e = e.getNextException();
                             }
                     }
-                    db.chiudiConnessione();
                     return tipo;
             }
 
     @Override
     public String getNomeTabella() {
-        db = new  Database ();
-        db.chiudiConnessione();
+        
         return null;
     }
 
     @Override
     public void setNomeTabella(String newNome) {
-        db = new  Database ();
-        db.chiudiConnessione();
+       
     }
 
     @Override
     public boolean insert(ArrayList<String> valori) {
-        db = new  Database ();
-        db.chiudiConnessione();
+        
         return false;
     }
 
     @Override
     public ArrayList<String> select() {
-        db = new  Database ();
-        db.chiudiConnessione();
+       
         return null;
     }
 
     @Override
     public boolean update(ArrayList<String> valori, ArrayList<String> campi) {
-        db = new  Database ();
-        db.chiudiConnessione();
+      
         return false;
     }
     public Database getDatabase(){
