@@ -12,11 +12,10 @@ import java.sql.Date;
 import java.util.List;
 
 public class DBProgrammaEducativoSettimanale extends DBBeans {
-    Tabella tabella;
     
     public DBProgrammaEducativoSettimanale(){
         tabella= new Tabella("ProgrammaEducativoSettimanale");
-        super(tabella);
+        super("ProgrammaEducativoSettimanale");
     }
      public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerAttività(Attivita attivita){
         List<ProgrammaEducativoSettimanale> programmi;
