@@ -1,6 +1,6 @@
 package application;
 
-import atsilo.entity.Bambino;
+import atsilo.entity.*;
 
 public class ControlDatiPersonali {
     private static final ControlDatiPersonali INSTANCE;
@@ -16,7 +16,7 @@ public class ControlDatiPersonali {
         return null;
     }
 
-    Bambino getDatiBambino(Bambinp bambino) {
+    Bambino getDatiBambino(Bambino bambino) {
         return null;
     }
 
