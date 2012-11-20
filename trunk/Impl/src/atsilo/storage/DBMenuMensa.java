@@ -10,11 +10,9 @@ import java.sql.Date;
 import java.util.List;
 
 public class DBMenuMensa extends DBBeans {
-    Tabella tabella;
     
     public DBMenuMensa(){
-        tabella= new Tabella("MenuMensa");
-        super(tabella);
+        super("MenuMensa");
     }
     
     public List<MenuMensa> ricercaMenuMensaPerCategoriaBambino(String categoria){

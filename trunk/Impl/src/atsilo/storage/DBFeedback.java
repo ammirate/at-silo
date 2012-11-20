@@ -10,11 +10,9 @@ import atsilo.entity.Tirocinante;
 import java.util.List;
 
 public class DBFeedback extends DBBeans {
-    Tabella tabella;
     
     public DBFeedback(){
-        tabella= new Tabella("Feedback");
-        super(tabella);
+        super("Feedback");
     }
     
         public List<Feedback> ricercaFeedbackperImpiegato(PersonaleAsilo impiegato){
