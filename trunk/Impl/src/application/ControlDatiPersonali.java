@@ -9,7 +9,7 @@ public class ControlDatiPersonali {
     }
 
     String getValoreStatoIscrizione(Bambino bambino) {
-        return "";
+        return null;
     }
 
     Genitore getDatiGenitore(Genitore genitore) {

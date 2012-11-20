@@ -1,18 +1,26 @@
 package application;
 
+import atsilo.entity.Bando;
+import atsilo.entity.DomandaIscrizione;
+
+import java.sql.Date;
+
 public class ControlGestioneBando {
     private static final ControlGestioneBando INSTANCE;
 
     ControlGestioneBando() {
     }
 
-    void insrisciPunteggio(DomandaIscrizione iscrizione) {
+    boolean insrisciPunteggio(DomandaIscrizione iscrizione) {
+        return false;
     }
 
-    void inserisciIntervalloBando(Date inizio, Date fine) {
+    boolean inserisciIntervalloBando(Date inizio, Date fine) {
+        return false;
     }
 
-    void modificaBando(Bando bando) {
+    boolean modificaBando(Bando bando) {
+        return false;
     }
 
     public static ControlGestioneBando getIstance() {

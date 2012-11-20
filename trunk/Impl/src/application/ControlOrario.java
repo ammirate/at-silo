@@ -17,10 +17,12 @@ public class ControlOrario {
     public static final ControlOrario getInstance(){
         return co;
     }
-    public void inserisciOrario(Servizio s, String orarioinizio, String orariofine){
+    public boolean inserisciOrario(Servizio s, String orarioinizio, String orariofine){
+        return false;
         
     }
-    public void modificaOrario(Servizio s, String orarioinizio, String orariofine){
+    public boolean modificaOrario(Servizio s, String orarioinizio, String orariofine){
+        return false;
         
     }
 
@@ -29,11 +31,13 @@ public class ControlOrario {
     }
 
     
-    public void inserisciOrarioUtente(OrarioUtente o){
+    public boolean inserisciOrarioUtente(OrarioUtente o){
+        return false;
         
     }
 
-    public void modificaOrarioUtente(OrarioUtente o){
+    public boolean modificaOrarioUtente(OrarioUtente o){
+        return false;
         
     }
 

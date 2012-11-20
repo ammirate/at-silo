@@ -16,6 +16,7 @@ public class ControlRicercaDati {
     }
 
    public List<Utente> getRicerca(String tipoRicercante, String tipoRicercato, List<String> campiRicerca) {
+       return null;
     }
    
    /**

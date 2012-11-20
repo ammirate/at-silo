@@ -17,11 +17,13 @@ private static final ControlMenu cm;
         return cm;         
      }
     
-     public void inserisciMenuMensa (MenuMensa m){
-         
+     public boolean inserisciMenuMensa (MenuMensa m){
+          return false;
+          
       }
           
-     public void modificaMenuMensa (MenuMensa m, MenuMensa newM){
+     public boolean modificaMenuMensa (MenuMensa m, MenuMensa newM){
+         return false;
          
      }
      public MenuMensa eliminaMenù (MenuMensa m){

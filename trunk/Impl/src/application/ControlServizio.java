@@ -16,11 +16,11 @@ private static final ControlServizio cs;
 public static ControlServizio getInstance(){
     return cs;
 }
-public void inserisciServizio (Servizio s){
-    
+public boolean inserisciServizio (Servizio s){
+    return false;
 }
-public void modificaServizio(Servizio s){
-    
+public boolean modificaServizio(Servizio s){
+    return false;
 }
 public List<Servizio> ricercaServizio (Servizio s){
     return null;
@@ -36,8 +36,8 @@ public List<Servizio> getServizioPerId(String id){
             return null;
         }
 
-public void inserisciRichiesta (Richiesta r){
-    
+public boolean inserisciRichiesta (Richiesta r){
+    return false;
 }
 public Richiesta eliminaRichiesta (Richiesta r){
     return null;
@@ -57,12 +57,12 @@ public List<Richiesta> getRichiestaPerGenitore(Genitore g){
 public Richiesta getRichiestaPerId(String id){
     return null;
 }
-public void approvaRichiesta(Richiesta r){
-    
+public boolean approvaRichiesta(Richiesta r){
+    return false;
 }
 
-public void rifiutaRichiesta(Richiesta r){
-        
+public boolean rifiutaRichiesta(Richiesta r){
+        return false;
     }
 
 

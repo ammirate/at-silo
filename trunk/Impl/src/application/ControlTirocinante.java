@@ -18,11 +18,11 @@ public class ControlTirocinante {
         return c;
     }
 
-    public void inserisciTirocinante(Tirocinante t){
-        
+    public boolean inserisciTirocinante(Tirocinante t){
+        return false;
     }
-    public void modificaTirocinante(Tirocinante t){
-        
+    public boolean modificaTirocinante(Tirocinante t){
+        return false;
     }
     public Tirocinante eliminaTirocinante(Tirocinante t){
         return null;
@@ -40,8 +40,8 @@ public class ControlTirocinante {
         return null;
     }
     
-    public void inserisciFeedback (Feedback f){
-        
+    public boolean inserisciFeedback (Feedback f){
+        return false;
     }
     public Feedback eliminaFeedback(Feedback f){
         return f;
@@ -59,8 +59,8 @@ public class ControlTirocinante {
         return null;
         
     }
-    public void richiediTirocinante (Tirocinante t){
-        
+    public boolean richiediTirocinante (Tirocinante t){
+        return false;
     }
     
 }

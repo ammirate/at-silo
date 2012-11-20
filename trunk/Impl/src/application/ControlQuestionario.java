@@ -16,13 +16,21 @@ public class ControlQuestionario {
         return null;
     }
     
-    public void modificaQuestionario(List<DomandaQuestionario> domande){}
+    public boolean modificaQuestionario(List<DomandaQuestionario> domande){
+        return false;
+    }
     
-    public void spostaDataInizio(Date newData){}
+    public boolean spostaDataInizio(Date newData){
+        return false;
+    }
     
-    public void spostaDataFine(Date newData){}
+    public boolean spostaDataFine(Date newData){
+        return false;
+    }
     
-    public void compilaQuestionario(List<RispostaQuestionario> risposte){}
+    public boolean compilaQuestionario(List<RispostaQuestionario> risposte){
+        return false;
+    }
     
     public List<Questionario> getQuestionariCompilati(Genitore genitore){
         return null;

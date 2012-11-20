@@ -9,9 +9,11 @@ private class ControlLogin {
     }
 
     Boolean getValoreLogin(Utente utente) {
-        return Boolean.TRUE;
+        return false;
     }
 
     public static ControlLogin getIstance() {
+        return null;
+        
     }
 }

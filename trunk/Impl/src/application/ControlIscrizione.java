@@ -1,6 +1,8 @@
 package application;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
+import atsilo.entity.Genitore;
 
 public class ControlIscrizione {
 
@@ -10,10 +12,13 @@ public class ControlIscrizione {
         return null;
     }
 
-    void inserisciIscritto(DomandaIscrizione iscrizione) {
+    boolean inserisciIscritto(DomandaIscrizione iscrizione) {
+        return false;
+        
     }
 
-    void inserisciDomandaIscrizione(DomandaIscrizione iscrizione) {
+    boolean inserisciDomandaIscrizione(DomandaIscrizione iscrizione) {
+        return false;
     }
 
     DomandaIscrizione eliminaDomandaIscrizione(DomandaIscrizione iscrizione) {
@@ -30,6 +35,7 @@ public class ControlIscrizione {
     ControlIscrizione() {
     }
 
-    public static Controlscrizione getIstance() {
+    public static ControlIscrizione getIstance() {
+        return null;
     }
 }

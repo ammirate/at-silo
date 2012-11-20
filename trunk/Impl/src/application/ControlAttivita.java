@@ -11,9 +11,13 @@ public class ControlAttivita {
     public ControlAttivita() {
     }
     
-    public void inserisciAttivita(Registro registro, Attivita attivita){}
+    public boolean inserisciAttivita(Registro registro, Attivita attivita){
+        return false;
+    }
     
-    public void modificaAttivita(Registro registro, String attivita, Attivita nuovaAttivita){}
+    public boolean modificaAttivita(Registro registro, String attivita, Attivita nuovaAttivita){
+        return false;
+    }
     
     public Attivita eliminaAttivita(Registro registro, String titolo){
         return null;
