@@ -1,5 +1,7 @@
 package atsilo.entity;
 
+import java.sql.Date;
+
 public class Utente {
     Date dataNascita;
     private String nome;
