@@ -1,0 +1,25 @@
+ul.photoGallery{
+	margin:0;
+	padding:0;
+	display: block;
+	float: left; /* per firefox */
+	clear: both;
+	
+	display: block;
+	width: 100%;
+	height: auto;
+	
+}
+
+ul.photoGallery li{
+	display: block;
+	float: left;
+	border: none;
+	list-style-position: outside;
+	list-style-type: none;
+	width: 72px;
+	height: 72px;
+	margin: 0 8px 8px 0;
+	background-color: #999;
+	overflow: hidden;
+}
