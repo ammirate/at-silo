@@ -15,20 +15,20 @@
 [X] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
 
 LINEE GUIDA SOSTANZIALI
-[ ] Il nome è coerente con il contenuto
-[ ] Il flusso degli eventi è coerente con i requisiti fuzionali
-[ ] I requisiti qualitativi sono misurabili
-[ ] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
-[ ] Si fa sempre riferimento al sistema con il termine "il sistema"
-[ ] Il caso d'uso realizza almeno un requisito funzionale
+[X] Il nome è coerente con il contenuto
+[X] Il flusso degli eventi è coerente con i requisiti fuzionali
+[X] I requisiti qualitativi sono misurabili
+[X] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
+[X] Si fa sempre riferimento al sistema con il termine "il sistema"
+[X] Il caso d'uso realizza almeno un requisito funzionale
 [ ] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
-[ ] Il flusso degli eventi inizia con un'azione dell'attore iniziante
-[ ] Il flusso degli eventi contiene almeno
+[X] Il flusso degli eventi inizia con un'azione dell'attore iniziante
+[X] Il flusso degli eventi contiene almeno
 	una visualizzazione di dati persistenti da parte del sistema o
 	il salvataggio di dati persistenti da parte del sistema
-[ ] Inclusione, estensione e specializzazione sono utilizzate in modo proprio
-[ ] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
-[ ] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
-[ ] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
+[X] Inclusione, estensione e specializzazione sono utilizzate in modo proprio
+[X] Gli attori partecipanti esistono nel paragrafo 4.1 del RAD
+[X] Il caso d'uso è coerente con le responsabilità assegnate agli attori nel paragrafo 4.1 del RAD
+[X] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
 
 ALTRE ANNOTAZIONI:
