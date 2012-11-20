@@ -4,12 +4,12 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
 import atsilo.entity.Retta;
 
+import java.util.List;
+
 public class DBRetta extends DBBeans {
-    Tabella tabella;
     
     public DBRetta(){
-        tabella= new Tabella("Retta");
-        super(tabella);
+        super("Retta");
     }
 
     public List<Retta> getAllRetta(Genitore g) {

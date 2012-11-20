@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 /**
  * classe che si interfaccia connection il database ed esegue le query associate
  *
- * @author
+ * @author Angelo Scafuro
  * @version 1.0
  */
 public class Database {

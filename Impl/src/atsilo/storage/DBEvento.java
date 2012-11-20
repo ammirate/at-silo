@@ -5,18 +5,16 @@ import atsilo.entity.Evento;
 import java.sql.Date;
 
 public class DBEvento extends DBBeans {
-    Tabella tabella;
     
     public DBEvento(){
-        tabella= new Tabella("Evento");
-        super(tabella);
+        super("Evento");
     }
     
-    public Evento ricercaEventoPerNome(String nome){
+    public Evento ricercaEventoNome(String nome){
         Evento e;
         return e;
     }
-    public Evento ricercaEventoPerData(Date data){
+    public Evento ricercaEventoData(Date data){
             Evento e;
             return e;
         }

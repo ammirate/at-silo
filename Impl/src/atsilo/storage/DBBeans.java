@@ -4,7 +4,7 @@ import java.util.List;
 
 public class DBBeans {
    
-    private Tabella tabella;
+    final protected Tabella tabella;
     private Database db;
     
     public DBBeans(String nomeTabella){

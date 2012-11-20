@@ -4,11 +4,9 @@ import atsilo.entity.Fattura;
 import atsilo.entity.PersonaleAsilo;
 
 public class DBFattura extends DBBeans {
-    Tabella tabella;
     
     public DBFattura(){
-        tabella= new Tabella("Fattura");
-        super(tabella);
+        super("Fattura");
     }
 
     public Fattura getFattura(PersonaleAsilo pers) {
