@@ -21,7 +21,7 @@ LINEE GUIDA SOSTANZIALI
 [X] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
 [X] Si fa sempre riferimento al sistema con il termine "il sistema"
 [X] Il caso d'uso realizza almeno un requisito funzionale
-[ ] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
+[x] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
 [X] Il flusso degli eventi inizia con un'azione dell'attore iniziante
 [X] Il flusso degli eventi contiene almeno
 	una visualizzazione di dati persistenti da parte del sistema o
