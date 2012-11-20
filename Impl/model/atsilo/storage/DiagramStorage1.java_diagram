@@ -3,7 +3,7 @@
   <documentation exporter='Oracle JDeveloper' exporterVersion='11.1.2.3.0'/>
   <DI:Diagram xmi:id='id80dcb9f8-77ab-4422-a815-9233d833ced4' zoom='0.0'>
     <contained xmi:type='DI:GraphNode' xmi:id='id9e2735df-5f74-437a-96aa-ecf4b935036d'>
-      <anchorage xmi:id='idb921aa28-8d45-49ee-ab6c-1a9ae3ec4564' graphEdge='ideadc6378-c916-48cb-bfe3-53038a92ce4e'/>
+      <anchorage xmi:id='idb921aa28-8d45-49ee-ab6c-1a9ae3ec4564' graphEdge='id915202a8-e146-44f7-b8e5-1820c7615d3b'/>
       <contained xmi:type='DI:GraphNode' xmi:id='idae46ccb9-07ef-4d21-9055-b0c766f2ab76'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -49,7 +49,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='145.28466796875' width='200.0'/>
       </contained>
-      <position x='3635.0' y='1238.138671875'/>
+      <position x='1955.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -76,7 +76,7 @@
       <size height='145.28466796875' width='200.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='idb5e705a5-6429-47c2-bb51-b12a9983d5b5'>
-      <anchorage xmi:id='id166b7366-ecaa-4a32-aebe-ecf5c40afbc1' graphEdge='id9fe90eda-c225-4e1a-8232-00585c7627a5'/>
+      <anchorage xmi:id='id166b7366-ecaa-4a32-aebe-ecf5c40afbc1' graphEdge='id7f33d6c0-8b17-4f48-ab51-f8490522d8a2'/>
       <contained xmi:type='DI:GraphNode' xmi:id='id0860e1d8-96e1-43e7-8f2b-beea8936be68'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -122,7 +122,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='195.0' width='330.0'/>
       </contained>
-      <position x='2445.0' y='1245.0'/>
+      <position x='530.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -195,7 +195,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='152.7607421875' width='200.0'/>
       </contained>
-      <position x='2614.25' y='487.0'/>
+      <position x='1153.794677734375' y='0.0'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='false'/>
       <property key='showAttributeType' value='true'/>
@@ -222,7 +222,7 @@
       <size height='152.7607421875' width='200.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='idc8ed6474-edf6-4a9a-924f-5c033f977e7c'>
-      <anchorage xmi:id='id7f82142f-8191-42b9-9856-a79c99c357a1' graphEdge='id014eebec-e701-479b-a2d0-754982b18b37 id3d1e24b8-9bbd-402e-83d5-dd255429ca7c id428c83c8-d089-40ca-84f5-3d9644ef77b6 id53486eb4-e36a-477b-b843-6772c7bf07a9 id686dc352-d25e-49b7-a09a-6b7ee6eb7071 id750c2e80-a995-4bde-8be4-961d723caf32 id7dd6a75d-e45a-463a-b5f9-fc6f160b3f4a id9fe90eda-c225-4e1a-8232-00585c7627a5 ideadc6378-c916-48cb-bfe3-53038a92ce4e'/>
+      <anchorage xmi:id='id7f82142f-8191-42b9-9856-a79c99c357a1' graphEdge='id014eebec-e701-479b-a2d0-754982b18b37 id2efaf1c4-7449-4f81-967a-7e835fcc2d42 id53486eb4-e36a-477b-b843-6772c7bf07a9'/>
       <contained xmi:type='DI:GraphNode' xmi:id='id18a2d8d1-ac1c-4e02-b46e-3a8e0db5ca09'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -268,7 +268,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='246.6171875' width='200.0'/>
       </contained>
-      <position x='2760.0' y='891.521484375'/>
+      <position x='1039.294677734375' y='404.521484375'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -295,7 +295,7 @@
       <size height='246.6171875' width='200.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id7c281916-252a-4f4c-b36c-c2fc9b0cb5ba'>
-      <anchorage xmi:id='idc078e7aa-74a2-4b3a-99fa-04d658b91ebd' graphEdge='id428c83c8-d089-40ca-84f5-3d9644ef77b6'/>
+      <anchorage xmi:id='idc078e7aa-74a2-4b3a-99fa-04d658b91ebd' graphEdge='ida51e5e77-7c9b-4767-8bc9-29b65efbbe19'/>
       <contained xmi:type='DI:GraphNode' xmi:id='id8d68c7b1-ba60-4fc6-8367-18a631721a2d'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -341,7 +341,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='120.0' width='120.0'/>
       </contained>
-      <position x='2800.0' y='1238.138671875'/>
+      <position x='0.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -368,7 +368,7 @@
       <size height='120.0' width='120.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='iddbe6bcb4-6343-4999-8c81-952574a070dc'>
-      <anchorage xmi:id='id99511da0-0cac-473f-b836-7c860d7508c0' graphEdge='id686dc352-d25e-49b7-a09a-6b7ee6eb7071'/>
+      <anchorage xmi:id='id99511da0-0cac-473f-b836-7c860d7508c0' graphEdge='id0dd11d43-b660-4ee7-992c-7086661667b8'/>
       <contained xmi:type='DI:GraphNode' xmi:id='idda2946e9-ec70-4e2a-81f7-82b2d6264fd8'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -414,7 +414,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='174.23681640625' width='200.0'/>
       </contained>
-      <position x='3330.0' y='1238.138671875'/>
+      <position x='965.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -441,7 +441,7 @@
       <size height='174.23681640625' width='200.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='idd764e347-3d22-4fef-bada-cf02c6c5d5a5'>
-      <anchorage xmi:id='id7c479453-11c5-4230-9bbd-49b010026d91' graphEdge='id750c2e80-a995-4bde-8be4-961d723caf32'/>
+      <anchorage xmi:id='id7c479453-11c5-4230-9bbd-49b010026d91' graphEdge='idec6a871f-789a-49a0-b354-dc81b47477f1'/>
       <contained xmi:type='DI:GraphNode' xmi:id='id030481f3-e52d-4b6c-9fce-5703a07e6a87'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -487,7 +487,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='145.28466796875' width='200.0'/>
       </contained>
-      <position x='3025.0' y='1238.138671875'/>
+      <position x='225.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -514,7 +514,7 @@
       <size height='145.28466796875' width='200.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='iddf623c35-5eb1-4b63-8fea-6dbe0b9e39bc'>
-      <anchorage xmi:id='idafa3f1f6-bf6f-4211-aad0-e15b8b861800' graphEdge='id53486eb4-e36a-477b-b843-6772c7bf07a9'/>
+      <anchorage xmi:id='idafa3f1f6-bf6f-4211-aad0-e15b8b861800' graphEdge='id53486eb4-e36a-477b-b843-6772c7bf07a9 id7757ad08-4aa9-4500-9f03-04997a803cce'/>
       <contained xmi:type='DI:GraphNode' xmi:id='id4f8bbe48-64bf-4e7d-978a-acf50da2f054'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -560,7 +560,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='304.521484375' width='173.0'/>
       </contained>
-      <position x='2919.25' y='487.0'/>
+      <position x='875.794677734375' y='0.0'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -587,7 +587,7 @@
       <size height='304.521484375' width='173.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='idb3f3c03d-e9f6-4909-b43d-f1a6bf099757'>
-      <anchorage xmi:id='id17446f5c-b002-49e9-8bce-e722a13d2a5b' graphEdge='id7dd6a75d-e45a-463a-b5f9-fc6f160b3f4a'/>
+      <anchorage xmi:id='id17446f5c-b002-49e9-8bce-e722a13d2a5b' graphEdge='id06503e02-33bd-4536-a998-ffbc90e191fd'/>
       <contained xmi:type='DI:GraphNode' xmi:id='idca2f275d-98d2-4bc2-9e80-4b661be9cb6f'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -633,7 +633,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='171.861328125' width='275.0'/>
       </contained>
-      <position x='1885.0' y='1238.138671875'/>
+      <position x='1575.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -660,7 +660,7 @@
       <size height='171.861328125' width='275.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id8405d468-85c5-417b-b597-7bbdc7b6f01a'>
-      <anchorage xmi:id='ida6b706f6-a8d1-49d2-b4a4-3478942a280f' graphEdge='id3d1e24b8-9bbd-402e-83d5-dd255429ca7c'/>
+      <anchorage xmi:id='ida6b706f6-a8d1-49d2-b4a4-3478942a280f' graphEdge='idef0e7a55-9f43-4311-9572-c0e0a5910470'/>
       <contained xmi:type='DI:GraphNode' xmi:id='id6e076c9a-e36a-4068-9e7c-80d1f4cde8f3'>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
         <size height='100.0' width='100.0'/>
@@ -706,7 +706,7 @@
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
         <size height='159.7607421875' width='200.0'/>
       </contained>
-      <position x='2190.0' y='1238.138671875'/>
+      <position x='1270.0' y='1054.32763671875'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -739,26 +739,26 @@
       <property key='font' value='SansSerif,plain,11'/>
       <property key='lineColor' value='#646464'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDIMP;;atsilo.storage;;Tabella;;atsilo.storage.ManagerDB'/>
-      <waypoint x='2826.666748046875' y='891.521484375'/>
-      <waypoint x='2826.666748046875' y='871.3214721679688'/>
-      <waypoint x='2714.25' y='871.3214721679688'/>
-      <waypoint x='2714.25' y='639.7607421875'/>
+      <waypoint x='1172.6279296875' y='404.521484375'/>
+      <waypoint x='1172.6279296875' y='384.32147216796875'/>
+      <waypoint x='1253.794677734375' y='384.32147216796875'/>
+      <waypoint x='1253.794677734375' y='152.7607421875'/>
     </contained>
     <contained xmi:type='DI:GraphEdge' xmi:id='id53486eb4-e36a-477b-b843-6772c7bf07a9' anchor='id7f82142f-8191-42b9-9856-a79c99c357a1 idafa3f1f6-bf6f-4211-aad0-e15b8b861800'>
       <contained xmi:type='DI:GraphNode' xmi:id='ide66fe3fd-dc2f-482b-ae7f-0ad2165e74a2'>
-        <position x='-116.164794921875' y='-29.97607421875'/>
+        <position x='-34.373291015625' y='16.5'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id3d61f11c-626e-4602-b017-6007f83c2ef4'>
-        <position x='3.000244140625' y='16.5'/>
+        <position x='-6.0' y='-29.97607421875'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id8159e59f-6538-4811-a56b-e72c6be6da42'>
-        <position x='-28.5' y='0.0'/>
+        <position x='-28.5' y='2.090576171875'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idc0517daf-35e7-4395-a282-013639aada75'>
-        <position x='16.5' y='4.032073974609375'/>
+        <position x='16.5' y='0.0'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
       </contained>
       <property key='fontColor' value='#0'/>
@@ -771,232 +771,231 @@
       <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;Tabella;;db'/>
-      <waypoint x='2893.333251953125' y='891.521484375'/>
-      <waypoint x='2893.333251953125' y='871.3214721679688'/>
-      <waypoint x='3005.75' y='871.3214721679688'/>
-      <waypoint x='3005.75' y='791.521484375'/>
+      <waypoint x='1105.9613037109375' y='404.521484375'/>
+      <waypoint x='1105.9613037109375' y='369.32147216796875'/>
+      <waypoint x='991.1280517578125' y='369.32147216796875'/>
+      <waypoint x='991.1280517578125' y='304.521484375'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='id7dd6a75d-e45a-463a-b5f9-fc6f160b3f4a' anchor='id17446f5c-b002-49e9-8bce-e722a13d2a5b id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='id36a6734b-4a29-4522-b644-223c06a5eb75'>
-        <position x='-45.0' y='-29.97607421875'/>
+    <contained xmi:type='DI:GraphNode' xmi:id='id54a39e1c-ae22-4485-8721-ea56af2144a9'>
+      <anchorage xmi:id='ida438d9f7-8d6c-439b-b909-01d9433a94f9' graphEdge='id06503e02-33bd-4536-a998-ffbc90e191fd id0dd11d43-b660-4ee7-992c-7086661667b8 id2efaf1c4-7449-4f81-967a-7e835fcc2d42 id7757ad08-4aa9-4500-9f03-04997a803cce id7f33d6c0-8b17-4f48-ab51-f8490522d8a2 id915202a8-e146-44f7-b8e5-1820c7615d3b ida51e5e77-7c9b-4767-8bc9-29b65efbbe19 idec6a871f-789a-49a0-b354-dc81b47477f1 idef0e7a55-9f43-4311-9572-c0e0a5910470'/>
+      <contained xmi:type='DI:GraphNode' xmi:id='id9cb554bd-d73a-44b0-a45c-a7b177ced5e5'>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='COMPACT'/>
+        <size height='100.0' width='100.0'/>
+      </contained>
+      <contained xmi:type='DI:GraphNode' xmi:id='ida4439f0b-95a2-4380-8210-e126343efaed'>
+        <contained xmi:type='DI:GraphNode' xmi:id='idc80c3232-d4ea-4c5f-ba46-7db1bb7420a0'>
+          <property key='FirstVisibleIndex' value='0'/>
+          <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='FieldCompartment'/>
+          <size height='0.7583466172218323' width='0.0'/>
+        </contained>
+        <contained xmi:type='DI:GraphNode' xmi:id='id9a53c516-15aa-4279-968e-cf4d651ec94e'>
+          <property key='FirstVisibleIndex' value='0'/>
+          <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
+          <size height='1.9666134119033813' width='0.0'/>
+        </contained>
+        <contained xmi:type='DI:GraphNode' xmi:id='id20c692fd-87e7-44d8-85e7-9af662b60fbc'>
+          <property key='FirstVisibleIndex' value='0'/>
+          <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='InnerCompartment'/>
+          <size height='0.275039941072464' width='0.0'/>
+        </contained>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
+        <size height='203.18896484375' width='200.0'/>
+      </contained>
+      <contained xmi:type='DI:GraphNode' xmi:id='idb63d8781-a735-475b-929b-4ad40d217ec4'>
+        <contained xmi:type='DI:GraphNode' xmi:id='id910b4b6b-2abd-45fe-9287-86ea46366199'>
+          <contained xmi:type='DI:GraphNode' xmi:id='id46ab0c1b-1435-4a4c-bc28-5e8f9d865be2'>
+            <property key='FirstVisibleIndex' value='0'/>
+            <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='FieldCompartment'/>
+            <size height='1.0' width='0.0'/>
+          </contained>
+          <contained xmi:type='DI:GraphNode' xmi:id='id822531d7-4c74-4a00-92b3-6473df3aee4d'>
+            <property key='FirstVisibleIndex' value='0'/>
+            <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='MethodCompartment'/>
+            <size height='1.0' width='0.0'/>
+          </contained>
+          <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='Component'/>
+          <size height='80.0' width='33.33333206176758'/>
+        </contained>
+        <contained xmi:type='DI:GraphNode' xmi:id='ida9d78921-4e7b-44de-87c5-4d6ac4ada5a4'>
+          <position x='0.0' y='0.0'/>
+          <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
+        </contained>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
+        <size height='203.18896484375' width='200.0'/>
+      </contained>
+      <position x='940.357177734375' y='751.138671875'/>
+      <property key='showAttributeStatic' value='true'/>
+      <property key='showStereotype' value='false'/>
+      <property key='excludeMethodFilter' value=''/>
+      <property key='fillColor' value='#c6d6ff'/>
+      <property key='showMethodVisibility' value='true'/>
+      <property key='filterAttrViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+      <property key='lineColor' value='#a5a5a5'/>
+      <property key='showAttributeType' value='true'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='operationShowParameters' value='0'/>
+      <property key='showMethodType' value='true'/>
+      <property key='showMethodStatic' value='true'/>
+      <property key='sortMethodsAlpha' value='true'/>
+      <property key='showAttributeVisibility' value='true'/>
+      <property key='showOperations' value='true'/>
+      <property key='showAttributes' value='true'/>
+      <property key='showPackage' value='false'/>
+      <property key='sortAttributesAlpha' value='true'/>
+      <property key='fontColor' value='#0'/>
+      <property key='filterMethodViz' value='PUBLIC PROTECTED PACKAGE PRIVATE'/>
+      <property key='excludeAttrFilter' value=''/>
+      <property key='showInnerClasses' value='true'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.storage;;###;;DBBeans' presentation='SYMBOLIC'/>
+      <size height='203.18896484375' width='200.0'/>
+    </contained>
+    <contained xmi:type='DI:GraphEdge' xmi:id='id7757ad08-4aa9-4500-9f03-04997a803cce' anchor='ida438d9f7-8d6c-439b-b909-01d9433a94f9 idafa3f1f6-bf6f-4211-aad0-e15b8b861800'>
+      <contained xmi:type='DI:GraphNode' xmi:id='ide83c2461-2339-4f53-8a1d-fcfbea87c234'>
+        <position x='-106.5' y='-45.0'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
       </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id461270da-f5de-4a15-b776-441741c02671'>
-        <position x='-15.5' y='16.5'/>
+      <contained xmi:type='DI:GraphNode' xmi:id='id53a2d927-998b-4268-a779-a1a8f2d457a1'>
+        <position x='16.5' y='-6.0'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
       </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id7ba4f801-8c27-4e9a-a0d7-fbd0000e32cd'>
+      <contained xmi:type='DI:GraphNode' xmi:id='id615c5297-067c-413f-b2e0-2aee28944832'>
+        <position x='-28.5' y='6.3033447265625'/>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
+      </contained>
+      <contained xmi:type='DI:GraphNode' xmi:id='ide6728884-e065-42f0-8096-d077da8c85ff'>
+        <position x='16.5' y='0.0'/>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
+      </contained>
+      <property key='showCardinality' value='true'/>
+      <property key='EdgeType' value='1'/>
+      <property key='showStereotype' value='false'/>
+      <property key='lineWidth' value='1.0'/>
+      <property key='lineColor' value='#646464'/>
+      <property key='showAssocName' value='false'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='showRoleNames' value='true'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBBeans;;db'/>
+      <waypoint x='1007.0238037109375' y='751.138671875'/>
+      <waypoint x='1007.0238037109375' y='384.32147216796875'/>
+      <waypoint x='933.4613647460938' y='384.32147216796875'/>
+      <waypoint x='933.4613647460938' y='304.521484375'/>
+    </contained>
+    <contained xmi:type='DI:GraphEdge' xmi:id='id2efaf1c4-7449-4f81-967a-7e835fcc2d42' anchor='ida438d9f7-8d6c-439b-b909-01d9433a94f9 id7f82142f-8191-42b9-9856-a79c99c357a1'>
+      <contained xmi:type='DI:GraphNode' xmi:id='idc5ab621b-aab9-4229-9399-5422570a34fe'>
+        <position x='-103.497802734375' y='-23.49456787109375'/>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
+      </contained>
+      <contained xmi:type='DI:GraphNode' xmi:id='id405d2b2c-6fcf-46c9-975d-11478c1f6253'>
+        <position x='19.502197265625' y='-33.53765869140625'/>
+        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
+      </contained>
+      <contained xmi:type='DI:GraphNode' xmi:id='id282d3902-f715-4a4b-a1ac-e747f387f5ab'>
         <position x='-47.5' y='0.0'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
       </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id64189a4d-5df4-434c-b1a0-e57379646801'>
-        <position x='-54.93414306640625' y='66.29998779296875'/>
+      <contained xmi:type='DI:GraphNode' xmi:id='idedf8db82-bead-4b0a-9439-9312727436f1'>
+        <position x='16.5' y='4.13055419921875'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
       </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+      <property key='showCardinality' value='true'/>
       <property key='EdgeType' value='1'/>
       <property key='showStereotype' value='false'/>
       <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBAttivita;;tabella'/>
-      <waypoint x='2022.5' y='1238.138671875'/>
-      <waypoint x='2022.5' y='1187.938720703125'/>
-      <waypoint x='2785.0' y='1187.938720703125'/>
-      <waypoint x='2785.0' y='1138.138671875'/>
+      <property key='showAssocName' value='false'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='showRoleNames' value='true'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBBeans;;tabella'/>
+      <waypoint x='1073.6904296875' y='751.138671875'/>
+      <waypoint x='1073.6904296875' y='730.9386596679688'/>
+      <waypoint x='1139.294677734375' y='730.9386596679688'/>
+      <waypoint x='1139.294677734375' y='651.138671875'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='ideadc6378-c916-48cb-bfe3-53038a92ce4e' anchor='idb921aa28-8d45-49ee-ab6c-1a9ae3ec4564 id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='id0bcbc49b-955d-48f5-9495-e7c5be8dd03b'>
-        <position x='-45.0' y='16.5'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id4bdd48e9-cceb-49d6-9ce8-f96f94b6701a'>
-        <position x='-15.5' y='-29.97607421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id3d40a0c6-84c9-43e0-9925-438c45a3734c'>
-        <position x='-15.7755126953125' y='66.05157470703125'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='iddb7299bf-3dfe-4f9f-9e12-91f84685e463'>
-        <position x='16.5235595703125' y='19.82391357421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
-      </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+    <contained xmi:type='DI:GraphEdge' xmi:id='ida51e5e77-7c9b-4767-8bc9-29b65efbbe19' anchor='idc078e7aa-74a2-4b3a-99fa-04d658b91ebd ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
       <property key='EdgeType' value='1'/>
-      <property key='showStereotype' value='false'/>
-      <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBEvento;;tabella'/>
-      <waypoint x='3735.0' y='1238.138671875'/>
-      <waypoint x='3735.0' y='1187.938720703125'/>
-      <waypoint x='2935.0' y='1187.938720703125'/>
-      <waypoint x='2935.0' y='1138.138671875'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBEventPlanner;;atsilo.storage.DBBeans'/>
+      <waypoint x='60.00000762939453' y='1054.32763671875'/>
+      <waypoint x='60.00000762939453' y='1004.1276245117188'/>
+      <waypoint x='965.357177734375' y='1004.1276245117188'/>
+      <waypoint x='965.357177734375' y='954.32763671875'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='id3d1e24b8-9bbd-402e-83d5-dd255429ca7c' anchor='ida6b706f6-a8d1-49d2-b4a4-3478942a280f id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='idf977a348-d8fd-4133-8710-0e53b3223d61'>
-        <position x='-45.0' y='-29.97607421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id0530dbc5-3e15-49f1-80a0-25f8f150f021'>
-        <position x='-15.5' y='16.5'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id0951b8a7-a023-4cf2-857f-fe8f278ce630'>
-        <position x='-112.75543212890625' y='34.82391357421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='ida12008bc-750f-49e8-9c32-fa056a575de6'>
-        <position x='14.40020751953125' y='72.2738037109375'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
-      </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+    <contained xmi:type='DI:GraphEdge' xmi:id='idec6a871f-789a-49a0-b354-dc81b47477f1' anchor='id7c479453-11c5-4230-9bbd-49b010026d91 ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
       <property key='EdgeType' value='1'/>
-      <property key='showStereotype' value='false'/>
-      <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBEducatoreDidattico;;tabella'/>
-      <waypoint x='2290.0' y='1238.138671875'/>
-      <waypoint x='2290.0' y='1202.938720703125'/>
-      <waypoint x='2810.0' y='1202.938720703125'/>
-      <waypoint x='2810.0' y='1138.138671875'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBResponsabileQuestionario;;atsilo.storage.DBBeans'/>
+      <waypoint x='325.0' y='1054.32763671875'/>
+      <waypoint x='325.0' y='1019.1276245117188'/>
+      <waypoint x='990.3571166992188' y='1019.1276245117188'/>
+      <waypoint x='990.3571166992188' y='954.32763671875'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='id9fe90eda-c225-4e1a-8232-00585c7627a5' anchor='id166b7366-ecaa-4a32-aebe-ecf5c40afbc1 id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='id742b70ec-c2c7-433a-9afe-253bb1b8872d'>
-        <position x='-49.0' y='-50.93560791015625'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='idc73630d0-c03f-4247-8bbe-1121dc18ac1d'>
-        <position x='-19.5' y='16.5'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id52966c51-b246-436f-a5fd-ad60a69b2488'>
-        <position x='-47.5' y='52.02001953125'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id5a47a620-7742-4bdd-ad78-5b387f8ca9b8'>
-        <position x='16.5' y='0.82275390625'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
-      </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+    <contained xmi:type='DI:GraphEdge' xmi:id='id915202a8-e146-44f7-b8e5-1820c7615d3b' anchor='idb921aa28-8d45-49ee-ab6c-1a9ae3ec4564 ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
       <property key='EdgeType' value='1'/>
-      <property key='showStereotype' value='false'/>
-      <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBPsicopedagogo;;tabella'/>
-      <waypoint x='2610.0' y='1245.0'/>
-      <waypoint x='2610.0' y='1217.938720703125'/>
-      <waypoint x='2835.0' y='1217.938720703125'/>
-      <waypoint x='2835.0' y='1138.138671875'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBEvento;;atsilo.storage.DBBeans'/>
+      <waypoint x='2055.0' y='1054.32763671875'/>
+      <waypoint x='2055.0' y='989.1276245117188'/>
+      <waypoint x='1115.357177734375' y='989.1276245117188'/>
+      <waypoint x='1115.357177734375' y='954.32763671875'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='id428c83c8-d089-40ca-84f5-3d9644ef77b6' anchor='idc078e7aa-74a2-4b3a-99fa-04d658b91ebd id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='id28259724-e9ec-479c-91fc-cf873734cd81'>
-        <position x='-106.5' y='-16.0'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='idcd690141-ece4-4d0b-b58d-44f662958928'>
-        <position x='16.5' y='-15.5'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id0d98a4eb-9d7f-4ab0-9c7c-25c201e54bf5'>
-        <position x='-47.5' y='0.0'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='ide0e56f17-7d77-4696-9739-46e765d9197e'>
-        <position x='16.5' y='2.00421142578125'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
-      </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+    <contained xmi:type='DI:GraphEdge' xmi:id='id7f33d6c0-8b17-4f48-ab51-f8490522d8a2' anchor='id166b7366-ecaa-4a32-aebe-ecf5c40afbc1 ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
       <property key='EdgeType' value='1'/>
-      <property key='showStereotype' value='false'/>
-      <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBEventPlanner;;tabella'/>
-      <waypoint x='2860.0' y='1238.138671875'/>
-      <waypoint x='2860.0' y='1138.138671875'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBPsicopedagogo;;atsilo.storage.DBBeans'/>
+      <waypoint x='695.0' y='1054.32763671875'/>
+      <waypoint x='695.0' y='1034.127685546875'/>
+      <waypoint x='1015.357177734375' y='1034.127685546875'/>
+      <waypoint x='1015.357177734375' y='954.32763671875'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='id750c2e80-a995-4bde-8be4-961d723caf32' anchor='id7c479453-11c5-4230-9bbd-49b010026d91 id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='idd70aa0c5-ceee-4176-bcd1-4422f8374879'>
-        <position x='-45.0' y='16.5'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='idec6c8f60-1994-4601-ba5a-413146dab341'>
-        <position x='-15.5' y='-29.97607421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id60141e27-e848-4647-9c16-d41bd466c1bc'>
-        <position x='-47.5' y='62.30438232421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='idbf16dd1a-dadb-4c16-9d84-afe2629de3fb'>
-        <position x='14.962646484375' y='15.10540771484375'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
-      </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+    <contained xmi:type='DI:GraphEdge' xmi:id='id0dd11d43-b660-4ee7-992c-7086661667b8' anchor='id99511da0-0cac-473f-b836-7c860d7508c0 ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
       <property key='EdgeType' value='1'/>
-      <property key='showStereotype' value='false'/>
-      <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBResponsabileQuestionario;;tabella'/>
-      <waypoint x='3125.0' y='1238.138671875'/>
-      <waypoint x='3125.0' y='1217.938720703125'/>
-      <waypoint x='2885.0' y='1217.938720703125'/>
-      <waypoint x='2885.0' y='1138.138671875'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBGenitore;;atsilo.storage.DBBeans'/>
+      <waypoint x='1065.0' y='1054.32763671875'/>
+      <waypoint x='1065.0' y='1034.127685546875'/>
+      <waypoint x='1040.357177734375' y='1034.127685546875'/>
+      <waypoint x='1040.357177734375' y='954.32763671875'/>
     </contained>
-    <contained xmi:type='DI:GraphEdge' xmi:id='id686dc352-d25e-49b7-a09a-6b7ee6eb7071' anchor='id99511da0-0cac-473f-b836-7c860d7508c0 id7f82142f-8191-42b9-9856-a79c99c357a1'>
-      <contained xmi:type='DI:GraphNode' xmi:id='id82d7d71d-33e2-499b-839e-78fa6174e6f3'>
-        <position x='-45.0' y='16.5'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id22058337-179d-41e4-a3fd-f9bd5eb4f52f'>
-        <position x='-15.5' y='-29.97607421875'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='id518ee3c2-048d-478a-b10f-e7446f656cc2'>
-        <position x='-30.8333740234375' y='80.81256103515625'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationname'/>
-      </contained>
-      <contained xmi:type='DI:GraphNode' xmi:id='ida7c6bcbc-a3b7-4077-8cec-6eede1781539'>
-        <position x='16.5' y='1.4486083984375'/>
-        <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='destinationmultiplicity'/>
-      </contained>
-      <property key='fontColor' value='#0'/>
-      <property key='font' value='SansSerif,plain,11'/>
-      <property key='showAssocName' value='false'/>
+    <contained xmi:type='DI:GraphEdge' xmi:id='idef0e7a55-9f43-4311-9572-c0e0a5910470' anchor='ida6b706f6-a8d1-49d2-b4a4-3478942a280f ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
       <property key='EdgeType' value='1'/>
-      <property key='showStereotype' value='false'/>
-      <property key='lineWidth' value='1.0'/>
-      <property key='showRoleNames' value='true'/>
-      <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
-      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBGenitore;;tabella'/>
-      <waypoint x='3430.0' y='1238.138671875'/>
-      <waypoint x='3430.0' y='1202.938720703125'/>
-      <waypoint x='2910.0' y='1202.938720703125'/>
-      <waypoint x='2910.0' y='1138.138671875'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBEducatoreDidattico;;atsilo.storage.DBBeans'/>
+      <waypoint x='1370.0' y='1054.32763671875'/>
+      <waypoint x='1370.0' y='1019.1276245117188'/>
+      <waypoint x='1065.357177734375' y='1019.1276245117188'/>
+      <waypoint x='1065.357177734375' y='954.32763671875'/>
+    </contained>
+    <contained xmi:type='DI:GraphEdge' xmi:id='id06503e02-33bd-4536-a998-ffbc90e191fd' anchor='id17446f5c-b002-49e9-8bce-e722a13d2a5b ida438d9f7-8d6c-439b-b909-01d9433a94f9'>
+      <property key='EdgeType' value='1'/>
+      <property key='lineColor' value='#646464'/>
+      <property key='font' value='SansSerif,plain,11'/>
+      <property key='fontColor' value='#0'/>
+      <property key='lineWidth' value='1.0'/>
+      <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDEXT;;atsilo.storage;;DBAttivita;;atsilo.storage.DBBeans'/>
+      <waypoint x='1712.5' y='1054.32763671875'/>
+      <waypoint x='1712.5' y='1004.1276245117188'/>
+      <waypoint x='1090.357177734375' y='1004.1276245117188'/>
+      <waypoint x='1090.357177734375' y='954.32763671875'/>
     </contained>
     <property key='maxEntriesInShape' value='10'/>
     <property key='snapToGrid' value='true'/>
