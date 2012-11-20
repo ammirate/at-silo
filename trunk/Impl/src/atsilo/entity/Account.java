@@ -2,14 +2,21 @@ package atsilo.entity;
 
 public class Account{
     
-            private String userName;
-            private String passWord;
-            private String stato;
+    /**
+     * 
+     */
+    private String userName;
+    private String passWord;
+    private String stato;
     private Utente owner;
 
     public Account() {}
 
 
+    /**
+     * Metodo che setta il campo userName
+     * @param userName il parametro fissato
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
