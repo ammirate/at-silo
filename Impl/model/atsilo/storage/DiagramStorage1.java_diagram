@@ -98,7 +98,7 @@
           <size height='0.29913565516471863' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='188.712890625' width='200.0'/>
+        <size height='195.0' width='330.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id53f66463-e2cf-4875-be62-ef44ad78d4a8'>
         <contained xmi:type='DI:GraphNode' xmi:id='ideeaf0bc0-80ec-4b72-bd5c-660935726680'>
@@ -120,9 +120,9 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='188.712890625' width='200.0'/>
+        <size height='195.0' width='330.0'/>
       </contained>
-      <position x='2495.0' y='1238.138671875'/>
+      <position x='2445.0' y='1245.0'/>
       <property key='fillColor' value='#c6d6ff'/>
       <property key='showAttributes' value='true'/>
       <property key='showAttributeType' value='true'/>
@@ -146,7 +146,7 @@
       <property key='showInnerClasses' value='true'/>
       <property key='lineColor' value='#a5a5a5'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.storage;;###;;DBPsicopedagogo' presentation='SYMBOLIC'/>
-      <size height='188.712890625' width='200.0'/>
+      <size height='195.0' width='330.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id7b502f9b-e466-420e-b0cf-c522c347c151'>
       <anchorage xmi:id='id73df3202-f9ad-45ac-843d-8500c77373d9' graphEdge='id014eebec-e701-479b-a2d0-754982b18b37'/>
@@ -609,7 +609,7 @@
           <size height='0.32785871624946594' width='0.0'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='SYMBOLIC'/>
-        <size height='174.23681640625' width='200.0'/>
+        <size height='171.861328125' width='275.0'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idee186d25-905b-44bc-af73-b7924229cc14'>
         <contained xmi:type='DI:GraphNode' xmi:id='idae60e09c-b692-4bcb-afd7-d3d2fc84539f'>
@@ -631,7 +631,7 @@
           <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='BodyCompartment'/>
         </contained>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='EXPANDED'/>
-        <size height='174.23681640625' width='200.0'/>
+        <size height='171.861328125' width='275.0'/>
       </contained>
       <position x='1885.0' y='1238.138671875'/>
       <property key='fillColor' value='#c6d6ff'/>
@@ -657,7 +657,7 @@
       <property key='showInnerClasses' value='true'/>
       <property key='lineColor' value='#a5a5a5'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDC;;atsilo.storage;;###;;DBAttivita' presentation='SYMBOLIC'/>
-      <size height='174.23681640625' width='200.0'/>
+      <size height='171.861328125' width='275.0'/>
     </contained>
     <contained xmi:type='DI:GraphNode' xmi:id='id8405d468-85c5-417b-b597-7bbdc7b6f01a'>
       <anchorage xmi:id='ida6b706f6-a8d1-49d2-b4a4-3478942a280f' graphEdge='id3d1e24b8-9bbd-402e-83d5-dd255429ca7c'/>
@@ -803,8 +803,8 @@
       <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBAttivita;;tabella'/>
-      <waypoint x='1985.0' y='1238.138671875'/>
-      <waypoint x='1985.0' y='1187.938720703125'/>
+      <waypoint x='2022.5' y='1238.138671875'/>
+      <waypoint x='2022.5' y='1187.938720703125'/>
       <waypoint x='2785.0' y='1187.938720703125'/>
       <waypoint x='2785.0' y='1138.138671875'/>
     </contained>
@@ -874,11 +874,11 @@
     </contained>
     <contained xmi:type='DI:GraphEdge' xmi:id='id9fe90eda-c225-4e1a-8232-00585c7627a5' anchor='id166b7366-ecaa-4a32-aebe-ecf5c40afbc1 id7f82142f-8191-42b9-9856-a79c99c357a1'>
       <contained xmi:type='DI:GraphNode' xmi:id='id742b70ec-c2c7-433a-9afe-253bb1b8872d'>
-        <position x='-132.408203125' y='-29.45953369140625'/>
+        <position x='-49.0' y='-50.93560791015625'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='stereotype'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='idc73630d0-c03f-4247-8bbe-1121dc18ac1d'>
-        <position x='-15.5' y='16.5'/>
+        <position x='-19.5' y='16.5'/>
         <semanticModel xmi:type='DI:SimpleSemanticModelBridge' typeInfo='name'/>
       </contained>
       <contained xmi:type='DI:GraphNode' xmi:id='id52966c51-b246-436f-a5fd-ad60a69b2488'>
@@ -899,8 +899,8 @@
       <property key='showCardinality' value='true'/>
       <property key='lineColor' value='#646464'/>
       <semanticModel xmi:type='DI:CoreSemanticModelBridge' element='JAVA:JIDA;;atsilo.storage;;DBPsicopedagogo;;tabella'/>
-      <waypoint x='2595.0' y='1238.138671875'/>
-      <waypoint x='2595.0' y='1217.938720703125'/>
+      <waypoint x='2610.0' y='1245.0'/>
+      <waypoint x='2610.0' y='1217.938720703125'/>
       <waypoint x='2835.0' y='1217.938720703125'/>
       <waypoint x='2835.0' y='1138.138671875'/>
     </contained>
