@@ -1,6 +1,6 @@
 package atsilo.entity;
 import java.util.List;
-
+import atsilo.entity.Bambino;
 
 public class Classe {
     
