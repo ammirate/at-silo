@@ -6,6 +6,8 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.logging.Logger;
 
 
@@ -35,7 +37,9 @@ public class Tabella implements ManagerDB {
                     query = query+" from "+nomeTabella+" limit 1;";
                     try{
                             tipo =  new ArrayList<String>();
-                            result= db.executeQuery(query):
+                            result= db.selectDB(query);
+                        
+                                                              
                             resMetaData= result.getMetaData();
                             String tipoSpecifico = "OBJECT";
 
@@ -62,35 +66,90 @@ public class Tabella implements ManagerDB {
                     return tipo;
             }
 
-    @Override
-    public String getNomeTabella() {
-        
-        return null;
-    }
-
-    @Override
-    public void setNomeTabella(String newNome) {
-       
-    }
-
-    @Override
-    public boolean insert(ArrayList<String> valori) {
-        
-        return false;
-    }
-
-    @Override
-    public ArrayList<String> select() {
-       
-        return null;
-    }
-
-    @Override
-    public boolean update(ArrayList<String> valori, ArrayList<String> campi) {
-      
-        return false;
-    }
+    /**
+     *
+     * @return
+     */
     public Database getDatabase(){
         return db;
+    }
+    /**
+     *
+     * @return
+     */
+    
+    public String getNomeTabella() {
+        return null;
+    }
+    /**
+     *
+     * @param newNome
+     */
+    
+    public void setNomeTabella(String newNome) {
+    }
+    /**
+     *
+     * @return
+     */
+    public List<String> getNomiAttributi() {
+        return Collections.emptyList();
+    }
+    
+    /**
+     *
+     * @param nomeAttributi
+     * @return
+     */
+    public List<String> getTipoColonne(List<String> nomeAttributi) {
+        return Collections.emptyList();
+    }
+
+    /**
+     *
+     * @return
+     */
+    public List<String> getChiavi() {
+        return Collections.emptyList();
+    }
+
+    /**
+     *
+     * @param valori
+     * @return
+     */
+    public boolean insert(List<String> valori) {
+        return false;
+    }
+
+    /**
+     *
+     * @param nomeAttributo
+     * @param nomiAttributo
+     * @param valoriAttributi
+     * @return
+     */
+    public List<ArrayList<String>> selezione(List<String> nomeAttributo,List<String> nomiAttributo,List<String> valoriAttributi) {
+        return Collections.emptyList();
+    }
+    
+    /**
+     *
+     * @param valori
+     * @param campi
+     * @return
+     */
+    public boolean update(List<String> valori, List<String> campi) {
+        return false;
+    }
+
+    /**
+     *
+     * @param chiavi
+     * @param valChiavi
+     * @return
+     */
+    public Boolean rimuovi(List<String> chiavi, List<String> valChiavi) {
+        return null;
     }
 }

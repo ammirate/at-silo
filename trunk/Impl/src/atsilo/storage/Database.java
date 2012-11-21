@@ -5,9 +5,9 @@ import java.sql.*;
 import java.util.logging.Logger;
 
 /**
- * classe che si interfaccia connection il database ed esegue le query associate
+ * Classe che si interfaccia connection il database ed esegue le query associate
  *
- * @author Angelo Scafuro
+ * @author Angelo G. Scafuro
  * @version 1.0
  */
 public class Database {
@@ -20,9 +20,9 @@ public class Database {
 	}
 	
 	/**
-	 * metodo che apre la connessione al database
-	 * @return ritorna true se la connessione al DataBase
-	 * avvenuta correttamente false altrimenti
+	 * Apre la connessione con il database
+	 * @return  true in caso di connessione riuscita
+         *          false altrimenti
 	 */
 	public boolean apriConnessione(){
 		try{
@@ -51,9 +51,9 @@ public class Database {
 	
 	
 	/**
-	 * metodo che chiude la connesione al database
-	 * @return ritorna true se la chiusura della connessione al DataBase
-	 * avvenuta correttamente false altrimenti
+	 * Chiude la connesione con il database
+	 * @return  true in caso di successo di chiusura connessione
+         *          false altrimenti
 	 */
 	public boolean chiudiConnessione(){
 		try{
@@ -74,19 +74,20 @@ public class Database {
 	}
 
 	/**
-	 * metodo che controlla se la connessione al database è attiva
-	 * @return ritorna true se la connessione al DataBase è attiva false altrimenti
+	 * Controlla se la connessione al database è stata stabilita ed attiva
+	 * @return  true se la connessione al DataBase è attiva
+         *          false altrimenti
 	 */
 	public boolean isOpen() throws SQLException{
 		return !connection.isClosed();
 	}
 	
 	/**
-     * metodo che esegue una query di inserimento nel db
+     * Esegue una query di inserimento nel db
      *
-     * @param query Stringa che rappresenta la query che verra eseguita
-     * @return ritorna true se la query è stata eseguita connection successo
-     * false altrimenti
+     * @param query Stringa che rappresenta la query che deve essere eseguita
+     * @return  true se la query è stata eseguita con successo
+     *          false altrimenti
      */
 	public boolean insertDB(String query){
 		try{
@@ -107,10 +108,11 @@ public class Database {
 	}
 	
 	/**
-     * Aggiorna una tupla del database
+     * Aggiorna una tupla presente nel database
      *
-     * @param query Stringa che rappresenta la query che verra eseguita
-     * @return Restituisce true se l'aggiornamento avviene connection successo, false altrimenti
+     * @param query Stringa che rappresenta la query che deve essere eseguita
+     * @return true se la query è stata eseguita con successo
+     *          false altrimenti
      */
 	public boolean updateDB(String query){
 		try{
@@ -133,8 +135,9 @@ public class Database {
 	/**
      * Effettua l'eliminazione di una tupla di valori dal database
      *
-     * @param query Query che viene eseguita sul database
-     * @return Restituisce true se la cancellazione avviene connection successo, false altrimenti
+     * @param query Stringa che viene eseguita sul database
+     * @return  true se la cancellazione è avvenuta con successo
+     *          false altrimenti
      */
 	public Boolean deleteDB(String query){
 		Boolean state = false;
@@ -158,11 +161,10 @@ public class Database {
 	}
 	
 	/**
-	 * Effettua una select sul database seleziona dei dati dal 
-	 * database tramite una query
+	 * Effettua una selezione dati dal database tramite query
 	 * 
-	 * @param  query Query che verra eseguita
-	 * @return Restituisce il ResultSet contenente l'insieme dei valori della select
+	 * @param  query Stringa che deve essere eseguita
+	 * @return ResultSet contenente l'insieme dei valori della select
 	 */
 	public ResultSet selectDB(String query){
 		try{
@@ -183,9 +185,9 @@ public class Database {
 	}
 	
 	/**
-	 * Restituisce le chiavi primarie di una tabella presente nel database
+	 * Ottiene le chiavi primarie di una tabella presente nel database
 	 * 
-	 * @param table Nome della tabella
+	 * @param table nome della tabella
 	 * 
 	 * @return ResultSet contenente le chiavi primarie della tabella
 	 */
@@ -193,7 +195,7 @@ public class Database {
 		ResultSet result = null;
 		try {
 			dbMetaData = connection.getMetaData();
-			result =  dbMetaData.getPrimaryKeys(null,"erpsoftdb", table);
+			result =  dbMetaData.getPrimaryKeys(null,"atsilodb", table);
 			
 		} catch (SQLException e) {
 			logger.severe("SQL EXCEPTION");
@@ -207,7 +209,7 @@ public class Database {
 	
 	private DatabaseMetaData dbMetaData;
 	private Connection connection;
-	private final String url="jdbc:mysql://localhost/erpsoftdb?user=root&password=pass";
+	private final String url="jdbc:mysql://localhost/atsilodb?user=root&password=pass";
 	static final String driver = "com.mysql.jdbc.Driver";
 	private Statement statement;
 	private ResultSet resultSet;
