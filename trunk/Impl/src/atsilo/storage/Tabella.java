@@ -10,7 +10,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
-
+/**
+ * 
+ * Classe che permette di eseguire operazioni su una tabella del database
+ * implements ManagerDB
+ * @author Angelo G. Scafuro
+ * @version 1.0
+ *
+ */
 public class Tabella implements ManagerDB {
     private Database  db ;//connessione al database instanziata ad ogni query per evitare variabili statiche
     private String nomeTabella;
@@ -18,8 +25,14 @@ public class Tabella implements ManagerDB {
     private ResultSetMetaData resMetaData;
     private static Logger logger = Logger.getLogger("global");
 
+    /**
+     * Costruttore
+     * @param nameTable nome della tabella del database su cui 
+     *        si effettueranno le operazioni
+     * @param database Riferimento al database da usare
+     */
     public Tabella(String nameTable, Database database){
-        nomeTabella=nameTable;
+        setNomeTabella(nameTable);
         db=database;
     }
     
@@ -67,50 +80,126 @@ public class Tabella implements ManagerDB {
             }
 
     /**
-     *
-     * @return
+     * Restituisce il database usato
+     * @return database usato
      */
     public Database getDatabase(){
         return db;
     }
-    /**
-     *
-     * @return
-     */
     
+    /**
+     * Restituisce il nome della tabella
+     * @return nome tabella
+     */
     public String getNomeTabella() {
-        return null;
+        return nomeTabella;
     }
-    /**
-     *
-     * @param newNome
-     */
     
+    /**
+     * Setta la tabella su cui eseguire le operazioni
+     * @param newNome nuovo nome della tabella su cui eseguire le operazioni
+     */
     public void setNomeTabella(String newNome) {
-    }
-    /**
-     *
-     * @return
-     */
-    public List<String> getNomiAttributi() {
-        return Collections.emptyList();
+        nomeTabella=newNome;
     }
     
     /**
      *
-     * @param nomeAttributi
      * @return
      */
-    public List<String> getTipoColonne(List<String> nomeAttributi) {
-        return Collections.emptyList();
+    public ArrayList<String> getNomiAttributi(){
+        ArrayList<String> lista= new ArrayList<String>();
+        try{
+                result= db.selectDB("select * from "+nomeTabella+" LIMIT 1");
+                resMetaData= result.getMetaData();
+                for(int i=1;i<=resMetaData.getColumnCount();i++){
+                        String nome=resMetaData.getColumnName(i);
+                        lista.add(nome);
+                }
+        }catch (SQLException e) {
+                logger.warning("Impossibile prelevare i nome degli attributi");
+                while (e!=null){
+                        logger.severe("SQL EXCEPTION");
+                        logger.info("State: "+e.getSQLState());
+                        logger.info("Message: "+e.getMessage());
+                        logger.info("Error: "+e.getErrorCode());
+                        e = e.getNextException();
+                }
+        }
+        return lista;
+}
+    
+    /**
+     * Restituisce i tipi degli attributi relativi ad una tabella
+     * 
+     * @param  lista di attributi di cui richiedere il tipo
+     * @return lista dei tipi degli attributi
+     */
+    public ArrayList<String> getTipoColonne(List<String> nomiAttributo){
+            ArrayList<String> tipo = null;
+            String query = "select ";
+            if(nomiAttributo!=null){
+                    for(String s: nomiAttributo){
+                            query = query+s+",";
+                    }
+                    query = query.substring(0, query.length()-1);
+            }else{
+                    query = query+"*";
+            }
+            query = query+" from "+nomeTabella+" limit 1;";
+            try{
+                    tipo =  new ArrayList<String>();
+                    result= db.selectDB(query);
+                    resMetaData= result.getMetaData();
+                    String tipoSpecifico = "OBJECT";
+
+                    for(int i=1;i<=resMetaData.getColumnCount();i++){
+                            if(resMetaData.getColumnTypeName(i).equals("SMALLINT")||resMetaData.getColumnTypeName(i).equals("INT")||resMetaData.getColumnTypeName(i).equals("BIGINT"))
+                                    tipoSpecifico = "INTEGER";
+                            else if(resMetaData.getColumnTypeName(i).equals("DECIMAL")||resMetaData.getColumnTypeName(i).equals("DOUBLE")||resMetaData.getColumnTypeName(i).equals("FLOAT"))
+                                    tipoSpecifico = "DOUBLE";
+                            else if(resMetaData.getColumnTypeName(i).equals("VARCHAR")||resMetaData.getColumnTypeName(i).equals("CHARACTER")||resMetaData.getColumnTypeName(i).equals("DATE"))
+                                    tipoSpecifico = "STRING";
+
+                            tipo.add(tipoSpecifico);
+                    }
+            }catch(SQLException e){
+                    logger.warning("Impossibile prelevare i tipi degli attributi");
+                    while (e!=null){
+                            logger.severe("SQL EXCEPTION");
+                            logger.info("State: "+e.getSQLState());
+                            logger.info("Message: "+e.getMessage());
+                            logger.info("Error: "+e.getErrorCode());
+                            e = e.getNextException();
+                    }
+            }
+            return tipo;
     }
 
     /**
-     *
-     * @return
+     * Restituisce la lista delle chiavi primarie della tabella
+     * 
+     * @return Lista delle chiavi primarie
      */
-    public List<String> getChiavi() {
-        return Collections.emptyList();
+    public ArrayList<String> getChiavi() {
+            ArrayList<String> lista= null;
+            try{
+                    lista= new ArrayList<String>();
+                    result = db.getChiavi(nomeTabella);
+                    while (result.next()){
+                            lista.add(result.getString("COLUMN_NAME"));
+                    }
+            }catch (SQLException e) {
+                    logger.warning("Impossibile prelevare le chiavi della tabella");
+                    while (e!=null){
+                            logger.severe("SQL EXCEPTION");
+                            logger.info("State: "+e.getSQLState());
+                            logger.info("Message: "+e.getMessage());
+                            logger.info("Error: "+e.getErrorCode());
+                            e = e.getNextException();
+                    }
+            }
+            return lista;
     }
 
     /**

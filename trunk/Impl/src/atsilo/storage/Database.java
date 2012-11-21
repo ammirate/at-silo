@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.logging.Logger;
 
 /**
- * Classe che si interfaccia connection il database ed esegue le query associate
+ * Classe che serve ad interfacciarsi con il database
  *
  * @author Angelo G. Scafuro
  * @version 1.0
@@ -112,7 +112,7 @@ public class Database {
      *
      * @param query Stringa che rappresenta la query che deve essere eseguita
      * @return true se la query è stata eseguita con successo
-     *          false altrimenti
+     *         false altrimenti
      */
 	public boolean updateDB(String query){
 		try{
