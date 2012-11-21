@@ -13,7 +13,7 @@ public class DBBeans {
     }
  
     public void setTabella(Tabella tabella){
-        this.tabella=tabella;
+       tabella=tabella;
     }
     public List<Object> getAll(Object RealBeans) {
         

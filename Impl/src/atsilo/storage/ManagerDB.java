@@ -13,11 +13,6 @@ import java.util.List;
 public interface ManagerDB {
     
     /**
-     * Costruttore della classe
-     */
-    public ManagerDB();
-    
-    /**
      * Ottiene il nome della tabella
      * @return nome della tabella
      */
@@ -46,7 +41,7 @@ public interface ManagerDB {
      *
      * @return
      */
-    public List<String> getChiavi();
+    public ArrayList<String> getChiavi();
     
     /**
      * Inserisci dei valori nella tabella
