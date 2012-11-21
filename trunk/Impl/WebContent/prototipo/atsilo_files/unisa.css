@@ -1,4 +1,3 @@
-
 /*PROPRIETA' DEL BODY*/
 
 body {
@@ -72,7 +71,19 @@ td.menusecondo {
 A.linkmenusecondo {text-decoration : none;font-size: 0.8em;}
 A.linkmenusecondo:link {color : #333; text-decoration : none;}
 A.linkmenusecondo:visited {color :#333; text-decoration : none;}
-A.linkmenusecondo:hover {color : #333; text-decoration : underline;}
+A.linkmenusecondo:hover {
+	color : #3353;
+	text-decoration : underline;
+}
+.menusecondosel 	{
+	color:#FFF
+	padding:9px 10px;
+	text-decoration: none;
+	width: 60px;
+	background-color: #FF6600;
+	border-right: 1px solid #fff;
+	
+}
 /*
 LINK BARRA NAVIGAZIONE
 */
