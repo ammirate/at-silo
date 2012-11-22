@@ -1,6 +1,7 @@
 package atsilo.storage;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import atsilo.entity.Beans;
 
@@ -83,5 +84,19 @@ public abstract class DBBeans<B extends Beans> {
     public Database getDatabase(){
         return db;
     }
+    
+    /**
+     * Metodo astratto che associa, per ogni Bean, in una mappa hash secondo lo schema <chiave,valore> 
+     * <variabile_bean , colonna_database>.
+     * @return
+     */
+    public abstract HashMap<String,String> getMappingFields();
+    
+    /**
+     * Metodo che restituisce la lista dei campi chiave nel database per questo bean.
+     * @return
+     */
+    public abstract List<String> getKeyFields();
+    
 
 }
