@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Storico Registro</title>
+<title>Attivita' odierna</title>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta http-equiv="Content-Language" content="it" />
@@ -117,7 +117,22 @@
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
-
+<div  >
+		<form action='' method=POST>
+		<h2 align=center>Descrizione Attivit&agrave;</h2><br>
+		<center><textarea rows="10" cols="100" style="border: 2px solid black;" ></textarea><br></center><br>
+		<br><b>Ore lavorate: </b><input type=text name=ore><br><br>
+		<h2 align=center>Categoria Psicopedagogo</h2>
+		<input type=radio name=cat value=1 onclick="onDesc()">Categoria 1 <input type=radio name=att0 value=0>Svolta Interamente <input type=radio name=att0 value=0>Svolta Parzialmente<br>
+		<input type=radio name=cat value=2>Categoria 2	<input type=radio name=att1 value=0>Svolta Interamente <input type=radio name=att1 value=0>Svolta Parzialmente<br>
+		<input type=radio name=cat value=3>Categoria 3 <input type=radio name=att2 value=0>Svolta Interamente <input type=radio name=att2 value=0>Svolta Parzialmente<br>
+		<input type=radio name=cat value=4>Categoria 4 <input type=radio name=att3 value=0>Svolta Interamente <input type=radio name=att3 value=0>Svolta Parzialmente<br>
+		<br><br>
+		<center>
+		<input type=submit value="SOTTOMETTI GIORNATA">
+		</center>
+		</form>
+	</div>
 
 <p><strong><br />
 </strong></p>
