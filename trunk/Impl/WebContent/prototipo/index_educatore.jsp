@@ -66,7 +66,7 @@
 <td align="left" class="menuprimosel">&nbsp;<b>'Area Utente</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="account_educatore.html">Dati Account</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="account_educatore.jsp">Dati Account</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="logout.jsp">Logout</a></td>
@@ -85,7 +85,7 @@
 </tr>
 <tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="registro_presenze.htmljsp">Registro Presenze</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="registro_presenze.jsp">Registro Presenze</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_registro.jsp">Storico Registro</a></td>
@@ -100,7 +100,7 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Questionari</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="visualizza_questionari.html">Visualizza</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="visualizza_questionari.jsp">Visualizza</a></td>
 </tr>
 </tbody></table>
 

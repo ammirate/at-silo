@@ -11,6 +11,7 @@
 <%@
 include file="sidebar_ped.jsp"
  %>
+
 <br>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
 <table width="100%">
@@ -60,7 +61,7 @@ include file="sidebar_ped.jsp"
 </td><td class="fasciadxvariabile"></td>
 </tr>
 <tr>
-<td class="bottom" width="209">&nbsp;2012 Â© Unisa</td><td align="right" class="bottom"></td>
+<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
 </tr>
 </tbody></table>
 
