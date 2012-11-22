@@ -8,7 +8,9 @@ import java.util.List;
 
 public class ControlAttivita {
         
-    public ControlAttivita() {
+    private final static ControlAttivita control;
+    
+    private ControlAttivita() {
     }
     
     public boolean inserisciAttivita(Registro registro, Attivita attivita){
@@ -31,6 +33,8 @@ public class ControlAttivita {
         return null;
     }
     
-    
+    public ControlAttivita getIstance(){
+        return null;
+    }
     
 }

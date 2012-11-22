@@ -5,8 +5,10 @@ import atsilo.entity.ProgrammaEducativoSettimanale;
 import java.util.List;
 
 public class ControlProgrammaEducativo {
-    public ControlProgrammaEducativo() {
-        super();
+    
+    private static final ControlProgrammaEducativo control;
+    
+    private ControlProgrammaEducativo() {
     }
     
     public boolean inserisciProgrammaEducativoSett(ProgrammaEducativoSettimanale p){
@@ -25,5 +27,7 @@ public class ControlProgrammaEducativo {
         return null;
     }
     
-    
+    public ControlAttivita getIstance(){
+        return null;
+    }
 }

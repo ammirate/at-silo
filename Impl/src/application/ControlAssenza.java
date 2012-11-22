@@ -9,8 +9,10 @@ import java.sql.Date;
 import java.util.List;
 
 public class ControlAssenza {
-        
-    public ControlAssenza() {}
+    
+    private static final ControlAssenza control;
+    
+    private ControlAssenza() {}
 
     public boolean inserisciAssenza(Registro registro, Assenza assenza){
         return false;
@@ -28,5 +30,7 @@ public class ControlAssenza {
         return null;
     }
     
-    
+    public ControlAssenza staticgetIstance(){
+        return null;
+    }
 }

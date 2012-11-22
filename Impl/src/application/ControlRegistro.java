@@ -6,7 +6,9 @@ import java.sql.Date;
 
 public class ControlRegistro {
     
-    public ControlRegistro() {
+    private static final ControlRegistro control;
+    
+    private ControlRegistro() {
         
     }
     
@@ -26,6 +28,9 @@ public class ControlRegistro {
         return null;
     }
     
+    public ControlRegistro getIstance(){
+        return null;
+    }
     
     
 }
