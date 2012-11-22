@@ -1,8 +1,0 @@
-[X] Il diagramma comprende 2 o più casi d'uso
-[X] I casi d'uso presenti nel diagramma esistono
-[ ] Gli attori citati sono gli stessi presenti nei casi d'uso corrispondenti
-[ ] Inclusioni, estensioni e specializzazioni rispecchiano i casi d'uso
-
-ALTRE ANNOTAZIONI:
-Continua a comparire l'attore UtenteAutenticato, non presente nell'elenco degli attori.
-Diverse inclusioni sono ambigue.
