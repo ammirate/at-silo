@@ -275,7 +275,7 @@ public class Tabella implements ManagerDB {
     /**
      * @see ManagerDB
      */
-    public boolean update(ArrayList<String> nomeAttributi,ArrayList<String> valoreAttributi, ArrayList<String> chiavi, ArrayList<String> valoriChiavi) {
+    public boolean update(List<String> nomeAttributi,List<String> valoreAttributi, List<String> chiavi, List<String> valoriChiavi) {
 
             ArrayList<String> tipo=getTipoColonne(null);
             if(tipo==null){
@@ -336,7 +336,7 @@ public class Tabella implements ManagerDB {
      * @see ManagerDB
      * 
      */
-    public boolean rimuovi(ArrayList<String> chiavi, ArrayList<String> valChiavi) {
+    public boolean rimuovi(List<String> chiavi, List<String> valChiavi) {
             try {
                     if(db.isOpen()){
                             String query="delete from "+nomeTabella+" where ";

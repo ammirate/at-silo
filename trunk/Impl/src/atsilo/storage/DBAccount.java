@@ -59,11 +59,10 @@ public class DBAccount extends DBBeans<Account> {
     @Override
     public boolean delete(Account realBeans) throws SQLException {
         Account account=realBeans;
-        ArrayList<String> chiavi= new ArrayList<String>();
+        
         ArrayList<String> valChiavi=new ArrayList<String>();
-        chiavi.add("username");
         valChiavi.add(account.getUserName());
-        if (tabella.rimuovi(chiavi, valChiavi))
+        if (tabella.rimuovi(getKeyFields(), valChiavi))
             return true;
         else return false;
     }
