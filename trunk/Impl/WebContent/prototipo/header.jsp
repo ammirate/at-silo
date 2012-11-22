@@ -18,6 +18,17 @@ else if (nf.equals("storico_registro.jsp"))
 	out.println("<title>Storico Registro</title>");
 else if (nf.equals("visualizza_questionari.jsp"))
 	out.println("<title>Visualizza Questionari</title>");
+else if (nf.equals("index_psicopedagoga.jsp"))
+	out.println("<title>Area Psicopedagogo</title>");
+else if (nf.equals("inserisci_programma.jsp"))
+	out.println("<title>Inserisci programma didattico</title>");
+else if (nf.equals("modifica_programma.jsp"))
+	out.println("<title>Modifica programma didattico</title>");	
+else if (nf.equals("cancella_programma.jsp"))
+	out.println("<title>Cancella programma didattico</title>");
+else if (nf.equals("storico_registro_ped.jsp"))
+	out.println("<title>Storico Registro Psicopedagogo</title>");
+
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
