@@ -2,7 +2,7 @@ package atsilo.entity;
 
 import java.sql.Date;
 
-public class Utente {
+public class Utente implements Beans {
     Date dataNascita;
     private String nome;
     private String cognome;

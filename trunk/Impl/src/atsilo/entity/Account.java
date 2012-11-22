@@ -1,6 +1,6 @@
 package atsilo.entity;
 
-public class Account{
+public class Account implements Beans{
     
     private String userName;
     private String passWord;
