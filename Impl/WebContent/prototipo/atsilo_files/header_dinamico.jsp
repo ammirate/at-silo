@@ -31,24 +31,24 @@ else if(nf.equals("insex_impiegato.jsp"))
 	<meta name="MSSmartTagsPreventParsing" content="True" />
 	<link rel="Shortcut Icon" href="atsilo_files/favicon.ico" type="image/x-icon" />
     <!-- Res -->
-	<link type="text/css" href="template.css" rel="stylesheet">
-	<link type="text/css" href="unisa.css" rel="stylesheet">
-	<link type="text/css" href="personalizzazioni.css" rel="stylesheet"><!-- Stili personalizzati -->
-	<script type="text/javascript" src="calendar.js"></script>
+	<link type="text/css" href="atsilo_files/template.css" rel="stylesheet">
+	<link type="text/css" href="atsilo_files/unisa.css" rel="stylesheet">
+	<link type="text/css" href="atsilo_files/personalizzazioni.css" rel="stylesheet"><!-- Stili personalizzati -->
+	<script type="text/javascript" src="atsilo_files/calendar.js"></script>
 </head>
 
 
 <body>
 <table class="header" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="left"><img src="testata.jpg" align="middle" alt="" border="0"></td>
+<td align="left"><img src="atsilo_images/testata.jpg" align="middle" alt="" border="0"></td>
 </tr>
 </tbody></table>
 <table class="percorsopagina1" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="../index_educacatore.html">Home</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="../forum/index.html">Forum</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="../forum/ricerca_utente.html">Ricerca utente</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="../faq.html">FAQ</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="#">Home</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/index.html">Forum</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="ricerca_utente.html">Ricerca utente</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="faq.html">FAQ</a></td>
 </tr>
 </tbody></table>

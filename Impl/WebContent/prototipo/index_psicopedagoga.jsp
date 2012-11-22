@@ -1,5 +1,5 @@
 <%@
-	include file="header.jsp"
+	include file="atsilo_files/header.jsp"
 %>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -9,7 +9,7 @@
 </tr>
 </tbody></table>
 <%@
-include file="sidebar_ped.jsp"
+include file="atsilo_files/sidebar_ped.jsp"
  %>
 <br>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
