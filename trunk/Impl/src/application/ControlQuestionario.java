@@ -7,7 +7,9 @@ import java.util.List;
 
 public class ControlQuestionario {
 
-    public ControlQuestionario() {
+    private static final ControlQuestionario control;
+
+    private ControlQuestionario() {
     }
     
     public void inserisciQuestionario(Questionario questionario){}
@@ -49,6 +51,10 @@ public class ControlQuestionario {
     }
     
     public Questionario ricercaQuestionario(String nome){
+        return null;
+    }
+    
+    public ControlQuestionario getIstance(){
         return null;
     }
     

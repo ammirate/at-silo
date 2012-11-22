@@ -4,8 +4,9 @@ import atsilo.entity.*;
 import java.util.List;
 
 public class ControlDomandaQuestionario {
+    public static final ControlDomandaQuestionario control;
     
-    public ControlDomandaQuestionario() {
+    private ControlDomandaQuestionario() {
     }
     
     public boolean inserisciDomanda(String idQuestionario, DomandaQuestionario domanda){
@@ -28,4 +29,7 @@ public class ControlDomandaQuestionario {
     
     public boolean setCampiDomanda(String idQuestionario,String idDomanda, List<CampoDomandaQuestionario> ){}
     
+    public ControlDomandaQuestionario getIstance(){
+        return null;
+    }
 }
