@@ -130,11 +130,11 @@
     <coordinates>
       <x>320</x>
       <y>230</y>
-      <w>140</w>
+      <w>132</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>90;30;60;80</additional_attributes>
   </element>
   <element>
@@ -154,11 +154,11 @@
     <coordinates>
       <x>430</x>
       <y>230</y>
-      <w>140</w>
+      <w>132</w>
       <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>40;30;110;80</additional_attributes>
   </element>
   <element>
