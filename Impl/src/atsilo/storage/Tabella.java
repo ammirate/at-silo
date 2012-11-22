@@ -39,7 +39,7 @@ public class Tabella implements ManagerDB {
     }
     
     /**
-     * @see ManagerDB
+     * @see atsilo.storage.ManagerDB#getTipoColonne(List)
      * @param nomeAttributi nome degli attributi(se null verranno selezionati tutti gli attributi della tabella)
      */
     public ArrayList<String> getTipoColonne(List<String> nomeAttributi){
@@ -94,23 +94,21 @@ public class Tabella implements ManagerDB {
     }
     
     /**
-     * Restituisce il nome della tabella 
-     * @return nome tabella
+     * @see atsilo.storage.ManagerDB#getNomeTabella()
      */
     public String getNomeTabella() {
         return nomeTabella;
     }
     
     /**
-     * Setta la tabella su cui eseguire le operazioni
-     * @param newNome nuovo nome della tabella su cui eseguire le operazioni
+     *  @see atsilo.storage.ManagerDB#setNomeTabella(String)
      */
     public void setNomeTabella(String newNome) {
         nomeTabella=newNome;
     }
     
    /**
-    * @see ManagerDB
+    * @see atsilo.storage.ManagerDB#getNomiAttributi()
     */
     public ArrayList<String> getNomiAttributi(){
         ArrayList<String> lista= new ArrayList<String>();
@@ -136,7 +134,7 @@ public class Tabella implements ManagerDB {
     
 
     /**
-     * @see ManagerDB
+     * @see atsilo.storage.ManagerDB#getChiaviPrimarie()
      */
     public ArrayList<String> getChiaviPrimarie() {
             ArrayList<String> lista= null;
@@ -160,9 +158,8 @@ public class Tabella implements ManagerDB {
     }
     
     /**
-     *@see ManagerDB
+     *@see atsilo.storage.ManagerDB#insert(List)
      */
-
     public boolean insert(List<String> valori) {
         try
         {
@@ -210,7 +207,7 @@ public class Tabella implements ManagerDB {
 }
 
     /**
-     * @see ManagerDB
+     * @see atsilo.storage.ManagerDB#selezione(List, List, List)
      */
     public ArrayList<ArrayList<String>> selezione(List<String> nomeAttributo,List<String> nomiAttributo, List<String> valoriAttributi) {
             ArrayList<ArrayList<String>> risultato = null;
@@ -273,7 +270,7 @@ public class Tabella implements ManagerDB {
     }
     
     /**
-     * @see ManagerDB
+     * @see atsilo.storage.ManagerDB#update(List, List, List, List)
      */
     public boolean update(List<String> nomeAttributi,List<String> valoreAttributi, List<String> chiavi, List<String> valoriChiavi) {
 
@@ -333,7 +330,7 @@ public class Tabella implements ManagerDB {
  
 
     /**
-     * @see ManagerDB
+     *@see atsilo.storage.ManagerDB#rimuovi(List, List)
      * 
      */
     public boolean rimuovi(List<String> chiavi, List<String> valChiavi) {
@@ -386,10 +383,7 @@ public class Tabella implements ManagerDB {
     }
     
     /**
-     * Esegue una query specifica passata in input
-     * 
-     * @param query Query da eseguire sul database
-     * @return Lista con i risultati della query
+     * @see atsilo.storage.ManagerDB#eseguiQuerySpecifica(String)
      */
     public ArrayList<ArrayList<String>> eseguiQuerySpecifica(String query) {
             ArrayList<ArrayList<String>> risultato = null;
@@ -427,4 +421,5 @@ public class Tabella implements ManagerDB {
                 return false;
         }
     }
+
 }

@@ -19,13 +19,13 @@ public interface ManagerDB {
     public String getNomeTabella();
 
     /**
-     * Setta il nome della tabella
-     * @param newNome nuovo nome della tabella
+     * Setta la tabella su cui eseguire le operazioni
+     * @param newNome nuovo nome della tabella su cui eseguire le operazioni
      */
     public void setNomeTabella(String newNome);
    
     /**
-     *
+     * Restituisce una lista con il nome di tutti gli attributi
      * @return
      */
     public List<String> getNomiAttributi();
@@ -38,13 +38,13 @@ public interface ManagerDB {
     public List<String> getTipoColonne(List<String> nomeAttributi);
     
     /**
-     *
-     * @return
+     * Restituisce una lista con tutte le chiavi primarie
+     * @return lista con chiavi primarie
      */
     public ArrayList<String> getChiaviPrimarie();
     
     /**
-     * Inserisci dei valori nella tabella
+     * Inserisci i valori specificati nella tabella.Devono essere inseriti i valori per tutti i campi
      * @param  valori da inserire nella tabella
      * @return true in caso di inserimento riuscito
      *         false altrimenti
@@ -54,9 +54,9 @@ public interface ManagerDB {
      /**
       * Esegue una selezione di tutte le tuple che soddisfano la condidione "where" specificata dagli attributi passati in input
       * 
-      * @param nomeAttributo Lista di attributi su cui effettuare la selezione delle tuple
-      * @param nomeAttributi Lista di attributi su cui effettuare la ricerca
-      * @param valoriAttributi Lista dei valori dei corrispondenti attributi
+      * @param nomeAttributo Lista di attributi della select (null equivale a *)
+      * @param nomeAttributi Lista di attributi su cui effettuare la ricerca (where) 
+      * @param valoriAttributi Lista dei valori dei corrispondenti attributi (where)
       * 
       * @return Restituisce la matrice delle tuple ottenute dalla selezione
       */
@@ -72,15 +72,22 @@ public interface ManagerDB {
      * 
      * @return Restituisce true se la modifica si verifica correttamente, false altrimenti
      */
-    public boolean update(ArrayList<String> nomeAttributi,ArrayList<String> valoreAttributi, ArrayList<String> chiavi, ArrayList<String> valoriChiavi);
+    public boolean update(List<String> nomeAttributi,List<String> valoreAttributi, List<String> chiavi, List<String> valoriChiavi);
     
     /**
-     * 
+     * Rimuove dalla tabella i beans specificati dal valore dei loro attributi
+     * @param chiavi lista delle chiavi dell'attributo da eliminare (condizione where)
+     * @param valChiavi  valore delle chiavi dell'attributo da eliminare (condizione where)
+     * @return true in caso di successo
+     *         falso altrimenti
      */
-    public boolean rimuovi(ArrayList<String> chiavi, ArrayList<String> valChiavi) ;
+    public boolean rimuovi(List<String> chiavi,List<String> valChiavi) ;
     
     /**
+     * Esegue una query specifica passata in input
      * 
+     * @param query Query da eseguire sul database
+     * @return Lista con i risultati della query
      */
-    public ArrayList<ArrayList<String>> eseguiQuerySpecifica(String query);
+    public List<ArrayList<String>> eseguiQuerySpecifica(String query);
 }

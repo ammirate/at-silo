@@ -59,9 +59,24 @@ public abstract class DBBeans<B extends Beans> {
      * @param RealBeans beans da inserire nel database
      * @return true in caso di inserimento riuscito
      *         false altrimenti
+     * @throws IllegalAccessException 
+     * @throws IllegalArgumentException 
      */
-    public boolean inserisci(B realBeans) throws SQLException
+    public boolean inserisci(B realBeans) throws IllegalArgumentException, IllegalAccessException
     {
+        B temp=realBeans;
+        ArrayList<String> valori=new ArrayList<String>();
+        HashMap<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
+        Set<String> variabili = toReturn.keySet();//ottengo un Set delle variabili
+        Iterator<String> iterator_variabili = variabili.iterator();
+        while( iterator_variabili.hasNext()){
+            String contenuto_variabile = (String) getFieldFromBeam(temp, iterator_variabili.next());
+            valori.add(contenuto_variabile);
+        }
+
+        if (tabella.insert(valori))
+            return true;
+        return false;
         
     }
     
@@ -102,24 +117,59 @@ public abstract class DBBeans<B extends Beans> {
      * @param RealBeans beans presente nel databse
      * @param NewRealBeans nuovo beans che sostituirà il suo corrispondente  nel database
      * @return
+     * @throws IllegalAccessException 
+     * @throws IllegalArgumentException 
      */
-    public abstract boolean replace(B realBeans,B newRealBeans) throws SQLException;
+    public  boolean replace(B realBeans,B newRealBeans) throws IllegalArgumentException, IllegalAccessException{
+        B temp_old = realBeans;
+        B temp_new=newRealBeans;
+        boolean cancAvvenuta=false;
+        boolean insAvvenuto=false;
+        if (delete(realBeans))
+            cancAvvenuta=true;
+        if (inserisci(newRealBeans))
+            insAvvenuto=true;
+        if (cancAvvenuta && insAvvenuto)
+            return true;
+        if (!cancAvvenuta)
+            inserisci(temp_old);//inserisco di nuovo l'oggetto eliminato
+        LOG.log(Level.SEVERE, "Replace non andato a buon fine");
+      return false;
+        
+    }
     
     /**
      * Cancella una beans dal database
-     * @param RealBeans
-     * @return
-     */
-    public abstract boolean delete(B realBeans) throws SQLException ;
-    
-    /**
-     * Controlla se un bean è presente nella tabella del database
-     * @param realBeans bean di cui si vuole conoscere se è presente nella tabella
-     * @return true in caso di bean presente
+     * @param RealBeans bean da cancellare
+     * @return true in caso di successo
      *         false altrimenti
+     * @throws IllegalAccessException 
+     * @throws IllegalArgumentException 
      */
-    public abstract boolean ifInTable(B realBeans);
+    public  boolean delete(B realBeans) throws  IllegalArgumentException, IllegalAccessException{
+        B temp=realBeans;
+        ArrayList<String> contenuto_chiavi=new ArrayList<String>();
+        HashMap<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
+        Set<String> variabili = toReturn.keySet();//ottengo un Set delle variabili
+        Iterator<String> iterator_variabili = variabili.iterator();
+        Iterator<String> nome_variabili_chiave = getKeyFields().iterator();
+        //nei seguenti while confronto i nomi di tutte le variabile con quelle chiave e quando 
+        //corrisponde prendo il valore della variabile e lo aggiungo a contenuto_chiavi
+        while( iterator_variabili.hasNext()){//scorro tutti i nomi di variabili
+            String valore_variabile_corrispondente = null;
+            while (nome_variabili_chiave.hasNext()){//scorro tutti i nomi di variabili chiave
+                String nome_variabile_attuale = iterator_variabili.next();
+                if ( nome_variabile_attuale.equals(nome_variabili_chiave.next()))//se nome variabile attuale == nome variabile chiave
+                    valore_variabile_corrispondente =  (String) getFieldFromBeam(temp, nome_variabile_attuale);
+            }
+            contenuto_chiavi.add(valore_variabile_corrispondente);//aggiungo il contenuto di una variabile chiave
+        }
+       if( tabella.rimuovi(getKeyFields(), contenuto_chiavi))
+            return true;
+        return false;
         
+    }
+    
     /**
      * Restituisce il database con la relativa connessione
      * @return oggetto database con relativa connessione
