@@ -1,8 +1,16 @@
 package atsilo.storage;
+import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+
 import atsilo.entity.Beans;
 
 /**
@@ -52,7 +60,42 @@ public abstract class DBBeans<B extends Beans> {
      * @return true in caso di inserimento riuscito
      *         false altrimenti
      */
-    public abstract boolean inserisci(B realBeans) throws SQLException;
+    public boolean inserisci(B realBeans) throws SQLException
+    {
+        
+    }
+    
+    /**
+     * Metodo che legge un campo di nome nomeCampo da un oggetto Java realBean
+     * @param realBean
+     * @param nomeCampo
+     * @return
+     * @throws IllegalArgumentException
+     * @throws IllegalAccessException
+     */
+    protected Object getFieldFromBeam(B realBean, String nomeCampo) throws IllegalArgumentException, IllegalAccessException
+    {
+        Class beanClass = realBean.getClass();
+        Field field=null;
+        try {
+            field = beanClass.getDeclaredField(nomeCampo);
+            if(field!=null)
+            {
+                field.setAccessible(true);
+                return field.get(realBean);
+            }
+        } catch (NoSuchFieldException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Campo ricercato non conosciuto", e);
+        } catch (SecurityException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Operazione non consentita", e);
+        }
+        /**
+         * Solo se il campo non esiste o l'operazione non è consentita viene restituito null.
+         */
+        return null;
+    }
     
     /**
      * Sostituisce un beans con un nuovo beans.
@@ -99,4 +142,5 @@ public abstract class DBBeans<B extends Beans> {
     public abstract List<String> getKeyFields();
     
 
+    private static Logger LOG = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 }
