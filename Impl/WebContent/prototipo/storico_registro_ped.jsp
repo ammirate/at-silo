@@ -11,7 +11,7 @@
 <%@
 include file="sidebar_ped.jsp"
  %>
-<br>
+ <br>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
 <table width="100%">
 <tbody><tr>
@@ -24,7 +24,21 @@ include file="sidebar_ped.jsp"
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
+<div>
+					<form action='' method=POST >
+				<div id=datachooser2 onclick="allargaDiv('datachooser1')" onmouseover="stringiDiv('datachooser1')" style=" left: 80%; position: absolute; height: 50px; ">
+				Data Fine: 	<input type=text name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+				</div>
+				<div id=datachooser1  onclick="allargaDiv('datachooser1')" onmouseover="stringiDiv('datachooser1')" style=" height: 50px; width: 100px;">
+				Data Inizio: <input type=text name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+				</div>
 
+				<br>
+				<br>
+				<p align=center><input type=submit value="Genera Report"></p>
+				<br><br>
+			</form>				
+		</div>
 
 <p><strong><br />
 </strong></p>
@@ -60,7 +74,7 @@ include file="sidebar_ped.jsp"
 </td><td class="fasciadxvariabile"></td>
 </tr>
 <tr>
-<td class="bottom" width="209">&nbsp;2012 Â© Unisa</td><td align="right" class="bottom"></td>
+<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
 </tr>
 </tbody></table>
 
