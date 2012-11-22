@@ -2,6 +2,7 @@ package atsilo.storage;
 import atsilo.entity.Account;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -74,8 +75,24 @@ public class DBAccount extends DBBeans<Account> {
     public boolean ifInTable(Account realBeans) {
         
     }
+    
+    public HashMap<String,String> getMappingFields()
+    {
+        HashMap<String,String> toReturn = new HashMap<String,String>();
+        toReturn.put("userName", "userName");
+        toReturn.put("password","password");
+        return toReturn;
+    }
+    
+    public List<String> getKeyFields()
+    {
+        ArrayList<String> toReturn = new ArrayList<String>();
+        toReturn.add("userName");
+        
+        return toReturn;
+    }
 
-
+    
    
     }
 
