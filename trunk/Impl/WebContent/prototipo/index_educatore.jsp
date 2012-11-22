@@ -81,14 +81,14 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Registro</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="attivita_odierna.html">Attività Odierna</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="attivita_odierna.jsp">Attività Odierna</a></td>
 </tr>
 <tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="registro_presenze.html">Registro Presenze</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="registro_presenze.htmljsp">Registro Presenze</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_registro.html">Storico Registro</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_registro.jsp">Storico Registro</a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
