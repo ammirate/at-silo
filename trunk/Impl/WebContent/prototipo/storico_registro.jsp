@@ -2,8 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Attivita' odierna</title>
+<title>Storico Registro</title>
 <!-- Contents -->
+<script type="text/javascript" src="calendar.js"></script>
+	<script type="text/javascript">
+		function allargaDiv(nome) {
+			var mydiv = document.getElementById(nome);
+			mydiv.style.height="300px";
+		}
+		function stringiDiv(nome) {
+			var mydiv = document.getElementById(nome);
+			mydiv.style.height="50px";
+		}
+		
+		
+
+	</script>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta http-equiv="Content-Language" content="it" />
 	<meta name="description" content="Sistema @silo per la gestione Asilo Nido Aziendale "Roberto Mazzetti - Università Degli Studi Di Salerno/>	
@@ -52,6 +66,8 @@
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="top_menu_sx">
+
+
 <div class="user">
 
 <p></p>
@@ -117,7 +133,21 @@
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
+<div>
+					<form action='' method=POST >
+				<div id=datachooser2 onclick="allargaDiv('datachooser1')" onmouseover="stringiDiv('datachooser1')" style=" left: 80%; position: absolute; height: 50px; ">
+				Data Fine: 	<input type=text name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+				</div>
+				<div id=datachooser1  onclick="allargaDiv('datachooser1')" onmouseover="stringiDiv('datachooser1')" style=" height: 50px; width: 100px;">
+				Data Inizio: <input type=text name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+				</div>
 
+				<br>
+				<br>
+				<p align=center><input type=submit value="Genera Report"></p>
+				<br><br>
+			</form>				
+		</div>
 
 <p><strong><br />
 </strong></p>
