@@ -184,6 +184,29 @@ public class Database {
 		return resultSet;
 	}
 	
+	/** Esegue qualunqe tipo di query
+	  * @param query da eseguire
+	  * @return resultSet del risultato della query
+	  */
+	    public ResultSet eseguiQuerySpecifica(String query) {
+	        try{
+                    statement = connection.createStatement();
+                    resultSet=statement.executeQuery(query);
+            }catch(SQLException e){
+                    logger.warning("SQL Error:Database.eseguiQuerySpecifica: query non andata a buon fine");
+                    while (e!=null){
+                            logger.severe("SQL EXCEPTION");
+                            logger.info("State: "+e.getSQLState());
+                            logger.info("Message: "+e.getMessage());
+                            logger.info("Error: "+e.getErrorCode());
+                            e = e.getNextException();
+                    }
+                    return null;
+            }
+            return resultSet;
+	        
+	    }
+	
 	/**
 	 * Ottiene le chiavi primarie di una tabella presente nel database
 	 * 

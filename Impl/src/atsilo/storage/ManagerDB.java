@@ -41,7 +41,7 @@ public interface ManagerDB {
      *
      * @return
      */
-    public ArrayList<String> getChiavi();
+    public ArrayList<String> getChiaviPrimarie();
     
     /**
      * Inserisci dei valori nella tabella
@@ -52,26 +52,35 @@ public interface ManagerDB {
     public boolean insert(List<String> valori);
 
      /**
-      * Esegue una selezione di tutte le tuple che soddisfano le condidioni specificate dagli attributi passati in input
+      * Esegue una selezione di tutte le tuple che soddisfano la condidione "where" specificata dagli attributi passati in input
       * 
-      * @param Lista di attributi su cui effettuare la selezione delle tuple
-      * @param Lista di attributi su cui effettuare la ricerca
-      * @param Lista dei valori dei corrispondenti attributi
+      * @param nomeAttributo Lista di attributi su cui effettuare la selezione delle tuple
+      * @param nomeAttributi Lista di attributi su cui effettuare la ricerca
+      * @param valoriAttributi Lista dei valori dei corrispondenti attributi
       * 
       * @return Restituisce la matrice delle tuple ottenute dalla selezione
       */
     public List<ArrayList<String>> selezione(List<String> nomeAttributo ,List<String> nomiAttributo, List<String> valoriAttributi);
 
     /**
-     *
-     * @param valori
-     * @param campi
-     * @return
+     * Modifica una tupla di valori nella tabella
+     * 
+     * @param nomeAttributi Nomi degli attributi da aggiornare
+     * @param valoriAttributi Valori da inserire nella tabella
+     * @param chiavi attriubuti che identificano la tupla da modificare
+     * @param valoriChiavi Valori degli attributi che identificano la tupla da modificare
+     * 
+     * @return Restituisce true se la modifica si verifica correttamente, false altrimenti
      */
-    public boolean update(List<String> valori, List<String> campi);
+    public boolean update(ArrayList<String> nomeAttributi,ArrayList<String> valoreAttributi, ArrayList<String> chiavi, ArrayList<String> valoriChiavi);
     
     /**
      * 
      */
-    public Boolean rimuovi(List<String> chiavi,List<String> valChiavi);
+    public boolean rimuovi(ArrayList<String> chiavi, ArrayList<String> valChiavi) ;
+    
+    /**
+     * 
+     */
+    public ArrayList<ArrayList<String>> eseguiQuerySpecifica(String query);
 }
