@@ -114,7 +114,6 @@ public class Database {
 	          *         false altrimenti
 	          */
 	            public boolean eseguiQueryB(String query) {
-	                boolean result;
 	                try{
 	                    preparedStatement=connection.prepareStatement(query);
 	                    preparedStatement.execute();
