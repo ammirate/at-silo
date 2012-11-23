@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-22T17:47:30.61</meta:creation-date><dc:date>2012-11-23T14:39:07.76</dc:date><meta:editing-duration>PT10M58S</meta:editing-duration><meta:editing-cycles>11</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="23" meta:word-count="163" meta:character-count="1137" meta:non-whitespace-character-count="1004"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-22T17:47:30.61</meta:creation-date><dc:date>2012-11-23T16:31:37.65</dc:date><meta:editing-duration>PT10M58S</meta:editing-duration><meta:editing-cycles>12</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="22" meta:word-count="147" meta:character-count="1044" meta:non-whitespace-character-count="925"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="ViewAreaTop" config:type="int">2491</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">40809</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">16686</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">40312</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">15503</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">19636</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">13014</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">17059</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">11553</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
      <config:config-item config:name="VisibleTop" config:type="int">2491</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">40808</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">19175</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">40310</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">17992</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2067102</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2187651</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -372,61 +372,58 @@
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="0015afef"/>
   </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:text-properties officeooo:rsid="001bd25c" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:text-properties officeooo:rsid="0015afef" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:text-properties officeooo:rsid="0015ec24" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties officeooo:rsid="000e27c0" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Azione_20_attore">
-   <style:text-properties officeooo:rsid="0012f53f" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Azione_20_attore">
-   <style:text-properties officeooo:rsid="001bd25c" officeooo:paragraph-rsid="001bd25c"/>
-  </style:style>
-  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="">
-   <style:text-properties officeooo:rsid="0015ec24" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Azione_20_attore">
-   <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="">
-   <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Azione_20_attore">
-   <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="001f8a9e"/>
   </style:style>
-  <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="">
-   <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="0015afef"/>
-  </style:style>
-  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="">
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:rsid="001bd25c" officeooo:paragraph-rsid="0015afef"/>
   </style:style>
-  <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="">
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:rsid="0015afef" officeooo:paragraph-rsid="0015afef"/>
   </style:style>
-  <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
   </style:style>
-  <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="">
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:rsid="0015ec24" officeooo:paragraph-rsid="0015afef"/>
   </style:style>
-  <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
+   <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:text-properties officeooo:rsid="000e27c0" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+   <style:text-properties officeooo:rsid="0012f53f" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+   <style:text-properties officeooo:rsid="001bd25c" officeooo:paragraph-rsid="001bd25c"/>
+  </style:style>
+  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="">
+   <style:text-properties officeooo:rsid="0015ec24" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+   <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="">
+   <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+   <style:text-properties officeooo:rsid="001f8a9e" officeooo:paragraph-rsid="001f8a9e"/>
+  </style:style>
+  <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="">
+   <style:text-properties officeooo:rsid="001bd25c" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="">
+   <style:text-properties officeooo:rsid="0015afef" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
+   <style:text-properties officeooo:rsid="000cf989" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="">
+   <style:text-properties officeooo:rsid="0015ec24" officeooo:paragraph-rsid="0015afef"/>
+  </style:style>
+  <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:rsid="0015e382" officeooo:paragraph-rsid="0015afef"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
@@ -482,6 +479,9 @@
   </style:style>
   <style:style style:name="T18" style:family="text">
    <style:text-properties officeooo:rsid="001f8a9e"/>
+  </style:style>
+  <style:style style:name="T19" style:family="text">
+   <style:text-properties officeooo:rsid="00216183"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" style:num-suffix="." style:num-format="I">
@@ -595,45 +595,39 @@
       <text:p text:style-name="P4">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
-      <text:list xml:id="list34478094" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list36449868" text:style-name="Numerazione_20_UC">
        <text:list-item>
         <text:p text:style-name="P13">L<text:span text:style-name="T18">o psicopedagogo</text:span> accede alla<text:span text:style-name="T3"> </text:span><text:span text:style-name="T16">sezione Programma Educativo Annuale</text:span></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P32"/>
-      <text:list xml:id="list34523974" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
+      <text:p text:style-name="P31"/>
+      <text:list xml:id="list36448266" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
        <text:list-item>
         <text:p text:style-name="P14">Lo psicopedagogo seleziona la funzionalità di Inserimento Nuovo Programma educativo annuale</text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P33"/>
-      <text:list xml:id="list34535130" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
+      <text:p text:style-name="P32"/>
+      <text:list xml:id="list36453665" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P20">Il s<text:span text:style-name="T4">istema mostra </text:span><text:span text:style-name="T5">una finestra di dialogo per la selezione del file dal </text:span><text:span text:style-name="T13">computer dell&apos;utente (include </text:span><text:span text:style-name="T6">Allega File</text:span><text:span text:style-name="T7">)</text:span></text:p>
+        <text:p text:style-name="P21">Il s<text:span text:style-name="T4">istema mostra </text:span><text:span text:style-name="T5">una finestra di dialogo per la selezione del file dal </text:span><text:span text:style-name="T13">computer dell&apos;utente (include </text:span><text:span text:style-name="T6">Allega File</text:span><text:span text:style-name="T7">)</text:span></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P26"/>
-      <text:list xml:id="list34534384" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
+      <text:p text:style-name="P27"/>
+      <text:list xml:id="list36454187" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
        <text:list-item>
         <text:p text:style-name="P15"><text:span text:style-name="T4">L</text:span><text:span text:style-name="T18">o psicopedagogo </text:span><text:span text:style-name="T5">seleziona il file Programma Educativo </text:span><text:span text:style-name="T15">Annuale </text:span><text:span text:style-name="T5">dal file system</text:span></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P35"/>
-      <text:list xml:id="list34513065" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
+      <text:p text:style-name="P34"/>
+      <text:list xml:id="list36451601" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P30"><text:span text:style-name="T18">Lo psicopedagogo indica se il Programma Educativo Annuale appena inserito è una bozza o no.</text:span></text:p>
+        <text:p text:style-name="P30">L<text:span text:style-name="T19">o p</text:span>sicopedagogo<text:span text:style-name="T3"> sottomette il programma educativo</text:span></text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P23">Il sistema memorizza il programma educativo</text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P31"><text:span text:style-name="T18"/></text:p>
-      <text:list xml:id="list34538560" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
-       <text:list-item>
-        <text:p text:style-name="P17">L<text:span text:style-name="T18">o psicopedagogo</text:span> sottomette il programma educativo</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P22">Il sistema memorizza il programma educativo</text:p>
-       </text:list-item>
-      </text:list>
-      <text:p text:style-name="P28"/>
+      <text:p text:style-name="P29"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella1.6">
@@ -650,9 +644,9 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.B2" office:value-type="string">
       <text:p text:style-name="P9"/>
-      <text:list xml:id="list34471105" text:style-name="L1">
+      <text:list xml:id="list36448331" text:style-name="L1">
        <text:list-item>
-        <text:p text:style-name="P23">Nel caso di un errore utente, il sistema mostra all’utente un messaggio di errore che <text:span text:style-name="T10">ne indica la causa.</text:span></text:p>
+        <text:p text:style-name="P24">Nel caso di un errore utente, il sistema mostra all’utente un messaggio di errore che <text:span text:style-name="T10">ne indica la causa.</text:span></text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
