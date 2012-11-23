@@ -1,0 +1,204 @@
+<mockup version="1.0" skin="sketch" measuredW="1859" measuredH="1420" mockupW="1799" mockupH="1400">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="60" y="20" w="1119" h="624" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@SiLo%20-%20Visualizzazione%20Eventi%0Ahttp%3A//www.unisa.it/vivere_il_campus/asilo/</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="75" y="97" w="232" h="132" measuredW="771" measuredH="485" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Canvas" x="315" y="262" w="824" h="328" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::ButtonBar" x="315" y="240" w="825" h="29" measuredW="453" measuredH="29" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Programma%20Educativo%20in%20vigore%2C%20Programma%20Educativo%20da%20redarre</text>
+      </controlProperties>
+    </control>
+    <control controlID="102" controlTypeID="com.balsamiq.mockups::Title" x="481" y="138" w="466" h="-1" measuredW="539" measuredH="50" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Programma%20Educativo%20Annuale</text>
+      </controlProperties>
+    </control>
+    <control controlID="103" controlTypeID="com.balsamiq.mockups::List" x="60" y="262" w="208" h="150" measuredW="100" measuredH="126" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>2</selectedIndex>
+        <text>%20%0A...%0AProgramma%20Educativo%0A...</text>
+      </controlProperties>
+    </control>
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::Arrow" x="633" y="156" w="438" h="94" measuredW="150" measuredH="100" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <curvature>-1</curvature>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::StickyNote" x="1071" y="97" w="303" h="121" measuredW="109" measuredH="123" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>In%20questa%20scheda%20il%20responsabile%0Aprogramma%20educativo%20visualizza%20il%20programma%20%0Aeducativo%20attualmente%20in%20vigore%2C%20che%20%E8%20visibile%20da%20tutti%20gli%20utenti%20del%20sistema.%20%28Vedi%20Mockups%2020%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="107" controlTypeID="com.balsamiq.mockups::SubTitle" x="329" y="281" w="-1" h="-1" measuredW="138" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Temine%20consegna%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="110" controlTypeID="com.balsamiq.mockups::Label" x="471" y="282" w="-1" h="-1" measuredW="76" measuredH="21" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>27/09/2013</text>
+      </controlProperties>
+    </control>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::SubTitle" x="329" y="338" w="-1" h="-1" measuredW="175" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Consegna%20come%20bozza%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::Label" x="330" y="362" w="-1" h="-1" measuredW="180" measuredH="21" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>right</align>
+        <color>0</color>
+        <state>up</state>
+        <text>Nessun%20file%20ancora%20consegnato</text>
+        <textOrientation>right</textOrientation>
+      </controlProperties>
+    </control>
+    <control controlID="113" controlTypeID="com.balsamiq.mockups::Button" x="455" y="432" w="-1" h="-1" measuredW="81" measuredH="27" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Consegna</text>
+      </controlProperties>
+    </control>
+    <control controlID="114" controlTypeID="com.balsamiq.mockups::Arrow" x="1051" y="247" w="176" h="61" measuredW="150" measuredH="100" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>1</backgroundAlpha>
+        <curvature>1</curvature>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="115" controlTypeID="com.balsamiq.mockups::StickyNote" x="1066" y="290" w="303" h="121" measuredW="109" measuredH="123" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%20%0ASchermata%20visualizzata%20dallo%20psicopedagogo%20quando%20ancora%20non%20ha%20inserito%20alcun%20file%20nel%20sistema%2C%20neanche%20come%20bozza.</text>
+      </controlProperties>
+    </control>
+    <control controlID="144" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="607" y="796" w="1119" h="624" measuredW="450" measuredH="400" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@SiLo%20-%20Visualizzazione%20Eventi%0Ahttp%3A//www.unisa.it/vivere_il_campus/asilo/</text>
+      </controlProperties>
+    </control>
+    <control controlID="146" controlTypeID="com.balsamiq.mockups::Canvas" x="862" y="1038" w="824" h="328" measuredW="100" measuredH="70" zOrder="16" locked="false" isInGroup="-1"/>
+    <control controlID="147" controlTypeID="com.balsamiq.mockups::ButtonBar" x="862" y="1016" w="825" h="29" measuredW="453" measuredH="29" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>1</selectedIndex>
+        <text>Programma%20Educativo%20in%20vigore%2C%20Programma%20Educativo%20da%20redarre</text>
+      </controlProperties>
+    </control>
+    <control controlID="148" controlTypeID="com.balsamiq.mockups::Title" x="1028" y="914" w="466" h="-1" measuredW="539" measuredH="50" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Programma%20Educativo%20Annuale</text>
+      </controlProperties>
+    </control>
+    <control controlID="149" controlTypeID="com.balsamiq.mockups::List" x="607" y="1038" w="208" h="150" measuredW="100" measuredH="126" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>2</selectedIndex>
+        <text>%20%0A...%0AProgramma%20Educativo%0A...</text>
+      </controlProperties>
+    </control>
+    <control controlID="152" controlTypeID="com.balsamiq.mockups::SubTitle" x="876" y="1057" w="-1" h="-1" measuredW="138" measuredH="24" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Temine%20consegna%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="153" controlTypeID="com.balsamiq.mockups::Label" x="1018" y="1058" w="-1" h="-1" measuredW="76" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>27/09/2013</text>
+      </controlProperties>
+    </control>
+    <control controlID="154" controlTypeID="com.balsamiq.mockups::SubTitle" x="876" y="1114" w="-1" h="-1" measuredW="175" measuredH="24" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <size>16</size>
+        <text>Consegna%20come%20bozza%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="155" controlTypeID="com.balsamiq.mockups::Label" x="877" y="1138" w="-1" h="-1" measuredW="216" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <align>right</align>
+        <color>2848996</color>
+        <state>up</state>
+        <text>ProgrammaEducativo2012_2013.pdf</text>
+        <textOrientation>right</textOrientation>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="156" controlTypeID="com.balsamiq.mockups::Button" x="1109" y="1135" w="-1" h="-1" measuredW="84" measuredH="27" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sottometti</text>
+      </controlProperties>
+    </control>
+    <control controlID="159" controlTypeID="com.balsamiq.mockups::Arrow" x="519" y="444" w="418" h="326" measuredW="150" measuredH="100" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <curvature>1</curvature>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="160" controlTypeID="com.balsamiq.mockups::StickyNote" x="622" y="508" w="303" h="151" measuredW="109" measuredH="123" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Quando%20clicca%20su%20consegna%20il%20sistema%20visualizza%20una%20form%0Aattraverso%20la%20quale%20lo%20psicopedagogo%20pu%F2%20scegliere%20un%20file%20dal%20file%20system.%0ALa%20prima%20volta%20che%20inserisce%20il%20file%20il%20programma%20educativo%20%E8%20salvato%20come%20bozzza.</text>
+      </controlProperties>
+    </control>
+    <control controlID="161" controlTypeID="com.balsamiq.mockups::Button" x="1208" y="1135" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="162" controlTypeID="com.balsamiq.mockups::Arrow" x="1139" y="1153" w="193" h="73" measuredW="150" measuredH="100" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <curvature>1</curvature>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="163" controlTypeID="com.balsamiq.mockups::StickyNote" x="1185" y="1203" w="303" h="121" measuredW="109" measuredH="123" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Quando%20lo%20psicopedagogo%20clicca%20su%20sottometti%2C%20il%20programma%20educativo%20appena%20inserito%0A%E8%20visibile%20anche%20al%20responsabile%20scientifico%20e%20al%20delegato%20rettore</text>
+      </controlProperties>
+    </control>
+    <control controlID="164" controlTypeID="com.balsamiq.mockups::Button" x="1289" y="1135" w="-1" h="-1" measuredW="111" measuredH="27" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Visualizza%20Note</text>
+      </controlProperties>
+    </control>
+    <control controlID="165" controlTypeID="com.balsamiq.mockups::Image" x="611" y="891" w="232" h="132" measuredW="771" measuredH="485" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>../logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="166" controlTypeID="com.balsamiq.mockups::StickyNote" x="1556" y="1009" w="303" h="121" measuredW="109" measuredH="123" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Le%20note%20possono%20essere%20visualizzate%20dal%20Responsabile%0Aprogramma%20Educativo%2C%20per%20dettagli%20vedere%20Mockups%2022</text>
+      </controlProperties>
+    </control>
+    <control controlID="167" controlTypeID="com.balsamiq.mockups::Arrow" x="1363" y="1072" w="193" h="73" measuredW="150" measuredH="100" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <curvature>1</curvature>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
