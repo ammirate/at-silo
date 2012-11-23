@@ -355,4 +355,15 @@
 EDUCATIVO ANNUALE </panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>664</x>
+      <y>480</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Gestione NOTIFICHE</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>
