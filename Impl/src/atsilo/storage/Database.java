@@ -58,7 +58,6 @@ public class Database {
 	 */
 	public boolean chiudiConnessione(){
 		try{
-			resultSet = null;
 			connection.close();
 		}catch(SQLException e){
 			logger.severe("Errore durante la disconnessione");
@@ -82,123 +81,20 @@ public class Database {
 		return !connection.isClosed();
 	}
 	
-	/**
-     * Esegue una query di inserimento nel db
-     *
-     * @param query Stringa che rappresenta la query che deve essere eseguita
-     * @return  true se la query è stata eseguita con successo
-     *          false altrimenti
-     */
-	public boolean insertDB(String query){
-		try{
-		        preparedStatement=connection.prepareStatement(query);
-		        preparedStatement.execute();
-		        preparedStatement.close();
-		}catch(SQLException e){
-			logger.warning("SQL Error. Inserimento record non riuscito");
-			while (e!=null){
-				logger.severe("SQL EXCEPTION");
-				logger.info("State: "+e.getSQLState());
-				logger.info("Message: "+e.getMessage());
-				logger.info("Error: "+e.getErrorCode());
-				e = e.getNextException();
-			}
-			return false;
-		}
-		return true;
-	}
-	
-	/**
-     * Aggiorna una tupla presente nel database
-     *
-     * @param query Stringa che rappresenta la query che deve essere eseguita
-     * @return true se la query è stata eseguita con successo
-     *         false altrimenti
-     */
-	public boolean updateDB(String query){
-		try{
-		        preparedStatement=connection.prepareStatement(query);
-		        preparedStatement.execute();
-                        preparedStatement.close();
-		}catch(SQLException e){
-			logger.warning("SQL Error. Aggiornamento non riuscito");
-			while (e!=null){
-				logger.severe("SQL EXCEPTION");
-				logger.info("State: "+e.getSQLState());
-				logger.info("Message: "+e.getMessage());
-				logger.info("Error: "+e.getErrorCode());
-				e = e.getNextException();
-			}
-			return false;
-		}
-		return true;
-	}
-	
-	/**
-     * Effettua l'eliminazione di una tupla di valori dal database 
-     *
-     * @param query Stringa che viene eseguita sul database
-     * @return  true se la cancellazione è avvenuta con successo o la query non ha dato errori
-     *          false altrimenti
-     */
-	public boolean deleteDB(String query){
-		try{
-		        preparedStatement=connection.prepareStatement(query);
-		        preparedStatement.execute();
-		        preparedStatement.close();
-			return true;
-		}catch(SQLException e){
-			logger.warning("SQL Error. Cancellazione non riuscita");
-			while (e!=null){
-				logger.severe("SQL EXCEPTION");
-				logger.info("State: "+e.getSQLState());
-				logger.info("Message: "+e.getMessage());
-				logger.info("Error: "+e.getErrorCode());
-				
-			}
-			return false;
-		}
-	}
-	
-	/**
-	 * Effettua una selezione dati dal database tramite query
-	 * 
-	 * @param  query Stringa che deve essere eseguita
-	 * @return ResultSet contenente l'insieme dei valori della select
-	 */
-	public ResultSet selectDB(String query){
-	    ResultSet result;
-		try{
-		    preparedStatement=connection.prepareStatement(query);
-                    preparedStatement.execute();
-                    result= preparedStatement.getResultSet();
-                    preparedStatement.close(); 
-		}catch(SQLException e){
-			logger.warning("SQL Error. Visualizzazione non riuscito");
-			while (e!=null){
-				logger.severe("SQL EXCEPTION");
-				logger.info("State: "+e.getSQLState());
-				logger.info("Message: "+e.getMessage());
-				logger.info("Error: "+e.getErrorCode());
-				e = e.getNextException();
-			}
-			return null;
-		}
-		
-        return result;
-	}
-	
-	/** Esegue qualunqe tipo di query
+	/** Esegue qualunqe tipo di query sul database restituendo un risultato ResulSet
 	  * @param query da eseguire
-	  * @return resultSet del risultato della query
+	  * @return resultSet contenente il risulto della query in caso che la query lo preveda,
+	  *                   null altrimenti
 	  */
-	    public ResultSet eseguiQuerySpecifica(String query) {
-	        try{
-	            preparedStatement=connection.prepareStatement(query);
-                    preparedStatement.execute();
-                    preparedStatement.close();
+	    public ResultSet eseguiQueryRS(String query) {
+	    	ResultSet result;
+            try{
+                preparedStatement=connection.prepareStatement(query);
+                preparedStatement.execute();
+                result= preparedStatement.getResultSet();
+                preparedStatement.close(); 
             }catch(SQLException e){
-                    logger.warning("SQL Error:Database.eseguiQuerySpecifica: query non andata a buon fine");
+                    logger.warning("SQL Error:Database.eseguiQuerySpecifica: Query non andata a buon fine");
                     while (e!=null){
                             logger.severe("SQL EXCEPTION");
                             logger.info("State: "+e.getSQLState());
@@ -208,9 +104,35 @@ public class Database {
                     }
                     return null;
             }
-            return resultSet;
+            return result;
 	        
 	    }
+	    
+	    /** Esegue qualunqe tipo di query sul database 
+	          * @param query da eseguire
+	          * @return true se la query è stata eseguite correttamente
+	          *         false altrimenti
+	          */
+	            public boolean eseguiQueryB(String query) {
+	                boolean result;
+	                try{
+	                    preparedStatement=connection.prepareStatement(query);
+	                    preparedStatement.execute();
+	                    preparedStatement.close();
+	            }catch(SQLException e){
+	                    logger.warning("SQL Error:Database.eseguiQuerySpecifica: Query non andata a buon fine");
+	                    while (e!=null){
+	                            logger.severe("SQL EXCEPTION");
+	                            logger.info("State: "+e.getSQLState());
+	                            logger.info("Message: "+e.getMessage());
+	                            logger.info("Error: "+e.getErrorCode());
+	                            e = e.getNextException();
+	                    }
+	                    return false;
+	            }
+	            return true;
+	                
+	            }
 	
 	/**
 	 * Ottiene le chiavi primarie di una tabella presente nel database
@@ -240,6 +162,5 @@ public class Database {
 	private final String url="jdbc:mysql://localhost/atsilodb?user=root&password=pass";
         static final String driver = "com.mysql.jdbc.Driver";
 	private PreparedStatement preparedStatement;
-	private ResultSet resultSet;
 	private static Logger logger = Logger.getLogger("global");
 }
