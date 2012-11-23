@@ -4,7 +4,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>192</x>
+      <x>200</x>
       <y>216</y>
       <w>680</w>
       <h>392</h>
@@ -16,7 +16,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>336</x>
+      <x>344</x>
       <y>0</y>
       <w>408</w>
       <h>144</h>
@@ -28,7 +28,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>568</x>
+      <x>576</x>
       <y>40</y>
       <w>128</w>
       <h>64</h>
@@ -40,7 +40,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>376</x>
+      <x>384</x>
       <y>40</y>
       <w>144</w>
       <h>64</h>
@@ -51,7 +51,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>512</x>
+      <x>520</x>
       <y>120</y>
       <w>40</w>
       <h>128</h>
@@ -62,7 +62,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>312</x>
+      <x>320</x>
       <y>160</y>
       <w>40</w>
       <h>72</h>
@@ -73,7 +73,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>712</x>
+      <x>720</x>
       <y>160</y>
       <w>40</w>
       <h>88</h>
@@ -84,7 +84,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>312</x>
+      <x>320</x>
       <y>160</y>
       <w>440</w>
       <h>40</h>
@@ -95,7 +95,7 @@
   <element>
     <type>com.umlet.element.Interface</type>
     <coordinates>
-      <x>392</x>
+      <x>400</x>
       <y>64</y>
       <w>112</w>
       <h>72</h>
@@ -107,7 +107,7 @@
   <element>
     <type>com.umlet.element.Interface</type>
     <coordinates>
-      <x>584</x>
+      <x>592</x>
       <y>64</y>
       <w>96</w>
       <h>72</h>
@@ -119,29 +119,29 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>96</x>
+      <x>72</x>
       <y>48</y>
-      <w>256</w>
+      <w>288</w>
       <h>40</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>24;24;240;24</additional_attributes>
+    <additional_attributes>24;24;272;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>88</x>
+      <x>64</x>
       <y>48</y>
-      <w>144</w>
+      <w>176</w>
       <h>752</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>32;24;24;736;128;736</additional_attributes>
+    <additional_attributes>32;24;24;736;160;736</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>296</x>
+      <x>304</x>
       <y>608</y>
       <w>40</w>
       <h>168</h>
@@ -152,7 +152,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>824</x>
+      <x>832</x>
       <y>608</y>
       <w>40</w>
       <h>232</h>
@@ -163,7 +163,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>216</x>
+      <x>224</x>
       <y>744</y>
       <w>184</w>
       <h>96</h>
@@ -175,7 +175,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>640</x>
+      <x>648</x>
       <y>808</y>
       <w>264</w>
       <h>104</h>
@@ -187,7 +187,7 @@
   <element>
     <type>com.umlet.element.custom.Text</type>
     <coordinates>
-      <x>728</x>
+      <x>736</x>
       <y>624</y>
       <w>80</w>
       <h>16</h>
@@ -198,7 +198,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>416</x>
+      <x>424</x>
       <y>656</y>
       <w>224</w>
       <h>112</h>
@@ -210,7 +210,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>88</x>
+      <x>96</x>
       <y>688</y>
       <w>344</w>
       <h>40</h>
@@ -222,7 +222,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>288</x>
+      <x>296</x>
       <y>816</y>
       <w>368</w>
       <h>72</h>
@@ -234,7 +234,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>616</x>
+      <x>624</x>
       <y>712</y>
       <w>192</w>
       <h>128</h>
@@ -246,7 +246,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>296</x>
+      <x>304</x>
       <y>608</y>
       <w>568</w>
       <h>40</h>
@@ -257,7 +257,7 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>536</x>
+      <x>544</x>
       <y>584</y>
       <w>40</w>
       <h>104</h>
@@ -268,7 +268,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>256</x>
+      <x>264</x>
       <y>256</y>
       <w>144</w>
       <h>80</h>
@@ -280,7 +280,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>456</x>
+      <x>464</x>
       <y>264</y>
       <w>144</w>
       <h>72</h>
@@ -291,7 +291,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>264</x>
+      <x>272</x>
       <y>376</y>
       <w>136</w>
       <h>72</h>
@@ -302,7 +302,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>456</x>
+      <x>464</x>
       <y>376</y>
       <w>144</w>
       <h>72</h>
@@ -313,7 +313,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>656</x>
+      <x>664</x>
       <y>376</y>
       <w>144</w>
       <h>72</h>
@@ -324,7 +324,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>656</x>
+      <x>664</x>
       <y>272</y>
       <w>136</w>
       <h>72</h>
@@ -335,7 +335,7 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>264</x>
+      <x>272</x>
       <y>488</y>
       <w>144</w>
       <h>72</h>
@@ -346,13 +346,13 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>456</x>
+      <x>464</x>
       <y>488</y>
       <w>144</w>
       <h>72</h>
     </coordinates>
-    <panel_attributes>Gestione Programma
-Educativo Annuale </panel_attributes>
+    <panel_attributes>Gestione PROGRAMMA 
+EDUCATIVO ANNUALE </panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
