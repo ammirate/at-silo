@@ -119,18 +119,23 @@ public class TestStorageDBAccount {
          * 
          */
         bando=new Bando();
-        bando.setiD(0001);
-        bando.setDataInizio("2012-07-20");
-        bando.setDataFine("2012-09-20");
+        bando.setiD(0003);
+       bando.setDataInizio("2011-10-20");
+       bando.setDataFine("2012-09-20");
         gestoreBando = new DBBando("Bando", database);
         
-        ArrayList<ArrayList<String>> all = gestoreBando.getAll();
+        /* Test getALL    PASS*/
+       /* ArrayList<ArrayList<String>> all = gestoreBando.getAll();
+       
         for (int i=0;i<all.size();i++)
             for (int j=0;j<all.get(i).size();j++)
                 System.out.println(all.get(i).get(j));
-               
-        
-        
+              
+      */
+       
+      // gestoreBando.inserisci(bando);
+     //
+        gestoreBando.delete(bando);
 
     }
     //Logger

@@ -80,8 +80,9 @@ public abstract class DBBeans<B> {
         Set<String> variabili = toReturn.keySet();//ottengo un Set delle variabili
         Iterator<String> iterator_variabili = variabili.iterator();
         while( iterator_variabili.hasNext()){
-            String contenuto_variabile = (String) getFieldFromBean(temp, iterator_variabili.next());
-            valori.add(contenuto_variabile);
+            String nome_variabile = iterator_variabili.next();
+            String contenuto_variabile = getFieldFromBean(temp, nome_variabile).toString();
+             valori.add(contenuto_variabile);
         }
 
         if (tabella.insert(valori))
@@ -117,7 +118,7 @@ public abstract class DBBeans<B> {
             LOG.log(Level.SEVERE, "Operazione non consentita", e);
         }
         /**
-         * Solo se il campo non esiste o l'operazione non � consentita viene restituito null.
+         * Solo se il campo non esiste o l'operazione non consentita viene restituito null.
          */
         return null;
     }
@@ -170,7 +171,7 @@ public abstract class DBBeans<B> {
             while (nome_variabili_chiave.hasNext()){//scorro tutti i nomi di variabili chiave
                 String nome_variabile_attuale = iterator_variabili.next();
                 if ( nome_variabile_attuale.equals(nome_variabili_chiave.next()))//se nome variabile attuale == nome variabile chiave
-                    valore_variabile_corrispondente =  (String) getFieldFromBean(temp, nome_variabile_attuale);
+                    valore_variabile_corrispondente =  getFieldFromBean(temp, nome_variabile_attuale).toString();
             }
             contenuto_chiavi.add(valore_variabile_corrispondente);//aggiungo il contenuto di una variabile chiave
         }
