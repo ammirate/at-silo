@@ -7,7 +7,10 @@ package test;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.logging.Logger;
 
 import atsilo.entity.Account;
@@ -37,9 +40,10 @@ public class TestStorageDBAccount {
     public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException, SQLException {
         Database database;
         Account account1;
-       DBBando gestoreBando = null;
+       DBBando gestoreBando;
         DBAccount gestoreAccount;
         Bando bando;
+        Tabella tabella;
         
         database=new Database();
         //prove varie apertura, chiusura e riapertura database
@@ -70,18 +74,47 @@ public class TestStorageDBAccount {
         */
       /* prove query direttamente sul DB     PASS
        * Introdotto preparedStatement e modificati metodi
+       * 
         // System.out.println(query);
         //ResultSet result = database.eseguiQuerySpecifica(query);
         //System.out.println(result); 
-        // Boolean result = database.deleteDB("UPDATE account SET password='angelo' WHERE username='a.damelia' ");
-       // System.out.println(result); 
-            
-        //ResultSet r2 = database.selectDB("select * from account ");
-        // System.out.println(r2);
+         
+        //Boolean result = database.eseguiQueryB("UPDATE account SET password='angelo' WHERE username='a.damelia' ");
+        Boolean result = database.eseguiQueryB("SELECT * FROM account ");
+        Boolean result = database.eseguiQueryB("UPDATE account SET password='angelo' WHERE username='a.damelia' ");
+        System.out.println(result); 
+           
+         ResultSet result = database.eseguiQueryRS("UPDATE account SET password='angelo' WHERE username='a.damelia' ");
+        System.out.println(result); 
+        /*
+        ResultSet r2 = database.eseguiQueryRS("select * from account ");
+         System.out.println(r2);
         // ResultSet k = database.getChiavi("Account");
         // System.out.println(k);
-       */ 
+      
+      /*
+       * test classe tabella
+       
+        tabella=new Tabella("Bando", database);
+        ArrayList<String> temp = tabella.getChiaviPrimarie();
+        for (int i=0;i<temp.size();i++)
+            System.out.println(temp.get(i));//stampa id OK
+        */
         
+   
+        /*  
+        tabella=new Tabella("Bando", database);
+        ArrayList<String> t=new ArrayList<String>();
+        t.add("id");
+        t.add("data_inizio");
+        ArrayList<String> temp = tabella.getTipoColonne(t); NON RESTITUISCE TIPO GIUSTO
+        for (int i=0;i<temp.size();i++)
+            System.out.println(temp.get(i));//stampa id OK
+
+       */
+            
+      
+       // tabella.eseguiQuerySpecifica("select * from bando");
         /* Creazione e test bando
          * 
          */
@@ -89,7 +122,14 @@ public class TestStorageDBAccount {
         bando.setiD(0001);
         bando.setDataInizio("2012-07-20");
         bando.setDataFine("2012-09-20");
-        gestoreBando.getAll();
+        gestoreBando = new DBBando("Bando", database);
+        
+        ArrayList<ArrayList<String>> all = gestoreBando.getAll();
+        for (int i=0;i<all.size();i++)
+            for (int j=0;j<all.get(i).size();j++)
+                System.out.println(all.get(i).get(j));
+               
+        
         
 
     }
