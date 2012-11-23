@@ -60,7 +60,7 @@ public abstract class DBBeans<B> {
     public ArrayList<ArrayList<String>> getAll() {
        ArrayList<ArrayList<String>> risultato = new ArrayList<ArrayList<String>>();
        String query=" SELECT * FROM "+tabella.getNomeTabella();
-       risultato=tabella.eseguiQuerySpecifica(query);                  
+       risultato=tabella.eseguiQuerySpecifica(query); 
        return risultato;
     }
     

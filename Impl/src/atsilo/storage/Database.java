@@ -2,6 +2,7 @@ package atsilo.storage;
 
 
 import java.sql.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -156,6 +157,20 @@ public class Database {
 		}
 		return result;
 		
+	}
+	
+	/**
+	 * Chiude lo statement
+	 */
+	
+	public void closeStatement(){
+	    try {
+            preparedStatement.close();
+            logger.info("Statement chiuso");
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            logger.info("Errore chiusura dello statement. Errore "+e.getMessage());
+        }
 	}
 	
 	private DatabaseMetaData dbMetaData;
