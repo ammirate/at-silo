@@ -17,6 +17,7 @@ public class Database {
 	 */
 	public Database(){
 		connection = null;
+		preparedStatement=null;
 	}
 	
 	/**
@@ -57,7 +58,6 @@ public class Database {
 	 */
 	public boolean chiudiConnessione(){
 		try{
-			statement.close();
 			resultSet = null;
 			connection.close();
 		}catch(SQLException e){
@@ -91,10 +91,11 @@ public class Database {
      */
 	public boolean insertDB(String query){
 		try{
-			statement = connection.createStatement();
-			statement.execute(query);
+		        preparedStatement=connection.prepareStatement(query);
+		        preparedStatement.execute();
+		        preparedStatement.close();
 		}catch(SQLException e){
-			logger.warning("SQL Error. Inserimento non riuscito");
+			logger.warning("SQL Error. Inserimento record non riuscito");
 			while (e!=null){
 				logger.severe("SQL EXCEPTION");
 				logger.info("State: "+e.getSQLState());
@@ -116,8 +117,9 @@ public class Database {
      */
 	public boolean updateDB(String query){
 		try{
-			statement = connection.createStatement();
-			statement.executeUpdate(query);
+		        preparedStatement=connection.prepareStatement(query);
+		        preparedStatement.execute();
+                        preparedStatement.close();
 		}catch(SQLException e){
 			logger.warning("SQL Error. Aggiornamento non riuscito");
 			while (e!=null){
@@ -133,17 +135,17 @@ public class Database {
 	}
 	
 	/**
-     * Effettua l'eliminazione di una tupla di valori dal database
+     * Effettua l'eliminazione di una tupla di valori dal database 
      *
      * @param query Stringa che viene eseguita sul database
-     * @return  true se la cancellazione è avvenuta con successo
+     * @return  true se la cancellazione è avvenuta con successo o la query non ha dato errori
      *          false altrimenti
      */
-	public Boolean deleteDB(String query){
-		Boolean state = false;
+	public boolean deleteDB(String query){
 		try{
-			statement = connection.createStatement();
-			statement.executeUpdate(query);
+		        preparedStatement=connection.prepareStatement(query);
+		        preparedStatement.execute();
+		        preparedStatement.close();
 			return true;
 		}catch(SQLException e){
 			logger.warning("SQL Error. Cancellazione non riuscita");
@@ -152,11 +154,9 @@ public class Database {
 				logger.info("State: "+e.getSQLState());
 				logger.info("Message: "+e.getMessage());
 				logger.info("Error: "+e.getErrorCode());
-				if(e.getErrorCode()==1451)
-					state = null;
-				e = e.getNextException();
+				
 			}
-			return state;
+			return false;
 		}
 	}
 	
@@ -167,9 +167,12 @@ public class Database {
 	 * @return ResultSet contenente l'insieme dei valori della select
 	 */
 	public ResultSet selectDB(String query){
+	    ResultSet result;
 		try{
-			statement = connection.createStatement();
-			resultSet=statement.executeQuery(query);
+		    preparedStatement=connection.prepareStatement(query);
+                    preparedStatement.execute();
+                    result= preparedStatement.getResultSet();
+                    preparedStatement.close(); 
 		}catch(SQLException e){
 			logger.warning("SQL Error. Visualizzazione non riuscito");
 			while (e!=null){
@@ -181,7 +184,8 @@ public class Database {
 			}
 			return null;
 		}
-		return resultSet;
+		
+        return result;
 	}
 	
 	/** Esegue qualunqe tipo di query
@@ -190,8 +194,9 @@ public class Database {
 	  */
 	    public ResultSet eseguiQuerySpecifica(String query) {
 	        try{
-                    statement = connection.createStatement();
-                    resultSet=statement.executeQuery(query);
+	            preparedStatement=connection.prepareStatement(query);
+                    preparedStatement.execute();
+                    preparedStatement.close();
             }catch(SQLException e){
                     logger.warning("SQL Error:Database.eseguiQuerySpecifica: query non andata a buon fine");
                     while (e!=null){
@@ -234,7 +239,7 @@ public class Database {
 	private Connection connection;
 	private final String url="jdbc:mysql://localhost/atsilodb?user=root&password=pass";
         static final String driver = "com.mysql.jdbc.Driver";
-	private Statement statement;
+	private PreparedStatement preparedStatement;
 	private ResultSet resultSet;
 	private static Logger logger = Logger.getLogger("global");
 }

@@ -31,6 +31,8 @@ public class DBAccount extends DBBeans<Account> {
         HashMap<String,String> toReturn = new HashMap<String,String>();
         toReturn.put("userName", "userName");
         toReturn.put("password","password");
+        //aggiungere campo owner che assumee vari valori nel database
+        //toReturn.put("xxx","xxx");
         return toReturn;
     }
     
