@@ -56,12 +56,11 @@ public class Tabella implements ManagerDB {
                     query = query+" from "+nomeTabella+" limit 1;"; //uso limit1 in modo da selezionare al massimo una tupla
                     try{
                             tipo =  new ArrayList<String>();
-                            result= db.eseguiQueryRS(query);
-                        
-                                                              
-                            resMetaData= result.getMetaData();
+                            logger.info("query da eseguire:"+query);
+                            result= db.eseguiQueryRS(query);    
+                            resMetaData = result.getMetaData();
                             String tipoSpecifico = "OBJECT";
-
+                                
                             for(int i=1;i<=resMetaData.getColumnCount();i++){
                                     if(resMetaData.getColumnTypeName(i).equals("SMALLINT")||resMetaData.getColumnTypeName(i).equals("INT")||resMetaData.getColumnTypeName(i).equals("BIGINT"))
                                             tipoSpecifico = "INTEGER";
@@ -400,7 +399,7 @@ public class Tabella implements ManagerDB {
                                     risultato.add(row);
                             }
             } catch (SQLException e) {
-                    logger.warning("ERRORE Tabella.eseguiQuerySpecifica(String query(): Operazione non riuscita");
+                    logger.warning("ERRORE Tabella.eseguiQuerySpecifica(String query()): Operazione non riuscita");
             }
             return risultato;
     }

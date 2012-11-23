@@ -92,7 +92,8 @@ public class Database {
                 preparedStatement=connection.prepareStatement(query);
                 preparedStatement.execute();
                 result= preparedStatement.getResultSet();
-                preparedStatement.close(); 
+                //preparedStatement.close(); Lo statement non deve essere chiuso qui poichè su di esso
+                //verranno fatte altre operazioni da metodi esterni.
             }catch(SQLException e){
                     logger.warning("SQL Error:Database.eseguiQuerySpecifica: Query non andata a buon fine");
                     while (e!=null){
@@ -117,7 +118,8 @@ public class Database {
 	                try{
 	                    preparedStatement=connection.prepareStatement(query);
 	                    preparedStatement.execute();
-	                    preparedStatement.close();
+	                    //preparedStatement.close(); Lo statement non deve essere chiuso qui poichè su di esso
+	                    //verranno fatte altre operazioni da metodi esterni.
 	            }catch(SQLException e){
 	                    logger.warning("SQL Error:Database.eseguiQuerySpecifica: Query non andata a buon fine");
 	                    while (e!=null){
