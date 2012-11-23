@@ -9,14 +9,8 @@ public class DBExtra extends DBBeans {
         super("Extra",db);
     }
 
-    public Extra getExtra(Retta r) {
+    public List ricercaExtraDaRetta(int ID) {
     }
 
-    public boolean inserisci(Extra e) {
-        return true;
-    }
 
-    public boolean delete(Extra e) {
-        return true;
-    }
 }

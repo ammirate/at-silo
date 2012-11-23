@@ -12,15 +12,12 @@ public class DBRetta extends DBBeans {
         super("Retta",db);
     }
 
-    public List<Retta> getAllRetta(Genitore g) {
+    public List ricarcaRettaPerGenitore(Genitore g) {
         return null;
     }
 
-    public boolean inserisci(Retta r, Genitore g) {
-        return true;
-    }
 
-    public Retta update(Retta oldR, Retta newR) {
+    public Retta modificaRetta(Retta oldR, Retta newR) {
         return null;
     }
 }

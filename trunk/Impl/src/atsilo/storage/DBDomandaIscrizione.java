@@ -10,18 +10,16 @@ public class DBDomandaIscrizione extends DBBeans {
         super("DomandaIscrizione",db);
     }
 
-    public DomandaIscrizione getDomanda(Bambino b) {
-        return null;
-    }
-    public DomandaIscrizione getDomanda(Genitore g) {
+    public DomandaIscrizione ricercaDomandaDaBambino(Bambino b) {
         return null;
     }
 
-    public boolean inserisci(DomandaIscrizione d) {
-        return true;
+    public DomandaIscrizione ricercaDomandaDaGenitore(Genitore g) {
+        return null;
     }
 
-    public boolean delete(DomandaIscrizione d) {
-        return true;
+
+    public DomandaIscrizione ricercaDomandaDaId(int Id) {
+        return null;
     }
 }

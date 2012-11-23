@@ -9,11 +9,8 @@ public class DBOrarioUtente extends DBBeans {
         super("OrarioUtente",db);
     }
 
-    public OrarioUtente getOrario(Servizio s) {
+    public OrarioUtente ricercaOrarioUtenteDaId(int ID) {
         return null;
     }
 
-    public boolean inserisci(OrarioUtente o) {
-        return true;
-    }
 }

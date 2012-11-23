@@ -12,15 +12,12 @@ public class DBRichiesta extends DBBeans {
         super("Richiesta",db);
     }
 
-    public Richiesta getAllRichiesta(Servizio s) {
+    public Richiesta ricercaRichiestaDaServizio(int ID) {
         return null;
     }
 
-    public List<Richiesta> getAllRichiesta(Genitore g) {
+    public List ricerdaRichiestaPerGenitore(Genitore g) {
         return null;
     }
 
-    public boolean inserisci(Richiesta r) {
-        return true;
-    }
 }
