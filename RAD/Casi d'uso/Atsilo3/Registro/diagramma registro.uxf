@@ -4,10 +4,10 @@
   <element>
     <type>com.umlet.element.Package</type>
     <coordinates>
-      <x>456</x>
+      <x>474</x>
       <y>30</y>
-      <w>468</w>
-      <h>510</h>
+      <w>450</w>
+      <h>558</h>
     </coordinates>
     <panel_attributes>Registro
 </panel_attributes>
@@ -16,7 +16,7 @@
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>498</x>
+      <x>510</x>
       <y>48</y>
       <w>108</w>
       <h>24</h>
@@ -28,8 +28,8 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>672</x>
-      <y>324</y>
+      <x>708</x>
+      <y>348</y>
       <w>108</w>
       <h>42</h>
     </coordinates>
@@ -41,10 +41,10 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>690</x>
-      <y>432</y>
+      <x>714</x>
+      <y>468</y>
       <w>108</w>
-      <h>48</h>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Inserimento programma 
 educativo settimanale
@@ -54,24 +54,24 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>762</x>
+      <x>798</x>
       <y>318</y>
-      <w>198</w>
-      <h>42</h>
+      <w>162</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>186;18;18;30</additional_attributes>
+    <additional_attributes>150;18;18;54</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>780</x>
+      <x>804</x>
       <y>318</y>
-      <w>180</w>
-      <h>150</h>
+      <w>156</w>
+      <h>186</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>168;18;18;138</additional_attributes>
+    <additional_attributes>144;18;18;174</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Actor</type>
@@ -91,11 +91,11 @@ pedagogo
     <coordinates>
       <x>372</x>
       <y>42</y>
-      <w>138</w>
+      <w>150</w>
       <h>30</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>126;18;18;18</additional_attributes>
+    <additional_attributes>138;18;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Actor</type>
@@ -113,7 +113,7 @@ Didattico
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>486</x>
+      <x>498</x>
       <y>138</y>
       <w>108</w>
       <h>36</h>
@@ -128,16 +128,16 @@ bg=blue</panel_attributes>
     <coordinates>
       <x>372</x>
       <y>144</y>
-      <w>132</w>
+      <w>144</w>
       <h>66</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>18;18;120;54</additional_attributes>
+    <additional_attributes>18;18;132;54</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>486</x>
+      <x>498</x>
       <y>96</y>
       <w>108</w>
       <h>30</h>
@@ -152,19 +152,19 @@ bg=blue</panel_attributes>
     <coordinates>
       <x>372</x>
       <y>102</y>
-      <w>126</w>
+      <w>138</w>
       <h>72</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>18;60;114;18</additional_attributes>
+    <additional_attributes>18;60;126;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>678</x>
-      <y>258</y>
+      <x>702</x>
+      <y>288</y>
       <w>108</w>
-      <h>48</h>
+      <h>42</h>
     </coordinates>
     <panel_attributes>Visualizza programma
 educativo settimanale
@@ -174,21 +174,21 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>768</x>
-      <y>264</y>
-      <w>192</w>
-      <h>84</h>
+      <x>792</x>
+      <y>294</y>
+      <w>168</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>180;72;18;18</additional_attributes>
+    <additional_attributes>156;42;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>684</x>
-      <y>378</y>
+      <x>714</x>
+      <y>408</y>
       <w>108</w>
-      <h>42</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>Modifica attività
 bg=blue</panel_attributes>
@@ -197,10 +197,10 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>684</x>
-      <y>492</y>
+      <x>708</x>
+      <y>540</y>
       <w>108</w>
-      <h>42</h>
+      <h>24</h>
     </coordinates>
     <panel_attributes>Aggiungi attività
 bg=blue</panel_attributes>
@@ -209,42 +209,42 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>774</x>
+      <x>804</x>
       <y>318</y>
-      <w>186</w>
-      <h>90</h>
+      <w>156</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>174;18;18;78</additional_attributes>
+    <additional_attributes>144;18;18;108</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>774</x>
+      <x>798</x>
       <y>318</y>
-      <w>186</w>
-      <h>210</h>
+      <w>162</w>
+      <h>246</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>174;18;18;198</additional_attributes>
+    <additional_attributes>150;18;18;234</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>690</x>
-      <y>342</y>
-      <w>72</w>
+      <x>720</x>
+      <y>372</y>
+      <w>78</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
   &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>42;36;36;24</additional_attributes>
+    <additional_attributes>42;36;42;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>684</x>
-      <y>288</y>
+      <x>720</x>
+      <y>312</y>
       <w>78</w>
       <h>48</h>
     </coordinates>
@@ -255,31 +255,31 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>696</x>
-      <y>456</y>
+      <x>720</x>
+      <y>486</y>
+      <w>78</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>42;54;42;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>504</x>
+      <y>54</y>
       <w>78</w>
       <h>48</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>42;36;42;24</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>498</x>
-      <y>54</y>
-      <w>78</w>
-      <h>54</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>42;18;42;42</additional_attributes>
+    <additional_attributes>48;18;36;36</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>492</x>
+      <x>504</x>
       <y>180</y>
       <w>108</w>
       <h>30</h>
@@ -294,11 +294,11 @@ bg=blue</panel_attributes>
     <coordinates>
       <x>372</x>
       <y>144</y>
-      <w>126</w>
+      <w>138</w>
       <h>30</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>18;18;114;18</additional_attributes>
+    <additional_attributes>18;18;126;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Actor</type>
@@ -314,7 +314,7 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>624</x>
+      <x>636</x>
       <y>144</y>
       <w>108</w>
       <h>24</h>
@@ -326,34 +326,22 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>564</x>
+      <x>570</x>
       <y>120</y>
-      <w>76</w>
+      <w>78</w>
       <h>42</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extend&gt;&gt;</panel_attributes>
-    <additional_attributes>60;30;24;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>720</x>
-      <y>150</y>
-      <w>76</w>
-      <h>66</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;extend&gt;&gt;</panel_attributes>
-    <additional_attributes>42;18;42;54</additional_attributes>
+    <additional_attributes>66;30;18;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
       <x>744</x>
-      <y>144</y>
+      <y>150</y>
       <w>108</w>
-      <h>24</h>
+      <h>18</h>
     </coordinates>
     <panel_attributes>Modifica Nota
 bg=blue</panel_attributes>
@@ -362,7 +350,7 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>678</x>
+      <x>684</x>
       <y>204</y>
       <w>108</w>
       <h>36</h>
@@ -374,71 +362,83 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>588</x>
+      <x>600</x>
       <y>30</y>
-      <w>192</w>
+      <w>180</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>18;30;156;30;156;168</additional_attributes>
+    <additional_attributes>18;30;144;30;144;168</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>714</x>
+      <x>720</x>
       <y>222</y>
-      <w>246</w>
+      <w>240</w>
       <h>126</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>234;114;18;18</additional_attributes>
+    <additional_attributes>228;114;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>372</x>
       <y>144</y>
-      <w>306</w>
+      <w>324</w>
       <h>90</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>18;18;18;78;294;78</additional_attributes>
+    <additional_attributes>18;18;18;78;312;78</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.UseCase</type>
     <coordinates>
-      <x>810</x>
+      <x>816</x>
       <y>210</y>
       <w>108</w>
       <h>24</h>
     </coordinates>
-    <panel_attributes>Modifica Nota
+    <panel_attributes>Cancella Nota
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>756</x>
-      <y>186</y>
-      <w>76</w>
-      <h>42</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;extend&gt;&gt;</panel_attributes>
-    <additional_attributes>54;30;30;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>660</x>
+      <x>672</x>
       <y>150</y>
       <w>76</w>
       <h>66</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extend&gt;&gt;</panel_attributes>
-    <additional_attributes>42;18;42;54</additional_attributes>
+    <additional_attributes>42;18;36;54</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>732</x>
+      <y>150</y>
+      <w>72</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>42;54;36;18</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>762</x>
+      <y>186</y>
+      <w>78</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>30;30;54;30</additional_attributes>
   </element>
 </diagram>
