@@ -74,5 +74,23 @@
         <text/>
       </controlProperties>
     </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Button" x="757" y="388" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pubblica</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::StickyNote" x="539" y="494" w="303" h="151" measuredW="109" measuredH="123" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>La%20pubblicazione%20definitiva%20del%20programma%20educativo%0A%E8%20effettuabile%20solo%20dal%20delegato%20rettore</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Arrow" x="671" y="412" w="125" h="94" measuredW="150" measuredH="100" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <curvature>1</curvature>
+        <direction>bottom</direction>
+        <text/>
+      </controlProperties>
+    </control>
   </controls>
 </mockup>
