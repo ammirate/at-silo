@@ -9,11 +9,8 @@ public class DBFattura extends DBBeans {
         super("Fattura",db);
     }
 
-    public Fattura getFattura(PersonaleAsilo pers) {
+    public Fattura ricercaFatturaDaId(int ID) {
         return null;
     }
 
-    public boolean inserisci(Fattura f) {
-        return true;
-    }
 }

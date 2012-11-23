@@ -9,15 +9,9 @@ public class DBServizio extends DBBeans {
         super("Servizio",db);
     }
 
-    public Servizio getServizio(Bambino b) {
+    public Servizio ricercaServizioPerBambino(String cf) {
         return null;
     }
 
-    public boolean inserisci(Servizio s, Bambino b) {
-        return true;
-    }
 
-    public boolean delete(Servizio s) {
-        return true;
-    }
 }

@@ -9,15 +9,9 @@ public class DBTirocinante extends DBBeans {
         super("Tirocinante",db);
     }
 
-    public Tirocinante getTirocinante(PersonaleAsilo pers) {
+    public Tirocinante ricercaTirocinante(PersonaleAsilo pers) {
         return null;
     }
 
-    public boolean inserisci(Tirocinante t) {
-        return true;
-    }
 
-    public boolean delete(Tirocinante t) {
-        return true;
-    }
 }
