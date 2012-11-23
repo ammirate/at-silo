@@ -1,27 +1,24 @@
 package atsilo.storage;
 import java.lang.reflect.Field;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
-import atsilo.entity.Beans;
-
 /**
  * 
- * Classe DBBeans contente i metodi delle operazioni più comuni su una tabella
+ * Classe DBBeans contente i metodi delle operazioni piï¿½ comuni su una tabella
  * 
  * @author Angelo G. Scafuro
  *
  */
-public abstract class DBBeans<B extends Beans> {
-    protected Tabella tabella;
+public abstract class DBBeans<B> {
+    private static Logger LOG = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    
+    protected final Tabella tabella;
     private Database db;
     
     /**
@@ -38,11 +35,13 @@ public abstract class DBBeans<B extends Beans> {
      * Cambia il la tabella su cui si eseguono le operazioni 
      * @param realTable nuova tabella
      * @param database  connessione al database
+     * @throws UnsupportedOperationException
+     * @deprecated non e' possibile modificare la tabella
      */
     public void setTabella(Tabella realTable,Database database){
-       tabella=realTable;
-       db=database;
+       throw new UnsupportedOperationException();
     }
+    
     /**
      * Restituisce tutti gli elementi di una tabella
      * @return lista di tutti i record relativi alla tabella del beans
@@ -66,11 +65,11 @@ public abstract class DBBeans<B extends Beans> {
     {
         B temp=realBeans;
         ArrayList<String> valori=new ArrayList<String>();
-        HashMap<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
+        Map<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
         Set<String> variabili = toReturn.keySet();//ottengo un Set delle variabili
         Iterator<String> iterator_variabili = variabili.iterator();
         while( iterator_variabili.hasNext()){
-            String contenuto_variabile = (String) getFieldFromBeam(temp, iterator_variabili.next());
+            String contenuto_variabile = (String) getFieldFromBean(temp, iterator_variabili.next());
             valori.add(contenuto_variabile);
         }
 
@@ -88,7 +87,7 @@ public abstract class DBBeans<B extends Beans> {
      * @throws IllegalArgumentException
      * @throws IllegalAccessException
      */
-    protected Object getFieldFromBeam(B realBean, String nomeCampo) throws IllegalArgumentException, IllegalAccessException
+    protected final Object getFieldFromBean(B realBean, String nomeCampo) throws IllegalArgumentException, IllegalAccessException
     {
         Class beanClass = realBean.getClass();
         Field field=null;
@@ -107,7 +106,7 @@ public abstract class DBBeans<B extends Beans> {
             LOG.log(Level.SEVERE, "Operazione non consentita", e);
         }
         /**
-         * Solo se il campo non esiste o l'operazione non è consentita viene restituito null.
+         * Solo se il campo non esiste o l'operazione non ï¿½ consentita viene restituito null.
          */
         return null;
     }
@@ -115,7 +114,7 @@ public abstract class DBBeans<B extends Beans> {
     /**
      * Sostituisce un beans con un nuovo beans.
      * @param RealBeans beans presente nel databse
-     * @param NewRealBeans nuovo beans che sostituirà il suo corrispondente  nel database
+     * @param NewRealBeans nuovo beans che sostituirï¿½ il suo corrispondente  nel database
      * @return
      * @throws IllegalAccessException 
      * @throws IllegalArgumentException 
@@ -149,7 +148,7 @@ public abstract class DBBeans<B extends Beans> {
     public  boolean delete(B realBeans) throws  IllegalArgumentException, IllegalAccessException{
         B temp=realBeans;
         ArrayList<String> contenuto_chiavi=new ArrayList<String>();
-        HashMap<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
+        Map<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
         Set<String> variabili = toReturn.keySet();//ottengo un Set delle variabili
         Iterator<String> iterator_variabili = variabili.iterator();
         Iterator<String> nome_variabili_chiave = getKeyFields().iterator();
@@ -160,7 +159,7 @@ public abstract class DBBeans<B extends Beans> {
             while (nome_variabili_chiave.hasNext()){//scorro tutti i nomi di variabili chiave
                 String nome_variabile_attuale = iterator_variabili.next();
                 if ( nome_variabile_attuale.equals(nome_variabili_chiave.next()))//se nome variabile attuale == nome variabile chiave
-                    valore_variabile_corrispondente =  (String) getFieldFromBeam(temp, nome_variabile_attuale);
+                    valore_variabile_corrispondente =  (String) getFieldFromBean(temp, nome_variabile_attuale);
             }
             contenuto_chiavi.add(valore_variabile_corrispondente);//aggiungo il contenuto di una variabile chiave
         }
@@ -183,14 +182,11 @@ public abstract class DBBeans<B extends Beans> {
      * <variabile_bean , colonna_database>.
      * @return
      */
-    public abstract HashMap<String,String> getMappingFields();
+    protected abstract Map<String,String> getMappingFields();
     
     /**
      * Metodo che restituisce la lista dei campi chiave nel database per questo bean.
      * @return
      */
-    public abstract List<String> getKeyFields();
-    
-
-    private static Logger LOG = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    protected abstract List<String> getKeyFields();
 }
