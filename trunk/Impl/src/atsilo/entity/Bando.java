@@ -1,6 +1,6 @@
 package atsilo.entity;
 
-public class Bando {
+public class Bando implements Beans {
     
     /**
      * @attribute identificativo di tipo intero
