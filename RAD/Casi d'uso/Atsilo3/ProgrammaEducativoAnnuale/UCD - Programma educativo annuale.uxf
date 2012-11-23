@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>270</x>
+      <y>50</y>
+      <w>170</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Inserimento
+programma educativo
+annuale
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>290</x>
+      <y>220</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Visualizzazione
+programma educativo annuale
+ in vigore
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>300</x>
+      <y>310</y>
+      <w>220</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Visualizzazione
+programma educativo annuale
+ da redarre
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>300</x>
+      <y>410</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Visualizzazione note
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>280</x>
+      <y>130</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Modifica
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>480</x>
+      <y>540</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Inserimento nota
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>340</x>
+      <y>610</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Modifica nota
+programma educuativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>180</x>
+      <y>550</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Cancellazione nota
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>570</x>
+      <y>420</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Pubblicazione
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>570</x>
+      <y>250</y>
+      <w>200</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Inserimento scadenza
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>570</x>
+      <y>330</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Modifica scadenza
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>10</x>
+      <y>220</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Utente del 
+sistema</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>70</x>
+      <y>50</y>
+      <w>220</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>200;30;30;60</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>650</x>
+      <y>60</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Allega file</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>410</x>
+      <y>30</y>
+      <w>260</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=.
+&lt;&lt;&lt;include&gt;&gt; </panel_attributes>
+    <additional_attributes>240;50;30;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>20</x>
+      <y>80</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Psicopedagogo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>70</x>
+      <y>80</y>
+      <w>230</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>210;80;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>70</x>
+      <y>230</y>
+      <w>240</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>220;30;30;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>0</x>
+      <y>380</y>
+      <w>160</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Responsabile 
+programma
+educativo annuale</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>310</y>
+      <w>240</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;110;220;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>450</x>
+      <y>420</y>
+      <w>134</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>40;30;100;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.UseCase</type>
+    <coordinates>
+      <x>590</x>
+      <y>130</y>
+      <w>180</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Sottomissione
+programma educativo
+annuale
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>450</x>
+      <y>60</y>
+      <w>170</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+     &lt;&lt;extend&gt;&gt;</panel_attributes>
+    <additional_attributes>30;30;150;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>390</y>
+      <w>240</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;220;50</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>350</x>
+      <y>440</y>
+      <w>134</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>60;30;90;170</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>230</x>
+      <y>430</y>
+      <w>134</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+&lt;&lt;include&gt;&gt;</panel_attributes>
+    <additional_attributes>100;30;40;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>880</x>
+      <y>330</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Delegato
+rettore</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>740</x>
+      <y>250</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;170;120</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>740</x>
+      <y>330</y>
+      <w>190</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;30;170;40</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>740</x>
+      <y>340</y>
+      <w>190</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>30;110;170;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>160</x>
+      <y>0</y>
+      <w>700</w>
+      <h>720</h>
+    </coordinates>
+    <panel_attributes>*Programma educativo annuale*
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
