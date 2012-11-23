@@ -43,7 +43,18 @@ public abstract class DBBeans<B> {
     }
     
     /**
-     * Restituisce tutti gli elementi di una tabella
+     * Restitusice il nome della tabella usata
+     * @return nome della tabella usata 
+     */
+    public String getNomeTabella(){
+        return tabella.getNomeTabella();
+    }
+    
+    /**
+     * Restituisce tutti gli elementi di una tabella in una lista nel formato
+     * #Riga
+     * ValoreAttN
+     * ValoreAttN+1
      * @return lista di tutti i record relativi alla tabella del beans
      */
     public ArrayList<ArrayList<String>> getAll() {
