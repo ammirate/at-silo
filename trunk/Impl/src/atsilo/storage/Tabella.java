@@ -56,7 +56,7 @@ public class Tabella implements ManagerDB {
                     query = query+" from "+nomeTabella+" limit 1;"; //uso limit1 in modo da selezionare al massimo una tupla
                     try{
                             tipo =  new ArrayList<String>();
-                            result= db.selectDB(query);
+                            result= db.eseguiQueryRS(query);
                         
                                                               
                             resMetaData= result.getMetaData();
@@ -113,7 +113,7 @@ public class Tabella implements ManagerDB {
     public ArrayList<String> getNomiAttributi(){
         ArrayList<String> lista= new ArrayList<String>();
         try{
-                result= db.selectDB("select * from "+nomeTabella+" limit 1");//uso limit 1 in modo da selezionare al massimo una tupla
+                result= db.eseguiQueryRS("select * from "+nomeTabella+" limit 1");//uso limit 1 in modo da selezionare al massimo una tupla
                 resMetaData= result.getMetaData();
                 for(int i=1;i<=resMetaData.getColumnCount();i++){
                         String nome=resMetaData.getColumnName(i);
@@ -195,7 +195,7 @@ public class Tabella implements ManagerDB {
                                 query=query+valori.get(i);
                         query=query+")";
 
-                        return db.insertDB(query);
+                        return db.eseguiQueryB(query);
                 }else{
                 logger.warning("ERRORE Database non aperto");
                 return false;
@@ -248,7 +248,7 @@ public class Tabella implements ManagerDB {
                             }
 
                     }
-                    result= db.selectDB(query);
+                    result= db.eseguiQueryRS(query);
 
                     resMetaData = result.getMetaData();
                     while(result.next()){
@@ -325,7 +325,7 @@ public class Tabella implements ManagerDB {
             else
                     query=query+valoriChiavi.get(chiavi.size()-1);
 
-            return db.updateDB(query);
+            return db.eseguiQueryB(query);
     }
  
 
@@ -369,7 +369,7 @@ public class Tabella implements ManagerDB {
                             else
                                     query=query+valChiavi.get(i);
 
-                            return db.deleteDB(query);
+                            return db.eseguiQueryB(query);
 
                     }else{
                             logger.warning("ERRORE Database non aperto");
@@ -390,7 +390,7 @@ public class Tabella implements ManagerDB {
             try{
                     
                             risultato = new ArrayList<ArrayList<String>>();
-                            result= db.eseguiQuerySpecifica(query);
+                            result= db.eseguiQueryRS(query);
                             resMetaData = result.getMetaData();
                             while(result.next()){
                                     ArrayList<String> row = new ArrayList<String>();
