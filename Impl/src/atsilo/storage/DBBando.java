@@ -2,6 +2,7 @@ package atsilo.storage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import atsilo.entity.Account;
@@ -62,7 +63,7 @@ public class DBBando extends DBBeans<Bando> {
      */
     @Override
     public HashMap getMappingFields() {
-        HashMap<String,String> toReturn = new HashMap<String,String>();
+        HashMap<String,String> toReturn = new LinkedHashMap<String,String>();
         toReturn.put("id", "id");
         toReturn.put("dataInizio","data_inizio");
         toReturn.put("dataFine","data_fine");
