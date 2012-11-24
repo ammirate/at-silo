@@ -55,7 +55,7 @@ public interface ManagerDB {
       * Esegue una selezione di tutte le tuple che soddisfano la condidione "where" specificata dagli attributi passati in input
       * 
       * @param nomeAttributo Lista di attributi della select (null equivale a *)
-      * @param nomeAttributi Lista di attributi su cui effettuare la ricerca (where) 
+      * @param nomiAttributo Lista di attributi su cui effettuare la ricerca (where) 
       * @param valoriAttributi Lista dei valori dei corrispondenti attributi (where)
       * 
       * @return Restituisce la matrice delle tuple ottenute dalla selezione

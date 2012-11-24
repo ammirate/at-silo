@@ -106,6 +106,7 @@ public class Database {
                     }
                     return null;
             }
+            logger.info("Eseguita query :"+query);
             return result;
 	        
 	    }
@@ -132,6 +133,7 @@ public class Database {
 	                    }
 	                    return false;
 	            }
+	                logger.info("Eseguita query :"+query);
 	            return true;
 	                
 	            }
@@ -166,7 +168,7 @@ public class Database {
 	public void closeStatement(){
 	    try {
             preparedStatement.close();
-            logger.info("Statement chiuso");
+            logger.info("Statement chiuso correttamente");
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             logger.info("Errore chiusura dello statement. Errore "+e.getMessage());
