@@ -128,7 +128,7 @@ public class ControlQuestionario {
      * @param nome is the questionnaire name
      * @return a questionnaire
      */
-    public Questionario ricercaQuestionario(String nome){
+    public List<Questionario> ricercaQuestionario(String nome){
         return null;
     }
     
