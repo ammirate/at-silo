@@ -141,57 +141,7 @@ A.linkpercorso:hover {color : #336699; text-decoration : none;}
 	text-decoration: none;
 	
 }
-/*AREA MENU terzo LIVELLO*/
 
-.menustep {
-	color: #242424;
-	background-color: #F7F9EE;
-	line-height: 27px;
-	padding-left:15px;
-	border-bottom: dashed 1px #B2BEB3;
-	}
-
-/*AREA NEW MENU step*/
-
-.stepprimohbar {
-	background-color: transparent;
-	padding: 0px 0px 0px 0px;
-	height: 34px;
-	width: 70px;
-	border-right: 1px solid #ffffff;
-}
-.stepprimohbar a{
-	color: #ffffff;
-	padding:9px 10px;
-	text-decoration: none;
-	font-size: 0.75em;width: 70px;
-}
-.stepprimohbar a:visited {
-	color : #000;
-	text-decoration : none;
-	font-size: 0.75em;
-}
-
- td:hover.stepprimohbar {
-	color: #ffffff;
-	text-decoration: underline;
-	background-color: #444444;
-	width: 70px;
-}
-.stepprimoselhbar 	{
-	color: #ffffff;
-	padding:9px 10px;
-	text-decoration: none;
-	font-size: 0.75em;
-	width: 70px;
-	background-color: #444444;
-	border-right: 1px solid #fff;
-}
-.steprimoselhbar a{
-	color: #ffffff;
-	text-decoration: none;
-	
-}
 /*
 TITOLI DELLA PAGINA
 */
