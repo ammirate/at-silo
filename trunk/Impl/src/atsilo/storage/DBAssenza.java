@@ -9,4 +9,8 @@ public class DBAssenza extends DBBeans {
 
 
     public List<Assenza> ricercaAssenzaPerData(Date d){}
+    
+    public List<Assenza> ricercaAssenzaPerBambino(String codicefiscale) {} //aggiunto
+    
+    
 }

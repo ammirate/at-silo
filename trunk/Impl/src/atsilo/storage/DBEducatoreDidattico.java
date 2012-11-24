@@ -3,31 +3,19 @@ package atsilo.storage;
 import atsilo.entity.EducatoreDidattico;
 
 public class DBEducatoreDidattico extends DBBeans {
+    /**
+     * Costruttore
+     * @param db
+     */
+    public DBEducatoreDidattico(Database db){ super("EducatoreDidattico",db);}
     
-    public DBEducatoreDidattico(Database db){
-        super("EducatoreDidattico",db);
-    }
-    public EducatoreDidattico ricercaEducatoreDidatticoNome(String nome){
-    EducatoreDidattico ed;
-    return ed;
-    }
+    public EducatoreDidattico ricercaEducatoreDidatticoPerNome(String nome){}
 
-    public EducatoreDidattico ricercaEducatoreDidatticoTitoloStudio(String titoloS){
-    EducatoreDidattico ed;
-    return ed;
-    }
+    public EducatoreDidattico ricercaEducatoreDidatticoPerTitoloStudio(String titoloS){}
     
-    public EducatoreDidattico ricercaEducatoreDidatticoCf(String cf){
-    EducatoreDidattico ed;
-    return ed;
-    }
+    public EducatoreDidattico ricercaEducatoreDidatticoPerCf(String cf){}
     
-    public EducatoreDidattico ricercaEducatoreDidatticoCognome(String cf){
-    EducatoreDidattico ed;
-    return ed;
-    }
+    public EducatoreDidattico ricercaEducatoreDidatticoPerCognome(String cf){}
    
-    
-
     
 }

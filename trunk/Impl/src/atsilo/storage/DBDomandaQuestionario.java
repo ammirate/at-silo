@@ -10,11 +10,13 @@ import java.util.List;
 
 public class DBDomandaQuestionario extends DBBeans {
     Tabella tabella;
-    
+    /**
+     * 
+     * @param db
+     */
     public DBDomandaQuestionario(Database db){super("DomandaQuestionario",db);}
     
-        public DomandaQuestionario ricercaDomandaQuestionarioPerId(String id){
-            DomandaQuestionario c;
-            return c;}
-        public void modificaDescrizione(String d){}
-        }
+    
+        public DomandaQuestionario ricercaDomandaQuestionarioPerId(String id){}
+        
+        
