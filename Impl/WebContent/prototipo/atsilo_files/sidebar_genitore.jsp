@@ -36,10 +36,10 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Pagamenti</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_pagamenti.html.html">Storico Pagamenti</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_pagamenti.jsp">Storico Pagamenti</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="fattura_mensile.html">Fattura Mensile</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="fattura_mensile.jsp">Fattura Mensile</a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -54,13 +54,13 @@
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="rinuncia_servizio.html">Rinuncia Servizio</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="servizi_attivi.html">Servizi Attivi</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="servizi_attivi.jsp">Servizi Attivi</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_orario.html">Modifica Orario</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_orario.jsp">Modifica Orario</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_pasti.html">Modifica Pasti</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_pasti.jsp">Modifica Pasti</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.html">Storico Attività</a></td>
