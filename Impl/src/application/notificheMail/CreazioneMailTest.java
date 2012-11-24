@@ -21,14 +21,4 @@ public class CreazioneMailTest {
     public void test() {
         fail("Not yet implemented");
     }
-    //Logger
-    //private static final java.util.Logger LOG = ...
-    
-    //Variabili di istanza
-    
-    
-    //Costruttori
-    
-    
-    //Metodi
-}
+    }

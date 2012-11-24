@@ -28,6 +28,7 @@ public class NotificaComposizioneClasse implements Messaggio{
     //Costruttori
     
     /**
+     * 
      * @param destinatari
      */
     public NotificaComposizioneClasse (ArrayList<Utente> destinatari) 
