@@ -39,6 +39,17 @@ public class ControlRegistro {
         return null;
     }
     
+    
+    /**
+     * Adds a new register to a class
+     * @param registro is the register to add
+     * @param classe is the class tht receives the register
+     * @return false if the register was added correctly, else false
+     */
+    public boolean assegnaRegistro(Registro registro, Classe classe){
+        return false;
+    }
+    
 
     /**
      * Gets the single istance of this class
