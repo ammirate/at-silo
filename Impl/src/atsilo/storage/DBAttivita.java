@@ -10,12 +10,12 @@ public class DBAttivita extends DBBeans {
         super("Attivita",db);
     }
     
-    public Attivita ricercaAttivitaTitolo(String titolo){
+    public Attivita ricercaAttivitaPerTitolo(String titolo){
         Attivita a;
         return a;
     }
     
-    public Attivita ricercaAttivitaCategoria(String cat){
+    public Attivita ricercaAttivitaPerCategoria(String cat){
         Attivita a;
         return a;
     }
@@ -29,6 +29,8 @@ public class DBAttivita extends DBBeans {
         Registro p;
         return p;
     }
+    
+    public String visualizzaDescizioneAttivita(Attivita a){} //aggiunto
     
 
 }
