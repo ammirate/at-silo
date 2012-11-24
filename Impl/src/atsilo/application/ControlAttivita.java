@@ -1,4 +1,4 @@
-package application;
+package atsilo.application;
 
 import atsilo.entity.*;
 
