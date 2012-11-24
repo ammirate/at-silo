@@ -28,6 +28,16 @@ else if (nf.equals("cancella_programma.jsp"))
 	out.println("<title>Cancella programma didattico</title>");
 else if (nf.equals("storico_registro_ped.jsp"))
 	out.println("<title>Storico Registro Psicopedagogo</title>");
+else if (nf.equals("storico_pagamenti.jsp"))
+	out.println("<title>Storico Pagamenti</title>");
+else if (nf.equals("fattura_mensile.jsp"))
+	out.println("<title>Fattura Mensile</title>");
+else if (nf.equals("servizi_attivi.jsp"))
+	out.println("<title>Servizi Attivi</title>");
+else if (nf.equals("modifica_orario.jsp"))
+	out.println("<title>Modifica Orario</title>");
+else if (nf.equals("modifica_pasti.jsp"))
+	out.println("<title>Modifica Pasti</title>");
 
 %>
 <!-- Contents -->
