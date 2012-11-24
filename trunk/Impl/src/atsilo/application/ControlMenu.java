@@ -1,4 +1,4 @@
-package application;
+package atsilo.application;
 
 import atsilo.entity.MenuMensa;
 import java.sql.Date;
@@ -26,7 +26,7 @@ private static final ControlMenu cm;
          return false;
          
      }
-     public MenuMensa eliminaMenù (MenuMensa m){
+     public MenuMensa eliminaMenï¿½ (MenuMensa m){
        return null;  
      }
      public List<MenuMensa> ricercaMenu (MenuMensa m){
