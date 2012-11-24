@@ -7,7 +7,7 @@
       <x>270</x>
       <y>0</y>
       <w>549</w>
-      <h>927</h>
+      <h>783</h>
     </coordinates>
     <panel_attributes>Gestione iscritti
 bg=orange</panel_attributes>
@@ -109,8 +109,8 @@ sistema</panel_attributes>
     <coordinates>
       <x>144</x>
       <y>36</y>
-      <w>243</w>
-      <h>180</h>
+      <w>251</w>
+      <h>188</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>27;171;234;27</additional_attributes>
@@ -153,8 +153,8 @@ sistema</panel_attributes>
     <coordinates>
       <x>495</x>
       <y>36</y>
-      <w>207</w>
-      <h>63</h>
+      <w>215</w>
+      <h>71</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -165,8 +165,8 @@ sistema</panel_attributes>
     <coordinates>
       <x>495</x>
       <y>63</y>
-      <w>207</w>
-      <h>81</h>
+      <w>215</w>
+      <h>89</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -486,75 +486,5 @@ Classe</panel_attributes>
     <panel_attributes>lt=&lt;.
 &lt;&lt;extends&gt;&gt;</panel_attributes>
     <additional_attributes>27;342;198;27</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.UseCase</type>
-    <coordinates>
-      <x>378</x>
-      <y>783</y>
-      <w>153</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Modifica certificati
-iscrizione
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>144</x>
-      <y>180</y>
-      <w>251</w>
-      <h>638</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>234;621;27;27</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>504</x>
-      <y>405</y>
-      <w>242</w>
-      <h>404</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>27;387;225;27</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.UseCase</type>
-    <coordinates>
-      <x>378</x>
-      <y>837</y>
-      <w>144</w>
-      <h>36</h>
-    </coordinates>
-    <panel_attributes>Convalida iscriziome</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>144</x>
-      <y>189</y>
-      <w>251</w>
-      <h>674</h>
-    </coordinates>
-    <panel_attributes/>
-    <additional_attributes>234;657;27;27</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>495</x>
-      <y>405</y>
-      <w>260</w>
-      <h>458</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
-    <additional_attributes>27;441;243;27</additional_attributes>
   </element>
 </diagram>
