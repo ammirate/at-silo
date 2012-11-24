@@ -73,7 +73,8 @@ public abstract class DBBeans<B> {
      * @throws IllegalArgumentException 
      */
     public boolean inserisci(B realBeans) throws IllegalArgumentException, IllegalAccessException
-    {
+    {   
+        
         B temp=realBeans;
         ArrayList<String> valori=new ArrayList<String>();
         Map<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
@@ -84,13 +85,39 @@ public abstract class DBBeans<B> {
             String contenuto_variabile = getFieldFromBean(temp, nome_variabile).toString();
              valori.add(contenuto_variabile);
         }
-
         if (tabella.insert(valori))
+            return true;
+        return false;
+    }
+    
+    /**Controlla se il bean è presente nella tabella
+     * @param realBeans oggetto di cui controllare la presenza nella tabella
+     * @return true se oggetto presente
+     *         false altrimenti
+     */
+    public boolean isInTable(B realBeans) {
+        B temp=realBeans;
+        ArrayList<String> contenuto_chiavi=new ArrayList<String>();
+        Iterator<String> nome_variabili_chiave = getKeyFields().iterator();// ottengo un iteratore dei nomi delle variabili corrispondenti alle PRIMARY KEY
+        while (nome_variabili_chiave.hasNext()){//scorro tutti i nomi di variabili chiave
+            try {
+                contenuto_chiavi.add(getFieldFromBean(temp, nome_variabili_chiave.next()).toString());
+            } catch (IllegalArgumentException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (IllegalAccessException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }//aggiungo il contenuto di una variabile chiave  
+        }
+       
+        ArrayList<ArrayList<String>> result = tabella.selezione(null, getKeyFields(), contenuto_chiavi);//select * from tabella where chiave=contenutoChiave
+        if (result.size()!=0)
             return true;
         return false;
         
     }
-    
+
     /**
      * Metodo che legge un campo di nome nomeCampo da un oggetto Java realBean
      * @param realBean
@@ -132,6 +159,7 @@ public abstract class DBBeans<B> {
      * @throws IllegalArgumentException 
      */
     public  boolean replace(B realBeans,B newRealBeans) throws IllegalArgumentException, IllegalAccessException{
+        if (isInTable(realBeans)){
         B temp_old = realBeans;
         B temp_new=newRealBeans;
         boolean cancAvvenuta=false;
@@ -142,15 +170,22 @@ public abstract class DBBeans<B> {
             insAvvenuto=true;
         if (cancAvvenuta && insAvvenuto)
             return true;
-        if (!cancAvvenuta)
-            inserisci(temp_old);//inserisco di nuovo l'oggetto eliminato
+        if (cancAvvenuta && !insAvvenuto) // è avvenuta cancellazione ma l'inserimento non è andato a buon fine
+            inserisci(temp_old);//inserisco di nuovo l'oggetto eliminato in precedenza
+        if (!cancAvvenuta && insAvvenuto) //non è avvenuta cancellazione e l'inserimento  è andato a buon fine
+            delete(temp_new);//elimino dal database newRealBeans poiche' non ha sostituito realBeans
         LOG.log(Level.SEVERE, "Replace non andato a buon fine");
       return false;
+        }
+        else{ 
+            LOG.log(Level.SEVERE, "Non è possibile effettuare la replace perchè l'oggetto da sostituire non è presente nella tabella");
+            return false;
+            }
         
     }
     
     /**
-     * Cancella una beans dal database
+     * Cancella una beans dal database riferendosi alla PRIMARY KEY
      * @param RealBeans bean da cancellare
      * @return true in caso di successo
      *         false altrimenti
@@ -160,20 +195,9 @@ public abstract class DBBeans<B> {
     public  boolean delete(B realBeans) throws  IllegalArgumentException, IllegalAccessException{
         B temp=realBeans;
         ArrayList<String> contenuto_chiavi=new ArrayList<String>();
-        Map<String,String> toReturn= getMappingFields();//ottengo hashmap variabile-attributo database
-        Set<String> variabili = toReturn.keySet();//ottengo un Set delle variabili
-        Iterator<String> iterator_variabili = variabili.iterator();
-        Iterator<String> nome_variabili_chiave = getKeyFields().iterator();
-        //nei seguenti while confronto i nomi di tutte le variabile con quelle chiave e quando 
-        //corrisponde prendo il valore della variabile e lo aggiungo a contenuto_chiavi
-        while( iterator_variabili.hasNext()){//scorro tutti i nomi di variabili
-            String valore_variabile_corrispondente = null;
-            while (nome_variabili_chiave.hasNext()){//scorro tutti i nomi di variabili chiave
-                String nome_variabile_attuale = iterator_variabili.next();
-                if ( nome_variabile_attuale.equals(nome_variabili_chiave.next()))//se nome variabile attuale == nome variabile chiave
-                    valore_variabile_corrispondente =  getFieldFromBean(temp, nome_variabile_attuale).toString();
-            }
-            contenuto_chiavi.add(valore_variabile_corrispondente);//aggiungo il contenuto di una variabile chiave
+        Iterator<String> nome_variabili_chiave = getKeyFields().iterator();// ottengo un iteratore dei nomi delle variabili corrispondenti alle PRIMARY KEY
+        while (nome_variabili_chiave.hasNext()){//scorro tutti i nomi di variabili chiave
+            contenuto_chiavi.add(getFieldFromBean(temp, nome_variabili_chiave.next()).toString());//aggiungo il contenuto di una variabile chiave  
         }
        if( tabella.rimuovi(getKeyFields(), contenuto_chiavi))
             return true;

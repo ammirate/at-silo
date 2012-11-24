@@ -56,7 +56,6 @@ public class Tabella implements ManagerDB {
                     query = query+" from "+nomeTabella+" limit 1;"; //uso limit1 in modo da selezionare al massimo una tupla
                     try{
                             tipo =  new ArrayList<String>();
-                            logger.info("query da eseguire:"+query);
                             result= db.eseguiQueryRS(query);    
                             resMetaData = result.getMetaData();
                             String tipoSpecifico = "OBJECT";
@@ -193,7 +192,7 @@ public class Tabella implements ManagerDB {
                         else
                                 query=query+valori.get(i);
                         query=query+")";
-
+                        
                         return db.eseguiQueryB(query);
                 }else{
                 logger.warning("ERRORE Database non aperto");
