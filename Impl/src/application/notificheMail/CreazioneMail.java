@@ -4,8 +4,8 @@
  * Classe CreazioneMail
  * 
  * <Descrizione classe>
+ *  crea un email con un oggetto destinatariio e testo generico
  * 
- * classe che dato il destinatario ogetto e il testo dell'email la crea e la invia.
  * @author Gianfranco Bottiglieri
  * 
  */
@@ -23,6 +23,17 @@ import javax.mail.internet.MimeMessage;
 public class CreazioneMail {
     
     //Metodi
+    /**
+     * metodo che crea e invia un email 
+     * @param dest
+     * destinatario email
+     * @param oggetto
+     * oggetto dell'email 
+     * @param testoEmail
+     * testo dell'email
+     * @throws MessagingException
+     * @throws Throwable
+     */
     public static void inviaMail(String dest, String oggetto,String testoEmail) throws MessagingException, Throwable {
         
         // Creazione di una mail session
