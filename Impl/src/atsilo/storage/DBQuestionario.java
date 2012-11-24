@@ -2,6 +2,7 @@ package atsilo.storage;
 
 import atsilo.entity.Questionario;
 import java.util.Date;
+import java.util.List;
 public class DBQuestionario extends DBBeans
 {
     Tabella tabella;
@@ -16,7 +17,7 @@ public class DBQuestionario extends DBBeans
     public void ModificaPeriodoFine(Date d){}
     
 
-    public List<Questionario> ricercaQuestionariPerPeriodoInizio (Deta d){}
-    public List<Questionario> ricercaQuestionarioPerPeriodoFine(Deta d) {}
-    public Questionario ricercaQuestionarioPerNome(String nome){}
+    public List<Questionario> ricercaQuestionariPerPeriodoInizio (Date d){}
+    public List<Questionario> ricercaQuestionarioPerPeriodoFine(Date d) {}
+    public List<Questionario> ricercaQuestionarioPerNome(String nome){}
 }
