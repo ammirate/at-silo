@@ -13,7 +13,7 @@ import atsilo.entity.Utente;
 /**
  * Classe MessaggioLicenziamento
  * <Descrizione classe>
- * 
+ * classe che invia ad membro o membri del Personale dell'Asilo,un email che gli notifica l'avvenuto licenziamento.
  * @author Gianfranco Bottiglieri
  * 
  */
@@ -29,9 +29,6 @@ public class NotificaLicenziamento implements Messaggio{
     
     /**
      * @param destinatari
-     * @param destinatario
-     * @param oggetto
-     * @param testo
      */
     public NotificaLicenziamento(ArrayList<Utente> destinatari) 
     {
@@ -41,7 +38,7 @@ public class NotificaLicenziamento implements Messaggio{
     
     
     //Metodi
-    public void invia() throws MessagingException, Throwable
+    public void invia() throws Throwable
     {
         String emailDest="";
         String oggetto="";
@@ -54,7 +51,18 @@ public class NotificaLicenziamento implements Messaggio{
             testo="Caro Signore/a "+utente.getNome() +" "+utente.getCognome()+" n la informiamo con nostro dispiacere che è stato\\a " +
             		"licenziato  per ulteriori informazioni contatti la segreteria. \n NON RISPONDA A QUESTA EMAIL";
             
-            CreazioneMail.inviaMail(emailDest,oggetto, testo);
+            try 
+            {
+                    CreazioneMail.inviaMail(emailDest,oggetto, testo);
+                    System.out.println("Invio messaggio OK!");
+            } 
+                    catch (MessagingException e) 
+                    {
+                            e.printStackTrace();
+                            System.out.println("Invio messaggio FALLITO!");
+                    }
+
+            
         }
         
     }

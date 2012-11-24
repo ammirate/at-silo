@@ -4,7 +4,6 @@
  */
 package application.notificheMail;
 
-import javax.mail.MessagingException;
 
 /**
  * Classe Messaggio
@@ -14,6 +13,6 @@ import javax.mail.MessagingException;
  * 
  */
 public interface Messaggio {
-    void invia() throws MessagingException, Throwable;
+    void invia()throws Throwable;
     
 }
