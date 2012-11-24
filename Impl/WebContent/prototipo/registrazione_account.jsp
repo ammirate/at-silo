@@ -62,7 +62,7 @@ include file="atsilo_files/sidebar_index.jsp"
             <td><strong>N.B. A questo indirizzo di posta elettronica verranno inviate le credenziali di accesso</strong></td></tr>
           <tr> 
         	<td></td>
-       	 	<td><input type="submit" name="invia" value="Registrati"  onclick="parent.location.href='dati_account.jsp'" />
+       	 	<td><input type="submit" name="invia" value="Registrati"  onclick="parent.location.href='dati_account_genitore.jsp'" />
                 <input type="reset" name="reset" value="Reset" />
             </td>
           </tr>
@@ -80,7 +80,7 @@ include file="atsilo_files/sidebar_index.jsp"
 <td>
 <table cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td class="tplTitolo"><b> <%=messaggio %></b></td>
+<td class="tplTitolo"><b> </b></td>
 </tr>
 </tbody></table>
 </td>
@@ -103,13 +103,11 @@ include file="atsilo_files/sidebar_index.jsp"
 <td class="tplHeader"></td>
 </tr>
 </tbody></table>
-</td><td class="fasciadxvariabile"></td>
-</tr>
-<tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
-</tr>
-</tbody></table>
-<% RegistrazioneUtente() %>
+</td>
+<%@
+include file="atsilo_files/footer.jsp"
+ %>
+
 
 </body>
 </html>
