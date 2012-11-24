@@ -1,0 +1,158 @@
+<mockup version="1.0" skin="sketch" measuredW="1416" measuredH="1804" mockupW="1356" mockupH="1784">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="60" y="20" w="1119" h="624" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@SiLo%20-%20Visualizzazione%20Eventi%0Ahttp%3A//www.unisa.it/vivere_il_campus/asilo/</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="75" y="97" w="232" h="132" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="307" y="267" w="824" h="328" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Title" x="481" y="138" w="444" h="-1" measuredW="279" measuredH="50" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Bacheca%20Eventi%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::List" x="60" y="262" w="208" h="141" measuredW="100" measuredH="126" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>1</selectedIndex>
+        <text>...%0AEventi%0A...</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::ButtonBar" x="315" y="240" w="825" h="29" measuredW="217" measuredH="29" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Ultimi%20Eventi%2CCerca%20Evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="450" y="711" w="800" h="539" measuredW="450" measuredH="400" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>@silo%20-%20Dettagli%20Evento%20-%20Titolo%20dell%27evento%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Title" x="751" y="814" w="444" h="-1" measuredW="115" measuredH="50" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Eventi</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::FieldSet" x="697" y="950" w="434" h="90" measuredW="200" measuredH="170" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20Evento%2C%20Testo%20dell%27evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Calendar" x="626" y="326" w="203" h="210" measuredW="96" measuredH="96" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Arrow" x="795" y="519" w="186" h="207" measuredW="150" measuredH="100" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::FieldSet" x="697" y="1045" w="434" h="90" measuredW="200" measuredH="170" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20Evento%2C%20Testo%20dell%27evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Title" x="751" y="855" w="444" h="-1" measuredW="216" measuredH="50" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>29/11/2008</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::RoundButton" x="770" y="501" w="32" h="27" measuredW="32" measuredH="32" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::List" x="472" y="950" w="208" h="141" measuredW="100" measuredH="126" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <markup>true</markup>
+        <selectedIndex>1</selectedIndex>
+        <text>...%0AEventi%0A...</text>
+      </controlProperties>
+    </control>
+    <control controlID="19" controlTypeID="com.balsamiq.mockups::Image" x="460" y="799" w="232" h="132" measuredW="77" measuredH="79" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>https%3A//at-silo.googlecode.com/svn/trunk/atsilo3/logo1.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="20" controlTypeID="com.balsamiq.mockups::Button" x="828" y="1159" w="-1" h="-1" measuredW="153" measuredH="27" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Inserisci%20Nuovo%20evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::Button" x="1136" y="973" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Button" x="1139" y="1007" w="-1" h="-1" measuredW="73" measuredH="27" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancella</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::Button" x="1143" y="1058" w="-1" h="-1" measuredW="70" measuredH="27" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Modifica</text>
+      </controlProperties>
+    </control>
+    <control controlID="25" controlTypeID="com.balsamiq.mockups::Button" x="1142" y="1094" w="-1" h="-1" measuredW="73" measuredH="27" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Cancella</text>
+      </controlProperties>
+    </control>
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::CoverFlow" x="441" y="303" w="573" h="248" measuredW="493" measuredH="198" zOrder="21" locked="false" isInGroup="-1"/>
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Canvas" x="872" y="1366" w="544" h="438" measuredW="100" measuredH="70" zOrder="22" locked="false" isInGroup="-1"/>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::Button" x="892" y="1717" w="101" h="34" measuredW="155" measuredH="27" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Crea%20nuovo%20argomento</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::TextArea" x="892" y="1470" w="509" h="228" measuredW="200" measuredH="140" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Corpo%20dell%27argomento</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::SubTitle" x="888" y="1373" w="42" h="-1" measuredW="64" measuredH="33" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo</text>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::FormattingToolbar" x="892" y="1426" w="509" h="-1" measuredW="270" measuredH="29" zOrder="26" locked="false" isInGroup="-1"/>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::TextInput" x="938" y="1373" w="462" h="-1" measuredW="112" measuredH="27" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Titolo%20dell%27evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Button" x="1359" y="1717" w="41" h="34" measuredW="63" measuredH="27" zOrder="28" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Annulla</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Arrow" x="940" y="1159" w="186" h="207" measuredW="150" measuredH="100" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.75</backgroundAlpha>
+        <direction>top</direction>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::TextInput" x="938" y="1400" w="106" h="-1" measuredW="77" measuredH="27" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>CC%20evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextInput" x="1059" y="1400" w="106" h="-1" measuredW="84" measuredH="27" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Tipo%20evento</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::StickyNote" x="770" y="545" w="247" h="155" measuredW="109" measuredH="123" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>L%27event%20planner%20visuallizzando%20i%20dettagli%20degli%20eventi%20%0Apu%F2%20anche%20modificarli%20o%20cancellarli.%0AL%27event%20planner%20pu%F2%20anche%20inserire%20un%20nuovo%20evento.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
