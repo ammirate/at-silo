@@ -38,7 +38,42 @@ else if (nf.equals("modifica_orario.jsp"))
 	out.println("<title>Modifica Orario</title>");
 else if (nf.equals("modifica_pasti.jsp"))
 	out.println("<title>Modifica Pasti</title>");
+else if (nf.equals("stato_pagamenti.jsp"))
+	out.println("<title>Stato Pagamenti</title>");
+else if (nf.equals("fattura_pagamenti.jsp"))
+	out.println("<title>Fattura Pagamenti</title>");
+else if (nf.equals("registro_pagamenti.jsp"))
+	out.println("<title>Registra Pagamento</title>");
+else if (nf.equals("extra.jsp"))
+	out.println("<title>Extra</title>");
+else if (nf.equals("modifica_orario_servizio.jsp"))
+	out.println("<title>Modifica Orario</title>");
+else if (nf.equals("modifica_piano_pasto.jsp"))
+	out.println("<title>Modifica Piano Pasto</title>");
+else if (nf.equals("visualizza_orario_servizi.jsp"))
+	out.println("<title>Visualizza Orario</title>");
+else if (nf.equals("approva_richieste.jsp"))
+	out.println("<title>Approva Richieste</title>");
+else if (nf.equals("visualizza_tirocinanti.jsp"))
+	out.println("<title>Visualizza Tirocinanti</title>");
+else if (nf.equals("richieste_tirocinanti.jsp"))
+	out.println("<title>Richiedi Tirocinante</title>");
+else if (nf.equals("inserimento_giudizio_tirocinante.jsp"))
+	out.println("<title>Giudizio Tirocinante</title>");	
+else if (nf.equals("inserisci_tirocinante.jsp"))
+	out.println("<title>Inserisci Tirocinante</title>");	
+else if (nf.equals("modifica_tirocinante.jsp"))
+	out.println("<title>Modifica Tirocinante</title>");	
+else if (nf.equals("approva_tirocinante.jsp"))
+	out.println("<title>Approva Tirocinante</title>");	
+else if (nf.equals("inserisci_fascia_oraria.jsp"))
+	out.println("<title>Inserisci Fascia Oraria</title>");	
+else if (nf.equals("modifica_fascia_oraria.jsp"))
+	out.println("<title>Modifica Fascia Oraria</title>");	
+else if (nf.equals("cancella_fascia_oraria.jsp"))
+	out.println("<title>Cancella Fascia Oraria</title>");	
 
+	
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
