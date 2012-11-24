@@ -28,7 +28,7 @@
         <text>Ultimi%20Eventi%2CCerca%20Evento</text>
       </controlProperties>
     </control>
-    <control controlID="75" controlTypeID="com.balsamiq.mockups::Arrow" x="811" y="476" w="177" h="220" measuredW="150" measuredH="100" zOrder="25" locked="false" isInGroup="-1">
+    <control controlID="75" controlTypeID="com.balsamiq.mockups::Arrow" x="810" y="503" w="178" h="193" measuredW="150" measuredH="100" zOrder="31" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.75</backgroundAlpha>
         <direction>top</direction>
@@ -119,39 +119,44 @@
         <text>Home%0AAttivit%E0%20Didattiche%0AEventi%0AQuestionari%0APagamenti%0AForum</text>
       </controlProperties>
     </control>
-    <control controlID="101" controlTypeID="com.balsamiq.mockups::Calendar" x="639" y="314" w="203" h="210" measuredW="96" measuredH="96" zOrder="22" locked="false" isInGroup="-1"/>
-    <control controlID="102" controlTypeID="com.balsamiq.mockups::Calendar" x="450" y="351" w="145" h="150" measuredW="96" measuredH="96" zOrder="23" locked="false" isInGroup="-1"/>
-    <control controlID="103" controlTypeID="com.balsamiq.mockups::Calendar" x="893" y="351" w="145" h="150" measuredW="96" measuredH="96" zOrder="24" locked="false" isInGroup="-1"/>
-    <control controlID="104" controlTypeID="com.balsamiq.mockups::FieldSet" x="697" y="1045" w="434" h="90" measuredW="200" measuredH="170" zOrder="26" locked="false" isInGroup="-1">
+    <control controlID="104" controlTypeID="com.balsamiq.mockups::FieldSet" x="697" y="1045" w="434" h="90" measuredW="200" measuredH="170" zOrder="22" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Titolo%20Evento%2C%20Testo%20dell%27evento</text>
       </controlProperties>
     </control>
-    <control controlID="105" controlTypeID="com.balsamiq.mockups::Title" x="751" y="855" w="444" h="-1" measuredW="218" measuredH="50" zOrder="27" locked="false" isInGroup="-1">
+    <control controlID="105" controlTypeID="com.balsamiq.mockups::Title" x="751" y="855" w="444" h="-1" measuredW="216" measuredH="50" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>23/11/2008</text>
+        <text>29/11/2008</text>
       </controlProperties>
     </control>
-    <control controlID="106" controlTypeID="com.balsamiq.mockups::RoundButton" x="796" y="462" w="32" h="27" measuredW="32" measuredH="32" zOrder="28" locked="false" isInGroup="-1">
+    <control controlID="106" controlTypeID="com.balsamiq.mockups::RoundButton" x="796" y="462" w="32" h="27" measuredW="32" measuredH="32" zOrder="24" locked="false" isInGroup="-1">
       <controlProperties>
         <backgroundAlpha>0.5</backgroundAlpha>
         <text/>
       </controlProperties>
     </control>
-    <control controlID="107" controlTypeID="com.balsamiq.mockups::IconLabel" x="1154" y="1056" w="-1" h="-1" measuredW="81" measuredH="69" zOrder="29" locked="false" isInGroup="-1">
+    <control controlID="107" controlTypeID="com.balsamiq.mockups::IconLabel" x="1154" y="1056" w="-1" h="-1" measuredW="81" measuredH="69" zOrder="25" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Icona%20Evento</text>
       </controlProperties>
     </control>
-    <control controlID="108" controlTypeID="com.balsamiq.mockups::StickyNote" x="1154" y="819" w="209" h="123" measuredW="109" measuredH="123" zOrder="30" locked="false" isInGroup="-1">
+    <control controlID="108" controlTypeID="com.balsamiq.mockups::StickyNote" x="1139" y="827" w="209" h="123" measuredW="109" measuredH="123" zOrder="26" locked="false" isInGroup="-1">
       <controlProperties>
         <text>L%27utente%20del%20sistema%0Ase%20non%20%E8%20un%20event%20planner%20pu%F2%20solamente%20visualizzare%20gli%20eventi%20e%20i%20loro%20dettagli</text>
       </controlProperties>
     </control>
-    <control controlID="109" controlTypeID="com.balsamiq.mockups::StickyNote" x="835" y="525" w="209" h="146" measuredW="109" measuredH="123" zOrder="31" locked="false" isInGroup="-1">
+    <control controlID="109" controlTypeID="com.balsamiq.mockups::StickyNote" x="835" y="525" w="209" h="146" measuredW="109" measuredH="123" zOrder="27" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Selezionando%20un%20giorno%20nel%20calendario%0Al%27utente%20del%20sistema%20visualizza%20i%20dettagli%20degli%20eventi%0Adella%20giornata%20selezionata</text>
       </controlProperties>
     </control>
+    <control controlID="110" controlTypeID="com.balsamiq.mockups::Calendar" x="634" y="312" w="203" h="210" measuredW="96" measuredH="96" zOrder="28" locked="false" isInGroup="-1"/>
+    <control controlID="111" controlTypeID="com.balsamiq.mockups::RoundButton" x="778" y="487" w="32" h="27" measuredW="32" measuredH="32" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <backgroundAlpha>0.5</backgroundAlpha>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="112" controlTypeID="com.balsamiq.mockups::CoverFlow" x="449" y="289" w="573" h="248" measuredW="493" measuredH="198" zOrder="30" locked="false" isInGroup="-1"/>
   </controls>
 </mockup>
