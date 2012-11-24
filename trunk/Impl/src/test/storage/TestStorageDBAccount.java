@@ -120,12 +120,12 @@ public class TestStorageDBAccount {
          */
         bando=new Bando();
        
-       bando.setiD(99);
+       bando.setiD(85);
        bando.setDataInizio("2011-10-20");
        bando.setDataFine("2012-09-20");
       Bando bando2 = new Bando();
       
-      bando2.setiD(85);
+      bando2.setiD(15);
       bando2.setDataInizio("2000-10-20");
       bando2.setDataFine("2000-09-20");
       gestoreBando = new DBBando("Bando", database);
