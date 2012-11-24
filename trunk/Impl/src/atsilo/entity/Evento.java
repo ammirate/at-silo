@@ -7,6 +7,10 @@ public class Evento {
 
     private String Descrizione;
     private String Nome;
+    private List<String> CC;
+    private Date data;
+    private String Tipo;
+   // private 
     
     /**
      * @attribute Data di tipo DATE
@@ -104,5 +108,29 @@ public class Evento {
      */
     public EventPlanner getOrganizzatore() {
         return organizzatore;
+    }
+
+    public void setCC(List<String> CC) {
+        this.CC = CC;
+    }
+
+    public List<String> getCC() {
+        return CC;
+    }
+
+    public void setData1(Date data) {
+        this.data = data;
+    }
+
+    public Date getData1() {
+        return data;
+    }
+
+    public void setTipo(String Tipo) {
+        this.Tipo = Tipo;
+    }
+
+    public String getTipo() {
+        return Tipo;
     }
 }
