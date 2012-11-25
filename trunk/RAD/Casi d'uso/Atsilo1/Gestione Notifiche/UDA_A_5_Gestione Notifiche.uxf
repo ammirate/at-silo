@@ -79,7 +79,7 @@ sistema</panel_attributes>
       <h>404</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>126;27;27;387</additional_attributes>
   </element>
   <element>
@@ -109,11 +109,11 @@ sistema</panel_attributes>
     <coordinates>
       <x>585</x>
       <y>270</y>
-      <w>122</w>
+      <w>116</w>
       <h>305</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>81;27;45;288</additional_attributes>
   </element>
   <element>
@@ -121,11 +121,11 @@ sistema</panel_attributes>
     <coordinates>
       <x>549</x>
       <y>351</y>
-      <w>122</w>
+      <w>116</w>
       <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>45;27;81;207</additional_attributes>
   </element>
   <element>
@@ -137,7 +137,7 @@ sistema</panel_attributes>
       <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;27;144;153</additional_attributes>
   </element>
   <element>
