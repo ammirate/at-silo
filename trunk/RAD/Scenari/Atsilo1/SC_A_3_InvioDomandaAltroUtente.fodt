@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-16T14:31:57.74</meta:creation-date><meta:editing-duration>PT4S</meta:editing-duration><meta:editing-cycles>8</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-19T12:32:52.59</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="13" meta:word-count="327" meta:character-count="2050" meta:non-whitespace-character-count="1739"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-16T14:31:57.74</meta:creation-date><meta:editing-duration>PT4S</meta:editing-duration><meta:editing-cycles>9</meta:editing-cycles><meta:generator>LibreOffice/3.6$MacOSX_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-25T19:22:12</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="13" meta:word-count="242" meta:character-count="1463" meta:non-whitespace-character-count="1237"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">847</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">10250</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">26883</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">13548</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">28804</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">13097</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">13607</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">3087</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">17247</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">15367</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">847</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">26882</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">14393</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">10250</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">28803</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">23345</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1822778</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1840118</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -252,17 +252,23 @@
   <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties fo:color="#000000" style:text-line-through-style="none" style:font-name="Times New Roman" fo:font-size="12pt" style:text-underline-style="none" style:font-name-asian="Times New Roman1" style:font-size-asian="12pt" style:font-name-complex="Times New Roman1" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
-  </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
-  </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1"/>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:paragraph-rsid="001bd03a"/>
   </style:style>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
+  </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
+  </style:style>
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties officeooo:rsid="001bd03a" officeooo:paragraph-rsid="001bd03a"/>
+  </style:style>
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1"/>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:text-properties fo:color="#000000" style:text-line-through-style="none" style:font-name="Times New Roman" fo:font-size="12pt" style:text-underline-style="none" style:font-name-asian="Times New Roman1" style:font-size-asian="12pt" style:font-name-complex="Times New Roman1" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
    <style:paragraph-properties fo:margin-left="2.501cm" fo:margin-right="0cm" fo:text-indent="-0.635cm" style:auto-text-indent="false"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
@@ -346,7 +352,7 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:p text:style-name="P3"/>
+   <text:p text:style-name="P4"/>
    <table:table table:name="Tabella9" table:style-name="Tabella9">
     <table:table-column table:style-name="Tabella9.A"/>
     <table:table-column table:style-name="Tabella9.B"/>
@@ -355,7 +361,7 @@
       <text:p text:style-name="Text_20_body">Nome scenario:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B1" office:value-type="string">
-      <text:p text:style-name="P6"><text:span text:style-name="T3">Invio domanda altro utente.</text:span></text:p>
+      <text:p text:style-name="P6">Invio domanda altro utente.</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella9.2">
@@ -371,27 +377,27 @@
       <text:p text:style-name="Text_20_body">Flusso degli eventi </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.B2" office:value-type="string">
-      <text:list xml:id="list32432657" text:style-name="L1">
+      <text:list xml:id="list1817480760" text:style-name="L1">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P5"><text:s/>Luca, dipendente presso le poste italiane di Fisciano, ma residente presso il comune di Baronissi, visto il suo orario lavorativo e visto il suo andare ogni giorno a lavoro viene a sapere leggendo sul sito dell&apos;università che se non si aggiunge un certo numero di iscritti all&apos;asilo nido gestito dall&apos;ateneo può chiedere l&apos;iscrizione del figlio di due anni.</text:p>
+        <text:p text:style-name="P7"><text:s/>Luca, dipendente presso le poste italiane di Fisciano, ma residente presso il comune di Baronissi, visto il suo orario lavorativo e visto il suo andare ogni giorno a lavoro viene a sapere leggendo sul sito dell&apos;università che se non si aggiunge un certo numero di iscritti all&apos;asilo nido gestito dall&apos;ateneo può chiedere l&apos;iscrizione del figlio di due anni.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">Luca accende il computer, accede alla pagina di Login del sistema e clicca sul tasto per accedere alla pagina della compilazione del form per le iscrizioni.</text:p>
+        <text:p text:style-name="P7">Luca accende il computer, accede alla pagina di Login del sistema e clicca sul tasto per accedere alla pagina della compilazione del form per le iscrizioni.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P7">Il sistema apre mostra la pagina richiesta.</text:p>
+        <text:p text:style-name="P9">Il sistema apre mostra la pagina richiesta.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5"><text:s/>Luca inizia a compilare il modulo inserendo prima di tutto se è padre, madre, tutore o affidatario. Procede inserendo i propri dati (Nome, cognome, C F, data di nascita, indirizzo, telefono ed email). Dichiara in che comune è residente e dove lavora, in più deve indicare i rapporti che ha con l&apos;università o col comune di Fisciano. Inserisce dati del bambino, se il bambino ha già frequentato negli anni precedenti, i dati del bambino e che tipo di fascia utenze sceglie (<text:span text:style-name="T2">full time dalle ore 8,30 alle ore 16,30 comprensiva dei pasti, </text:span><text:span text:style-name="T1">part-time mattutina dalle ore 8,30 alle ore 13,30 comprensiva dei pasti, <text:s/>part-time mattutina dalle ore 8,30 alle ore 12,00 senza somministrazione del pasto e part-time pomeridiana dalle ore 13,30 alle ore 16,30 senza somministrazione del pasto). Compila i dati del genitore non richiedente barrando su “padre” o “madre” e continua compilando gli stessi dati anagrafici precedenti. Scorrendo il documento Luca deve indicare se ci sono particolari situazioni all&apos;interno della sua famiglia: sanitari, sociali come divorzio, bambino diversamente abile, invalidità genitore. Infine deve compilare la sua situazione reddituale.</text:span></text:p>
+        <text:p text:style-name="P7"><text:s/>Luca inizia a compilare il modulo inserendo prima di tutto se è padre, madre, tutore o affidatario. Procede inserendo i propri dati (Nome, cognome, C F, data di nascita, indirizzo, telefono ed email). Dichiara in che comune è residente e dove lavora, in più deve indicare i rapporti che ha con l&apos;università o col comune di Fisciano. Inserisce dati del bambino, se il bambino ha già frequentato negli anni precedenti, i dati del bambino<text:span text:style-name="T1">. Compila i dati del genitore non richiedente barrando su “padre” o “madre” e continua compilando gli stessi dati anagrafici precedenti. </text:span></text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5"><text:span text:style-name="T1">Luca usa la funzione del sito “Invia modulo di iscrizione”.</text:span></text:p>
+        <text:p text:style-name="P8">Luca usa la funzione del sito “Invia modulo di iscrizione”.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5"><text:span text:style-name="T1">Il sito gli mostra la frase: “modulo inviato con successo. Le sarà spedita una mail per la conferma dell&apos;avvenuta consegna”.</text:span></text:p>
+        <text:p text:style-name="P8">Il sito gli mostra la frase: “modulo inviato con successo. Le sarà spedita una mail per la conferma dell&apos;avvenuta consegna”.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5"><text:span text:style-name="T1">Luca esce dal sistema.</text:span></text:p>
+        <text:p text:style-name="P8">Luca esce dal sistema.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
