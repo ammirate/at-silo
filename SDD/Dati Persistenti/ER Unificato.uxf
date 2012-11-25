@@ -1844,9 +1844,9 @@ fg=red
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>1395</x>
-      <y>260</y>
+      <y>250</y>
       <w>85</w>
-      <h>45</h>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Rappresentante
 Scienze della Formazione
