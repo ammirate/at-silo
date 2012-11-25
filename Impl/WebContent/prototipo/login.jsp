@@ -111,13 +111,12 @@
   <p>
     Tipologia utente
     <select name="tipologiaUtente">
-      <option value="genitore">Genitore</option>
+      <option value="genitore" selected="selected">Genitore</option>
       <option value="segreteria">Impiegato segreteria</option>
       <option value="educatore">Educatore</option>
       <option value="psicopedagogo">Psicopedagogo</option>
       <option value="resp_scfm">Resp. Scienze Formazione</option>
       <option value="delegato_rettore">Delegato del rettore</option>
-      S
     </select>
   </p>
   <p>
@@ -156,7 +155,7 @@
 </td><td class="fasciadxvariabile"></td>
 </tr>
 <tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
+<td class="bottom" width="209">&nbsp;2012 &copy; Unisa</td><td align="right" class="bottom"></td>
 </tr>
 </tbody></table>
 

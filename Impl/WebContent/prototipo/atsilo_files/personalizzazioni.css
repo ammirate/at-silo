@@ -4,6 +4,7 @@ template in cui sono state aggiunte gli stili aggiuntivi a quello iniziale
 /*AREA MENU terzo LIVELLO*/
 
 .menustep {
+	text-decoration:none;
 	background-color: #969696;
 	line-height: 27px;
 	padding-left:15px;
