@@ -2,8 +2,8 @@ package atsilo.application;
 
 import atsilo.entity.Utente;
 
-private class ControlLogin {
-    private static final ControlLogin ISTANCE;
+public class ControlLogin {
+    private static final ControlLogin INSTANCE;
 
     ControlLogin() {
     }
@@ -12,7 +12,7 @@ private class ControlLogin {
         return false;
     }
 
-    public static ControlLogin getIstance() {
+    public static ControlLogin getInstance() {
         return null;
         
     }
