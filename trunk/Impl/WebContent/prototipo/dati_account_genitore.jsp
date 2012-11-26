@@ -17,7 +17,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
     <tr>
-      <td><table cellspacing="0" cellpadding="0" border="0">
+      <td><table border="0">
         <tbody>
           <tr>
             <td class="tplTitolo"><form name="creazione_account" action="" method="post">

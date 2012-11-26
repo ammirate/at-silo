@@ -26,10 +26,6 @@
 	<link type="text/css" href="atsilo_files/template.css" rel="stylesheet">
 	<link type="text/css" href="atsilo_files/unisa.css" rel="stylesheet">
 	<link type="text/css" href="atsilo_files/personalizzazioni.css" rel="stylesheet"><!-- Stili personalizzati -->
-    
-    <%@ function Verifica(){ //Controlla credenziali e reindririzza ad index corrispondente 
-		
-	}%>
 </head>
 
 
@@ -99,7 +95,7 @@
 <tbody><tr>
 <td class="tplHeader">
 <div id="formLogin">
- <form id="login" name="login" method="post" action="">
+ <form id="login" name="login" method="post" action="servlet/control_login.jsp">
   <p>
     Username
     <input type="text" name="username_login">

@@ -14,46 +14,104 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
-<table cellspacing="10" cellpadding="0" border="0" width="100%">
-  <tbody>
+<form>
+  <table width="100%" border="0" cellspacing="0">
+  <tr>
+    <td colspan="4">Il/la bambino/a per la/il quale si chiede l'iscrizione è in situazione di disabilità (allegare, in busta chiusa, diagnosi funzionale del servizio di Neuro Psichiatria Infantile, ovvero certificazione ex L. 104/92 di presa in carico dell'Asl)</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
+     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+    
+  </tr>
     <tr>
-      <td><table cellspacing="0" cellpadding="0" border="0">
-        <tbody>
-          <tr>
-            <td class="tplTitolo"><b></b></td>
-            </tr>
-          </tbody>
-        </table></td>
-    </tr>
+    <td colspan="4">Il padre/la madre è in situazione di invalidità riconosciuta (con invalidità pari o superiore a 2/3 ai sensi dell'art. 3 Legge 104/92 o malattia permanente con grave riduzione delle funzioni psico/fisiche allegare in busta chiusa certificazione dell'Asl</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
+     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+  </tr>
+      <tr>
+    <td colspan="2">Il padre/la madre è genitore solo</td>
+     <td colspan="2">
+    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
+     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+  </tr>
+  <tr>
+    <td colspan="4" ><p>vedova/o 
+      <input id="vedovo" name="vedovo" type="checkbox">
+    </p>
+      <p>
+        nubile
+        <input id="vedovo" name="vedovo" type="checkbox">
+      </p>
+      <p>
+        separato/divorziato con affido del minore
+        <input id="vedovo" name="vedovo" type="checkbox">
+      </p>
+      <p>
+        genitore solo con figlio non riconosciuto dall'altro genitore
+        <input id="vedovo" name="vedovo" type="checkbox">
+      </p>
+      <p>genitore solo con figlio riconosciuto dall'altro genitore che non contribuisce né all'educazione, né al mantenimento, in possesso di dichiarazione di "affido esclusivo"
+        <input id="vedovo" name="vedovo" type="checkbox">
+      </p></td>
+   
+  </tr>
+  
+  
+  <tr>
+    <td>&nbsp; </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="4"><label for="altriinvalidi_1">Altri componenti il nucleo familiare (figli) con disabilità/invalidità (allegare, in busta chiusa, certificazione dell'Asl) </label>
+      <br></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
+     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+  </tr>
+  <tr>
+    <td colspan="4"><label for="altrifisglinido_1">Richiesta inserimento contemporaneo di più figli al nido </label>
+      <br></td>
+      
+  </tr>
+  <tr>
+  <td colspan="2">
+    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
+     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+  </tr>
+  <tr>
+    <td colspan="2">ALTRE CONDIZIONI RILEVANTI AI FINI DEL PUNTEGGIO</td>
+    <td colspan="1"><textarea name="altre_condizioni" cols="100" rows="5"></textarea></td>
+  </tr>
     <tr>
-      <td><table cellspacing="0" cellpadding="0" border="0">
-        <tbody>
-          <tr>
-            <td><table width="598" cellspacing="0" cellpadding="0" border="0">
-            </table></td>
-          </tr>
-          <tr>
-            <td><img border="0" alt="" height="20" width="1" src="atsilo_files/clearpixel.gif" /></td>
-          </tr>
-        </tbody>
-      </table></td>
-    </tr>
+    <td colspan="2">&nbsp;</td>
+    <td colspan="2"></td>
+  </tr>
     <tr>
-      <td class="tplHeader"></td>
-    </tr>
-  </tbody>
+    <td colspan="2">&nbsp;</td>
+    <td colspan="2"></td>
+  </tr>
+   <tr>
+     <td colspan="4"><input value="Salva Dati" name="salva_dati" type="submit" />
+     <input value="Modifica Dati" name="modifica_dati" type="submit" />
+     </td>
+    
+  </tr>
 </table>
-<p>&nbsp;</p></td><td class="fasciadxvariabile"></td>
-</tr>
-</tbody></table>
-</td>
-<td class="fasciadxvariabile"></td>
-</tr>
-<tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
-</tr>
-</tbody></table>
+ 
+</form>
+
+</td><!--Chiudi content -->
 
 
-</body>
+<%@
+include file="atsilo_files/footer.jsp"
+ %>
+
 </html>
