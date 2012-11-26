@@ -22,9 +22,10 @@ public class DBFeedback extends DBBeans {
         public List<Feedback> ricercaFeedbackperTirocinante(Tirocinante tirocinante){
             List<Feedback> feedback;
             return feedback;
-            }
+        }
         public List<Feedback> ricercaFeedbackPerId(Integer Id){
             List<Feedback> feedback;
             return feedback;
         
         }
+}

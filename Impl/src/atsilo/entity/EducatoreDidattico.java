@@ -41,4 +41,5 @@ public class EducatoreDidattico extends Utente implements EventPlanner{
      */
     public void setClasse(int Classi) {
         this.Classi = Classi;
+    }
 }

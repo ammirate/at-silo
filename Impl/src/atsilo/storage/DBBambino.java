@@ -2,6 +2,8 @@ package atsilo.storage;
 
 import atsilo.entity.Bambino;
 
+import java.sql.Date;
+
 public class DBBambino extends DBBeans {    
     /**
      * Costruttore 
@@ -20,9 +22,9 @@ public class DBBambino extends DBBeans {
     
     public String ricercaIndirizzoBambino(Bambino b){}//aggiunto
     
-    public int ricercaClasseBambino(Bambino b)//aggiunto
+    public int ricercaClasseBambino(Bambino b){}//aggiunto
     
-    public String ricercaGenitore(Bambino b)//aggiunto
+    public String ricercaGenitore(Bambino b){}//aggiunto
     
     
 }

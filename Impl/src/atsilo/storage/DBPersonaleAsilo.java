@@ -9,7 +9,7 @@ public class DBPersonaleAsilo extends DBBeans {
         super("PersonaleAsilo",db);
     }
 
-    public PersonaleAsilo CercaPerCategoria 
+    public PersonaleAsilo CercaPerCategoria() 
         {
          PersonaleAsilo personale;
          return personale;

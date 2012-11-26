@@ -33,7 +33,7 @@ public class Servizio {
      */
     public String getId(){
         return this.id;
-
+    }
     /**
     * Metodo che prende il campo orario inizio
     * @return orarioInizio il parametro inserito
