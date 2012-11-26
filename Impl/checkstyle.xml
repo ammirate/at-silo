@@ -98,10 +98,13 @@ Stile di codifica per il progetto Atsilo
       <property name="methodMaximum" value="30"/>
       <property name="classMaximum" value="1200"/>
     </module>
+    <module name="DeclarationOrder">
+      <property name="severity" value="error"/>
+    </module>
   </module>
   <module name="Header">
     <property name="severity" value="error"/>
-    <property name="header" value="/*\n *-----------------------------------------------------------------\n * This file is licensed under GPL 3.0:\n * http://www.gnu.org/licenses/gpl-3.0.html\n *-----------------------------------------------------------------\n * FILE: NomeFile\n *-----------------------------------------------------------------\n * PROGETTO: Atsilo\n *-----------------------------------------------------------------\n * OWNER\n * nome autore, data creazione\n * REVISION\n * nome revisore, data revisione\n *-----------------------------------------------------------------\n */ \n"/>
+    <property name="header" value="/*\n *-----------------------------------------------------------------\n * This file is licensed under GPL 3.0:\n * http://www.gnu.org/licenses/gpl-3.0.html\n *-----------------------------------------------------------------\n * FILE: NomeFile\n *-----------------------------------------------------------------\n * PROGETTO: Atsilo\n *-----------------------------------------------------------------\n * OWNER\n * nome autore, data creazione\n * REVISION\n * nome revisore, data revisione\n *-----------------------------------------------------------------\n */\n"/>
     <property name="ignoreLines" value="6,11,13"/>
   </module>
   <module name="FileTabCharacter">
