@@ -6,13 +6,30 @@ public class DomandaQuestionario {
     private String descrizione;
     
     /**
+     * La variabile questionario avrà il valore della variabile di Questionario
      * La variabile questionario è nulla c'è bisogno di una lettura della classe questionario
      */
     private Questionario questionario;
     
+    /**
+     * Metodo vuoto
+     */
     public DomandaQuestionario(){    
     }
 
+    /**
+     * @param id il parametro è settato
+     * @param descrizione il parametro è settato
+     * @param questionario è settato dopo la lettura
+     */
+    public DomandaQuestionario(String id, String descrizione,
+            Questionario questionario) {
+        super();
+        this.id = id;
+        this.descrizione = descrizione;
+        this.questionario = questionario;
+    }
+    
     public void setId(String id) {
         this.id = id;
     }

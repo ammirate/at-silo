@@ -34,6 +34,7 @@ public class Bambino {
     private String Cognome;
 
     /**
+     *  La variabile genitore avrà il valore della variabile di Genitore
      * La variabile Genitore è nulla c'è bisogno di una lettura della classe genitore
      */
     private Genitore Genitore;
@@ -44,12 +45,43 @@ public class Bambino {
     private String Codice_Fiscale;
 
     /**
+     *  La variabile assenza avrà i valore della lista Assenza
      * La variabile assenze è nulla c'è bisogno di una lettura della classe Assenza
      */
-    private Assenza assenze;
+    private List<Assenza> assenze;
 
-    public Bambino() {
-    }
+    /**
+     * Costruttore vuoto
+     */
+    public Bambino() {}
+    
+    /**
+     * 
+     * @param nome il parametro fissato
+     * @param dataNascita il parametro fissato
+     * @param categoriaAppartenenza il parametro fissato
+     * @param indirizzo il parametro fissato
+     * @param classe il parametro fissato
+     * @param cognome il parametro fissato
+     * @param genitore il parametro fissato
+     * @param codice_Fiscale il parametro fissato
+     * @param assenze il parametro fissato
+     */
+    public Bambino(String nome, Date dataNascita, String categoriaAppartenenza,
+                String indirizzo, int classe, String cognome,
+                atsilo.entity.Genitore genitore, String codice_Fiscale,
+                List<Assenza> assenze) {
+            super();
+            Nome = nome;
+            DataNascita = dataNascita;
+            CategoriaAppartenenza = categoriaAppartenenza;
+            Indirizzo = indirizzo;
+            Classe = classe;
+            Cognome = cognome;
+            Genitore = genitore;
+            Codice_Fiscale = codice_Fiscale;
+            this.assenze = assenze;
+        }
     
     /**
      * Metodo che setta il campo Nome
@@ -117,7 +149,7 @@ public class Bambino {
 
     /**
      * Metodo che setta il valore Classe
-     * @param classe il parametro fissato
+     * @param Classe il parametro fissato
      */
     public void setClasse(int Classe) {
         this.Classe = Classe;
@@ -133,7 +165,7 @@ public class Bambino {
 
     /**
      * Metodo che setta il campo Cognome
-     * @param cognome il parametro fissato
+     * @param Cognome il parametro fissato
      */
     public void setCognome(String Cognome) {
         this.Cognome = Cognome;
@@ -165,7 +197,7 @@ public class Bambino {
 
     /**
      * Metodo che setta il campo CodiceFiscale
-     * @param CodiceFiscale il parametro fissato
+     * @param Codice_Fiscale il parametro fissato
      */
     public void setCodice_Fiscale(String Codice_Fiscale) {
         this.Codice_Fiscale = Codice_Fiscale;
@@ -181,7 +213,7 @@ public class Bambino {
 
     /**
      * Metodo che setta il parametro letto dalla classe assenza
-     * @param assenza è settato dopo la lettura
+     * @param assenze è settato dopo la lettura
      */
     public void setAssenze(List<Assenza> assenze) {
         this.assenze = assenze;

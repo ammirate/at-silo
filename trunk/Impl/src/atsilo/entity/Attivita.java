@@ -1,6 +1,7 @@
 package atsilo.entity;
 
 public class Attivita {
+
     /**
      * @attribute descrizione di tipo stringa
      */
@@ -12,7 +13,8 @@ public class Attivita {
     private String categoria;
 
     /**
-     * @attribute La variabile è nulla c'è bisogno di una lettura della classe ProgammaEducativoSettimanale
+     * La variabile progEdSettimanale avrà il valore della variabile di ProgrammaEducativoSettimanale 
+     * @attribute progEdSettimanale La variabile è nulla c'è bisogno di una lettura della classe ProgammaEducativoSettimanale
      */
     private ProgrammaEducativoSettimanale progEdSettimanale;
 
@@ -22,12 +24,35 @@ public class Attivita {
     private String titolo;
 
     /**
-     * @attribute La variabile è nulla c'è bisogno di una lettura della classe Registro
+     *  La variabile registro avrà il valore della variabile di Registro
+     * @attribute registro La variabile è nulla c'è bisogno di una lettura della classe Registro
      */
     private Registro registro;
 
 
+    /**
+     * metodo vuoto
+     */
     public Attivita() {
+    }
+    
+    /**
+     * 
+     * @param descrizione
+     * @param categoria
+     * @param progEdSettimanale
+     * @param titolo
+     * @param registro
+     */
+    public Attivita(String descrizione, String categoria,
+            ProgrammaEducativoSettimanale progEdSettimanale, String titolo,
+            Registro registro) {
+        super();
+        this.descrizione = descrizione;
+        this.categoria = categoria;
+        this.progEdSettimanale = progEdSettimanale;
+        this.titolo = titolo;
+        this.registro = registro;
     }
     
     /**
@@ -64,7 +89,7 @@ public class Attivita {
 
     /**
      * Metodo che setta il parametro letto dalla classe ProgrammaEducativoSettimanale
-     * @param ProgrammaEducativoSettimanale è settato dopo la lettura
+     * @param programma_educativo_settimanale è settato dopo la lettura
      */    
     public void setProgramma_educativo_settimanale(ProgrammaEducativoSettimanale programma_educativo_settimanale) {
         this.progEdSettimanale = programma_educativo_settimanale;
@@ -72,7 +97,7 @@ public class Attivita {
 
     /**
      * Metodo che prende il parametro letto dalla classe ProgrammaEducativoSettimanale
-     * @return ProgrammaEducativoSettimanale parametro preso dalla lettura
+     * @return programma_educativo_settimanale parametro preso dalla lettura
      */
     public ProgrammaEducativoSettimanale getProgramma_educativo_settimanale() {
         return progEdSettimanale;
@@ -96,7 +121,7 @@ public class Attivita {
 
     /**
      * Metodo che setta il parametro letto dalla classe Registro
-     * @param owner è settato dopo la lettura
+     * @param registro è settato dopo la lettura
      */    
     public void setRegistro(Registro registro) {
         this.registro = registro;
