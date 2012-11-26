@@ -19,4 +19,4 @@ public class DBDomandaQuestionario extends DBBeans {
     
         public DomandaQuestionario ricercaDomandaQuestionarioPerId(String id){}
         
-        
+}       

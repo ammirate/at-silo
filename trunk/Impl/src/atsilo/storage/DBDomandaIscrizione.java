@@ -5,6 +5,8 @@ import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
 import java.util.Date;
+import java.util.List;
+
 public class DBDomandaIscrizione extends DBBeans {
     
     public DBDomandaIscrizione(Database db){

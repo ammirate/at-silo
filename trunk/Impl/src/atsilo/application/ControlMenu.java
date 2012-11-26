@@ -26,7 +26,7 @@ private static final ControlMenu cm;
          return false;
          
      }
-     public MenuMensa eliminaMen� (MenuMensa m){
+     public MenuMensa eliminaMenu(MenuMensa m){
        return null;  
      }
      public List<MenuMensa> ricercaMenu (MenuMensa m){

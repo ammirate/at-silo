@@ -16,7 +16,7 @@ public class DBProgrammaEducativoSettimanale extends DBBeans {
     public DBProgrammaEducativoSettimanale(Database db){
         super("ProgrammaEducativoSettimanale",db);
     }
-     public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerAttività(Attivita attivita){
+     public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerAttivita(Attivita attivita){
         List<ProgrammaEducativoSettimanale> programmi;
         return  programmi;   
         }

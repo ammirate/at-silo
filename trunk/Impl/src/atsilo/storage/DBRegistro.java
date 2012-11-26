@@ -29,6 +29,6 @@ public class DBRegistro extends DBBeans
     public List<EducatoreDidattico> ricercaEducatoriDidattici(){
         List<EducatoreDidattico> l;
         return l;
-        
+    }   
 
 }
