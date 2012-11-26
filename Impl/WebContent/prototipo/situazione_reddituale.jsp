@@ -14,45 +14,68 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
-<table cellspacing="10" cellpadding="0" border="0" width="100%">
-  <tbody>
-    <tr>
-      <td><table cellspacing="0" cellpadding="0" border="0">
-        <tbody>
-          <tr>
-            <td class="tplTitolo"><b></b></td>
-            </tr>
-          </tbody>
-        </table></td>
-    </tr>
-    <tr>
-      <td><table cellspacing="0" cellpadding="0" border="0">
-        <tbody>
-          <tr>
-            <td><table width="598" cellspacing="0" cellpadding="0" border="0">
-            </table></td>
-          </tr>
-          <tr>
-            <td><img border="0" alt="" height="20" width="1" src="atsilo_files/clearpixel.gif" /></td>
-          </tr>
-        </tbody>
-      </table></td>
-    </tr>
-    <tr>
-      <td class="tplHeader"></td>
-    </tr>
-  </tbody>
-</table>
-<p>&nbsp;</p></td><td class="fasciadxvariabile"></td>
-</tr>
-</tbody></table>
+<form>
+  <table width="100%" border="0" cellspacing="0">
+
+  <tr>
+  	<td colspan="3">Allega certificazione ISEE relativa all'anno 2011 rilasciata da un centro di assistenza fiscale (CAF) </td>
+    <td colspan="1" >
+      <input id="vedovo" name="vedovo" type="checkbox">
 </td>
-<td class="fasciadxvariabile"></td>
-</tr>
-<tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
-</tr>
-</tbody></table>
+   
+  </tr>
+  
+  
+  <tr>
+    <td colspan="3"> il cui indicatore ISEE è pari a Euro </td>
+    <td>
+      <input name="isee" type="text" id="isee" maxlength="10" /></td>
+  </tr>
+  <tr>
+    <td colspan="4"><label for="altriinvalidi_1">Altri componenti il nucleo familiare (figli) con disabilità/invalidità (allegare, in busta chiusa, certificazione dell'Asl) </label>
+      <br></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
+     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+  </tr>
+  <tr>
+  	<td colspan="3">&nbsp;</td>
+    <td colspan="1" >
+      <input id="vedovo" name="vedovo" type="checkbox">
+</td>
+   
+  </tr>
+
+  <tr>
+    <td colspan="4">ALLEGATI<br>
+      COPIA FRONTE/RETRO DEL DOCUMENTO DI RICONOSCIMENTO VALIDO DEL RICHIEDENTE (obbligatorio)<br>
+      PRIMA DELL'INVIO DELLA DOMANDA SI RACCOMANDA DI CONTROLLARE L'ESATTA COMPILAZIONE DI TUTTI I CAMPI POICHE', DOPO L'INVIO, NON SARA' POSSIBILE EFFETTUARE ALCUNA MODIFICA<br>
+      N.B.: Per completare l'invio della domanda è necessario inserire nel campo sottostante il codice così come appare nell'immagine che segue. Se la stessa non fosse correttamente visibile è possibile generare una nuova immagine con l'apposito pulsante.</td>
+    
+  </tr>
+    <tr>
+    <td colspan="2">&nbsp;</td>
+    <td colspan="2"></td>
+  </tr>
+   <tr>
+     <td colspan="4"><input value="Salva Dati" name="salva_dati" type="submit" />
+     <input value="Modifica Dati" name="modifica_dati" type="submit" />
+     </td>
+    
+  </tr>
+</table>
+ 
+</form>
+
+</td><!--Chiudi content -->
+
+
+<%@
+include file="atsilo_files/footer.jsp"
+ %>
+
 
 
 </body>

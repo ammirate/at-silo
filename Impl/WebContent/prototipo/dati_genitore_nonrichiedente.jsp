@@ -19,7 +19,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
 <!--Dati genitore non richiedente-->
 
 <form>
-<table border="0" cellspacing="0">
+<table  width="100%" border="0" cellspacing="0">
   <tr>
     <td>In qualita' di</td>
     <td><select id="qualita" name="qualita">
@@ -72,7 +72,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
     <tr>
       <td colspan="4"><p>&nbsp;</p>
       <p>Compilare i campi sottostanti solo se il domicilio &egrave; diverso dalla residenza</p></td></tr>
-  </tr>
+  
   
     <td>Domiciliato a</td>
     <td><input id="domiciliato_a" value="" name="domiciliato_a"  size="25" maxlength="25" type="text" /></td>
@@ -127,9 +127,9 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
 
 </td><!--Chiudi content -->
 
+
 <%@
 include file="atsilo_files/footer.jsp"
  %>
-
 </body>
 </html>
