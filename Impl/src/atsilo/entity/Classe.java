@@ -1,6 +1,5 @@
 package atsilo.entity;
 import java.util.List;
-import atsilo.entity.Bambino;
 
 public class Classe {
     
@@ -9,19 +8,36 @@ public class Classe {
      */
     private String id;
    
-    /**
-     * La variabile educatori è settatta a Null quindi c'è bisogno di una lettura della classe EducatoreDitattico e prendere il parametro dalla lista 
+    /** 
+     * La variabile educatori è settatta a Null quindi c'è bisogno di una lettura
      */
     private List<EducatoreDidattico> educatori;
     
     /**
+     * La variabile eventi avrà i valore della lista Evento
      * La variabile eventi è nulla c'è bisogno di una lettura della classe Evento
      */
     private List<Evento> eventi;
 
+    /**
+     * metodo vuoto
+     */
     public Classe() {
     }
 
+    /**
+     * @param id il paramentro è fissato
+     * @param educatori è settato dopo la lettura 
+     * @param eventi è settato dopo la lettura
+     */
+    public Classe(String id, List<EducatoreDidattico> educatori,
+            List<Evento> eventi) {
+        super();
+        this.id = id;
+        this.educatori = educatori;
+        this.eventi = eventi;
+    }
+    
     /**
      * Metodo che setta il campo Id
      * @param id il parametro fissato

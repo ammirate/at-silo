@@ -6,13 +6,28 @@ public class Account implements Beans{
     private String passWord;
 
     /**
-     * La variabile è nulla c'è bisogno di una lettura da una della classe Utente e il 
-     * valore può essere: Genitore, PersonaleAsilo, ResponsabileQuestionario e Psicopedagogo
+     * La variabile è nulla bisogna leggere dalla classe Utente
      */
     private Utente owner;
 
+    /**
+     * metodo vuoto
+     */
     public Account() {}
 
+    /**
+     * 
+     * @param userName il parametro è settato
+     * @param passWord il paramentro è settato
+     * @param owner il parametro preso in lettura
+     */
+    public Account(String userName, String passWord, Utente owner) {
+        super();
+        this.userName = userName;
+        this.passWord = passWord;
+        this.owner = owner;
+    }
+    
     /**
      * Metodo che setta il campo userName
      * @param userName il parametro fissato

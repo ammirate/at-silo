@@ -1,5 +1,4 @@
 package atsilo.entity;
-
 public class Bando implements Beans {
     
     /**
@@ -17,7 +16,23 @@ public class Bando implements Beans {
      */
     private String dataFine;
     
+    /**
+     * Metodo vuoto
+     */
     public Bando() {
+    }
+    
+    /**
+     * 
+     * @param id parametro fissato
+     * @param dataInizio il parametro fissato
+     * @param dataFine il parametro fissato
+     */
+    public Bando(int id, String dataInizio, String dataFine) {
+        super();
+        this.id = id;
+        this.dataInizio = dataInizio;
+        this.dataFine = dataFine;
     }
 
     /**
@@ -30,7 +45,7 @@ public class Bando implements Beans {
 
     /**
      * Metodo che setta il valore Id
-     * @param Id il parametro fissato
+     * @param iD il parametro fissato
      */
     public void setiD(int iD) {
             this.id = iD;
@@ -46,7 +61,7 @@ public class Bando implements Beans {
 
     /**
      * Metodo che setta il campo DataInizio
-     * @param DataInizio il parametro fissato
+     * @param dataInizio il parametro fissato
      */
     public void setDataInizio(String dataInizio) {
             this.dataInizio = dataInizio;
@@ -62,7 +77,7 @@ public class Bando implements Beans {
     
     /**
      * Metodo che setta il campo DataFine
-     * @param DataFine il parametro fissato
+     * @param dataFine il parametro fissato
      */
     public void setDataFine(String dataFine) {
             this.dataFine = dataFine;

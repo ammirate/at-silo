@@ -8,17 +8,42 @@ public class DomandaIscrizione {
     private String posizione;
     
     /**
+     * La variabile genitore avrà il valore della variabile di Genitore
      * La variabile genitore è nulla c'è bisogno di una lettura della classe Genitore
      */
     private Genitore genitore;
+    
     /**
+     * La variabile bambino avrà il valore della variabile di Bambino
      * La variabile Bambino è nulla c'è bisogno di una lettura della classe Bambino
      */
     private Bambino bambino;
-
+    
+    /**
+     * Metodo vuoto
+     */
     public DomandaIscrizione() {
     }
 
+    /**
+     * @param dataPresentazione il parametro è fissato
+     * @param iD il parametro è fissato
+     * @param punteggio il parametro è fissato
+     * @param posizione il parametro è fissato
+     * @param genitore è settato dopo la lettura
+     * @param bambino è settato dopo la lettura
+     */
+    public DomandaIscrizione(String dataPresentazione, int iD, int punteggio,
+            String posizione, Genitore genitore, Bambino bambino) {
+        super();
+        this.dataPresentazione = dataPresentazione;
+        this.iD = iD;
+        this.punteggio = punteggio;
+        this.posizione = posizione;
+        this.genitore = genitore;
+        this.bambino = bambino;
+    }
+    
     /**
      * Metodo che prende il campo DataPresentazione
      * @return DataPresentazione il paramentro inserito
@@ -85,7 +110,7 @@ public class DomandaIscrizione {
 
     /**
      * Metodo che setta il parametro letto dalla classe Genitore
-     * @param Genitore è settato dopo la lettura
+     * @param genitore è settato dopo la lettura
      */
     public void setGenitore(Genitore genitore) {
         this.genitore = genitore;
@@ -101,7 +126,7 @@ public class DomandaIscrizione {
 
     /**
      * Metodo che setta il parametro letto dalla classe Bambino
-     * @param Bambino è settato dopo la lettura
+     * @param bambino è settato dopo la lettura
      */
     public void setBambino(Bambino bambino) {
         this.bambino = bambino;

@@ -4,7 +4,7 @@ import java.sql.Date;
 public class Assenza {
     
     /**
-     * @attribute data di tipo DATE
+     * @attribute data di tipo Date
      */
     private Date data;
     
@@ -13,9 +13,23 @@ public class Assenza {
      */
     private Bambino bambino;
     
+    /**
+     * metodo vuoto
+     */
     public Assenza() {
     }
 
+    /**
+     * 
+     * @param data
+     * @param bambino
+     */
+    public Assenza(Date data, Bambino bambino) {
+        super();
+        this.data = data;
+        this.bambino = bambino;
+    }
+    
     /**
      * Metodo che setta il campo data
      * @param data il parametro fissato
@@ -28,24 +42,24 @@ public class Assenza {
      * Metodo che prende il campo data
      * @return data il parametro inserito
      */
-    public String getData() {
-        return Data;
+    public Date getData() {
+        return data;
     }
 
     /**
      * Metodo che setta il parametro letto dalla classe Bambino
-     * @param Bambino è settato dopo la lettura
+     * @param bambino è settato dopo la lettura
      */    
-    public void setRegistro(Bambino Bambino) {
+    public void setRegistro(Bambino bambino) {
         this.bambino = bambino;
     }
     
     /**
      * Metodo che prende il parametro letto dalla classe Bambino
-     * @return bambino parametro preso dalla lettura
+     * @return Bambino parametro preso dalla lettura
      */
     public Bambino getBambino() {
-        return Bambino;
+        return bambino;
     }
     
     
