@@ -67,20 +67,20 @@ public class Bambino {
      * @param codice_Fiscale il parametro fissato
      * @param assenze il parametro fissato
      */
-    public Bambino(String nome, Date dataNascita, String categoriaAppartenenza,
-                String indirizzo, int classe, String cognome,
-                atsilo.entity.Genitore genitore, String codice_Fiscale,
-                List<Assenza> assenze) {
+    public Bambino(String no, Date dataNasci, String categoriaApp,
+                String ind, int cla, String cogn,
+                atsilo.entity.Genitore ge, String codice_Fiscale,
+                List<Assenza> asse) {
             super();
-            nome = nome;
-            dataNascita = dataNascita;
-            categoriaAppartenenza = categoriaAppartenenza;
-            indirizzo = indirizzo;
-            classe = classe;
-            cognome = cognome;
-            genitore = genitore;
-            codice_Fiscale = codice_Fiscale;
-            this.assenze = assenze;
+            nome = no;
+            dataNascita = dataNasci;
+            categoriaAppartenenza = categoriaApp;
+            indirizzo = ind;
+            classe = cla;
+            cognome = cogn;
+            genitore = ge;
+            codiceFiscale = codice_Fiscale;
+            this.assenze = asse;
         }
     
     /**
