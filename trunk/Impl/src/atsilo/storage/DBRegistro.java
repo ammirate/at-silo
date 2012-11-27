@@ -15,11 +15,17 @@ public class DBRegistro extends DBBeans
         
         super("Registro",db);
     }
+    
+    public boolean inserisciRegistroNelDatabase(Registro registro){
+        return false;
+    }
+    
+    public boolean assegnaRegistroAClasse(Registro registro, Classe classe){}
         
-        public Registro ricercaRegistroPerClasse(Classe c){
-            Registro p;
-            return p;
-        }
+    public Registro ricercaRegistroPerClasse(Classe c){
+         Registro p;
+         return p;
+    }
         
     public Registro ricercaRegistroPerAnno(Date d){
         Registro p;

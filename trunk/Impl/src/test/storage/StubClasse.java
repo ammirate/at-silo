@@ -3,7 +3,7 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: RegistroException.java
+ * FILE: StubClasse.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -14,11 +14,30 @@
  *-----------------------------------------------------------------
  */
 
-package atsilo.exception;
+package test.storage;
 
-public class RegistroException extends Exception{
+import atsilo.entity.Classe;
+import atsilo.storage.Database;
 
-    public RegistroException(String stringa){
-        super(stringa);
+/**
+ * Classe StubClasse
+ * <Descrizione classe>
+ * 
+ * @author Antonio
+ * 
+ */
+public class StubClasse {
+    
+    Classe c;
+    
+    public StubClasse(Database db) {
+    
+        c = new Classe();
     }
+
+    public Classe RicercaClassePerId (String id){
+        return c;
+    }
+    
+    
 }

@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ControlQuestionario {
 
-    private static final ControlQuestionario control;
+    private static  ControlQuestionario control;
 
 
     /**

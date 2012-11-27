@@ -1,4 +1,4 @@
-package atsilo.application;
+package atsilo.test.application;
 
 import test.storage.StubClasse;
 import test.storage.StubRegistro;
