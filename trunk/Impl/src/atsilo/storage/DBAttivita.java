@@ -141,66 +141,15 @@ public class DBAttivita extends DBBeans {
     
     
     
-    /**
-     * ricerca un programma educativo data un attivita
-     * @param a
-     * @return un programma educativo
-     * @throws SQLException 
-     */
-    public ProgrammaEducativoSettimanale ricercaProgrammaEducativoDiAppartenenza(Attivita a) throws SQLException 
-        {
-            ProgrammaEducativoSettimanale p=null;
-            
-            
-            ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo =" + a.getTitolo());//restituisce un solo valore perchè titolo è chiave primaria
-            if(res.next())
-            {
-              p=new ProgrammaEducativoSettimanale((ProgrammaEducativoSettimanale)res.getObject("Programma_educativo_settimanale"));// richiede il costruttore di copia
-            }
-            res.close();
-            return p;
-        }
-    
-    
-    
-    
-    
-    /**
-     * ricerca il registro di un attivita
-     * @param a
-     * @return un registro
-     * @throws SQLException 
-     */
-    public Registro ricercaRegistroDiAppartenenza(Attivita a) throws SQLException{
-        Registro p =null;
-        ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo =" + a.getTitolo());//restituisce un solo valore perchè titolo è chiave primaria
-        if(res.next())
-        {
-          p=new Registro((Registro)res.getObject("registro"));// richiede il costruttore di copia
-        }
-        res.close();
-        return p;
-    }
-    
-    /**
-     * 
-     * @param a
-     * @return
-     * @throws SQLException
-     */
-    public String visualizzaDescizioneAttivita(Attivita a) throws SQLException // metodo superfluo. Per visualizzare la descrizione basta fare a.getDescrizione()
-    {   
-        String d;
-        ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo =" + a.getTitolo());//restituisce un solo valore perchè titolo è chiave primaria
-        if(res.next())  
-        {
-            d=a.getDescrizione();
-        }
-        
-            res.close();
-            return null;
+  
    
-    } 
+    
+    
+    
+    
+    
+ 
+
 
 
 
