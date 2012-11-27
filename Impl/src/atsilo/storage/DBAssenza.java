@@ -121,7 +121,7 @@ public class DBAssenza extends DBBeans {
     @Override
     protected Assenza creaBean(ResultSet r) throws SQLException {
         Assenza a=null;
-        while(r.next())
+        if(r.next())
         {
             a.setData(r.getDate("data"));
             a.setRegistro((Bambino) r.getObject("bambino"));
