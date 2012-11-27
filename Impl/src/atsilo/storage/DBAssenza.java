@@ -69,7 +69,7 @@ public class DBAssenza extends DBBeans {
         while(res.next())
         {
             temp.setData(res.getDate("data"));
-            temp.setRegistro((Bambino) res.getObject("Bambino"));
+            
             a.set(i, temp);//assegna l'assenza temporanea alla lista di Assenze
             i++;
         }
@@ -92,7 +92,7 @@ public class DBAssenza extends DBBeans {
         while(res.next())
         {
             temp.setData(res.getDate("data"));
-            temp.setRegistro((Bambino) res.getObject("Bambino"));
+            
             a.add(i, temp);
             i++;
         }
@@ -124,7 +124,7 @@ public class DBAssenza extends DBBeans {
         if(r.next())
         {
             a.setData(r.getDate("data"));
-            a.setRegistro((Bambino) r.getObject("bambino"));
+            
         }
         return a;
     } 
