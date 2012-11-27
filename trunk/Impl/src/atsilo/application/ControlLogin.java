@@ -19,46 +19,26 @@ package atsilo.application;
 import java.sql.SQLException;
 
 import atsilo.entity.Account;
-import atsilo.entity.Utente;
+import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBAccount;
-import atsilo.storage.DBEducatoreDidattico;
-import atsilo.storage.DBEventPlanner;
-import atsilo.storage.DBGenitore;
-import atsilo.storage.DBPersonaleAsilo;
-import atsilo.storage.DBPsicopedagogo;
-import atsilo.storage.DBResponsabileQuestionario;
-import atsilo.storage.DBTirocinante;
 import atsilo.storage.Database;
 
 public class ControlLogin {
-    private static final ControlLogin INSTANCE;
+    private static ControlLogin control;
     private DBAccount dbAccount;
-    private DBGenitore dbGenitore;
-    private DBEducatoreDidattico dbEducatoreDidattico;
-    private DBEventPlanner dbEventPlanner;
-    private DBPersonaleAsilo dbPersonaleAsilo;
-    private DBPsicopedagogo  dbPsicopedagogo;
-    private DBResponsabileQuestionario  dbResponsabileQuestionario;
-    private DBTirocinante dbTirocinante;
     
-    ControlLogin() {
+    private ControlLogin() {
+        control = new ControlLogin();
         //Come prima cosa, bisogna creare un'istanza di database e aprire una connessione
         Database db = new Database();
         if (!db.apriConnessione()) 
         {
-            throws new DBConnectionException();
+            throw new DBConnectionException("Connessione fallita");
         }
 
         //Quindi, si possono creare tutti i gestori di tabelle necessari
         try {
             dbAccount = new DBAccount(db);
-            dbGenitore = new DBGenitore(db);
-            dbEducatoreDidattico = new DBEducatoreDidattico(db);
-            dbEventPlanner = new DBEventPlanner(db);
-            dbPersonaleAsilo = new DBPersonaleAsilo(db);
-            dbPsicopedagogo = new DBPsicopedagogo(db);
-            dbResponsabileQuestionario = new DBResponsabileQuestionario(db);
-            dbTirocinante = new DBTirocinante(db);
             
         } finally {
             /*
@@ -75,25 +55,26 @@ public class ControlLogin {
         try {
             account=dbAccount.ricercaPerUsername(username);
           if( account== null)
-              return false;
+          {
+              throw new DBConnectionException("account non trovato");
+          }
           else
           {
               if(account.getPassWord().compareTo(password)==0)
                   return true;
-              else return false;
+              else
+              {
+                  throw new DBConnectionException("Password Errata");
+              }
           }
         } catch (SQLException e) 
         {
-            
+            throw new DBConnectionException("Connessione fallita");
         }
-        
-        return false;
     }
 
     public static ControlLogin getInstance() 
     {
-        
-        return null;
-        
+        return control;
     }
 }
