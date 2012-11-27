@@ -7,8 +7,27 @@ public class OrarioUtente {
     private String oraFine;
     private String descrizione;
     
+    /**
+     * Costruttore vuoto
+     */
     public OrarioUtente() {
     }
+
+    /**
+     * @param id il paramentro è fissato
+     * @param oraInizio il paramentro è fissato
+     * @param oraFine il paramentro è fissato
+     * @param descrizione il paramentro è fissato
+     */
+    public OrarioUtente(String id, String oraInizio, String oraFine,
+            String descrizione) {
+        super();
+        this.id = id;
+        this.oraInizio = oraInizio;
+        this.oraFine = oraFine;
+        this.descrizione = descrizione;
+    }
+
 
     /**
      * Metodo che setta il parametro id

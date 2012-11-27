@@ -16,8 +16,25 @@ public class Retta {
      */
     private Genitore genitore;
 
+    /**
+     * Costruttore vuoto
+     */
     public Retta(){}
     
+    /**
+     * @param importo il paramentro è fissato
+     * @param id il paramentro è fissato
+     * @param extra è settato dopo la lettura 
+     * @param genitore è settato dopo la lettura 
+     */
+    public Retta(float importo, String id, List<Extra> extra, Genitore genitore) {
+        super();
+        this.importo = importo;
+        this.id = id;
+        this.extra = extra;
+        this.genitore = genitore;
+    }
+
     /**
      * Metodo che prende il campo Id
      * @param id il parametro inserito

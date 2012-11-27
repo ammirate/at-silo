@@ -18,19 +18,32 @@ public class Registro {
      */
     private List<Attivita> listaAttivita;
 
+    /**
+     * Costruttore vuoto
+     */
     public Registro() {
     }
 
     /**
-     * @param object
+     * @param classe il paramentro è fissato
+     * @param anno il paramentro è fissato
+     * @param id il paramentro è fissato
+     * @param educatoreDidattico è settato dopo la lettura 
+     * @param listaAttivita è settato dopo la lettura 
      */
-    public Registro(Registro object) {// da implementare
-        // TODO Scheletro di costruttore autogenerato   
+    public Registro(int classe, String anno, int id,
+            EducatoreDidattico educatoreDidattico, List<Attivita> listaAttivita) {
+        super();
+        Classe = classe;
+        this.anno = anno;
+        this.id = id;
+        this.educatoreDidattico = educatoreDidattico;
+        this.listaAttivita = listaAttivita;
     }
 
     /**
      * Metodo che prende il valore classe
-     * @param classe il parametro inserito
+     * @param Classe il parametro inserito
      */
     public void setClasse(int Classe) {
         this.Classe = Classe;
@@ -78,7 +91,7 @@ public class Registro {
 
     /**
      * Metodo che setta il parametro letto dalla classe EducatoreDidattico
-     * @param educatoredidattico è settato dopo la lettura
+     * @param educatoreDidattico è settato dopo la lettura
      */
     public void setEducatoreDidattico(EducatoreDidattico educatoreDidattico) {
         this.educatoreDidattico = educatoreDidattico;

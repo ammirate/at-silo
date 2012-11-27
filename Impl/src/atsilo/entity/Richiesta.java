@@ -17,9 +17,34 @@ public class Richiesta {
      */
     private Servizio servizio;
 
-    
+    /**
+     * Costruttore vuoto
+     */
     public Richiesta(){
     }
+
+    /**
+     * @param id il paramentro è fissato
+     * @param tipo il paramentro è fissato
+     * @param menuRichiesto il paramentro è fissato
+     * @param orarioRichiesto il paramentro è fissato
+     * @param allegato il paramentro è fissato
+     * @param genitore è settato dopo la lettura 
+     * @param servizio è settato dopo la lettura
+     */
+    public Richiesta(int id, String tipo, String menuRichiesto,
+            String orarioRichiesto, String allegato, Genitore genitore,
+            Servizio servizio) {
+        super();
+        this.id = id;
+        this.tipo = tipo;
+        this.menuRichiesto = menuRichiesto;
+        this.orarioRichiesto = orarioRichiesto;
+        this.allegato = allegato;
+        this.genitore = genitore;
+        this.servizio = servizio;
+    }
+
 
     /**
      * Metodo che setta il valore id
@@ -71,7 +96,7 @@ public class Richiesta {
 
     /**
      * Metodo che setta il campo orario richiesto
-     * @param orariRichiesto il parametro fissato
+     * @param orarioRichiesto il parametro fissato
      */
     public void setOrarioRichiesto(String orarioRichiesto) {
         this.orarioRichiesto = orarioRichiesto;

@@ -27,12 +27,39 @@ public class Evento {
      */
     private EventPlanner organizzatore;
 
+    /**
+     * Costruttore vuoto
+     */
     public Evento() {
+    }
+  
+    /**
+     * @param descrizione il paramentro è fissato
+     * @param nome il paramentro è fissato
+     * @param cC  il paramentro è fissato
+     * @param data  il paramentro è fissato
+     * @param tipo  il paramentro è fissato
+     * @param data2  il paramentro è fissato
+     * @param classi è settato dopo la lettura
+     * @param organizzatore è settato dopo la lettura
+     */
+    public Evento(String descrizione, String nome, List<String> cC, Date data,
+            String tipo, Date data2, List<Classe> classi,
+            EventPlanner organizzatore) {
+        super();
+        Descrizione = descrizione;
+        Nome = nome;
+        CC = cC;
+        this.data = data;
+        Tipo = tipo;
+        Data = data2;
+        this.classi = classi;
+        this.organizzatore = organizzatore;
     }
 
     /**
      * Metodo che setta il campo descrizione
-     * @param descrizione il parametro fissato
+     * @param Descrizione il parametro fissato
      */   
     public void setDescrizione(String Descrizione) {
         this.Descrizione = Descrizione;
@@ -48,7 +75,7 @@ public class Evento {
 
     /**
      * Metodo che setta il campo nome
-     * @param nome il parametro fissato
+     * @param Nome il parametro fissato
      */   
     public void setNome(String Nome) {
         this.Nome = Nome;
@@ -64,10 +91,10 @@ public class Evento {
 
     /**
      * Metodo che setta il campo data
-     * @param Data il parametro fissato
+     * @param data il parametro fissato
      */   
-    public void setData(Date Data) {
-        this.Data = Data;
+    public void setData(Date data) {
+        this.data = data;
     }
 
     /**

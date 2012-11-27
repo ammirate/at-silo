@@ -10,8 +10,34 @@ public class Questionario {
     private String periodo_inizio;
     private String pathname;
 
+    /**
+     * Costruttore vuoto
+     */
     public Questionario() {
     }
+
+    /**
+     * @param periodo_fine il paramentro è fissato
+     * @param descrizione il paramentro è fissato
+     * @param flag_rinuncia il paramentro è fissato
+     * @param nome il paramentro è fissato
+     * @param id il paramentro è fissato
+     * @param periodo_inizio il paramentro è fissato
+     * @param pathname il paramentro è fissato
+     */
+    public Questionario(String periodo_fine, String descrizione,
+            String flag_rinuncia, String nome, int id, String periodo_inizio,
+            String pathname) {
+        super();
+        this.periodo_fine = periodo_fine;
+        this.descrizione = descrizione;
+        this.flag_rinuncia = flag_rinuncia;
+        this.nome = nome;
+        this.id = id;
+        this.periodo_inizio = periodo_inizio;
+        this.pathname = pathname;
+    }
+
 
     /**
      * Metodo che setta il campo periodo fine
@@ -23,7 +49,7 @@ public class Questionario {
 
     /**
      * Metodo che prende il campo periodo fine
-     * @return periodi_fine il parametro inserito
+     * @return periodo_fine il parametro inserito
      */
     public String getPeriodo_fine() {
         return periodo_fine;

@@ -11,7 +11,7 @@ public class Account implements Beans{
     private Utente owner;
 
     /**
-     * metodo vuoto
+     * Costruttore vuoto
      */
     public Account() {}
 

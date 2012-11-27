@@ -17,7 +17,7 @@ public class Bando implements Beans {
     private String dataFine;
     
     /**
-     * Metodo vuoto
+     * Costruttore vuoto
      */
     public Bando() {
     }

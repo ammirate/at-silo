@@ -9,8 +9,25 @@ public class Feedback {
      */
     private PersonaleAsilo personaleAsilo;
     
+    /**
+     * Costruttore vuoto
+     */
     public Feedback(){
     }
+    
+    /**
+     * @param id il parametro fissato
+     * @param descrizione il parametro fissato
+     * @param personaleAsilo è settato dopo la lettura
+     */
+    public Feedback(int id, String descrizione, PersonaleAsilo personaleAsilo) {
+        super();
+        this.id = id;
+        this.descrizione = descrizione;
+        this.personaleAsilo = personaleAsilo;
+    }
+
+
 
     /**
      * Metodo che prende il valore Id
@@ -30,7 +47,7 @@ public class Feedback {
 
     /**
      * Metodo che setta il campo importo
-     * @param importo il parametro fissato
+     * @param descrizione il parametro fissato
      */
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;

@@ -14,8 +14,25 @@ public class Tirocinante extends Utente{
      */
     private PersonaleAsilo personaleAsilo;
     
+    /**
+     * Costruttore vuoto
+     */
     public Tirocinante(){
     }
+    
+    /**
+     * @param oreTotali il paramentro è fissato
+     * @param oreLavoro il paramentro è fissato
+     * @param personaleAsilo è settato dopo la lettura 
+     */
+    public Tirocinante(int oreTotali, int oreLavoro,
+            PersonaleAsilo personaleAsilo) {
+        super();
+        this.oreTotali = oreTotali;
+        this.oreLavoro = oreLavoro;
+        this.personaleAsilo = personaleAsilo;
+    }
+
 
     /**
      * Metodo che prende il valore oreTotali

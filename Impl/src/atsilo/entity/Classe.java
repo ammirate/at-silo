@@ -20,7 +20,7 @@ public class Classe {
     private List<Evento> eventi;
 
     /**
-     * metodo vuoto
+     * Costruttore vuoto
      */
     public Classe() {
     }

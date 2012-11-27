@@ -18,14 +18,30 @@ public class ProgrammaEducativoSettimanale {
      */
     private List<Attivita> listaAttivita;
 
+    /**
+     * Costruttore vuoto
+     */
     public ProgrammaEducativoSettimanale() {
     }
-
+    
     /**
-     * @param object
+     * @param settimana il paramentro è fissato
+     * @param descrizione il paramentro è fissato
+     * @param obiettivi il paramentro è fissato
+     * @param psicopedagogo è settato dopo la lettura 
+     * @param id il paramentro è fissato
+     * @param listaAttivita è settato dopo la lettura 
      */
-    public ProgrammaEducativoSettimanale(ProgrammaEducativoSettimanale object) {// da implementare
-        // TODO Scheletro di costruttore autogenerato
+    public ProgrammaEducativoSettimanale(String settimana, String descrizione,
+            String obiettivi, Psicopedagogo psicopedagogo, int id,
+            List<Attivita> listaAttivita) {
+        super();
+        this.settimana = settimana;
+        this.descrizione = descrizione;
+        this.obiettivi = obiettivi;
+        this.psicopedagogo = psicopedagogo;
+        this.id = id;
+        this.listaAttivita = listaAttivita;
     }
 
     /**
@@ -96,7 +112,7 @@ public class ProgrammaEducativoSettimanale {
      * Metodo che setta il parametro letto dalla classe Psicopedagogo
      * @param psicopedagogo è settato dopo la lettura
      */
-    public void setPsicopedagogo(PersonaleAsilo psicopedagogo) {
+    public void setPsicopedagogo(Psicopedagogo psicopedagogo) {
         this.psicopedagogo = psicopedagogo;
     }
 
