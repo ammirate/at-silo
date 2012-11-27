@@ -92,17 +92,22 @@ public class DBAccount extends DBBeans<Account>
     }
 
 
-   /**
-    * Metodo creaBean
-    */
+    /* (non-Javadoc)
+     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     */
+    @Override
     protected Account creaBean(ResultSet r) throws SQLException {
         Account a = null;
-        while(r.next())
+        if(r.next())
         {
             a.setUserName(r.getString("user_name"));
             a.setPassWord(r.getString("pass_word"));
         }
         return a;
-       } 
+        
+    }
+
+
+  
  }
 
