@@ -1,14 +1,18 @@
 /**
- * Progetto \@silo
- * Copyleft
- * Classe CreazioneMail
- * 
- * <Descrizione classe>
- *  crea un email con un oggetto destinatariio e testo generico
- * 
- * @author Gianfranco Bottiglieri
- * 
- */
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: CreazioneMail.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Bottiglieri Gianfranco, 25/11/2012 
+ * REVISION
+ * nome revisore, data revisione
+ *-----------------------------------------------------------------
+ **/
 
 package application.notificheMail;
 
