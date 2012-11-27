@@ -12,10 +12,26 @@ public class EducatoreDidattico extends Utente implements EventPlanner{
     private List<Classe> classi;
 
     /**
+     * Costruttore vuoto
+     */
+    public EducatoreDidattico() {
+    }
+    
+    /**
+     * @param titoloDiStudio il paramentro è fissato
+     * @param classi è settato dopo la lettura
+     */
+    public EducatoreDidattico(String titoloDiStudio, List<Classe> classi) {
+        super();
+        TitoloDiStudio = titoloDiStudio;
+        this.classi = classi;
+    }
+
+    /**
      * Metodo che setta il campo TitoloDiStudio
      * @param TitoloDiStudio il parametro fissato
      */
-    public void setTitoloDiStudio(String TitoloStudio) {
+    public void setTitoloDiStudio(String TitoloDiStudio) {
         this.TitoloDiStudio = TitoloDiStudio;
     }
 
@@ -37,9 +53,9 @@ public class EducatoreDidattico extends Utente implements EventPlanner{
     
     /**
      * Metodo che setta il valore Classe
-     * @param classe il parametro fissato
+     * @param classi il parametro fissato
      */
-    public void setClasse(int Classi) {
-        this.Classi = Classi;
+    public void setClasse(List<Classe> classi) {
+        this.classi = classi;
     }
 }
