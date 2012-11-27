@@ -8,10 +8,8 @@ public class Assenza {
      */
     private Date data;
     
-    /**
-     * La variabile Bambino è nulla c'è bisogno di una lettura della classe Bambino
-     */
-    private Bambino bambino;
+   
+    private String codicefiscale;
     
     /**
      * Costruttore vuoto
@@ -24,10 +22,10 @@ public class Assenza {
      * @param data
      * @param bambino
      */
-    public Assenza(Date data, Bambino bambino) {
+    public Assenza(Date data, String cf) {
         super();
         this.data = data;
-        this.bambino = bambino;
+        this.codicefiscale = cf;
     }
     
     /**
@@ -46,21 +44,7 @@ public class Assenza {
         return data;
     }
 
-    /**
-     * Metodo che setta il parametro letto dalla classe Bambino
-     * @param bambino è settato dopo la lettura
-     */    
-    public void setRegistro(Bambino bambino) {
-        this.bambino = bambino;
-    }
-    
-    /**
-     * Metodo che prende il parametro letto dalla classe Bambino
-     * @return Bambino parametro preso dalla lettura
-     */
-    public Bambino getBambino() {
-        return bambino;
-    }
+
     
     
     
