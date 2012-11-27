@@ -51,7 +51,7 @@ public class DBAccount extends DBBeans<Account>
      */
     private static List<String> creaChiave()
     {
-        List<String> res=  Arrays.asList("username");
+        List<String> res=  Arrays.asList("userName");
         
         return Collections.unmodifiableList(res);
     }
@@ -79,7 +79,7 @@ public class DBAccount extends DBBeans<Account>
     {
         Account a = null;
         
-        ResultSet res = tabella.getDatabase().eseguiQueryRS("SELECT * FROM " + tabella.getNomeTabella() + "WHERE username =" + user);
+        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE username =" + user);
         if (res.next()) // dovrebbe trovare solo un account perchè l'username è unico. quindi restituisce un unico record. 
         {
             a.setUserName(res.getString("user_name"));
@@ -93,6 +93,20 @@ public class DBAccount extends DBBeans<Account>
             res.close();  
              return null;
          }
-    } 
+    }
+
+
+   /**
+    * Metodo creaBean
+    */
+    protected Account creaBean(ResultSet r) throws SQLException {
+        Account a = null;
+        while(r.next())
+        {
+            a.setUserName(r.getString("user_name"));
+            a.setPassWord(r.getString("pass_word"));
+        }
+        return a;
+       } 
  }
 
