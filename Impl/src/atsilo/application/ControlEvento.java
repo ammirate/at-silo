@@ -57,7 +57,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             if(!stub.inserisciEventoNelDatabase(evento))
@@ -82,7 +82,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             if(!stub.inserisciCCEvento(evento, CC))
@@ -107,7 +107,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
@@ -135,7 +135,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             Evento toReturn = stub.rimuoviEvento(evento);
@@ -162,7 +162,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             if(!stub.setData(evento, newData))
@@ -185,7 +185,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Evento> toReturn = stub.ricercaEventoPerPersonale(pers);
@@ -211,7 +211,7 @@ public class ControlEvento {
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Evento> toReturn = stub.ricercaEventoData(data);

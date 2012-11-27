@@ -43,7 +43,7 @@ public class ControlRegistro {
         Database db = new Database();
         StubRegistro stub = new StubRegistro(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
@@ -67,7 +67,7 @@ public class ControlRegistro {
         Database db = new Database();
         StubRegistro stub = new StubRegistro(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
@@ -95,7 +95,7 @@ public class ControlRegistro {
         StubRegistro stubRegistro = new StubRegistro(db);
         StubClasse stubClasse = new StubClasse(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             //controllo prima se esiste la classe, se esiste le assegno il registro
