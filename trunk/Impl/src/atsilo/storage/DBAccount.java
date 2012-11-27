@@ -1,52 +1,98 @@
 package atsilo.storage;
 import atsilo.entity.Account;
+
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Collections;
 
-/**
- * 
- * Gestore storage di Account
- * 
- * @author Angelo G. Scafuro
- *
- */
-public class DBAccount extends DBBeans<Account> {
-    
+
+public class DBAccount extends DBBeans<Account> 
+{
     /**
      * Crea un gestore per il bean Account 
      * @param nomeTabella nome reale della tabella nel database
      * @param db database con relativa connessione
      */
-    public DBAccount(String nomeTabella,Database db){
-        super(nomeTabella,db); 
+    
+    private static final Map<String,String> MAPPINGS=creaMapping();
+    private static final List<String> CHIAVE=creaChiave(); 
+    
+    
+     /**
+     * Costruttore
+     * @param nomeTabella
+     * @param db
+     */
+    public DBAccount(String nomeTabella,Database db){super(nomeTabella,db); }
+    
+    
+    /**
+     * metodo creaMapping
+     * @return 
+     */
+    private static Map<String,String> creaMapping()
+    {
+        Map<String,String> res= new HashMap<String,String>();
+        res.put("user_name","userName");
+        res.put("pass_word","passWord");
+        
+        return Collections.unmodifiableMap(res);
+    }
+    
+    
+    /**
+     * Metodo che crea una chiave
+     * @return 
+     */
+    private static List<String> creaChiave()
+    {
+        List<String> res=  Arrays.asList("username");
+        
+        return Collections.unmodifiableList(res);
     }
    
+    
     /**
-     *  @see atsilo.storage.DBBeans#getMappingFields()
+     * @see atsilo.storage.DBBeans#getMappingFields()
      */
-    public HashMap<String,String> getMappingFields()
-    {
-        HashMap<String,String> toReturn = new HashMap<String,String>();
-        toReturn.put("userName", "userName");
-        toReturn.put("password","password");
-        return toReturn;
-    }
+    protected Map<String,String> getMappingFields(){return MAPPINGS;}
+    
     
     /**
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
-    public List<String> getKeyFields()
+    protected List<String> getKeyFields() {return CHIAVE;}
+    
+    
+    /**
+     * 
+     * @param user
+     * @return un account con username=a oppure null
+     * @throws SQLException
+     */
+    public Account ricercaPerUsername(String user) throws SQLException 
     {
-        ArrayList<String> toReturn = new ArrayList<String>();
-        toReturn.add("userName");
-        return toReturn;
-    }
-
-    public Account ricercaPerUsername(String user) {} //aggiunto
-    
-    
-   
-    }
+        Account a = null;
+        
+        ResultSet res = tabella.getDatabase().eseguiQueryRS("SELECT * FROM " + tabella.getNomeTabella() + "WHERE username =" + user);
+        if (res.next()) // dovrebbe trovare solo un account perchè l'username è unico. quindi restituisce un unico record. 
+        {
+            a.setUserName(res.getString("user_name"));
+            a.setPassWord(res.getString("pass_word"));
+           
+            res.close();
+            return a;
+        }
+        else
+         { 
+            res.close();  
+             return null;
+         }
+    } 
+ }
 
