@@ -89,7 +89,7 @@ public class DBAssenza extends DBBeans {
         List<Assenza> a=null;
         int i=0;//indice per scorere in list
         ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale =" + codicefiscale);
-        if(res.next())
+        while(res.next())
         {
             temp.setData(res.getDate("data"));
             temp.setRegistro((Bambino) res.getObject("Bambino"));
