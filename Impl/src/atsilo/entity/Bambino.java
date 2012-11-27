@@ -6,43 +6,43 @@ public class Bambino {
     /**
      * @attribute nome di tipo stringa
      */
-    private String Nome;
+    private String nome;
 
     /**
      * @attribute DataNascita di tipo DATE
      */
-    private Date DataNascita;
+    private Date dataNascita;
 
     /**
      * @attribute CategoriaAppartenenza di tipo stringa
      */
-    private String CategoriaAppartenenza;
+    private String categoriaAppartenenza;
 
     /**
      * @attribute indirizzo di tipo indirizzo
      */
-    private String Indirizzo;
+    private String indirizzo;
 
     /**
      * @attribute classe di tipo intero
      */
-    private int Classe;
+    private int classe;
 
     /**
      * @attribute cognome di tipo stringa
      */
-    private String Cognome;
+    private String cognome;
 
     /**
      *  La variabile genitore avrà il valore della variabile di Genitore
      * La variabile Genitore è nulla c'è bisogno di una lettura della classe genitore
      */
-    private Genitore Genitore;
+    private Genitore genitore;
 
     /**
      * @attribute CodiceFiscale di tipo stringa
      */
-    private String Codice_Fiscale;
+    private String codiceFiscale;
 
     /**
      *  La variabile assenza avrà i valore della lista Assenza
