@@ -22,6 +22,13 @@ public class ProgrammaEducativoSettimanale {
     }
 
     /**
+     * @param object
+     */
+    public ProgrammaEducativoSettimanale(ProgrammaEducativoSettimanale object) {// da implementare
+        // TODO Scheletro di costruttore autogenerato
+    }
+
+    /**
      * Metodo che prende il campo settimana
      * @return Settimana il parametro inserito
      */
