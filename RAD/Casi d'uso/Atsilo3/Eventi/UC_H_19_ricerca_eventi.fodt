@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-18T11:25:03.96</meta:creation-date><meta:editing-duration>PT15M5S</meta:editing-duration><meta:editing-cycles>43</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-24T16:54:47.60</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="20" meta:word-count="136" meta:character-count="871" meta:non-whitespace-character-count="757"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-18T11:25:03.96</meta:creation-date><meta:editing-duration>PT15M5S</meta:editing-duration><meta:editing-cycles>44</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-28T00:08:18.08</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="20" meta:word-count="137" meta:character-count="882" meta:non-whitespace-character-count="767"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">1245</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">40809</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">17651</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">16686</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">24539</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">15734</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">25744</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">7659</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">1245</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">40808</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">18895</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">16685</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">612714</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">662902</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -509,21 +509,24 @@
    <style:text-properties fo:font-weight="bold" officeooo:rsid="0001d300" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T3" style:family="text">
-   <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000a1d76" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T4" style:family="text">
-   <style:text-properties officeooo:rsid="0001d300"/>
+   <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T5" style:family="text">
-   <style:text-properties officeooo:rsid="00034c9e"/>
+   <style:text-properties officeooo:rsid="0001d300"/>
   </style:style>
   <style:style style:name="T6" style:family="text">
-   <style:text-properties officeooo:rsid="000617a2"/>
+   <style:text-properties officeooo:rsid="00034c9e"/>
   </style:style>
   <style:style style:name="T7" style:family="text">
-   <style:text-properties officeooo:rsid="0007e5e7"/>
+   <style:text-properties officeooo:rsid="000617a2"/>
   </style:style>
   <style:style style:name="T8" style:family="text">
+   <style:text-properties officeooo:rsid="0007e5e7"/>
+  </style:style>
+  <style:style style:name="T9" style:family="text">
    <style:text-properties officeooo:rsid="0009596a"/>
   </style:style>
   <text:list-style style:name="L1">
@@ -607,7 +610,7 @@
       <text:p text:style-name="P1">Nome dello use case</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B1" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Ricerca Event<text:span text:style-name="T7">i</text:span></text:p>
+      <text:p text:style-name="Table_20_Contents">Ricerca Event<text:span text:style-name="T8">i</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.1">
@@ -623,7 +626,7 @@
       <text:p text:style-name="P1">Attori partecipanti</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Iniziato da: Utente <text:span text:style-name="T5">del sistema</text:span></text:p>
+      <text:p text:style-name="Table_20_Contents">Iniziato da: Utente <text:span text:style-name="T6">del sistema</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.3">
@@ -631,7 +634,7 @@
       <text:p text:style-name="P1">Entry condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">L&apos;utente accede al sistema e viene riconosciuto come Utente <text:span text:style-name="T6">del sistema</text:span></text:p>
+      <text:p text:style-name="Table_20_Contents">L&apos;utente accede al sistema e viene riconosciuto come Utente <text:span text:style-name="T7">del sistema</text:span></text:p>
       <text:p text:style-name="P2"/>
      </table:table-cell>
     </table:table-row>
@@ -640,24 +643,24 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list36681413" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list20213221" text:style-name="Numerazione_20_UC">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P11">L&apos;Utente <text:span text:style-name="T5">del sistema</text:span> accede alla sezione Eventi </text:p>
+        <text:p text:style-name="P11">L&apos;Utente <text:span text:style-name="T6">del sistema</text:span> accede alla sezione Eventi </text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="Azione_20_sistema">Il sistema visualizza la lista degli eventi a lui pertinenti(<text:span text:style-name="T1">include Visualizza Eventi </text:span><text:span text:style-name="T3">)</text:span></text:p>
+        <text:p text:style-name="Azione_20_sistema">Il sistema visualizza la lista degli eventi a lui pertinenti(<text:span text:style-name="T1">include Visualizza </text:span><text:span text:style-name="T3">Calendario</text:span><text:span text:style-name="T1"> Eventi </text:span><text:span text:style-name="T4">)</text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P12"/>
-      <text:list xml:id="list36675125" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list20218367" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P11">L&apos;Utente <text:span text:style-name="T5">del sistema</text:span> inserisce nel campo apposito il nome dell&apos;evento da ricercare </text:p>
+        <text:p text:style-name="P11">L&apos;Utente <text:span text:style-name="T6">del sistema</text:span> inserisce nel campo apposito il nome dell&apos;evento da ricercare </text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P13"/>
-      <text:list xml:id="list36683071" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list20214676" text:continue-numbering="true" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="Azione_20_sistema">Il sistema mostra <text:span text:style-name="T3">la lista degli eventi in base ai parametri di ricerca</text:span></text:p>
+        <text:p text:style-name="Azione_20_sistema">Il sistema mostra <text:span text:style-name="T4">la lista degli eventi in base ai parametri di ricerca</text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P12"/>
@@ -668,7 +671,7 @@
       <text:p text:style-name="P1">Exit condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="P4">L&apos;Utente <text:span text:style-name="T5">del sistema</text:span> ha visualizzato correttamente la lista degli eventi in base ai parametri di ricerca</text:p>
+      <text:p text:style-name="P4">L&apos;Utente <text:span text:style-name="T6">del sistema</text:span> ha visualizzato correttamente la lista degli eventi in base ai parametri di ricerca</text:p>
       <text:p text:style-name="Standard"/>
      </table:table-cell>
     </table:table-row>
@@ -677,9 +680,9 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list36673183" text:style-name="L1">
+      <text:list xml:id="list20227685" text:style-name="L1">
        <text:list-header>
-        <text:p text:style-name="P10">Nel caso di un errore utente, il sistema mostra all’utente <text:span text:style-name="T5">del sistema </text:span>un messaggio di errore che ne indica la causa.</text:p>
+        <text:p text:style-name="P10">Nel caso di un errore utente, il sistema mostra all’utente <text:span text:style-name="T6">del sistema </text:span>un messaggio di errore che ne indica la causa.</text:p>
        </text:list-header>
       </text:list>
      </table:table-cell>
@@ -689,12 +692,12 @@
       <text:p text:style-name="P1">Requisiti qualitativi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">L&apos;operazione di ricerca non dovrà richiedere pi<text:span text:style-name="T5">ù</text:span> di 5 secondi</text:p>
+      <text:p text:style-name="Table_20_Contents">L&apos;operazione di ricerca non dovrà richiedere pi<text:span text:style-name="T6">ù</text:span> di 5 secondi</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="P6"/>
-   <text:p text:style-name="P7">UC_H_19_ricerca_event<text:span text:style-name="T8">i</text:span>: Ricerca event<text:span text:style-name="T8">i</text:span></text:p>
+   <text:p text:style-name="P7">UC_H_19_ricerca_event<text:span text:style-name="T9">i</text:span>: Ricerca event<text:span text:style-name="T9">i</text:span></text:p>
   </office:text>
  </office:body>
 </office:document>
