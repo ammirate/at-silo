@@ -84,15 +84,11 @@ public class DBAccount extends DBBeans<Account>
         {
             a.setUserName(res.getString("user_name"));
             a.setPassWord(res.getString("pass_word"));
-           
-            res.close();
-            return a;
         }
-        else
-         { 
+         
             res.close();  
-             return null;
-         }
+             return a;
+       
     }
 
 
