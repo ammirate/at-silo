@@ -72,14 +72,14 @@ public class Bambino {
                 atsilo.entity.Genitore genitore, String codice_Fiscale,
                 List<Assenza> assenze) {
             super();
-            Nome = nome;
-            DataNascita = dataNascita;
-            CategoriaAppartenenza = categoriaAppartenenza;
-            Indirizzo = indirizzo;
-            Classe = classe;
-            Cognome = cognome;
-            Genitore = genitore;
-            Codice_Fiscale = codice_Fiscale;
+            nome = nome;
+            dataNascita = dataNascita;
+            categoriaAppartenenza = categoriaAppartenenza;
+            indirizzo = indirizzo;
+            classe = classe;
+            cognome = cognome;
+            genitore = genitore;
+            codice_Fiscale = codice_Fiscale;
             this.assenze = assenze;
         }
     
@@ -88,7 +88,7 @@ public class Bambino {
      * @param Nome il parametro fissato
      */
     public void setNome(String Nome) {
-        this.Nome = Nome;
+        this.nome = Nome;
     }
 
     /**
@@ -96,7 +96,7 @@ public class Bambino {
      * @return nome il paramentro inserito
      */
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
     /**
@@ -104,7 +104,7 @@ public class Bambino {
      * @param DataNascita il parametro fissato
      */
     public void setDataNascita(Date DataNascita) {
-        this.DataNascita = DataNascita;
+        this.dataNascita = DataNascita;
     }
 
     /**
@@ -112,7 +112,7 @@ public class Bambino {
      * @return DataNascita il parametro inserito
      */
     public Date getDataNascita() {
-        return DataNascita;
+        return dataNascita;
     }
 
     /**
@@ -120,7 +120,7 @@ public class Bambino {
      * @param CategoriaAppartenenza il parametro fissato
      */    
     public void setCategoriaAppartenenza(String CategoriaAppartenenza) {
-        this.CategoriaAppartenenza = CategoriaAppartenenza;
+        this.categoriaAppartenenza = CategoriaAppartenenza;
     }
 
     /**
@@ -128,7 +128,7 @@ public class Bambino {
      * @return CategoriaAppartenenza il parametro inserito
      */
     public String getCategoriaAppartenenza() {
-        return CategoriaAppartenenza;
+        return categoriaAppartenenza;
     }
 
     /**
@@ -136,7 +136,7 @@ public class Bambino {
      * @param Indirizzo il parametro fissato
      */
     public void setIndirizzo(String Indirizzo) {
-        this.Indirizzo = Indirizzo;
+        this.indirizzo = Indirizzo;
     }
 
     /**
@@ -144,7 +144,7 @@ public class Bambino {
      * @return indirizzo il paramentro inserito
      */
     public String getIndirizzo() {
-        return Indirizzo;
+        return indirizzo;
     }
 
     /**
@@ -152,7 +152,7 @@ public class Bambino {
      * @param Classe il parametro fissato
      */
     public void setClasse(int Classe) {
-        this.Classe = Classe;
+        this.classe = Classe;
     }
 
     /**
@@ -160,7 +160,7 @@ public class Bambino {
      * @return classe il parametro inserito
      */
     public int getClasse() {
-        return Classe;
+        return classe;
     }
 
     /**
@@ -168,7 +168,7 @@ public class Bambino {
      * @param Cognome il parametro fissato
      */
     public void setCognome(String Cognome) {
-        this.Cognome = Cognome;
+        this.cognome = Cognome;
     }
 
     /**
@@ -176,7 +176,7 @@ public class Bambino {
      * @return cognome il parametro inserito
      */
     public String getCognome() {
-        return Cognome;
+        return cognome;
     }
 
     /**
@@ -184,7 +184,7 @@ public class Bambino {
      * @param Genitore è settato dopo la lettura
      */
     public void setGenitore(Genitore Genitore) {
-        this.Genitore = Genitore;
+        this.genitore = Genitore;
     }
 
     /**
@@ -192,7 +192,7 @@ public class Bambino {
      * @return Genitore parametro preso dalla lettura
      */
     public Genitore getGenitore() {
-        return Genitore;
+        return genitore;
     }
 
     /**
@@ -200,7 +200,7 @@ public class Bambino {
      * @param Codice_Fiscale il parametro fissato
      */
     public void setCodice_Fiscale(String Codice_Fiscale) {
-        this.Codice_Fiscale = Codice_Fiscale;
+        this.codiceFiscale = Codice_Fiscale;
     }
 
     /**
@@ -208,7 +208,7 @@ public class Bambino {
      * @return codiceFiscale il parametro inserito
      */
     public String getCodice_Fiscale() {
-        return Codice_Fiscale;
+        return codiceFiscale;
     }
 
     /**
