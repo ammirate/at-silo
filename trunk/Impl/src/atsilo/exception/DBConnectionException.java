@@ -3,7 +3,7 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: RegistroException.java
+ * FILE: DBConnectionException.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -16,9 +16,10 @@
 
 package atsilo.exception;
 
-public class RegistroException extends RuntimeException{
 
-    public RegistroException(String stringa){
-        super(stringa);
+public class DBConnectionException extends RuntimeException{
+
+    public DBConnectionException(String s){
+        super(s);
     }
 }
