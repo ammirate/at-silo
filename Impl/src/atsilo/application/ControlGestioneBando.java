@@ -20,6 +20,7 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
+import atsilo.storage.Database;
 
 import java.sql.Date;
 import java.sql.SQLException;
