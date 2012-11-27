@@ -22,6 +22,13 @@ public class Registro {
     }
 
     /**
+     * @param object
+     */
+    public Registro(Registro object) {// da implementare
+        // TODO Scheletro di costruttore autogenerato   
+    }
+
+    /**
      * Metodo che prende il valore classe
      * @param classe il parametro inserito
      */
