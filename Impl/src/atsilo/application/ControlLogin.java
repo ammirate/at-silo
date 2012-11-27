@@ -1,5 +1,24 @@
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlLogin.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Marco Parisi, data 27/11/2012
+ * REVISION
+ * nome revisore, data revisione
+ *-----------------------------------------------------------------
+ */
+
 package atsilo.application;
 
+import java.sql.SQLException;
+
+import atsilo.entity.Account;
 import atsilo.entity.Utente;
 import atsilo.storage.DBAccount;
 import atsilo.storage.DBEducatoreDidattico;
@@ -27,10 +46,7 @@ public class ControlLogin {
         Database db = new Database();
         if (!db.apriConnessione()) 
         {
-            /*
-             * Connessione fallita
-             * Bisogna restituire un errore all'utente
-             */
+            throws new DBConnectionException();
         }
 
         //Quindi, si possono creare tutti i gestori di tabelle necessari
@@ -53,13 +69,30 @@ public class ControlLogin {
         }
     }
 
-    Boolean getValoreLogin(String username, String password) {
-        
+    Boolean getValoreLogin(String username, String password) 
+    {
+        Account account=new Account();
+        try {
+            account=dbAccount.ricercaPerUsername(username);
+          if( account== null)
+              return false;
+          else
+          {
+              if(account.getPassWord().compareTo(password)==0)
+                  return true;
+              else return false;
+          }
+        } catch (SQLException e) 
+        {
+            
+        }
         
         return false;
     }
 
-    public static ControlLogin getInstance() {
+    public static ControlLogin getInstance() 
+    {
+        
         return null;
         
     }
