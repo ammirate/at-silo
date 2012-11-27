@@ -16,12 +16,30 @@ public class Genitore extends Utente {
      */
     private List<Questionario> questionariCompilati;
 
+    /**
+     * Costruttore vuoto
+     */
     public Genitore() {
     }
+    
+    /**
+     * @param tipo il paramentro è fissato
+     * @param figli è settato dopo la lettura
+     * @param questionariCompilati è settato dopo la lettura
+     */
+    public Genitore(String tipo, List<Bambino> figli,
+            List<Questionario> questionariCompilati) {
+        super();
+        this.tipo = tipo;
+        this.figli = figli;
+        this.questionariCompilati = questionariCompilati;
+    }
+
+
 
     /**
      * Metodo che prende il parametro tipo
-     * @return tipo il parametro inserito
+     * @param tipo il parametro inserito
      */
     public void setTipo(String tipo) {
         this.tipo = tipo;

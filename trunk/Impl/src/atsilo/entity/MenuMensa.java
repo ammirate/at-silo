@@ -13,8 +13,36 @@ public class MenuMensa {
     private String frutta;
     private Date data;
     
+    /**
+     * Costruttore vuoto
+     */
     public MenuMensa() {
     }
+    
+    /**
+     * @param id il paramentro è fissato
+     * @param categoriaBambino il paramentro è fissato
+     * @param tipologia il paramentro è fissato
+     * @param primoPiatto il paramentro è fissato
+     * @param secondoPiatto il paramentro è fissato
+     * @param contorno il paramentro è fissato
+     * @param frutta il paramentro è fissato
+     * @param data il paramentro è fissato
+     */
+    public MenuMensa(String id, String categoriaBambino, String tipologia,
+            String primoPiatto, String secondoPiatto, String contorno,
+            String frutta, Date data) {
+        super();
+        this.id = id;
+        this.categoriaBambino = categoriaBambino;
+        this.tipologia = tipologia;
+        this.primoPiatto = primoPiatto;
+        this.secondoPiatto = secondoPiatto;
+        this.contorno = contorno;
+        this.frutta = frutta;
+        this.data = data;
+    }
+
 
     /**
      * Metodo che setta il parametro id

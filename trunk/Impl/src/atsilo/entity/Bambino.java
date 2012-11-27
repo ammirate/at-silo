@@ -3,6 +3,7 @@ import java.sql.Date;
 import java.util.List;
 
 public class Bambino {
+
     /**
      * @attribute nome di tipo stringa
      */
@@ -56,32 +57,30 @@ public class Bambino {
     public Bambino() {}
     
     /**
-     * 
      * @param nome il parametro fissato
      * @param dataNascita il parametro fissato
      * @param categoriaAppartenenza il parametro fissato
      * @param indirizzo il parametro fissato
      * @param classe il parametro fissato
      * @param cognome il parametro fissato
-     * @param genitore il parametro fissato
-     * @param codice_Fiscale il parametro fissato
-     * @param assenze il parametro fissato
+     * @param genitore è settato dopo la lettura
+     * @param codiceFiscale il parametro fissato
+     * @param assenze è settato dopo la lettura
      */
-    public Bambino(String no, Date dataNasci, String categoriaApp,
-                String ind, int cla, String cogn,
-                atsilo.entity.Genitore ge, String codice_Fiscale,
-                List<Assenza> asse) {
-            super();
-            nome = no;
-            dataNascita = dataNasci;
-            categoriaAppartenenza = categoriaApp;
-            indirizzo = ind;
-            classe = cla;
-            cognome = cogn;
-            genitore = ge;
-            codiceFiscale = codice_Fiscale;
-            this.assenze = asse;
-        }
+    public Bambino(String nome, Date dataNascita, String categoriaAppartenenza,
+            String indirizzo, int classe, String cognome, Genitore genitore,
+            String codiceFiscale, List<Assenza> assenze) {
+        super();
+        this.nome = nome;
+        this.dataNascita = dataNascita;
+        this.categoriaAppartenenza = categoriaAppartenenza;
+        this.indirizzo = indirizzo;
+        this.classe = classe;
+        this.cognome = cognome;
+        this.genitore = genitore;
+        this.codiceFiscale = codiceFiscale;
+        this.assenze = assenze;
+    }
     
     /**
      * Metodo che setta il campo Nome

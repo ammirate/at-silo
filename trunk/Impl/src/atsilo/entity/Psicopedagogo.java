@@ -4,7 +4,18 @@ public class Psicopedagogo extends Utente implements EventPlanner{
     
     private int numeroClassi;
     
+    /**
+     * Costruttore vuoto
+     */
     public Psicopedagogo(){       
+    }
+    
+    /**
+     * @param numeroClassi il paramentro è fissato
+     */
+    public Psicopedagogo(int numeroClassi) {
+        super();
+        this.numeroClassi = numeroClassi;
     }
 
     /**

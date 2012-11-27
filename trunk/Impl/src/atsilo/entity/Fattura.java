@@ -9,7 +9,22 @@ public class Fattura {
      */
     private PersonaleAsilo personaleAsilo;
 
+    /**
+     * Costruttore vuoto
+     */
     public Fattura(){
+    }
+    
+    /**
+     * @param id parametro fissato
+     * @param descrizione parametro fissato
+     * @param personaleAsilo fissato dopo la lettura
+     */
+    public Fattura(int id, String descrizione, PersonaleAsilo personaleAsilo) {
+        super();
+        this.id = id;
+        this.descrizione = descrizione;
+        this.personaleAsilo = personaleAsilo;
     }
 
     /**
@@ -30,7 +45,7 @@ public class Fattura {
 
     /**
      * Metodo che setta il valore importo
-     * @param importo il parametro fissato
+     * @param descrizione il parametro fissato
      */
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;

@@ -15,7 +15,25 @@ public class RispostaQuestionario {
      */
     private Genitore genitore;
     
+    /**
+     * Costruttore vuoto
+     */
     public RispostaQuestionario() {
+    }
+
+    /**
+     * @param id il paramentro è fissato
+     * @param valore il paramentro è fissato
+     * @param questionario è settato dopo la lettura
+     * @param genitore è settato dopo la lettura
+     */
+    public RispostaQuestionario(String id, String valore,
+            Questionario questionario, Genitore genitore) {
+        super();
+        this.id = id;
+        this.valore = valore;
+        this.questionario = questionario;
+        this.genitore = genitore;
     }
 
     /**

@@ -12,7 +12,29 @@ public class Extra {
     private Date dataFine;
     private List<Retta> retteAssociate;
 
+    /**
+     * Costruttore vuoto
+     */
     public Extra(){
+    }
+
+    /**
+     * @param importo il paramentro è fissato
+     * @param descrizione il paramentro è fissato
+     * @param id il paramentro è fissato
+     * @param dataInizio il paramentro è fissato
+     * @param dataFine il paramentro è fissato
+     * @param retteAssociate fissato dopo la lettura
+     */
+    public Extra(float importo, String descrizione, String id, Date dataInizio,
+            Date dataFine, List<Retta> retteAssociate) {
+        super();
+        this.importo = importo;
+        this.descrizione = descrizione;
+        this.id = id;
+        this.dataInizio = dataInizio;
+        this.dataFine = dataFine;
+        this.retteAssociate = retteAssociate;
     }
 
     /**
@@ -97,7 +119,7 @@ public class Extra {
 
     /**
      * Metodo che prende il parametro letto dalla classe Retta
-     * @return RettaAssociate preso dalla lettura
+     * @return RetteAssociate preso dalla lettura
      */
     public List<Retta> getRetteAssociate() {
         return retteAssociate;
@@ -105,9 +127,9 @@ public class Extra {
     
     /**
      * Metodo che setta il parametro letto dalla classe assenza
-     * @param assenza è settato dopo la lettura
+     * @param retteAssociate è settato dopo la lettura
      */
-    public void setRettaAssociate(List<Retta> RettaAssociate) {
-        this.RettaAssociate = RettaAssociate;
+    public void setRetteAssociate(List<Retta> retteAssociate) {
+        this.retteAssociate = retteAssociate;
     }
 }

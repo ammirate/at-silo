@@ -14,7 +14,7 @@ public class Assenza {
     private Bambino bambino;
     
     /**
-     * metodo vuoto
+     * Costruttore vuoto
      */
     public Assenza() {
     }

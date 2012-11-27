@@ -4,10 +4,19 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
     
     private String categoriaAppartenenza;
     
-    public PersonaleAsilo(){
-        
-    }
+    /**
+     * Costruttore vuoto
+     */
+    public PersonaleAsilo(){}
     
+    /**
+     * @param categoriaAppartenenza è settato dopo la lettura 
+     */
+    public PersonaleAsilo(String categoriaAppartenenza) {
+        super();
+        this.categoriaAppartenenza = categoriaAppartenenza;
+    }
+
     /**
      * Metodo che setta il parametro categoriaAppartenenza
      * @param categoriaAppartenenza il parametro fissato

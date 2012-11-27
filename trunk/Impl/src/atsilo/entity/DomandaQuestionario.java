@@ -12,7 +12,7 @@ public class DomandaQuestionario {
     private Questionario questionario;
     
     /**
-     * Metodo vuoto
+     * Costruttore vuoto
      */
     public DomandaQuestionario(){    
     }

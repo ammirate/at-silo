@@ -16,8 +16,30 @@ public class Servizio {
      */
     private OrarioUtente orarioUtente;
 
+    /**
+     * Costruttore vuoto
+     */
     public Servizio(){}
     //(id,orario_inizio,orario_fine,piano_pasto,BAMBINO,ORARIO_UTENTE
+    
+    /**
+     * @param id il paramentro è fissato 
+     * @param orarioInizio il paramentro è fissato
+     * @param orarioFine il paramentro è fissato
+     * @param pianoPasto il paramentro è fissato
+     * @param bambino è settato dopo la lettura
+     * @param orarioUtente è settato dopo la lettura
+     */
+    public Servizio(String id, String orarioInizio, String orarioFine,
+            String pianoPasto, Bambino bambino, OrarioUtente orarioUtente) {
+        super();
+        this.id = id;
+        this.orarioInizio = orarioInizio;
+        this.orarioFine = orarioFine;
+        this.pianoPasto = pianoPasto;
+        this.bambino = bambino;
+        this.orarioUtente = orarioUtente;
+    }
     
     /**
      * Metodo che prende il campo Id
@@ -92,7 +114,7 @@ public class Servizio {
 
     /**
      * Metodo che setta il parametro letto dalla classe Bambino
-     * @param Bambino è settato dopo la lettura
+     * @param bambino è settato dopo la lettura
      */
     public void setBambino(Bambino bambino) {
             this.bambino = bambino;

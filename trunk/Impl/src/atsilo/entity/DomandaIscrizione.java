@@ -20,7 +20,7 @@ public class DomandaIscrizione {
     private Bambino bambino;
     
     /**
-     * Metodo vuoto
+     * Costruttore vuoto
      */
     public DomandaIscrizione() {
     }
