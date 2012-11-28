@@ -1,11 +1,12 @@
 package atsilo.entity;
 
+import java.sql.Date;
 import java.util.List;
 
 public class Registro {
 
     private int Classe;
-    private String anno;
+    private Date anno;
     private int id;
     
     /**
@@ -31,7 +32,7 @@ public class Registro {
      * @param educatoreDidattico è settato dopo la lettura 
      * @param listaAttivita è settato dopo la lettura 
      */
-    public Registro(int classe, String anno, int id,
+    public Registro(int classe, Date anno, int id,
             EducatoreDidattico educatoreDidattico, List<Attivita> listaAttivita) {
         super();
         Classe = classe;
@@ -59,17 +60,17 @@ public class Registro {
     
     /**
      * Metodo che prende il campo anno
-     * @param anno il parametro inserito
+     * @param date il parametro inserito
      */
-    public void setAnno(String anno) {
-        this.anno = anno;
+    public void setAnno(Date date) {
+        this.anno = date;
     }
 
     /**
      * Metodo che prende il campo anno
      * @return anno il parametro inserito
      */
-    public String getAnno() {
+    public Date getAnno() {
         return anno;
     }
 
