@@ -776,12 +776,12 @@ puo ritirare</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>1390</x>
-      <y>530</y>
+      <y>535</y>
       <w>34</w>
-      <h>39</h>
+      <h>34</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>25;15;25;30;15;30</additional_attributes>
+    <additional_attributes>25;15;25;25;15;25</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -1498,7 +1498,7 @@ fg=red</panel_attributes>
       <x>1405</x>
       <y>400</y>
       <w>70</w>
-      <h>145</h>
+      <h>150</h>
     </coordinates>
     <panel_attributes>Tirocinante
 --
@@ -1811,12 +1811,12 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>15</x>
-      <y>530</y>
+      <y>535</y>
       <w>1459</w>
-      <h>214</h>
+      <h>209</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>1450;15;1450;200;15;205;15;140</additional_attributes>
+    <additional_attributes>1450;15;1450;195;15;200;15;135</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -1848,8 +1848,7 @@ fg=red
       <w>85</w>
       <h>55</h>
     </coordinates>
-    <panel_attributes>Rappresentante
-Scienze della Formazione
+    <panel_attributes>Responsabile Scientifico
 --
 Nome
 Cognome
@@ -1899,7 +1898,7 @@ fg=red</panel_attributes>
       <x>1405</x>
       <y>815</y>
       <w>70</w>
-      <h>45</h>
+      <h>55</h>
     </coordinates>
     <panel_attributes>Registro Tirocinante
 --
@@ -1918,7 +1917,7 @@ fg=red</panel_attributes>
       <x>1295</x>
       <y>960</y>
       <w>70</w>
-      <h>60</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Attività Tirocianante
 --
@@ -1948,12 +1947,12 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>1425</x>
-      <y>530</y>
+      <y>535</y>
       <w>24</w>
-      <h>229</h>
+      <h>224</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>15;15;15;220</additional_attributes>
+    <additional_attributes>15;15;15;215</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -1982,12 +1981,12 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>1425</x>
-      <y>845</y>
+      <y>855</y>
       <w>24</w>
-      <h>79</h>
+      <h>69</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>15;15;15;70</additional_attributes>
+    <additional_attributes>15;15;15;60</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -2007,7 +2006,7 @@ fg=red</panel_attributes>
       <x>1370</x>
       <y>115</y>
       <w>70</w>
-      <h>65</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>Richiesta Tirociananti
 --
