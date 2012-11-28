@@ -27,7 +27,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
   
   
   <tr>
-    <td colspan="3"> il cui indicatore ISEE è pari a Euro </td>
+    <td colspan="3"> il cui indicatore ISEE &egrave; pari a Euro </td>
     <td>
       <input name="isee" type="text" id="isee" maxlength="10" /></td>
   </tr>

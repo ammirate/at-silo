@@ -18,10 +18,10 @@
 <td align="left" class="menuprimosel">&nbsp;<b>'Area Utente</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_account.html">Dati Account</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_account_genitore.jsp">Dati Account</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_bambino.html">Dati Bambino</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_bambino.jsp">Dati Bambino</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="logout.jsp">Logout</a></td>
@@ -51,7 +51,7 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Servizi</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="rinuncia_servizio.html">Rinuncia Servizio</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="rinuncia_servizio.jsp">Rinuncia Servizio</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="servizi_attivi.jsp">Servizi Attivi</a></td>
@@ -63,6 +63,6 @@
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_pasti.jsp">Modifica Pasti</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.html">Storico Attività</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.jsp">Storico Attivit&agrave;</a></td>
 </tr>
 </tbody></table>

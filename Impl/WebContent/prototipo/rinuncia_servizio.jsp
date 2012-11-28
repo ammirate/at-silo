@@ -14,10 +14,25 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <form>
   <table width="80%" border="0" cellspacing="0">
     <tr>
-    <td>Storico Attività</td>
-    </tr>
+    <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vuole fare richiesta di rinuncia all'iscrizione<br>
+    </label>
+      <br></td>
+      
+  </tr>
+  <tr>
+  <td colspan="2"><select name="select">
+    <option selected>Selezionare il nome del bambino</option>
+  </select></td>
+     <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
     
-  
+  </tr>
+  <tr>
+    <td><input type="submit" value="Rinuncia all'iscrizione" ></td>
+    
+  </tr>
 </table>
  
 </form>

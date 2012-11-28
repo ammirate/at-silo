@@ -107,7 +107,7 @@ else if (nf.equals("cancella_fascia_oraria.jsp"))
 </tbody></table>
 <table class="percorsopagina1" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="index_educacatore.html">Home</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="#">Home</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/index.html">Forum</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="ricerca_utente.html">Ricerca utente</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="faq.html">FAQ</a></td>
