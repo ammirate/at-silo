@@ -5,7 +5,7 @@
     <type>com.umlet.element.Actor</type>
     <coordinates>
       <x>0</x>
-      <y>0</y>
+      <y>10</y>
       <w>100</w>
       <h>120</h>
     </coordinates>
