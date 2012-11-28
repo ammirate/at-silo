@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-23T22:17:51.96</meta:creation-date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>4</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-15T21:28:09.97</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="27" meta:word-count="255" meta:character-count="1831" meta:non-whitespace-character-count="1609"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-23T22:17:51.96</meta:creation-date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>5</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-28T19:31:54.87</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="27" meta:word-count="276" meta:character-count="1894" meta:non-whitespace-character-count="1651"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">1905</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">13758</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">32731</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">28550</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="int">14448</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">24479</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">6685</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">15856</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">13988</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">1905</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">32729</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">16351</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">13758</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">28549</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">28205</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">899332</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1020226</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -101,11 +101,14 @@
  </office:settings>
  <office:scripts>
   <office:script script:language="ooo:Basic">
-   <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <ooo:library-embedded ooo:name="Standard"/>
+   </ooo:libraries>
   </office:script>
  </office:scripts>
  <office:font-face-decls>
   <style:font-face style:name="Mangal1" svg:font-family="Mangal"/>
+  <style:font-face style:name="OpenSymbol" svg:font-family="OpenSymbol"/>
   <style:font-face style:name="Times New Roman" svg:font-family="&apos;Times New Roman&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
   <style:font-face style:name="Arial" svg:font-family="Arial" style:font-family-generic="swiss" style:font-pitch="variable"/>
   <style:font-face style:name="Mangal" svg:font-family="Mangal" style:font-family-generic="system" style:font-pitch="variable"/>
@@ -194,6 +197,9 @@
   <style:style style:name="Numerazione_20_UC_20_inizio" style:display-name="Numerazione UC inizio" style:family="paragraph" style:parent-style-name="Numerazione_20_UC" style:next-style-name="Numerazione_20_UC" style:class="list"/>
   <style:style style:name="Numerazione_20_UC_20_succ." style:display-name="Numerazione UC succ." style:family="paragraph" style:parent-style-name="Numerazione_20_UC" style:class="list"/>
   <style:style style:name="Numbering_20_Symbols" style:display-name="Numbering Symbols" style:family="text"/>
+  <style:style style:name="Bullet_20_Symbols" style:display-name="Bullet Symbols" style:family="text">
+   <style:text-properties style:font-name="OpenSymbol" style:font-name-asian="OpenSymbol" style:font-name-complex="OpenSymbol"/>
+  </style:style>
   <text:outline-style style:name="Outline">
    <text:outline-level-style text:level="1" style:num-format="">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
@@ -453,33 +459,12 @@
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties style:font-name="Arial" fo:font-size="11pt" fo:font-style="italic" fo:font-weight="normal" style:font-size-asian="11pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="11pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Azione_20_attore">
-   <style:paragraph-properties>
-    <style:tab-stops>
-     <style:tab-stop style:position="-0.155cm"/>
-     <style:tab-stop style:position="0.497cm"/>
-    </style:tab-stops>
-   </style:paragraph-properties>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:rsid="0010c1b3" officeooo:paragraph-rsid="0010c1b3"/>
   </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
-   <style:paragraph-properties>
-    <style:tab-stops>
-     <style:tab-stop style:position="-0.155cm"/>
-     <style:tab-stop style:position="0.497cm"/>
-    </style:tab-stops>
-   </style:paragraph-properties>
-  </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="Numerazione_20_UC"/>
   <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
-   <style:paragraph-properties>
-    <style:tab-stops>
-     <style:tab-stop style:position="-0.155cm"/>
-     <style:tab-stop style:position="0.497cm"/>
-    </style:tab-stops>
-   </style:paragraph-properties>
-   <style:text-properties officeooo:paragraph-rsid="000db904"/>
-  </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:paragraph-properties>
     <style:tab-stops>
      <style:tab-stop style:position="-0.155cm"/>
@@ -489,6 +474,12 @@
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="000db904"/>
+  </style:style>
+  <style:style style:name="T2" style:family="text">
+   <style:text-properties officeooo:rsid="000e9871"/>
+  </style:style>
+  <style:style style:name="T3" style:family="text">
+   <style:text-properties officeooo:rsid="0010c1b3"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" style:num-suffix=")" style:num-format="a">
@@ -587,7 +578,7 @@
       <text:p text:style-name="P1">Attori partecipanti</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Personale amministrativo</text:p>
+      <text:p text:style-name="P4">Impiegato del diritto allo studio</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.3">
@@ -595,7 +586,7 @@
       <text:p text:style-name="P1">Entry condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">L&apos;utente accede al sistema e viene autenticato <text:span text:style-name="T1">come Personale Amministrativo</text:span></text:p>
+      <text:p text:style-name="Standard">L&apos;utente accede al sistema e viene autenticato <text:span text:style-name="T1">come </text:span><text:span text:style-name="T2">i</text:span><text:span text:style-name="T1">mpiegato del diritto allo studio</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.5">
@@ -603,36 +594,36 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list41392333" text:style-name="Numerazione_20_UC">
-       <text:list-item text:start-value="1">
-        <text:p text:style-name="P7"><text:s/>Personale amministrativo accede alla sezione relativa alla graduatoria.</text:p>
+      <text:list xml:id="list39255292" text:style-name="Numerazione_20_UC">
+       <text:list-item>
+        <text:p text:style-name="P5"><text:span text:style-name="T3"><text:s/>Impiegato del diritto allo studio</text:span> accede alla sezione relativa alla graduatoria.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_sistema"><text:s/>Il <text:s/>sistema mostra l&apos;interfaccia per il consulto delle domande e per l&apos;assegnazione del punteggio.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P7">Personale amministrativo accede alla sezione relativa all&apos;assegnazione punteggio.</text:p>
+        <text:p text:style-name="P5"><text:span text:style-name="T3">Impiegato del diritto allo studio</text:span> accede alla sezione relativa all&apos;assegnazione punteggio.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_sistema"><text:s/>Il sistema mostra l&apos;interfaccia di amministrazione relativa all&apos;assegnazione de punteggio.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P7">Personale amministrativo effettua la selezione della prima domanda.</text:p>
+        <text:p text:style-name="P5"><text:span text:style-name="T3">Impiegato del diritto allo studio</text:span> effettua la selezione della prima domanda.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5"><text:s/>Il sistema chiede di inserire il punteggio.</text:p>
+        <text:p text:style-name="P7"><text:s/>Il sistema chiede di inserire il punteggio.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P7">Personale amministrativo inserisce il punteggio(intero). L&apos;utente sottomette l&apos;inserimento.</text:p>
+        <text:p text:style-name="P5"><text:span text:style-name="T3">Impiegato del diritto allo studio</text:span> inserisce il punteggio(intero). L&apos;utente sottomette l&apos;inserimento.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">Il sistema chiede all&apos;utente un messaggio di conferma operazione.</text:p>
+        <text:p text:style-name="P7">Il sistema chiede all&apos;utente un messaggio di conferma operazione.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P7"><text:s/>Personale amministrativo dà al sistema ulteriore conferma dell&apos;operazione.</text:p>
+        <text:p text:style-name="P5"><text:s/><text:span text:style-name="T3">Impiegato del diritto allo studio</text:span> dà al sistema ulteriore conferma dell&apos;operazione.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">Il sistema esegue l&apos;operazione e da la notifica di avvenuto inserimento della domanda nella graduatoria. Il sistema controlla la graduatoria e inserisce la domanda nella posizione adeguata.</text:p>
+        <text:p text:style-name="P7">Il sistema esegue l&apos;operazione e da la notifica di avvenuto inserimento della domanda nella graduatoria. Il sistema controlla la graduatoria e inserisce la domanda nella posizione adeguata.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
@@ -650,7 +641,7 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list41400075" text:style-name="L1">
+      <text:list xml:id="list39259203" text:style-name="L1">
        <text:list-item text:start-value="1">
         <text:p text:style-name="P6">L&apos;operazione non è andata a buon fine per un errore del sistema; viene visualizzato un messaggio di errore.</text:p>
        </text:list-item>
