@@ -7,6 +7,9 @@ import atsilo.entity.Registro;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
@@ -104,7 +107,6 @@ public class DBQuestionario extends DBBeans
     public List<Questionario> ricercaQuestionariPerPeriodoInizio (String d) throws SQLException{//verificarne l utilità
         List <Questionario> l=null;
         Questionario q=null;
-        int i=0;
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE periodo_inizio =" + d);
         while(res.next()){
@@ -125,7 +127,6 @@ public class DBQuestionario extends DBBeans
     public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
         List <Questionario> l=null;
         Questionario q=null;
-        int i=0;
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE nome =" + n);
         while(res.next()){
@@ -143,6 +144,45 @@ public class DBQuestionario extends DBBeans
          return l;
     }
     
-    
+    public List<Questionario> visualizzaQuestionariCompilabili(String data) throws SQLException, ParseException{
+        List <Questionario> l=null;
+        Questionario q=null;
+        
+        Date d=convertiData(data);
+        
+       
+        
+        
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE periodo_fine >=" +d);//da modificare
+        while(res.next()){
+            
+            q.setDescrizione(res.getString("descrizione"));
+            q.setFlag_rinuncia(res.getString("flag_rinuncia"));
+            q.setId(res.getInt("id"));
+            q.setNome(res.getString("nome"));
+            q.setPathname(res.getString("pathname"));
+            q.setPeriodo_fine(res.getString("periodo_fine"));
+            q.setPeriodo_inizio(res.getString("periodo_inizio"));         
+           
+            l.add(q);
+        }   
+         return l;
+    }
+        
+ 
+     public int trovaNumRispostePerValore(String idQuestionario, String val){
+         int i=0;
+         return i;
+     }
+     
+     public Date convertiData (String data) throws ParseException{
+         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd"); 
+         Date convertedDate = dateFormat.parse(data); 
+         return convertedDate;
+     }
+     
+     
+
+   
 
 }
