@@ -26,7 +26,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
     <option value="Seleziona">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>
-    <option value="Tutore">Tutore</option>
+    <option value="Tutore" selected>Tutore</option>
     <option value="Affidatario">Affidatario</option>
   </select></td>
     <td>&nbsp;</td>

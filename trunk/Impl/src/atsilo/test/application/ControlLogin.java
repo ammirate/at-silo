@@ -1,8 +1,6 @@
 package atsilo.test.application;
 
-import java.util.ArrayList;
 
-import atsilo.entity.Utente;
 /**
  *  STUB per il Control Login (che tra l'altro non può funzionare così come è)
  *  
@@ -18,30 +16,30 @@ public class ControlLogin {
     /**
      * Username e passwords per il funzionamento stub
      */
-    private static final String[] usernames = {"tiberio.timperi", "mario.monti" };
-    private static final String[] passwords = {"ilLottoAlle8", "imu" };
+    private static final String[] usernames = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" }; 
+    private static final String[] passwords = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" };
      
     ControlLogin() {
+       
          
     }
 
-    Boolean getValoreLogin(Utente utente) {
-        /**
-         * Questo è uno stub ma il control così scritto sappiate che non funzionerà mai.
-         * Probabilmente gli passerete username e password, non un oggetto utente!
-         */
-        String passwordCheFacciamoFintaInInput = "sbagliata";
-        String usernameCheFacciamoFintaInInput = "tiberio.timperi";
+    Boolean getValoreLogin(String username, String password) {
+
+        String passwordCheFacciamoFintaInInput = username;
+        String usernameCheFacciamoFintaInInput = password;
+        int i=0;
         for(String corrente : usernames)
         {
-            if (usernameCheFacciamoFintaInInput.equals(corrente))
+            if (usernameCheFacciamoFintaInInput.equals(corrente))//username trovato in posizione i
             {
-                for(String pwd : passwords)
-                {
+                //controllo (nella posizione i dell'array password) se la password corrisponde
+                    String pwd=passwords[i];
                     passwordCheFacciamoFintaInInput.equals(pwd);
                     return true;
-                }
+
             }
+            i++;
         }
         
        return false;
