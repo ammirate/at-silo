@@ -45,7 +45,7 @@ public class DBServizio extends DBBeans {
 
     public Servizio ricercaServizioPerBambino(Bambino b) throws SQLException {
         Servizio s= null;
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE bambino =" + b);
+        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE bambino =" + b.getCodice_Fiscale());
         if(r.next()){
             s.setId(r.getString("id"));
             s.setOrarioFine(r.getString("orario_fine"));
