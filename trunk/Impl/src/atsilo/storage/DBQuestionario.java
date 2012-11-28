@@ -121,5 +121,28 @@ public class DBQuestionario extends DBBeans
         }   
          return l;
     }
-  
+    
+    public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
+        List <Questionario> l=null;
+        Questionario q=null;
+        int i=0;
+        
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE nome =" + n);
+        while(res.next()){
+            
+            q.setDescrizione(res.getString("descrizione"));
+            q.setFlag_rinuncia(res.getString("flag_rinuncia"));
+            q.setId(res.getInt("id"));
+            q.setNome(res.getString("nome"));
+            q.setPathname(res.getString("pathname"));
+            q.setPeriodo_fine(res.getString("periodo_fine"));
+            q.setPeriodo_inizio(res.getString("periodo_inizio"));         
+           
+            l.add(q);
+        }   
+         return l;
+    }
+    
+    
+
 }
