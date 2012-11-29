@@ -1,6 +1,8 @@
 package atsilo.application.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +31,13 @@ public class ServletControlLogin extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    doPost(request,  response);// controllare se questa istruzione è corretta
+	    response.setContentType("text/html");
+            PrintWriter pw = response.getWriter();
+            pw.println("");
+            pw.println("");
+            pw.println("");
+            pw.println("<h1>Control Login</h1><br>This servlet should not be accessed this way.");
+            pw.println("");
 	}
 
 	/**
