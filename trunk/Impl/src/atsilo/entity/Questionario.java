@@ -1,13 +1,15 @@
 package atsilo.entity;
 
+import java.sql.Date;
+
 public class Questionario {
  
-    private String periodo_fine;
+    private Date periodo_fine;
     private String descrizione;
     private String flag_rinuncia;
     private String nome;
     private int id;
-    private String periodo_inizio;
+    private Date periodo_inizio;
     private String pathname;
 
     /**
@@ -25,8 +27,8 @@ public class Questionario {
      * @param periodo_inizio il paramentro è fissato
      * @param pathname il paramentro è fissato
      */
-    public Questionario(String periodo_fine, String descrizione,
-            String flag_rinuncia, String nome, int id, String periodo_inizio,
+    public Questionario( String descrizione,
+            String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine,
             String pathname) {
         super();
         this.periodo_fine = periodo_fine;
@@ -43,7 +45,7 @@ public class Questionario {
      * Metodo che setta il campo periodo fine
      * @param periodo_fine il parametro fissato
      */
-    public void setPeriodo_fine(String periodo_fine) {
+    public void setPeriodo_fine(Date periodo_fine) {
         this.periodo_fine = periodo_fine;
     }
 
@@ -51,7 +53,7 @@ public class Questionario {
      * Metodo che prende il campo periodo fine
      * @return periodo_fine il parametro inserito
      */
-    public String getPeriodo_fine() {
+    public Date getPeriodo_fine() {
         return periodo_fine;
     }
 
@@ -123,7 +125,7 @@ public class Questionario {
      * Metodo che setta il campo periodo inizio
      * @param periodo_inizio il parametro fissato
      */
-    public void setPeriodo_inizio(String periodo_inizio) {
+    public void setPeriodo_inizio(Date periodo_inizio) {
         this.periodo_inizio = periodo_inizio;
     }
 
@@ -131,7 +133,7 @@ public class Questionario {
      * Metodo che prende il campo periodi inizio
      * @return periodo_inizio il parametro inserito
      */
-    public String getPeriodo_inizio() {
+    public Date getPeriodo_inizio() {
         return periodo_inizio;
     }
 

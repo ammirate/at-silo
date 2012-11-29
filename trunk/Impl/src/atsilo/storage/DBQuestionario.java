@@ -1,9 +1,13 @@
 package atsilo.storage;
 
 import atsilo.entity.Attivita;
+import atsilo.entity.DomandaQuestionario;
+import atsilo.entity.Genitore;
 import atsilo.entity.ProgrammaEducativoSettimanale;
 import atsilo.entity.Questionario;
 import atsilo.entity.Registro;
+
+import atsilo.entity.RispostaQuestionario;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -124,6 +128,10 @@ public class DBQuestionario extends DBBeans
          return l;
     }
     
+    
+    
+    
+    
     public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
         List <Questionario> l=null;
         Questionario q=null;
@@ -144,15 +152,17 @@ public class DBQuestionario extends DBBeans
          return l;
     }
     
+    
+    
+    
+    
+    
     public List<Questionario> visualizzaQuestionariCompilabili(String data) throws SQLException, ParseException{
         List <Questionario> l=null;
         Questionario q=null;
         
         Date d=convertiData(data);
-        
-       
-        
-        
+
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE periodo_fine >=" +d);//da modificare
         while(res.next()){
             
@@ -182,7 +192,31 @@ public class DBQuestionario extends DBBeans
      }
      
      
-
+     public boolean inserisciQuestionario(Questionario q){
+         return false;
+     }
+     
+     
+     public Questionario eliminaQuestionario(String id){
+         return null;
+     }
    
-
+    public boolean modificaQuestionario(String idQuestionario, List<DomandaQuestionario> domande){
+        return false;
+    }
+    
+    public boolean setDataInizio(String idQuestionario, Date data){
+        //si dovrebbe controllare che la data sia prima di quella di fine
+        return false;
+    }
+    
+    public boolean setDataFine(String idQuestionario, Date data){
+        //si dovrebbe controllare che la data sia dopo quelal di fine
+        return false;
+    }
+    
+    public boolean setRisposte(String idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila){
+        return false;
+    }
+    
 }
