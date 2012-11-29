@@ -77,11 +77,11 @@ public class DBRispostaQuestionario extends DBBeans {
         return ris;
     }
     
-    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idQuestionario) throws SQLException{
+    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =null;
         RispostaQuestionario r=null;
         
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE genitore =" + g.getCodiceFiscale() +"AND questionario=" +idQuestionario);
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE genitore =" + g.getCodiceFiscale() +"AND domanda=" +idDomanda);
        
         while (res.next()){
            
