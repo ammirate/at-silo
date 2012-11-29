@@ -114,19 +114,21 @@ public class DBQuestionario extends DBBeans
          return l;
     }
     
-    
-    public boolean setDataInizio(String idQuestionario, Date data){
-        //si dovrebbe controllare che la data sia prima di quella di fine
-        return false;
+    public List<Questionario> visualizzaQuestionariCompilabili() throws SQLException{
+       
+        List<Questionario> l=null;
+        Questionario q=null; 
+        Date d = new Date (System.currentTimeMillis());
+        
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE NOW() BETWEEN periodo_inizio AND periodo_fine");
+        
+  
+                                              
+
+        return l;
     }
     
-    public boolean setDataFine(String idQuestionario, Date data){
-        //si dovrebbe controllare che la data sia dopo quelal di fine
-        return false;
-    }
     
-    public boolean setRisposte(String idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila){
-        return false;
-    }
+   
     
 }
