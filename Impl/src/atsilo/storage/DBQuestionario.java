@@ -55,8 +55,8 @@ public class DBQuestionario extends DBBeans
             q.setId(r.getInt("id"));
             q.setNome(r.getString("nome"));
             q.setPathname(r.getString("pathname"));
-            q.setPeriodo_fine(r.getString("periodo_fine"));
-            q.setPeriodo_inizio(r.getString("periodo_inizio"));   
+            q.setPeriodo_fine(r.getDate("periodo_fine"));
+            q.setPeriodo_inizio(r.getDate("periodo_inizio"));   
         }
         return q;
     }
@@ -89,48 +89,10 @@ public class DBQuestionario extends DBBeans
         return Collections.unmodifiableList(res);
     }
     
-    /*    public Attivita ricercaAttivitaPerTitolo(String titolo) throws SQLException
-    {
-        Attivita a=null;
-        
-        ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo =" + titolo);//restituisce un solo valore perchè titolo è chiave primaria
-        if(res.next())
-        {
-            a.setCategoria(res.getString("categoria"));
-            a.setDescrizione(res.getString("descrizione"));
-            a.setProgramma_educativo_settimanale((ProgrammaEducativoSettimanale)res.getObject("Programma_educativo_settimanale"));
-            a.setRegistro((Registro)res.getObject("registro"));
-            a.setTitolo(res.getString("titolo"));
-        }
-        res.close();
-        return a;
-    }*/
+    
+    
     
    
-    
-    public List<Questionario> ricercaQuestionariPerPeriodoInizio (String d) throws SQLException{//verificarne l utilità
-        List <Questionario> l=null;
-        Questionario q=null;
-        
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE periodo_inizio =" + d);
-        while(res.next()){
-            
-            q.setDescrizione(res.getString("descrizione"));
-            q.setFlag_rinuncia(res.getString("flag_rinuncia"));
-            q.setId(res.getInt("id"));
-            q.setNome(res.getString("nome"));
-            q.setPathname(res.getString("pathname"));
-            q.setPeriodo_fine(res.getString("periodo_fine"));
-            q.setPeriodo_inizio(res.getString("periodo_inizio"));         
-           
-            l.add(q);
-        }   
-         return l;
-    }
-    
-    
-    
-    
     
     public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
         List <Questionario> l=null;
@@ -144,66 +106,14 @@ public class DBQuestionario extends DBBeans
             q.setId(res.getInt("id"));
             q.setNome(res.getString("nome"));
             q.setPathname(res.getString("pathname"));
-            q.setPeriodo_fine(res.getString("periodo_fine"));
-            q.setPeriodo_inizio(res.getString("periodo_inizio"));         
+            q.setPeriodo_fine(res.getDate("periodo_fine"));
+            q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
            
             l.add(q);
         }   
          return l;
     }
     
-    
-    
-    
-    
-    
-    public List<Questionario> visualizzaQuestionariCompilabili(String data) throws SQLException, ParseException{
-        List <Questionario> l=null;
-        Questionario q=null;
-        
-        Date d=convertiData(data);
-
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE periodo_fine >=" +d);//da modificare
-        while(res.next()){
-            
-            q.setDescrizione(res.getString("descrizione"));
-            q.setFlag_rinuncia(res.getString("flag_rinuncia"));
-            q.setId(res.getInt("id"));
-            q.setNome(res.getString("nome"));
-            q.setPathname(res.getString("pathname"));
-            q.setPeriodo_fine(res.getString("periodo_fine"));
-            q.setPeriodo_inizio(res.getString("periodo_inizio"));         
-           
-            l.add(q);
-        }   
-         return l;
-    }
-        
- 
-     public int trovaNumRispostePerValore(String idQuestionario, String val){
-         int i=0;
-         return i;
-     }
-     
-     public Date convertiData (String data) throws ParseException{
-         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/mm/dd"); 
-         Date convertedDate = dateFormat.parse(data); 
-         return convertedDate;
-     }
-     
-     
-     public boolean inserisciQuestionario(Questionario q){
-         return false;
-     }
-     
-     
-     public Questionario eliminaQuestionario(String id){
-         return null;
-     }
-   
-    public boolean modificaQuestionario(String idQuestionario, List<DomandaQuestionario> domande){
-        return false;
-    }
     
     public boolean setDataInizio(String idQuestionario, Date data){
         //si dovrebbe controllare che la data sia prima di quella di fine
