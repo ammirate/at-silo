@@ -17,7 +17,6 @@ public class Questionario {
      */
     public Questionario() {
     }
-
     /**
      * @param periodo_fine il paramentro è fissato
      * @param descrizione il paramentro è fissato
