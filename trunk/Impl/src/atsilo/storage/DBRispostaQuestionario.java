@@ -1,6 +1,7 @@
 package atsilo.storage;
 
 import atsilo.entity.Classe;
+import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Genitore;
 import atsilo.entity.Psicopedagogo;
 import atsilo.entity.Questionario;
@@ -8,6 +9,9 @@ import atsilo.entity.RispostaQuestionario;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,28 +26,26 @@ public class DBRispostaQuestionario extends DBBeans {
      * @return
      */
     private static List<String> creaChiave() {
-        // TODO Scheletro generato automaticamente
-        return null;
+           
+        List<String> res=  Arrays.asList("id");
+        
+        return Collections.unmodifiableList(res);
     }
 
         /**
      * @return
      */
     private static Map<String, String> creaMapping() {
-        // TODO Scheletro generato automaticamente
-        return null;
+        Map<String,String> res= new HashMap<String,String>();
+        res.put("id", "id");
+        res.put("valore", "valore");
+        res.put("domanda", "domanda");
+        res.put("genitore", "genitore");
+      
+        return Collections.unmodifiableMap(res);
     }
 
-        public RispostaQuestionario ricercaRispostaQuestionarioPerId(String Id){
-            RispostaQuestionario c = null;
-            return c;
-            }
-        
-    public RispostaQuestionario ricercaRispostaQuestionarioPerValore(String valore){
-        RispostaQuestionario c = null;
-        return c;
-        }
-
+  
     /**
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
@@ -71,7 +73,7 @@ public class DBRispostaQuestionario extends DBBeans {
            ris.setId(r.getString("id"));
            ris.setValore(r.getString("valore"));
            ris.setGenitore((Genitore) r.getObject("genitore"));
-           ris.setQuestionario((Questionario) r.getObject("questionario"));
+           ris.setDomanda((DomandaQuestionario) r.getObject("domanda"));
            
         }
         return ris;
@@ -88,18 +90,21 @@ public class DBRispostaQuestionario extends DBBeans {
             r.setGenitore((Genitore)res.getObject("genitore"));
             r.setId(res.getString("id"));
             r.setValore(res.getString("valore"));
-            r.setQuestionario((Questionario) res.getObject("questionario"));
-            
+            r.setDomanda((DomandaQuestionario) res.getObject("domanda"));
+
             l.add(r);
         }
-        
+        res.close();
         return l;
     }
     
-    
-    
-   
+    public void setRisposteQuestionario(List <RispostaQuestionario> l) {
+        int i=l.size();
+        while(i>=0)
+        inserisci(l.get(i));
+    }
 }
+    
 
     
     
