@@ -2,6 +2,7 @@ package atsilo.storage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -10,8 +11,10 @@ import java.util.Map;
 
 import atsilo.entity.Assenza;
 import atsilo.entity.CampoDomandaQuestionario;
+import atsilo.entity.DomandaQuestionario;
+import atsilo.entity.RispostaQuestionario;
 
-public class DBCampoDomandaQuestionario extends DBBeans {
+public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario> {
     
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
@@ -27,24 +30,18 @@ public class DBCampoDomandaQuestionario extends DBBeans {
      * Ricerca campodomandaquestionario per tipo
      * @param tipo
      * @return restituisce una lista di campodomandauestionario
+     * @throws SQLException 
      */
-    public List<CampoDomandaQuestionario> ricercaPerTipo(String tipo)
+    public List<CampoDomandaQuestionario> ricercaPerTipo(String tipo) throws SQLException
     {
-        CampoDomandaQuestionario temp=null;
-        List<CampoDomandaQuestionario> a=null;
-        int i=0;//indice per scorrere in list
+        List<CampoDomandaQuestionario> a= new ArrayList<CampoDomandaQuestionario> ();
+       
         ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "tipo =" + tipo);
-        while(res.next())
-        {
-            temp.setDomandaQuestionario(res.getString("domanda_questionario"));
-            temp.setRispostaQuestionario(res.getString("Risposta_questionario"));
-            temp.setTipo(res.getString("tipo"));
-            temp.setDescrizione(res.getString("descrizione"));
-            temp.setValore(res.getString("valore"));
-            
-            a.add(i, temp);
-            i++;
-        }
+        
+            for (CampoDomandaQuestionario c : iteraResultSet(res)) 
+                a.add(c);
+                
+        
         res.close();
         return a;
     } 
@@ -53,38 +50,41 @@ public class DBCampoDomandaQuestionario extends DBBeans {
      * cerca le domande questionario alle quali il campo appartiene
      * @param c
      * @return lista di stringhe
+     * @throws SQLException 
      */
-    public List<String> ricercaDomandaQuestionarioAppartenenza(CampoDomandaQuestionario c)
+    public List<DomandaQuestionario> ricercaDomandaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException
     {
-        String temp=null;
-        List<String> a=null;
+        
+        List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
         int i=0;//indice per scorrere in list
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "domanda_questionario =" + c.getDomandaQuestionario());
-        while(res.next())
-        {
-           temp=c.getDomandaQuestionario();
-            a.add(i, temp);
-            i++;
+        
+        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "domanda_questionario =" + c.getDomanda().getId());
+        for(CampoDomandaQuestionario c1: iteraResultSet(res))
+        { DomandaQuestionario d=c1.getDomanda();
+            a.add(d);
         }
+   
+        
         res.close();
         return a;
     }
     /**
      * cerca le risposte questionario alle quali il campo appartiene
      * @param c
+     * @throws SQLException 
      * @returnlista di stringhe
      */
-    public List<String> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c){
-        String temp=null;
-        List<String> a=null;
-        int i=0;//indice per scorrere in list
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "risposta_questionario =" + c.getRispostaQuestionario());
-        while(res.next())
+    public List<RispostaQuestionario> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
+        
+        List<RispostaQuestionario> a= new ArrayList<RispostaQuestionario> ();
+       
+        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "risposta_questionario =" + c.getRisposta().getId());
+        for(CampoDomandaQuestionario c1: iteraResultSet(res))
         {
-           temp=c.getRispostaQuestionario();
-            a.add(i, temp);
-            i++;
+            RispostaQuestionario r= c1.getRisposta();
+            a.add(r);
         }
+        
         res.close();
         return a;
     }
@@ -115,6 +115,8 @@ public class DBCampoDomandaQuestionario extends DBBeans {
         res.put("descrizione","descrizione");
         res.put("valore","valore");
         res.put("risposta_questionario","rispodstaQuestionario");
+        res.put("domanda_questionario","-domandaQuestionario");
+        res.put("risposta_questionario","-rispostaQuestionario");
         
         return Collections.unmodifiableMap(res);
     }
@@ -122,7 +124,7 @@ public class DBCampoDomandaQuestionario extends DBBeans {
     
     private static List<String> creaChiave()
     {
-        List<String> res=  Arrays.asList("domanda_questionario","risposta_questionario");
+        List<String> res=  Arrays.asList("-domanda_questionario","-risposta_questionario");// da chiarire
         
         return Collections.unmodifiableList(res);
     }
@@ -133,9 +135,14 @@ public class DBCampoDomandaQuestionario extends DBBeans {
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
     @Override
-    protected Object creaBean(ResultSet r) throws SQLException {
-        // TODO Scheletro generato automaticamente
-        return null;
+    protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
+        CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
+        temp.setDomanda((DomandaQuestionario)res.getObject("domanda_questionario"));
+        temp.setRisposta((RispostaQuestionario)res.getObject("Risposta_questionario"));
+        temp.setTipo(res.getString("tipo"));
+        temp.setDescrizione(res.getString("descrizione"));
+        temp.setValore(res.getString("valore"));
+        return temp;
     }
 
 }
