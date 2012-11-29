@@ -95,7 +95,7 @@
 <tbody><tr>
 <td class="tplHeader">
 <div id="formLogin">
- <form id="login" name="login" method="post" action="http://localhost:8080/Atsilo/WEB-INF/classes/atsilo/application/servlet/ServletControlLogin.java">
+ <form id="login" name="login" method="post" action="http://localhost:8080/Atsilo/ServletControlLogin">
   <p>
     Username
     <input type="text" name="username_login">

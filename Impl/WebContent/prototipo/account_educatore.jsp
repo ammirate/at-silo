@@ -29,8 +29,7 @@ include file="atsilo_files/sidebar.jsp"
           </tr>
           <tr> 
         	<td>Indirizzo email</td>
-       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  />
-       	 	  *</td>
+       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  /></td>
           </tr>
           <tr> 
         	<td>&nbsp;</td>
@@ -62,7 +61,6 @@ include file="atsilo_files/sidebar.jsp"
         </tbody>
       </table></td>
     </tr>
-
   </tbody>
 </table>
 </td><td class="fasciadxvariabile"></td>
