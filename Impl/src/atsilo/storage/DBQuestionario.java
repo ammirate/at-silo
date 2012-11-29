@@ -57,6 +57,7 @@ public class DBQuestionario extends DBBeans
             q.setPathname(r.getString("pathname"));
             q.setPeriodo_fine(r.getDate("periodo_fine"));
             q.setPeriodo_inizio(r.getDate("periodo_inizio"));   
+            q.setListaGenitori((List<Genitore>)r.getObject("lista_genitori"));
         }
         return q;
     }
@@ -75,6 +76,7 @@ public class DBQuestionario extends DBBeans
         res.put("nome", "nome");
         res.put("periodo_inizio", "periodo_inizio");
         res.put("periodo_fine", "periodo_fine");
+        res.put("listagenitori", "lista_genitori");
         return Collections.unmodifiableMap(res);
     }
     
@@ -107,9 +109,11 @@ public class DBQuestionario extends DBBeans
             q.setNome(res.getString("nome"));
             q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
-            q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
+            q.setPeriodo_inizio(res.getDate("periodo_inizio")); 
+            q.setListaGenitori((List<Genitore>)res.getObject("lista_genitori"));
            
             l.add(q);
+            res.close();
         }   
          return l;
     }
@@ -118,7 +122,6 @@ public class DBQuestionario extends DBBeans
        
         List<Questionario> l=null;
         Questionario q=null; 
-        Date d = new Date (System.currentTimeMillis());
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE NOW() BETWEEN periodo_inizio AND periodo_fine");
         
@@ -131,7 +134,7 @@ public class DBQuestionario extends DBBeans
             q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
-           
+            q.setListaGenitori((List<Genitore>)res.getObject("lista_genitori"));
             l.add(q);
             }
                                               

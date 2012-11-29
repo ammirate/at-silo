@@ -3,6 +3,7 @@ package atsilo.storage;
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.Classe;
 import atsilo.entity.DomandaQuestionario;
+import atsilo.entity.Genitore;
 import atsilo.entity.Psicopedagogo;
 import atsilo.entity.RispostaQuestionario;
 
@@ -86,6 +87,23 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
             temp.setQuestionario((Questionario)r.getObject("questionario"));
             
             return temp;
+        }
+        
+        public List<DomandaQuestionario> getDomandeQuestionario(String idQuestionario) throws SQLException{
+            List<DomandaQuestionario> l=null;
+            DomandaQuestionario temp = new DomandaQuestionario();
+           
+            ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE questionario =" + idQuestionario );
+            
+            while (res.next()){
+               
+                temp.setId(res.getString("id"));
+                temp.setDescrizione(res.getString("descrizione"));
+                temp.setQuestionario((Questionario)res.getObject("questionario"));
+                
+                l.add(temp);
+            }
+         return l;
         }
         
 }       
