@@ -1,20 +1,30 @@
 package atsilo.application;
 
 import atsilo.entity.*;
+import atsilo.exception.DBConnectionException;
+import atsilo.exception.RegistroException;
+import atsilo.storage.Database;
 import java.sql.Date;
-
 import java.util.List;
+import test.storage.*;
+import atsilo.exception.*;
 
 /**
  * Class that control and manages a questionnaire
- * 
+ *
  * @author Antonio Cesarano
  */
 public class ControlQuestionario {
 
-    private static  ControlQuestionario control;
-
-
+    private static final ControlQuestionario INSTANCE = new ControlQuestionario();
+     StubQuestionario sQuestionario;
+     StubDomandaQuestionario sDomanda;
+     StubCampoDomandaQuestionario sCampoDomanda;
+     StubRispostaQuestionario sRisposta;
+    Database db;
+    
+    
+    
     /**
      * Contructor
      */
@@ -27,9 +37,27 @@ public class ControlQuestionario {
      * @param questionario is the questionnaire to add
      * @return true if the questionnaire was added correctly, else false
      */
-    public boolean inserisciQuestionario(Questionario questionario){
-        return false;
+    public void inserisciQuestionario(Questionario questionario) throws DBConnectionException, QuestionarioException {
+       
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            
+            if(!sQuestionario.inserisciQuestionario(questionario))
+                throw new QuestionarioException("Inserimento fallito");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
+    
+    
+    
+    
+    
     
     
     /**
@@ -37,8 +65,22 @@ public class ControlQuestionario {
      * @param id is the quiestionnaire identificative
      * @return the questionnaire deleted
      */
-    public Questionario eliminaQuestionario(String id){
-        return null;
+    public Questionario eliminaQuestionario(String id) throws DBConnectionException, QuestionarioException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        Questionario toReturn;
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            toReturn = sQuestionario.eliminaQuestionario(id);
+            if(toReturn == null)
+                throw new QuestionarioException("Questionario inesistente");
+            return toReturn;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
     
     
@@ -48,8 +90,20 @@ public class ControlQuestionario {
      * @param domande is the new quistions list to add
      * @return true if the list was substituted correctly, else false
      */
-    public boolean modificaQuestionario(String idQuestionario, List<DomandaQuestionario> domande){
-        return false;
+    public void modificaQuestionario(String idQuestionario, List<DomandaQuestionario> domande) throws DBConnectionException,
+                                                                               QuestionarioException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            if(!sQuestionario.modificaQuestionario(idQuestionario, domande))
+                throw new QuestionarioException("Inserimento domande nel questionario fallito");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
     
     
@@ -58,8 +112,20 @@ public class ControlQuestionario {
      * @param newData is the new start date
      * @return true if the date was setted correctly, else false
      */
-    public boolean spostaDataInizio(Questionario questionario, Date newData){
-        return false;
+    public void spostaDataInizio(String idQuestionario, Date newData) throws DBConnectionException,
+                                                                               QuestionarioException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            if(!sQuestionario.setDataInizio(idQuestionario, newData))
+                throw new QuestionarioException("Operazione fallita");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
     
     
@@ -68,8 +134,20 @@ public class ControlQuestionario {
      * @param newData is the new end date
      * @return true if the date was setted correctly, else false
      */
-    public boolean spostaDataFine(Questionario questionario, Date newData){
-        return false;
+    public void spostaDataFine(String idQuestionario, Date newData) throws DBConnectionException,
+                                                                           QuestionarioException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            if(!sQuestionario.setDataFine(idQuestionario,newData))
+                throw new QuestionarioException("Operazione fallita");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
     
     
@@ -79,8 +157,20 @@ public class ControlQuestionario {
      * @param risposte is a answers list
      * @return true if the list was added correctly, else false
      */
-    public boolean compilaQuestionario(Questionario questionario, List<RispostaQuestionario> risposte){
-        return false;
+    public boolean compilaQuestionario(String idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila) throws DBConnectionException,
+                                                                                   QuestionarioException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            if(!sQuestionario.setRisposte(idQuestionario, risposte))
+                throw new QuestionarioException("Questionario non compilato");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
     
     
@@ -138,7 +228,7 @@ public class ControlQuestionario {
      * @return a new ControlQuestionario
      */
     public ControlQuestionario getIstance(){
-        return null;
+        return INSTANCE;
     }
     
 }

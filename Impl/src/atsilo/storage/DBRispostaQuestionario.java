@@ -73,9 +73,9 @@ public class DBRispostaQuestionario extends DBBeans {
            ris.setGenitore((Genitore) r.getObject("genitore"));
            ris.setQuestionario((Questionario) r.getObject("questionario"));
            
-    }
+        }
         return ris;
-}
+    }
 }
 
     
