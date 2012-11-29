@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Collections;
 
 
-public class DBBambino extends DBBeans {    
+public class DBBambino extends DBBeans<Bambino> {    
     
     
     
