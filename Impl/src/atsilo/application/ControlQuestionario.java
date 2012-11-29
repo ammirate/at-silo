@@ -9,6 +9,8 @@ import java.util.List;
 import test.storage.*;
 import atsilo.exception.*;
 
+import java.sql.SQLException;
+
 /**
  * Class that control and manages a questionnaire
  *
@@ -151,6 +153,43 @@ public class ControlQuestionario {
     }
     
     
+    
+    
+    
+    /**
+     * Search a questionnaie by name
+     * @param nome is the questionnaire name
+     * @return a questionnaire
+     */
+    public List<Questionario> ricercaQuestionario(String nome) throws DBConnectionException, QuestionarioException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        List<Questionario> toReturn;
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            toReturn = sQuestionario.ricercaQuestionariPerNome(nome);
+            if(toReturn== null || toReturn.isEmpty())
+                throw new QuestionarioException("Nessun questionario con nome"+nome);
+            return toReturn;
+        } 
+        catch (SQLException e) {
+            throw new DBConnectionException("Ricerca fallita");
+        } 
+        finally{
+            db.chiudiConnessione();
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * Insert a answers list in a questionnaire
      * @param questionario is the questionnaire compiled
@@ -165,8 +204,7 @@ public class ControlQuestionario {
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            if(!sQuestionario.setRisposte(idQuestionario, risposte))
-                throw new QuestionarioException("Questionario non compilato");
+            
         }
         finally{
             db.chiudiConnessione();
@@ -175,32 +213,26 @@ public class ControlQuestionario {
     
     
     /**
-     * Gets all the questionnaires compiled by a parent
+     * Gets all the questionnaires not yet compiled by a parent
      * @param genitore is the parent
      * @return a questionnaires list
      */
-    public List<Questionario> getQuestionariCompilati(Genitore genitore){
-        return null;
+    public List<Questionario> getQuestionariDaCompilare(Genitore genitore) throws DBConnectionException {
+        StubQuestionario sQuestionario = new StubQuestionario();
+        Database db = new Database();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
     
-    
-    /**
-     * Gets all the questionnaire not yet compiled by a parent
-     * @param genitore is the parent
-     * @return a questionnaires list
-     */
-    public List<Questionario> getQuestionariDaCompilare(Genitore genitore){
-        return null;
-    }
-    
-    
-    /**
-     * gets all the renunciation questionnaires
-     * @return a questionnaires list
-     */
-    public List<Questionario> getQuestionariRinuncia(){
-        return null;
-    }
+
+   
     
     
     /**
@@ -208,20 +240,12 @@ public class ControlQuestionario {
      * @param questionario is the questionnaire to analyze
      * @return the questionnaire statistics 
      */
-    public List<String> getStatistische(Questionario questionario){
+    public List<String> getStatistische(String idQuestionario){
         return null;
     }
     
     
-    /**
-     * Search a questionnaie by name
-     * @param nome is the questionnaire name
-     * @return a questionnaire
-     */
-    public List<Questionario> ricercaQuestionario(String nome){
-        return null;
-    }
-    
+
     
     /**
      * Gets the single istance of this class
