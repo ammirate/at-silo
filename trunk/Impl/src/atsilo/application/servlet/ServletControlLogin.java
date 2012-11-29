@@ -52,14 +52,19 @@ public class ServletControlLogin extends HttpServlet {
             // Set response content type
             response.setContentType("text/html");
             // New location to be redirected
-            String site = new String("index_"+tipologia);
-            
+            String login_ok = new String("prototipo/index_"+tipologia+".jsp");
+            String login_error = new String("prototipo/login.jsp");
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
             
             if (login.getValoreLogin(username, password, tipologia)){
-                response.setStatus(response.SC_MOVED_TEMPORARILY);
-                response.setHeader("Location", site);    
-            }
                 
+                response.setHeader("Location", login_ok);    
+            }
+            
+            else {  
+                response.setHeader("Location", login_error);   
+            }
+
                 
             
                 
