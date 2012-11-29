@@ -2,6 +2,7 @@ package atsilo.application;
 
 import atsilo.entity.*;
 import atsilo.exception.DBConnectionException;
+import atsilo.exception.QuestionarioException;
 import atsilo.exception.RegistroException;
 import atsilo.storage.Database;
 import java.sql.Date;
@@ -195,16 +196,18 @@ public class ControlQuestionario {
      * @param questionario is the questionnaire compiled
      * @param risposte is a answers list
      * @return true if the list was added correctly, else false
+     * @throws DBConnectionException 
+     * @throws QuestionarioException 
      */
-    public boolean compilaQuestionario(String idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila) throws DBConnectionException,
-                                                                                   QuestionarioException {
+    public void compilaQuestionario(String idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila) throws DBConnectionException, QuestionarioException{
         StubQuestionario sQuestionario = new StubQuestionario();
         Database db = new Database();
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            
+            if(risposte.isEmpty())
+                throw new QuestionarioException("risposte non valide");
         }
         finally{
             db.chiudiConnessione();
@@ -224,7 +227,7 @@ public class ControlQuestionario {
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            
+            return null;
         }
         finally{
             db.chiudiConnessione();
