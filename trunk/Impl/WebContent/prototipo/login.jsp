@@ -95,7 +95,7 @@
 <tbody><tr>
 <td class="tplHeader">
 <div id="formLogin">
- <form id="login" name="login" method="post" action="servlet/control_login.jsp">
+ <form id="login" name="login" method="post" action="http://localhost:8080/Atsilo/WEB-INF/classes/atsilo/application/servlet/ServletControlLogin.java">
   <p>
     Username
     <input type="text" name="username_login">
@@ -108,15 +108,15 @@
     Tipologia utente
     <select name="tipologiaUtente">
       <option value="genitore" selected="selected">Genitore</option>
-      <option value="segreteria">Impiegato segreteria</option>
+      <option value="impiegato">Impiegato segreteria</option>
       <option value="educatore">Educatore</option>
       <option value="psicopedagogo">Psicopedagogo</option>
-      <option value="resp_scfm">Resp. Scienze Formazione</option>
+      <option value="delegato_scfm">Resp. Scienze Formazione</option>
       <option value="delegato_rettore">Delegato del rettore</option>
     </select>
   </p>
   <p>
-    <input name="invia" type="submit" value="Accedi" onclick="VerificaAccesso()">
+    <input name="invia" type="submit" value="Accedi" ">
   </p>
 </form>
 </div>

@@ -18,24 +18,26 @@ public class ControlLogin {
      */
     private static final String[] usernames = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" }; 
     private static final String[] passwords = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" };
-     
+    private static final String[] tipology =  {"genitore", "impiegato", "educatore","psicopedagogo","delegato_scfm","delegato_rettore" };
     ControlLogin() {
        
          
     }
 
-    Boolean getValoreLogin(String username, String password) {
+    public Boolean getValoreLogin(String username, String password, String tipologia) {
 
         String passwordCheFacciamoFintaInInput = username;
         String usernameCheFacciamoFintaInInput = password;
+        String tipologiaCheFacciamoFintaInInput = tipologia;
         int i=0;
         for(String corrente : usernames)
         {
             if (usernameCheFacciamoFintaInInput.equals(corrente))//username trovato in posizione i
             {
-                //controllo (nella posizione i dell'array password) se la password corrisponde
+                //controllo (nella posizione i dell'array password) se la password e la tipologia corrispondono
                     String pwd=passwords[i];
-                    passwordCheFacciamoFintaInInput.equals(pwd);
+                    String tipologia_temp=tipology[i];
+                    if (passwordCheFacciamoFintaInInput.equals(pwd) && tipologiaCheFacciamoFintaInInput.equals(tipologia_temp))
                     return true;
 
             }
