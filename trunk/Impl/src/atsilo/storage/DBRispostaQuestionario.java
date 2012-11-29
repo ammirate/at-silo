@@ -103,6 +103,27 @@ public class DBRispostaQuestionario extends DBBeans {
         while(i>=0)
         inserisci(l.get(i));
     }
+    
+public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{//per una specifica domanda restituisce tutte le risposte date a quella specifica domanda
+        
+    List<RispostaQuestionario> l=null;
+    RispostaQuestionario r=null;
+    
+    ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE domanda =" + d.getId());
+
+    while (res.next()){
+        
+        r.setGenitore((Genitore)res.getObject("genitore"));
+        r.setId(res.getString("id"));
+        r.setValore(res.getString("valore"));
+        r.setDomanda((DomandaQuestionario) res.getObject("domanda"));
+
+        l.add(r);
+    }
+    res.close();
+    return l;
+        
+    }
 }
     
 
