@@ -76,6 +76,26 @@ public class DBRispostaQuestionario extends DBBeans {
         }
         return ris;
     }
+    
+    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idQuestionario) throws SQLException{
+        List<RispostaQuestionario> l =null;
+        RispostaQuestionario r=null;
+        
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE genitore =" + g.getCodiceFiscale() +"AND questionario=" +idQuestionario);
+       
+        while (res.next()){
+           
+            r.setGenitore((Genitore)res.getObject("genitore"));
+            r.setId(res.getString("id"));
+            r.setValore(res.getString("valore"));
+            r.setQuestionario((Questionario) res.getObject("questionario"));
+            
+            l.add(r);
+        }
+        
+        return l;
+    }
+   
 }
 
     
