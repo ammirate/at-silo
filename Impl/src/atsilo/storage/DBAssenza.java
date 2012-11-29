@@ -13,7 +13,7 @@ import java.util.Collections;
 import atsilo.entity.Assenza;
 import atsilo.entity.Bambino;
 
-public class DBAssenza extends DBBeans {
+public class DBAssenza extends DBBeans<Assenza> {
     Tabella tabella;
     
     private static final Map<String,String> MAPPINGS=creaMapping();
@@ -34,9 +34,10 @@ public class DBAssenza extends DBBeans {
     private static Map<String,String> creaMapping()
     {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("codice_fiscale","codiceFiscale");// la classe Assenza del package entity ha come attributi (data e bambino)????
+        res.put("bambino","bambino");// la classe Assenza del package entity ha come attributi (data e bambino)????
         res.put("data","data");
-        
+        res.put("bambino","-bambino");
+        res.put("data","-data");
         return Collections.unmodifiableMap(res);
     }
     
@@ -47,7 +48,7 @@ public class DBAssenza extends DBBeans {
      */
     private static List<String> creaChiave()
     {
-        List<String> res=  Arrays.asList("codiceFiscale","data");// come gestire queste chiavi???
+        List<String> res=  Arrays.asList("-bambino","-data");
         
         return Collections.unmodifiableList(res);
     }

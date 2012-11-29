@@ -12,7 +12,7 @@ import atsilo.entity.Attivita;
 import atsilo.entity.ProgrammaEducativoSettimanale;
 import atsilo.entity.Registro;
 
-public class DBAttivita extends DBBeans {
+public class DBAttivita extends DBBeans<Attivita> {
     
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
