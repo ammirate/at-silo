@@ -3,7 +3,7 @@ package atsilo.entity;
 public class DomandaIscrizione {
     
     private String dataPresentazione;
-    private int iD;
+    private int id;
     private int punteggio;
     private String posizione;
     
@@ -37,7 +37,7 @@ public class DomandaIscrizione {
             String posizione, Genitore genitore, Bambino bambino) {
         super();
         this.dataPresentazione = dataPresentazione;
-        this.iD = iD;
+        this.id = iD;
         this.punteggio = punteggio;
         this.posizione = posizione;
         this.genitore = genitore;
@@ -64,16 +64,16 @@ public class DomandaIscrizione {
      * Metodo che prende il valore di Id
      * @return iD il paramentro inserito
      */
-    public int getiD() {
-            return iD;
+    public int getId() {
+            return id;
     }
 
     /**
      * Metodo che setta il valore Id
      * @param iD il parametro fissato
      */
-    public void setiD(int iD) {
-            this.iD = iD;
+    public void setId(int iD) {
+            this.id = iD;
     }
 
     /**
@@ -110,10 +110,10 @@ public class DomandaIscrizione {
 
     /**
      * Metodo che setta il parametro letto dalla classe Genitore
-     * @param genitore è settato dopo la lettura
+     * @param genitore2 è settato dopo la lettura
      */
-    public void setGenitore(Genitore genitore) {
-        this.genitore = genitore;
+    public void setGenitore(Genitore genitore2) {
+        this.genitore = genitore2;
     }
 
     /**
