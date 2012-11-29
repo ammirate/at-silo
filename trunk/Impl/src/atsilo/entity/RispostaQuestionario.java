@@ -96,4 +96,6 @@ public class RispostaQuestionario {
     public Genitore getGenitore() {
         return genitore;
     }
+    
+    
 }
