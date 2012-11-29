@@ -69,7 +69,7 @@ public class DBClasse extends DBBeans<Classe>
            // so dovrebbero inserire anche le due liste(educatori ed eventi)
         }
             
-        
+        res.close();
         return cla;
     }
 
