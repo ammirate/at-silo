@@ -1,18 +1,55 @@
 package atsilo.storage;
 
+import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.Classe;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Psicopedagogo;
+import atsilo.entity.RispostaQuestionario;
 
 import atsilo.entity.Questionario;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DBDomandaQuestionario extends DBBeans {
+public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
     Tabella tabella;
+    
+    private static final Map<String,String> MAPPINGS=creaMapping();
+    private static final List<String> CHIAVE=creaChiave(); 
+    
+    
+    /**
+     * 
+     * @return
+     */
+    private static List<String> creaChiave()
+    {
+        List<String> res=  Arrays.asList("id");// da chiarire
+        
+        return Collections.unmodifiableList(res);
+    }
+    /**
+     * 
+     * @return
+     */
+    private static Map<String,String> creaMapping()
+    {
+        Map<String,String> res= new HashMap<String,String>();
+        res.put("id","id");
+        res.put("descrizione","descrizione");
+        res.put("questionario","questionario");
+       
+        
+        return Collections.unmodifiableMap(res);
+    }
+    
+   
+    
     /**
      * 
      * @param db
@@ -25,8 +62,7 @@ public class DBDomandaQuestionario extends DBBeans {
          */
         @Override
         protected Map getMappingFields() {
-            // TODO Scheletro generato automaticamente
-            return null;
+           return MAPPINGS;
         }
 
 
@@ -35,8 +71,7 @@ public class DBDomandaQuestionario extends DBBeans {
          */
         @Override
         protected List getKeyFields() {
-            // TODO Scheletro generato automaticamente
-            return null;
+           return CHIAVE;
         }
 
 
@@ -44,9 +79,13 @@ public class DBDomandaQuestionario extends DBBeans {
          * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
          */
         @Override
-        protected Object creaBean(ResultSet r) throws SQLException {
-            // TODO Scheletro generato automaticamente
-            return null;
+        protected DomandaQuestionario creaBean(ResultSet r) throws SQLException {
+           DomandaQuestionario temp = new DomandaQuestionario();
+            temp.setId(r.getString("id"));
+            temp.setDescrizione(r.getString("descrizione"));
+            temp.setQuestionario((Questionario)r.getObject("questionario"));
+            
+            return temp;
         }
         
 }       
