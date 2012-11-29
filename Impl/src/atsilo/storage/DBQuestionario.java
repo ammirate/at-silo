@@ -122,7 +122,18 @@ public class DBQuestionario extends DBBeans
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE NOW() BETWEEN periodo_inizio AND periodo_fine");
         
-  
+            while(res.next()){
+            
+            q.setDescrizione(res.getString("descrizione"));
+            q.setFlag_rinuncia(res.getString("flag_rinuncia"));
+            q.setId(res.getInt("id"));
+            q.setNome(res.getString("nome"));
+            q.setPathname(res.getString("pathname"));
+            q.setPeriodo_fine(res.getDate("periodo_fine"));
+            q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
+           
+            l.add(q);
+            }
                                               
 
         return l;
