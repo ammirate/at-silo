@@ -1,5 +1,10 @@
 package atsilo.storage;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+
 import atsilo.entity.ResponsabileQuestionario;
 
 public class DBResponsabileQuestionario extends DBBeans {
@@ -8,19 +13,32 @@ public class DBResponsabileQuestionario extends DBBeans {
         super("ResponsabileQuestionario",db);
     }
     
-    public ResponsabileQuestionario ricercaRespQuestNome(String nome){
-        ResponsabileQuestionario r;
-        return r;
+
+    /**
+     * @see atsilo.storage.DBBeans#getMappingFields()
+     */
+    @Override
+    protected Map getMappingFields() {
+        // TODO Scheletro generato automaticamente
+        return null;
     }
-    
-    public ResponsabileQuestionario ricercaRespQuestCf(String cf){
-        ResponsabileQuestionario r;
-        return r;
+
+    /**
+     * @see atsilo.storage.DBBeans#getKeyFields()
+     */
+    @Override
+    protected List getKeyFields() {
+        // TODO Scheletro generato automaticamente
+        return null;
     }
-    
-    public String ricercaEmailRespQuest(String cf){
-        String e;
-        return e;
+
+    /**
+     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     */
+    @Override
+    protected Object creaBean(ResultSet r) throws SQLException {
+        // TODO Scheletro generato automaticamente
+        return null;
     } 
     
 }

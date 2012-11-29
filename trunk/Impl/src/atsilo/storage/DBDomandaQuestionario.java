@@ -103,7 +103,13 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
                 
                 l.add(temp);
             }
+            res.close();
          return l;
         }
         
+        public void setDomandeQuestionario(List <DomandaQuestionario> l) {
+            int i=l.size();
+            while(i>=0)
+            inserisci(l.get(i));
+        }
 }       

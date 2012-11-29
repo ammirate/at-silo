@@ -136,12 +136,16 @@ public class DBQuestionario extends DBBeans
             q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
             q.setListaGenitori((List<Genitore>)res.getObject("lista_genitori"));
             l.add(q);
-            }
-                                              
-
+            
+            }    
+         res.close();   
         return l;
     }
-    
+        
+    /*public void aggiungiGenitoreInLista(Genitore g,String idQuestionario){
+        
+        
+    }*/
     
    
     
