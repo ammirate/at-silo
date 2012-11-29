@@ -2,6 +2,7 @@ package atsilo.storage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -13,10 +14,12 @@ import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.Genitore;
 import atsilo.entity.Utente;
 
-public class DBEducatoreDidattico extends DBBeans {
+public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
     
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
+    
+    
     /**
      * Costruttore
      * @param db
@@ -52,23 +55,13 @@ public class DBEducatoreDidattico extends DBBeans {
     }
 
 
-    public EducatoreDidattico ricercaEducatoreDidatticoPerTitoloStudio(String titoloS) throws SQLException{
-        EducatoreDidattico e=null;
+    public List<EducatoreDidattico> ricercaEducatoreDidatticoPerTitoloStudio(String titoloS) throws SQLException{
+        List<EducatoreDidattico> e=new ArrayList<EducatoreDidattico>();
         ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo_di_studio =" + titoloS);
-        if(r.next())
-        {
-            //settare lista classi
-            e.setTitoloDiStudio(r.getString("titolo_di_studio"));
-            e.setNome(r.getString("nome"));
-            e.setCognome(r.getString("cognome"));
-            e.setCodiceFiscale(r.getString("codice_fiscale"));
-            e.setDataNascita(r.getDate("data_nascita"));
-            e.setResidenza(r.getString("residenza"));
-            e.setEmail(r.getString("email"));
-            e.setComuneNascita(r.getString("comune_nascita"));
-            e.setTelefono(r.getString("telefono")); 
-        }
-        r.close();
+        for(EducatoreDidattico ed:iteraResultSet(r))
+           e.add(ed);
+            
+           r.close();
         return e;
     }
     
