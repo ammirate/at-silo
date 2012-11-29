@@ -35,10 +35,6 @@ include file="atsilo_files/sidebar_scienzeformazione.jsp"
         	<td>&nbsp;</td>
        	 	<td>&nbsp;</td>
           </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td><strong>N.B. All'indirizzo di posta elettronica verrà inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
-          <tr> 
         	<td></td>
        	 	<td><input type="submit" name="modifica" value="Modifica dati " />
                 <input type="reset" name="reset" value="Annulla" />

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@
 	include file="atsilo_files/header_dinamico.jsp"
 %>
@@ -8,7 +10,7 @@
 </tr>
 </tbody></table>
 <%@
-include file="atsilo_files/sidebar_delegato_rettore.jsp"
+include file="atsilo_files/sidebar_direttore.jsp"
  %>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff"><table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>

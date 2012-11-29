@@ -33,13 +33,13 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Iscritti</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_iscritto.html">Inserisci </a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_iscritto.jsp">Inserisci </a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_iscritto.html">Modifica </a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_iscritto.jsp">Modifica </a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_iscritto.html">Cancella </a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_iscritto.jsp">Cancella </a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -51,13 +51,13 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Personale</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_personale.html">Inserisci</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_personale.jsp">Inserisci</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_personale.html">Modifica</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_personale.jsp">Modifica</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="licenzia.html">Licenzia</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="licenzia.jsp">Licenzia</a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -128,12 +128,12 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Bando</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="caricamento_bando.html">Caricamento Bando</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="caricamento_bando.jsp">Caricamento Bando</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserimento_specifiche_bando.html">Inserimento Specifiche</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserimento_specifiche_bando.jsp">Inserimento Specifiche</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_specifiche_bando.html">Modifica Specifiche</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_specifiche_bando.jsp">Modifica Specifiche</a></td>
 </tr>
 </tbody></table>
