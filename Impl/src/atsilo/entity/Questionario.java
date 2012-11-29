@@ -1,6 +1,7 @@
 package atsilo.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 public class Questionario {
  
@@ -11,7 +12,7 @@ public class Questionario {
     private int id;
     private Date periodo_inizio;
     private String pathname;
-
+    private List<Genitore> listaGenitori;
     /**
      * Costruttore vuoto
      */
@@ -27,7 +28,7 @@ public class Questionario {
      * @param pathname il paramentro è fissato
      */
     public Questionario( String descrizione,
-            String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine,
+            String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine, List<Genitore> genitori,
             String pathname) {
         super();
         this.periodo_fine = periodo_fine;
@@ -37,8 +38,31 @@ public class Questionario {
         this.id = id;
         this.periodo_inizio = periodo_inizio;
         this.pathname = pathname;
+        this.listaGenitori = genitori;
     }
 
+
+    /**
+     * @return chiCompilato
+     */
+   
+    /**
+     * @return listaGenitori
+     */
+    public List<Genitore> getListaGenitori() {
+        return listaGenitori;
+    }
+
+    /**
+     * @param listaGenitori nuovo listaGenitori
+     */
+    public void setListaGenitori(List<Genitore> listaGenitori) {
+        this.listaGenitori = listaGenitori;
+    }
+    
+    public void addGenitore(Genitore genitore){
+        listaGenitori.add(genitore);
+    }
 
     /**
      * Metodo che setta il campo periodo fine

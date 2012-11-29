@@ -8,7 +8,7 @@ public class RispostaQuestionario {
     /**
      * La variabile questionario è nulla c'è bisogno di una lettura della classe Questionario
      */
-    private Questionario questionario;
+    private DomandaQuestionario domanda;
     
     /**
      * La variabile genitore è nulla c'è bisogno di una lettura della classe Genitore
@@ -24,15 +24,13 @@ public class RispostaQuestionario {
     /**
      * @param id il paramentro è fissato
      * @param valore il paramentro è fissato
-     * @param questionario è settato dopo la lettura
      * @param genitore è settato dopo la lettura
      */
-    public RispostaQuestionario(String id, String valore,
-            Questionario questionario, Genitore genitore) {
+    public RispostaQuestionario(String id, String valore,DomandaQuestionario domanda, Genitore genitore) {
         super();
         this.id = id;
         this.valore = valore;
-        this.questionario = questionario;
+        this.domanda=domanda;
         this.genitore = genitore;
     }
 
@@ -68,20 +66,19 @@ public class RispostaQuestionario {
         return valore;
     }
 
+
     /**
-     * Metodo che setta il parametro letto dalla classe Questionario
-     * @param questionario è settato dopo la lettura
+     * @return domanda
      */
-    public void setQuestionario(Questionario questionario) {
-        this.questionario = questionario;
+    public DomandaQuestionario getDomanda() {
+        return domanda;
     }
 
     /**
-     * Metodo che prende il parametro letto dalla classe Questionario
-     * @return questionario preso dalla lettura
+     * @param domanda nuovo domanda
      */
-    public Questionario getQuestionario() {
-        return questionario;
+    public void setDomanda(DomandaQuestionario domanda) {
+        this.domanda = domanda;
     }
 
     /**
