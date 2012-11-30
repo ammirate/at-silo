@@ -11,6 +11,7 @@ import atsilo.entity.Questionario;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -90,7 +91,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         }
         
         public List<DomandaQuestionario> getDomandeQuestionario(String idQuestionario) throws SQLException{
-            List<DomandaQuestionario> l=null;
+            List<DomandaQuestionario> l=new ArrayList<DomandaQuestionario>();
             DomandaQuestionario temp = new DomandaQuestionario();
            
             ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE questionario =" + idQuestionario );
