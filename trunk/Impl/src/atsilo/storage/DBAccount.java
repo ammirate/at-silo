@@ -1,5 +1,8 @@
 package atsilo.storage;
 import atsilo.entity.Account;
+import atsilo.entity.Genitore;
+import atsilo.entity.PersonaleAsilo;
+import atsilo.entity.Psicopedagogo;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -70,25 +73,52 @@ public class DBAccount extends DBBeans<Account>
     
     
     /**
-     * 
-     * @param user
+     * Ricerca nel database un account il cui username corrisponde
+     * a quello fornito in input.
+     * Il metodo provvede a caricare un istanza di utente del tipo appropriato,
+     * con il codice fiscale preimpostato.
+     * @param user      Nome utente da ricercare
      * @return un account con username=a oppure null
      * @throws SQLException
      */
-    public Account ricercaPerUsername(String user) throws SQLException 
-    {
-        Account a = null;
+    public Account ricercaPerUsername(String user) throws SQLException {
+        Account a = new Account();
         
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE username =" + user);
-        if (res.next()) // dovrebbe trovare solo un account perchè l'username è unico. quindi restituisce un unico record. 
-        {
-            a.setUserName(res.getString("user_name"));
-            a.setPassWord(res.getString("pass_word"));
+        ResultSet res = tabella.getDatabase().directQuery(
+                "SELECT * FROM " + tabella.getNomeTabella()
+                        + "WHERE username =" + user);
+        
+        try {
+            if (res.next()) // dovrebbe trovare solo un account perchè
+                            // l'username è unico. quindi restituisce un unico
+                            // record.
+            {
+                String cf;
+                
+                a.setUserName(res.getString("user_name"));
+                a.setPassWord(res.getString("pass_word"));
+                
+                if ((cf = res.getString("genitore")) != null) {
+                    a.setOwner(new Genitore());
+                } else if ((cf = res.getString("personale_asilo")) != null) {
+                    a.setOwner(new PersonaleAsilo());
+                } else if ((cf = res.getString("psico_pedagogo")) != null) {
+                    a.setOwner(new Psicopedagogo());
+                } else if ((cf = res.getString("responsabile_questionario")) != null) {
+                    a.setOwner(new Psicopedagogo());
+                } else {
+                    a.setOwner(null);
+                }
+                
+                if (cf != null) {
+                    a.getOwner().setCodiceFiscale(cf);
+                }
+            }
+        } finally {
+            res.close();
         }
-         
-            res.close();  
-             return a;
-       
+        return a;
+        
     }
 
 
