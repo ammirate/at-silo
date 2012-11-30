@@ -9,7 +9,7 @@ public class Assenza {
     private Date data;
     
    
-    private String codicefiscale;
+    private Bambino bambino;
     
     /**
      * Costruttore vuoto
@@ -22,10 +22,10 @@ public class Assenza {
      * @param data
      * @param bambino
      */
-    public Assenza(Date data, String cf) {
+    public Assenza(Date data, Bambino b) {
         super();
         this.data = data;
-        this.codicefiscale = cf;
+        this.bambino = b;
     }
     
     /**
