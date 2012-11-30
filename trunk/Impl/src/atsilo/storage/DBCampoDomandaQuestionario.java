@@ -37,8 +37,10 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     {
         List<CampoDomandaQuestionario> a= new ArrayList<CampoDomandaQuestionario> ();
        
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "tipo =" + tipo);
-        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE tipo = ?");
+            tabella.setParam(stmt, 1, "tipo", tipo);
+            ResultSet res = stmt.executeQuery();
             for (CampoDomandaQuestionario c : iteraResultSet(res)) 
                 a.add(c);
                 
@@ -58,10 +60,12 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         
         List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
        
-        
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "domanda_questionario =" + c.getDomanda().getId());
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda_questionario = ?");
+            tabella.setParam(stmt, 1, "domanda_questionario", c.getDomandaQuestionario().getId());
+            ResultSet res = stmt.executeQuery();
         for(CampoDomandaQuestionario c1: iteraResultSet(res))
-        { DomandaQuestionario d=c1.getDomanda();
+        { DomandaQuestionario d=c1.getDomandaQuestionario();
             a.add(d);
         }
    
@@ -78,11 +82,13 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     public List<RispostaQuestionario> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
         
         List<RispostaQuestionario> a= new ArrayList<RispostaQuestionario> ();
-       
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "risposta_questionario =" + c.getRisposta().getId());
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE risposta_questionario = ?");
+            tabella.setParam(stmt, 1, "risposta_questionario", c.getRispostaQuestionario().getId());
+            ResultSet res = stmt.executeQuery();
         for(CampoDomandaQuestionario c1: iteraResultSet(res))
         {
-            RispostaQuestionario r= c1.getRisposta();
+            RispostaQuestionario r= c1.getRispostaQuestionario();
             a.add(r);
         }
         
@@ -138,8 +144,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     @Override
     protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
         CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
-        temp.getDomanda().setId(res.getString("domanda_questionario"));
-        temp.getRisposta().setId(res.getString("risposta_questionario"));
+        temp.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
+        temp.getRispostaQuestionario().setId(res.getString("risposta_questionario"));
         temp.setTipo(res.getString("tipo"));
         temp.setDescrizione(res.getString("descrizione"));
         temp.setValore(res.getString("valore"));
@@ -157,8 +163,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
             ResultSet res = stmt.executeQuery();
             
             while(res.next()){
-               c.getDomanda().setId(res.getString("domanda_questionario"));
-                c.getRisposta().setId(res.getString("risposta_questionario"));
+               c.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
+                c.getRispostaQuestionario().setId(res.getString("risposta_questionario"));
                 c.setTipo(res.getString("tipo"));
                 c.setDescrizione(res.getString("descrizione"));
                 c.setValore(res.getString("valore"));   
