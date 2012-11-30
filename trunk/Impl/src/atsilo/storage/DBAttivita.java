@@ -2,6 +2,7 @@ package atsilo.storage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -46,7 +47,7 @@ public class DBAttivita extends DBBeans<Attivita> {
      */
     @Override
     protected Attivita creaBean(ResultSet r) throws SQLException {
-        Attivita a=null;
+        Attivita a=new Attivita();
         if(r.next())
         {
             a.setCategoria(r.getString("categoria"));
@@ -96,7 +97,7 @@ public class DBAttivita extends DBBeans<Attivita> {
      */
     public Attivita ricercaAttivitaPerTitolo(String titolo) throws SQLException
     {
-        Attivita a=null;
+        Attivita a=new Attivita();
         
         ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo =" + titolo);//restituisce un solo valore perchè titolo è chiave primaria
         if(res.next())
@@ -120,9 +121,9 @@ public class DBAttivita extends DBBeans<Attivita> {
      * @throws SQLException
      */
     public List<Attivita> ricercaAttivitaPerCategoria(String cat) throws SQLException{
-         List<Attivita> a=null;
-         Attivita temp=null;
-         int i=0;
+         List<Attivita> a=new ArrayList<Attivita>();
+         Attivita temp=new Attivita();
+        
         ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE categoria =" + cat);//restituisce un solo valore perchè titolo è chiave primaria
         if(res.next())
         {
@@ -131,8 +132,8 @@ public class DBAttivita extends DBBeans<Attivita> {
             temp.setProgramma_educativo_settimanale((ProgrammaEducativoSettimanale)res.getObject("Programma_educativo_settimanale"));
             temp.setRegistro((Registro)res.getObject("registro"));
             temp.setTitolo(res.getString("titolo"));
-            a.add(i,temp);
-            i++;
+            a.add(temp);
+          
         }
         res.close();
         return a;

@@ -69,7 +69,7 @@ public class DBBando extends DBBeans<Bando> {
      */
     @Override
     protected Bando creaBean(ResultSet r) throws SQLException {
-        Bando b=null;
+        Bando b=new Bando();
         if(r.next())
         {
             b.setiD(r.getInt("id"));
@@ -101,8 +101,8 @@ public class DBBando extends DBBeans<Bando> {
      */
     public Bando cercaBandoPerId (int id) throws SQLException 
     {
-       Bando b=null;
-       Date inizio,fine;
+       Bando b=new Bando();
+       Date inizio,fine= new Date();
        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE id =" + id);
        if(r.next())
        {
@@ -124,18 +124,18 @@ public class DBBando extends DBBeans<Bando> {
      */
     public List<Bando> cercaPerDataInizio (String dataInizio) throws SQLException 
     {
-        List<Bando> lb=null;
-        Bando b=null;
-        Date id,fine;
-        int i=0;
+        List<Bando> lb=new ArrayList<Bando>();
+        Bando b=new Bando();
+        Date id,fine=new Date();
+        
         ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE data_inizio =" + dataInizio);
         if(r.next())
         {
             b.setiD(r.getInt("id"));
             b.setDataInizio(r.getString("data_inizio"));
             b.setDataFine(r.getString("data_fine"));
-            lb.add(i, b);
-            i++;
+            lb.add(b);
+            
         }
            r.close();
         return lb;
@@ -149,18 +149,18 @@ public class DBBando extends DBBeans<Bando> {
      */
     public List<Bando> cercaPerDataFine (String dataFine) throws SQLException 
     {
-        List<Bando> lb=null;
-        Bando b=null;
-        Date id,fine;
-        int i=0;
+        List<Bando> lb=new ArrayList<Bando>();
+        Bando b=new Bando();
+        Date id,fine=new Date();
+       
         ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE data_fine =" + dataFine);
         if(r.next())
         {
             b.setiD(r.getInt("id"));
             b.setDataInizio(r.getString("data_inizio"));
             b.setDataFine(r.getString("data_fine"));
-            lb.add(i, b);
-            i++;
+            lb.add(b);
+            
         }
            r.close();
         return lb;

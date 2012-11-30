@@ -56,7 +56,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     {
         
         List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
-        int i=0;//indice per scorrere in list
+       
         
         ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "domanda_questionario =" + c.getDomanda().getId());
         for(CampoDomandaQuestionario c1: iteraResultSet(res))

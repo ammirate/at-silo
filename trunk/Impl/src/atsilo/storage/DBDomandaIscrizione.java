@@ -96,7 +96,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
        /**
         * ricerca le iscrizioni di un bambino 
         * @param b
-        * @return
+        * @return una lista di iscrizioni
         * @throws SQLException
         */
     public List<DomandaIscrizione> ricercaDomandaDaBambino(Bambino b) throws SQLException {
@@ -120,7 +120,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     /** 
      * Ricerca le iscrizioni di un genitore
      * @param g
-     * @return
+     * @return una lista di iscrizioni
      * @throws SQLException 
      */
     public List<DomandaIscrizione> ricercaDomandaDaGenitore(Genitore g) throws SQLException {
@@ -144,7 +144,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
 /**
  * ricerca per id
  * @param Id
- * @return
+ * @return una domandaIscrizione
  * @throws SQLException
  */
     public DomandaIscrizione ricercaDomandaDaId(int Id) throws SQLException {
@@ -164,9 +164,9 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     }
     
     /**
-     * ricerca per data
+     * ricerca una domanda iscrizione per data
      * @param da
-     * @return
+     * @return una lista di domande
      * @throws SQLException
      */
     public List<DomandaIscrizione> ricercaDomandaPerData(Date da) throws SQLException{
@@ -181,9 +181,9 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     }
     
     /**
-     * ricerca per punteggio
+     * ricerca una domanda per punteggio
      * @param p
-     * @return
+     * @return una lista di domande
      * @throws SQLException 
      */
     public List<DomandaIscrizione> ricercaDomandaPerPunteggio(int p) throws SQLException{
