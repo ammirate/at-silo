@@ -9,6 +9,7 @@ import atsilo.entity.RispostaQuestionario;
 
 import atsilo.entity.Questionario;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -85,22 +86,43 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
            DomandaQuestionario temp = new DomandaQuestionario();
             temp.setId(r.getString("id"));
             temp.setDescrizione(r.getString("descrizione"));
-            temp.setQuestionario((Questionario)r.getObject("questionario"));
-            
+            temp.getQuestionario().setId(r.getInt("questionario"));          
             return temp;
         }
         
-        public List<DomandaQuestionario> getDomandeQuestionario(String idQuestionario) throws SQLException{
+        public DomandaQuestionario getDomanda(String idDomanda) throws SQLException{
+            
+            DomandaQuestionario q=new DomandaQuestionario();
+            
+            PreparedStatement stmt = tabella.prepareStatement(
+                    "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+                tabella.setParam(stmt, 1, "id", idDomanda);
+                ResultSet res = stmt.executeQuery();
+                
+                if(res.next()){
+                    q.setId(res.getString("id"));
+                    q.setDescrizione(res.getString("descrizione"));
+                    q.getQuestionario().setId(res.getInt("questionario"));    
+                }
+            res.close();
+                return q;
+
+        }
+        
+        public List<DomandaQuestionario> getDomandeQuestionario(int idQuestionario) throws SQLException{
             List<DomandaQuestionario> l=new ArrayList<DomandaQuestionario>();
             DomandaQuestionario temp = new DomandaQuestionario();
            
-            ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE questionario =" + idQuestionario );
-            
+            PreparedStatement stmt = tabella.prepareStatement(
+                    "SELECT * FROM " + tabella.getNomeTabella() + "WHERE questionario = ?");
+                tabella.setParam(stmt, 1, "questionario", idQuestionario);
+                ResultSet res = stmt.executeQuery();
+                        
             while (res.next()){
                
                 temp.setId(res.getString("id"));
                 temp.setDescrizione(res.getString("descrizione"));
-                temp.setQuestionario((Questionario)res.getObject("questionario"));
+                temp.getQuestionario().setId(res.getInt("questionario"));
                 
                 l.add(temp);
             }
@@ -108,9 +130,5 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
          return l;
         }
         
-        public void setDomandeQuestionario(List <DomandaQuestionario> l) {
-            int i=l.size();
-            while(i>=0)
-            inserisci(l.get(i));
-        }
+       
 }       
