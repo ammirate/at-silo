@@ -23,6 +23,12 @@ import java.util.List;
 import java.util.Map;
 public class DBQuestionario extends DBBeans
 {
+    /**
+     * Crea un gestore per il bean Questionario
+     * @param nomeTabella nome reale della tabella nel database
+     * @param db database con relativa connessione
+     */
+    
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
@@ -94,8 +100,16 @@ public class DBQuestionario extends DBBeans
     
     
     
-   
-    
+
+    /**
+     * Ricerca nel database un questionario a 
+     * seconda del nome fornito in input.
+     * Il metodo provvede a caricare un istanza di una lista di Questionari 
+     * con il codice fiscale preimpostato.
+     * @param n      Nome del questionario da ricercare
+     * @return lista di questionario oppure Null
+     * @throws SQLException
+     */
     public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
         List <Questionario> l=null;
         Questionario q=new Questionario();
@@ -121,12 +135,22 @@ public class DBQuestionario extends DBBeans
          return l;
     }
     
+    /**
+     * Ricerca nel database la lista dei questionari
+     * che possono essere compilati.
+     * Il metodo provvede a caricare un istanza di una lista di Questionario
+     * @return lista di questionario oppure Null
+     * @throws SQLException
+     */
+    
     public List<Questionario> visualizzaQuestionariCompilabili() throws SQLException{
        
         List<Questionario> l=null;
         Questionario q=new Questionario();; 
         
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE NOW() BETWEEN periodo_inizio AND periodo_fine");
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM "
+        + tabella.getNomeTabella()+ "WHERE NOW()" +
+        " BETWEEN periodo_inizio AND periodo_fine");
         
             while(res.next()){
             
@@ -143,7 +167,15 @@ public class DBQuestionario extends DBBeans
          res.close();   
         return l;
     }
-        
+       
+    /**
+     * Ricerca nel database un questionario a secondo dell'
+     *  id fornito in input.
+     * Il metodo provvede a caricare un istanza di un Questionario
+     * @param idQuestionario Id del questionario da ricercare
+     * @return questionario oppure Null
+     * @throws SQLException
+     */
      public Questionario getQuestionario(int idQuestionario) throws SQLException{
          
          Questionario q=new Questionario();
