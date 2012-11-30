@@ -3,6 +3,7 @@ package atsilo.storage;
 import atsilo.entity.Bambino;
 import atsilo.entity.Genitore;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -12,6 +13,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Collections;
+
+
 
 
 public class DBBambino extends DBBeans<Bambino> {    
@@ -94,7 +97,10 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setIndirizzo(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
-            b.setGenitore((Genitore) r.getObject("genitore"));
+            Genitore gen=new Genitore();
+            String g=r.getString("genitore");
+            gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
             
             
         }
@@ -104,15 +110,18 @@ public class DBBambino extends DBBeans<Bambino> {
 
     
     /**
-     * ricerca per codicefiscale
-     * @param codicefiscale
-     * @return restituisce un bambino
-     * @throws SQLException
+     * ricerca un bambino per codicefiscale
+     * @param codicefiscale da ricercare per trovare il bambino
+     * @return restituisce un bambino se è presente il codice fiscale nel database o un oggetto vuoto
+     * @throws SQLException nel caso in cui si verificano errori di connessione
      */
     public Bambino ricercaBambinoPerCodFiscale(String codicefiscale) throws SQLException
     {
         Bambino b=new Bambino();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale =" + codicefiscale);
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
+            tabella.setParam(stmt, 1, "codiceFiscale", codicefiscale);
+            ResultSet r = stmt.executeQuery();
         if(r.next())
         {
             b.setNome(r.getString("nome"));
@@ -122,7 +131,10 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setIndirizzo(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
-            b.setGenitore((Genitore) r.getObject("genitore"));
+            Genitore gen=new Genitore();
+            String g=r.getString("genitore");
+            gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
         }
         r.close();
         return b;
@@ -130,15 +142,19 @@ public class DBBambino extends DBBeans<Bambino> {
     
     
     /**
-     * ricerca per data di nascita
-     * @param d
-     * @return lista di bambini
+     * ricerca un bambino per data di nascita
+     * @param d è la data di nascita da ricercare
+     * @return lista di bambini nati il giorno d. La lista può contenere anche un solo bambino o può essere vuota se nel database non ci sono bambinin nati in quel giorno
+     *
      * @throws SQLException
      */
     public List<Bambino> ricercaBambinoPerDataNascita(Date d) throws SQLException{
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE data =" + d);
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data = ?");
+            tabella.setParam(stmt, 1, "data", d);
+            ResultSet r = stmt.executeQuery();
         
         while(r.next())
         {
@@ -149,7 +165,10 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setIndirizzo(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
-            b.setGenitore((Genitore) r.getObject("genitore"));
+            Genitore gen=new Genitore();
+            String g=r.getString("genitore");
+            gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
             
             lb.add(b);
             
@@ -168,8 +187,10 @@ public class DBBambino extends DBBeans<Bambino> {
     public List<Bambino> ricercaBambinoPerNome(String nome) throws SQLException{
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE nome =" + nome);
-        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE nome = ?");
+            tabella.setParam(stmt, 1, "nome", nome);
+            ResultSet r = stmt.executeQuery();        
         while(r.next())
         {
             b.setNome(r.getString("nome"));
@@ -179,7 +200,10 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setIndirizzo(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
-            b.setGenitore((Genitore) r.getObject("genitore"));
+            Genitore gen=new Genitore();
+            String g=r.getString("genitore");
+            gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
             
             lb.add(b);
            
@@ -198,8 +222,10 @@ public class DBBambino extends DBBeans<Bambino> {
     public List<Bambino> ricercaBambinoPerCognome(String cognome) throws SQLException{
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE cognome =" + cognome);
-       
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE cognome = ?");
+            tabella.setParam(stmt, 1, "cognome", cognome);
+            ResultSet r = stmt.executeQuery();       
         while(r.next())
         {
             b.setNome(r.getString("nome"));
@@ -209,7 +235,10 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setIndirizzo(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
-            b.setGenitore((Genitore) r.getObject("genitore"));
+            Genitore gen=new Genitore();
+            String g=r.getString("genitore");
+            gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
             
             lb.add(b);
             
@@ -226,8 +255,10 @@ public class DBBambino extends DBBeans<Bambino> {
      */
     public String ricercaIndirizzoBambino(Bambino b) throws SQLException{
         
-        
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codicefiscale =" + b.getCodice_Fiscale());
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
+            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodice_Fiscale());
+            ResultSet r = stmt.executeQuery();
         String ind="";
         if(r.next())
             ind=r.getString("indirizzo");
@@ -243,7 +274,10 @@ public class DBBambino extends DBBeans<Bambino> {
      * @throws SQLException
      */
     public int ricercaClasseBambino(Bambino b) throws SQLException{
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codicefiscale =" + b.getCodice_Fiscale());
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
+            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodice_Fiscale());
+            ResultSet r = stmt.executeQuery();
         int c = 0;
         if(r.next())
             c=r.getInt("classe");

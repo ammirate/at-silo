@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class DBAttivita extends DBBeans<Attivita> {
         {
             a.setCategoria(r.getString("categoria"));
             a.setDescrizione(r.getString("descrizione"));
-            a.setProgramma_educativo_settimanale((ProgrammaEducativoSettimanale)r.getObject("Programma_educativo_settimanale"));
+            a.setProgrammaEducativoSettimanale((ProgrammaEducativoSettimanale)r.getObject("Programma_educativo_settimanale"));
             a.setRegistro((Registro)r.getObject("registro"));
             a.setTitolo(r.getString("titolo"));
         }
@@ -90,50 +91,68 @@ public class DBAttivita extends DBBeans<Attivita> {
     
     
     /**
-     * Ricerca per titolo
-     * @param titolo
-     * @return restituisce un attivita
-     * @throws SQLException
+     * Ricerca un attivita per titolo. 
+     * @param titolo, rappresenta il titolo da ricercare
+     * @return restituisce un attivita se viene trovata o un oggetto attività vuoto. Restituisce solo un attivita perchè il titolo è univoco.
+     * @throws SQLException nel caso in cui si verifica un eccezione nella connesione con la connessione.
      */
     public Attivita ricercaAttivitaPerTitolo(String titolo) throws SQLException
     {
-        Attivita a=new Attivita();
-        
-        ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo =" + titolo);//restituisce un solo valore perchè titolo è chiave primaria
+        Attivita temp=new Attivita();
+        int reg;
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo = ?");
+            tabella.setParam(stmt, 1, "titolo", titolo);
+            ResultSet res = stmt.executeQuery();  
         if(res.next())
         {
-            a.setCategoria(res.getString("categoria"));
-            a.setDescrizione(res.getString("descrizione"));
-            a.setProgramma_educativo_settimanale((ProgrammaEducativoSettimanale)res.getObject("Programma_educativo_settimanale"));
-            a.setRegistro((Registro)res.getObject("registro"));
-            a.setTitolo(res.getString("titolo"));
+            
+            temp.setCategoria(res.getString("categoria"));
+            temp.setDescrizione(res.getString("descrizione"));
+            ProgrammaEducativoSettimanale p=new ProgrammaEducativoSettimanale();
+            p.setId((res.getInt("Programma_educativo_settimanale")));
+            temp.setProgrammaEducativoSettimanale(p);
+            reg=res.getInt("registro");
+            Registro r= new Registro();
+            r.setId(reg);
+            temp.setRegistro(r);
         }
         res.close();
-        return a;
+        return temp;
     }
     
     
     
     /**
-     * ricerca per categoria
-     * @param cat
-     * @returnrestituisce una lista di attivita della stessa categoria
-     * @throws SQLException
+     * ricerca un attività per categoria
+     * @param cat è la categoria da ricercare
+     * @return restituisce una lista di attivita se nel database esistono più attività con la categoria, o una singola attività situata sempre in una lista, se non esistono attività di quella categoria restituisce una lista vuota
+     *  
+     * @throws SQLException nel caso in cui si verificano eccezioni nella connessione con il database
      */
+   
     public List<Attivita> ricercaAttivitaPerCategoria(String cat) throws SQLException{
          List<Attivita> a=new ArrayList<Attivita>();
          Attivita temp=new Attivita();
-        
-        ResultSet res= tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE categoria =" + cat);//restituisce un solo valore perchè titolo è chiave primaria
+        int reg;
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE categoria = ?");
+            tabella.setParam(stmt, 1, "categoria", cat);
+            ResultSet res = stmt.executeQuery();  
         if(res.next())
         {
             temp.setCategoria(res.getString("categoria"));
             temp.setDescrizione(res.getString("descrizione"));
-            temp.setProgramma_educativo_settimanale((ProgrammaEducativoSettimanale)res.getObject("Programma_educativo_settimanale"));
-            temp.setRegistro((Registro)res.getObject("registro"));
+            ProgrammaEducativoSettimanale p=new ProgrammaEducativoSettimanale();
+            p.setId((res.getInt("Programma_educativo_settimanale")));
+            temp.setProgrammaEducativoSettimanale(p);
+            reg=res.getInt("registro");
+            Registro r= new Registro();
+            r.setId(reg);
+            temp.setRegistro(r);
+            
             temp.setTitolo(res.getString("titolo"));
             a.add(temp);
-          
         }
         res.close();
         return a;

@@ -4,6 +4,7 @@ import atsilo.entity.Bambino;
 import atsilo.entity.Bando;
 import atsilo.entity.Genitore;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -94,16 +95,19 @@ public class DBBando extends DBBeans<Bando> {
     
     
     /**
-     * cerca bando per data inizio
-     * @param id
-     * @return bando
-     * @throws SQLException 
+     * cerca bando per il valore di un id specifico.
+     * @param id, identificativo usato per la ricerca del bando
+     * @return restituisce il bando avente id ricercato oppure un bando vuoto nel caso in cui non trova un id
+     * @throws SQLException nel caso in cui si verifica un errore di connessione 
      */
     public Bando cercaBandoPerId (int id) throws SQLException 
     {
        Bando b=new Bando();
-       Date inizio,fine= new Date();
-       ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE id =" + id);
+       
+       PreparedStatement stmt = tabella.prepareStatement(
+               "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+           tabella.setParam(stmt, 1, "id", id);
+           ResultSet r = stmt.executeQuery();  
        if(r.next())
        {
            b.setiD(id);
@@ -117,18 +121,20 @@ public class DBBando extends DBBeans<Bando> {
     
     
     /**
-     * ricerca bando per data inizio
-     * @param dataInizio
-     * @return lista di bandi
-     * @throws SQLException 
+     * ricerca bando per una data inizio
+     * @param dataInizio da ricercare nel database
+     * @return lista di bandi aventi come data inizio la data passata tra i parametri, oppure una lista vuota qualora non ci fossero bandi con quella data d'inizio
+     * @throws SQLException  se si verifica un errore di connessione
      */
     public List<Bando> cercaPerDataInizio (String dataInizio) throws SQLException 
     {
         List<Bando> lb=new ArrayList<Bando>();
         Bando b=new Bando();
-        Date id,fine=new Date();
-        
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE data_inizio =" + dataInizio);
+       
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data_inizio = ?");
+            tabella.setParam(stmt, 1, "data_inizio", dataInizio);
+            ResultSet r = stmt.executeQuery();  
         if(r.next())
         {
             b.setiD(r.getInt("id"));
@@ -142,18 +148,20 @@ public class DBBando extends DBBeans<Bando> {
      }
     
     /**
-     * ricerca bando per datafine
-     * @param dataFine
-     * @return lista di bandi
-     * @throws SQLException 
+     * ricerca bando per una specifica datafine
+     * @param dataFine è la data ricercata nel database per indivuduare i bandi
+     * @return lista di bandi aventi la datafine richiesta o una lista vuota se non esiste un bando avente come data di fine "datafine"
+     * @throws SQLException se si verifica un eccezione nella connessione al database
      */
     public List<Bando> cercaPerDataFine (String dataFine) throws SQLException 
     {
         List<Bando> lb=new ArrayList<Bando>();
         Bando b=new Bando();
         Date id,fine=new Date();
-       
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE data_fine =" + dataFine);
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data_fine = ?");
+            tabella.setParam(stmt, 1, "data_fine", dataFine);
+            ResultSet r = stmt.executeQuery();  
         if(r.next())
         {
             b.setiD(r.getInt("id"));
