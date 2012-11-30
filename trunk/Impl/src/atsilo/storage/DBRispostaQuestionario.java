@@ -133,8 +133,7 @@ public class DBRispostaQuestionario extends DBBeans {
      * @return lista di RisposteQuestionario o null
      * @throws SQLException
      */    
-public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{//per una specifica domanda restituisce tutte le risposte date a quella specifica domanda
-        
+public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{        
     List<RispostaQuestionario> l=null;
     RispostaQuestionario r=new RispostaQuestionario();
     
