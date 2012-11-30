@@ -4,8 +4,8 @@ public class CampoDomandaQuestionario {
     private String tipo;
     private String descrizione;
     private String valore;
-    private DomandaQuestionario domanda;
-    private RispostaQuestionario risposta;
+    private DomandaQuestionario domandaQuestionario;
+    private RispostaQuestionario rispostaQuestionario;
 
     public CampoDomandaQuestionario() {
         super();
@@ -57,28 +57,28 @@ public class CampoDomandaQuestionario {
      * @return domanda
      */
     public DomandaQuestionario getDomandaQuestionario() {
-        return domanda;
+        return domandaQuestionario;
     }
 
     /**
      * @param domanda nuovo domanda
      */
-    public void setDomanda(DomandaQuestionario domanda) {
-        this.domanda = domanda;
+    public void setDomandaQuestionario(DomandaQuestionario domanda) {
+        this.domandaQuestionario = domanda;
     }
 
     /**
      * @return risposta
      */
     public RispostaQuestionario getRispostaQuestionario() {
-        return risposta;
+        return rispostaQuestionario;
     }
 
     /**
      * @param risposta nuovo risposta
      */
-    public void setRisposta(RispostaQuestionario risposta) {
-        this.risposta = risposta;
+    public void setRispostaQuestionario(RispostaQuestionario risposta) {
+        this.rispostaQuestionario = risposta;
     }
 
   
