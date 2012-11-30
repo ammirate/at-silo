@@ -54,7 +54,12 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
         return res;
     }
 
-
+/**
+ * ricerca educatore didattico per titolo di studi
+ * @param titoloS
+ * @return una lista di educatori didattici
+ * @throws SQLException
+ */
     public List<EducatoreDidattico> ricercaEducatoreDidatticoPerTitoloStudio(String titoloS) throws SQLException{
         List<EducatoreDidattico> e=new ArrayList<EducatoreDidattico>();
         ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo_di_studio =" + titoloS);
@@ -65,8 +70,16 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
         return e;
     }
     
+    
+    
+    /**
+     * ricerca educatore didattico per codicefiscale
+     * @param cf
+     * @return un educatore didattico
+     * @throws SQLException
+     */
     public EducatoreDidattico ricercaEducatoreDidatticoPerCf(String cf) throws SQLException{
-        EducatoreDidattico e=null;
+        EducatoreDidattico e=new EducatoreDidattico();
         ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale =" + cf);
         if(r.next())
         {
@@ -110,7 +123,7 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
      */
     @Override
     protected EducatoreDidattico creaBean(ResultSet r) throws SQLException {
-        EducatoreDidattico e=null;
+        EducatoreDidattico e=new EducatoreDidattico();
         if(r.next())
         {
             //settare lista classi

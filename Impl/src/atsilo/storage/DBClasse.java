@@ -57,7 +57,7 @@ public class DBClasse extends DBBeans<Classe>
 /**
  * Ricerca un aclasse per id
  * @param id
- * @return
+ * @return una classe
  * @throws SQLException
  */
     public Classe RicercaClassePerId (String id) throws SQLException{
