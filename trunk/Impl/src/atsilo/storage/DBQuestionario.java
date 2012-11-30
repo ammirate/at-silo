@@ -144,7 +144,7 @@ public class DBQuestionario extends DBBeans
         return l;
     }
         
-     public Questionario getQuestionario(String idQuestionario) throws SQLException{
+     public Questionario getQuestionario(int idQuestionario) throws SQLException{
          
          Questionario q=new Questionario();
          
