@@ -92,6 +92,17 @@ public class DomandaQuestionario {
         this.campi = campi;
     }
     
+    public Questionario getQuestionario() {
+        return questionario;
+    }
+
+    /**
+     * @param questionario nuovo questionario
+     */
+    public void setQuestionario(Questionario q) {
+        this.questionario = questionario;
+    }
+    
     
 }
 
