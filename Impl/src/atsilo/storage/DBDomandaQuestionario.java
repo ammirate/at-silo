@@ -152,5 +152,4 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
          return l;
         }
         
-       
-}       
+}
