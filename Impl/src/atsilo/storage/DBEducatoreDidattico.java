@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -56,31 +57,37 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
 
 /**
  * ricerca educatore didattico per titolo di studi
- * @param titoloS
- * @return una lista di educatori didattici
- * @throws SQLException
+ * @param titoloS è il titolo di studi da ricercare, se è una stringa vuota la ricerca non porta nessun risultato, se è null si verifica un NULLPOINTEREXCEPTION
+ * @return una lista di educatori didattici aventi un determinato titolo di studi oppure una lista vuota
+ * @throws SQLException se ci sono errori di connessione con il database
  */
     public List<EducatoreDidattico> ricercaEducatoreDidatticoPerTitoloStudio(String titoloS) throws SQLException{
         List<EducatoreDidattico> e=new ArrayList<EducatoreDidattico>();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo_di_studio =" + titoloS);
-        for(EducatoreDidattico ed:iteraResultSet(r))
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo_di_studi = ?");
+            tabella.setParam(stmt, 1, "titolo_di_studi", titoloS);
+            ResultSet res= stmt.executeQuery();
+        for(EducatoreDidattico ed:iteraResultSet(res))
            e.add(ed);
             
-           r.close();
+           res.close();
         return e;
     }
     
     
     
     /**
-     * ricerca educatore didattico per codicefiscale
-     * @param cf
-     * @return un educatore didattico
-     * @throws SQLException
+     * ricerca educatore didattico per codicefiscale 
+     * @param cf è il codice fiscale da ricercare se è una stringa vuota la ricerca non porta nessun risultato, se è null si verifica un NULLPOINTEREXCEPTION
+     * @return un educatore didattico se il cf è stato trovato nel database oppure un oggetto vuoto
+     * @throws SQLException se si verifica un errore di connessione con il database
      */
     public EducatoreDidattico ricercaEducatoreDidatticoPerCf(String cf) throws SQLException{
         EducatoreDidattico e=new EducatoreDidattico();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale =" + cf);
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
+            tabella.setParam(stmt, 1, "codice_fiscale", cf);
+            ResultSet r= stmt.executeQuery();
         if(r.next())
         {
             //settare lista classi
