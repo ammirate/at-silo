@@ -167,16 +167,16 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Programma Didattico</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="../inserisci_programma.jsp">Inserisci</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_programma.jsp">Inserisci</a></td>
 </tr>
 <tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="../modifica_programma.jsp">Modifica</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_programma.jsp">Modifica</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="../cancella_programma.jsp">Cancella</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_programma.jsp">Cancella</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="../storico_registro_ped.jsp">Storico Registro</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_registro_ped.jsp">Storico Registro</a></td>
 </tr>
 </tbody></table>

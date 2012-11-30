@@ -13,9 +13,9 @@
 include file=""
  %>
  --%>
-<%-- Include form ricerca a seconda del chiamante --%>
+<%-- Include pagina comunicazioni a seconda del chiamante --%>
 <%@ 
-include file="atsilo_files/form_ricerca_personale.jsp" 
+include file="atsilo_files/comunicazioni.jsp" 
  %>
  
 <%@

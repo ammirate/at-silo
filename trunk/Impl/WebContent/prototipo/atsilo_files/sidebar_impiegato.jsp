@@ -131,9 +131,6 @@
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="caricamento_bando.jsp">Caricamento Bando</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserimento_specifiche_bando.jsp">Inserimento Specifiche</a></td>
-</tr>
-<tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_specifiche_bando.jsp">Modifica Specifiche</a></td>
 </tr>
 </tbody></table>
