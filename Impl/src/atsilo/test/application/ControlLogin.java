@@ -2,9 +2,9 @@ package atsilo.test.application;
 
 
 /**
- *  STUB per il Control Login (che tra l'altro non può funzionare così come è)
+ *  STUB per il Control Login
  *  
- *  @author Alfonso Murolo
+ *  @author Angelo Scafuro
  */
 public class ControlLogin {
     /**
@@ -14,16 +14,28 @@ public class ControlLogin {
     private static final ControlLogin INSTANCE = new ControlLogin();
 
     /**
-     * Username e passwords per il funzionamento stub
+     * Username  password e tipologie di utenti per il funzionamento stub
+     * L'username in posizione n, avrà come password l'elemento in posizione n dell'array passwords e come tipologia l'elemento in posizione n dell'array tipology
      */
     private static final String[] usernames = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" }; 
     private static final String[] passwords = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" };
     private static final String[] tipology =  {"genitore", "impiegato", "educatore","psicopedagogo","delegato_scfm","delegato_rettore" };
+   
+    /**
+     * Metodo costruttore
+     */
     ControlLogin() {
        
          
     }
 
+    /**
+     * 
+     * @param username username immesso dall'utente che vuole accedere
+     * @param password passowrd immessa dall'utente che vuole accedere
+     * @param tipologia tipologia selezionata dall'utente che vuole accedere
+     * @return
+     */
     public Boolean getValoreLogin(String username, String password, String tipologia) {
 
         String passwordCheFacciamoFintaInInput = username;
@@ -47,6 +59,10 @@ public class ControlLogin {
        return false;
     }
 
+    /**
+     * Restitusice l'istanza di Login
+     * @return istanza del controlLogin
+     */
     public static ControlLogin getInstance() {
         /**
          * Questa è una vera implementazione di un singleton.
