@@ -20,8 +20,12 @@ import java.util.List;
 import java.util.Map;
 
 public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
-    Tabella tabella;
-    
+
+    /**
+     * Crea un gestore per il bean DomandaQuestionario
+     * @param nomeTabella nome reale della tabella nel database
+     * @param db database con relativa connessione
+     */
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
@@ -30,8 +34,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      * 
      * @return
      */
-    private static List<String> creaChiave()
-    {
+    private static List<String> creaChiave(){
         List<String> res=  Arrays.asList("id");// da chiarire
         
         return Collections.unmodifiableList(res);
@@ -40,8 +43,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      * 
      * @return
      */
-    private static Map<String,String> creaMapping()
-    {
+    private static Map<String,String> creaMapping(){
         Map<String,String> res= new HashMap<String,String>();
         res.put("id","id");
         res.put("descrizione","descrizione");
@@ -103,6 +105,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
                     q.setId(res.getString("id"));
                     q.setDescrizione(res.getString("descrizione"));
                     q.getQuestionario().setId(res.getInt("questionario"));    
+                    q.getRisposta().setId(res.getString("risposta"));
                 }
             res.close();
                 return q;
@@ -123,6 +126,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
                 temp.setId(res.getString("id"));
                 temp.setDescrizione(res.getString("descrizione"));
                 temp.getQuestionario().setId(res.getInt("questionario"));
+                temp.getRisposta().setId(res.getString("risposta"));
                 
                 l.add(temp);
             }
