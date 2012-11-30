@@ -84,6 +84,8 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
          * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
          */
         @Override
+        
+        
         protected DomandaQuestionario creaBean(ResultSet r) throws SQLException {
            DomandaQuestionario temp = new DomandaQuestionario();
             temp.setId(r.getString("id"));
@@ -92,6 +94,15 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
             return temp;
         }
         
+        
+
+        /**
+         * Data l'id di una domanda viene restituita
+         * l' oggetto bean corrispondente
+         * @param idDomanda id della domanda da restituire
+         * @return domanda questionario con id=idDomanda oppure null
+         * @throws SQLException
+         */
         public DomandaQuestionario getDomanda(String idDomanda) throws SQLException{
             
             DomandaQuestionario q=new DomandaQuestionario();
@@ -111,7 +122,14 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
                 return q;
 
         }
-        
+
+        /**
+         * Dato l'id di un questionario vengono restituite le
+         * domande che compongono il questionario con id=idQuestionario
+         * @param idQuestionario id del questionario di cui restituire le domande
+         * @return lista di domandeQuestionario  oppure null
+         * @throws SQLException
+         */
         public List<DomandaQuestionario> getDomandeQuestionario(int idQuestionario) throws SQLException{
             List<DomandaQuestionario> l=new ArrayList<DomandaQuestionario>();
             DomandaQuestionario temp = new DomandaQuestionario();

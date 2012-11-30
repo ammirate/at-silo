@@ -39,8 +39,8 @@ public class DBRispostaQuestionario extends DBBeans {
         return Collections.unmodifiableList(res);
     }
 
-        /**
-     * @return
+    /**
+     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
