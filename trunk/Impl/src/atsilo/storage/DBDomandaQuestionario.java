@@ -130,7 +130,8 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
          * @return lista di domandeQuestionario  oppure null
          * @throws SQLException
          */
-        public List<DomandaQuestionario> getDomandeQuestionario(int idQuestionario) throws SQLException{
+        public List<DomandaQuestionario> getDomandeQuestionario(int idQuestionario)
+                throws SQLException{
             List<DomandaQuestionario> l=new ArrayList<DomandaQuestionario>();
             DomandaQuestionario temp = new DomandaQuestionario();
            
