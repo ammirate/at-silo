@@ -16,7 +16,7 @@ public class Attivita {
      * La variabile progEdSettimanale avrà il valore della variabile di ProgrammaEducativoSettimanale 
      * @attribute progEdSettimanale La variabile è nulla c'è bisogno di una lettura della classe ProgammaEducativoSettimanale
      */
-    private ProgrammaEducativoSettimanale progEdSettimanale;
+    private ProgrammaEducativoSettimanale programmaEducativoSettimanale;
 
     /**
      * @attribute titolo di tipo stringa
@@ -50,7 +50,7 @@ public class Attivita {
         super();
         this.descrizione = descrizione;
         this.categoria = categoria;
-        this.progEdSettimanale = progEdSettimanale;
+        this.programmaEducativoSettimanale = progEdSettimanale;
         this.titolo = titolo;
         this.registro = registro;
     }
@@ -91,16 +91,16 @@ public class Attivita {
      * Metodo che setta il parametro letto dalla classe ProgrammaEducativoSettimanale
      * @param programma_educativo_settimanale è settato dopo la lettura
      */    
-    public void setProgramma_educativo_settimanale(ProgrammaEducativoSettimanale programma_educativo_settimanale) {
-        this.progEdSettimanale = programma_educativo_settimanale;
+    public void setProgrammaEducativoSettimanale(ProgrammaEducativoSettimanale programma_educativo_settimanale) {
+        this.programmaEducativoSettimanale = programma_educativo_settimanale;
     }
 
     /**
      * Metodo che prende il parametro letto dalla classe ProgrammaEducativoSettimanale
      * @return programma_educativo_settimanale parametro preso dalla lettura
      */
-    public ProgrammaEducativoSettimanale getProgramma_educativo_settimanale() {
-        return progEdSettimanale;
+    public ProgrammaEducativoSettimanale getProgrammaEducativoSettimanale() {
+        return programmaEducativoSettimanale;
     }
 
     /**
