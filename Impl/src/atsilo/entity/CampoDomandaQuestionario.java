@@ -56,7 +56,7 @@ public class CampoDomandaQuestionario {
     /**
      * @return domanda
      */
-    public DomandaQuestionario getDomanda() {
+    public DomandaQuestionario getDomandaQuestionario() {
         return domanda;
     }
 
@@ -70,7 +70,7 @@ public class CampoDomandaQuestionario {
     /**
      * @return risposta
      */
-    public RispostaQuestionario getRisposta() {
+    public RispostaQuestionario getRispostaQuestionario() {
         return risposta;
     }
 
