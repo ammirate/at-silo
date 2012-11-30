@@ -63,8 +63,8 @@ public class DBAssenza extends DBBeans<Assenza> {
  */
     public List<Assenza> ricercaAssenzaPerData(Date d) throws SQLException
     {
-        List<Assenza> a=null;
-        Assenza temp=null;
+        List<Assenza> a= new ArrayList<Assenza>();
+        Assenza temp=new Assenza();
         int i=0; //indice per scorrere in list
         ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE data =" + d);
         while(res.next())
@@ -86,8 +86,8 @@ public class DBAssenza extends DBBeans<Assenza> {
      * @throws SQLException
      */
     public List<Assenza> ricercaAssenzaPerBambino(String codicefiscale) throws SQLException {
-        Assenza temp=null;
-        List<Assenza> a=null;
+        Assenza temp=new Assenza();
+        List<Assenza> a=new ArrayList<Assenza>();
         int i=0;//indice per scorere in list
         ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale =" + codicefiscale);
         while(res.next())
@@ -121,7 +121,7 @@ public class DBAssenza extends DBBeans<Assenza> {
      */
     @Override
     protected Assenza creaBean(ResultSet r) throws SQLException {
-        Assenza a=null;
+        Assenza a=new Assenza();
         if(r.next())
         {
             a.setData(r.getDate("data"));
