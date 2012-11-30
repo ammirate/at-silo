@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -7,6 +8,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.Classe;
@@ -55,18 +57,22 @@ public class DBClasse extends DBBeans<Classe>
     
     
 /**
- * Ricerca un aclasse per id
- * @param id
- * @return una classe
- * @throws SQLException
+ * Ricerca una classe per il valore dell' id(precisamente indica se la classe esiste o meno perchè la classe è composta solo dall'id
+ * @param id è il valore dell'identificatore della classe da ricercare nel database
+ * @return una classe contenente l'id ricercato
+ * @throws SQLException se si verifica un errore di connessione con il database
  */
     public Classe RicercaClassePerId (String id) throws SQLException{
         
         Classe cla=new Classe();
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "id =" + id);
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+            tabella.setParam(stmt, 1, "id", id);
+            ResultSet res = stmt.executeQuery();
         if(res.next()){
            cla.setId(res.getString("id"));
-           // so dovrebbero inserire anche le due liste(educatori ed eventi)
+           
+           // si dovrebbero inserire anche le due liste(educatori ed eventi)
         }
             
         res.close();
