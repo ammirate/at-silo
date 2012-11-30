@@ -17,6 +17,7 @@ package atsilo.application;
 
 import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
+import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
@@ -25,16 +26,30 @@ import atsilo.storage.Database;
 import java.sql.Date;
 import java.sql.SQLException;
 
+import org.apache.tomcat.dbcp.dbcp.DbcpException;
+
+import test.storage.StubEvento;
+
 public class ControlGestioneBando {
-    private static ControlGestioneBando INSTANCE;
+    private static final ControlGestioneBando INSTANCE = new ControlGestioneBando();
     private DBBando dbBando;
     private DBDomandaIscrizione dbDomandaIscrizione;
     
-    ControlGestioneBando() {
-        INSTANCE=new ControlGestioneBando();
-        
-        //Come prima cosa, bisogna creare un'istanza di database e aprire una connessione
+    private ControlGestioneBando() 
+    {
+    }
+    /**
+     * inserisce il punteggio nella domanda passata in input
+     * @param iscrizione
+     * @param punteggio
+     * @return
+     * @throws DBConnectionException
+     * @throws BandoException
+     */
+    boolean insrisciPunteggio(DomandaIscrizione iscrizione,int punteggio) throws DBConnectionException,BandoException
+    {
         Database db = new Database();
+        
         if (!db.apriConnessione()) 
         {
             throw new DBConnectionException("Connessione Fallita");
@@ -45,6 +60,18 @@ public class ControlGestioneBando {
             dbBando = new DBBando(db);
             dbDomandaIscrizione = new DBDomandaIscrizione(db);
             
+            DomandaIscrizione domadandaDaModificare=new DomandaIscrizione();
+            try 
+            {
+                domadandaDaModificare=dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
+            } catch (SQLException e) 
+            {
+                throw new DBConnectionException("Connessione Fallita");
+            }
+            if(domadandaDaModificare==null)
+                throw new BandoException("domanda non trovata");
+            domadandaDaModificare.setPunteggio(punteggio);
+            return true;
         } finally {
             /*
              * Alla fine dell'interazione, prima di uscire dal metodo,
@@ -52,44 +79,81 @@ public class ControlGestioneBando {
              */
             db.chiudiConnessione();
         }
-        
     }
     
-    boolean insrisciPunteggio(DomandaIscrizione iscrizione,int punteggio)
+    /**
+     * metodo che inserisci l'intervallo del bando
+     * @param inizio
+     * @param fine
+     * @return
+     * @throws DBConnectionException
+     * @throws BandoException
+     */
+    boolean inserisciIntervalloBando(String inizio, String fine) throws DBConnectionException,BandoException
     {
-        DomandaIscrizione domadandaDaModificare=new DomandaIscrizione();
-        domadandaDaModificare=dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getiD());
-        if(domadandaDaModificare==null)
-            throw new DBConnectionException("connessione fallita");
-        domadandaDaModificare.setPunteggio(punteggio);
-        return true;
-    }
-    
-    boolean inserisciIntervalloBando(String inizio, String fine) 
-    {
-        Bando bando=new Bando();
-        bando.setDataFine(fine);
-        bando.setDataInizio(inizio);
-        if(dbBando.inserisci(bando))
-            return true;
-        else 
-            return false;
-    }
-    
-    boolean modificaBando(Bando bando,String inizio, String fine) 
-    {
-
-        Bando bandoDaModificare=new Bando();
-        try {
-            bandoDaModificare=dbBando.cercaBandoPerId(bando.getiD());
-        } catch (SQLException e) 
+        //Come prima cosa, bisogna creare un'istanza di database e aprire una connessione
+        Database db = new Database();
+        if (!db.apriConnessione()) 
         {
-            throw new DBConnectionException("connessione fallita");
+            throw new DBConnectionException("Connessione Fallita");  
         }
-        if(bandoDaModificare==null)
-            throw new DBConnectionException("connessione fallita");
         
-        return false;
+        //Quindi, si possono creare tutti i gestori di tabelle necessari
+        try {
+            dbBando = new DBBando(db);
+            dbDomandaIscrizione = new DBDomandaIscrizione(db);
+            Bando bando=new Bando();
+            bando.setDataFine(fine);
+            bando.setDataInizio(inizio);
+            if(dbBando.inserisci(bando))
+                return true;
+            else 
+                return false;
+        } finally {
+            /*
+             * Alla fine dell'interazione, prima di uscire dal metodo,
+             * bisogna chiudere la connessione.
+             */
+            db.chiudiConnessione();
+        }
+    }
+    
+    /**
+     * modifica un bando
+     * @param bando
+     * @param inizio
+     * @param fine
+     * @return
+     * @throws DBConnectionException
+     * @throws BandoException
+     */
+    boolean modificaBando(Bando bando,String inizio, String fine) throws DBConnectionException,BandoException
+    {
+        Database db = new Database();
+        if (!db.apriConnessione()) 
+        {
+            throw new DBConnectionException("Connessione Fallita");  
+        }
+        
+        try 
+        {
+            Bando bandoDaModificare=new Bando();
+            try
+            {
+                bandoDaModificare=dbBando.cercaBandoPerId(bando.getiD());
+            }
+            catch (SQLException e) 
+            {
+                throw new DBConnectionException("connessione fallita");
+            }
+            if(bandoDaModificare==null)
+                throw new BandoException("bando non trovato");
+            return true;
+        } 
+        finally 
+        {
+            db.chiudiConnessione();
+        }
     }
     
     public static ControlGestioneBando getIstance() {
