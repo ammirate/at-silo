@@ -98,11 +98,7 @@ public class DBRispostaQuestionario extends DBBeans {
         return l;
     }
     
-    public void setRisposteQuestionario(List <RispostaQuestionario> l) {
-        int i=l.size();
-        while(i>=0)
-        inserisci(l.get(i));
-    }
+    
     
 public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{//per una specifica domanda restituisce tutte le risposte date a quella specifica domanda
         
