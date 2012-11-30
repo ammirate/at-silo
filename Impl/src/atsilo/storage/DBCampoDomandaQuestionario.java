@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -114,9 +115,9 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         res.put("tipo","tipo");
         res.put("descrizione","descrizione");
         res.put("valore","valore");
-        res.put("risposta_questionario","rispodstaQuestionario");
-        res.put("domanda_questionario","-domandaQuestionario");
-        res.put("risposta_questionario","-rispostaQuestionario");
+        res.put("risposta_questionario","rispostaQuestionario");
+        res.put("domanda_questionario","domandaQuestionario");
+        res.put("risposta_questionario","rispostaQuestionario");
         
         return Collections.unmodifiableMap(res);
     }
@@ -124,7 +125,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     
     private static List<String> creaChiave()
     {
-        List<String> res=  Arrays.asList("-domanda_questionario","-risposta_questionario");// da chiarire
+        List<String> res=  Arrays.asList("domanda_questionario","risposta_questionario");// da chiarire
         
         return Collections.unmodifiableList(res);
     }
@@ -137,12 +138,34 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     @Override
     protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
         CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
-        temp.setDomanda((DomandaQuestionario)res.getObject("domanda_questionario"));
-        temp.setRisposta((RispostaQuestionario)res.getObject("Risposta_questionario"));
+        temp.getDomanda().setId(res.getString("domanda_questionario"));
+        temp.getRisposta().setId(res.getString("risposta_questionario"));
         temp.setTipo(res.getString("tipo"));
         temp.setDescrizione(res.getString("descrizione"));
         temp.setValore(res.getString("valore"));
         return temp;
+    }
+    
+    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String idDomanda) throws SQLException{
+        
+        List<CampoDomandaQuestionario> l=null;
+        CampoDomandaQuestionario c=new CampoDomandaQuestionario();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+            tabella.setParam(stmt, 1, "id", idDomanda);
+            ResultSet res = stmt.executeQuery();
+            
+            while(res.next()){
+               c.getDomanda().setId(res.getString("domanda_questionario"));
+                c.getRisposta().setId(res.getString("risposta_questionario"));
+                c.setTipo(res.getString("tipo"));
+                c.setDescrizione(res.getString("descrizione"));
+                c.setValore(res.getString("valore"));   
+            l.add(c);
+            }
+        res.close();
+            return l;
     }
 
 }
