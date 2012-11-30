@@ -7,6 +7,7 @@ import atsilo.entity.Psicopedagogo;
 import atsilo.entity.Questionario;
 import atsilo.entity.RispostaQuestionario;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -83,6 +84,16 @@ public class DBRispostaQuestionario extends DBBeans {
         List<RispostaQuestionario> l =null;
         RispostaQuestionario r=null;
         
+
+       /* PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?");
+            tabella.setParam(stmt, 1, "genitore", g.getCodiceFiscale());
+            
+            
+            ResultSet res = stmt.executeQuery(); inserire anche la condizione sulla domanda...
+            poi sostituire questo codice alla riga di codice di sotto
+            */
+        
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE genitore =" + g.getCodiceFiscale() +"AND domanda=" +idDomanda);
        
         while (res.next()){
@@ -105,7 +116,11 @@ public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionari
     List<RispostaQuestionario> l=null;
     RispostaQuestionario r=null;
     
-    ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE domanda =" + d.getId());
+
+    PreparedStatement stmt = tabella.prepareStatement(
+            "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda = ?");
+        tabella.setParam(stmt, 1, "domanda", d.getId());
+        ResultSet res = stmt.executeQuery();
 
     while (res.next()){
         
