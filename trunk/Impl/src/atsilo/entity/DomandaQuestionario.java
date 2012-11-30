@@ -1,10 +1,16 @@
 package atsilo.entity;
 
+import java.util.List;
+
 public class DomandaQuestionario {
     
     private String id;
     private String descrizione;
+    private List<CampoDomandaQuestionario> campi;
+    private RispostaQuestionario risposta;
     
+
+
     /**
      * La variabile questionario avrà il valore della variabile di Questionario
      * La variabile questionario è nulla c'è bisogno di una lettura della classe questionario
@@ -59,20 +65,34 @@ public class DomandaQuestionario {
     }
 
     /**
-     * Metodo che setta il parametro letto dalla classe Questionario
-     * @param questionario è settato dopo la lettura
+     * @return risposta
      */
-    public void setQuestionario(Questionario questionario) {
-        this.questionario = questionario;
+    public RispostaQuestionario getRisposta() {
+        return risposta;
     }
 
     /**
-     * Metodo che prende il parametro letto dalla classe Questionario
-     * @return questionario parametro preso dalla lettura
+     * @param risposta nuovo risposta
      */
-    public Questionario getQuestionario() {
-        return questionario;
+    public void setRisposta(RispostaQuestionario risposta) {
+        this.risposta = risposta;
     }
+
+    /**
+     * @return campi
+     */
+    public List<CampoDomandaQuestionario> getCampi() {
+        return campi;
+    }
+
+    /**
+     * @param campi nuovo campi
+     */
+    public void setCampi(List<CampoDomandaQuestionario> campi) {
+        this.campi = campi;
+    }
+    
+    
 }
 
 

@@ -4,15 +4,7 @@ public class RispostaQuestionario {
     
     private String id;
     private String valore;
-    
-    /**
-     * La variabile questionario è nulla c'è bisogno di una lettura della classe Questionario
-     */
     private DomandaQuestionario domanda;
-    
-    /**
-     * La variabile genitore è nulla c'è bisogno di una lettura della classe Genitore
-     */
     private Genitore genitore;
     
     /**

@@ -13,6 +13,19 @@ public class Questionario {
     private Date periodo_inizio;
     private String pathname;
     private List<Genitore> listaGenitori;
+    private List<DomandaQuestionario> domande;
+    /**
+     * @return domande
+     */
+    public List<DomandaQuestionario> getDomande() {
+        return domande;
+    }
+    /**
+     * @param domande nuovo domande
+     */
+    public void setDomande(List<DomandaQuestionario> domande) {
+        this.domande = domande;
+    }
     /**
      * Costruttore vuoto
      */
@@ -27,9 +40,7 @@ public class Questionario {
      * @param periodo_inizio il paramentro è fissato
      * @param pathname il paramentro è fissato
      */
-    public Questionario( String descrizione,
-            String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine, List<Genitore> genitori,
-            String pathname) {
+    public Questionario( String descrizione,String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine, List<Genitore> genitori,String pathname) {
         super();
         this.periodo_fine = periodo_fine;
         this.descrizione = descrizione;
@@ -73,7 +84,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il campo periodo fine
+     * Metodo che restituisce il campo periodo fine
      * @return periodo_fine il parametro inserito
      */
     public Date getPeriodo_fine() {
@@ -89,7 +100,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il campo descrizione
+     * Metodo che restituisce il campo descrizione
      * @return descrizione il parametro inserito
      */
     public String getDescrizione() {
@@ -105,7 +116,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il campo flag rinuncia
+     * Metodo che restituisce il campo flag rinuncia
      * @return flag_rinuncia il parametro inserito
      */
     public String getFlag_rinuncia() {
@@ -121,7 +132,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il campo mome
+     * Metodo che restituisce il campo mome
      * @return nome il parametro inserito
      */
     public String getNome() {
@@ -137,7 +148,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il valore Id
+     * Metodo che restituisce il valore Id
      * @return id il parametro inserito
      */
     public int getId() {
@@ -153,7 +164,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il campo periodi inizio
+     * Metodo che restituisce il campo periodi inizio
      * @return periodo_inizio il parametro inserito
      */
     public Date getPeriodo_inizio() {
@@ -161,7 +172,7 @@ public class Questionario {
     }
 
     /**
-     * Metodo che setta il campo pathname
+     * Metodo che setta il campo pathname 
      * @param pathname il parametro fissato
      */
     public void setPathname(String pathname) {
@@ -169,10 +180,45 @@ public class Questionario {
     }
 
     /**
-     * Metodo che prende il campo pathname
+     * Metodo che restituisce il campo pathname
      * @return pathname il parametro inserito
      */
     public String getPathname() {
         return pathname;
     }
+    
+    
+    /**
+     * Metodo che restituisce true se il questionario è stato compilato da genitore
+     * altrimenti restituisce false
+     * @param genitore è il genitore da confrontare con la lista dei genitori
+     * 
+     */
+    public boolean isCompilatoDa(Genitore genitore){
+        for(Genitore g: listaGenitori)
+            if(genitore.getCodiceFiscale().equalsIgnoreCase(g.getCodiceFiscale()))
+                return true;
+        return false;
+    }
+    
+    
+    
+    /**
+     * Metodo che assegna ad ogni domanda del questionario la relativa risposta
+     * @param risposte e la lista di risposte
+     */
+    public void compila(List<RispostaQuestionario> risposte, Genitore chiCompila){
+        
+        for(DomandaQuestionario d : domande)
+            for(RispostaQuestionario r : risposte)
+                if(r.getDomanda().getId().equalsIgnoreCase(d.getId()) ){
+                    d.setRisposta(r);
+                    r.setGenitore(chiCompila);
+                }
+        this.listaGenitori.add(chiCompila);
+        
+    }
+    
+    
+    
 }
