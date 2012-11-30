@@ -21,20 +21,17 @@ include file="atsilo_files/sidebar_impiegato.jsp"
             <td class="tplTitolo"><form name="creazione_account" action="" method="post">
         <table class="tabelle_form">
           <tr> 
-        	<td>Username</td>
-       	 	<td><input name="username" type="text" id="username" maxlength="16" readonly="readonly"  /></td>
+        	<td colspan="2"><p>Selezionare il pdf del bando da caricare sul sito</p>
+        	  <p>&nbsp;</p></td>
+       	 	
           </tr>
           <tr> 
-        	<td>Password</td>
-       	 	<td><input name="password" type="text" id="password" maxlength="20"  /></td>
+        	<td colspan="2"><input name="password" type="file" id="password" maxlength="20"  /></td>
+       	 	
           </tr>
+         
           <tr> 
-        	<td>Indirizzo email</td>
-       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  />
-       	 	  *</td>
-          </tr>
-          <tr> 
-        	<td>&nbsp;</td>
+        	
        	 	<td>&nbsp;</td>
           </tr>
         	<td></td>

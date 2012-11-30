@@ -48,7 +48,9 @@ else if(nf.equals("insex_impiegato.jsp"))
 <tbody><tr>
 <td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="#">Home</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/index.html">Forum</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="ricerca_utente.html">Ricerca utente</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="ricerca_utente.jsp">Ricerca utente</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="faq.html">FAQ</a></td>
+<!--Cambia immagine da notifica_off a notifica_on a seconda di se ci sono o meno nuove comunicazioni da leggere -->
+<td align="center" height="0" nowrap="true" ><a href="comunicazioni.jsp"><img src="atsilo_images/notifica_off.gif" height="35"></a></td>
 </tr>
 </tbody></table>

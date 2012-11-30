@@ -10,7 +10,7 @@
 </tr>
 </tbody></table>
 <%@
-include file="atsilo_files/sidebar_impiegato.jsp"
+include file="atsilo_files/sidebar_direttore.jsp"
  %>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff"><table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
@@ -21,26 +21,36 @@ include file="atsilo_files/sidebar_impiegato.jsp"
             <td class="tplTitolo"><form name="creazione_account" action="" method="post">
         <table class="tabelle_form">
           <tr> 
-        	<td>Username</td>
+        	<td>Data inizio bando</td>
        	 	<td><input name="username" type="text" id="username" maxlength="16" readonly="readonly"  /></td>
           </tr>
           <tr> 
-        	<td>Password</td>
+        	<td>Data fine bando</td>
        	 	<td><input name="password" type="text" id="password" maxlength="20"  /></td>
           </tr>
           <tr> 
-        	<td>Indirizzo email</td>
-       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  />
-       	 	  *</td>
+           <tr> 
+        	<td>Data inizio presentazione rinuncia</td>
+       	 	<td><input name="username" type="text" id="username" maxlength="16" readonly="readonly"  /></td>
+          </tr>
+          <tr> 
+        	<td>Data fine presentazione rinuncia</td>
+       	 	<td><input name="password" type="text" id="password" maxlength="20"  /></td>
+          </tr>
+          <tr> 
+        	<td>Data fine rinuncia</td>
+       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  /></td>
+          </tr>
+          <tr> 
+        	<td>Posti disponibili</td>
+       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email" size="7" maxlength="4"  /></td>
           </tr>
           <tr> 
         	<td>&nbsp;</td>
        	 	<td>&nbsp;</td>
           </tr>
         	<td></td>
-       	 	<td><input type="submit" name="modifica" value="Modifica dati " />
-                <input type="reset" name="reset" value="Annulla" />
-            </td>
+       	 	<td><input type="submit" name="salva" value="Salva Dati" />       	 	  <input type="submit" name="modifica" value="Modifica dati " /></td>
           </tr>
           
          </table>
@@ -71,5 +81,11 @@ include file="atsilo_files/sidebar_impiegato.jsp"
 <%@
 include file="atsilo_files/footer.jsp"
  %>
+ 
+ 
+ 
+ 
+ 
+ 
 </body>
 </html>
