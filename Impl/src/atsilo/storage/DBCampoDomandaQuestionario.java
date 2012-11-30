@@ -51,7 +51,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     
     /**
      * cerca le domande questionario alle quali il campo appartiene
-     * @param c
+     * @param c 
      * @return lista di stringhe
      * @throws SQLException 
      */
@@ -77,7 +77,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      * cerca le risposte questionario alle quali il campo appartiene
      * @param c
      * @throws SQLException 
-     * @returnlista di stringhe
+     * @return lista di stringhe
      */
     public List<RispostaQuestionario> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
         
@@ -152,6 +152,12 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         return temp;
     }
     
+    /**
+     * Restituisce tutti i campi domanda di una determinata domanda questionario
+     * @param idDomanda id della domanda di cui restituire i campi domanda
+     * @return lista di campi domanda oppure null
+     * @throws SQLException
+     */
     public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String idDomanda) throws SQLException{
         
         List<CampoDomandaQuestionario> l=null;
