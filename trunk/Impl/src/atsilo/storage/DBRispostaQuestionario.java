@@ -18,6 +18,12 @@ import java.util.Map;
 
 public class DBRispostaQuestionario extends DBBeans {
     
+    /**
+     * Crea un gestore per il bean RispostaQuestionario
+     * @param nomeTabella nome reale della tabella nel database
+     * @param db database con relativa connessione
+     */
+    
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
@@ -66,23 +72,23 @@ public class DBRispostaQuestionario extends DBBeans {
     /**
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
-    @Override
+
+    
     protected RispostaQuestionario creaBean(ResultSet r) throws SQLException {
-        RispostaQuestionario ris = null;
+        RispostaQuestionario ris = new RispostaQuestionario();
         if(r.next())
         {
            ris.setId(r.getString("id"));
            ris.setValore(r.getString("valore"));
-           ris.setGenitore((Genitore) r.getObject("genitore"));
-           ris.setDomanda((DomandaQuestionario) r.getObject("domanda"));
-           
+           ris.getGenitore().setCodiceFiscale(r.getString("genitore"));
+           ris.getDomanda().setId(r.getString("domanda"));           
         }
         return ris;
     }
     
     public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =null;
-        RispostaQuestionario r=null;
+        RispostaQuestionario r=new RispostaQuestionario();
         
 
        /* PreparedStatement stmt = tabella.prepareStatement(
@@ -94,14 +100,15 @@ public class DBRispostaQuestionario extends DBBeans {
             poi sostituire questo codice alla riga di codice di sotto
             */
         
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE genitore =" + g.getCodiceFiscale() +"AND domanda=" +idDomanda);
+        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ 
+                "WHERE genitore =" + g.getCodiceFiscale() +"AND domanda=" +idDomanda);
        
         while (res.next()){
            
-            r.setGenitore((Genitore)res.getObject("genitore"));
             r.setId(res.getString("id"));
             r.setValore(res.getString("valore"));
-            r.setDomanda((DomandaQuestionario) res.getObject("domanda"));
+            r.getGenitore().setCodiceFiscale(res.getString("genitore"));
+            r.getDomanda().setId(res.getString("domanda"));
 
             l.add(r);
         }
@@ -114,7 +121,7 @@ public class DBRispostaQuestionario extends DBBeans {
 public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{//per una specifica domanda restituisce tutte le risposte date a quella specifica domanda
         
     List<RispostaQuestionario> l=null;
-    RispostaQuestionario r=null;
+    RispostaQuestionario r=new RispostaQuestionario();
     
 
     PreparedStatement stmt = tabella.prepareStatement(
@@ -124,10 +131,10 @@ public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionari
 
     while (res.next()){
         
-        r.setGenitore((Genitore)res.getObject("genitore"));
         r.setId(res.getString("id"));
         r.setValore(res.getString("valore"));
-        r.setDomanda((DomandaQuestionario) res.getObject("domanda"));
+        r.getGenitore().setCodiceFiscale(res.getString("genitore"));
+        r.getDomanda().setId(res.getString("domanda"));
 
         l.add(r);
     }
