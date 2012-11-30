@@ -86,6 +86,15 @@ public class DBRispostaQuestionario extends DBBeans {
         return ris;
     }
     
+
+    /**
+     * Restituisce la lista delle risposte data da un
+     * determinato genitore ad una determinata domanda di un questionario
+     * @param g genitore di cui vogliamo le risposte
+     * @param idDomanda id della domanda di cui vogliamo verificare le risposte
+     * @return lista di RisposteQuestionario o null
+     * @throws SQLException
+     */
     public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =null;
         RispostaQuestionario r=new RispostaQuestionario();
@@ -117,7 +126,13 @@ public class DBRispostaQuestionario extends DBBeans {
     }
     
     
-    
+    /**
+     * Restituisce la lista delle risposte date da tutti i genitori
+     * ad una specifica domanda di un questionario
+     * @param d domandaQuestionario di cui vogliamo le risposte
+     * @return lista di RisposteQuestionario o null
+     * @throws SQLException
+     */    
 public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{//per una specifica domanda restituisce tutte le risposte date a quella specifica domanda
         
     List<RispostaQuestionario> l=null;
