@@ -100,7 +100,11 @@ public class DBQuestionario extends DBBeans
         List <Questionario> l=null;
         Questionario q=new Questionario();
         
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE nome =" + n);
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+            tabella.setParam(stmt, 1, "nome", n);
+            ResultSet res = stmt.executeQuery();
+            
         while(res.next()){
             
             q.setDescrizione(res.getString("descrizione"));
