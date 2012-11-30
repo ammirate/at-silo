@@ -9,6 +9,7 @@ import atsilo.entity.Registro;
 
 import atsilo.entity.RispostaQuestionario;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DateFormat;
@@ -48,7 +49,7 @@ public class DBQuestionario extends DBBeans
     
     @Override
     protected Questionario creaBean(ResultSet r) throws SQLException {
-        Questionario q=null;
+        Questionario q=new Questionario();
         if (r.next()){
             q.setDescrizione(r.getString("descrizione"));
             q.setFlag_rinuncia(r.getString("flag_rinuncia"));
@@ -57,7 +58,6 @@ public class DBQuestionario extends DBBeans
             q.setPathname(r.getString("pathname"));
             q.setPeriodo_fine(r.getDate("periodo_fine"));
             q.setPeriodo_inizio(r.getDate("periodo_inizio"));   
-            q.setListaGenitori((List<Genitore>)r.getObject("lista_genitori"));
         }
         return q;
     }
@@ -76,7 +76,7 @@ public class DBQuestionario extends DBBeans
         res.put("nome", "nome");
         res.put("periodo_inizio", "periodo_inizio");
         res.put("periodo_fine", "periodo_fine");
-        res.put("listagenitori", "lista_genitori");
+
         return Collections.unmodifiableMap(res);
     }
     
@@ -98,7 +98,7 @@ public class DBQuestionario extends DBBeans
     
     public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
         List <Questionario> l=null;
-        Questionario q=null;
+        Questionario q=new Questionario();
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE nome =" + n);
         while(res.next()){
@@ -110,7 +110,6 @@ public class DBQuestionario extends DBBeans
             q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio")); 
-            q.setListaGenitori((List<Genitore>)res.getObject("lista_genitori"));
            
             l.add(q);
             res.close();
@@ -121,7 +120,7 @@ public class DBQuestionario extends DBBeans
     public List<Questionario> visualizzaQuestionariCompilabili() throws SQLException{
        
         List<Questionario> l=null;
-        Questionario q=null; 
+        Questionario q=new Questionario();; 
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ "WHERE NOW() BETWEEN periodo_inizio AND periodo_fine");
         
@@ -134,7 +133,6 @@ public class DBQuestionario extends DBBeans
             q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
-            q.setListaGenitori((List<Genitore>)res.getObject("lista_genitori"));
             l.add(q);
             
             }    
@@ -142,10 +140,28 @@ public class DBQuestionario extends DBBeans
         return l;
     }
         
-    /*public void aggiungiGenitoreInLista(Genitore g,String idQuestionario){
-        
-        
-    }*/
+     public Questionario getQuestionario(String idQuestionario) throws SQLException{
+         
+         Questionario q=new Questionario();
+         
+         PreparedStatement stmt = tabella.prepareStatement(
+                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+             tabella.setParam(stmt, 1, "id", idQuestionario);
+             ResultSet res = stmt.executeQuery();
+             
+             if(res.next()){
+                 q.setDescrizione(res.getString("descrizione"));
+                 q.setFlag_rinuncia(res.getString("flag_rinuncia"));
+                 q.setId(res.getInt("id"));
+                 q.setNome(res.getString("nome"));
+                 q.setPathname(res.getString("pathname"));
+                 q.setPeriodo_fine(res.getDate("periodo_fine"));
+                 q.setPeriodo_inizio(res.getDate("periodo_inizio"));   
+             }
+         res.close();
+             return q;
+
+     }
     
    
     
