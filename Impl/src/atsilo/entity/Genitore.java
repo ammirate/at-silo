@@ -84,4 +84,9 @@ public class Genitore extends Utente {
     public List<Questionario> getQuestionariCompilati() {
         return questionariCompilati;
     }
+    
+    
+    public void aggiungiQuestionarioCompilato(Questionario q){
+        questionariCompilati.add(q);
+    }
 }
