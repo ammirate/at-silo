@@ -5,10 +5,10 @@
 	HttpSession sessione = request.getSession();
 	String username=(String)sessione.getAttribute("username");
 	String tipologia=(String)sessione.getAttribute("tipologia_utente");
-	out.print(tipologia);
+	sessione.setAttribute("homepage", "index_impiegato.jsp");
 %>
 <%@
-	include file="atsilo_files/header_dinamico.jsp"
+	include file="atsilo_files/header.jsp"
 %>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>

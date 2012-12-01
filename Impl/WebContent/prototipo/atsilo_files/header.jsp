@@ -5,6 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <%
+String homepage=(String)sessione.getAttribute("homepage");
+out.print(homepage);
 String a = request.getRequestURI();
 String[] b = a.split("/");
 String nf = b[b.length-1];
@@ -108,7 +110,7 @@ else if (nf.equals("cancella_fascia_oraria.jsp"))
 </tbody></table>
 <table class="percorsopagina1" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="#">Home</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="<% out.print(homepage);%>">Home</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/index.html">Forum</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="ricerca_utente.jsp">Ricerca utente</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="faq.html">FAQ</a></td>
