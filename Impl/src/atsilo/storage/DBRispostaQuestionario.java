@@ -10,6 +10,7 @@ import atsilo.entity.RispostaQuestionario;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -100,17 +101,11 @@ public class DBRispostaQuestionario extends DBBeans {
         RispostaQuestionario r=new RispostaQuestionario();
         
 
-       /* PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?");
-            tabella.setParam(stmt, 1, "genitore", g.getCodiceFiscale());
-            
-            
-            ResultSet res = stmt.executeQuery(); inserire anche la condizione sulla domanda...
-            poi sostituire questo codice alla riga di codice di sotto
-            */
-        
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella()+ 
-                "WHERE genitore =" + g.getCodiceFiscale() +"AND domanda=" +idDomanda);
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
+                " WHERE genitore = ? AND domanda = ?");
+        tabella.setParam(stmt, 1,"genitore", g.getCodiceFiscale());
+        tabella.setParam(stmt, 2, "domanda", idDomanda);
+        ResultSet res = stmt.executeQuery();
        
         while (res.next()){
            
