@@ -23,7 +23,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     
     /**
      * Costruttore
-     * @param db
+     * @param db connesione al database
      */
     public DBCampoDomandaQuestionario(Database db){ super("CampoDomandaQuestionario",db);}
     
@@ -49,73 +49,30 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         return a;
     } 
     
-    /**
-     * cerca le domande questionario alle quali il campo appartiene
-     * @param c 
-     * @return lista di stringhe
-     * @throws SQLException 
-     */
-    public List<DomandaQuestionario> ricercaDomandaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException
-    {
-        
-        List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
-       
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda_questionario = ?");
-            tabella.setParam(stmt, 1, "domanda_questionario", c.getDomandaQuestionario().getId());
-            ResultSet res = stmt.executeQuery();
-        for(CampoDomandaQuestionario c1: iteraResultSet(res))
-        { DomandaQuestionario d=c1.getDomandaQuestionario();
-            a.add(d);
-        }
-   
-        
-        res.close();
-        return a;
-    }
-    /**
-     * cerca le risposte questionario alle quali il campo appartiene
-     * @param c
-     * @throws SQLException 
-     * @return lista di stringhe
-     */
-    public List<RispostaQuestionario> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
-        
-        List<RispostaQuestionario> a= new ArrayList<RispostaQuestionario> ();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE risposta_questionario = ?");
-            tabella.setParam(stmt, 1, "risposta_questionario", c.getRispostaQuestionario().getId());
-            ResultSet res = stmt.executeQuery();
-        for(CampoDomandaQuestionario c1: iteraResultSet(res))
-        {
-            RispostaQuestionario r= c1.getRispostaQuestionario();
-            a.add(r);
-        }
-        
-        res.close();
-        return a;
-    }
+    
 
 
-    /**
+    /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
-    @Override
     protected Map getMappingFields() {
         return MAPPINGS;
     }
 
 
-    /**
+    /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
-    @Override
     protected List getKeyFields() {
         return CHIAVE;
     }
-
-    private static Map<String,String> creaMapping()
-    {
+    /**
+     * metodo che associa all' attributo del database (nome attributo db) 
+     * il rispettivo valore(nome attributo classe)
+     * @return mappa <chiave,valore>
+     */
+    private static Map<String,String> creaMapping(){
+        
         Map<String,String> res= new HashMap<String,String>();
         res.put("domanda_questionario","domandaQuestionario");
         res.put("tipo","tipo");
@@ -128,9 +85,12 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         return Collections.unmodifiableMap(res);
     }
 
-    
-    private static List<String> creaChiave()
-    {
+    /**
+     * Metodo che crea la chiave
+     * @return lista string
+     */
+    private static List<String> creaChiave(){
+       
         List<String> res=  Arrays.asList("domanda_questionario","risposta_questionario");// da chiarire
         
         return Collections.unmodifiableList(res);
@@ -138,10 +98,9 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     
     
     
-    /**
+    /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
-    @Override
     protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
         CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
         temp.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
@@ -178,6 +137,51 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
             }
         res.close();
             return l;
+    }
+    
+    /**
+     * cerca le domande questionario alle quali il campo appartiene
+     * @param c campoDomandaQuestionario di cui ricercare le domanda di appartenenze
+     * @return lista di DomandeQuestionario o null
+     * @throws SQLException 
+     */
+    public List<DomandaQuestionario> ricercaDomandaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
+        
+        List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
+       
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda_questionario = ?");
+            tabella.setParam(stmt, 1, "domanda_questionario", c.getDomandaQuestionario().getId());
+            ResultSet res = stmt.executeQuery();
+        for(CampoDomandaQuestionario c1: iteraResultSet(res)){
+            DomandaQuestionario d=c1.getDomandaQuestionario();
+            a.add(d);
+        }
+   
+        
+        res.close();
+        return a;
+    }
+    /**
+     * cerca le risposte questionario alle quali il campo appartiene
+     * @param c campo domanda questionario di cui trovare le risposte questionario
+     * @throws SQLException 
+     * @return lista di risposte questionario o null
+     */
+    public List<RispostaQuestionario> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
+        
+        List<RispostaQuestionario> a= new ArrayList<RispostaQuestionario> ();
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE risposta_questionario = ?");
+            tabella.setParam(stmt, 1, "risposta_questionario", c.getRispostaQuestionario().getId());
+            ResultSet res = stmt.executeQuery();
+        for(CampoDomandaQuestionario c1: iteraResultSet(res)){
+            RispostaQuestionario r= c1.getRispostaQuestionario();
+            a.add(r);
+        }
+        
+        res.close();
+        return a;
     }
 
 }
