@@ -90,8 +90,8 @@ List<String> res=  Arrays.asList("genitore","questionario");
         }
         return c;
     }
-    public List<String> getCfGenitoriPerQuestionarioCompilato(int idQuestionario){}
-    public List<Integer>    getIdQuestionariCompilatiPerGenitore (String codiceFiscale){}
-    public boolean getHaCompilato(String cf,int idQuestionario){}
+    public List<String> getGenitoriPerQuestionarioCompilato(int idQuestionario){return null;}
+    public List<Integer> getQuestionariCompilatiPerGenitore (String codiceFiscale){return null;}
+    public boolean isCompilatoDa(int idQuestionario,String codicefiscale){return false;}
     
    }
