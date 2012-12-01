@@ -25,7 +25,7 @@ package atsilo.entity;
  */
 public class CompilaQuestionario implements Beans {
     
-    private int questionario ;
+    private int questionario;
     private String genitore;
     
     /**
