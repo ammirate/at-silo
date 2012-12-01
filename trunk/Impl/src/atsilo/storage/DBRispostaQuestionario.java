@@ -28,10 +28,15 @@ public class DBRispostaQuestionario extends DBBeans {
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
+    /**
+     * Costruttore con parametri
+     * @param db database con relativa connessione
+     */
     public DBRispostaQuestionario(Database db){ super("RispostaQuestionario",db);}
     
-        /**
-     * @return
+    /**
+     * Metodo che crea la chiave
+     * @return lista string
      */
     private static List<String> creaChiave() {
            
@@ -41,7 +46,9 @@ public class DBRispostaQuestionario extends DBBeans {
     }
 
     /**
-     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     * metodo che associa all' attributo del database (nome attributo db) 
+     * il rispettivo valore(nome attributo classe)
+     * @return mappa <chiave,valore>
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
@@ -54,27 +61,23 @@ public class DBRispostaQuestionario extends DBBeans {
     }
 
   
-    /**
+    /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
-    @Override
     protected Map getMappingFields() {
         return MAPPINGS;
     }
 
-    /**
+    /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
-    @Override
     protected List getKeyFields() {
         return CHIAVE;
     }
 
-    /**
+    /*(-nonJavadoc)
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
-
-    
     protected RispostaQuestionario creaBean(ResultSet r) throws SQLException {
         RispostaQuestionario ris = new RispostaQuestionario();
         if(r.next())

@@ -1,6 +1,5 @@
 package atsilo.storage;
 
-import atsilo.entity.Attivita;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Genitore;
 import atsilo.entity.ProgrammaEducativoSettimanale;
@@ -21,8 +20,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-public class DBQuestionario extends DBBeans
-{
+public class DBQuestionario extends DBBeans{
     /**
      * Crea un gestore per il bean Questionario
      * @param nomeTabella nome reale della tabella nel database
@@ -33,7 +31,10 @@ public class DBQuestionario extends DBBeans
     private static final List<String> CHIAVE=creaChiave(); 
     
     Tabella tabella;
-    
+    /**
+     * Costruttore con parametri
+     * @param db database con relativa connessione
+     */ 
     public DBQuestionario(Database db){super("Questionario",db);}
     
    
@@ -41,18 +42,17 @@ public class DBQuestionario extends DBBeans
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     @Override
-    protected Map getMappingFields() {return MAPPINGS;}
+    protected Map<String, String>  getMappingFields() {return MAPPINGS;}
 
     /* (non-Javadoc)
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
     @Override
-    protected List getKeyFields() {return CHIAVE;}
+    protected List<String> getKeyFields() {return CHIAVE;}
 
-    /**
+    /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
-    
     @Override
     protected Questionario creaBean(ResultSet r) throws SQLException {
         Questionario q=new Questionario();
@@ -69,9 +69,10 @@ public class DBQuestionario extends DBBeans
     }
    
     /**
-     * @return
+     * metodo che associa all' attributo del database (nome attributo db) 
+     * il rispettivo valore(nome attributo classe)
+     * @return mappa <chiave,valore>
      */
-    
     private static Map<String, String> creaMapping() {
      
         Map<String,String> res= new HashMap<String,String>();
@@ -90,34 +91,28 @@ public class DBQuestionario extends DBBeans
      * Metodo che crea una chiave
      * @return 
      */
-    private static List<String> creaChiave()
-    {
+    private static List<String> creaChiave() {
         List<String> res=  Arrays.asList("id");
         
         return Collections.unmodifiableList(res);
     }
-    
-    
-    
-    
-
+   
     /**
      * Ricerca nel database un questionario a 
      * seconda del nome fornito in input.
      * Il metodo provvede a caricare un istanza di una lista di Questionari 
-     * con il codice fiscale preimpostato.
      * @param n      Nome del questionario da ricercare
      * @return lista di questionario oppure Null
      * @throws SQLException
      */
-    public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
+  public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
         List <Questionario> l=null;
         Questionario q=new Questionario();
         
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-            tabella.setParam(stmt, 1, "nome", n);
-            ResultSet res = stmt.executeQuery();
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+        + tabella.getNomeTabella() + "WHERE id = ?");
+         tabella.setParam(stmt, 1, "nome", n);
+         ResultSet res = stmt.executeQuery();
             
         while(res.next()){
             
@@ -149,8 +144,8 @@ public class DBQuestionario extends DBBeans
         Questionario q=new Questionario();; 
         
         ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM "
-        + tabella.getNomeTabella()+ "WHERE NOW()" +
-        " BETWEEN periodo_inizio AND periodo_fine");
+        + tabella.getNomeTabella()+ "WHERE NOW()"
+        +" BETWEEN periodo_inizio AND periodo_fine");
         
             while(res.next()){
             

@@ -29,19 +29,26 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
-    
     /**
-     * 
-     * @return
+     * Costruttore
+     * @param db connessione al db
+     */
+    public DBDomandaQuestionario(Database db){super("DomandaQuestionario",db);}
+   
+    /**
+     * Metodo che crea la chiave
+     * @return lista string
      */
     private static List<String> creaChiave(){
         List<String> res=  Arrays.asList("id");// da chiarire
         
         return Collections.unmodifiableList(res);
     }
+   
     /**
-     * 
-     * @return
+     * metodo che associa all' attributo del database (nome attributo db) 
+     * il rispettivo valore(nome attributo classe)
+     * @return mappa <chiave,valore>
      */
     private static Map<String,String> creaMapping(){
         Map<String,String> res= new HashMap<String,String>();
@@ -49,43 +56,32 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         res.put("descrizione","descrizione");
         res.put("questionario","questionario");
        
-        
         return Collections.unmodifiableMap(res);
     }
     
-   
-    
-    /**
-     * 
-     * @param db
-     */
-    public DBDomandaQuestionario(Database db){super("DomandaQuestionario",db);}
-    
-
-        /**
+        /*(non-Javadoc)
          * @see atsilo.storage.DBBeans#getMappingFields()
          */
-        @Override
         protected Map getMappingFields() {
            return MAPPINGS;
         }
 
 
-        /**
+        /*(non-Javadoc)
          * @see atsilo.storage.DBBeans#getKeyFields()
          */
-        @Override
         protected List getKeyFields() {
            return CHIAVE;
         }
 
-
-        /**
+        /*
          * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
          */
         @Override
         
-        
+        /*(non-Javadoc)
+         * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+         */    
         protected DomandaQuestionario creaBean(ResultSet r) throws SQLException {
            DomandaQuestionario temp = new DomandaQuestionario();
             temp.setId(r.getString("id"));
