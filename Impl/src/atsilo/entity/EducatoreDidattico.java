@@ -1,5 +1,6 @@
 package atsilo.entity;
 
+import java.sql.Date;
 import java.util.List;
 
 public class EducatoreDidattico extends Utente implements EventPlanner{
@@ -21,8 +22,10 @@ public class EducatoreDidattico extends Utente implements EventPlanner{
      * @param titoloDiStudio il paramentro è fissato
      * @param classi è settato dopo la lettura
      */
-    public EducatoreDidattico(String titoloDiStudio, List<Classe> classi) {
-        super();
+    public EducatoreDidattico(Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String residenza, String titoloDiStudio, List<Classe> classi) {
+        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
         TitoloDiStudio = titoloDiStudio;
         this.classi = classi;
     }

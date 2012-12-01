@@ -35,7 +35,7 @@ public class StubGenitore
         g = new Genitore();
     }
         
-    public Genitore ricercaGenitore(Genitore g){
+    public Genitore ricercaGenitore(String cf){
         return g;
     }
     
