@@ -1,0 +1,519 @@
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: TestDBBeans.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * giulio, 01/dic/2012
+ * REVISION
+ * <nome revisore>, <data revisione>
+ *-----------------------------------------------------------------
+ */
+
+package test.storage;
+
+import static org.junit.Assert.*;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.BitSet;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+import atsilo.storage.DBBeans;
+import atsilo.storage.Database;
+
+/**
+ * Classe TestDBBeans
+ * <Descrizione classe>
+ * 
+ * @author giulio
+ * 
+ */
+public class TestDBBeans {
+    private static final Logger LOG
+            = Logger.getLogger(TestDBBeans.class.getName());
+    private Database db;
+    private DBMyUtente utenti;
+    private DBMyTrasmissione trasmissioni;
+    
+    /**
+     * @throws java.lang.Exception
+     */
+    @Before
+    public void setUp() throws Exception {
+        db = new Database();
+        if (!db.apriConnessione()) {
+            throw new RuntimeException("Connessione fallita");
+        }
+        DBUtil.execScript(db, "testDB.sql");
+        utenti = new DBMyUtente(db);
+        trasmissioni = new DBMyTrasmissione(db);
+    }
+    
+    /**
+     * @throws java.lang.Exception
+     */
+    @After
+    public void tearDown() throws Exception {
+        db.chiudiConnessione();
+        utenti = null;
+        trasmissioni = null;
+    }
+    
+    @Test
+    public void testInserisci() throws SQLException {
+        MyUtente md = new MyUtente("Mario", "Draghi", "DRGMRA");
+        assertTrue(utenti.inserisci(md));
+        for (MyUtente u : utenti) {
+            if (u.equals(md)) {
+                return;
+            }
+        }
+        fail("L'utente e' stato inserito, ma non e' presente nel DB");
+    }
+    
+    @Test
+    public void testUpdate() throws SQLException {
+        MyUtente md = new MyUtente(null, null, "TTRI");
+        MyUtente nu = new MyUtente("Tiberio", "Tombani", "TTNI");
+        assertTrue(utenti.replace(md, nu));
+        
+        for (MyUtente u : utenti) {
+            if (u.equals(md)) {
+                fail("L'utente non e' stato rimosso");
+            } else if (u.equals(nu)) {
+                return;
+            }
+        }
+        fail("Il nuovo utente non e' presente nel database");
+    }
+    
+    @Test
+    public void testDelete() throws SQLException {
+        MyUtente md = new MyUtente(null, null, "TTRI");
+        assertTrue(utenti.delete(md));
+        
+        for (MyUtente u : utenti) {
+            if (u.getCf().equals("TTRI")) {
+                fail("L'utente non e' stato realmente eliminato");
+            }
+        }
+    }
+    
+    /**
+     * Verifica che il contenuto del database coincida con quello indicato
+     * @param man       Manager della tabella
+     * @param content   Contenuto richiesto
+     */
+    public static <T> void assertContent(DBBeans<T> man, List<T> content) {
+        int verified = 0;
+        BitSet found = new BitSet(content.size());
+        
+        for (T elt : man.getAll()) {
+            for (int i = 0; i < content.size(); ++i) {
+                if (content.get(i).equals(elt)) {
+                    found.set(i);
+                    verified += 1;
+                    fail("L'elemento " + elt.toString()
+                            + " e' presente nel database,"
+                            + "ma non era richiesto");
+                }
+            }
+        }
+        
+        if (verified < content.size()) {
+            List<T> missing = new ArrayList<T>(content.size() - verified);
+            for (int i = 0; i < content.size(); ++i) {
+                if (!found.get(i)) {
+                    missing.add(content.get(i));
+                }
+            }
+            fail("I seguenti elementi non sono stati trovati: "
+                        + missing.toString());
+        }
+    }
+    
+    public static final class MyUtente {
+        private String nome;
+        private String cognome;
+        private String cf;
+        
+        
+        public MyUtente() {
+            
+        }
+        
+        /**
+         * @param nome
+         * @param cognome
+         * @param cf
+         */
+        public MyUtente(String nome, String cognome, String cf) {
+            super();
+            this.nome = nome;
+            this.cognome = cognome;
+            this.cf = cf;
+        }
+        
+        /**
+         * @return nome
+         */
+        public String getNome() {
+            return nome;
+        }
+        
+        /**
+         * @param nome
+         *            nuovo nome
+         */
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+        
+        /**
+         * @return cognome
+         */
+        public String getCognome() {
+            return cognome;
+        }
+        
+        /**
+         * @param cognome
+         *            nuovo cognome
+         */
+        public void setCognome(String cognome) {
+            this.cognome = cognome;
+        }
+        
+        /**
+         * @return cf
+         */
+        public String getCf() {
+            return cf;
+        }
+        
+        /**
+         * @param cf
+         *            nuovo cf
+         */
+        public void setCf(String cf) {
+            this.cf = cf;
+        }
+
+        /**
+         * @see java.lang.Object#hashCode()
+         */
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result + ((cf == null) ? 0 : cf.hashCode());
+            result = prime * result
+                    + ((cognome == null) ? 0 : cognome.hashCode());
+            result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+            return result;
+        }
+
+        /**
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj)
+                return true;
+            if (obj == null)
+                return false;
+            if (getClass() != obj.getClass())
+                return false;
+            MyUtente other = (MyUtente) obj;
+            if (cf == null) {
+                if (other.cf != null)
+                    return false;
+            } else if (!cf.equals(other.cf))
+                return false;
+            if (cognome == null) {
+                if (other.cognome != null)
+                    return false;
+            } else if (!cognome.equals(other.cognome))
+                return false;
+            if (nome == null) {
+                if (other.nome != null)
+                    return false;
+            } else if (!nome.equals(other.nome))
+                return false;
+            return true;
+        }
+    }
+    
+    public static final class MyTrasmissione {
+        private String nome;
+        private MyUtente utente;
+        
+        
+        public MyTrasmissione() {
+            
+        }
+        
+        /**
+         * @param nome
+         * @param utente
+         */
+        public MyTrasmissione(String nome, MyUtente utente) {
+            super();
+            this.nome = nome;
+            this.utente = utente;
+        }
+        
+        
+        /**
+         * @return nome
+         */
+        public String getNome() {
+            return nome;
+        }
+        
+        
+        /**
+         * @param nome
+         *            nuovo nome
+         */
+        public void setNome(String nome) {
+            this.nome = nome;
+        }
+        
+        
+        /**
+         * @return utente
+         */
+        public MyUtente getUtente() {
+            return utente;
+        }
+        
+        
+        /**
+         * @param utente
+         *            nuovo utente
+         */
+        public void setUtente(MyUtente utente) {
+            this.utente = utente;
+        }
+
+        /**
+         * @see java.lang.Object#hashCode()
+         */
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+            result = prime * result
+                    + ((utente == null) ? 0 : utente.hashCode());
+            return result;
+        }
+
+        /**
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj)
+                return true;
+            if (obj == null)
+                return false;
+            if (getClass() != obj.getClass())
+                return false;
+            MyTrasmissione other = (MyTrasmissione) obj;
+            if (nome == null) {
+                if (other.nome != null)
+                    return false;
+            } else if (!nome.equals(other.nome))
+                return false;
+            if (utente == null) {
+                if (other.utente != null)
+                    return false;
+            } else if (!utente.equals(other.utente))
+                return false;
+            return true;
+        }
+    }
+    
+    public static final class DBMyUtente extends DBBeans<MyUtente> {
+        private static Map<String, String> MAPPING = null;
+        private static List<String> KEY = null;
+        
+        
+        /**
+         * @param nomeTabella
+         * @param database
+         */
+        public DBMyUtente(Database database) {
+            super("Utente", database);
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#getMappingFields()
+         */
+        @Override
+        protected Map<String, String> getMappingFields() {
+            if (MAPPING == null) {
+                Map<String, String> res = new HashMap<String, String>();
+                res.put("nome", "Nome");
+                res.put("cognome", "Cognome");
+                res.put("cf", "CF");
+                
+                MAPPING = Collections.unmodifiableMap(res);
+            }
+            return MAPPING;
+        }
+        
+        /*
+         * (non-Javadoc)
+         * 
+         * @see atsilo.storage.DBBeans#getKeyFields()
+         */
+        @Override
+        protected List<String> getKeyFields() {
+            if (KEY == null) {
+                KEY = Collections.unmodifiableList(Arrays.asList("cf"));
+            }
+            return KEY;
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+         */
+        @Override
+        protected MyUtente creaBean(ResultSet r) throws SQLException {
+            MyUtente res = new MyUtente();
+            res.setCf(r.getString("CF"));
+            res.setNome(r.getString("Nome"));
+            res.setCognome(r.getString("Cognome"));
+            return res;
+        }
+        
+        public MyUtente getUtenteByTrasmissione(MyTrasmissione t) {
+            try {
+                PreparedStatement stmt = tabella
+                        .prepareStatement("SELECT * FROM Utente WHERE CF = ?");
+                
+                try {
+                    stmt.setString(1, t.getUtente().getCf());
+                    
+                    ResultSet rSet = stmt.executeQuery();
+                    try {
+                    if (rSet.next()) {
+                        t.setUtente(creaBean(rSet));
+                        return t.getUtente();
+                    } else {
+                        return null;
+                    }
+                    }finally{
+                        rSet.close();
+                    }
+                } finally {
+                    stmt.close();
+                }
+            } catch (SQLException e) {
+                LOG.log(Level.SEVERE, null, e);
+                return null;
+            }
+        }
+        
+        public List<MyUtente> getByCognome(String cognome) {
+            try {
+                PreparedStatement stmt = tabella
+                        .prepareStatement("SELECT * FROM Utente WHERE Cognome = ?");
+                
+                try {
+                    stmt.setString(1, cognome);
+                    return creaList(stmt.executeQuery());
+                } finally {
+                    stmt.close();
+                }
+            } catch (SQLException e) {
+                LOG.log(Level.SEVERE, null, e);
+                return null;
+            }
+        }
+    }
+    
+    public static final class DBMyTrasmissione extends DBBeans<MyTrasmissione> {
+        private static Map<String, String> MAPPING = null;
+        private static List<String> KEY = null;
+        
+        
+        /**
+         * @param nomeTabella
+         * @param database
+         */
+        public DBMyTrasmissione(Database database) {
+            super("Trasmissione", database);
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#getMappingFields()
+         */
+        @Override
+        protected Map<String, String> getMappingFields() {
+            if (MAPPING == null) {
+                Map<String, String> res = new HashMap<String, String>();
+                res.put("nome", "Nome");
+                
+                MAPPING = Collections.unmodifiableMap(res);
+            }
+            return MAPPING;
+        }
+        
+        /*
+         * (non-Javadoc)
+         * 
+         * @see atsilo.storage.DBBeans#getKeyFields()
+         */
+        @Override
+        protected List<String> getKeyFields() {
+            if (KEY == null) {
+                KEY = Collections.unmodifiableList(Arrays.asList("nome"));
+            }
+            return KEY;
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+         */
+        @Override
+        protected MyTrasmissione creaBean(ResultSet r) throws SQLException {
+            MyTrasmissione res = new MyTrasmissione();
+            res.setNome(r.getString("Nome"));
+            res.setUtente(new MyUtente());
+            res.getUtente().setCf(r.getString("Utente"));
+            return res;
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#creaAssegnazioni(java.lang.Object)
+         */
+        @Override
+        protected atsilo.storage.DBBeans.Assegnazione[] creaAssegnazioni(
+                MyTrasmissione bean) {
+            return Assegnazione.catena(
+                    "Utente", bean.getUtente().getCf());
+        }
+    }
+}
