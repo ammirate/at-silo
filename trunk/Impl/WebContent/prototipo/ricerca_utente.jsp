@@ -13,11 +13,28 @@
 include file=""
  %>
  --%>
-<%-- Include form ricerca a seconda del chiamante --%>
-<%@ 
+ 
+
+ <form>
+<table border="0" cellspacing="0">
+  <tr>
+    <td colspan="4">Selezionare la tipologia di utente da ricercare</td>
+  </tr>
+    <tr>
+    <td colspan="4">
+    				<select>
+    				  <option value="genitori">Genitori</option>
+    				  <option value="personale">Personale </option>
+                    </select>
+    </td>
+  </tr>
+</table>
+</form>
+<%-- Include form ricerca a seconda del chiamante e della scelta del personale da visualizzare 
+<-%@ 
 include file="atsilo_files/form_ricerca_personale.jsp" 
  %>
- 
+ --%>
 <%@
 include file="atsilo_files/footer.jsp"
  %>
