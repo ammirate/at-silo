@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.custom.Taxonomy_of_Actors</type>
+    <coordinates>
+      <x>0</x>
+      <y>0</y>
+      <w>730</w>
+      <h>810</h>
+    </coordinates>
+    <panel_attributes>Utente del sistema
+	Genitore
+	Personale gestione asilo
+		Personale amministrativo
+			Impiegato ufficio diritto allo studio
+			Impiegato asilo
+				Direttore
+		Personale formazione
+			Educatore Didattico
+			Psico-Pedagogo
+
+	Delegato del rettore
+		Delegato Questionari
+	Resp. Scientifico</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>580</x>
+      <y>380</y>
+      <w>100</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Event Planner</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>260</x>
+      <y>420</y>
+      <w>370</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;350;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>320</x>
+      <y>360</y>
+      <w>320</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;300;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>210</x>
+      <y>600</y>
+      <w>340</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;320;30;320;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>440</x>
+      <y>690</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Res. Programma Educativo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>190</x>
+      <y>720</y>
+      <w>330</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;310;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>540</y>
+      <w>270</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;250;30;250;150</additional_attributes>
+  </element>
+</diagram>
