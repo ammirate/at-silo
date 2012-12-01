@@ -117,6 +117,51 @@ public class TestDBBeans {
         }
     }
     
+    @Test
+    public void testGetByCognome() {
+        List<MyUtente> u = utenti.getByCognome("Timperi");
+        assertEquals(u, Arrays.asList(new MyUtente("Tiberio", "Timperi", "TTRI")));
+    }
+    
+    @Test
+    public void testInsertWForeign() {
+        MyTrasmissione t = new MyTrasmissione();
+        t.setNome("Il \"Lotto\" alle otto");
+        t.setUtente(new MyUtente(null, null, "TTRI"));
+        
+        assertTrue(trasmissioni.inserisci(t));
+        assertContent(trasmissioni, Arrays.asList(
+                new MyTrasmissione("Crack si gira", new MyUtente(null, null, "PPO")),
+                new MyTrasmissione("Il \"Lotto\" alle otto", new MyUtente(null, null, "TTRI"))));
+    }
+    
+    @Test
+    public void testReplaceWForeign() {
+        MyTrasmissione oldT = new MyTrasmissione();
+        oldT.setNome("Crack si gira");
+        oldT.setUtente(new MyUtente(null, null, "PPO"));
+        
+        MyTrasmissione newT = new MyTrasmissione();
+        newT.setNome("Crack si gira");
+        newT.setUtente(new MyUtente(null, null, "TTRI"));
+        
+        assertTrue(trasmissioni.replace(oldT, newT));
+        assertContent(trasmissioni, Arrays.asList(
+                new MyTrasmissione("Crack si gira", new MyUtente(null, null, "TTRI"))
+                ));
+    }
+    
+    @Test
+    public void testDeleteWForeign() {
+        MyTrasmissione t = new MyTrasmissione();
+        t.setNome("Crack si gira");
+        t.setUtente(new MyUtente(null, null, "PPO"));
+        
+        assertTrue(trasmissioni.delete(t));
+        List<MyTrasmissione> l = Arrays.asList();
+        assertContent(trasmissioni, l);
+    }
+    
     /**
      * Verifica che il contenuto del database coincida con quello indicato
      * @param man       Manager della tabella
@@ -125,22 +170,26 @@ public class TestDBBeans {
     public static <T> void assertContent(DBBeans<T> man, List<T> content) {
         int verified = 0;
         BitSet found = new BitSet(content.size());
+        int i;
         
         for (T elt : man.getAll()) {
-            for (int i = 0; i < content.size(); ++i) {
+            for (i = 0; i < content.size(); ++i) {
                 if (content.get(i).equals(elt)) {
                     found.set(i);
                     verified += 1;
-                    fail("L'elemento " + elt.toString()
-                            + " e' presente nel database,"
-                            + "ma non era richiesto");
+                    break;
                 }
+            }
+            if (i == content.size()) {
+                fail("L'elemento " + elt.toString()
+                        + " e' presente nel database,"
+                        + "ma non era richiesto");
             }
         }
         
         if (verified < content.size()) {
             List<T> missing = new ArrayList<T>(content.size() - verified);
-            for (int i = 0; i < content.size(); ++i) {
+            for (i = 0; i < content.size(); ++i) {
                 if (!found.get(i)) {
                     missing.add(content.get(i));
                 }
@@ -260,6 +309,15 @@ public class TestDBBeans {
                 return false;
             return true;
         }
+
+        /**
+         * @see java.lang.Object#toString()
+         */
+        @Override
+        public String toString() {
+            return "MyUtente [nome=" + nome + ", cognome=" + cognome + ", cf="
+                    + cf + "]";
+        }
     }
     
     public static final class MyTrasmissione {
@@ -351,6 +409,14 @@ public class TestDBBeans {
             } else if (!utente.equals(other.utente))
                 return false;
             return true;
+        }
+
+        /**
+         * @see java.lang.Object#toString()
+         */
+        @Override
+        public String toString() {
+            return "MyTrasmissione [nome=" + nome + ", utente=" + utente + "]";
         }
     }
     

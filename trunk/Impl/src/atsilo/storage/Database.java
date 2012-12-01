@@ -12,7 +12,7 @@
  * REVISION
  * nome revisore, data revisione
  *-----------------------------------------------------------------
- */ 
+ */
 
 package atsilo.storage;
 
@@ -59,24 +59,31 @@ public final class Database {
      * @return true in caso di connessione riuscita, false altrimenti.
      */
     public boolean apriConnessione() {
+        // Carica le proprieta'
+        Properties p = new Properties();
+        try {
+            p.load(Database.class.getResourceAsStream("db.properties"));
+        } catch (IOException e) {
+            LOG.log(Level.SEVERE,
+                    "Impossibile leggere le proprieta' del database", e);
+            return false;
+        }
+        return apriConnessione(p);
+    }
+    
+    /**
+     * Apre la connessione con il database
+     * @param prop proprieta' da usare per la connessione
+     * @return true in caso di connessione riuscita, false altrimenti.
+     */
+    public boolean apriConnessione(Properties prop) {
         try {
             Class.forName(DRIVER);
-            
-            // Carica le proprieta'
-            Properties p = new Properties();
-            try {
-                p.load(Database.class.getResourceAsStream("db.properties"));
-            } catch (IOException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE,
-                        "Impossibile leggere le proprieta' del database", e);
-                return false;
-            }
-            
+                        
             connection = DriverManager.getConnection(
-                    p.getProperty("atsilo.db.url"),
-                    p.getProperty("atsilo.db.user"),
-                    p.getProperty("atsilo.db.password"));
+                    prop.getProperty("atsilo.db.url"),
+                    prop.getProperty("atsilo.db.user"),
+                    prop.getProperty("atsilo.db.password"));
         } catch (SQLException e) {
             logSQLException(LOG, Level.SEVERE, e);
             return false;
@@ -91,9 +98,8 @@ public final class Database {
             // Vivremo anche senza conoscere i warning...
             logSQLException(LOG, Level.WARNING, e);
         }
-        return true;
+        return true;        
     }
-    
     
     /**
      * Chiude la connesione con il database
@@ -158,7 +164,7 @@ public final class Database {
      * @throws SQLException
      *             se si verifica un'eccezione nell'esecuzione.
      */
-    ResultSet directQuery(String query) throws SQLException {
+    public ResultSet directQuery(String query) throws SQLException {
         Statement stmt = connection.createStatement();
         return stmt.executeQuery(query);
     }
@@ -194,13 +200,15 @@ public final class Database {
      *            Eccezione da loggare
      */
     public static void logSQLException(Logger log, Level lv, SQLException e) {
-        log.log(lv, null, e);
-        while (e != null) {
-            log.log(lv,
-                    SQL_ERR_LOG,
-                    new Object[] { e.getSQLState(), e.getMessage(),
-                            e.getErrorCode() });
-            e = e.getNextException();
+        if (e != null) {
+            log.log(lv, null, e);
+            do {
+                log.log(lv,
+                        SQL_ERR_LOG,
+                        new Object[] { e.getSQLState(), e.getMessage(),
+                                e.getErrorCode() });
+                e = e.getNextException();
+            } while (e != null);
         }
     }
     
@@ -216,13 +224,15 @@ public final class Database {
      *            Warning da loggare
      */
     public static void logSQLWarning(Logger log, Level lv, SQLWarning e) {
-        log.log(lv, null, e);
-        while (e != null) {
-            log.log(lv,
-                    SQL_WARN_LOG,
-                    new Object[] { e.getSQLState(), e.getMessage(),
-                            e.getErrorCode() });
-            e = e.getNextWarning();
+        if (e != null) {
+            log.log(lv, null, e);
+            do {
+                log.log(lv,
+                        SQL_WARN_LOG,
+                        new Object[] { e.getSQLState(), e.getMessage(),
+                                e.getErrorCode() });
+                e = e.getNextWarning();
+            } while (e != null);
         }
     }
 }

@@ -12,7 +12,7 @@
  * REVISION
  * nome revisore, data revisione
  *-----------------------------------------------------------------
- */ 
+ */
 
 package atsilo.storage;
 
@@ -77,11 +77,10 @@ import atsilo.util.IterableOnlyOnce;
  * {@link #inserisciCon(Object, Assegnazione...) inserisciCon()} un set di
  * assegnazioni specifico. Questo e' utile, ad esempio, per mappare le chiavi
  * esterne.<br/>
- * Se i parametri extra vengono calcolati allo stesso modo
- * per tutti i metodi di modifica (come e' di solito),
- * e' anche possibile sovrascrivere
- * {@link #creaAssegnazioni(Object) creaAssegnazioni()}, che viene invocato
- * da tutti i metodi di modifica.<br/>
+ * Se i parametri extra vengono calcolati allo stesso modo per tutti i metodi di
+ * modifica (come e' di solito), e' anche possibile sovrascrivere
+ * {@link #creaAssegnazioni(Object) creaAssegnazioni()}, che viene invocato da
+ * tutti i metodi di modifica.<br/>
  * Si sconsiglia, invece, di estendere l'accessibilita' del metodo
  * {@link #inserisciCon(Object, Assegnazione...) inserisciCon()}
  * </p>
@@ -100,11 +99,10 @@ import atsilo.util.IterableOnlyOnce;
  * {@link #replaceCon(Object, Object, Assegnazione...) replaceCon()} un set di
  * assegnazioni specifico. Questo e' utile, ad esempio, per mappare le chiavi
  * esterne.<br/>
- * Se i parametri extra vengono calcolati allo stesso modo
- * per tutti i metodi di modifica (come e' di solito),
- * e' anche possibile sovrascrivere
- * {@link #creaAssegnazioni(Object) creaAssegnazioni()}, che viene invocato
- * da tutti i metodi di modifica.<br/>
+ * Se i parametri extra vengono calcolati allo stesso modo per tutti i metodi di
+ * modifica (come e' di solito), e' anche possibile sovrascrivere
+ * {@link #creaAssegnazioni(Object) creaAssegnazioni()}, che viene invocato da
+ * tutti i metodi di modifica.<br/>
  * Si sconsiglia, invece, di estendere l'accessibilita' del metodo
  * {@link #replaceCon(Object, Object, Assegnazione...) replaceCon()}
  * </p>
@@ -128,11 +126,12 @@ import atsilo.util.IterableOnlyOnce;
  * creaBean()} per trasformare ciascuna riga della tabella nel bean associato.
  * </p>
  * 
- * <p><h6>Altri metodi</h6>
- * Oltre a quelli precedentemente citati, la classe fornisce altri metodi
- * di utilita', che permettono, per esempio, di verificare la presenza di un bean
- * all'interno della tabella o creare un {@link Iterable}
- * o una {@link List} a partire da un {@link ResultSet}.
+ * <p>
+ * <h6>Altri metodi</h6>
+ * Oltre a quelli precedentemente citati, la classe fornisce altri metodi di
+ * utilita', che permettono, per esempio, di verificare la presenza di un bean
+ * all'interno della tabella o creare un {@link Iterable} o una {@link List} a
+ * partire da un {@link ResultSet}.
  * </p>
  * 
  * @author Angelo G. Scafuro
@@ -143,11 +142,9 @@ public abstract class DBBeans<B> implements Iterable<B> {
      * Array utilizzato da {@link #creaAssegnazioni(Object) creaAssegnazioni()}
      * per denotare la non-necessita' di effettuare assegnazioni extra.
      */
-    protected static final Assegnazione[] NESSUNA_ASSEGNAZIONE
-            = new Assegnazione[0];
+    protected static final Assegnazione[] NESSUNA_ASSEGNAZIONE = new Assegnazione[0];
     
-    private static final String MAYBE_CORRUPT
-            = "Il database potrebbe essere stato corrotto";
+    private static final String MAYBE_CORRUPT = "Il database potrebbe essere stato corrotto";
     private static final String AND = " AND ";
     private static final String WHERE = " WHERE ";
     private static final String COMMA = ", ";
@@ -167,6 +164,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
     private PreparedStatement removeStmt = null;
     private PreparedStatement selectStmt = null;
     private PreparedStatement checkStmt = null;
+    
     
     /**
      * Metodo costruttore
@@ -223,8 +221,8 @@ public abstract class DBBeans<B> implements Iterable<B> {
                         "Sembra che l'oggetto passato non sia un bean", e);
             }
             PropertyDescriptor[] campi = info.getPropertyDescriptors();
-            Map<String, PropertyDescriptor> res
-                    = new HashMap<String, PropertyDescriptor>(2 * campi.length);
+            Map<String, PropertyDescriptor> res = new HashMap<String, PropertyDescriptor>(
+                    2 * campi.length);
             
             for (PropertyDescriptor campo : campi) {
                 res.put(campo.getName(), campo);
@@ -379,7 +377,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
      * @return true in caso di inserimento riuscito false altrimenti
      */
     public boolean inserisci(B realBean) {
-        return inserisciCon(realBean);
+        return inserisciCon(realBean, creaAssegnazioni(realBean));
     }
     
     /**
@@ -444,6 +442,13 @@ public abstract class DBBeans<B> implements Iterable<B> {
                 i += 1;
             }
             
+            // Setta i parametri relativi alla chiave
+            for (String k : getKeyFields()) {
+                tabella.setParam(stmt, i, mapping.get(k),
+                        getFieldFromBean(realBean, k));
+                i += 1;
+            }
+            
             /*
              * Inserisci i parametri predefiniti passati in input In questo
              * modo, i valori di fixVals sostituiranno eventuali valori
@@ -452,13 +457,6 @@ public abstract class DBBeans<B> implements Iterable<B> {
             for (Assegnazione a : fixVals) {
                 i = meta.get(a.colonna);
                 tabella.setParam(stmt, i, a.colonna, a.valore);
-            }
-            
-            // Setta i parametri relativi alla chiave
-            for (String k : getKeyFields()) {
-                tabella.setParam(stmt, i, mapping.get(k),
-                        getFieldFromBean(realBean, k));
-                i += 1;
             }
             
             i = stmt.executeUpdate();
@@ -495,7 +493,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
      * @return esito dell'operazione
      */
     public boolean replace(B realBean, B newRealBean) {
-        return replaceCon(realBean, newRealBean);
+        return replaceCon(realBean, newRealBean, creaAssegnazioni(newRealBean));
     }
     
     /**
@@ -517,7 +515,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
             }
             query.setLength(query.length() - AND.length());
             
-            insertStmt = db.prepareStatement(query.toString());
+            removeStmt = db.prepareStatement(query.toString());
         }
         
         return removeStmt;
@@ -684,23 +682,23 @@ public abstract class DBBeans<B> implements Iterable<B> {
     }
     
     /**
-     * Controlla se un bean si trova nella tabella del database,
-     * utilizzando i valori forniti in input,
-     * oltre al mapping restituito da {@link #getMappingFields()}.
+     * Controlla se un bean si trova nella tabella del database, utilizzando i
+     * valori forniti in input, oltre al mapping restituito da
+     * {@link #getMappingFields()}.
      * 
      * @param bean
      *            bean da ricercare
      * @param fixVals
      *            valori predefiniti per le colonne
-     * @return True se il bean si trova nel database.
-     *          false altrimenti, o in caso di errore.
+     * @return True se il bean si trova nel database. false altrimenti, o in
+     *         caso di errore.
      */
     protected final boolean isInTableCon(B bean, Assegnazione... fixVals) {
         try {
             PreparedStatement stmt = getCheckStmt();
             Map<String, Integer> meta = getMetadati();
             Map<String, Object> vals = getFieldsFromBean(bean);
-
+            
             // Imposta valori mappati
             for (Map.Entry<String, Integer> ent : getMetadati().entrySet()) {
                 tabella.setParam(stmt, ent.getValue(), ent.getKey(),
@@ -728,8 +726,8 @@ public abstract class DBBeans<B> implements Iterable<B> {
      * 
      * @param bean
      *            bean da ricercare
-     * @return True se il bean si trova nel database.
-     *          false altrimenti, o in caso di errore.
+     * @return True se il bean si trova nel database. false altrimenti, o in
+     *         caso di errore.
      */
     public boolean isInTable(B bean) {
         return isInTableCon(bean, creaAssegnazioni(bean));
@@ -764,24 +762,25 @@ public abstract class DBBeans<B> implements Iterable<B> {
     protected abstract B creaBean(ResultSet r) throws SQLException;
     
     /**
-     * Metodo utilizzato dagli altri metodi di DBBeans
-     * per ricavare le assegnazioni predefinite relativamente
-     * a un bean.<br/>
-     * Nella sua implementazione predefinita, questo metodo
-     * restituisce sempre {@link #NESSUNA_ASSEGNAZIONE}.
-     * Le classi estendenti possono sovrascrivere questo metodo
-     * per indicare in modo comodo delle assegnazioni predefinite
+     * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
+     * assegnazioni predefinite relativamente a un bean.<br/>
+     * Nella sua implementazione predefinita, questo metodo restituisce sempre
+     * {@link #NESSUNA_ASSEGNAZIONE}. Le classi estendenti possono sovrascrivere
+     * questo metodo per indicare in modo comodo delle assegnazioni predefinite
      * per tutti i metodi di modifica della base di dati.
-     * @param bean Bean per cui valutare le assegnazioni 
+     * 
+     * @param bean
+     *            Bean per cui valutare le assegnazioni
      * @return Array di assegnazioni
      */
     protected Assegnazione[] creaAssegnazioni(B bean) {
         return NESSUNA_ASSEGNAZIONE;
     }
     
+    
     private final class RSWrapper implements Iterator<B> {
         private final ResultSet result;
-        
+        private B next;
         
         private RSWrapper(ResultSet result) {
             this.result = result;
@@ -789,15 +788,20 @@ public abstract class DBBeans<B> implements Iterable<B> {
         
         /**
          * @see java.util.Iterator#hasNext()
+         * @return true se e solo se next viene settato ad un valore non nullo
          */
         @Override
         public boolean hasNext() {
+            if (next != null) {
+                return true;
+            }
+            
             try {
-                if (result.isLast() || result.isAfterLast()) {
-                    result.close();
-                    return false;
-                } else {
+                if (result.next()) {
+                    next = creaBean(result);
                     return true;
+                } else {
+                    return false;
                 }
             } catch (SQLException e) {
                 Database.logSQLException(LOG, Level.SEVERE, e);
@@ -812,16 +816,14 @@ public abstract class DBBeans<B> implements Iterable<B> {
          */
         @Override
         public B next() {
-            try {
-                if (result.next()) {
-                    B res = creaBean(result);
-                    return res;
-                } else {
-                    throw new NoSuchElementException();
-                }
-            } catch (SQLException ex) {
-                Database.logSQLException(LOG, Level.SEVERE, ex);
-                throw new NoSuchElementException("An SQLException was thrown");
+            if (next != null) {
+                B res = next;
+                next = null;
+                return res;
+            } else if (hasNext()) {
+                return next();
+            } else {
+                throw new NoSuchElementException();
             }
         }
         
