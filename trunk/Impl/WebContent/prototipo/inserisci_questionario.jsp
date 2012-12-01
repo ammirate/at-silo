@@ -1,45 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Inserisci Questionario</title>
-<!-- Contents -->
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-	<meta http-equiv="Content-Language" content="it" />
-	<meta name="description" content="Sistema @silo per la gestione Asilo Nido Aziendale "Roberto Mazzetti - Università Degli Studi Di Salerno/>	
-    <meta name="keywords" content="@asilo atsilo at_silo università degli studi di salerno fisciano asilo nido aziendale" />
-<!-- imCustomHead -->
-	<meta http-equiv="Expires" content="0" />
-	<meta name="Resource-Type" content="document" />
-	<meta name="Distribution" content="global" />
-	<meta name="Robots" content="index, follow" />
-	<meta name="Revisit-After" content="21 days" />
-	<meta name="Rating" content="general" />
-	<!-- Others -->
-	<meta http-equiv="ImageToolbar" content="False" />
-	<meta name="MSSmartTagsPreventParsing" content="True" />
-	<link rel="Shortcut Icon" href="atsilo_files/favicon.ico" type="image/x-icon" />
-    <!-- Res -->
-	<link type="text/css" href="atsilo_files/template.css" rel="stylesheet">
-	<link type="text/css" href="atsilo_files/unisa.css" rel="stylesheet">
-	<link type="text/css" href="atsilo_files/personalizzazioni.css" rel="stylesheet"><!-- Stili personalizzati -->
-</head>
+<%@
+	include file="atsilo_files/header.jsp"
+%>
+<script type="text/javascript">
+<!--
+
+var arrInput = new Array(0);
+  var arrInputValue = new Array(0);
+v=1;
+function addInput(id) {
+  //arrInput.push(createInput(arrInput.length));
+  arrInput.push(arrInput.length);
+  //arrInputValue.push(arrInputValue.length);
+  display(id);
+}
+
+function display(id) {
+//  document.getElementById('parah').innerHTML="";
+ // for (intI=0;intI<arrInput.length;intI++) {
+    document.getElementById(id).innerHTML+="<tr><td> Opzione <td> <input type=text name=opzione"+v+"[]>";
+  //}
+}
+function addDomanda() {
+	  //arrInput.push(createInput(arrInput.length));
+	  arrInput.push(arrInput.length);
+	  //arrInputValue.push(arrInputValue.length);
+	  arrInputValue.push("");
+	  displayD(v);
+	  v++;
+	}
+
+	function displayD(v) {
+	//  document.getElementById('parah').innerHTML="";
+	 // for (intI=0;intI<arrInput.length;intI++) {
+		 var nome = "parah" + v;
+	    document.getElementById('domanda').innerHTML+="<br><br><fieldset><table id="+nome+"><tr><td><h3>Domanda: </h3><td><input type=text name='domanda"+v+"' size=80><tr><td> Opzione  <td> <input type=text name=opzione"+v+"[] ></table><br><br><input type=button value='Aggiungi Campo' onclick=\"addInput('"+nome+"');\"></fieldset>";
+	  //}
+	}
 
 
-<body>
-<table class="header" width="100%" cellspacing="0" cellpadding="0" border="0">
-<tbody><tr>
-<td align="left"><img src="atsilo_images/testata.jpg" align="middle" alt="" border="0"></td>
-</tr>
-</tbody></table>
-<table class="percorsopagina1" width="100%" cellspacing="0" cellpadding="0" border="0">
-<tbody><tr>
-<td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="index_delegato_rettore.html">Home</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/index.html">Forum</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/ricerca_utente.html">Ricerca utente</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="faq.html">FAQ</a></td>
-</tr>
-</tbody></table>
+// -->
+</script>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -112,7 +112,33 @@
 <tbody><tr>
 <td class="tplHeader">
 
-
+<h2 align=center >Inserisci nuovo Questionario</h2>
+<br><br>
+<form action="http://localhost:8080/Atsilo/servletControlQuestionario" method="POST">
+	<H2>Titolo Questionario:</H2> <input type=text name="titolo" size=100 style="height: 25px; font-size: 22px; font-family: Times; font-weight: bold;"><br><br><BR><BR>
+	Descrizione:<br>
+	<textarea rows="10" cols="80" name=descrizione></textarea><br><br>
+	<div id=domanda>
+	<fieldset>
+		<table id="parah">
+			<tr><td><h3>Domanda: </h3><td><input type=text name=domanda size=80>
+			<tr><td> Opzione  <td> <input type=text name=opzione1[] >
+		</table>
+		<br><br>
+		<Select name=tipo>
+		<option>Seleziona</option>
+		<option value=1>Selezione Multipla</option>
+		<option value=2>Selezione Unica</option>
+		<option value=3>Risposta Aperta</option>
+		</Select>
+	<input type=button value="Aggiungi Campo" onclick="display('parah');">
+		
+	</fieldset>
+	</div>
+	<br><br>
+	<input type=button value="Aggiungi Domanda" onclick="addDomanda()">
+	<center><input type=submit value="Crea Questionario"></center>
+</form>
 <p><strong><br />
 </strong></p>
 <p>&nbsp;</p></td>
@@ -147,7 +173,7 @@
 </td><td class="fasciadxvariabile"></td>
 </tr>
 <tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
+<td class="bottom" width="209">&nbsp;2012 � Unisa</td><td align="right" class="bottom"></td>
 </tr>
 </tbody></table>
 
