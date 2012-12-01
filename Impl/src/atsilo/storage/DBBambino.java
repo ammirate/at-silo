@@ -51,7 +51,8 @@ public class DBBambino extends DBBeans<Bambino> {
     
     
     /**
-     * metodo che asocia alla chiave(nome campo db) il rispettivo valore(nome attributo classe)
+     * metodo che asocia alla chiave(nome campo db)
+     *  il rispettivo valore(nome attributo classe)
      * @return
      */
     private static Map<String,String> creaMapping()
@@ -75,8 +76,7 @@ public class DBBambino extends DBBeans<Bambino> {
      * Metodo che crea la chiave
      * @return
      */
-    private static List<String> creaChiave()
-    {
+    private static List<String> creaChiave(){
         List<String> res=  Arrays.asList("codice_fiscale");
         
         return Collections.unmodifiableList(res);
