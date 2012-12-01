@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import atsilo.test.application.ControlLogin;
 
@@ -63,6 +64,11 @@ public class ServletControlLogin extends HttpServlet {
             
             if (login.getValoreLogin(username, password, tipologia)){
                 
+                //Setto le variabili di sessione
+                HttpSession sessione = request.getSession();
+                sessione.setAttribute("username", username);
+                sessione.setAttribute("tipologia_utente", tipologia);
+                //reindirizzo verso index della tipologia di utente
                 response.setHeader("Location", login_ok);    
             }
             
