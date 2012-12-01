@@ -10,6 +10,7 @@ import test.storage.StubDomandaQuestionario;
 import test.storage.StubQuestionario;
 import test.storage.StubRispostaQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
+import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Genitore;
 import atsilo.entity.Questionario;
@@ -17,6 +18,7 @@ import atsilo.entity.RispostaQuestionario;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
 import atsilo.storage.DBCampoDomandaQuestionario;
+import atsilo.storage.DBCompilaQuestionario;
 import atsilo.storage.DBDomandaQuestionario;
 import atsilo.storage.DBGenitore;
 import atsilo.storage.DBQuestionario;
@@ -227,6 +229,7 @@ public class ControlQuestionario {
         DBQuestionario storage = new DBQuestionario(db);
         DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
         DBGenitore storageGenitore = new DBGenitore(db);
+        DBCompilaQuestionario storageCompila = new DBCompilaQuestionario(db);
        
         
         if(!db.apriConnessione())
@@ -243,13 +246,18 @@ public class ControlQuestionario {
                     //aggiungere questionario a genitore
                     //aggiungere genitore a questionario
                     chiCompila.aggiungiQuestionarioCompilato(questionario);
+                    
+                    
+                    //
+                    //inserisce il questionario compilato nel database
+                    //
+                    CompilaQuestionario c = new CompilaQuestionario(idQuestionario, chiCompila.getCodiceFiscale());
+                    storageCompila.inserisci(c);
 
             } catch (SQLException e) {
                 
             }
-            //
-            //inserisce il questionario compilato nel database
-            //
+            
             
         }
         finally{
