@@ -1,12 +1,14 @@
-<%@
-	include file="atsilo_files/header_dinamico.jsp"
-%>
 <% 
 	//setto variabili di sessione
 	HttpSession sessione = request.getSession();
 	String username=(String)sessione.getAttribute("username");
 	String tipologia=(String)sessione.getAttribute("tipologia_utente");
+	
 %>
+<%@
+	include file="atsilo_files/header.jsp"
+%>
+
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
