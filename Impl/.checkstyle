@@ -8,5 +8,8 @@
     <file-match-pattern match-pattern=".java$" include-pattern="true"/>
   </fileset>
   <filter name="UnOpenedFiles" enabled="true"/>
+  <filter name="FilesFromPackage" enabled="true">
+    <filter-data value="src/test"/>
+  </filter>
   <filter name="FilesInSync" enabled="true"/>
 </fileset-config>
