@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<% 
+	//setto variabili di sessione
+	HttpSession sessione = request.getSession();
+	String username=(String)sessione.getAttribute("username");
+	String tipologia=(String)sessione.getAttribute("tipologia_utente");
+	out.print(tipologia);
+%>
 <%@
 	include file="atsilo_files/header_dinamico.jsp"
 %>

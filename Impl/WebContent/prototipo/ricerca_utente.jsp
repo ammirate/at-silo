@@ -1,6 +1,12 @@
 <%@
 	include file="atsilo_files/header_dinamico.jsp"
 %>
+<% 
+	//setto variabili di sessione
+	HttpSession sessione = request.getSession();
+	String username=(String)sessione.getAttribute("username");
+	String tipologia=(String)sessione.getAttribute("tipologia_utente");
+%>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -35,6 +41,9 @@ include file=""
 include file="atsilo_files/form_ricerca_personale.jsp" 
  %>
  --%>
+ <%@
+include file="atsilo_files/form_ricerca_genitore.jsp"
+ %>
 <%@
 include file="atsilo_files/footer.jsp"
  %>
