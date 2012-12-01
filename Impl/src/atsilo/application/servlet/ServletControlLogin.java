@@ -13,6 +13,10 @@ import atsilo.test.application.ControlLogin;
 
 /**
  * Servlet implementation class ServletControlLogin
+ * 
+ * @author Angelo G. Scafuro
+ * 
+ * @version 1.0
  */
 @WebServlet("/ServletControlLogin")
 public class ServletControlLogin extends HttpServlet {
@@ -43,7 +47,8 @@ public class ServletControlLogin extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    PrintWriter out = response.getWriter();
             String username= request.getParameter("username_login");
             String password= request.getParameter("pswd_login");
@@ -64,11 +69,6 @@ public class ServletControlLogin extends HttpServlet {
             else {  
                 response.setHeader("Location", login_error);   
             }
-
-                
-            
-                
-	   
 
 	}
 
