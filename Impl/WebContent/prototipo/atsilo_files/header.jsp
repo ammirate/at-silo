@@ -94,8 +94,9 @@ else if (nf.equals("cancella_fascia_oraria.jsp"))
     <!-- Res -->
 	<link type="text/css" href="atsilo_files/template.css" rel="stylesheet">
 	<link type="text/css" href="atsilo_files/unisa.css" rel="stylesheet">
-	<link type="text/css" href="atsilo_files/personalizzazioni.css" rel="stylesheet"><!-- Stili personalizzati -->
-	<script type="text/javascript" src="atsilo_files/calendar.js"></script>
+	<link type="text/css" href="atsilo_files/personalizzazioni.css" rel="stylesheet">
+	<link rel="stylesheet" href="atsilo_files/docs/styleditor.css" type="text/css">
+	
 </head>
 
 
