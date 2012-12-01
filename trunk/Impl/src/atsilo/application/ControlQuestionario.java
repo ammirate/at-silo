@@ -122,9 +122,9 @@ public class ControlQuestionario {
     
     
     /**
-     * Changes the quiestionnaire start date
+     * Changes the questionnaire start date
      * @param newData is the new start date
-     * @return true if the date was setted correctly, else false
+     * @return true if the date was set correctly, else false
      */
     public void spostaDataInizio(int idQuestionario, Date newData) throws DBConnectionException,
                                                                                QuestionarioException {
@@ -151,9 +151,9 @@ public class ControlQuestionario {
     
     
     /**
-     * Changes the quiestionnaire end date
+     * Changes the questionnaire end date
      * @param newData is the new end date
-     * @return true if the date was setted correctly, else false
+     * @return true if the date was set correctly, else false
      */
     public void spostaDataFine(int idQuestionario, Date newData) throws DBConnectionException,
                                                                            QuestionarioException {
@@ -184,7 +184,7 @@ public class ControlQuestionario {
     
     
     /**
-     * Search a questionnaie by name
+     * Search a questionnaire by name
      * @param nome is the questionnaire name
      * @return a questionnaire
      */
@@ -225,6 +225,8 @@ public class ControlQuestionario {
     public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila) throws DBConnectionException, QuestionarioException{
         Database db = new Database();    
         DBQuestionario storage = new DBQuestionario(db);
+        DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
+        DBGenitore storageGenitore = new DBGenitore(db);
        
         
         if(!db.apriConnessione())
@@ -238,6 +240,8 @@ public class ControlQuestionario {
                     Questionario questionario = storage.getQuestionario(idQuestionario);
                     questionario.compila(risposte, chiCompila);
                     storage.inserisci(questionario);   
+                    //aggiungere questionario a genitore
+                    //aggiungere genitore a questionario
                     chiCompila.aggiungiQuestionarioCompilato(questionario);
 
             } catch (SQLException e) {
@@ -257,7 +261,6 @@ public class ControlQuestionario {
     /**
      * Gets all the questionnaires not yet compiled by a 
      * parent from all questionnaires compilable
-     * 
      * @param genitore is the parent
      * @return a questionnaires list
      * @throws QuestionarioException 
@@ -292,6 +295,7 @@ public class ControlQuestionario {
     /**
      * This method has to be called when you want a full questionnaire
      * @param genitore is who has to fill the questionnaire
+     * @param genitore is the parent for whom the method loads the questionnaires
      * @return a full questionnaire with all questions and all question fields
      * @throws DBConnectionException
      * @throws SQLException 
@@ -319,6 +323,93 @@ public class ControlQuestionario {
             return toReturn;
             
         }
+        finally{
+            db.chiudiConnessione();
+        }
+    }
+    
+    
+    
+    /**
+     * Insert a new question in a questionnaire
+     * @param idQuestionario is the questionnaire identifier
+     * @param domanda is the question to add in the questionnaire
+     * @throws DBConnectionException
+     * @throws QuestionarioException
+     */
+    public void inserisciDomanda(int idQuestionario, DomandaQuestionario domanda) throws DBConnectionException, QuestionarioException{
+        Database db = new Database();
+        DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
+
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            if(!storageDomanda.inserisci(domanda))
+                throw new QuestionarioException("Errore inserimento domanda in questionario");
+        } 
+        finally{
+            db.chiudiConnessione();
+        }
+    }
+    
+    
+    
+    
+    
+    /**
+     * Delete a question from a questionnaire
+     * @param idDomanda is the question identifier
+     * @throws DBConnectionException
+     * @throws QuestionarioException
+     */
+    public void eliminaDomanda(String idDomanda) throws DBConnectionException, QuestionarioException{
+        Database db = new Database();
+        DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
+
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            try {
+                storageDomanda.delete(storageDomanda.getDomanda(idDomanda));
+            } catch (SQLException e) {
+                throw new QuestionarioException("Impossibile rimuovere la domanda");
+            }
+        } 
+        finally{
+            db.chiudiConnessione();
+        }
+    
+    }
+    
+    
+    
+    
+    /**
+     * Replace an old question with a new one
+     * @param idVecchiaDomanda is the old question identifier
+     * @param newDomanda is the new question 
+     * @throws DBConnectionException
+     * @throws QuestionarioException
+     */
+    public void modificaDomanda(String idVecchiaDomanda, DomandaQuestionario newDomanda) throws DBConnectionException, QuestionarioException{
+        Database db = new Database();
+        DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
+
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            try {
+                if(!idVecchiaDomanda.equalsIgnoreCase(newDomanda.getId()) )
+                    throw new SQLException();
+                storageDomanda.replace(storageDomanda.getDomanda(idVecchiaDomanda), newDomanda);
+                
+            } catch (SQLException e) {
+                throw new QuestionarioException("Impossibile rimuovere la domanda");
+            }
+        } 
         finally{
             db.chiudiConnessione();
         }
