@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@
-	include file="atsilo_files/header_dinamico.jsp"
+	include file="atsilo_files/header.jsp"
 %>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>

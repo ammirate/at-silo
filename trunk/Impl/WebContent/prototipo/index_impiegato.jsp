@@ -1,11 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <% 
-	//setto variabili di sessione
-	HttpSession sessione = request.getSession();
-	String username=(String)sessione.getAttribute("username");
-	String tipologia=(String)sessione.getAttribute("tipologia_utente");
-	sessione.setAttribute("homepage", "index_impiegato.jsp");
+	
 %>
 <%@
 	include file="atsilo_files/header.jsp"
@@ -67,10 +63,9 @@ include file="atsilo_files/sidebar_direttore.jsp"
 </tbody></table>
 </td><td class="fasciadxvariabile"></td>
 </tr>
-<tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
-</tr>
-</tbody></table>
+<%@
+include file="atsilo_files/footer.jsp"
+ %>
 
 
 </body>
