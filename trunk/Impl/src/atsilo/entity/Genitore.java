@@ -1,5 +1,6 @@
 package atsilo.entity;
 
+import java.sql.Date;
 import java.util.List;
 
 public class Genitore extends Utente {
@@ -27,9 +28,11 @@ public class Genitore extends Utente {
      * @param figli è settato dopo la lettura
      * @param questionariCompilati è settato dopo la lettura
      */
-    public Genitore(String tipo, List<Bambino> figli,
+    public Genitore(Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String residenza, String tipo, List<Bambino> figli,
             List<Questionario> questionariCompilati) {
-        super();
+        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
         this.tipo = tipo;
         this.figli = figli;
         this.questionariCompilati = questionariCompilati;

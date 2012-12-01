@@ -1,5 +1,7 @@
 package atsilo.entity;
 
+import java.sql.Date;
+
 public class PersonaleAsilo extends Utente implements EventPlanner{
     
     private String categoriaAppartenenza;
@@ -12,8 +14,10 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
     /**
      * @param categoriaAppartenenza è settato dopo la lettura 
      */
-    public PersonaleAsilo(String categoriaAppartenenza) {
-        super();
+    public PersonaleAsilo(Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String residenza, String categoriaAppartenenza) {
+        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
         this.categoriaAppartenenza = categoriaAppartenenza;
     }
 

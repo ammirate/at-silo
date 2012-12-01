@@ -1,5 +1,7 @@
 package atsilo.entity;
 
+import java.sql.Date;
+
 public class Tirocinante extends Utente{
     
     //nome,cognome,codice_fiscale,telefono,email,d
@@ -25,9 +27,11 @@ public class Tirocinante extends Utente{
      * @param oreLavoro il paramentro è fissato
      * @param personaleAsilo è settato dopo la lettura 
      */
-    public Tirocinante(int oreTotali, int oreLavoro,
+    public Tirocinante(Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String residenza, int oreTotali, int oreLavoro,
             PersonaleAsilo personaleAsilo) {
-        super();
+        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
         this.oreTotali = oreTotali;
         this.oreLavoro = oreLavoro;
         this.personaleAsilo = personaleAsilo;

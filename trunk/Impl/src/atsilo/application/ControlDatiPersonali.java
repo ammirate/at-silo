@@ -1,10 +1,14 @@
 package atsilo.application;
 
 
+import java.sql.Date;
+import java.sql.SQLException;
+import java.util.List;
+
 import test.storage.*;
 import atsilo.entity.*;
 import atsilo.exception.*;
-import atsilo.storage.Database;
+import atsilo.storage.*;
 
 /*
  *-----------------------------------------------------------------
@@ -28,14 +32,29 @@ public class ControlDatiPersonali {
     ControlDatiPersonali() {
     }
 
+
     /**
-     * TODO
+     * Prende lo stato di un'iscrizione
+     * @param domanda di iscrizione da eliminare
+     * @return domanda di iscrizione
+     * @throws DBConnectionException 
+     * @throws DomandaIscrizioneException
      */
-    String getValoreStatoIscrizione(Bambino bambino) {
-        /**
-         * Non è ancora possibile implementare questo metodo in quanto mancano alcuni attributi nell'entità bando
-         */
-        return null;
+    String getValoreStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+        Database db = new Database();
+        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            String stato = stub.verificaStato(id);
+            if(stato.equals(""))
+                throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
+            return stato;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
     }
 
     
@@ -45,16 +64,17 @@ public class ControlDatiPersonali {
      * @return genitore
      * @throws DBConnectionException 
      * @throws GenitoreException
+     * @throws SQLException 
      */
-    Genitore getDatiGenitore(Genitore genitore) throws GenitoreException, DBConnectionException{
+    Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubGenitore stub = new StubGenitore(db);
+        DBGenitore genitore = new DBGenitore(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            Genitore g = stub.ricercaGenitore(genitore);
+            Genitore g = genitore.ricercaGenitoreCf(codiceFiscale);
             if(g == null)
                 throw new GenitoreException("Genitore non trovato");
             return g;
@@ -71,16 +91,16 @@ public class ControlDatiPersonali {
      * @return bambino
      * @throws DBConnectionException 
      * @throws BambinoException
+     * @throws SQLException 
      */
-    Bambino getDatiBambino(Bambino bambino) throws BambinoException, DBConnectionException{
+    Bambino getDatiBambino(String codiceFiscale) throws BambinoException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubBambino stub = new StubBambino(db);
+        DBBambino bambino = new DBBambino(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            
-            Bambino b = stub.ricercaBambino(bambino);
+            Bambino b = bambino.ricercaBambinoPerCodFiscale(codiceFiscale);
             if(b == null)
                 throw new BambinoException("Bambino non trovato");
             return b;
@@ -98,15 +118,16 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    public void inserisciDomandaIscrizione(DomandaIscrizione domandaIscrizione) throws DomandaIscrizioneException, DBConnectionException{
+    //ATTENDO di sapere queli parametri mi verranno passati
+    public void inserisciDomandaIscrizione() throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
-        
+        DomandaIscrizione domandaIscrizione = new DomandaIscrizione();
+        DBDomandaIscrizione di = new DBDomandaIscrizione(db);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            if(!stub.inserisciDomandaIscizione(domandaIscrizione))
+            if(!di.inserisci(domandaIscrizione))
                 throw new DomandaIscrizioneException("Inserimento fallito");
         }
         finally{
@@ -121,18 +142,22 @@ public class ControlDatiPersonali {
      * @return domanda di iscrizione
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
+     * @throws SQLException 
      */
-    public DomandaIscrizione eliminaDomandaIscrizione(DomandaIscrizione domandaIscrizione) throws DomandaIscrizioneException, DBConnectionException{
+    public DomandaIscrizione eliminaDomandaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
-        
+        DBDomandaIscrizione di = new DBDomandaIscrizione(db);
+       
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            DomandaIscrizione toReturn = stub.rimuoviDomandaIscizione(domandaIscrizione);
-            if(toReturn==null)
+            DomandaIscrizione domandaIscrizione = di.ricercaDomandaDaId(id);
+            if(domandaIscrizione == null)
                 throw new DomandaIscrizioneException("Domanda di iscrizione inesistente");
-            return toReturn;
+            Boolean toReturn = di.delete(domandaIscrizione);
+            if(!toReturn)
+                throw new DomandaIscrizioneException("Cancellazione domanda di iscrizione fallita");
+            return domandaIscrizione;
         }
         finally{
             db.chiudiConnessione();
@@ -146,25 +171,29 @@ public class ControlDatiPersonali {
      * @return bambino
      * @throws DBConnectionException 
      * @throws BambinoException
+     * @throws SQLException 
      */
-    public Bambino eliminaIscritto(Bambino bambino) throws BambinoException, DBConnectionException{
+    public Bambino eliminaIscritto(String cf) throws BambinoException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubBambino stub = new StubBambino(db);
+        DBBambino b = new DBBambino(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            Bambino toReturn = stub.rimuoviIscritto(bambino);
-            if(toReturn==null)
-                throw new BambinoException("Iscritto inesistente");
-            return toReturn;
+            Bambino bambino = b.ricercaBambinoPerCodFiscale(cf);
+            if(bambino == null)
+                throw new BambinoException("Bambino inesistente");
+            Boolean toReturn = b.delete(bambino);
+            if(!toReturn)
+                throw new BambinoException("Cancellazione bambino fallita");
+            return bambino;
         }
         finally{
             db.chiudiConnessione();
         } 
     }
     
-    
+ 
     /**
      * Inserisce genitore
      * @param genitore da inserire
@@ -172,15 +201,20 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws GenitoreException
      */
-    public void inserisciGenitore(Genitore genitore) throws GenitoreException, DBConnectionException{
+    public void inserisciGenitore(Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String residenza, String tipo, List<Bambino> figli,
+            List<Questionario> questionariCompilati) throws GenitoreException, DBConnectionException{
         Database db = new Database();
-        StubGenitore stub = new StubGenitore(db);
+        DBGenitore g = new DBGenitore(db);
+        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
+                telefono, residenza, tipo, figli, questionariCompilati);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            if(!stub.inserisciGenitore(genitore))
+            if(!g.inserisci(genitore))
                 throw new GenitoreException("Inserimento fallito");
         }
         finally{
@@ -201,7 +235,7 @@ public class ControlDatiPersonali {
         Database db = new Database();
         StubUtente stub = new StubUtente(db);
         
-        if(db.apriConnessione())
+        if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             

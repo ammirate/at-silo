@@ -21,5 +21,9 @@ public class StubDomandaIscrizione
     public DomandaIscrizione rimuoviDomandaIscizione(DomandaIscrizione di){
         return di;
     }
+    
+    public String verificaStato(int id){
+        return "idoneo";
+    }
 
 }

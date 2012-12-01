@@ -1,5 +1,7 @@
 package atsilo.entity;
 
+import java.sql.Date;
+
 public class Psicopedagogo extends Utente implements EventPlanner{
     
     private int numeroClassi;
@@ -13,8 +15,10 @@ public class Psicopedagogo extends Utente implements EventPlanner{
     /**
      * @param numeroClassi il paramentro è fissato
      */
-    public Psicopedagogo(int numeroClassi) {
-        super();
+    public Psicopedagogo(Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String residenza, int numeroClassi) {
+        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
         this.numeroClassi = numeroClassi;
     }
 
