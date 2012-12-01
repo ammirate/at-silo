@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-05T15:05:21</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-08T08:47:33.35</dc:date><meta:editing-duration>PT55M37S</meta:editing-duration><meta:editing-cycles>18</meta:editing-cycles><meta:document-statistic meta:table-count="12" meta:image-count="0" meta:object-count="0" meta:page-count="5" meta:paragraph-count="232" meta:word-count="454" meta:character-count="5643" meta:non-whitespace-character-count="5420"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-05T15:05:21</meta:creation-date><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-01T08:39:18.50</dc:date><meta:editing-duration>PT1H15M55S</meta:editing-duration><meta:editing-cycles>20</meta:editing-cycles><meta:document-statistic meta:table-count="12" meta:image-count="0" meta:object-count="0" meta:page-count="5" meta:paragraph-count="237" meta:word-count="468" meta:character-count="5711" meta:non-whitespace-character-count="5476"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">86148</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">1058</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">33339</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">14422</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">28550</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">14448</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">22304</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">96793</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">22530</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">53723</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">86148</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">33338</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">100568</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">1058</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">28549</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">15505</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1212092</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1329424</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -737,36 +737,44 @@
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
   </style:style>
   <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:paragraph-rsid="00127ebc"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="14pt" fo:font-weight="bold" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:paragraph-properties fo:margin-top="0.64cm" fo:margin-bottom="0.21cm" style:contextual-spacing="false" fo:line-height="150%"/>
    <style:text-properties fo:font-size="16pt" style:font-size-asian="16pt" style:font-size-complex="16pt"/>
   </style:style>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Spacer" style:master-page-name="">
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Spacer" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto" fo:break-before="auto" fo:break-after="auto"/>
   </style:style>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties fo:font-size="12pt" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:paragraph-rsid="00144910"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
-   <style:text-properties officeooo:paragraph-rsid="00127ebc"/>
+   <style:text-properties officeooo:rsid="00127ebc" officeooo:paragraph-rsid="00127ebc"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+  </style:style>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="true"/>
+   <style:text-properties officeooo:paragraph-rsid="00144910"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties fo:font-size="12pt" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
@@ -776,6 +784,9 @@
   </style:style>
   <style:style style:name="T3" style:family="text">
    <style:text-properties officeooo:rsid="00127ebc"/>
+  </style:style>
+  <style:style style:name="T4" style:family="text">
+   <style:text-properties officeooo:rsid="00144910"/>
   </style:style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
@@ -797,10 +808,10 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
    <text:h text:style-name="Heading_20_3" text:outline-level="3">Sicurezza e controllo degli accessi</text:h>
-   <text:p text:style-name="P7">Il sistema “At-silo” prevede un&apos;autenticazione che sia stata confermata attraverso la mail ricevuta quando si è fatta la registrazione al sistema.</text:p>
-   <text:p text:style-name="P7">L&apos;autenticazione avviene attraverso l&apos;inserimento, da parte dell&apos;utente all&apos;interno di una apposita interfaccia di login, di un username e di una password. La verifica della correttezza delle credenziali inserite è verificata attraverso una query al database contenente la lista degli utenti registrati al sistema, dei loro username e della loro password finalizzata a garantire la sicurezza del sistema.</text:p>
-   <text:p text:style-name="P7">La suddetta interfaccia di login è costituita da un campo di testo per l&apos;username, un campo di testo per la password e un bottone di login [si fa riferimento allo use-case del login].</text:p>
-   <text:p text:style-name="P7">Ogni utente può appartenere solo ad uno dei gruppi elencati, ed a seconda del gruppo di appartenenza il sistema provvede a fornirgli gli strumenti adeguati, impedendo che possa eseguire operazioni non appartenenti al suo livello utente.</text:p>
+   <text:p text:style-name="P8">Il sistema “At-silo” prevede un&apos;autenticazione che sia stata confermata attraverso la mail ricevuta quando si è fatta la registrazione al sistema.</text:p>
+   <text:p text:style-name="P8">L&apos;autenticazione avviene attraverso l&apos;inserimento, da parte dell&apos;utente all&apos;interno di una apposita interfaccia di login, di un username e di una password. La verifica della correttezza delle credenziali inserite è verificata attraverso una query al database contenente la lista degli utenti registrati al sistema, dei loro username e della loro password finalizzata a garantire la sicurezza del sistema.</text:p>
+   <text:p text:style-name="P8">La suddetta interfaccia di login è costituita da un campo di testo per l&apos;username, un campo di testo per la password e un bottone di login [si fa riferimento allo use-case del login].</text:p>
+   <text:p text:style-name="P8">Ogni utente può appartenere solo ad uno dei gruppi elencati, ed a seconda del gruppo di appartenenza il sistema provvede a fornirgli gli strumenti adeguati, impedendo che possa eseguire operazioni non appartenenti al suo livello utente.</text:p>
    <text:p text:style-name="Text_20_body"><text:span text:style-name="T1">Le politiche di accesso vengono riportate di seguito con lo scopo di rendere chiare le operazioni consentite ad ogni livello utente.</text:span> </text:p>
    <table:table table:name="Tabella1" table:style-name="Tabella1">
     <table:table-column table:style-name="Tabella1.A"/>
@@ -808,13 +819,13 @@
     <table:table-column table:style-name="Tabella1.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P4">Iscrizione</text:p>
+      <text:p text:style-name="P5">Iscrizione</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C1" office:value-type="string">
-      <text:p text:style-name="P4">Bando</text:p>
+      <text:p text:style-name="P5">Bando</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -834,18 +845,14 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P2">Personale amministrativo</text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">Impiegato dell&apos;asilo</text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
       <text:p text:style-name="P2"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P2">InserisciBando()</text:p>
-      <text:p text:style-name="P2">InserisciSpecificheGraduatoria()</text:p>
-      <text:p text:style-name="P2">ModificaSpecificheGraduatoria()</text:p>
-      <text:p text:style-name="P1">PubblicaGraduatoria()</text:p>
-      <text:p text:style-name="P2">VisualizzaGraduatoria()</text:p>
       <text:p text:style-name="P2">VisualizzaUtentiPerIdoneità()</text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">VisualizzaUtentiNonIdonei()</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -856,7 +863,7 @@
       <text:p text:style-name="P2"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P2">VisualizzaIscritti()</text:p>
+      <text:p text:style-name="P2"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -867,12 +874,25 @@
       <text:p text:style-name="P2"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P2">InserisciBando()</text:p>
-      <text:p text:style-name="P2">InserisciSpecificheGraduatoria()</text:p>
-      <text:p text:style-name="P2">ModificaSpecificheGraduatoria()</text:p>
-      <text:p text:style-name="P1">PubblicaGraduatoria()</text:p>
-      <text:p text:style-name="P2">VisualizzaGraduatoria()</text:p>
       <text:p text:style-name="P2">VisualizzaUtentiPerIdoneità()</text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">VisualizzaUtentiNonIdonei()</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
+      <text:p text:style-name="P13"><text:span text:style-name="T4">Impiegato del </text:span></text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">diritto allo studio</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
+      <text:p text:style-name="P2"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
+      <text:p text:style-name="P13">InserisciBando()</text:p>
+      <text:p text:style-name="P13">InserisciSpecificheGraduatoria()</text:p>
+      <text:p text:style-name="P13">ModificaSpecificheGraduatoria()</text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">AssegnaPunteggioBambino()</text:span></text:p>
+      <text:p text:style-name="P10">PubblicaGraduatoria()</text:p>
+      <text:p text:style-name="P13">VisualizzaGraduatoria()</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
@@ -884,13 +904,13 @@
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="P4">Bambino</text:p>
+      <text:p text:style-name="P5">Bambino</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.C1" office:value-type="string">
-      <text:p text:style-name="P4">Genitore</text:p>
+      <text:p text:style-name="P5">Genitore</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -913,11 +933,11 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
-      <text:p text:style-name="P2">Personale amministrativo</text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">Impiegato dell&apos;asilo</text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
       <text:p text:style-name="P2">VisualizzaIscritti()</text:p>
-      <text:p text:style-name="P2">AccettazioneBambino()</text:p>
+      <text:p text:style-name="P2"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
       <text:p text:style-name="P2">VisualizzaDatiGenitore()</text:p>
@@ -947,7 +967,7 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
       <text:p text:style-name="P2">VisualizzaIscritti()</text:p>
-      <text:p text:style-name="P2">AccettazioneBambino()</text:p>
+      <text:p text:style-name="P2"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
       <text:p text:style-name="P2">VisualizzaDatiGenitore()</text:p>
@@ -958,6 +978,21 @@
       <text:p text:style-name="P2">RicercaGenitore()</text:p>
      </table:table-cell>
     </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P13"><text:span text:style-name="T4">Impiegato del </text:span></text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">diritto allo studio</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P13"><text:span text:style-name="T4">VisualizzaListaAccettati()</text:span></text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">VisualizzaListaNonAccettati()</text:span></text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">AccettaBambino()</text:span></text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">EscludiBambino()</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
+      <text:p text:style-name="P2"/>
+     </table:table-cell>
+    </table:table-row>
    </table:table>
    <text:p text:style-name="Spacer"/>
    <table:table table:name="Tabella3" table:style-name="Tabella3">
@@ -966,13 +1001,13 @@
     <table:table-column table:style-name="Tabella3.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A1" office:value-type="string">
-      <text:p text:style-name="P4">Personale formazione</text:p>
+      <text:p text:style-name="P5">Personale formazione</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.C1" office:value-type="string">
-      <text:p text:style-name="P4">Personale amministrativo</text:p>
+      <text:p text:style-name="P5">Personale amministrativo</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -989,7 +1024,7 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
-      <text:p text:style-name="P2">Personale amministrativo</text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">Impiegato dell&apos;asilo</text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
       <text:p text:style-name="P2">RicercaPersonaleFormazione()</text:p>
@@ -1037,6 +1072,18 @@
       <text:p text:style-name="P2">LicenziaPersAmministrativo()</text:p>
      </table:table-cell>
     </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
+      <text:p text:style-name="P13"><text:span text:style-name="T4">Impiegato del </text:span></text:p>
+      <text:p text:style-name="P13"><text:span text:style-name="T4">diritto allo studio</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella3.A2" office:value-type="string">
+      <text:p text:style-name="P2"/>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella3.C2" office:value-type="string">
+      <text:p text:style-name="P2"/>
+     </table:table-cell>
+    </table:table-row>
    </table:table>
    <text:p text:style-name="Spacer"/>
    <table:table table:name="Tabella4" table:style-name="Tabella4">
@@ -1046,13 +1093,13 @@
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella4.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.A1" office:value-type="string">
-      <text:p text:style-name="P4">Registro</text:p>
+      <text:p text:style-name="P5">Registro</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella4.C1" office:value-type="string">
-      <text:p text:style-name="P4">ProgrammaEducativoSettimanale</text:p>
+      <text:p text:style-name="P5">ProgrammaEducativoSettimanale</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1114,13 +1161,13 @@
     <table:table-column table:style-name="Tabella5.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella5.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.A1" office:value-type="string">
-      <text:p text:style-name="P4">Attività</text:p>
+      <text:p text:style-name="P5">Attività</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella5.C1" office:value-type="string">
-      <text:p text:style-name="P4">Questionario</text:p>
+      <text:p text:style-name="P5">Questionario</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1188,10 +1235,10 @@
     <table:table-column table:style-name="Tabella6.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella6.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella6.B1" office:value-type="string">
-      <text:p text:style-name="P4">Evento</text:p>
+      <text:p text:style-name="P5">Evento</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1238,13 +1285,13 @@
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella7.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.A1" office:value-type="string">
-      <text:p text:style-name="P4">Menu</text:p>
+      <text:p text:style-name="P5">Menu</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.C1" office:value-type="string">
-      <text:p text:style-name="P4"/>
+      <text:p text:style-name="P5"/>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1279,8 +1326,8 @@
       <text:p text:style-name="P2"/>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella7.C2" office:value-type="string">
-      <text:p text:style-name="P11"><text:span text:style-name="T3">InserisciAssenza()</text:span></text:p>
-      <text:p text:style-name="P11"><text:span text:style-name="T3">ModificaAssenza()</text:span></text:p>
+      <text:p text:style-name="P11">InserisciAssenza()</text:p>
+      <text:p text:style-name="P11">ModificaAssenza()</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1302,13 +1349,13 @@
     <table:table-column table:style-name="Tabella8.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella8.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella8.A1" office:value-type="string">
-      <text:p text:style-name="P4">Piano-Pasto</text:p>
+      <text:p text:style-name="P5">Piano-Pasto</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella8.C1" office:value-type="string">
-      <text:p text:style-name="P4">Extra</text:p>
+      <text:p text:style-name="P5">Extra</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1356,13 +1403,13 @@
     <table:table-column table:style-name="Tabella9.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella9.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.A1" office:value-type="string">
-      <text:p text:style-name="P4">Orario</text:p>
+      <text:p text:style-name="P5">Orario</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella9.C1" office:value-type="string">
-      <text:p text:style-name="P4">Orario Utenza</text:p>
+      <text:p text:style-name="P5">Orario Utenza</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1410,13 +1457,13 @@
     <table:table-column table:style-name="Tabella10.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella10.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella10.A1" office:value-type="string">
-      <text:p text:style-name="P4">Richiesta</text:p>
+      <text:p text:style-name="P5">Richiesta</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella10.C1" office:value-type="string">
-      <text:p text:style-name="P4">Promemoria</text:p>
+      <text:p text:style-name="P5">Promemoria</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1468,13 +1515,13 @@
     <table:table-column table:style-name="Tabella11.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella11.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella11.A1" office:value-type="string">
-      <text:p text:style-name="P4">Fattura</text:p>
+      <text:p text:style-name="P5">Fattura</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella11.C1" office:value-type="string">
-      <text:p text:style-name="P4">Pagamento</text:p>
+      <text:p text:style-name="P5">Pagamento</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1513,7 +1560,7 @@
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P6"/>
+   <text:p text:style-name="P7"/>
    <table:table table:name="Tabella12" table:style-name="Tabella12">
     <table:table-column table:style-name="Tabella12.A"/>
     <table:table-column table:style-name="Tabella12.B"/>
@@ -1521,13 +1568,13 @@
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella12.A1" office:value-type="string">
-      <text:p text:style-name="P3">Attore \ Entità</text:p>
+      <text:p text:style-name="P4">Attore \ Entità</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella12.A1" office:value-type="string">
-      <text:p text:style-name="P4">Tirocinante</text:p>
+      <text:p text:style-name="P5">Tirocinante</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella12.C1" office:value-type="string">
-      <text:p text:style-name="P4">Feedback Tirocinante</text:p>
+      <text:p text:style-name="P5">Feedback Tirocinante</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -1578,7 +1625,7 @@
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P8"/>
+   <text:p text:style-name="P9"/>
    <text:p text:style-name="Text_20_body"><text:span text:style-name="T2">Nota:</text:span> un attore può effettuare tutte le operazioni indicate per gli attori più generali</text:p>
   </office:text>
  </office:body>
