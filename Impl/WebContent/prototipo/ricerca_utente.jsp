@@ -1,8 +1,5 @@
 <% 
-	//setto variabili di sessione
-	HttpSession sessione = request.getSession();
-	String username=(String)sessione.getAttribute("username");
-	String tipologia=(String)sessione.getAttribute("tipologia_utente");
+	
 	
 %>
 <%@
@@ -46,6 +43,7 @@ include file="atsilo_files/form_ricerca_personale.jsp"
  <%@
 include file="atsilo_files/form_ricerca_genitore.jsp"
  %>
+ 
 <%@
 include file="atsilo_files/footer.jsp"
  %>

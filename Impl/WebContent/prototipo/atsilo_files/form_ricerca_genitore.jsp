@@ -22,9 +22,6 @@
   <!-- Mostra campi cf solo se chiamante non fa parte della categoria dei genitore -->
   
   <% 
-
-  out.print(tipologia);
-
   if (!tipologia.equals("genitore")) { 
  
   
@@ -36,6 +33,7 @@
    out.println("</tr>");
    }%>
     <!-- Fine campo opzionalee -->
+    
   <tr>
     <td>Residente a</td>
     <td><input id="residente_a" value="" name="residente_a"  size="25" maxlength="25" type="text" /></td>

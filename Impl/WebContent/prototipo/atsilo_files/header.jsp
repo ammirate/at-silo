@@ -1,12 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java"  contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1" session="true"%>
+<%@ page errorPage="errore_accesso.html"  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<%
-String homepage=(String)sessione.getAttribute("homepage");
-out.print(homepage);
+<% 
+	//setto variabili di sessione
+	HttpSession sessione = request.getSession();
+	String username=(String)sessione.getAttribute("username");
+	String tipologia=(String)sessione.getAttribute("tipologia_utente");
+	sessione.setAttribute("homepage", "index_impiegato.jsp");
+	String homepage=(String)sessione.getAttribute("homepage");
+
 String a = request.getRequestURI();
 String[] b = a.split("/");
 String nf = b[b.length-1];
