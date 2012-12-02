@@ -28,6 +28,8 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
      <td>&nbsp;</td>
   </tr>
   <tr>
+    <td>&nbsp; </td></tr>
+  <tr>
     <td colspan="4">Il/la bambino/a per la/il quale si chiede l'iscrizione &egrave; in situazione di disabilit&agrave; (allegare, in busta chiusa, diagnosi funzionale del servizio di Neuro Psichiatria Infantile, ovvero certificazione ex L. 104/92 di presa in carico dell'Asl)</td>
   </tr>
   <tr>

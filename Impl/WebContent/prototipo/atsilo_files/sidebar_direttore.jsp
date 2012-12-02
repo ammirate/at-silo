@@ -127,13 +127,13 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Registro Tirocinanti</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_attivita_tirocinante.jsp">Inserisci Attività</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_attivita_tirocinante.jsp">Inserisci Attivit&agrave;</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_attivita_tirocinante.jsp">Modifica Attività</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_attivita_tirocinante.jsp">Modifica Attivit&agrave;</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="elimina_attivita_tirocinante.jsp.jsp">Elimina Attività</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="elimina_attivita_tirocinante.jsp.jsp">Elimina Attivit&agrave;</a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">

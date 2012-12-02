@@ -20,7 +20,8 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
       <td><table border="0">
         <tbody>
           <tr>
-            <td class="tplTitolo"><form name="creazione_account" action="" method="post">
+            <td class="tplTitolo">
+            <form name="creazione_account" action="" method="post">
         <table class="tabelle_form">
           <tr> 
         	<td>Username</td>
@@ -45,7 +46,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><strong>N.B. All'indirizzo di posta elettronica verrà inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
+            <td><strong>N.B. All'indirizzo di posta elettronica verr&agrave; inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
           <tr> 
         	<td></td>
        	 	<td><input type="submit" name="modifica" value="Modifica dati " />

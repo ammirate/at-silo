@@ -14,7 +14,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <form>
   <table width="80%" border="0" cellspacing="0">
     <tr>
-    <td>Storico Attività</td>
+    <td>Storico Attivit&agrave;</td>
     </tr>
     
   

@@ -51,7 +51,7 @@
    
     <tr>
       <td colspan="4"><p>&nbsp;</p>
-      <p>Compilare i campi sottostanti solo se il domicilio è diverso dalla residenza</p></td></tr>
+      <p>Compilare i campi sottostanti solo se il domicilio &egrave; diverso dalla residenza</p></td></tr>
   </tr>
   
     <td>Domiciliato a</td>

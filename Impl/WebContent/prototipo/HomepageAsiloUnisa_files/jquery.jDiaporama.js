@@ -109,11 +109,11 @@
 				if(options.keyboard)
 					$(document).keydown(function(event) {
 						switch(event.keyCode){
-							case 37 : // Flèche gauche
+							case 37 : // Fl&egrave;che gauche
 								$(".prev", diapo.siblings()).trigger("click");
 							break;
 							
-							case 39 : // Flèche droite
+							case 39 : // Fl&egrave;che droite
 								$(".next", diapo.siblings()).trigger("click");
 							break;
 						}

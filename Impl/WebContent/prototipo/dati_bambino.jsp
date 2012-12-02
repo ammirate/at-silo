@@ -11,8 +11,13 @@
 include file="atsilo_files/sidebar_genitore.jsp"
  %>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
+<%@
+include file="atsilo_files/sidebar_top_bambino.jsp"
+ %>
 <form>
   <table width="80%" border="0" cellspacing="0">
+  <tr>
+    <td>&nbsp; </td></tr>
     <tr>
     <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vogliono inserire le informazioni</label>
       <br></td>
