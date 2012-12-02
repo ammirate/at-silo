@@ -8,6 +8,7 @@ public class DomandaQuestionario {
     private String descrizione;
     private List<CampoDomandaQuestionario> campi;
     private RispostaQuestionario risposta;
+    private int idQuestionario;
     
 
 
@@ -15,7 +16,6 @@ public class DomandaQuestionario {
      * La variabile questionario avrà il valore della variabile di Questionario
      * La variabile questionario è nulla c'è bisogno di una lettura della classe questionario
      */
-    private Questionario questionario;
     
     /**
      * Costruttore vuoto
@@ -24,16 +24,18 @@ public class DomandaQuestionario {
     }
 
     /**
+     * Costruttore
      * @param id il parametro è settato
      * @param descrizione il parametro è settato
+     * @param campi è una lista contenente i campi della domanda
      * @param questionario è settato dopo la lettura
      */
-    public DomandaQuestionario(String id, String descrizione,
-            Questionario questionario) {
+    public DomandaQuestionario(String id, int idQuestionario, String descrizione, List<CampoDomandaQuestionario> campi){
         super();
         this.id = id;
         this.descrizione = descrizione;
-        this.questionario = questionario;
+        this.campi = campi;
+        idQuestionario = idQuestionario;
     }
     
     public void setId(String id) {
@@ -65,20 +67,6 @@ public class DomandaQuestionario {
     }
 
     /**
-     * @return risposta
-     */
-    public RispostaQuestionario getRisposta() {
-        return risposta;
-    }
-
-    /**
-     * @param risposta nuovo risposta
-     */
-    public void setRisposta(RispostaQuestionario risposta) {
-        this.risposta = risposta;
-    }
-
-    /**
      * @return campi
      */
     public List<CampoDomandaQuestionario> getCampi() {
@@ -92,16 +80,45 @@ public class DomandaQuestionario {
         this.campi = campi;
     }
     
-    public Questionario getQuestionario() {
-        return questionario;
+    
+    public void aggiungiCampo(CampoDomandaQuestionario c){
+        campi.add(c);
     }
 
     /**
-     * @param questionario nuovo questionario
+     * @return idRisposta
      */
-    public void setQuestionario(Questionario q) {
-        this.questionario = questionario;
+    public RispostaQuestionario getRisposta() {
+        return risposta;
     }
+
+    /**
+     * @param idRisposta nuovo idRisposta
+     */
+    public void setRisposta(RispostaQuestionario risposta) {
+        this.risposta = risposta;
+    }
+
+    /**
+     * @return idQuestionario
+     */
+    public int getIdQuestionario() {
+        return idQuestionario;
+    }
+
+    /**
+     * @param idQuestionario nuovo idQuestionario
+     */
+    public void setIdQuestionario(int idQuestionario) {
+        this.idQuestionario = idQuestionario;
+    }
+
+    /**
+     * @return risposta
+     */
+//    
+
+    
     
     
 }

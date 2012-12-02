@@ -1,13 +1,11 @@
 package test.storage;
 
-import atsilo.entity.DomandaQuestionario;
-import atsilo.entity.Genitore;
-import atsilo.entity.Questionario;
-import atsilo.entity.RispostaQuestionario;
-import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
+
+import atsilo.entity.Questionario;
 
 public class StubQuestionario {
    
@@ -35,8 +33,10 @@ public class StubQuestionario {
         public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
             
              List<Questionario> list = new ArrayList<Questionario>();
-             java.sql.Date periodo_inizio = new java.sql.Date(2012, 1, 1), periodo_fine = new java.sql.Date(2012, 3, 31);
-             Questionario q = new Questionario("inizio anno", "no", "inizio", 0, periodo_inizio,  periodo_fine, null, null);
+             
+             Date dataInizio = new Date(2012, 1, 1);
+             Date dataFine = new Date(2012,3,31);
+             Questionario q = new Questionario("inizio anno", "no", "inizio", 1, dataInizio, dataFine);
             
              if(n==q.getNome())
                 list.add(q);
@@ -54,9 +54,10 @@ public class StubQuestionario {
          public List<Questionario> visualizzaQuestionariCompilabili() throws SQLException{
             
              List<Questionario> l=null;
-             java.sql.Date periodo_inizio = new java.sql.Date(2012, 1, 1), periodo_fine = new java.sql.Date(2012, 3, 31);
-             Questionario q = new Questionario("inizio anno", "no", "inizio", 0, periodo_inizio,  periodo_fine, null, null);
-            
+
+             Date dataInizio = new Date(2012, 1, 1);
+             Date dataFine = new Date(2012,3,31);
+             Questionario q = new Questionario("inizio anno", "no", "inizio", 1, dataInizio, dataFine);
              l.add(q);
              return l;
          }
@@ -71,9 +72,10 @@ public class StubQuestionario {
           */
           public Questionario getQuestionario(int idQuestionario) throws SQLException{
               
-              java.sql.Date periodo_inizio = new java.sql.Date(2012, 1, 1), periodo_fine = new java.sql.Date(2012, 3, 31);
-              Questionario q = new Questionario("inizio anno", "no", "inizio", 0, periodo_inizio,  periodo_fine, null, null);
-             
+
+              Date dataInizio = new Date(2012, 1, 1);
+              Date dataFine = new Date(2012,3,31);
+              Questionario q = new Questionario("inizio anno", "no", "inizio", 1, dataInizio, dataFine);
               if(idQuestionario==q.getId())
                   return q;
               throw new SQLException("non c'è!");

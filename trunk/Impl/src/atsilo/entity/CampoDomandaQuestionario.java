@@ -4,11 +4,19 @@ public class CampoDomandaQuestionario {
     private String tipo;
     private String descrizione;
     private String valore;
-    private DomandaQuestionario domandaQuestionario;
-    private RispostaQuestionario rispostaQuestionario;
+    private String  idDomandaQuestionario;
+    private String idRispostaQuestionario;
 
     public CampoDomandaQuestionario() {
         super();
+    }
+    
+    public CampoDomandaQuestionario(String tipo, String desc, String valore, String idDomanda){
+        this.tipo = tipo;
+        this.descrizione = desc;
+        this.valore = valore;
+        this.idDomandaQuestionario = idDomanda;
+        this.idRispostaQuestionario = null;
     }
 
     /**
@@ -54,32 +62,34 @@ public class CampoDomandaQuestionario {
     }
 
     /**
-     * @return domanda
+     * @return idDomandaQuestionario
      */
-    public DomandaQuestionario getDomandaQuestionario() {
-        return domandaQuestionario;
+    public String getIdDomandaQuestionario() {
+        return idDomandaQuestionario;
     }
 
     /**
-     * @param domanda nuovo domanda
+     * @param idDomandaQuestionario nuovo idDomandaQuestionario
      */
-    public void setDomandaQuestionario(DomandaQuestionario domanda) {
-        this.domandaQuestionario = domanda;
+    public void setIdDomandaQuestionario(String idDomandaQuestionario) {
+        this.idDomandaQuestionario = idDomandaQuestionario;
     }
 
     /**
-     * @return risposta
+     * @return idRispostaQuestionario
      */
-    public RispostaQuestionario getRispostaQuestionario() {
-        return rispostaQuestionario;
+    public String getIdRispostaQuestionario() {
+        return idRispostaQuestionario;
     }
 
     /**
-     * @param risposta nuovo risposta
+     * @param idRispostaQuestionario nuovo idRispostaQuestionario
      */
-    public void setRispostaQuestionario(RispostaQuestionario risposta) {
-        this.rispostaQuestionario = risposta;
+    public void setIdRispostaQuestionario(String idRispostaQuestionario) {
+        this.idRispostaQuestionario = idRispostaQuestionario;
     }
+
+  
 
   
 }

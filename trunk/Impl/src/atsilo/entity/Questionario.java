@@ -1,6 +1,7 @@
 package atsilo.entity;
 
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Questionario {
@@ -11,26 +12,23 @@ public class Questionario {
     private String nome;
     private int id;
     private Date periodo_inizio;
-    private String pathname;
     private List<Genitore> listaGenitori;
     private List<DomandaQuestionario> domande;
-    /**
-     * @return domande
-     */
-    public List<DomandaQuestionario> getDomande() {
-        return domande;
-    }
-    /**
-     * @param domande nuovo domande
-     */
-    public void setDomande(List<DomandaQuestionario> domande) {
-        this.domande = domande;
-    }
+    
+    
+    
     /**
      * Costruttore vuoto
      */
     public Questionario() {
+
+        this.listaGenitori = new ArrayList<Genitore>();
+        this.domande = new ArrayList<DomandaQuestionario>();
     }
+    
+    
+    
+    
     /**
      * @param periodo_fine il paramentro è fissato
      * @param descrizione il paramentro è fissato
@@ -40,7 +38,7 @@ public class Questionario {
      * @param periodo_inizio il paramentro è fissato
      * @param pathname il paramentro è fissato
      */
-    public Questionario( String descrizione,String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine, List<Genitore> genitori,String pathname) {
+    public Questionario( String descrizione,String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine) {
         super();
         this.periodo_fine = periodo_fine;
         this.descrizione = descrizione;
@@ -48,8 +46,8 @@ public class Questionario {
         this.nome = nome;
         this.id = id;
         this.periodo_inizio = periodo_inizio;
-        this.pathname = pathname;
-        this.listaGenitori = genitori;
+        this.listaGenitori = new ArrayList<Genitore>();
+        this.domande = new ArrayList<DomandaQuestionario>();
     }
 
 
@@ -171,21 +169,29 @@ public class Questionario {
         return periodo_inizio;
     }
 
+    
+    
     /**
-     * Metodo che setta il campo pathname 
-     * @param pathname il parametro fissato
+     * @return domande
      */
-    public void setPathname(String pathname) {
-        this.pathname = pathname;
+    public List<DomandaQuestionario> getDomande() {
+        return domande;
     }
-
+    
+    
+    
     /**
-     * Metodo che restituisce il campo pathname
-     * @return pathname il parametro inserito
+     * @param domande nuovo domande
      */
-    public String getPathname() {
-        return pathname;
+    public void setDomande(List<DomandaQuestionario> domande) {
+        this.domande = domande;
     }
+    
+    
+    public void aggiungiDomanda(DomandaQuestionario d){
+        domande.add(d);
+    }
+    
     
     
     /**
@@ -211,9 +217,9 @@ public class Questionario {
         
         for(DomandaQuestionario d : domande)
             for(RispostaQuestionario r : risposte)
-                if(r.getDomanda().getId().equalsIgnoreCase(d.getId()) ){
+                if(r.getIdDomanda().equalsIgnoreCase(d.getId()) ){
                     d.setRisposta(r);
-                    r.setGenitore(chiCompila);
+                    r.setCFgenitore(chiCompila.getCodiceFiscale());
                 }
         this.listaGenitori.add(chiCompila);
         
