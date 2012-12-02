@@ -29,32 +29,30 @@ import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.Questionario;
 
 /**
-     * Crea un gestore per il bean CompilaQuestionario 
-     * @param nomeTabella nome reale della tabella nel database
-     * @param db database con relativa connessione
-     * @author fabio
-     */
+ * Crea un gestore per il bean CompilaQuestionario 
+ * @author Fabio Napoli
+ */
 public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
-
+    
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
-   
+    
     /**
      * Costruttore
      * @param db connessione al database
      */
     public DBCompilaQuestionario(Database db){super("Compila",db); }
-
+    
     /**
      * Metodo che crea la chiave
      * @return lista string
      */
     private static List<String> creaChiave() {
-List<String> res=  Arrays.asList("genitore","questionario");
+        List<String> res=  Arrays.asList("genitore","questionario");
         
         return Collections.unmodifiableList(res);
     }
-
+    
     /**
      * metodo che associa all' attributo del database (nome attributo db) 
      * il rispettivo valore(nome attributo classe)
@@ -62,24 +60,24 @@ List<String> res=  Arrays.asList("genitore","questionario");
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
-      
+        
         res.put("genitore", "genitore");
         res.put("questionario", "questionario");
-
+        
         return Collections.unmodifiableMap(res);
     }
-
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     protected Map<String,String> getMappingFields(){return MAPPINGS;}
-
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
     
     protected List<String> getKeyFields() {return CHIAVE;}
-
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */    
@@ -106,15 +104,15 @@ List<String> res=  Arrays.asList("genitore","questionario");
         
         List <String> l=null;
         PreparedStatement stmt = tabella.prepareStatement(
-           "SELECT * FROM " + tabella.getNomeTabella() + "WHERE questionario = ? ");
-            tabella.setParam(stmt, 1, "questionario", idQuestionario);
-            ResultSet res = stmt.executeQuery();
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE questionario = ? ");
+        tabella.setParam(stmt, 1, "questionario", idQuestionario);
+        ResultSet res = stmt.executeQuery();
         while(res.next()){
-          l.add(res.getString("genitore"));//add codiceFiscale del genitore alla lista
-            }
+            l.add(res.getString("genitore"));//add codiceFiscale del genitore alla lista
+        }
         res.close();
         return l;
-     }
+    }
     /**
      * Ricerca nel database la lista delle chiavi dei questionari 
      * compilate dal genitore con codiceFiscale=codiceFiscale
@@ -130,17 +128,17 @@ List<String> res=  Arrays.asList("genitore","questionario");
         
         List <Integer> l=null;
         PreparedStatement stmt = tabella.prepareStatement(
-           "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?");
-            tabella.setParam(stmt, 1, "genitore", codiceFiscale);
-            ResultSet res = stmt.executeQuery();
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?");
+        tabella.setParam(stmt, 1, "genitore", codiceFiscale);
+        ResultSet res = stmt.executeQuery();
         while(res.next()){
-          l.add(res.getInt("questionario"));//add idQuestionario del questionario alla lista
-                         }
+            l.add(res.getInt("questionario"));//add idQuestionario del questionario alla lista
+        }
         res.close();
         return l;
-        }
-
-   
+    }
+    
+    
     /**
      * Controlla nel database se uno specifico genitore
      * con codiceFiscale=codiceFiscale ha compilato un determinato questionario
@@ -154,20 +152,20 @@ List<String> res=  Arrays.asList("genitore","questionario");
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?AND questionario = ?");
-                 tabella.setParam(stmt, 1, "genitore", codiceFiscale);
-                 tabella.setParam(stmt, 2, "questionario", idQuestionario);
-
-                 
-                 ResultSet res = stmt.executeQuery();
+        tabella.setParam(stmt, 1, "genitore", codiceFiscale);
+        tabella.setParam(stmt, 2, "questionario", idQuestionario);
+        
+        
+        ResultSet res = stmt.executeQuery();
         
         if(res.next()){//se res conterrà qualcosa vuol dire che la query ha prodotto risultato e quindi
-         res.close();//e quindi ritorno true cio' vuole dire che il genitore con codiceFiscale=codiceFIscale
+            res.close();//e quindi ritorno true cio' vuole dire che il genitore con codiceFiscale=codiceFIscale
             return true;//ha compilato il questionario con id=idQuestionario altrimenti se res è vuoto ritorno false
         } 
         else {
             res.close();
             return false; 
         }
-        }
+    }
     
-   }
+}

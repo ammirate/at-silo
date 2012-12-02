@@ -17,6 +17,10 @@ import atsilo.entity.RispostaQuestionario;
 
 public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario> {
     
+    /**
+     * Crea gestore del bean CampoDomandaQuestionario
+     * @author Fabio Napoli     
+     */
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
@@ -36,30 +40,30 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     public List<CampoDomandaQuestionario> ricercaPerTipo(String tipo) throws SQLException
     {
         List<CampoDomandaQuestionario> a= new ArrayList<CampoDomandaQuestionario> ();
-       
+        
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE tipo = ?");
-            tabella.setParam(stmt, 1, "tipo", tipo);
-            ResultSet res = stmt.executeQuery();
-            for (CampoDomandaQuestionario c : iteraResultSet(res)) 
-                a.add(c);
-                
+        tabella.setParam(stmt, 1, "tipo", tipo);
+        ResultSet res = stmt.executeQuery();
+        for (CampoDomandaQuestionario c : iteraResultSet(res)) 
+            a.add(c);
+        
         
         res.close();
         return a;
     } 
     
     
-
-
+    
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     protected Map getMappingFields() {
         return MAPPINGS;
     }
-
-
+    
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
@@ -84,13 +88,13 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         
         return Collections.unmodifiableMap(res);
     }
-
+    
     /**
      * Metodo che crea la chiave
      * @return lista string
      */
     private static List<String> creaChiave(){
-       
+        
         List<String> res=  Arrays.asList("domanda_questionario","risposta_questionario");// da chiarire
         
         return Collections.unmodifiableList(res);
@@ -124,19 +128,19 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-            tabella.setParam(stmt, 1, "id", idDomanda);
-            ResultSet res = stmt.executeQuery();
-            
-            while(res.next()){
-               c.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
-                c.getRispostaQuestionario().setId(res.getString("risposta_questionario"));
-                c.setTipo(res.getString("tipo"));
-                c.setDescrizione(res.getString("descrizione"));
-                c.setValore(res.getString("valore"));   
+        tabella.setParam(stmt, 1, "id", idDomanda);
+        ResultSet res = stmt.executeQuery();
+        
+        while(res.next()){
+            c.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
+            c.getRispostaQuestionario().setId(res.getString("risposta_questionario"));
+            c.setTipo(res.getString("tipo"));
+            c.setDescrizione(res.getString("descrizione"));
+            c.setValore(res.getString("valore"));   
             l.add(c);
-            }
+        }
         res.close();
-            return l;
+        return l;
     }
     
     /**
@@ -148,16 +152,16 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     public List<DomandaQuestionario> ricercaDomandaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
         
         List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
-       
+        
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda_questionario = ?");
-            tabella.setParam(stmt, 1, "domanda_questionario", c.getDomandaQuestionario().getId());
-            ResultSet res = stmt.executeQuery();
+        tabella.setParam(stmt, 1, "domanda_questionario", c.getDomandaQuestionario().getId());
+        ResultSet res = stmt.executeQuery();
         for(CampoDomandaQuestionario c1: iteraResultSet(res)){
             DomandaQuestionario d=c1.getDomandaQuestionario();
             a.add(d);
         }
-   
+        
         
         res.close();
         return a;
@@ -173,8 +177,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         List<RispostaQuestionario> a= new ArrayList<RispostaQuestionario> ();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE risposta_questionario = ?");
-            tabella.setParam(stmt, 1, "risposta_questionario", c.getRispostaQuestionario().getId());
-            ResultSet res = stmt.executeQuery();
+        tabella.setParam(stmt, 1, "risposta_questionario", c.getRispostaQuestionario().getId());
+        ResultSet res = stmt.executeQuery();
         for(CampoDomandaQuestionario c1: iteraResultSet(res)){
             RispostaQuestionario r= c1.getRispostaQuestionario();
             a.add(r);
@@ -183,5 +187,5 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         res.close();
         return a;
     }
-
+    
 }
