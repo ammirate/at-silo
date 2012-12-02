@@ -435,6 +435,28 @@ public class ControlQuestionario {
     }
     
     
+    
+    public List<Questionario> getAllQuestionari() throws DBConnectionException{
+        Database db = new Database();
+        DBQuestionario storage = new DBQuestionario(db);
+
+        Iterable<Questionario> iter;
+        List<Questionario> toReturn = new ArrayList<Questionario>();
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            iter = storage.getAll();
+            while(iter.iterator().hasNext())
+                toReturn.add(iter.iterator().next());
+            return toReturn;
+        } 
+        finally{
+            db.chiudiConnessione();
+        }
+    }
+    
+    
 
     
     /**
