@@ -1,7 +1,4 @@
-<% 
-	
-	
-%>
+
 <%@
 	include file="atsilo_files/header.jsp"
 %>

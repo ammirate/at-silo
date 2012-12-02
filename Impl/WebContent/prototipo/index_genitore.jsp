@@ -1,6 +1,9 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+<%@
+	include file="atsilo_files/controllo_genitore.jsp"
+%>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>

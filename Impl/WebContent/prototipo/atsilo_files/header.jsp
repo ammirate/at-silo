@@ -12,6 +12,12 @@
 	String tipologia=(String)sessione.getAttribute("tipologia_utente");
 	sessione.setAttribute("homepage", "index_impiegato.jsp");
 	String homepage=(String)sessione.getAttribute("homepage");
+	
+	//controllo se utente ha effettuato il login
+	//se username non settato 
+	if (username.isEmpty() )
+		response.sendRedirect("errore_accesso.htm");
+	
 
 String a = request.getRequestURI();
 String[] b = a.split("/");
