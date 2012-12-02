@@ -25,38 +25,38 @@ include file="atsilo_files/sidebar_scienzeformazione.jsp"
 
 <!-- INIZIO PAGINA JSP/HTML -->
 
-<form action="" method="post">
+<form action="http://localhost:8080/Atsilo/ServletControlTirocinantiInserisci" method="post">
 Inserisci un Tirocinante<br />
 	<table class="tabelle_form">
 	<tr>
-	<td>Nome</td><td><input type="text"/></td>
+	<td>Nome</td><td><input type="text" name="nome"/></td>
 	</tr>
 	<tr>
-	<td>Cognome</td><td><input type="text"/></td>
+	<td>Cognome</td><td><input type="text" name="cognome"/></td>
 	</tr>
 	<tr>
-	<td>Codice Fiscale</td><td><input type="text"/></td>
+	<td>Codice Fiscale</td><td><input type="text" name="cf"/></td>
 	</tr>
 	<tr>
-	<td>Telefono</td><td><input type="text"/></td>
+	<td>Telefono</td><td><input type="text" name="telefono"/></td>
 	</tr>
 	<tr>
-	<td>Email</td><td><input type="text"/></td>
+	<td>Email</td><td><input type="text" name="email"/></td>
 	</tr>
 	<tr>
-	<td>Data di Nascita</td><td><input type="text"/></td>
+	<td>Data di Nascita</td><td><input type="text" name="giorno"/ value="GG" size="2">/<input type="text" name="mese"/ value="MM" size="2">/<input type="text" name="anno"/ value="YYYY" size="4"></td>
 	</tr>
 	<tr>
-	<td>Comune di Nascita</td><td><input type="text"/></td>
+	<td>Comune di Nascita</td><td><input type="text" name="comunenascita"/></td>
 	</tr>
 	<tr>
-	<td>Indirizzo di Residenza</td><td><input type="text"/></td>
+	<td>Indirizzo di Residenza</td><td><input type="text" name="indirizzo"/></td>
 	</tr>
 	<tr>
-	<td>Titolo di Studi</td><td><input type="text"/></td>
+	<td>Titolo di Studi</td><td><input type="text" name="titolo"/></td>
 	</tr>
 	<tr>
-	<td>Ore Lavoro</td><td><input type="text"/></td>
+	<td>Ore Lavoro</td><td><input type="text" name="orelavoro"/></td>
 	</tr>	
 	
 	
