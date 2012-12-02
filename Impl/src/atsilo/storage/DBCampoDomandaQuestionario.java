@@ -30,7 +30,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     /**
      * Ricerca campodomandaquestionario per tipo
      * @param tipo
-     * @return restituisce una lista di campodomandauestionario
+     * @return restituisce una lista di campodomandaquestionario
      * @throws SQLException 
      */
     public List<CampoDomandaQuestionario> ricercaPerTipo(String tipo) throws SQLException
