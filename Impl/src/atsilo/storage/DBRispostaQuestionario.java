@@ -21,8 +21,7 @@ public class DBRispostaQuestionario extends DBBeans {
     
     /**
      * Crea un gestore per il bean RispostaQuestionario
-     * @param nomeTabella nome reale della tabella nel database
-     * @param db database con relativa connessione
+     *@author Fabio Napoli
      */
     
     private static final Map<String,String> MAPPINGS=creaMapping();
@@ -39,12 +38,12 @@ public class DBRispostaQuestionario extends DBBeans {
      * @return lista string
      */
     private static List<String> creaChiave() {
-           
+        
         List<String> res=  Arrays.asList("id");
         
         return Collections.unmodifiableList(res);
     }
-
+    
     /**
      * metodo che associa all' attributo del database (nome attributo db) 
      * il rispettivo valore(nome attributo classe)
@@ -56,25 +55,25 @@ public class DBRispostaQuestionario extends DBBeans {
         res.put("valore", "valore");
         res.put("domanda", "domanda");
         res.put("genitore", "genitore");
-      
+        
         return Collections.unmodifiableMap(res);
     }
-
-  
+    
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     protected Map getMappingFields() {
         return MAPPINGS;
     }
-
+    
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
     protected List getKeyFields() {
         return CHIAVE;
     }
-
+    
     /*(-nonJavadoc)
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
@@ -82,15 +81,15 @@ public class DBRispostaQuestionario extends DBBeans {
         RispostaQuestionario ris = new RispostaQuestionario();
         if(r.next())
         {
-           ris.setId(r.getString("id"));
-           ris.setValore(r.getString("valore"));
-           ris.getGenitore().setCodiceFiscale(r.getString("genitore"));
-           ris.getDomanda().setId(r.getString("domanda"));           
+            ris.setId(r.getString("id"));
+            ris.setValore(r.getString("valore"));
+            ris.getGenitore().setCodiceFiscale(r.getString("genitore"));
+            ris.getDomanda().setId(r.getString("domanda"));           
         }
         return ris;
     }
     
-
+    
     /**
      * Restituisce la lista delle risposte data da un
      * determinato genitore ad una determinata domanda di un questionario
@@ -103,20 +102,20 @@ public class DBRispostaQuestionario extends DBBeans {
         List<RispostaQuestionario> l =null;
         RispostaQuestionario r=new RispostaQuestionario();
         
-
+        
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
                 " WHERE genitore = ? AND domanda = ?");
         tabella.setParam(stmt, 1,"genitore", g.getCodiceFiscale());
         tabella.setParam(stmt, 2, "domanda", idDomanda);
         ResultSet res = stmt.executeQuery();
-       
+        
         while (res.next()){
-           
+            
             r.setId(res.getString("id"));
             r.setValore(res.getString("valore"));
             r.getGenitore().setCodiceFiscale(res.getString("genitore"));
             r.getDomanda().setId(res.getString("domanda"));
-
+            
             l.add(r);
         }
         res.close();
@@ -131,32 +130,32 @@ public class DBRispostaQuestionario extends DBBeans {
      * @return lista di RisposteQuestionario o null
      * @throws SQLException
      */    
-public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{        
-    List<RispostaQuestionario> l=null;
-    RispostaQuestionario r=new RispostaQuestionario();
-    
-
-    PreparedStatement stmt = tabella.prepareStatement(
-            "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda = ?");
+    public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{        
+        List<RispostaQuestionario> l=null;
+        RispostaQuestionario r=new RispostaQuestionario();
+        
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda = ?");
         tabella.setParam(stmt, 1, "domanda", d.getId());
         ResultSet res = stmt.executeQuery();
-
-    while (res.next()){
         
-        r.setId(res.getString("id"));
-        r.setValore(res.getString("valore"));
-        r.getGenitore().setCodiceFiscale(res.getString("genitore"));
-        r.getDomanda().setId(res.getString("domanda"));
-
-        l.add(r);
-    }
-    res.close();
-    return l;
+        while (res.next()){
+            
+            r.setId(res.getString("id"));
+            r.setValore(res.getString("valore"));
+            r.getGenitore().setCodiceFiscale(res.getString("genitore"));
+            r.getDomanda().setId(res.getString("domanda"));
+            
+            l.add(r);
+        }
+        res.close();
+        return l;
         
     }
 }
-    
 
-    
-    
+
+
+
     
