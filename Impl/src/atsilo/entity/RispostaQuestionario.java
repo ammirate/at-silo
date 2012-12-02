@@ -4,8 +4,8 @@ public class RispostaQuestionario {
     
     private String id;
     private String valore;
-    private DomandaQuestionario domanda;
-    private Genitore genitore;
+    private String idDomanda;
+    private String CFgenitore;
     
     /**
      * Costruttore vuoto
@@ -18,12 +18,12 @@ public class RispostaQuestionario {
      * @param valore il paramentro è fissato
      * @param genitore è settato dopo la lettura
      */
-    public RispostaQuestionario(String id, String valore,DomandaQuestionario domanda, Genitore genitore) {
+    public RispostaQuestionario(String id, String valore,String idDomanda, String CodFiscGenitore) {
         super();
         this.id = id;
         this.valore = valore;
-        this.domanda=domanda;
-        this.genitore = genitore;
+        this.idDomanda = idDomanda;
+        this.CFgenitore = CodFiscGenitore;
     }
 
     /**
@@ -58,36 +58,39 @@ public class RispostaQuestionario {
         return valore;
     }
 
+    /**
+     * @return idDomanda
+     */
+    public String getIdDomanda() {
+        return idDomanda;
+    }
+
+    /**
+     * @param idDomanda nuovo idDomanda
+     */
+    public void setIdDomanda(String idDomanda) {
+        this.idDomanda = idDomanda;
+    }
+
+    /**
+     * @return cFgenitore
+     */
+    public String getCFgenitore() {
+        return CFgenitore;
+    }
+
+    /**
+     * @param cFgenitore nuovo cFgenitore
+     */
+    public void setCFgenitore(String cFgenitore) {
+        CFgenitore = cFgenitore;
+    }
+
 
     /**
      * @return domanda
      */
-    public DomandaQuestionario getDomanda() {
-        return domanda;
-    }
-
-    /**
-     * @param domanda nuovo domanda
-     */
-    public void setDomanda(DomandaQuestionario domanda) {
-        this.domanda = domanda;
-    }
-
-    /**
-     * Metodo che setta il parametro letto dalla classe Genitore
-     * @param genitore è settato dopo la lettura
-     */
-    public void setGenitore(Genitore genitore) {
-        this.genitore = genitore;
-    }
-
-    /**
-     * Metodo che prende il parametro letto dalla classe genitore
-     * @return genitore preso dalla lettura
-     */
-    public Genitore getGenitore() {
-        return genitore;
-    }
+   
     
     
 }
