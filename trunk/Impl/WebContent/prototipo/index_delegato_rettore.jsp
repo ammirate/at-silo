@@ -37,7 +37,7 @@ include file="atsilo_files/sidebar_delegato_rettore.jsp"
           </tr>
           <tr>
             <td>&nbsp;</td>
-            <td><strong>N.B. All'indirizzo di posta elettronica verrà inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
+            <td><strong>N.B. All'indirizzo di posta elettronica verr&agrave; inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
           <tr> 
         	<td></td>
        	 	<td><input type="submit" name="modifica" value="Modifica dati " />

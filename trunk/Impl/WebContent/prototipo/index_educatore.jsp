@@ -6,8 +6,8 @@
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<meta http-equiv="Content-Language" content="it" />
-	<meta name="description" content="Sistema @silo per la gestione Asilo Nido Aziendale "Roberto Mazzetti - Università Degli Studi Di Salerno/>	
-    <meta name="keywords" content="@asilo atsilo at_silo università degli studi di salerno fisciano asilo nido aziendale" />
+	<meta name="description" content="Sistema @silo per la gestione Asilo Nido Aziendale "Roberto Mazzetti - Universit&agrave; Degli Studi Di Salerno/>	
+    <meta name="keywords" content="@asilo atsilo at_silo universit&agrave; degli studi di salerno fisciano asilo nido aziendale" />
 <!-- imCustomHead -->
 	<meta http-equiv="Expires" content="0" />
 	<meta name="Resource-Type" content="document" />
@@ -81,7 +81,7 @@
 <td align="left" class="menuprimosel">&nbsp;<b>Registro</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="attivita_odierna.jsp">Attività Odierna</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="attivita_odierna.jsp">Attivit&agrave; Odierna</a></td>
 </tr>
 <tr>
 <tr>
@@ -153,7 +153,7 @@
 </td><td class="fasciadxvariabile"></td>
 </tr>
 <tr>
-<td class="bottom" width="209">&nbsp;2012 © Unisa</td><td align="right" class="bottom"></td>
+<td class="bottom" width="209">&nbsp;2012 &copy; Unisa</td><td align="right" class="bottom"></td>
 </tr>
 </tbody></table>
 

@@ -1,5 +1,5 @@
 <form>
-<table border="0" cellspacing="0">
+<table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
     <td><select id="qualita" name="qualita">
@@ -51,7 +51,7 @@
    
     <tr>
       <td colspan="4"><p>&nbsp;</p>
-      <p>Compilare i campi sottostanti solo se il domicilio è diverso dalla residenza</p></td></tr>
+      <p>Compilare i campi sottostanti solo se il domicilio &egrave; diverso dalla residenza</p></td></tr>
   </tr>
   
     <td>Domiciliato a</td>
@@ -79,23 +79,24 @@
   </tr>
   <tr>
     <td colspan="2"> Indicare status lavorativo</td>
-    <td colspan="2"><select id="status_lavorativo" name="status_lavorativo">
-      <option value="Selezionare">Selezionare</option>
-      <option value="di essere dipendente di ruolo in qualità di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualità di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
-      <option value="di essere dipendente di ruolo in qualità di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualità di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
-      <option value="di essere docente a tempo pieno dell'Università degli Studi di Salerno; ">di essere docente a tempo pieno dell'Università degli Studi di Salerno; </option>
-      <option value="di essere docente a tempo definito dell'Università degli Studi di Salerno; ">di essere docente a tempo definito dell'Università degli Studi di Salerno; </option>
-      <option value="di essere ricercatore a tempo pieno dell'Università degli Studi di Salerno;">di essere ricercatore a tempo pieno dell'Università degli Studi di Salerno</option>
-      <option value="di essere ricercatore a tempo definito dell'Università degli Studi di Salerno;">di essere ricercatore a tempo definito dell'Università degli Studi di Salerno</option>
-      <option value="di essere titolare di assegni di ricerca presso l'Università degli Studi di Salerno;">di essere titolare di assegni di ricerca presso l'Università degli Studi di Salerno</option>
-      <option value="di essere titolare di contratto a tempo determinato presso l'Università degli Studi di Salerno;">di essere titolare di contratto a tempo determinato presso l'Università degli Studi di Salerno</option>
-      <option value="di essere dottorando presso l'Università degli Studi di Salerno;">di essere dottorando presso l'Università degli Studi di Salerno</option>
-      <option value="di essere titolare di borsa di studio post laurea o post doc presso l'Università degli Studi di Salerno;">di essere titolare di borsa di studio post laurea o post doc presso l'Università degli Studi di Salerno</option>
-      <option value="di essere dipendente di ruolo in qualità di personale tecnico-amministrativo a tempo pieno dell'UniSa;">di essere dipendente di ruolo in qualità di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+  <td colspan="4"><select id="status_lavorativo" name="status_lavorativo">
+<option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
+      <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
+      <option value="di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; ">di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; </option>
+      <option value="di essere docente a tempo definito dell'Universit&agrave; degli Studi di Salerno; ">di essere docente a tempo definito dell'Universit&agrave; degli Studi di Salerno; </option>
+      <option value="di essere ricercatore a tempo pieno dell'Universit&agrave; degli Studi di Salerno;">di essere ricercatore a tempo pieno dell'Universit&agrave; degli Studi di Salerno</option>
+      <option value="di essere ricercatore a tempo definito dell'Universit&agrave; degli Studi di Salerno;">di essere ricercatore a tempo definito dell'Universit&agrave; degli Studi di Salerno</option>
+      <option value="di essere titolare di assegni di ricerca presso l'Universit&agrave; degli Studi di Salerno;">di essere titolare di assegni di ricerca presso l'Universit&agrave; degli Studi di Salerno</option>
+      <option value="di essere titolare di contratto a tempo determinato presso l'Universit&agrave; degli Studi di Salerno;">di essere titolare di contratto a tempo determinato presso l'Universit&agrave; degli Studi di Salerno</option>
+      <option value="di essere dottorando presso l'Universit&agrave; degli Studi di Salerno;">di essere dottorando presso l'Universit&agrave; degli Studi di Salerno</option>
+      <option value="di essere titolare di borsa di studio post laurea o post doc presso l'Universit&agrave; degli Studi di Salerno;">di essere titolare di borsa di studio post laurea o post doc presso l'Universit&agrave; degli Studi di Salerno</option>
+      <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere studente regolarmente iscritto e frequentante Corsi di studio di I o II ciclo dell'UniSa;">di essere studente regolarmente iscritto e frequentante Corsi di studio di I o II ciclo dell'UniSa</option>
 </select></td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
   </tr>
   <tr>
     <td colspan="3">Scadenza del contratto (solo per assegnisti, borsisti, dottorandi o contrattisti)</td>
@@ -114,3 +115,4 @@
   </tr>
 </table>
 </form>
+

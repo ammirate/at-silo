@@ -32,7 +32,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
       <input name="isee" type="text" id="isee" maxlength="10" /></td>
   </tr>
   <tr>
-    <td colspan="4"><label for="altriinvalidi_1">Altri componenti il nucleo familiare (figli) con disabilità/invalidità (allegare, in busta chiusa, certificazione dell'Asl) </label>
+    <td colspan="4"><label for="altriinvalidi_1">Altri componenti il nucleo familiare (figli) con disabilit&agrave;/invalidit&agrave; (allegare, in busta chiusa, certificazione dell'Asl) </label>
       <br></td>
   </tr>
   <tr>
@@ -52,7 +52,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
     <td colspan="4">ALLEGATI<br>
       COPIA FRONTE/RETRO DEL DOCUMENTO DI RICONOSCIMENTO VALIDO DEL RICHIEDENTE (obbligatorio)<br>
       PRIMA DELL'INVIO DELLA DOMANDA SI RACCOMANDA DI CONTROLLARE L'ESATTA COMPILAZIONE DI TUTTI I CAMPI POICHE', DOPO L'INVIO, NON SARA' POSSIBILE EFFETTUARE ALCUNA MODIFICA<br>
-      N.B.: Per completare l'invio della domanda è necessario inserire nel campo sottostante il codice così come appare nell'immagine che segue. Se la stessa non fosse correttamente visibile è possibile generare una nuova immagine con l'apposito pulsante.</td>
+      N.B.: Per completare l'invio della domanda &egrave; necessario inserire nel campo sottostante il codice così come appare nell'immagine che segue. Se la stessa non fosse correttamente visibile &egrave; possibile generare una nuova immagine con l'apposito pulsante.</td>
     
   </tr>
     <tr>
