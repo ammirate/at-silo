@@ -1,7 +1,0 @@
-[x] Il diagramma comprende 2 o più casi d'uso
-[ ] I casi d'uso presenti nel diagramma esistono
-[x] Gli attori citati sono gli stessi presenti nei casi d'uso corrispondenti
-[x] Inclusioni, estensioni e specializzazioni rispecchiano i casi d'uso
-
-ALTRE ANNOTAZIONI:
-Esistono ma hanno nomi diversi rispetto all'UC
