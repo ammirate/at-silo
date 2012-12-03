@@ -138,17 +138,21 @@ import atsilo.util.IterableOnlyOnce;
  * 
  */
 public abstract class DBBeans<B> implements Iterable<B> {
+
     /**
      * Array utilizzato da {@link #creaAssegnazioni(Object) creaAssegnazioni()}
      * per denotare la non-necessita' di effettuare assegnazioni extra.
      */
     protected static final Assegnazione[] NESSUNA_ASSEGNAZIONE = new Assegnazione[0];
     
-    private static final String MAYBE_CORRUPT = "Il database potrebbe essere stato corrotto";
+    private static final String MAYBE_CORRUPT
+            = "Il database potrebbe essere stato corrotto";
     private static final String AND = " AND ";
     private static final String WHERE = " WHERE ";
     private static final String COMMA = ", ";
     private static final String EQL = " = ?";
+    private static final String SPECIAL_FIELD_PREFIX = "-";
+
     
     private static final Logger LOG = Logger
             .getLogger(Logger.GLOBAL_LOGGER_NAME);
@@ -248,6 +252,9 @@ public abstract class DBBeans<B> implements Iterable<B> {
         if (descr == null) {
             throw new RuntimeException(String.format(
                     "Campo '%1$s' inesistente", nomeCampo));
+        } else if (nomeCampo.startsWith(SPECIAL_FIELD_PREFIX)) {
+            //Sara' settato da creaAssegnazioni
+            return null;
         } else {
             try {
                 return descr.getReadMethod().invoke(realBean);
@@ -413,6 +420,26 @@ public abstract class DBBeans<B> implements Iterable<B> {
         return updateStmt;
     }
     
+    private void setKeyFields(PreparedStatement stmt, int startingFrom, B bean,
+            Map<String, String> mapping, List<String> keyFields,
+            Assegnazione[] fixVals) throws SQLException {
+        Assegnazione[] oldAss = creaAssegnazioni(bean);
+        for (String k : getKeyFields()) {
+            if (k.startsWith(SPECIAL_FIELD_PREFIX)) {
+                String target = mapping.get(k);
+                for (Assegnazione ass : oldAss) {
+                    if (ass.colonna.equals(target)) {
+                        tabella.setParam(stmt, startingFrom, target, ass.valore);
+                    }
+                }
+            } else {
+                tabella.setParam(stmt, startingFrom, mapping.get(k),
+                        getFieldFromBean(bean, k));
+            }
+            startingFrom += 1;
+        }
+    }
+    
     /**
      * Modifica un bean nella tabella del database, utilizzando i valori forniti
      * in input, oltre al mapping restituito da {@link #getMappingFields()}.
@@ -443,11 +470,8 @@ public abstract class DBBeans<B> implements Iterable<B> {
             }
             
             // Setta i parametri relativi alla chiave
-            for (String k : getKeyFields()) {
-                tabella.setParam(stmt, i, mapping.get(k),
-                        getFieldFromBean(realBean, k));
-                i += 1;
-            }
+            setKeyFields(stmt, i, realBean, mapping, getKeyFields(),
+                    creaAssegnazioni(realBean));
             
             /*
              * Inserisci i parametri predefiniti passati in input In questo
@@ -531,17 +555,12 @@ public abstract class DBBeans<B> implements Iterable<B> {
     public boolean delete(B realBean) {
         try {
             PreparedStatement stmt = getRemoveStmt();
-            Map<String, String> mapping = getMappingFields();
             
-            int i = 1;
-            for (String keyField : getKeyFields()) {
-                tabella.setParam(stmt, i, mapping.get(keyField),
-                        getFieldFromBean(realBean, keyField));
-                i += 1;
-            }
+            setKeyFields(stmt, 1, realBean, getMappingFields(), getKeyFields(),
+                    creaAssegnazioni(realBean));
             
-            i = stmt.executeUpdate();
-            switch (i) {
+            int res = stmt.executeUpdate();
+            switch (res) {
             case 0:
                 return false;
             case 1:
@@ -549,7 +568,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
             default:
                 LOG.log(Level.SEVERE,
                         "La query \"{0}\" ha cancellato {1} righe."
-                                + MAYBE_CORRUPT, new Object[] { stmt, i });
+                                + MAYBE_CORRUPT, new Object[] { stmt, res });
                 
                 /*
                  * Restituisci false, per far notare che c'e' qualcosa che non

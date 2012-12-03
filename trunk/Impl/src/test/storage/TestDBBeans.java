@@ -162,6 +162,63 @@ public class TestDBBeans {
         assertContent(trasmissioni, l);
     }
     
+    @Test
+    public void testInsertWeak() {
+        MyWeakEntity we = new MyWeakEntity(21, new MyUtente(null, null, "PPO"));
+        DBMyWeakEntity man = new DBMyWeakEntity(db);
+        
+        assertTrue(man.inserisci(we));
+        
+        for (MyWeakEntity ent : man) {
+            if (ent.equals(we)) {
+                return;
+            }
+        }
+        fail("La WeakEntity e' stata inserita, ma non e' presente nel DB");
+    }
+    
+    @Test
+    public void testUpdateWeakNoKey() {
+        MyWeakEntity oldWe = new MyWeakEntity(18, new MyUtente(null, null, "TTRI"));
+        MyWeakEntity we = new MyWeakEntity(36, new MyUtente(null, null, "TTRI"));
+        DBMyWeakEntity man = new DBMyWeakEntity(db);
+        
+        assertTrue(man.replace(oldWe, we));
+        
+        for (MyWeakEntity ent : man) {
+            if (ent.equals(we)) {
+                return;
+            }
+        }
+        fail("La WeakEntity e' stata modificata, ma non e' presente nel DB");
+    }
+    
+    @Test
+    public void testUpdateWeakKey() {
+        MyWeakEntity oldWe = new MyWeakEntity(18, new MyUtente(null, null, "TTRI"));
+        MyWeakEntity we = new MyWeakEntity(18, new MyUtente(null, null, "PPO"));
+        DBMyWeakEntity man = new DBMyWeakEntity(db);
+        
+        assertTrue(man.replace(oldWe, we));
+        
+        for (MyWeakEntity ent : man) {
+            if (ent.equals(we)) {
+                return;
+            }
+        }
+        fail("La WeakEntity e' stata modificata, ma non e' presente nel DB");
+    }
+    
+    @Test
+    public void testDeleteWeak() {
+        MyWeakEntity we = new MyWeakEntity(36, new MyUtente(null, null, "TTRI"));
+        DBMyWeakEntity man = new DBMyWeakEntity(db);
+        
+        assertTrue(man.delete(we));
+        
+        assertContent(man, Arrays.asList(new MyWeakEntity[0]));
+    }
+    
     /**
      * Verifica che il contenuto del database coincida con quello indicato
      * @param man       Manager della tabella
@@ -580,6 +637,150 @@ public class TestDBBeans {
                 MyTrasmissione bean) {
             return Assegnazione.catena(
                     "Utente", bean.getUtente().getCf());
+        }
+    }
+    
+    public static class MyWeakEntity {
+        private int aVal;
+        private MyUtente utente;
+        
+        /**
+         * @param aVal
+         * @param utente
+         */
+        public MyWeakEntity(int aVal, MyUtente utente) {
+            super();
+            this.aVal = aVal;
+            this.utente = utente;
+        }
+        
+        /**
+         * 
+         */
+        public MyWeakEntity() {
+            super();
+        }
+
+        /**
+         * @return aVal
+         */
+        public int getaVal() {
+            return aVal;
+        }
+
+        /**
+         * @param aVal nuovo aVal
+         */
+        public void setaVal(int aVal) {
+            this.aVal = aVal;
+        }
+
+        /**
+         * @return utente
+         */
+        public MyUtente getUtente() {
+            return utente;
+        }
+
+        /**
+         * @param utente nuovo utente
+         */
+        public void setUtente(MyUtente utente) {
+            this.utente = utente;
+        }
+
+        /**
+         * @see java.lang.Object#hashCode()
+         */
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result + aVal;
+            result = prime * result
+                    + ((utente == null) ? 0 : utente.hashCode());
+            return result;
+        }
+
+        /**
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj)
+                return true;
+            if (obj == null)
+                return false;
+            if (getClass() != obj.getClass())
+                return false;
+            MyWeakEntity other = (MyWeakEntity) obj;
+            if (aVal != other.aVal)
+                return false;
+            if (utente == null) {
+                if (other.utente != null)
+                    return false;
+            } else if (!utente.equals(other.utente))
+                return false;
+            return true;
+        }
+    }
+
+    private static class DBMyWeakEntity extends DBBeans<MyWeakEntity> {
+        /**
+         * @param nomeTabella
+         * @param database
+         */
+        public DBMyWeakEntity(Database database) {
+            super("WeakEntity", database);
+        }
+
+        private static Map<String, String> MAPPING = null;
+        private static List<String> KEY = null;
+        
+        /**
+         * @see atsilo.storage.DBBeans#getMappingFields()
+         */
+        @Override
+        protected Map<String, String> getMappingFields() {
+            if (MAPPING == null) {
+                Map<String, String> mapping = new HashMap<String, String>();
+                mapping.put("aVal", "a_val");
+                mapping.put("-utente", "utente");
+                MAPPING = Collections.unmodifiableMap(mapping);
+            }
+            return MAPPING;
+        }
+
+        /**
+         * @see atsilo.storage.DBBeans#getKeyFields()
+         */
+        @Override
+        protected List<String> getKeyFields() {
+            if (KEY == null) {
+                KEY = Arrays.asList("-utente");
+            }
+            return KEY;
+        }
+
+        /**
+         * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+         */
+        @Override
+        protected MyWeakEntity creaBean(ResultSet r) throws SQLException {
+            MyWeakEntity we = new MyWeakEntity();
+            we.setaVal(r.getInt("a_val"));
+            we.setUtente(new MyUtente());
+            we.getUtente().setCf(r.getString("utente"));
+            return we;
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#creaAssegnazioni(java.lang.Object)
+         */
+        @Override
+        protected atsilo.storage.DBBeans.Assegnazione[] creaAssegnazioni(
+                MyWeakEntity bean) {
+            return Assegnazione.catena("utente", bean.getUtente().getCf());
         }
     }
 }
