@@ -24,6 +24,9 @@
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_bambino.jsp">Dati Bambino</a></td>
 </tr>
 <tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="iscrizione.jsp">Iscrizione</a></td>
+</tr>
+<tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="logout.jsp">Logout</a></td>
 </tr>
 </tbody></table>

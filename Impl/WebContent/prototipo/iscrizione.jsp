@@ -1,7 +1,6 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
-<%@ include file="atsilo_files/modifica_dati_account.jsp" %>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -9,18 +8,24 @@
 </tr>
 </tbody></table>
 <%@
-include file="atsilo_files/sidebar_delegato_rettore.jsp"
+include file="atsilo_files/sidebar_genitore.jsp"
  %>
-<img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff"><table cellspacing="10" cellpadding="0" border="0" width="100%">
+<img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
+<%@
+include file="atsilo_files/sidebar_top_iscrizione.jsp"
+ %>
+<table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
     <tr>
       <td><table border="0">
         <tbody>
           <tr>
-            <td class="tplTitolo"> 
-			<%@ include file="atsilo_files/form_modifica_account_impiegato.jsp" 
-			  %>
-        </td>
+            <td >Stato iscrizione: Domanda non inviata</td>
+            
+            </tr>
+             <tr>
+            <td >Stato pagamenti: Tassa iscrizione non pagata</td>
+            
             </tr>
           </tbody>
         </table></td>
@@ -46,5 +51,8 @@ include file="atsilo_files/sidebar_delegato_rettore.jsp"
 <%@
 include file="atsilo_files/footer.jsp"
  %>
+
+
+
 </body>
 </html>

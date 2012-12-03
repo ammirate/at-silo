@@ -61,7 +61,7 @@ public class ControlDatiPersonali {
      * @throws GenitoreException
      * @throws SQLException 
      */
-    Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
+    public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
         Database db = new Database();
         DBGenitore genitore = new DBGenitore(db);
         
@@ -78,7 +78,11 @@ public class ControlDatiPersonali {
             db.chiudiConnessione();
         }
     }
-
+    
+    public Utente getUtenteFromUsername(String cf){
+        return null;
+        
+    }
     
     /**
      * Prende la classe bambino

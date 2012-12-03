@@ -11,7 +11,10 @@
 include file="atsilo_files/sidebar_genitore.jsp"
  %>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
-<form>
+<%@
+include file="atsilo_files/sidebar_top_iscrizione.jsp"
+ %>
+<form name="rinuncia" method="post" onSubmit="return confirm('Sei sicuro di voler cancellare la tua iscrizione all asilo? ');">
   <table width="80%" border="0" cellspacing="0">
     <tr>
     <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vuole fare richiesta di rinuncia all'iscrizione<br>
