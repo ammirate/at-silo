@@ -39,7 +39,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      * @return lista string
      */
     private static List<String> creaChiave(){
-        List<String> res=  Arrays.asList("id");// da chiarire
+        List<String> res=  Arrays.asList("id");
         
         return Collections.unmodifiableList(res);
     }
@@ -85,7 +85,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         DomandaQuestionario temp = new DomandaQuestionario();
         temp.setId(r.getString("id"));
         temp.setDescrizione(r.getString("descrizione"));
-        temp.getQuestionario().setId(r.getInt("questionario"));          
+        temp.setIdQuestionario(r.getInt("questionario"));          
         return temp;
     }
     
@@ -110,7 +110,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         if(res.next()){
             q.setId(res.getString("id"));
             q.setDescrizione(res.getString("descrizione"));
-            q.getQuestionario().setId(res.getInt("questionario"));    
+            q.setIdQuestionario(res.getInt("questionario"));  
             q.getRisposta().setId(res.getString("risposta"));
         }
         res.close();
@@ -139,7 +139,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
             
             temp.setId(res.getString("id"));
             temp.setDescrizione(res.getString("descrizione"));
-            temp.getQuestionario().setId(res.getInt("questionario"));
+            temp.setIdQuestionario(res.getInt("questionario"));  
             temp.getRisposta().setId(res.getString("risposta"));
             
             l.add(temp);

@@ -107,8 +107,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
         CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
-        temp.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
-        temp.getRispostaQuestionario().setId(res.getString("risposta_questionario"));
+        temp.setIdDomandaQuestionario(res.getString("domanda_questionario"));
+        temp.setIdRispostaQuestionario(res.getString("risposta_questionario"));
         temp.setTipo(res.getString("tipo"));
         temp.setDescrizione(res.getString("descrizione"));
         temp.setValore(res.getString("valore"));
@@ -132,8 +132,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         ResultSet res = stmt.executeQuery();
         
         while(res.next()){
-            c.getDomandaQuestionario().setId(res.getString("domanda_questionario"));
-            c.getRispostaQuestionario().setId(res.getString("risposta_questionario"));
+            c.setIdDomandaQuestionario(res.getString("domanda_questionario"));
+            c.setIdRispostaQuestionario(res.getString("risposta_questionario"));
             c.setTipo(res.getString("tipo"));
             c.setDescrizione(res.getString("descrizione"));
             c.setValore(res.getString("valore"));   
@@ -143,49 +143,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         return l;
     }
     
-    /**
-     * cerca le domande questionario alle quali il campo appartiene
-     * @param c campoDomandaQuestionario di cui ricercare le domanda di appartenenze
-     * @return lista di DomandeQuestionario o null
-     * @throws SQLException 
-     */
-    public List<DomandaQuestionario> ricercaDomandaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
-        
-        List<DomandaQuestionario> a=new ArrayList<DomandaQuestionario> ();
-        
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda_questionario = ?");
-        tabella.setParam(stmt, 1, "domanda_questionario", c.getDomandaQuestionario().getId());
-        ResultSet res = stmt.executeQuery();
-        for(CampoDomandaQuestionario c1: iteraResultSet(res)){
-            DomandaQuestionario d=c1.getDomandaQuestionario();
-            a.add(d);
-        }
-        
-        
-        res.close();
-        return a;
-    }
-    /**
-     * cerca le risposte questionario alle quali il campo appartiene
-     * @param c campo domanda questionario di cui trovare le risposte questionario
-     * @throws SQLException 
-     * @return lista di risposte questionario o null
-     */
-    public List<RispostaQuestionario> ricercaRispostaQuestionarioAppartenenza(CampoDomandaQuestionario c) throws SQLException{
-        
-        List<RispostaQuestionario> a= new ArrayList<RispostaQuestionario> ();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE risposta_questionario = ?");
-        tabella.setParam(stmt, 1, "risposta_questionario", c.getRispostaQuestionario().getId());
-        ResultSet res = stmt.executeQuery();
-        for(CampoDomandaQuestionario c1: iteraResultSet(res)){
-            RispostaQuestionario r= c1.getRispostaQuestionario();
-            a.add(r);
-        }
-        
-        res.close();
-        return a;
-    }
-    
 }
+    
+
+  
