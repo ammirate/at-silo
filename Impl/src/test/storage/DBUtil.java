@@ -51,10 +51,13 @@ public final class DBUtil {
             throws FileNotFoundException, SQLException {
         // Fetch query
         Scanner s = new Scanner(new File(rebaseScript));
-        Pattern stmtExpr = Pattern.compile(
-                "^([^\"'`;]*(\"[^\"]*\"|'[^']*'|`[^`]*`)?)+;", Pattern.MULTILINE);
+        /*Pattern stmtExpr = Pattern.compile(
+                "^([^\"'`;]*(\"[^\"]*\")?('[^']*')?(`[^`]*`)?)+;", Pattern.MULTILINE);*/
+        s.useDelimiter(";\\n");
         String stmt;
-        while ((stmt = s.findWithinHorizon(stmtExpr, 0)) != null) {
+        //while ((stmt = s.findWithinHorizon(stmtExpr, 0)) != null) {
+        while (s.hasNext()) {
+            stmt = s.next();
             db.prepareStatement(stmt).executeUpdate();
         }
         s.close();   
