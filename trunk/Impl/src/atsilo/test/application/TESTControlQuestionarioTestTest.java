@@ -22,6 +22,7 @@ import java.io.FileNotFoundException;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -37,6 +38,7 @@ import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
 import atsilo.storage.Database;
 
+import sun.util.resources.CalendarData;
 import test.storage.DBUtil;
 import test.storage.StubQuestionario;
 
@@ -61,6 +63,8 @@ public class TESTControlQuestionarioTestTest {
     public void testGetQuestionarioDaCompilare() throws DBConnectionException, QuestionarioException {
         ControlQuestionarioTest cq = ControlQuestionarioTest.getIstance();
         
+       Date dataI = new Date(2012, 1, 1);
+       Date dataF = new Date(2012,3,1);
         /*
          * ('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456',
          * 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)',
@@ -72,10 +76,10 @@ public class TESTControlQuestionarioTestTest {
         
         //Oracolo: questionari da compilare (preso da atsilo popolato.sql)
         Set<Questionario> oracolo = new HashSet<Questionario>(Arrays.asList(
-                new Questionario("QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI",
-                        null, "Controllo qualità", 1, /* manca */, /* manca */),
+                new Questionario("QUESTIONARIO CONTROLLO QUALITA ASILO NIDO - GRADIMENTO DEI GENITORI",
+                        null, "Controllo qualità", 1, dataI,  dataF),
                 new Questionario("Questionario relativo a X",
-                        null, "Questionario X", 2, /* manca */, /* manca */)
+                        null, "Questionario X", 2 ,dataI,dataF)
                 ));
         Set<Questionario> risultato = new HashSet<Questionario>(res);
         
