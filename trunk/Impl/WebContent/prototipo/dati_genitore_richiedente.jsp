@@ -15,7 +15,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
  
-<!--A seconda del tipo di genitore sar&agrave; incluso il file con il form dati adeguato -->
+<!--A seconda del tipo di genitore sarà incluso il file con il form dati adeguato -->
 <%@
 include file="atsilo_files/dati_genitore_richiedente_personale.jsp"
  %>

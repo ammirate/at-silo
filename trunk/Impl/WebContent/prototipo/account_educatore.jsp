@@ -1,7 +1,7 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
-
+<%@ include file="atsilo_files/modifica_dati_account.jsp" %>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -17,32 +17,9 @@ include file="atsilo_files/sidebar.jsp"
       <td><table border="0">
         <tbody>
           <tr>
-            <td class="tplTitolo"><form name="creazione_account" action="" method="post">
-        <table class="tabelle_form">
-          <tr> 
-        	<td>Username</td>
-       	 	<td><input name="username" type="text" id="username" maxlength="16" readonly="readonly"  /></td>
-          </tr>
-          <tr> 
-        	<td>Password</td>
-       	 	<td><input name="password" type="text" id="password" maxlength="20"  /></td>
-          </tr>
-          <tr> 
-        	<td>Indirizzo email</td>
-       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  /></td>
-          </tr>
-          <tr> 
-        	<td>&nbsp;</td>
-       	 	<td>&nbsp;</td>
-          </tr>
-        	<td></td>
-       	 	<td><input type="submit" name="modifica" value="Modifica dati " />
-                <input type="reset" name="reset" value="Annulla" />
-            </td>
-          </tr>
-          
-         </table>
-        </form>
+            <td class="tplTitolo"> 
+			<%@ include file="atsilo_files/form_modifica_account_impiegato.jsp" 
+			  %>
         </td>
             </tr>
           </tbody>
@@ -61,6 +38,7 @@ include file="atsilo_files/sidebar.jsp"
         </tbody>
       </table></td>
     </tr>
+
   </tbody>
 </table>
 </td><td class="fasciadxvariabile"></td>

@@ -1,6 +1,7 @@
-<%@
-	include file="atsilo_files/header.jsp"
-%>
+<%@ include file="atsilo_files/header.jsp" ,
+				 "atsilo_files/modifica_dati_account.jsp" %>
+
+ 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -21,35 +22,32 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
         <tbody>
           <tr>
             <td class="tplTitolo">
-            <form name="creazione_account" action="" method="post">
+            <form name="creazione_account" action="<%=action %>" method="post" onsubmit="CambioValoreForm();">
         <table class="tabelle_form">
           <tr> 
         	<td>Username</td>
-       	 	<td><input name="username" type="text" id="username" maxlength="16" readonly="readonly"  /></td>
+       	 	<td><input name="username" type="text" id="username" maxlength="16" value="<%=username %>" <%=readOnly %>  /></td>
           </tr>
           <tr> 
         	<td>Password</td>
-       	 	<td><input name="password" type="text" id="password" maxlength="20"  /></td>
+       	 	<td><input name="password" type="text" id="password" maxlength="20" value="non visualizzabile" <%=readOnly %>  /></td>
           </tr>
           <tr> 
         	<td>Indirizzo email</td>
-       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email"  />
-       	 	  *</td>
+       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email" value="<%=email %>" <%=readOnly %>  />
+       	 	  </td>
           </tr>
           <tr> 
         	<td>Profilo di appartenenza</td>
-       	 	<td><select disabled="disabled">
-       	 	  <option value="personale" selected="selected">Personale e studenti dell'Ateneo</option>
-       	 	  <option value="fisciano">Residenti nel Comune di Fisciano</option>
-       	 	  <option value="altri">Altre tipologie di utenze</option>
-            </select></td>
+       	 	<td><input name="tipologia_genitore" type="text" id="tipologia_genitore"  value="<%=tipologia_genitore %>" <%=readOnly %>  />
+       	 	  </td>
           </tr>
           <tr>
             <td>&nbsp;</td>
             <td><strong>N.B. All'indirizzo di posta elettronica verr&agrave; inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
           <tr> 
         	<td></td>
-       	 	<td><input type="submit" name="modifica" value="Modifica dati " />
+       	 	<td><input type="submit" name="modifica" value="<%=nome_bottone %> " />
                 <input type="reset" name="reset" value="Annulla" />
             </td>
           </tr>
