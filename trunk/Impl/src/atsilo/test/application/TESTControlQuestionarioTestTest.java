@@ -16,18 +16,28 @@
 
 package atsilo.test.application;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
+import java.io.FileNotFoundException;
 import java.sql.Date;
+import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.DomandaQuestionario;
+import atsilo.entity.Genitore;
 import atsilo.entity.Questionario;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
+import atsilo.storage.Database;
 
+import test.storage.DBUtil;
 import test.storage.StubQuestionario;
 
 /**
@@ -39,8 +49,37 @@ import test.storage.StubQuestionario;
  */
 public class TESTControlQuestionarioTestTest {
     
+    @Before
+    public void setUp() throws FileNotFoundException, SQLException {
+        Database db = new Database();
+        db.apriConnessione();
+        DBUtil.execScript(db, "../SDD/Dati Persistenti/atsilo popolato.sql");
+        db.chiudiConnessione();
+    }
+    
     @Test
-    public void test() {
+    public void testGetQuestionarioDaCompilare() throws DBConnectionException, QuestionarioException {
+        ControlQuestionarioTest cq = ControlQuestionarioTest.getIstance();
+        
+        /*
+         * ('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456',
+         * 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)',
+         * 'via Ferreria, 12 - Baronissi (SA)', 'INSEGNANTE', 'ISCRITTO')
+         */
+        List<Questionario> res = cq.getQuestionariDaCompilare(new Genitore(
+                null, null, null, "DCSGVN74A23B224X", null, null, null, null,
+                null, null, null));
+        
+        //Oracolo: questionari da compilare (preso da atsilo popolato.sql)
+        Set<Questionario> oracolo = new HashSet<Questionario>(Arrays.asList(
+                new Questionario("QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI",
+                        null, "Controllo qualità", 1, /* manca */, /* manca */),
+                new Questionario("Questionario relativo a X",
+                        null, "Questionario X", 2, /* manca */, /* manca */)
+                ));
+        Set<Questionario> risultato = new HashSet<Questionario>(res);
+        
+        assertEquals(oracolo, risultato);
     }
 
     
@@ -63,7 +102,7 @@ public class TESTControlQuestionarioTestTest {
     
     CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "uno", "1", "3");
     CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "due", "2", "3");
-    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "pi� di due", "2+", "3");
+    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "pi� di due", "2+", "3");
     
    
     
