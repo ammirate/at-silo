@@ -28,7 +28,7 @@ public class DBAccount extends DBBeans<Account>
      * @param nomeTabella
      * @param db
      */
-    public DBAccount(String nomeTabella,Database db){super(nomeTabella,db); }
+    public DBAccount(Database db){super("Account",db); }
     
     
     /**
