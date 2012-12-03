@@ -59,7 +59,6 @@ public class DBQuestionario extends DBBeans{
             q.setFlag_rinuncia(r.getString("flag_rinuncia"));
             q.setId(r.getInt("id"));
             q.setNome(r.getString("nome"));
-            q.setPathname(r.getString("pathname"));
             q.setPeriodo_fine(r.getDate("periodo_fine"));
             q.setPeriodo_inizio(r.getDate("periodo_inizio"));   
         }
@@ -118,7 +117,6 @@ public class DBQuestionario extends DBBeans{
             q.setFlag_rinuncia(res.getString("flag_rinuncia"));
             q.setId(res.getInt("id"));
             q.setNome(res.getString("nome"));
-            q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio")); 
             
@@ -151,7 +149,6 @@ public class DBQuestionario extends DBBeans{
             q.setFlag_rinuncia(res.getString("flag_rinuncia"));
             q.setId(res.getInt("id"));
             q.setNome(res.getString("nome"));
-            q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
             l.add(q);
@@ -183,7 +180,6 @@ public class DBQuestionario extends DBBeans{
             q.setFlag_rinuncia(res.getString("flag_rinuncia"));
             q.setId(res.getInt("id"));
             q.setNome(res.getString("nome"));
-            q.setPathname(res.getString("pathname"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio"));   
         }

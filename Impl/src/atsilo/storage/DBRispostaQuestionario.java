@@ -83,8 +83,8 @@ public class DBRispostaQuestionario extends DBBeans {
         {
             ris.setId(r.getString("id"));
             ris.setValore(r.getString("valore"));
-            ris.getGenitore().setCodiceFiscale(r.getString("genitore"));
-            ris.getDomanda().setId(r.getString("domanda"));           
+            ris.setCFgenitore(r.getString("genitore"));
+            ris.setIdDomanda(r.getString("domanda"));           
         }
         return ris;
     }
@@ -100,7 +100,7 @@ public class DBRispostaQuestionario extends DBBeans {
      */
     public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =null;
-        RispostaQuestionario r=new RispostaQuestionario();
+        RispostaQuestionario ris=new RispostaQuestionario();
         
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
@@ -111,12 +111,12 @@ public class DBRispostaQuestionario extends DBBeans {
         
         while (res.next()){
             
-            r.setId(res.getString("id"));
-            r.setValore(res.getString("valore"));
-            r.getGenitore().setCodiceFiscale(res.getString("genitore"));
-            r.getDomanda().setId(res.getString("domanda"));
+            ris.setId(res.getString("id"));
+            ris.setValore(res.getString("valore"));
+            ris.setCFgenitore(res.getString("genitore"));
+            ris.setIdDomanda(res.getString("domanda"));
             
-            l.add(r);
+            l.add(ris);
         }
         res.close();
         return l;
@@ -144,8 +144,8 @@ public class DBRispostaQuestionario extends DBBeans {
             
             r.setId(res.getString("id"));
             r.setValore(res.getString("valore"));
-            r.getGenitore().setCodiceFiscale(res.getString("genitore"));
-            r.getDomanda().setId(res.getString("domanda"));
+            r.setCFgenitore(res.getString("genitore"));
+            r.setIdDomanda(res.getString("domanda"));
             
             l.add(r);
         }
