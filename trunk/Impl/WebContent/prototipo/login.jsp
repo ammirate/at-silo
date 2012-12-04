@@ -108,7 +108,8 @@
     Tipologia utente
     <select name="tipologiaUtente">
       <option value="genitore" selected="selected">Genitore</option>
-      <option value="impiegato">Impiegato segreteria</option>
+      <option value="impiegato_asilo">Impiegato Asilo</option>
+      <option value="impiegato_bando">Impiegato Diritto allo studio</option>
       <option value="educatore">Educatore</option>
       <option value="psicopedagogo">Psicopedagogo</option>
       <option value="delegato_scfm">Resp. Scienze Formazione</option>
