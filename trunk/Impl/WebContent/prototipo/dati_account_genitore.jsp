@@ -1,5 +1,6 @@
-<%@ include file="atsilo_files/header.jsp" ,
-				 "atsilo_files/modifica_dati_account.jsp" %>
+<%@ include file="atsilo_files/header.jsp" %>
+<%@ include file="atsilo_files/modifica_dati_account.jsp" %>
+				 
 
  
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -22,7 +23,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
         <tbody>
           <tr>
             <td class="tplTitolo">
-            <form name="creazione_account" action="<%=action %>" method="post" onsubmit="<%CambioValoreForm();%>">
+            <form name="creazione_account" action="<%=action %>" method="post" onsubmit="<%CambioValoriForm();%>">
         <table class="tabelle_form">
           <tr> 
         	<td>Username</td>
