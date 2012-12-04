@@ -52,10 +52,13 @@ public class DBRegistro extends DBBeans
     
     
     
-    public boolean assegnaRegistroAClasse(Registro registro, Classe classe){
+    public boolean assegnaRegistroAClasse(int idRegistro, String IdClasse){
         //chiedere come implementare
         return false;
     }
+    
+    
+    
     
     public Registro ricercaRegistroPerClasse(Classe c) throws SQLException{
         Registro rg=null;
@@ -71,6 +74,10 @@ public class DBRegistro extends DBBeans
         r.close();
         return rg;
     }
+    
+    
+    
+    
     
     public Registro ricercaRegistroPerAnno(Date d) throws SQLException{
         Registro rg=null;

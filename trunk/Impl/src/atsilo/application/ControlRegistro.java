@@ -1,11 +1,13 @@
 package atsilo.application;
 
-import test.storage.StubClasse;
-import test.storage.StubRegistro;
+import java.sql.SQLException;
+
 import atsilo.entity.Classe;
 import atsilo.entity.Registro;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.RegistroException;
+import atsilo.storage.DBClasse;
+import atsilo.storage.DBRegistro;
 import atsilo.storage.Database;
 
 /*
@@ -41,13 +43,13 @@ public class ControlRegistro {
      */
     public void inserisciRegistro(Registro registro) throws RegistroException, DBConnectionException{
         Database db = new Database();
-        StubRegistro stub = new StubRegistro(db);
+        DBRegistro storage = new DBRegistro(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            if(!stub.inserisciRegistroNelDatabase(registro))
+            if(!storage.inserisci(registro))
                 throw new RegistroException("Inserimento fallito");
         }
         finally{
@@ -65,13 +67,18 @@ public class ControlRegistro {
      */
     public Registro getRegistro(Classe classe) throws DBConnectionException, RegistroException{
         Database db = new Database();
-        StubRegistro stub = new StubRegistro(db);
+        DBRegistro storage = new DBRegistro(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            Registro r = stub.ricercaRegistroPerClasse(classe);
+            Registro r;
+            try {
+                r = storage.ricercaRegistroPerClasse(classe);
+            } catch (SQLException e) {
+                throw new RegistroException("Registro non presente");
+            }
             if(r == null)
                 throw new RegistroException("Registro non trovato");
             return r;
@@ -92,16 +99,21 @@ public class ControlRegistro {
      */
     public void assegnaRegistro(Registro registro, Classe classe) throws DBConnectionException, RegistroException{
         Database db = new Database();
-        StubRegistro stubRegistro = new StubRegistro(db);
-        StubClasse stubClasse = new StubClasse(db);
+        DBRegistro storageRegistro = new DBRegistro(db);
+        DBClasse storageClasse = new DBClasse(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             //controllo prima se esiste la classe, se esiste le assegno il registro
-            Classe c = stubClasse.RicercaClassePerId(classe.getId());
+            Classe c;
+            try {
+                c = storageClasse.RicercaClassePerId(classe.getId());
+            } catch (SQLException e) {
+                throw new RegistroException("Errore SQL");
+            }
             if(c!=null)
-                if(!stubRegistro.assegnaRegistroAClasse(registro, classe))
+                if(!storageRegistro.assegnaRegistroAClasse(registro.getId(),classe.getId()));
                     throw new RegistroException("Assegnazione del registro alla classe fallita");
         }
         finally{

@@ -13,24 +13,28 @@ import atsilo.storage.Tabella;
 
 public class StubRegistro
 {
-    Registro r;
-    Database database;
+    Registro r,r1,r2;
+    EducatoreDidattico maestra;
     
-    public StubRegistro(Database db){
-        database=db;
-        r = new Registro();
+    public StubRegistro(){
+        maestra = new EducatoreDidattico(null, "antonio", "cesarano", "csrntn91l26c129j", "email@email.com", null, null, null, null, null);
+       
+        r = new Registro(1,null,1,maestra);
+        r1 = new Registro(2,null,2,maestra);
+        r2 = new Registro(1,null,3,maestra);
     }
         
     public boolean inserisciRegistroNelDatabase(Registro registro){
         return true;
     }
     
-    public boolean assegnaRegistroAClasse(Registro registro, Classe classe){
+    public boolean assegnaRegistroAClasse(int idRegistro, String IdClasse){
         return false;
     }
 
 
-    public Registro ricercaRegistroPerClasse(Classe c){
+    public Registro ricercaRegistroPerClasse(Classe classe){
+        
             return r;
     }
         
@@ -40,6 +44,7 @@ public class StubRegistro
     
     public List<EducatoreDidattico> ricercaEducatoriDidattici(){
         List<EducatoreDidattico> l = new ArrayList<EducatoreDidattico>();
+        l.add(maestra);
         return l;
     }   
 

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Registro {
 
-    private int Classe;
+    private int classe;
     private Date anno;
     private int id;
     
@@ -30,16 +30,14 @@ public class Registro {
      * @param anno il paramentro è fissato
      * @param id il paramentro è fissato
      * @param educatoreDidattico è settato dopo la lettura 
-     * @param listaAttivita è settato dopo la lettura 
      */
-    public Registro(int classe, Date anno, int id,
-            EducatoreDidattico educatoreDidattico, List<Attivita> listaAttivita) {
+    public Registro(int classe, Date anno, int id,EducatoreDidattico educatoreDidattico) {
         super();
-        Classe = classe;
+        classe = classe;
         this.anno = anno;
         this.id = id;
         this.educatoreDidattico = educatoreDidattico;
-        this.listaAttivita = listaAttivita;
+        this.listaAttivita = null;
     }
 
     /**
@@ -47,7 +45,7 @@ public class Registro {
      * @param Classe il parametro inserito
      */
     public void setClasse(int Classe) {
-        this.Classe = Classe;
+        this.classe = Classe;
     }
 
     /**
@@ -55,7 +53,7 @@ public class Registro {
      * @return classe il parametro inserito
      */
     public int getClasse() {
-        return Classe;
+        return classe;
     }
     
     /**
