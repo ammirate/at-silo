@@ -1,14 +1,14 @@
-<%@ page import="atsilo.application.*,atsilo.entity.*";%>
+<%@ page import="atsilo.application.*,atsilo.entity.*"%>
 <%
+
 	String dataInizioBando = "";
 	String dataFineBando = "";
 	ControlGestioneBando crtBando = ControlGestioneBando.getIstance();
-	Bando band = crtBando.getBando();
-	if((band.getDataFine() != null)){
-		dataInizioBando = band.getDataInizio();
+	if((crtBando.getBando().getDataInizio() != null)){
+		dataInizioBando = crtBando.getBando().getDataInizio();
 	}
-	if((band.getDataFine() != null)){
-		dataFineBando = band.getDataFine();
+	if((crtBando.getBando().getDataFine() != null)){
+		dataFineBando = crtBando.getBando().getDataFine();
 	}
 %>
 
