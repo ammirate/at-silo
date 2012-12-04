@@ -31,7 +31,7 @@ import atsilo.storage.Database;
  * @author Antonio Cesarano
  */
 public class ControlQuestionario {
-
+    
     private static final ControlQuestionario INSTANCE = new ControlQuestionario();   
     
     
@@ -47,10 +47,10 @@ public class ControlQuestionario {
      * @return true if the questionnaire was added correctly, else false
      */
     public void inserisciQuestionario(Questionario questionario) throws DBConnectionException, QuestionarioException {
-       
+        
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
-
+        
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -76,7 +76,7 @@ public class ControlQuestionario {
      * @return the questionnaire deleted
      */
     public void eliminaQuestionario(int id) throws DBConnectionException, QuestionarioException {
-
+        
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
         Questionario toReturn;
@@ -86,7 +86,7 @@ public class ControlQuestionario {
         try{
             
             if(!storage.delete(storage.getQuestionario(id)) );
-                throw new QuestionarioException("Questionario inesistente");
+            throw new QuestionarioException("Questionario inesistente");
         } catch (SQLException e) {
             throw new QuestionarioException("Impossibile eliminare il questionario. OPS this is embarrassing XD");
         }
@@ -103,7 +103,7 @@ public class ControlQuestionario {
      * @return true if the list was substituted correctly, else false
      */
     public void modificaQuestionario(int idQuestionario, Questionario newQuestionario) throws DBConnectionException,
-                                                                               QuestionarioException {
+    QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
         
@@ -129,22 +129,22 @@ public class ControlQuestionario {
      * @return true if the date was set correctly, else false
      */
     public void spostaDataInizio(int idQuestionario, Date newData) throws DBConnectionException,
-                                                                               QuestionarioException {
+    QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
-
+        
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-                Questionario q = storage.getQuestionario(idQuestionario);
-                q.setPeriodo_inizio(newData);
-                //sostituisco il questionario con la nuova data
-                if(!storage.replace(storage.getQuestionario(idQuestionario), q))
-                    throw new QuestionarioException("Operazione fallita");
-         }
+            Questionario q = storage.getQuestionario(idQuestionario);
+            q.setPeriodo_inizio(newData);
+            //sostituisco il questionario con la nuova data
+            if(!storage.replace(storage.getQuestionario(idQuestionario), q))
+                throw new QuestionarioException("Operazione fallita");
+        }
         catch (SQLException e) {
-                throw new QuestionarioException("Impossibile modificare la data di inizio del questionario");   
+            throw new QuestionarioException("Impossibile modificare la data di inizio del questionario");   
         } 
         finally{
             db.chiudiConnessione();
@@ -158,10 +158,10 @@ public class ControlQuestionario {
      * @return true if the date was set correctly, else false
      */
     public void spostaDataFine(int idQuestionario, Date newData) throws DBConnectionException,
-                                                                           QuestionarioException {
+    QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
-
+        
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -172,10 +172,10 @@ public class ControlQuestionario {
             //sostituisco il questionario con la nuova data
             if(!storage.replace(storage.getQuestionario(idQuestionario), q))
                 throw new QuestionarioException("Operazione fallita");
-     }
-    catch (SQLException e) {
+        }
+        catch (SQLException e) {
             throw new QuestionarioException("Impossibile modificare la data di fine del questionario");   
-    } 
+        } 
         finally{
             db.chiudiConnessione();
         }
@@ -193,7 +193,7 @@ public class ControlQuestionario {
     public List<Questionario> ricercaQuestionario(String nome) throws DBConnectionException, QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
-
+        
         List<Questionario> toReturn;
         
         if(!db.apriConnessione())
@@ -214,51 +214,38 @@ public class ControlQuestionario {
     
     
     
-
+    
     
     /**
      * Insert a answers list in a questionnaire. Every answer correspond to its question.
      * @param questionario is the questionnaire compiled
      * @param risposte is a answers list
+     * @param CFchiCompila is the parent key
      * @return true if the list was added correctly, else false
      * @throws DBConnectionException 
      * @throws QuestionarioException 
      */
-    public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila) throws DBConnectionException, QuestionarioException{
+    public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, String CFchiCompila) throws DBConnectionException, QuestionarioException{
         Database db = new Database();    
         DBQuestionario storage = new DBQuestionario(db);
         DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
         DBGenitore storageGenitore = new DBGenitore(db);
         DBCompilaQuestionario storageCompila = new DBCompilaQuestionario(db);
-       
+        
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            if(risposte.isEmpty())
+            if(risposte==null ||risposte.isEmpty())
                 throw new QuestionarioException("risposte non valide");
             
-       
-            try {
-                    Questionario questionario = storage.getQuestionario(idQuestionario);
-                    questionario.compila(risposte, chiCompila);
-                    storage.inserisci(questionario);   
-                    //aggiungere questionario a genitore
-                    //aggiungere genitore a questionario
-                    chiCompila.aggiungiQuestionarioCompilato(questionario);
-                    
-                    
-                    //
-                    //inserisce il questionario compilato nel database
-                    //
-                    CompilaQuestionario c = new CompilaQuestionario(idQuestionario, chiCompila.getCodiceFiscale());
-                    storageCompila.inserisci(c);
-
-            } catch (SQLException e) {
-                
-            }
+            //inserisce il questionario compilato nel database
+            CompilaQuestionario c = new CompilaQuestionario(idQuestionario, CFchiCompila);
+            storageCompila.inserisci(c); 
             
-            
+            //inserisco le risposte nel database
+            for(RispostaQuestionario r : risposte)
+                storageRisposte.inserisci(r);
         }
         finally{
             db.chiudiConnessione();
@@ -273,7 +260,7 @@ public class ControlQuestionario {
      * @return a questionnaires list
      * @throws QuestionarioException 
      */
-    public List<Questionario> getQuestionariDaCompilare(Genitore genitore) throws DBConnectionException, QuestionarioException {
+    public List<Questionario> getQuestionariDaCompilare(String CFgenitore) throws DBConnectionException, QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
         
@@ -281,13 +268,21 @@ public class ControlQuestionario {
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            
+       try{
+            List<Questionario> daRimuovere = new ArrayList<Questionario>();
             toReturn = storage.visualizzaQuestionariCompilabili();
-            for(Questionario q: toReturn)
-                if(!q.isCompilatoDa(genitore))
-                    toReturn.remove(q);
             
+            if(!toReturn.isEmpty())
+              for(Questionario q: toReturn){
+                if(q.isCompilatoDa(CFgenitore))
+                    daRimuovere.add(q);
+              }
+            
+            //uso quest'altro ciclo perchè modificando toReturn in quello precedente 
+            //viene lanciata una ConcurrentModificationException
+            for(Questionario q : daRimuovere)
+                toReturn.remove(q);
+           
             return toReturn;
         } 
         catch (SQLException e){
@@ -298,22 +293,22 @@ public class ControlQuestionario {
         }
     }
     
-
+    
     
     /**
      * This method has to be called when you want a full questionnaire
-     * @param genitore is who has to fill the questionnaire
-     * @param genitore is the parent for whom the method loads the questionnaires
+     * @param idQuestionario is the questionnaire key
+     * @param CFgenitore is the parent key for whom the method loads the questionnaires
      * @return a full questionnaire with all questions and all question fields
      * @throws DBConnectionException
      * @throws SQLException 
      */
-    public Questionario caricaQuestionarioDaCompilare(int idQuestionario, Genitore genitore) throws DBConnectionException, SQLException{
+    public Questionario caricaQuestionarioDaCompilare(int idQuestionario, String CFgenitore) throws DBConnectionException, SQLException{
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
         DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
         DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
-                
+        
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -348,7 +343,7 @@ public class ControlQuestionario {
     public void inserisciDomanda(int idQuestionario, DomandaQuestionario domanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
-
+        
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -374,7 +369,7 @@ public class ControlQuestionario {
     public void eliminaDomanda(String idDomanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
-
+        
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -388,7 +383,7 @@ public class ControlQuestionario {
         finally{
             db.chiudiConnessione();
         }
-    
+        
     }
     
     
@@ -404,7 +399,7 @@ public class ControlQuestionario {
     public void modificaDomanda(String idVecchiaDomanda, DomandaQuestionario newDomanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
-
+        
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -422,7 +417,7 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
-   
+    
     
     
     /**
@@ -439,7 +434,7 @@ public class ControlQuestionario {
     public List<Questionario> getAllQuestionari() throws DBConnectionException{
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
-
+        
         Iterable<Questionario> iter;
         List<Questionario> toReturn = new ArrayList<Questionario>();
         
@@ -457,7 +452,7 @@ public class ControlQuestionario {
     }
     
     
-
+    
     
     /**
      * Gets the single istance of this class

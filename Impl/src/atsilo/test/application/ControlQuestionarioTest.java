@@ -7,6 +7,7 @@ import java.util.List;
 
 import test.storage.StubCampoDomandaQuestionario;
 import test.storage.StubDomandaQuestionario;
+import test.storage.StubGenitore;
 import test.storage.StubQuestionario;
 import test.storage.StubRispostaQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
@@ -237,49 +238,28 @@ public class ControlQuestionarioTest {
       * Insert a answers list in a questionnaire. Every answer correspond to its question.
       * @param questionario is the questionnaire compiled
       * @param risposte is a answers list
+      * @param chiCompila is the parent key who fill the questionnaire
       * @return true if the list was added correctly, else false
       * @throws DBConnectionException 
       * @throws QuestionarioException 
       */
-    public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, Genitore chiCompila) throws DBConnectionException, QuestionarioException{
+    public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, String chiCompila) throws DBConnectionException, QuestionarioException, SQLException{
         Database db = new Database();    
         StubQuestionario storage = new StubQuestionario();
-        DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
-        DBGenitore storageGenitore = new DBGenitore(db);
-        DBCompilaQuestionario storageCompila = new DBCompilaQuestionario(db);
+        StubRispostaQuestionario storageRisposte = new StubRispostaQuestionario();
+        StubGenitore storageGenitore = new StubGenitore(db);
+       // StubCompilaQuestionario storageCompila = new StubCompilaQuestionario(db);
         
         
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            if(risposte.isEmpty())
+        if(risposte==null ||risposte.isEmpty())
                 throw new QuestionarioException("risposte non valide");
             
             
-            try {
-                Questionario questionario = storage.getQuestionario(idQuestionario);
-                questionario.compila(risposte, chiCompila);
-                storage.inserisci(questionario);   
-                //aggiungere questionario a genitore
-                //aggiungere genitore a questionario
-                chiCompila.aggiungiQuestionarioCompilato(questionario);
-                
-                
-                //
-                //inserisce il questionario compilato nel database
-                //
-                CompilaQuestionario c = new CompilaQuestionario(idQuestionario, chiCompila.getCodiceFiscale());
-                storageCompila.inserisci(c);
-                
-            } catch (SQLException e) {
-                
-            }
+            CompilaQuestionario c = new CompilaQuestionario(idQuestionario, chiCompila);
+            System.out.println("*****Compilazione questinoario*******");
+          //  storageCompila.inserisci(c);
             
-            
-        }
-        finally{
-            db.chiudiConnessione();
-        }
+       
     }
     
     
@@ -290,29 +270,32 @@ public class ControlQuestionarioTest {
      * @return a questionnaires list
      * @throws QuestionarioException 
      */
-    public List<Questionario> getQuestionariDaCompilare(Genitore genitore) throws DBConnectionException, QuestionarioException {
+    public List<Questionario> getQuestionariDaCompilare(String genitore) throws DBConnectionException, QuestionarioException {
         Database db = new Database();
         StubQuestionario storage = new StubQuestionario();
         
         List<Questionario> toReturn = new ArrayList<Questionario>();
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
+        List<Questionario> daRimuovere = new ArrayList<Questionario>();
+       try{
             
             toReturn = storage.visualizzaQuestionariCompilabili();
-            for(Questionario q: toReturn)
-                if(!q.isCompilatoDa(genitore))
-                    toReturn.remove(q);
+            
+            if(!toReturn.isEmpty())
+              for(Questionario q: toReturn){
+                if(q.isCompilatoDa(genitore))
+                    daRimuovere.add(q);
+              }
+            
+            for(Questionario q : daRimuovere)
+                toReturn.remove(q);
+            
             
             return toReturn;
         } 
         catch (SQLException e){
             throw new QuestionarioException("Errore caricamento questionari");
         }
-        finally{
-            db.chiudiConnessione();
-        }
+        
     }
     
     
@@ -325,11 +308,11 @@ public class ControlQuestionarioTest {
      * @throws DBConnectionException
      * @throws SQLException 
      */
-    public Questionario caricaQuestionarioDaCompilare(int idQuestionario, Genitore genitore) throws DBConnectionException, SQLException{
+    public Questionario caricaQuestionarioDaCompilare(int idQuestionario, String genitore) throws DBConnectionException, SQLException{
         Database db = new Database();
         StubQuestionario storage = new StubQuestionario();
-        DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
-        DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+        StubDomandaQuestionario storageDomande= new StubDomandaQuestionario();
+        StubCampoDomandaQuestionario storageCampi = new StubCampoDomandaQuestionario();
         
         Questionario toReturn = storage.getQuestionario(idQuestionario);
         //setto le domande del questionario
