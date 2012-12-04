@@ -25,8 +25,11 @@ import atsilo.storage.Database;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.Iterator;
 
 import org.apache.tomcat.dbcp.dbcp.DbcpException;
+
+import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import test.storage.StubEvento;
 
@@ -39,9 +42,12 @@ public class ControlGestioneBando {
     {
     }
     /**
+     * 
      * inserisce il punteggio nella domanda passata in input
      * @param iscrizione
+     * la domanda di iscrizione non può essere null
      * @param punteggio
+     * punteggio deve essere negativo
      * @return
      * @throws DBConnectionException
      * @throws BandoException
@@ -60,17 +66,18 @@ public class ControlGestioneBando {
             dbBando = new DBBando(db);
             dbDomandaIscrizione = new DBDomandaIscrizione(db);
             
-            DomandaIscrizione domadandaDaModificare=new DomandaIscrizione();
+            DomandaIscrizione domandaDaModificare=new DomandaIscrizione();
             try 
             {
-                domadandaDaModificare=dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
+                domandaDaModificare=dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
             } catch (SQLException e) 
             {
                 throw new DBConnectionException("Connessione Fallita");
             }
-            if(domadandaDaModificare==null)
+            if(domandaDaModificare==null)
                 throw new BandoException("domanda non trovata");
-            domadandaDaModificare.setPunteggio(punteggio);
+            domandaDaModificare.setPunteggio(punteggio);
+            dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             return true;
         } finally {
             /*
@@ -154,6 +161,30 @@ public class ControlGestioneBando {
         {
             db.chiudiConnessione();
         }
+    }
+    Bando getBando() throws DBConnectionException
+    {Database db = new Database();
+    if (!db.apriConnessione()) 
+    {
+        throw new DBConnectionException("Connessione Fallita");  
+    }
+    
+    try 
+    {
+        DBBando dbBando=new DBBando(db);
+        Iterable<Bando> bandi=dbBando.getAll();
+        Bando bando=null;
+        if(bandi.iterator().hasNext())
+          bando= bandi.iterator().next();
+        
+        return bando;
+    } 
+    finally 
+    {
+        db.chiudiConnessione();
+    }
+    
+     
     }
     
     public static ControlGestioneBando getIstance() {
