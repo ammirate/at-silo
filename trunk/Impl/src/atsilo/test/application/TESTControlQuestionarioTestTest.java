@@ -70,9 +70,7 @@ public class TESTControlQuestionarioTestTest {
          * 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)',
          * 'via Ferreria, 12 - Baronissi (SA)', 'INSEGNANTE', 'ISCRITTO')
          */
-        List<Questionario> res = cq.getQuestionariDaCompilare(new Genitore(
-                null, null, null, "DCSGVN74A23B224X", null, null, null, null,
-                null, null, null));
+        List<Questionario> res = cq.getQuestionariDaCompilare("csrntn91l26c129j");
         
         //Oracolo: questionari da compilare (preso da atsilo popolato.sql)
         Set<Questionario> oracolo = new HashSet<Questionario>(Arrays.asList(

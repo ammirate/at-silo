@@ -200,9 +200,9 @@ public class Questionario {
      * @param genitore è il genitore da confrontare con la lista dei genitori
      * 
      */
-    public boolean isCompilatoDa(Genitore genitore){
+    public boolean isCompilatoDa(String genitore){
         for(Genitore g: listaGenitori)
-            if(genitore.getCodiceFiscale().equalsIgnoreCase(g.getCodiceFiscale()))
+            if(genitore.equalsIgnoreCase(g.getCodiceFiscale()))
                 return true;
         return false;
     }
@@ -223,6 +223,19 @@ public class Questionario {
                 }
         this.listaGenitori.add(chiCompila);
         
+    }
+    
+    
+    public String toString(){
+        String genitori="listaGenitori";
+        String domande="listaDomande";
+        
+        if(listaGenitori.isEmpty() || listaGenitori==null)
+            genitori = "[vuota]";
+        if(this.domande.isEmpty() || this.domande==null)
+            domande="[null]";
+        
+        return "ID: "+getId()+ " Nome:"+getNome()+" Domande:"+domande+" Genitori:"+genitori;
     }
     
     

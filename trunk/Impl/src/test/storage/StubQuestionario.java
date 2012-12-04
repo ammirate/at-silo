@@ -22,14 +22,11 @@ public class StubQuestionario {
         public void inserisci(Questionario q){
             //simulo inserimento nel database
         }
-         /**
-          * Ricerca nel database un questionario a 
-          * seconda del nome fornito in input.
-          * Il metodo provvede a caricare un istanza di una lista di Questionari 
-          * @param n      Nome del questionario da ricercare
-          * @return lista di questionario oppure Null
-          * @throws SQLException
-          */
+        
+        
+        
+        
+        
         public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
             
              List<Questionario> list = new ArrayList<Questionario>();
@@ -43,33 +40,27 @@ public class StubQuestionario {
              return list;
          }
          
-         /**
-          * Ricerca nel database la lista dei questionari
-          * che possono essere compilati.
-          * Il metodo provvede a caricare un istanza di una lista di Questionario
-          * @return lista di questionario oppure Null
-          * @throws SQLException
-          */
+        
+        
+         
          
          public List<Questionario> visualizzaQuestionariCompilabili() throws SQLException{
             
-             List<Questionario> l=null;
+             List<Questionario> l= new ArrayList<Questionario>();
 
              Date dataInizio = new Date(2012, 1, 1);
              Date dataFine = new Date(2012,3,31);
              Questionario q = new Questionario("inizio anno", "no", "inizio", 1, dataInizio, dataFine);
+             Questionario q1 = new Questionario("meta anno", "no", "meta", 2, dataInizio, dataFine);
              l.add(q);
+             l.add(q1);
              return l;
          }
             
-         /**
-          * Ricerca nel database un questionario a secondo dell'
-          *  id fornito in input.
-          * Il metodo provvede a caricare un istanza di un Questionario
-          * @param idQuestionario Id del questionario da ricercare
-          * @return questionario oppure Null
-          * @throws SQLException
-          */
+       
+         
+         
+         
           public Questionario getQuestionario(int idQuestionario) throws SQLException{
               
 
