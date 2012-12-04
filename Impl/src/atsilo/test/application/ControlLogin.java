@@ -17,9 +17,9 @@ public class ControlLogin {
      * Username  password e tipologie di utenti per il funzionamento stub
      * L'username in posizione n, avrà come password l'elemento in posizione n dell'array passwords e come tipologia l'elemento in posizione n dell'array tipology
      */
-    private static final String[] usernames = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" }; 
-    private static final String[] passwords = {"genitore", "impiegato", "educatore","psicopedagogo","scienzeformazione","delegatorettore" };
-    private static final String[] tipology =  {"genitore", "impiegato", "educatore","psicopedagogo","delegato_scfm","delegato_rettore" };
+    private static final String[] usernames = {"genitore", "impiegato_asilo", "impiegato_bando","educatore","psicopedagogo","scienzeformazione","delegatorettore" }; 
+    private static final String[] passwords = {"genitore", "impiegato_asilo", "impiegato_bando","educatore","psicopedagogo","scienzeformazione","delegatorettore" };
+    private static final String[] tipology =  {"genitore", "impiegato_asilo", "impiegato_bando","educatore","psicopedagogo","delegato_scfm","delegato_rettore" };
    
     /**
      * Metodo costruttore

@@ -28,7 +28,7 @@ public class ServletControlLogin extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public ServletControlLogin() {
-         login = login.getInstance();
+         login = ControlLogin.getInstance();
         
     }
 
