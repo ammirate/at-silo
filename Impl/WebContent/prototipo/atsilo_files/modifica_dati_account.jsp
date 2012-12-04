@@ -1,8 +1,7 @@
 <%@ page import="atsilo.test.application.*,atsilo.entity.*";
  %>
  <% 
-	ControlDatiPersonali cdt=null;
- 	cdt.getIstance();
+	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
  	Utente utente=cdt.getUtenteFromUsername(username);
  	String email=utente.getEmail();
  	String tipologia_genitore=cdt.getDatiGenitore(utente.getCodiceFiscale()).getTipo();
