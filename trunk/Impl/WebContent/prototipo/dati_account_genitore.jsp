@@ -22,7 +22,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
         <tbody>
           <tr>
             <td class="tplTitolo">
-            <form name="creazione_account" action="<%=action %>" method="post" onsubmit="CambioValoreForm();">
+            <form name="creazione_account" action="<%=action %>" method="post" onsubmit="<%CambioValoreForm();%>">
         <table class="tabelle_form">
           <tr> 
         	<td>Username</td>
