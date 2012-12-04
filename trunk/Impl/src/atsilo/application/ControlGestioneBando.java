@@ -46,7 +46,7 @@ public class ControlGestioneBando {
      * @throws DBConnectionException
      * @throws BandoException
      */
-    boolean insrisciPunteggio(DomandaIscrizione iscrizione,int punteggio) throws DBConnectionException,BandoException
+    boolean inserisciPunteggio(DomandaIscrizione iscrizione,int punteggio) throws DBConnectionException,BandoException
     {
         Database db = new Database();
         
