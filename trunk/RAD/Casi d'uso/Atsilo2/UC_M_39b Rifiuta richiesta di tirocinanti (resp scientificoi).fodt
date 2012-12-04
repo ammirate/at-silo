@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-23T10:12:42.91</meta:creation-date><meta:editing-duration>PT3M48S</meta:editing-duration><meta:editing-cycles>10</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-01T09:37:35.06</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="21" meta:word-count="144" meta:character-count="1050" meta:non-whitespace-character-count="932"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-23T10:12:42.91</meta:creation-date><meta:editing-duration>PT3M48S</meta:editing-duration><meta:editing-cycles>11</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-04T11:39:28.34</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="21" meta:word-count="144" meta:character-count="1044" meta:non-whitespace-character-count="926"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">5784</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">17353</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">13148</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">36821</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">14930</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">8715</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">4066</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">18411</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">15891</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">17351</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">13146</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">5784</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">36819</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">20712</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1398532</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1424071</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -476,6 +476,9 @@
   <style:style style:name="T4" style:family="text">
    <style:text-properties officeooo:rsid="00155704"/>
   </style:style>
+  <style:style style:name="T5" style:family="text">
+   <style:text-properties officeooo:rsid="0015bac7"/>
+  </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix=")" style:num-format="a">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
@@ -581,7 +584,7 @@
       <text:p text:style-name="P1">Entry condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Standard">L&apos;utente accede al sistema e viene riconosciuto come <text:span text:style-name="T1">Responsabile Scientifico</text:span><text:line-break/>Un impiegato deve aver fatto una richiesta specifica (UC_M_8 Richiesta tirocinante)</text:p>
+      <text:p text:style-name="Standard">L&apos;utente accede al sistema e viene riconosciuto come <text:span text:style-name="T1">Responsabile </text:span><text:span text:style-name="T5">Tirocini</text:span><text:line-break/>Un impiegato deve aver fatto una richiesta specifica (UC_M_8 Richiesta tirocinante)</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.5">
@@ -589,7 +592,7 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list29501637" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list31520329" text:style-name="Numerazione_20_UC">
        <text:list-item text:start-value="1">
         <text:p text:style-name="Azione_20_attore">Il <text:span text:style-name="T2">responsabile</text:span> accede alla sua area personale.</text:p>
        </text:list-item>
@@ -618,7 +621,7 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list29497443" text:style-name="L1">
+      <text:list xml:id="list31508386" text:style-name="L1">
        <text:list-item text:start-value="1">
         <text:p text:style-name="P6">Il sistema mostra all&apos;utente un messaggio di errore che indica l&apos;errore verificatosi.</text:p>
        </text:list-item>
@@ -635,7 +638,7 @@
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="Caption">UC_M_42_Il <text:span text:style-name="T2">responsabile scientifico</text:span> rifiuta una richiesta di tirocinanti</text:p>
+   <text:p text:style-name="Caption">UC_M_42_Il <text:span text:style-name="T2">responsabile </text:span><text:span text:style-name="T5">tirocini</text:span> rifiuta una richiesta di tirocinanti</text:p>
   </office:text>
  </office:body>
 </office:document>
