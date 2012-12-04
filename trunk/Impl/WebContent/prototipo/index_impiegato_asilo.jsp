@@ -1,11 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<% 
-	
-%>
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -13,9 +9,10 @@
 </tr>
 </tbody></table>
 <%@
-include file="atsilo_files/sidebar_direttore.jsp"
+include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
  %>
- 
+
+<br>
 <img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
 <table width="100%">
 <tbody><tr>
