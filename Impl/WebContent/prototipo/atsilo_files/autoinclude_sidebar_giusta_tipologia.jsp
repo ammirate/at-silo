@@ -20,7 +20,7 @@
    <%@include file="sidebar.jsp"%>
 
 <% } else if ( tipologia.equals("psicopedagogo")) { %>
-   <%@include file="sidebar_index.jsp"%>
+   <%@include file="sidebar_ped.jsp"%>
 
 <% } else if ( tipologia.equals("genitore")) { %>
    <%@include file="sidebar_genitore.jsp"%>
