@@ -32,12 +32,20 @@ public class StubBambino
         b = new Bambino();
     }
         
-    public Bambino ricercaBambino(Bambino b){
+    public Bambino ricercaBambino(String cf){
         return b;
     }
     
     public Bambino rimuoviIscritto(Bambino b){
         return b;
+    }
+    
+    public Boolean delete(Bambino b){
+        return true;
+    }
+    
+    public Boolean inserisci(Bambino b){
+        return true;
     }
 
 }

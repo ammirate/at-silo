@@ -3,12 +3,12 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: StubGenitore.java
+ * FILE: StubAccount.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Elisa, 28/nov/2012
+ * Elisa, 04/dic/2012
  * REVISION
  * <nome revisore>, <data revisione>
  *-----------------------------------------------------------------
@@ -16,32 +16,29 @@
 
 package test.storage;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-import atsilo.entity.Genitore;
+import atsilo.entity.Account;
+import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
 
-
-
-public class StubGenitore
+public class StubAccount
 {
-    Genitore g;
+    Account a;
     Database database;
     
-    public StubGenitore(Database db){
+    public StubAccount(Database db){
         database=db;
-        g = new Genitore();
+        a = new Account();
     }
         
-    public Genitore ricercaGenitore(String cf){
-        return g;
-    }
-    
-    public boolean inserisciGenitore(Genitore g){
+    public boolean inserisci(Account a){
         return true;
     }
     
+    public Account ricercaAccount(String codiceFiscale){
+        return a;
+    }
+
+
 
 }
