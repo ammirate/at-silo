@@ -30,8 +30,9 @@ public class StubUtente
         u = new Utente();
     }
         
-    public Utente ricercaUtente(String cf){
-        return u;
+    public Utente ricercaUtente(Utente utente){
+        Utente utente1=new Utente();
+        return utente1;
     }
     
     public boolean inserisci(Utente u){
