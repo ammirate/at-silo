@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-19T10:44:41.20</meta:creation-date><meta:editing-duration>PT43M10S</meta:editing-duration><meta:editing-cycles>22</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-29T17:34:16.07</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="24" meta:word-count="179" meta:character-count="1205" meta:non-whitespace-character-count="1053"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-19T10:44:41.20</meta:creation-date><meta:editing-duration>PT43M10S</meta:editing-duration><meta:editing-cycles>23</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-04T20:08:37.90</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="24" meta:word-count="179" meta:character-count="1205" meta:non-whitespace-character-count="1053"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">11049</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">54682</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">24784</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">31487</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">16965</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">13282</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">15923</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">7243</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">16134</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">54681</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">24783</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">11049</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">31485</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">28012</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2004095</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2029294</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -491,21 +491,21 @@
   <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-left="-0.071cm" fo:margin-right="0.007cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
   </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="Numerazione_20_UC">
-   <style:text-properties officeooo:rsid="001b9679" officeooo:paragraph-rsid="001b9679"/>
-  </style:style>
-  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
    <style:text-properties officeooo:paragraph-rsid="001b11ae"/>
   </style:style>
-  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
    <style:text-properties officeooo:paragraph-rsid="001b9679"/>
   </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
    <style:text-properties officeooo:rsid="001b9679" officeooo:paragraph-rsid="001b9679"/>
   </style:style>
-  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="Numerazione_20_UC">
+   <style:text-properties officeooo:rsid="001b9679" officeooo:paragraph-rsid="001b9679"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="001b11ae"/>
@@ -634,18 +634,18 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list37492250" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list40233559" text:style-name="Numerazione_20_UC">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P16">Genitore <text:s/>accede alla pagina contente il form di compilazione.</text:p>
+        <text:p text:style-name="P15">Genitore <text:s/>accede alla pagina contente il form di compilazione.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_sistema">Il sistema mostra la pagina richiesta ed attende un eventuale commit.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P17">Genitore <text:s/>inizia la compilazione dei campi del richiedente:</text:p>
-        <text:p text:style-name="P17"><text:span text:style-name="T2">-</text:span> tipo di servizio desiderato.</text:p>
-        <text:p text:style-name="P18">- situazione sanitaria del bambino</text:p>
-        <text:p text:style-name="P14">e viene a conoscenza di dover consegnare manualmente i certificati relativi a malattie, vaccinazioni e liberatoria per la privacy.</text:p>
+        <text:p text:style-name="P16">Genitore <text:s/>inizia la compilazione dei campi del richiedente:</text:p>
+        <text:p text:style-name="P16"><text:span text:style-name="T2">-</text:span> tipo di servizio desiderato.</text:p>
+        <text:p text:style-name="P17">- situazione sanitaria del bambino</text:p>
+        <text:p text:style-name="P19">e viene a conoscenza di dover consegnare manualmente i certificati relativi a malattie, vaccinazioni e liberatoria per la privacy.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="P5"><text:span text:style-name="T2">Genitore s</text:span>ottomette la domanda.</text:p>
@@ -669,9 +669,9 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list37493826" text:style-name="L1">
+      <text:list xml:id="list40205657" text:style-name="L1">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P15"><text:s/>Nel caso di errata compilazione dei campi, il sistema mostra all’utente una schermata di errore e invita alla revisione del campo interrato.</text:p>
+        <text:p text:style-name="P14"><text:s/>Nel caso di errata compilazione dei campi, il sistema mostra all’utente una schermata di errore e invita alla revisione del campo interrato.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
@@ -685,7 +685,7 @@
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P4">UC_A_<text:span text:style-name="T4">7</text:span><text:span text:style-name="T5">7</text:span><text:span text:style-name="T4"> </text:span>Comp<text:span text:style-name="T3">letamento iscrizione per bambini accettati</text:span></text:p>
+   <text:p text:style-name="Caption">UC_A_<text:span text:style-name="T4">7</text:span><text:span text:style-name="T5">7</text:span><text:span text:style-name="T4"> </text:span>Comp<text:span text:style-name="T3">letamento iscrizione per bambini accettati</text:span></text:p>
   </office:text>
  </office:body>
 </office:document>

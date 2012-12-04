@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-10-19T10:44:41.20</meta:creation-date><meta:editing-duration>PT43M16S</meta:editing-duration><meta:editing-cycles>20</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-04T19:08:26.78</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="53" meta:word-count="402" meta:character-count="2486" meta:non-whitespace-character-count="2164"/></office:meta>
+ <office:meta><meta:creation-date>2012-10-19T10:44:41.20</meta:creation-date><meta:editing-duration>PT43M16S</meta:editing-duration><meta:editing-cycles>21</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-04T19:52:25.47</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="53" meta:word-count="402" meta:character-count="2486" meta:non-whitespace-character-count="2164"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">30268</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">32808</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">28339</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">14448</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">15268</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">13575</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">35918</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">5669</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">37885</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">30268</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">32808</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">28337</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">44715</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">48075</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">1932677</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2014334</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -457,39 +457,66 @@
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties style:font-name="Arial" fo:font-size="11pt" fo:font-style="italic" fo:font-weight="normal" style:font-size-asian="11pt" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-size-complex="11pt" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:rsid="00218d5c"/>
   </style:style>
-  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4"/>
-  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L1"/>
-  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L2"/>
-  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L2">
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:text-properties officeooo:paragraph-rsid="001bdb2a"/>
   </style:style>
-  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:text-properties officeooo:rsid="001dca52"/>
   </style:style>
-  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001c6a97"/>
   </style:style>
-  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Azione_20_attore">
    <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001bdb2a"/>
   </style:style>
-  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L3">
-   <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001c6a97"/>
-  </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L1"/>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="Numerazione_20_UC">
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:paragraph-rsid="001c6a97"/>
   </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L2"/>
-  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L2">
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:paragraph-rsid="001bdb2a"/>
   </style:style>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L2">
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
    <style:text-properties officeooo:rsid="001dca52" officeooo:paragraph-rsid="001bdb2a"/>
   </style:style>
-  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L3">
+  <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Azione_20_sistema">
+   <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001c6a97"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L4">
+   <style:text-properties officeooo:rsid="00218d5c"/>
+  </style:style>
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4"/>
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L1"/>
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L2"/>
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L2">
+   <style:text-properties officeooo:paragraph-rsid="001bdb2a"/>
+  </style:style>
+  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Azione_20_attore">
+   <style:text-properties officeooo:rsid="001dca52"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+   <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001c6a97"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="Numerazione_20_UC">
+   <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001bdb2a"/>
+  </style:style>
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Azione_20_attore" style:list-style-name="L3">
+   <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001c6a97"/>
+  </style:style>
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L1"/>
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="Numerazione_20_UC">
+   <style:text-properties officeooo:paragraph-rsid="001c6a97"/>
+  </style:style>
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L2"/>
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L2">
+   <style:text-properties officeooo:paragraph-rsid="001bdb2a"/>
+  </style:style>
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L2">
+   <style:text-properties officeooo:rsid="001dca52" officeooo:paragraph-rsid="001bdb2a"/>
+  </style:style>
+  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Azione_20_sistema" style:list-style-name="L3">
    <style:text-properties officeooo:rsid="001c6a97" officeooo:paragraph-rsid="001c6a97"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
@@ -706,58 +733,6 @@
     </style:list-level-properties>
    </text:list-level-style-number>
   </text:list-style>
-  <text:list-style style:name="L5">
-   <text:list-level-style-number text:level="1" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="2" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="3" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="4" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="5" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="6" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="7" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="8" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="9" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="10" style:num-suffix=")" style:num-format="a">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-  </text:list-style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -818,7 +793,7 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list39226158" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list39642605" text:style-name="Numerazione_20_UC">
        <text:list-item text:start-value="1">
         <text:p text:style-name="Azione_20_attore"><text:s text:c="2"/><text:span text:style-name="T1">Il genitore </text:span>accede alla pagina contente il form di compilazione.</text:p>
        </text:list-item>
@@ -829,113 +804,113 @@
         <text:p text:style-name="Azione_20_attore"><text:span text:style-name="T1">Il genitore </text:span><text:s/>inizia la compilazione dei campi del richiedente:</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39221933" text:style-name="L1">
+      <text:list xml:id="list39645647" text:style-name="L1">
        <text:list-item>
-        <text:p text:style-name="P12">Nome : stringa di caratteri</text:p>
+        <text:p text:style-name="P21">Nome : stringa di caratteri</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">Cognome: stringa di caratteri</text:p>
+        <text:p text:style-name="P14">Cognome: stringa di caratteri</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P12">Luogo di nascita: stringa di caratteri</text:p>
+        <text:p text:style-name="P21">Luogo di nascita: stringa di caratteri</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">Data di nascita: sequenza di interi</text:p>
+        <text:p text:style-name="P14">Data di nascita: sequenza di interi</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P12">Residenza: stringa di caratteri</text:p>
+        <text:p text:style-name="P21">Residenza: stringa di caratteri</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">indirizzo: stringa di caratteri</text:p>
+        <text:p text:style-name="P14">indirizzo: stringa di caratteri</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P12">telefono: sequenza di interi</text:p>
+        <text:p text:style-name="P21">telefono: sequenza di interi</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P5">email: stringa di caratteri</text:p>
-       </text:list-item>
-      </text:list>
-      <text:list xml:id="list39207743" text:continue-list="list39226158" text:style-name="Numerazione_20_UC">
-       <text:list-item>
-        <text:p text:style-name="P13"><text:s/>Continua compilando la sezione relativa ai dati bambino:</text:p>
+        <text:p text:style-name="P14">email: stringa di caratteri</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39233768" text:style-name="L2">
+      <text:list xml:id="list39649386" text:continue-list="list39642605" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P14">Nome : stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P6">Cognome: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P14">Luogo di nascita: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P6">Data di nascita: sequenza di interi</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P14">Residenza: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P6">indirizzo: stringa di caratteri</text:p>
+        <text:p text:style-name="P22"><text:s/>Continua compilando la sezione relativa ai dati bambino:</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39221912" text:continue-list="list39207743" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list39664362" text:style-name="L2">
        <text:list-item>
-        <text:p text:style-name="P8"><text:s/>Compila i dati del genitore non richiedente:</text:p>
+        <text:p text:style-name="P23">Nome : stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P15">Cognome: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P23">Luogo di nascita: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P15">Data di nascita: sequenza di interi</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P23">Residenza: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P15">indirizzo: stringa di caratteri</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39223916" text:continue-list="list39233768" text:style-name="L2">
+      <text:list xml:id="list39644030" text:continue-list="list39649386" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P15">Nome : stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P7">Cognome: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P15">Luogo di nascita: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P7">Data di nascita: sequenza di interi</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P15">Residenza: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P7">indirizzo: stringa di caratteri</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P15">telefono: sequenza di inter<text:span text:style-name="T2">i</text:span></text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P16">email: stringa di caratteri</text:p>
+        <text:p text:style-name="P5"><text:s/>Compila i dati del genitore non richiedente:</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39212685" text:continue-list="list39221912" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list39655877" text:continue-list="list39664362" text:style-name="L2">
        <text:list-item>
-        <text:p text:style-name="P9"><text:s/>Continua a barrare le caselle per i campi:</text:p>
+        <text:p text:style-name="P24">Nome : stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P16">Cognome: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P24">Luogo di nascita: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P16">Data di nascita: sequenza di interi</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P24">Residenza: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P16">indirizzo: stringa di caratteri</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P24">telefono: sequenza di inter<text:span text:style-name="T2">i</text:span></text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P25">email: stringa di caratteri</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39224973" text:style-name="L3">
+      <text:list xml:id="list39647072" text:continue-list="list39644030" text:style-name="Numerazione_20_UC">
        <text:list-item>
-        <text:p text:style-name="P17">Il/la bambino/a per la/il quale si chiede l’iscrizione è in situazione di disabilità</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P11">Il padre/la madre è in situazione di invalidità riconosciuta</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P17">Situazione attuale (vedovo/a, divorziato)</text:p>
-       </text:list-item>
-       <text:list-item>
-        <text:p text:style-name="P17">Altri componenti il nucleo familiare (figli) con disabilità/invalidità</text:p>
+        <text:p text:style-name="P18"><text:s/>Continua a barrare le caselle per i campi:</text:p>
        </text:list-item>
       </text:list>
-      <text:list xml:id="list39221186" text:continue-list="list39212685" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list39659601" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P10"><text:s/>Compila altre note relative ad una assegnazione maggiore per il punteggio come può essere la distanza dall&apos;asilo.</text:p>
+        <text:p text:style-name="P26">Il/la bambino/a per la/il quale si chiede l’iscrizione è in situazione di disabilità</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P10"><text:s/>Inserisce il valore del proprio ISEE.</text:p>
+        <text:p text:style-name="P20">Il padre/la madre è in situazione di invalidità riconosciuta</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P26">Situazione attuale (vedovo/a, divorziato)</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P26">Altri componenti il nucleo familiare (figli) con disabilità/invalidità</text:p>
+       </text:list-item>
+      </text:list>
+      <text:list xml:id="list39665786" text:continue-list="list39647072" text:style-name="Numerazione_20_UC">
+       <text:list-item>
+        <text:p text:style-name="P19"><text:s/>Compila altre note relative ad una assegnazione maggiore per il punteggio come può essere la distanza dall&apos;asilo.</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="P19"><text:s/>Inserisce il valore del proprio ISEE.</text:p>
        </text:list-item>
        <text:list-item>
         <text:p text:style-name="Azione_20_attore"><text:span text:style-name="T1"><text:s/>Il genitore</text:span> <text:span text:style-name="T1">s</text:span>ottomette la domanda.</text:p>
@@ -960,12 +935,12 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list39233816" text:style-name="L4">
+      <text:list xml:id="list39647914" text:style-name="L4">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="P4">Nel caso di errata compilazione dei campi, il sistema mostra all’utente una schermata di errore e invita alla revisione del campo interrato.</text:p>
+        <text:p text:style-name="P13">Nel caso di errata compilazione dei campi, il sistema mostra all’utente una schermata di errore e invita alla revisione del campo interrato.</text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="P3">Nel caso il genitore chiude la finestra il sistema chiede di salvare i dati compilati in modo da ricaricarli alla prossima riapertura.</text:p>
+        <text:p text:style-name="P12">Nel caso il genitore chiude la finestra il sistema chiede di salvare i dati compilati in modo da ricaricarli alla prossima riapertura.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
@@ -979,7 +954,7 @@
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P2">UC_A_5 Compilazione domanda di iscrizione per residenti del comune di Fisciano</text:p>
+   <text:p text:style-name="Caption">UC_A_5 Compilazione domanda di iscrizione per residenti del comune di Fisciano</text:p>
   </office:text>
  </office:body>
 </office:document>
