@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-23T09:57:11.11</meta:creation-date><meta:editing-duration>P0D</meta:editing-duration><meta:editing-cycles>6</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-04T11:51:47.15</dc:date><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="18" meta:word-count="87" meta:character-count="664" meta:non-whitespace-character-count="598"/><dc:creator>Mariella </dc:creator></office:meta>
+ <office:meta><meta:creation-date>2012-11-23T17:09:12.96</meta:creation-date><meta:editing-duration>PT1M18S</meta:editing-duration><meta:editing-cycles>8</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-04T20:10:42.34</dc:date><dc:creator>Mariella </dc:creator><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="1" meta:paragraph-count="21" meta:word-count="139" meta:character-count="981" meta:non-whitespace-character-count="865"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
    <config:config-item config:name="ViewAreaTop" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">38881</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">17743</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">18606</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">25811</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">7172</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">22583</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">13869</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
      <config:config-item config:name="VisibleTop" config:type="int">0</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">38880</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">17741</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">18604</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2077629</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1005907</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -64,7 +64,7 @@
    <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
-   <config:config-item config:name="RsidRoot" config:type="int">2077629</config:config-item>
+   <config:config-item config:name="RsidRoot" config:type="int">898968</config:config-item>
    <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
    <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
    <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
@@ -452,12 +452,30 @@
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties officeooo:paragraph-rsid="000db798"/>
+  </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties officeooo:rsid="000db798" officeooo:paragraph-rsid="000db798"/>
+  </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1"/>
   <style:style style:name="T1" style:family="text">
-   <style:text-properties officeooo:rsid="001fb3bd"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="000db798" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="T2" style:family="text">
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00200b4d" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="T3" style:family="text">
+   <style:text-properties officeooo:rsid="000db798"/>
+  </style:style>
+  <style:style style:name="T4" style:family="text">
+   <style:text-properties officeooo:rsid="00200b4d"/>
+  </style:style>
+  <style:style style:name="T5" style:family="text">
+   <style:text-properties officeooo:rsid="000f5953"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix=")" style:num-format="a">
@@ -531,7 +549,7 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P3"/>
    <table:table table:name="Tabella33" table:style-name="Tabella33">
     <table:table-column table:style-name="Tabella33.A"/>
     <table:table-column table:style-name="Tabella33.B"/>
@@ -540,7 +558,7 @@
       <text:p text:style-name="P1">Nome dello use case</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B1" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Visualizzazione pianificazione attività Tirocinante</text:p>
+      <text:p text:style-name="Standard">Modifica <text:span text:style-name="T4">Schedulazione</text:span> <text:s/></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.1">
@@ -556,7 +574,7 @@
       <text:p text:style-name="P1">Attori partecipanti</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Tirocinante</text:p>
+      <text:p text:style-name="P4">Responsabile tirocini</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.3">
@@ -564,7 +582,8 @@
       <text:p text:style-name="P1">Entry condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Autenticazione effettuata con successo come Tirocinante</text:p>
+      <text:p text:style-name="P2">L&apos;utente accede al sistema e viene riconosciuto come <text:span text:style-name="T3">Responsabile tirocini</text:span></text:p>
+      <text:p text:style-name="Standard"><text:span text:style-name="T3">Include </text:span><text:span text:style-name="T1">Visualizzazione </text:span><text:span text:style-name="T2">Schedulazione</text:span><text:span text:style-name="T1"> resp tirocini</text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.5">
@@ -572,12 +591,15 @@
       <text:p text:style-name="P1">Flusso di eventi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list31574558" text:style-name="Numerazione_20_UC">
+      <text:list xml:id="list40230929" text:style-name="Numerazione_20_UC">
        <text:list-item text:start-value="1">
-        <text:p text:style-name="Azione_20_attore">Il tirocinante accede alla sezione per Pianificazione Attività</text:p>
+        <text:p text:style-name="Azione_20_attore">Il <text:span text:style-name="T3">responsabile</text:span> dei tirocinanti <text:span text:style-name="T3">seleziona </text:span><text:span text:style-name="T5">nel calendario un tirocinante al quale vanno cambiati degli orari</text:span></text:p>
        </text:list-item>
        <text:list-item>
-        <text:p text:style-name="Azione_20_sistema">Il sistema visualizza <text:span text:style-name="T1">un calendario dove sono mostrate le varie attività giorno per giorno ad egli associate.</text:span></text:p>
+        <text:p text:style-name="Azione_20_attore">Il <text:span text:style-name="T3">responsabile</text:span> modifica i campi e conferma.</text:p>
+       </text:list-item>
+       <text:list-item>
+        <text:p text:style-name="Azione_20_sistema">Il sistema riceve la form riguardante le modifiche ed effettua i cambiamenti nel database.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
@@ -587,7 +609,7 @@
       <text:p text:style-name="P1">Exit condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Il sistema mostra la pianificazione attività al tirocinante.</text:p>
+      <text:p text:style-name="Table_20_Contents">Il sistema invia un messaggio di avvenuta modifica all&apos;impiegato e mostra i dati aggiornati.</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella33.7">
@@ -595,9 +617,9 @@
       <text:p text:style-name="P1">Exception condition</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:list xml:id="list31566435" text:style-name="L1">
-       <text:list-item>
-        <text:p text:style-name="P3">Casi eccezionali e punti di estensione</text:p>
+      <text:list xml:id="list40223901" text:style-name="L1">
+       <text:list-item text:start-value="1">
+        <text:p text:style-name="P5">Il sistema mostra all&apos;utente un messaggio di errore che indica l&apos;errore verificatosi.</text:p>
        </text:list-item>
       </text:list>
      </table:table-cell>
@@ -607,11 +629,12 @@
       <text:p text:style-name="P1">Requisiti qualitativi</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella33.B2" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Il sistema deve visualizzare il calendario entro 20 secondi dalla richiesta.</text:p>
+      <text:p text:style-name="Table_20_Contents">Il sistema deve visualizzare tutte le form entro 20 secondi dalla richiesta.</text:p>
+      <text:p text:style-name="Table_20_Contents">Il sistema deve visualizzare il messaggio di errore o visualizzare il nuovo piano aggiornato entro 20 secondi dalla conferma delle modifiche.</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="Caption">UC_M_37_Visualizzazione pianificazione attività Tirocinante</text:p>
+   <text:p text:style-name="Caption">UC_M_41_Modifica <text:span text:style-name="T5">schedualazione</text:span></text:p>
   </office:text>
  </office:body>
 </office:document>
