@@ -9,8 +9,8 @@
 </tbody></table>
 
 <%--include sidebar a seconda del chiamante
- </%@ 
-include file=""
+ <%@ 
+include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
  %>
  --%>
 <%-- Include pagina comunicazioni a seconda del chiamante --%>
