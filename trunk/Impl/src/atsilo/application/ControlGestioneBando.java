@@ -162,7 +162,7 @@ public class ControlGestioneBando {
             db.chiudiConnessione();
         }
     }
-    Bando getBando() throws DBConnectionException
+    public Bando getBando() throws DBConnectionException
     {Database db = new Database();
     if (!db.apriConnessione()) 
     {
@@ -175,7 +175,7 @@ public class ControlGestioneBando {
         Iterable<Bando> bandi=dbBando.getAll();
         Bando bando=null;
         if(bandi.iterator().hasNext())
-          bando= bandi.iterator().next();
+            bando= bandi.iterator().next();
         
         return bando;
     } 
@@ -184,7 +184,7 @@ public class ControlGestioneBando {
         db.chiudiConnessione();
     }
     
-     
+    
     }
     
     public static ControlGestioneBando getIstance() {

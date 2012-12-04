@@ -10,6 +10,7 @@
 	if((crtBando.getBando().getDataFine() != null)){
 		dataFineBando = crtBando.getBando().getDataFine();
 	}
+	
 %>
 
 <%!
