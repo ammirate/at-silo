@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5.1">
+  <zoom_level>9</zoom_level>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>324</x>
+      <y>90</y>
+      <w>153</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Gestione Questionari
+bg=light_gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>342</x>
+      <y>549</y>
+      <w>207</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Gestione Registro
+bg=light_gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>333</x>
+      <y>441</y>
+      <w>261</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Gestione Programma Educativo Annuale
+bg=light_gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>333</x>
+      <y>315</y>
+      <w>144</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Gestione Eventi
+bg=light_gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>324</x>
+      <y>9</y>
+      <w>189</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Gestione Menù Mensa
+bg=light_gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>117</x>
+      <y>324</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Event 
+Planner
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>117</x>
+      <y>162</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Utente
+del Sistema
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>333</y>
+      <w>197</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>180;27;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>108</y>
+      <w>188</w>
+      <h>107</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>171;27;27;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>333</x>
+      <y>198</y>
+      <w>207</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>Gestione Forum
+bg=light_gray
+fg=black</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>171</y>
+      <w>197</w>
+      <h>71</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>180;54;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>117</x>
+      <y>18</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Impiegato
+asilo
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>27</y>
+      <w>188</w>
+      <h>188</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>171;27;27;171</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>171</y>
+      <w>197</w>
+      <h>206</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>180;189;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>684</x>
+      <y>225</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Delegato
+Rettore
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>513</x>
+      <y>234</y>
+      <w>197</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>27;27;180;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>144</x>
+      <y>27</y>
+      <w>197</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>180;27;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>171</y>
+      <w>197</w>
+      <h>314</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>180;297;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>621</x>
+      <y>450</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Delegato
+Programma
+ Educativo Annuale
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>567</x>
+      <y>234</y>
+      <w>143</w>
+      <h>269</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>27;252;126;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>567</x>
+      <y>459</y>
+      <w>134</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>27;27;117;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>153</x>
+      <y>171</y>
+      <w>206</w>
+      <h>404</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>189;387;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>81</x>
+      <y>540</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Educatore
+Didattico
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>117</x>
+      <y>549</y>
+      <w>242</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>225;27;27;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>810</x>
+      <y>558</y>
+      <w>90</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Psicopedagogo
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>801</x>
+      <y>423</y>
+      <w>108</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>Responsabile
+scientifico
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>711</x>
+      <y>432</y>
+      <w>134</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes>27;27;117;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>711</x>
+      <y>468</y>
+      <w>134</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes>27;27;117;117</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>522</x>
+      <y>576</y>
+      <w>323</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>27;27;306;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>450</x>
+      <y>99</y>
+      <w>152</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>fg=</panel_attributes>
+    <additional_attributes>27;27;135;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Actor</type>
+    <coordinates>
+      <x>576</x>
+      <y>90</y>
+      <w>72</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>Delegato
+Questionari
+fg=blue
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>612</x>
+      <y>108</y>
+      <w>125</w>
+      <h>134</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=
+bg=blue</panel_attributes>
+    <additional_attributes>108;117;108;27;27;27</additional_attributes>
+  </element>
+</diagram>
