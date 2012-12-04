@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:initial-creator>Giulio Franco</meta:initial-creator><meta:creation-date>2012-10-13T01:33:37</meta:creation-date><dc:date>2012-12-01T16:24:30.95</dc:date><meta:editing-duration>PT2H44M20S</meta:editing-duration><meta:editing-cycles>36</meta:editing-cycles><meta:document-statistic meta:table-count="2" meta:image-count="1" meta:object-count="0" meta:page-count="3" meta:paragraph-count="29" meta:word-count="737" meta:character-count="5154" meta:non-whitespace-character-count="4442"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:initial-creator>Giulio Franco</meta:initial-creator><meta:creation-date>2012-10-13T01:33:37</meta:creation-date><dc:date>2012-12-04T12:06:11.19</dc:date><meta:editing-duration>PT2H44M20S</meta:editing-duration><meta:editing-cycles>37</meta:editing-cycles><meta:document-statistic meta:table-count="2" meta:image-count="1" meta:object-count="0" meta:page-count="3" meta:paragraph-count="31" meta:word-count="739" meta:character-count="5175" meta:non-whitespace-character-count="4462"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">37165</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">55012</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">38866</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">16053</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">14847</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">21479</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">40606</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">15177</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">64285</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">37165</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">55012</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">38864</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">53217</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">69857</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">714891</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">799770</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -471,6 +471,12 @@
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Heading_20_3">
    <style:text-properties fo:language="it" fo:country="IT"/>
   </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Definizione_20_Nome">
+   <style:text-properties officeooo:paragraph-rsid="000c341a"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Definizione_20_Valore">
+   <style:text-properties officeooo:paragraph-rsid="000c341a"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties fo:font-weight="normal" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
@@ -491,6 +497,9 @@
   </style:style>
   <style:style style:name="T7" style:family="text">
    <style:text-properties officeooo:rsid="000ae88b"/>
+  </style:style>
+  <style:style style:name="T8" style:family="text">
+   <style:text-properties officeooo:rsid="000c341a"/>
   </style:style>
   <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Graphics">
    <style:graphic-properties style:mirror="none" fo:clip="rect(0cm, 0cm, 0cm, 0cm)" draw:luminance="0%" draw:contrast="0%" draw:red="0%" draw:green="0%" draw:blue="0%" draw:gamma="100%" draw:color-inversion="false" draw:image-opacity="100%" draw:color-mode="standard"/>
@@ -1133,13 +1142,15 @@
       <text:p text:style-name="Definizione_20_Valore">Può visualizzare le operazioni fatte dagli utenti, i dati, ed è in grado di inviare e ricevere comunicazioni da quest&apos;ultimi.</text:p>
      </table:table-cell>
     </table:table-row>
+    <text:soft-page-break/>
     <table:table-row table:style-name="Tabella1.1">
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
       <text:p text:style-name="Definizione_20_Nome">Responsabile Scientifico dell&apos;Asilo Nido</text:p>
-      <text:p text:style-name="Definizione_20_Valore">Accede al sistema per ricevere ed effettuare comunicazioni tutti gli utenti del sistema. Definisce e gestisce il progetto educativo e si occupa della gestione dei tirocinanti.</text:p>
+      <text:p text:style-name="P19">Accede al sistema per ricevere ed effettuare comunicazioni tutti gli utenti del sistema.</text:p>
+      <text:p text:style-name="P18">Responsabile <text:span text:style-name="T8">Tirocini</text:span></text:p>
+      <text:p text:style-name="P19"><text:s/>Definisce e gestisce il progetto educativo e si occupa della gestione dei tirocinanti.</text:p>
      </table:table-cell>
     </table:table-row>
-    <text:soft-page-break/>
     <table:table-row table:style-name="Tabella1.1">
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
       <text:p text:style-name="Definizione_20_Nome">EventPlanner</text:p>
