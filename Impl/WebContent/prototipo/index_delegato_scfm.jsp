@@ -9,7 +9,7 @@
 </tr>
 </tbody></table>
 <%@
-include file="atsilo_files/sidebar_scienzeformazione.jsp"
+include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
  %>
 
 <br>
@@ -60,10 +60,9 @@ include file="atsilo_files/sidebar_scienzeformazione.jsp"
 </tbody></table>
 </td><td class="fasciadxvariabile"></td>
 </tr>
-<tr>
-<td class="bottom" width="209">&nbsp;2012 &copy; Unisa</td><td align="right" class="bottom"></td>
-</tr>
-</tbody></table>
+<%@
+include file="atsilo_files/footer.jsp"
+ %>
 
 
 </body>

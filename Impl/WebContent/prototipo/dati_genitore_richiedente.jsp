@@ -24,14 +24,14 @@ include file="atsilo_files/sidebar_genitore.jsp"
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
  
-<!--A seconda del tipo di genitore sara'  incluso il file con il form dati adeguato -->
+<!--A seconda del tipo di genitore sara'Â  incluso il file con il form dati adeguato -->
 
 <% if ( tipologia_genitore.equals("personale") ) { %>
   <%@include file="atsilo_files/dati_genitore_richiedente_personale.jsp"%>
 <% } else if ( tipologia_genitore.equals("residenti_fisciano")) { %>
    <%@include file="atsilo_files/dati_genitore_richiedente_residenti_fisciano.jsp"%>
 <% } else if ( tipologia_genitore.equals("altro")) { %>
-   <%@include file="atsilo_files/dati_genitore_richiedente_altro.jsp"%>%>
+   <%@include file="atsilo_files/dati_genitore_richiedente_altro.jsp"%>
    <% } %>
 
 <%@

@@ -18,7 +18,7 @@
 <td align="left" class="menuprimosel">&nbsp;<b>'Area Utente</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="account_educatore.jsp">Dati Account</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="account_delegato_sciform.jsp">Dati Account</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="logout.jsp">Logout</a></td>
