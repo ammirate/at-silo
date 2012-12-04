@@ -17,7 +17,7 @@ public class Classe {
      * La variabile eventi avrà i valore della lista Evento
      * La variabile eventi è nulla c'è bisogno di una lettura della classe Evento
      */
-    private List<Evento> eventi;
+    private List<Bambino> bambini;
 
     /**
      * Costruttore vuoto
@@ -30,12 +30,9 @@ public class Classe {
      * @param educatori è settato dopo la lettura 
      * @param eventi è settato dopo la lettura
      */
-    public Classe(String id, List<EducatoreDidattico> educatori,
-            List<Evento> eventi) {
-        super();
+    public Classe(String id, List<EducatoreDidattico> educatori) {
         this.id = id;
         this.educatori = educatori;
-        this.eventi = eventi;
     }
     
     /**
@@ -71,18 +68,20 @@ public class Classe {
     }
 
     /**
-     * Metodo che setta il parametro letto dalla classe Evento
-     * @param eventi è settato dopo la lettura
+     * @return bambino
      */
-    public void setEventi(List<Evento> eventi) {
-        this.eventi = eventi;
+    public List<Bambino> getBambino() {
+        return bambini;
     }
 
     /**
-     * Metodo che prende il parametro letto dalla classe Evento
-     * @return eventi parametro preso dalla lettura
+     * @param bambino nuovo bambino
      */
-    public List<Evento> getEventi() {
-        return eventi;
+    public void setBambino(List<Bambino> bambino) {
+        this.bambini = bambino;
     }
+
+   public void aggiungiBambino(Bambino b){
+       bambini.add(b);
+   }
 }
