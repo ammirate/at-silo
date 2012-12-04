@@ -1,4 +1,4 @@
-<%@ page import="atsilo.test.application.*,atsilo.entity.*";
+<%@ page import="atsilo.test.application.*,atsilo.entity.*"
  %>
  <% 
 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
