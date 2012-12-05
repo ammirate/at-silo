@@ -7,14 +7,34 @@ public class Bando implements Beans {
     private int id;
     
     /**
-     * @attribute DataInizio di tipo stringa
+     * @attribute DataInizioBando di tipo stringa
      */
-    private String dataInizio;
+    private String dataInizioBando;
     
     /**
-     * @attribute DataFine di tipo stringa
+     * @attribute DataFineBando di tipo stringa
      */
-    private String dataFine;
+    private String dataFineBando;
+    
+    /**
+     * @attribute DataInizioPresentazioneRinuncia di tipo stringa
+     */
+    private String dataInizioPresentazioneRinuncia;
+    
+    /**
+     * @attribute DataFinePresentazioneRinuncia di tipo stringa
+     */
+    private String dataFinePresentazioneRinuncia;
+    
+    /**
+     * @attribute DataFineRinuncia di tipo stringa
+     */
+    private String dataFineRinuncia;
+    
+    /**
+     * @attribute postiDisponibili di tipo intero
+     */
+    private int postiDisponibili;
     
     /**
      * Costruttore vuoto
@@ -25,14 +45,22 @@ public class Bando implements Beans {
     /**
      * 
      * @param id parametro fissato
-     * @param dataInizio il parametro fissato
-     * @param dataFine il parametro fissato
+     * @param dataInizioBando il parametro fissato
+     * @param dataFineBando il parametro fissato
+     * @param dataInizioPresentazioneRinuncia il parametro fissato
+     * @param dataFinePresentazioneRinuncia il parametro fissato
+     * @param dataFineRinuncia il parametro fissato
+     * @param postiDisponibili il parametro fissato
      */
-    public Bando(int id, String dataInizio, String dataFine) {
+    public Bando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, String dataFinePresentazioneRinuncia, String dataFineRinuncia) {
         super();
         this.id = id;
-        this.dataInizio = dataInizio;
-        this.dataFine = dataFine;
+        this.dataInizioBando = dataInizioBando;
+        this.dataFineBando = dataFineBando;
+        this.dataInizioPresentazioneRinuncia = dataInizioPresentazioneRinuncia;
+        this.dataFinePresentazioneRinuncia = dataFinePresentazioneRinuncia;
+        this.dataFineRinuncia = dataFineRinuncia;
+        this.postiDisponibili = postiDisponibili;
     }
 
     /**
@@ -53,33 +81,97 @@ public class Bando implements Beans {
 
     /**
      * Metodo che prende il campo DataInizio
-     * @return DataInizio il parametro inserito
+     * @return DataInizioBando il parametro inserito
      */
-    public String getDataInizio() {
-            return dataInizio;
+    public String getDataInizioBando() {
+            return dataInizioBando;
     }
 
     /**
      * Metodo che setta il campo DataInizio
-     * @param dataInizio il parametro fissato
+     * @param dataInizioBando il parametro fissato
      */
-    public void setDataInizio(String dataInizio) {
-            this.dataInizio = dataInizio;
+    public void setDataInizioBando(String dataInizioBando) {
+            this.dataInizioBando = dataInizioBando;
     }
 
     /**
      * Metodo che prende il campo DataFine
-     * @return DataFine il parametro inserito
+     * @return DataFineBando il parametro inserito
      */
-    public String getDataFine() {
-            return dataFine;
+    public String getDataFineBando() {
+            return dataFineBando;
     }
     
     /**
      * Metodo che setta il campo DataFine
-     * @param dataFine il parametro fissato
+     * @param dataFineBando il parametro fissato
      */
-    public void setDataFine(String dataFine) {
-            this.dataFine = dataFine;
+    public void setDataFineBando(String dataFineBando) {
+            this.dataFineBando = dataFineBando;
+    }
+    
+    /**
+     * Metodo che prende il campo DataInizioPresentazioneRinuncia
+     * @return DataInizioPresentazioneRinuncai il parametro inserito
+     */
+    public String getDataInizioPresentazioneRinuncia() {
+            return dataInizioPresentazioneRinuncia;
+    }
+    
+    /**
+     * Metodo che setta il campo DataFine
+     * @param dataFineBando il parametro fissato
+     */
+    public void setDataInizioPresentazioneRinuncia(String dataInizioPresentazioneRinuncia) {
+            this.dataInizioPresentazioneRinuncia = dataInizioPresentazioneRinuncia;
+    }
+    
+    /**
+     * Metodo che prende il campo DataFinePresentazioneRinuncia
+     * @return DataFinePresentazioneRinuncia il parametro inserito
+     */
+    public String getDataFinePresentazioneRinuncia() {
+            return dataFinePresentazioneRinuncia;
+    }
+    
+    /**
+     * Metodo che setta il campo DataFine
+     * @param dataFinePresentazioneRinuncia il parametro fissato
+     */
+    public void setDataFinePresentazioneRinuncia(String dataFinePresentazioneRinuncia) {
+            this.dataFinePresentazioneRinuncia = dataFinePresentazioneRinuncia;
+    }
+    
+    /**
+     * Metodo che prende il campo DataFineRinuncia
+     * @return DataFineRinuncia il parametro inserito
+     */
+    public String getDataFineRinuncia() {
+            return dataFineRinuncia;
+    }
+    
+    /**
+     * Metodo che setta il campo DataFine
+     * @param dataFineRinuncia il parametro fissato
+     */
+    public void setDataFineRinuncia(String dataFineRinuncia) {
+            this.dataFineRinuncia = dataFineRinuncia;
+    }
+    
+    /**
+     * Metodo che prende il campo postiDisponibili
+     * @return postiDisponibili il parametro inserito
+     */
+    public int getPostiDisponibili() {
+            return postiDisponibili;
+    }
+
+    /**
+     * Metodo che setta il valore postiDisponibili
+     * @param postiDisponibili il parametro fissato
+     */
+    public void setPostiDisponibili(int postiDisponibili) {
+            this.postiDisponibili = postiDisponibili;
     }
 }
