@@ -1702,11 +1702,12 @@ fg=red</panel_attributes>
     </coordinates>
     <panel_attributes>Menu Mensa
 --
+-Id
 -CategoriaBambino
 -Tipologia
 -Primo pasto
 -Secondo pasto
--Id
+-Contorno
 -Frutta
 -Data
 bg=gray

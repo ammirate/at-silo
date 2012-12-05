@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 05 dic, 2012 at 03:23 PM
+-- Generato il: 05 dic, 2012 at 11:22 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -120,10 +120,21 @@ CREATE TABLE IF NOT EXISTS `BAMBINO` (
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
   `data_di_nascita` date DEFAULT NULL,
-  `indirizzo` varchar(50) DEFAULT NULL,
+  `indirizzo_residenza` varchar(50) DEFAULT NULL,
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
   `classe` int(11) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
+  `comune_di_nascita` varchar(50) DEFAULT NULL,
+  `numero_civico_residenza` int(4) DEFAULT NULL,
+  `cap_residenza` int(5) DEFAULT NULL,
+  `comune_residenza` int(100) DEFAULT NULL,
+  `provincia_residenza` int(50) DEFAULT NULL,
+  `indirizzo_domicilio` int(100) DEFAULT NULL,
+  `numero_civico_domicilio` int(4) DEFAULT NULL,
+  `cap_domicilio` int(5) DEFAULT NULL,
+  `comune_domicilio` int(100) DEFAULT NULL,
+  `provincia_domicilio` int(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`)
@@ -133,16 +144,16 @@ CREATE TABLE IF NOT EXISTS `BAMBINO` (
 -- Dump dei dati per la tabella `BAMBINO`
 --
 
-INSERT INTO `BAMBINO` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo`, `categoria_appartenenza`, `genitore`, `classe`) VALUES
-('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma, 2 - Fisciano (SA)', 'Lattanti', 'CVLMRA69A23B333C', 1),
-('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi, 16 - 00100 Roma', 'Semisvezzati', 'DBNGPP69A23B222C', 1),
-('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2),
-('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2),
-('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y, 10 - Avellino (AV)', 'Svezzati', 'DRGSNT81A26B045C', 3),
-('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento, 1 - Benevento (BN)', 'Lattanti', 'VLLLRU83A24T928B', 2),
-('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria, 12 - Baronissi (SA)', 'Semisvezzati', 'DCSGVN74A23B224X', 3),
-('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta, 23 - Salerno (SA)	', 'Semisvezzati', 'PSSSNN85L98A980I', 1),
-('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta, 23 - Salerno (SA)	', 'Svezzati', 'PSSSNN85L98A980I', 3);
+INSERT INTO `BAMBINO` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`) VALUES
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma, 2 - Fisciano (SA)', 'Lattanti', 'CVLMRA69A23B333C', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi, 16 - 00100 Roma', 'Semisvezzati', 'DBNGPP69A23B222C', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y, 10 - Avellino (AV)', 'Svezzati', 'DRGSNT81A26B045C', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento, 1 - Benevento (BN)', 'Lattanti', 'VLLLRU83A24T928B', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria, 12 - Baronissi (SA)', 'Semisvezzati', 'DCSGVN74A23B224X', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta, 23 - Salerno (SA)	', 'Semisvezzati', 'PSSSNN85L98A980I', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta, 23 - Salerno (SA)	', 'Svezzati', 'PSSSNN85L98A980I', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -154,10 +165,11 @@ CREATE TABLE IF NOT EXISTS `BANDO` (
   `id` int(11) NOT NULL,
   `data_inizio_bando` date DEFAULT NULL,
   `data_fine_bando` date DEFAULT NULL,
-  `data_inizio_presentazione_rinuncia` date NOT NULL,
-  `data_fine_presentazione_rinuncia` date NOT NULL,
-  `data_fine_rinuncia` date NOT NULL,
-  `posti_disponibili` int(11) NOT NULL,
+  `data_inizio_presentazione_rinuncia` date DEFAULT NULL,
+  `data_fine_presentazione_rinuncia` date DEFAULT NULL,
+  `data_fine_rinuncia` date DEFAULT NULL,
+  `posti_disponibili` int(11) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -165,9 +177,9 @@ CREATE TABLE IF NOT EXISTS `BANDO` (
 -- Dump dei dati per la tabella `BANDO`
 --
 
-INSERT INTO `BANDO` (`id`, `data_inizio_bando`, `data_fine_bando`, `data_inizio_presentazione_rinuncia`, `data_fine_presentazione_rinuncia`, `data_fine_rinuncia`, `posti_disponibili`) VALUES
-(1, '2012-11-01', '2012-11-30', '0000-00-00', '0000-00-00', '0000-00-00', 0),
-(2, '2011-11-01', '2012-11-30', '0000-00-00', '0000-00-00', '0000-00-00', 0);
+INSERT INTO `BANDO` (`id`, `data_inizio_bando`, `data_fine_bando`, `data_inizio_presentazione_rinuncia`, `data_fine_presentazione_rinuncia`, `data_fine_rinuncia`, `posti_disponibili`, `path`) VALUES
+(1, '2012-11-01', '2012-11-30', '0000-00-00', '0000-00-00', '0000-00-00', 0, NULL),
+(2, '2011-11-01', '2012-11-30', '0000-00-00', '0000-00-00', '0000-00-00', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -257,21 +269,21 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
   `genitore` varchar(50) DEFAULT NULL,
   `servizio` int(11) DEFAULT NULL,
   `bambino` varchar(50) DEFAULT NULL,
-  `stato_domanda` varchar(50) NOT NULL,
-  `certificato_malattie` varchar(20) NOT NULL,
-  `certificato_vaccinazioni` varchar(20) NOT NULL,
-  `certificato_privacy` varchar(20) NOT NULL,
-  `bambino_disabile` tinyint(1) NOT NULL,
-  `genitore_invalido` tinyint(1) NOT NULL,
-  `genitore_solo` tinyint(1) NOT NULL,
-  `genitore_vedovo` tinyint(1) NOT NULL,
-  `genitore_nubile` tinyint(1) NOT NULL,
-  `genitore_separato` tinyint(1) NOT NULL,
-  `figlio_non_riconosciuto` tinyint(1) NOT NULL,
-  `affido_esclusivo` tinyint(1) NOT NULL,
-  `altri_componenti_disabili` tinyint(1) NOT NULL,
-  `condizioni_calcolo_punteggio` text NOT NULL,
-  `isee` float NOT NULL,
+  `stato_domanda` varchar(50) DEFAULT NULL,
+  `certificato_malattie` varchar(20) DEFAULT NULL,
+  `certificato_vaccinazioni` varchar(20) DEFAULT NULL,
+  `certificato_privacy` varchar(20) DEFAULT NULL,
+  `bambino_disabile` tinyint(1) DEFAULT NULL,
+  `genitore_invalido` tinyint(1) DEFAULT NULL,
+  `genitore_solo` tinyint(1) DEFAULT NULL,
+  `genitore_vedovo` tinyint(1) DEFAULT NULL,
+  `genitore_nubile` tinyint(1) DEFAULT NULL,
+  `genitore_separato` tinyint(1) DEFAULT NULL,
+  `figlio_non_riconosciuto` tinyint(1) DEFAULT NULL,
+  `affido_esclusivo` tinyint(1) DEFAULT NULL,
+  `altri_componenti_disabili` tinyint(1) DEFAULT NULL,
+  `condizioni_calcolo_punteggio` text,
+  `isee` float DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
@@ -331,6 +343,21 @@ CREATE TABLE IF NOT EXISTS `EDUCATORE_DIDATTICO` (
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
   `titolo_di_studi` varchar(50) DEFAULT NULL,
+  `data_di_nascita` date DEFAULT NULL,
+  `telefono` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `comune_di_nascita` varchar(50) DEFAULT NULL,
+  `indirizzo_residenza` varchar(50) DEFAULT NULL,
+  `numero_civico_residenza` int(4) DEFAULT NULL,
+  `cap_residenza` int(5) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
+  `numero_civico_domicilio` int(4) DEFAULT NULL,
+  `cap_domicilio` int(5) DEFAULT NULL,
+  `comune_domicilio` varchar(50) DEFAULT NULL,
+  `provincia_domicilio` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -338,10 +365,10 @@ CREATE TABLE IF NOT EXISTS `EDUCATORE_DIDATTICO` (
 -- Dump dei dati per la tabella `EDUCATORE_DIDATTICO`
 --
 
-INSERT INTO `EDUCATORE_DIDATTICO` (`nome`, `cognome`, `codice_fiscale`, `titolo_di_studi`) VALUES
-('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere'),
-('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione'),
-('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica');
+INSERT INTO `EDUCATORE_DIDATTICO` (`nome`, `cognome`, `codice_fiscale`, `titolo_di_studi`, `data_di_nascita`, `telefono`, `email`, `comune_di_nascita`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `cittadinanza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`) VALUES
+('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, 0, '', ''),
+('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, 0, '', ''),
+('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -452,22 +479,22 @@ CREATE TABLE IF NOT EXISTS `GENITORE` (
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
-  `cittadinanza` varchar(50) NOT NULL,
-  `comune_residenza` varchar(100) NOT NULL,
-  `numero_civico_residenza` int(4) NOT NULL,
-  `cap_residenza` int(5) NOT NULL,
-  `provincia_residenza` varchar(50) NOT NULL,
-  `comune_domicilio` varchar(50) NOT NULL,
-  `indirizzo_domicilio` varchar(100) NOT NULL,
-  `numero_civico_domicilio` int(4) NOT NULL,
-  `cap_domicilio` int(5) NOT NULL,
-  `provincia_domicilio` varchar(100) NOT NULL,
-  `dipendente_presso` varchar(200) NOT NULL,
-  `rapporti_ateneo_salerno` text NOT NULL,
-  `rapporti_comune_fisciano` text NOT NULL,
-  `rapporto_parentela` varchar(50) NOT NULL,
-  `status_lavorativo` varchar(100) NOT NULL,
-  `scadenza_contratto` date NOT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `numero_civico_residenza` int(4) DEFAULT NULL,
+  `cap_residenza` int(5) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `comune_domicilio` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
+  `numero_civico_domicilio` int(4) DEFAULT NULL,
+  `cap_domicilio` int(5) DEFAULT NULL,
+  `provincia_domicilio` varchar(100) DEFAULT NULL,
+  `dipendente_presso` varchar(200) DEFAULT NULL,
+  `rapporti_ateneo_salerno` text,
+  `rapporti_comune_fisciano` text,
+  `rapporto_parentela` varchar(50) DEFAULT NULL,
+  `status_lavorativo` varchar(100) DEFAULT NULL,
+  `scadenza_contratto` date DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -526,6 +553,7 @@ CREATE TABLE IF NOT EXISTS `MENU_MENSA` (
   `frutta` varchar(50) DEFAULT NULL,
   `data` date DEFAULT NULL,
   `id` int(11) NOT NULL,
+  `contorno` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -533,9 +561,9 @@ CREATE TABLE IF NOT EXISTS `MENU_MENSA` (
 -- Dump dei dati per la tabella `MENU_MENSA`
 --
 
-INSERT INTO `MENU_MENSA` (`categoria_bambino`, `tipologia`, `primo_piatto`, `secondo_piatto`, `frutta`, `data`, `id`) VALUES
-('Svezzati', 'Carne', 'Pasta al ragù', 'Cotoletta di pollo', 'Banana', '2012-11-08', 1),
-('Svezzati', 'Pesce', 'Pasta al pomodoro', 'Bastoncini di merluzzo', 'Pera', '2012-11-22', 2);
+INSERT INTO `MENU_MENSA` (`categoria_bambino`, `tipologia`, `primo_piatto`, `secondo_piatto`, `frutta`, `data`, `id`, `contorno`) VALUES
+('Svezzati', 'Carne', 'Pasta al ragù', 'Cotoletta di pollo', 'Banana', '2012-11-08', 1, NULL),
+('Svezzati', 'Pesce', 'Pasta al pomodoro', 'Bastoncini di merluzzo', 'Pera', '2012-11-22', 2, NULL);
 
 -- --------------------------------------------------------
 
@@ -597,6 +625,20 @@ CREATE TABLE IF NOT EXISTS `PERSONALE_ASILO` (
   `codice_fiscale` varchar(50) NOT NULL,
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
+  `data_di_nascita` date DEFAULT NULL,
+  `comune_di_nascita` int(50) DEFAULT NULL,
+  `telefono` varchar(50) DEFAULT NULL,
+  `indirizzo_residenza` varchar(50) DEFAULT NULL,
+  `numero_civico_residenza` int(4) DEFAULT NULL,
+  `cap_residenza` int(5) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
+  `numero_civico_domicilio` int(4) DEFAULT NULL,
+  `cap_domicilio` int(5) DEFAULT NULL,
+  `comune_domicilio` varchar(50) DEFAULT NULL,
+  `provincia_domicilio` varchar(100) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -604,11 +646,11 @@ CREATE TABLE IF NOT EXISTS `PERSONALE_ASILO` (
 -- Dump dei dati per la tabella `PERSONALE_ASILO`
 --
 
-INSERT INTO `PERSONALE_ASILO` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`) VALUES
-('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'IMPIEGATO SEGRETERIA', 'sbuselli@yahoo.it'),
-('Veronica', 'Mars', 'MRSVRN90A32B235B', 'IMPIEGATO SEGRETERIA', 'vmars@libero.it'),
-('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'DIRETTORE', 'asenatore@yahoo.it'),
-('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'IMPIEGATO SEGRETERIA', 'dtranfa@yahoo.it');
+INSERT INTO `PERSONALE_ASILO` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'IMPIEGATO SEGRETERIA', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Veronica', 'Mars', 'MRSVRN90A32B235B', 'IMPIEGATO SEGRETERIA', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'DIRETTORE', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'IMPIEGATO SEGRETERIA', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -673,8 +715,17 @@ CREATE TABLE IF NOT EXISTS `PSICO_PEDAGOGO` (
   `data_di_nascita` date DEFAULT NULL,
   `comune_di_nascita` varchar(50) DEFAULT NULL,
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
-  `titolo_di_studi` varchar(50) DEFAULT NULL,
   `numero_classi` varchar(50) DEFAULT NULL,
+  `numero_civico_residenza` int(4) DEFAULT NULL,
+  `cap_residenza` int(5) DEFAULT NULL,
+  `comune_residenza` int(100) DEFAULT NULL,
+  `provincia_residenza` int(50) DEFAULT NULL,
+  `indirizzo_domicilio` int(100) DEFAULT NULL,
+  `numero_civico_domicilio` int(4) DEFAULT NULL,
+  `cap_domicilio` int(5) DEFAULT NULL,
+  `comune_domicilio` int(50) DEFAULT NULL,
+  `provincia_domicilio` int(100) DEFAULT NULL,
+  `cittadinanza` int(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -682,9 +733,9 @@ CREATE TABLE IF NOT EXISTS `PSICO_PEDAGOGO` (
 -- Dump dei dati per la tabella `PSICO_PEDAGOGO`
 --
 
-INSERT INTO `PSICO_PEDAGOGO` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `numero_classi`) VALUES
-('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo, 3 - Fisciano (SA)', 'Laurea in Sociologia', '1'),
-('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z, 3 - Salerno (SA)', 'Laurea in Psicologia', '2');
+INSERT INTO `PSICO_PEDAGOGO` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `numero_classi`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo, 3 - Fisciano (SA)', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z, 3 - Salerno (SA)', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -823,7 +874,7 @@ CREATE TABLE IF NOT EXISTS `RISPOSTA_QUESTIONARIO` (
   `valore` varchar(50) DEFAULT NULL,
   `questionario` int(11) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
-  `domanda` int(11) NOT NULL,
+  `domanda` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `questionario` (`questionario`),
   KEY `genitore` (`genitore`),
@@ -887,6 +938,19 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
   `ore_totali` int(11) DEFAULT NULL,
   `ore_lavoro` int(11) DEFAULT NULL,
   `personale_asilo` varchar(50) DEFAULT NULL,
+  `stato` varchar(50) DEFAULT NULL,
+  `matricola` int(50) DEFAULT NULL,
+  `giudizio_finale` text,
+  `numero_civico_residenza` int(4) DEFAULT NULL,
+  `cap_residenza` int(5) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
+  `numero_civico_domicilio` int(4) DEFAULT NULL,
+  `cap_domicilio` int(5) DEFAULT NULL,
+  `comune_domicilio` varchar(50) DEFAULT NULL,
+  `provincia_domicilio` varchar(100) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `personale_asilo` (`personale_asilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -895,9 +959,9 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
 -- Dump dei dati per la tabella `TIROCINANTE`
 --
 
-INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`) VALUES
-('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D'),
-('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E');
+INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Limiti per le tabelle scaricate
