@@ -136,12 +136,11 @@ public class TestDBQuestionario {
      int index=0;
       for(index=0;index<l.size();index++)
           System.out.println(l.get(index).getDescrizione());
-*/
-      DBRispostaQuestionario dbr=new DBRispostaQuestionario(db);
-      
-      dbr.getRisposteQuestionarioPerGenitore(g, idDomanda)
-      db.chiudiConnessione();
-      
+*//*TEST_metodo_isDomandaInQUestionario()
+     boolean f=dbd.isDomandaInQuestionario(6, 1);
+     System.out.println(f);
+      */
+    db.chiudiConnessione();
     }
    
 }
