@@ -30,7 +30,7 @@ public class StubUtente
         u = new Utente();
     }
         
-    public Utente ricercaUtente(Utente utente){
+    public Utente ricercaUtente(String cf){
         Utente utente1=new Utente();
         return utente1;
     }

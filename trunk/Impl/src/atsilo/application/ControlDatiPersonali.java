@@ -1,7 +1,7 @@
 package atsilo.application;
 
 
-import java.sql.Date;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -214,7 +214,6 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    //da completare
     public List<DomandaIscrizione> getValoriIscrizioniNonConvalidate() throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
@@ -240,7 +239,6 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    //da completare
     public Boolean escludiIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
@@ -251,8 +249,7 @@ public class ControlDatiPersonali {
             DomandaIscrizione domandaIscrizioneDaModificare = stub.ricercaDomandaPerId(id);
             if(domandaIscrizioneDaModificare == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
-            //Supponendo che ci sia un campo convalida in domanda iscrizione           
+            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);        
             //domanaIsczizione.setConvalida(false);
             if(!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
                 throw new DomandaIscrizioneException("Modifica fallita");
