@@ -15,6 +15,20 @@ import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.Genitore;
 import atsilo.entity.Utente;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBEducatoreDidattico.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+
 public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
     
     private static final Map<String,String> MAPPINGS=creaMapping();

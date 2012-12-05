@@ -3,12 +3,23 @@ package atsilo.storage;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ManagerDB.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Interfaccia che deve essere implementata da tutte le classi
  * che operano sulle tabella del database
- *
- * @author Angelo G. Scafuro
- * @version 1.0
  */
 public interface ManagerDB {
     

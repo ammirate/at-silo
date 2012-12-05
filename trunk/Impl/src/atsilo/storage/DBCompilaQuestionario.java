@@ -29,10 +29,20 @@ import java.util.Map;
 import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.Questionario;
 
-/**
- * Crea un gestore per il bean CompilaQuestionario 
- * @author Fabio Napoli
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBCompilaQuestionario.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Fabio Napoli, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
  */
+
 public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
     
     private static final Map<String,String> MAPPINGS=creaMapping();

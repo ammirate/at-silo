@@ -18,11 +18,24 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBRispostaQuestionario.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Fabio Napoli, 17/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class DBRispostaQuestionario extends DBBeans {
     
     /**
      * Crea un gestore per il bean RispostaQuestionario
-     *@author Fabio Napoli
      */
     
     private static final Map<String,String> MAPPINGS=creaMapping();

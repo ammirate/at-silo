@@ -20,16 +20,28 @@ import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Genitore;
 import atsilo.entity.RispostaQuestionario;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBDomandaIscrizione.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Ferdinando Di Palma, Luigi Lomasto, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+
 public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     
     public DBDomandaIscrizione(Database db){
         super("DomandaIscrizione",db);
     }
 
-    
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
-    
     
     /**
      * 
@@ -57,11 +69,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         return Collections.unmodifiableMap(res);
     }
-    
-   
- 
 
-        /**
+    /**
          * @see atsilo.storage.DBBeans#getMappingFields()
          */
         @Override
