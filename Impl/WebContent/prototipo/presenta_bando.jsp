@@ -21,35 +21,14 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
         <tbody>
       
           <tr>
-            <td ><p>PER COMPLETARE LA DOMANDA DI ISCRIIZONE &Egrave; NECESSARIO ALLEGARE I SEGUENTI DOCUMENTI ALLA DOMANDA DA PRESENTARE IN SEGRETERIA:</p>
-              <p>COPIA FRONTE/RETRO DEL DOCUMENTO DI RICONOSCIMENTO VALIDO DEL RICHIEDENTE (obbligatorio)</p>
-              <p><br>
-                PRIMA DELL'INVIO DELLA DOMANDA SI RACCOMANDA DI CONTROLLARE L'ESATTA COMPILAZIONE DI TUTTI I CAMPI POICHE', DOPO L'INVIO, NON SARA' POSSIBILE EFFETTUARE ALCUNA MODIFICA</p>
-              <p><br>
-                N.B.: Per completare l'invio della domanda &egrave; necessario compilare i seguenti campi:</p>
-              <table>
-              	<tr>
-                	<td>Selezionare tipo di servizio desiderato</td>
-                    <td>
-                    <select id="servizio_selezionato" name="servizio_selezionato">
-                    <option>Servizio1</option>
-                    <option>Servizio1</option>	
-                    </select>
-                    </td>
-                </tr>
-                <tr>
-                	<td></td>
-                </tr>
-              </table>
-              <p><br>
-              </p></td>
+            <td >Si ricorda che per presentare la domanda di iscrizione è necessario aver compilato tutti i campi relativi a Dati Account e Dati Bambino ed è obbligatorio l'invio della stessa entro i termini indicati dal bando.</td>
             
             </tr>
             <tr>
               <td>&nbsp;</td></tr>
                 <!-- Se tutti i dati sono stati compilati correttamente e non è scaduto il bando, il tasto PRESENTA DOMANDA ISCRIZIONE sarà abilitato, altrimenti sarà disabled-->
              <tr>
-            <td ><form name="presenta_domanda_iscrizione" action="" method="post" nSubmit="return confirm('Presentando la domanda ora non potrai più modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
+            <td ><form name="presenta_domanda_bando" action="" method="post" nSubmit="return confirm('Presentando la domanda ora non potrai più modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
             	<input type="submit" value="Invio Domanda Iscrizione"  >
             </form></td>
             
