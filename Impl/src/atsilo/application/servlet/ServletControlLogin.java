@@ -12,11 +12,22 @@ import javax.servlet.http.HttpSession;
 
 import atsilo.test.application.ControlLogin;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ServeletControlLogin.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo G. Scafuro, 04/12/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Servlet implementation class ServletControlLogin
- * 
- * @author Angelo G. Scafuro
- * 
  * @version 1.0
  */
 @WebServlet("/ServletControlLogin")
