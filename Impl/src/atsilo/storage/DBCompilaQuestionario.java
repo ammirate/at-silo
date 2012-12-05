@@ -19,6 +19,7 @@ package atsilo.storage;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -102,7 +103,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
      */
     public List<String> getGenitoriPerQuestionarioCompilato(int idQuestionario) throws SQLException{
         
-        List <String> l=null;
+        List <String> l=new ArrayList<String> ();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE questionario = ? ");
         tabella.setParam(stmt, 1, "questionario", idQuestionario);
@@ -126,7 +127,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
      */
     public List<Integer> getQuestionariCompilatiPerGenitore (String codiceFiscale) throws SQLException{
         
-        List <Integer> l=null;
+        List <Integer> l=new ArrayList<Integer> ();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?");
         tabella.setParam(stmt, 1, "genitore", codiceFiscale);
@@ -167,5 +168,28 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
             return false; 
         }
     }
+    
+    /**
+     * dato l'id di un questionario restituisce il numero di genitori che lo hanno compilato
+     * @param idQuestionario
+     * @return
+     * @throws SQLException
+     */
+    public int getNumeroCompilazioniQuestionario (int idQuestionario) throws SQLException
+    {
+        int i=0;
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT COUNT(*) FROM " + tabella.getNomeTabella() + " WHERE questionario = ?");
+        tabella.setParam(stmt, 1, "questionario", idQuestionario);
+        ResultSet res = stmt.executeQuery();
+        
+        while (res.next()){
+           i=res.getInt("COUNT(*)");
+        }
+        
+        return i;
+    }
+    
     
 }

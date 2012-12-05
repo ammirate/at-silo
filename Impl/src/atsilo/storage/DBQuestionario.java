@@ -14,13 +14,15 @@ import java.sql.SQLException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-public class DBQuestionario extends DBBeans{
+public class DBQuestionario extends DBBeans<Questionario>{
     /**
      * Crea un gestore per il bean Questionario
      */
@@ -28,7 +30,7 @@ public class DBQuestionario extends DBBeans{
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
-    Tabella tabella;
+    
     /**
      * Costruttore con parametri
      * @param db database con relativa connessione
@@ -54,14 +56,12 @@ public class DBQuestionario extends DBBeans{
     @Override
     protected Questionario creaBean(ResultSet r) throws SQLException {
         Questionario q=new Questionario();
-        if (r.next()){
             q.setDescrizione(r.getString("descrizione"));
             q.setFlag_rinuncia(r.getString("flag_rinuncia"));
             q.setId(r.getInt("id"));
             q.setNome(r.getString("nome"));
             q.setPeriodo_fine(r.getDate("periodo_fine"));
             q.setPeriodo_inizio(r.getDate("periodo_inizio"));   
-        }
         return q;
     }
     
@@ -103,16 +103,16 @@ public class DBQuestionario extends DBBeans{
      * @throws SQLException
      */
     public List<Questionario> ricercaQuestionariPerNome (String n) throws SQLException{
-        List <Questionario> l=null;
-        Questionario q=new Questionario();
+        List <Questionario> l= new ArrayList<Questionario>();
+      
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
-                + tabella.getNomeTabella() + "WHERE id = ?");
+                + tabella.getNomeTabella() + " WHERE nome= ?");
         tabella.setParam(stmt, 1, "nome", n);
         ResultSet res = stmt.executeQuery();
         
         while(res.next()){
-            
+            Questionario q=new Questionario();
             q.setDescrizione(res.getString("descrizione"));
             q.setFlag_rinuncia(res.getString("flag_rinuncia"));
             q.setId(res.getInt("id"));
@@ -121,8 +121,9 @@ public class DBQuestionario extends DBBeans{
             q.setPeriodo_inizio(res.getDate("periodo_inizio")); 
             
             l.add(q);
-            res.close();
-        }   
+            
+        }  
+        res.close();
         return l;
     }
     
@@ -136,26 +137,48 @@ public class DBQuestionario extends DBBeans{
     
     public List<Questionario> visualizzaQuestionariCompilabili() throws SQLException{
         
-        List<Questionario> l=null;
-        Questionario q=new Questionario();; 
+        List<Questionario> lista_q_compilabili=new ArrayList<Questionario> ();
+        Questionario q=new Questionario();
+       
         
-        ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM "
-                + tabella.getNomeTabella()+ "WHERE NOW()"
-                +" BETWEEN periodo_inizio AND periodo_fine");
+        Iterable<Questionario> i;
         
-        while(res.next()){
-            
-            q.setDescrizione(res.getString("descrizione"));
-            q.setFlag_rinuncia(res.getString("flag_rinuncia"));
-            q.setId(res.getInt("id"));
-            q.setNome(res.getString("nome"));
-            q.setPeriodo_fine(res.getDate("periodo_fine"));
-            q.setPeriodo_inizio(res.getDate("periodo_inizio"));         
-            l.add(q);
-            
-        }    
-        res.close();   
-        return l;
+        i = this.getAll();
+        Iterator<Questionario> it = i.iterator();
+        
+        while(it.hasNext())
+        {
+            q=it.next();
+           // System.out.println("comp-all"+q.getDescrizione());
+          /*  ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM "
+             + tabella.getNomeTabella()+ "WHERE  id="+q.getId()+ " AND NOW() "
+             +" BETWEEN "+ q.getPeriodo_inizioString()+" AND "+q.getPeriodo_fineString());
+            */
+            PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
+                    " WHERE id = ? AND NOW() BETWEEN ? AND ? " );
+            tabella.setParam(stmt, 1,"id", q.getId());
+            tabella.setParam(stmt, 2, "periodo_inizio", q.getPeriodo_inizioString());
+            tabella.setParam(stmt, 3, "periodo_fine", q.getPeriodo_fineString());
+            ResultSet res = stmt.executeQuery();
+           
+              while(res.next())  
+              {  
+                Questionario questionario_compilabile=new Questionario();
+                questionario_compilabile.setDescrizione(res.getString("descrizione"));
+                questionario_compilabile.setFlag_rinuncia(res.getString("flag_rinuncia"));
+                questionario_compilabile.setId(res.getInt("id"));
+                questionario_compilabile.setNome(res.getString("nome"));
+                questionario_compilabile.setPeriodo_fine(res.getDate("periodo_fine"));
+                questionario_compilabile.setPeriodo_inizio(res.getDate("periodo_inizio"));         
+                lista_q_compilabili.add(questionario_compilabile);
+              
+              }
+             res.close();
+        }
+        
+       
+         
+        return lista_q_compilabili;
     }
     
     /**
@@ -171,9 +194,11 @@ public class DBQuestionario extends DBBeans{
         Questionario q=new Questionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
         tabella.setParam(stmt, 1, "id", idQuestionario);
+        
         ResultSet res = stmt.executeQuery();
+        
         
         if(res.next()){
             q.setDescrizione(res.getString("descrizione"));
