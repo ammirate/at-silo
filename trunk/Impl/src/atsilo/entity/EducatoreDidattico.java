@@ -3,6 +3,20 @@ package atsilo.entity;
 import java.sql.Date;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: EducatoreDidattico.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Alfonso Piscitelli, 14/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class EducatoreDidattico extends Utente implements EventPlanner{
 
     private String TitoloDiStudio;

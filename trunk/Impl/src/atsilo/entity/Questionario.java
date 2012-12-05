@@ -4,6 +4,20 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Questionario.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Barba, 13/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class Questionario {
  
     private Date periodo_fine;
@@ -14,8 +28,6 @@ public class Questionario {
     private Date periodo_inizio;
     private List<Genitore> listaGenitori;
     private List<DomandaQuestionario> domande;
-    
-    
     
     /**
      * Costruttore vuoto

@@ -2,8 +2,21 @@ package atsilo.entity;
 import java.sql.Date;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Evento.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 13/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class Evento {
- 
 
     private String Descrizione;
     private String Nome;

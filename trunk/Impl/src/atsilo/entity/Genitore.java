@@ -3,6 +3,20 @@ package atsilo.entity;
 import java.sql.Date;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Genitore.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Barba, 13/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class Genitore extends Utente {
 
     private String tipo;
