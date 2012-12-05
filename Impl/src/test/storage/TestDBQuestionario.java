@@ -17,14 +17,18 @@
 package test.storage;
 
 
-
+//testate DBCompilaQuestionario,DBDomandaQuestionario,DBQuestionario
 import java.sql.SQLException;
 import java.util.Iterator;
+import java.util.List;
 
 import atsilo.entity.CompilaQuestionario;
+import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
 import atsilo.storage.DBCompilaQuestionario;
+import atsilo.storage.DBDomandaQuestionario;
 import atsilo.storage.DBQuestionario;
+import atsilo.storage.DBRispostaQuestionario;
 import atsilo.storage.Database;
 
 /**
@@ -98,12 +102,44 @@ public class TestDBQuestionario {
     */
     
       DBCompilaQuestionario dbc=new DBCompilaQuestionario(db);
-       int i=dbc.getNumeroCompilazioniQuestionario(1);
+      /* int i=dbc.getNumeroCompilazioniQuestionario(1);
       
-      System.out.println(i);
+      System.out.println(i);*/
       
-      //============test===isCompilatoda======
+      //============test===isCompilatoda ok======
       
+    //  boolean risBool=dbc.isCompilatoDa(2,"CVLMRA69A23B333C");
+   //   System.out.println("Risultato Bool"+risBool);
+      
+      //_______________testgetGenitorePerquestionariocompilato___
+      
+    /*  List<String> l=dbc.getGenitoriPerQuestionarioCompilato(2);
+      int index=0;
+      for(index=0;index<l.size();index++)
+         System.out.println(l.get(index));
+      */
+      /*
+       *______________testGetQuestionariPerGenitore
+      List<Integer> l=dbc.getQuestionariCompilatiPerGenitore("asdGPP69A23B222C");
+      int index=0;
+      for(index=0;index<l.size();index++)
+         System.out.println(l.get(index));*/
+      
+      //_____________Test___Classe__DBDomandaQuestionario
+    //___test___getDomanda()
+      DBDomandaQuestionario dbd= new DBDomandaQuestionario(db);
+      
+      /*DomandaQuestionario d=dbd.getDomanda(4);
+      System.out.println("stampaDescrizioneDomanda"+d.getDescrizione());*/
+      //________test____getDomandeQuestionario
+     /* List<DomandaQuestionario>l=dbd.getDomandeQuestionario(2);
+     int index=0;
+      for(index=0;index<l.size();index++)
+          System.out.println(l.get(index).getDescrizione());
+*/
+      DBRispostaQuestionario dbr=new DBRispostaQuestionario(db);
+      
+      dbr.getRisposteQuestionarioPerGenitore(g, idDomanda)
       db.chiudiConnessione();
       
     }
