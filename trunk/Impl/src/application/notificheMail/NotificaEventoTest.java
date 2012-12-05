@@ -19,6 +19,20 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: NotificaEventoTest.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Gianfranco Bottiglieri, 27/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class NotificaEventoTest {
     
     @Test
