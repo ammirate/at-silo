@@ -21,11 +21,25 @@ import javax.mail.MessagingException;
 
 import atsilo.entity.Utente;
 
+
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: NotificaComposizioneClasse.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Gianfranco Bottiglieri, 27/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Classe NotificaComposizioneClasse
  * <Descrizione classe>
  *    classe che invia la notifica email della composizione della classe di un evento.
- * @author Gianfranco Bottiglieri
  * 
  */
 public class NotificaComposizioneClasse implements Messaggio{

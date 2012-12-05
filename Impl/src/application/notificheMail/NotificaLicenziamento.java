@@ -21,11 +21,24 @@ import javax.mail.MessagingException;
 
 import atsilo.entity.Utente;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: NotificaLicenziamento.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Gianfranco Bottiglieri, 27/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Classe MessaggioLicenziamento
  * <Descrizione classe>
  * classe che invia ad membro o membri del Personale dell'Asilo,un email che gli notifica l'avvenuto licenziamento.
- * @author Gianfranco Bottiglieri
  * 
  */
 public class NotificaLicenziamento implements Messaggio{
