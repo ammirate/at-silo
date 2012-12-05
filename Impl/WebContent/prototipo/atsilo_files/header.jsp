@@ -13,12 +13,11 @@
 	sessione.setAttribute("homepage", "index_impiegato.jsp");
 	String homepage=(String)sessione.getAttribute("homepage");
 	
-	//imposta come variabile di sessione il nome della pagina chiamante
 	String a = request.getRequestURI();
     String[] b = a.split("/");
     String temp_nome_chiamante = b[b.length-1];
     sessione.setAttribute("nome_pagina_chiamante", temp_nome_chiamante);
-    
+	
 	//controllo se utente ha effettuato il login
 	//se username non settato 
 	/*
@@ -26,72 +25,70 @@
 		response.sendRedirect("errore_accesso.htm");
 	*/
 
-String a = request.getRequestURI();
-String[] b = a.split("/");
-String nf = b[b.length-1];
-if(nf.equals("account_educatore.jsp"))
+
+if(temp_nome_chiamante.equals("account_educatore.jsp"))
 	out.println("<title>Account Educatore</title>");
-else if(nf.equals("attivita_odierna.jsp"))
+else if(temp_nome_chiamante.equals("attivita_odierna.jsp"))
 	out.println("<title>Attivit&agrave; Odierna</title>");
-else if (nf.equals("registro_presenze.jsp"))
+else if (temp_nome_chiamante.equals("registro_presenze.jsp"))
 	out.println("<title>Registro Presenze</title>");
-else if (nf.equals("storico_registro.jsp"))
+else if (temp_nome_chiamante.equals("storico_registro.jsp"))
 	out.println("<title>Storico Registro</title>");
-else if (nf.equals("visualizza_questionari.jsp"))
+else if (temp_nome_chiamante.equals("visualizza_questionari.jsp"))
 	out.println("<title>Visualizza Questionari</title>");
-else if (nf.equals("index_psicopedagoga.jsp"))
+else if (temp_nome_chiamante.equals("index_psicopedagoga.jsp"))
 	out.println("<title>Area Psicopedagogo</title>");
-else if (nf.equals("inserisci_programma.jsp"))
+else if (temp_nome_chiamante.equals("inserisci_programma.jsp"))
 	out.println("<title>Inserisci programma didattico</title>");
-else if (nf.equals("modifica_programma.jsp"))
+else if (temp_nome_chiamante.equals("modifica_programma.jsp"))
 	out.println("<title>Modifica programma didattico</title>");	
-else if (nf.equals("cancella_programma.jsp"))
+else if (temp_nome_chiamante.equals("cancella_programma.jsp"))
 	out.println("<title>Cancella programma didattico</title>");
-else if (nf.equals("storico_registro_ped.jsp"))
+else if (temp_nome_chiamante.equals("storico_registro_ped.jsp"))
 	out.println("<title>Storico Registro Psicopedagogo</title>");
-else if (nf.equals("storico_pagamenti.jsp"))
+else if (temp_nome_chiamante.equals("storico_pagamenti.jsp"))
 	out.println("<title>Storico Pagamenti</title>");
-else if (nf.equals("fattura_mensile.jsp"))
+else if (temp_nome_chiamante.equals("fattura_mensile.jsp"))
 	out.println("<title>Fattura Mensile</title>");
-else if (nf.equals("servizi_attivi.jsp"))
+else if (temp_nome_chiamante.equals("servizi_attivi.jsp"))
 	out.println("<title>Servizi Attivi</title>");
-else if (nf.equals("modifica_orario.jsp"))
+else if (temp_nome_chiamante.equals("modifica_orario.jsp"))
 	out.println("<title>Modifica Orario</title>");
-else if (nf.equals("modifica_pasti.jsp"))
+else if (temp_nome_chiamante.equals("modifica_pasti.jsp"))
 	out.println("<title>Modifica Pasti</title>");
-else if (nf.equals("stato_pagamenti.jsp"))
+else if (temp_nome_chiamante.equals("stato_pagamenti.jsp"))
 	out.println("<title>Stato Pagamenti</title>");
-else if (nf.equals("fattura_pagamenti.jsp"))
+else if (temp_nome_chiamante.equals("fattura_pagamenti.jsp"))
 	out.println("<title>Fattura Pagamenti</title>");
-else if (nf.equals("registro_pagamenti.jsp"))
+else if (temp_nome_chiamante.equals("registro_pagamenti.jsp"))
 	out.println("<title>Registra Pagamento</title>");
-else if (nf.equals("extra.jsp"))
+else if (temp_nome_chiamante.equals("extra.jsp"))
 	out.println("<title>Extra</title>");
-else if (nf.equals("modifica_orario_servizio.jsp"))
+else if (temp_nome_chiamante.equals("modifica_orario_servizio.jsp"))
 	out.println("<title>Modifica Orario</title>");
-else if (nf.equals("modifica_piano_pasto.jsp"))
+else if (temp_nome_chiamante.equals("modifica_piano_pasto.jsp"))
 	out.println("<title>Modifica Piano Pasto</title>");
-else if (nf.equals("visualizza_orario_servizi.jsp"))
+else if (temp_nome_chiamante.equals("visualizza_orario_servizi.jsp"))
 	out.println("<title>Visualizza Orario</title>");
-else if (nf.equals("approva_richieste.jsp"))
+else if (temp_nome_chiamante.equals("approva_richieste.jsp"))
 	out.println("<title>Approva Richieste</title>");
-else if (nf.equals("visualizza_tirocinanti.jsp"))
+else if (temp_nome_chiamante.equals("visualizza_tirocinanti.jsp"))
 	out.println("<title>Visualizza Tirocinanti</title>");
-else if (nf.equals("richieste_tirocinanti.jsp"))
+else if (temp_nome_chiamante.equals("richieste_tirocinanti.jsp"))
 	out.println("<title>Richiedi Tirocinante</title>");
-else if (nf.equals("inserimento_giudizio_tirocinante.jsp"))
+else if (temp_nome_chiamante.equals("inserimento_giudizio_tirocinante.jsp"))
 	out.println("<title>Giudizio Tirocinante</title>");	
-else if (nf.equals("inserisci_tirocinante.jsp"))
+else if (temp_nome_chiamante.equals("inserisci_tirocinante.jsp"))
 	out.println("<title>Inserisci Tirocinante</title>");	
-else if (nf.equals("modifica_tirocinante.jsp"))
+else if (temp_nome_chiamante.equals("modifica_tirocinante.jsp"))
 	out.println("<title>Modifica Tirocinante</title>");	
-else if (nf.equals("approva_tirocinante.jsp"))
+else if (temp_nome_chiamante.equals("approva_tirocinante.jsp"))
 	out.println("<title>Approva Tirocinante</title>");	
-else if (nf.equals("inserisci_fascia_oraria.jsp"))
+else if (temp_nome_chiamante.equals("inserisci_fascia_oraria.jsp"))
 	out.println("<title>Inserisci Fascia Oraria</title>");	
-else if (nf.equals("modifica_fascia_oraria.jsp"))
+else if (temp_nome_chiamante.equals("modifica_fascia_oraria.jsp"))
 	out.println("<title>Modifica Fascia Oraria</title>");	
-else if (nf.equals("cancella_fascia_oraria.jsp"))
+else if (temp_nome_chiamante.equals("cancella_fascia_oraria.jsp"))
 	out.println("<title>Cancella Fascia Oraria</title>");	
 
 	
