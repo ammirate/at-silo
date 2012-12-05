@@ -18,7 +18,7 @@ public class RispostaQuestionario {
     
     private int id;
     private String valore;
-    private String idDomanda;
+    private int idDomanda;
     private String CFgenitore;
     
     /**
@@ -32,7 +32,7 @@ public class RispostaQuestionario {
      * @param valore il paramentro è fissato
      * @param genitore è settato dopo la lettura
      */
-    public RispostaQuestionario(int id, String valore,String idDomanda, String CodFiscGenitore) {
+    public RispostaQuestionario(int id, String valore,int idDomanda, String CodFiscGenitore) {
         super();
         this.id = id;
         this.valore = valore;
@@ -75,15 +75,15 @@ public class RispostaQuestionario {
     /**
      * @return idDomanda
      */
-    public String getIdDomanda() {
+    public int getIdDomanda() {
         return idDomanda;
     }
 
     /**
-     * @param idDomanda nuovo idDomanda
+     * @param i nuovo idDomanda
      */
-    public void setIdDomanda(String idDomanda) {
-        this.idDomanda = idDomanda;
+    public void setIdDomanda(int i) {
+        this.idDomanda = i;
     }
 
     /**
