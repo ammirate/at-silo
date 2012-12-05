@@ -23,7 +23,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
         <tbody>
           <tr>
             <td class="tplTitolo">
-            <form name="creazione_account" action="<%=action %>" method="post" onsubmit="<%CambioValoriForm();%>">
+            <form name="creazione_account" action="<%=action %>" method="post" >
         <table class="tabelle_form">
           <tr> 
         	<td>Username</td>
@@ -31,7 +31,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
           </tr>
           <tr> 
         	<td>Password</td>
-       	 	<td><input name="password" type="text" id="password" maxlength="20" value="non visualizzabile" <%=readOnly %>  /></td>
+       	 	<td><input name="password" type="text" id="password" maxlength="20" value="******" <%=readOnly %>  /></td>
           </tr>
           <tr> 
         	<td>Indirizzo email</td>
@@ -40,7 +40,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
           </tr>
           <tr> 
         	<td>Profilo di appartenenza</td>
-       	 	<td><input name="tipologia_genitore" type="text" id="tipologia_genitore"  value="<%=tipologia_genitore %>" <%=readOnly %>  />
+       	 	<td><input name="tipologia_genitore" type="text" id="tipologia_genitore"  value="<%=tipologia_utente %>" <%=readOnly %>  />
        	 	  </td>
           </tr>
           <tr>
@@ -48,7 +48,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
             <td><strong>N.B. All'indirizzo di posta elettronica verr&agrave; inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
           <tr> 
         	<td></td>
-       	 	<td><input type="submit" name="modifica" value="<%=nome_bottone %> " />
+       	 	<td><input type="submit" name="modifica" value="<%=nome_bottone %> " onClick="<%cambioValoriForm();%>"/>
                 <input type="reset" name="reset" value="Annulla" />
             </td>
           </tr>

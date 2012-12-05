@@ -62,25 +62,24 @@ public class ControlDatiPersonali {
      * @throws SQLException 
      */
     public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
-        Database db = new Database();
-        DBGenitore genitore = new DBGenitore(db);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            
-            Genitore g = genitore.ricercaGenitoreCf(codiceFiscale);
-            if(g == null)
-                throw new GenitoreException("Genitore non trovato");
-            return g;
-        }
-        finally{
-            db.chiudiConnessione();
-        }
+      
+        Genitore genitore = new Genitore();
+        genitore.setCodiceFiscale(codiceFiscale);
+        genitore.setCognome("CognomeProva");
+        genitore.setNome("Nome di prova");
+        genitore.setDataNascita(new Date(1970, 05, 20));
+        genitore.setTipo("profilo di appartenenza");
+        return genitore;
+         
     }
     
     public Utente getUtenteFromUsername(String cf){
-        return null;
+        Utente u=new Utente();
+        u.setCodiceFiscale(cf);
+        u.setCognome("Cognome");
+        u.setEmail("email");
+        u.setTelefono("telefono");
+        return u ;
         
     }
     
@@ -109,6 +108,19 @@ public class ControlDatiPersonali {
         }
     }
     
+    /**
+     * Modifica i dati di un account , SE VIENE PASSATO NULL ad un valore quest'ultimo non viene aggiornato e rimane con il vecchio valore
+     * @param username username da modifica
+     * @param password password da modificare
+     * @param email email da modificare
+     * @param profilo_appartenenza profilo di appartenenza da modificare (valido solo per i genitori)
+     * @return true un caso di modifica effettuata
+     *         false 
+     */
+    public boolean updateAccount(String username,String password,String email,String profilo_appartenenza){
+        return true;
+        
+    }
     
     /**
      * Inserisce una Domanda di Iscrizione

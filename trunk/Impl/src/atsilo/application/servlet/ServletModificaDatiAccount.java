@@ -53,29 +53,35 @@ public class ServletModificaDatiAccount extends HttpServlet {
 	    
 	    
 	    PrintWriter out = response.getWriter();
+	    System.out.println(nome_chiamante);//cancellare
 	    
             //i campi del form non possono essere nulli quindi non viene fatto nessun controllo
 	    String username= request.getParameter("username");
-            String password= request.getParameter("password");
+	    String password;
+	    if ( request.getParameter("password").equals("******"))
+	        password=null;//quando password e' null non verra' fatto l'update
+	    else
+	        password= request.getParameter("password");//l'utente vuole cambiare la password
+	    String email=request.getParameter("email");
             
-            String tipologia_genitore;
-            if (request.getParameter("tipologia_genitore") != null)// non è nullo solo per i genitori
+            String tipologia_genitore=null;
+            if (request.getParameter("tipologia_genitore") != null)// account genitore ha il parametro tipologia di genitore
                    tipologia_genitore= request.getParameter("tipologia_genitore");
             
             // Set response content type
             response.setContentType("text/html");
             // New location to be redirected
-            String modifica_ok = new String("prototipo/index_"+nome_chiamante);//reindirizzo al chiamante della servlet
-            String modifica_error = new String("");
+            String modifica_ok = new String("prototipo/index_"+nome_chiamante+"?modifica=ok");//reindirizzo al chiamante della servlet
+            String modifica_error = new String("prototipo/index_"+nome_chiamante+"?modifica=failed");
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             
-            if (cdp.)){//setto dati account
+            if (cdp.updateAccount(username, password, email, tipologia_genitore)){//setto dati account
                 //reindirizzo verso index della tipologia di utente
-                response.setHeader("Location", modifica_ok);    
+                response.setHeader("Location", "prototipo/dati_account_genitore.jsp");    
             }
             
             else {  
-                response.setHeader("Location", modifica_error);   
+                //response.setHeader("Location", modifica_error);   
             }
 
         }
