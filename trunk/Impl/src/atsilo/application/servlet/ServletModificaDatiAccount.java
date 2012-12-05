@@ -13,6 +13,20 @@ import javax.servlet.http.HttpSession;
 import atsilo.test.application.ControlDatiPersonali;
 import atsilo.test.application.ControlLogin;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ServeletModificaDatiAccount.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo G. Scafuro, 03/12/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Servlet implementation class ServletModificaDatiAccount
  */
