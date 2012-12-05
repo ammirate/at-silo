@@ -20,7 +20,8 @@ public class StubDomandaIscrizione
         ldi.add(di);
     }
         
-    public boolean inserisciDomandaIscizione(DomandaIscrizione di){
+    public boolean inserisciDomandaIscizione(DomandaIscrizione domanda){
+        ldi.add(domanda);
         return true;
     }
     

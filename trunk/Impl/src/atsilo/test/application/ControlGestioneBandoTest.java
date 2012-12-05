@@ -24,6 +24,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import test.storage.StubBando;
+import test.storage.StubDomandaIscrizione;
+
 import atsilo.application.ControlGestioneBando;
 import atsilo.application.ControlRegistro;
 import atsilo.entity.Bambino;
@@ -32,8 +35,6 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
-import atsilo.storage.DBBando;
-import atsilo.storage.DBDomandaIscrizione;
 import atsilo.storage.Database;
 
 public class ControlGestioneBandoTest {
@@ -41,25 +42,19 @@ public class ControlGestioneBandoTest {
    private Database db = new Database();
     @Before
     /**
-     * apre la conessione con il database
      * @throws Exception
      */
     public void setUp() throws Exception 
     {
-        if (!db.apriConnessione()) 
-        {
-            throw new DBConnectionException("Connessione Fallita");
-        }   
+        
     }
     
     @After
     /**
-     *  chiude la conessione il database
      * @throws Exception
      */
     public void tearDown() throws Exception 
     {
-        db.chiudiConnessione();
     }
     
     /**
@@ -73,29 +68,27 @@ public class ControlGestioneBandoTest {
     @Test
     public final void testInsrisciPunteggio() throws DBConnectionException, BandoException, SQLException 
     {
-        DBDomandaIscrizione dbDomande=new DBDomandaIscrizione(db);
+        StubDomandaIscrizione dbDomande=new StubDomandaIscrizione(db);
         Genitore genitore=new Genitore();
         Bambino bambino=new Bambino();
         DomandaIscrizione domanda=new DomandaIscrizione("ciao", 9999, 0,"0", genitore, bambino);
         dbDomande.inserisci(domanda);
        
         control.inserisciPunteggio(domanda, 54);
-        assertEquals(54,dbDomande.ricercaDomandaDaId(9999).getPunteggio());
-        control.inserisciPunteggio(domanda, 43);
-        assertEquals(43,dbDomande.ricercaDomandaDaId(9999).getPunteggio());
+        assertEquals(54,domanda.getPunteggio());
         
     }
     
-    
+    /*
     /**
      * Test method for {@link atsilo.application.ControlGestioneBando#inserisciIntervalloBando(java.lang.String, java.lang.String)}.
      * @throws BandoException 
      * @throws DBConnectionException 
-     */
+     
     @Test
     public final void testInserisciIntervalloBando() throws DBConnectionException, BandoException 
     {
-        DBBando dbBando=new DBBando(db);
+        StubBando dbBando=new StubBando(db);
         Bando bando=new Bando();
         bando.setDataInizio("ciao");
         bando.setDataFine("bye");
@@ -107,10 +100,11 @@ public class ControlGestioneBandoTest {
     
     /**
      * Test method for {@link atsilo.application.ControlGestioneBando#modificaBando(atsilo.entity.Bando, java.lang.String, java.lang.String)}.
-     */
+     
     @Test
     public final void testModificaBando()
     {
     }
+    */
     
 }
