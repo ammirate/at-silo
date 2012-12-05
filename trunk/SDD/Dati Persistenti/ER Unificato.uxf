@@ -642,12 +642,12 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>792</x>
-      <y>546</y>
+      <y>648</y>
       <w>30</w>
-      <h>216</h>
+      <h>114</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>18;204;18;18</additional_attributes>
+    <additional_attributes>18;102;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -686,13 +686,13 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>852</x>
+      <x>864</x>
       <y>486</y>
-      <w>84</w>
+      <w>72</w>
       <h>42</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
-    <additional_attributes>72;30;18;30</additional_attributes>
+    <additional_attributes>60;30;18;30</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -1261,18 +1261,18 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>942</x>
+      <x>984</x>
       <y>606</y>
-      <w>90</w>
+      <w>48</w>
       <h>198</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>78;186;60;186;60;18;18;18</additional_attributes>
+    <additional_attributes>36;186;18;186;18;18;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
     <coordinates>
-      <x>888</x>
+      <x>930</x>
       <y>606</y>
       <w>72</w>
       <h>36</h>
@@ -1284,13 +1284,13 @@ fg=red</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>822</x>
-      <y>546</y>
+      <x>864</x>
+      <y>606</y>
       <w>78</w>
-      <h>90</h>
+      <h>30</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>66;78;18;78;18;18</additional_attributes>
+    <additional_attributes>66;18;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Package</type>
@@ -1404,17 +1404,28 @@ fg=red</panel_attributes>
     <coordinates>
       <x>768</x>
       <y>480</y>
-      <w>102</w>
-      <h>84</h>
+      <w>114</w>
+      <h>186</h>
     </coordinates>
     <panel_attributes>Bambino
 --
 -Nome
 -Cognome
 -Codice Fiscale
+-Cittadinanza
 -Data di nascita
+-Comune di nascita
+-Indirizzo residenza
+-Numero civico residenza
+-CAP residenza
+-Comune residenza
+-Provincia residenza
+-Indirizzo domicilio
+-Numero civico domicilio
+-CAP domicilio
+-Comune domicilio
+-Provincia domicilio
 -Categoria d'appartenenza
--Indirizzo
 bg=gray
 fg=red</panel_attributes>
     <additional_attributes/>
