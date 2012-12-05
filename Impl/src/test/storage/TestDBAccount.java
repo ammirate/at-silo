@@ -19,6 +19,7 @@ package test.storage;
 import static org.junit.Assert.*;
 
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 import org.junit.After;
 import org.junit.Before;
@@ -30,58 +31,48 @@ import atsilo.storage.Database;
 
 /**
  * Classe TestDBAccount
- * <Descrizione classe>
+ * testa i metodi della classe DBAccount
  * 
  * @author Luigi
  * 
  */
 public class TestDBAccount {
-    
+    private static final Logger LOG=Logger.getLogger(TestDBAccount.class.getName());
     private Database db;
-
     
-
-    @Test
-    public void test() throws SQLException {
-        
-        
-        testRicercaPerUsernameUserCorretto();
-    }
-    //Logger
-    /*
-     * private static final java.util.Logger LOG
-     *         = Logger.getLogger(TestDBAccount.class.getName());
+    
+    /**
+     * 
+     * @throws Exception
      */
-    
-    //Variabili di istanza
-    
-    
-    //Costruttori
-    TestDBAccount test=new TestDBAccount();
-    
-    //Metodi
-    
-    
-    @Before 
-    public void connettiDB() throws SQLException {
-        db=new Database();
+    @Before
+    public void setUp() throws Exception {
+        db = new Database();
+        if (!db.apriConnessione()) {
+            throw new RuntimeException("Connessione fallita");
         }
+        DBUtil.execScript(db, "atsilopopolato.sql");
+    }
     
+    /**
+     * @throws java.lang.Exception
+     */
     @After
-    public void disconnettiDB() throws SQLException{
+    public void tearDown() throws Exception {
         db.chiudiConnessione();
     }
-    /** 
-     * 
+
+     /** 
+     * Testa il metodo ricercaPerUsername della classe Account. 
      * @param utenteDaTestare contiene il nome di un utente presente nel database
      * @throws SQLException 
      */
     @Test
     public void testRicercaPerUsernameUserCorretto() throws SQLException {
-        
-         String utenteDaTestare = "Nome di un utente nel database";
+         Account u=new Account();
+         String utenteDaTestare ="d.tranfa";
          DBAccount dba = new DBAccount(db);
-         Account u=dba.ricercaPerUsername(utenteDaTestare);
+         u=dba.ricercaPerUsername(utenteDaTestare);
          
          assertNotNull(u);
          assertEquals(u.getUserName(),utenteDaTestare);
