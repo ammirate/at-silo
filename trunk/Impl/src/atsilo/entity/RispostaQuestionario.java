@@ -2,7 +2,7 @@ package atsilo.entity;
 
 public class RispostaQuestionario {
     
-    private String id;
+    private int id;
     private String valore;
     private String idDomanda;
     private String CFgenitore;
@@ -18,7 +18,7 @@ public class RispostaQuestionario {
      * @param valore il paramentro è fissato
      * @param genitore è settato dopo la lettura
      */
-    public RispostaQuestionario(String id, String valore,String idDomanda, String CodFiscGenitore) {
+    public RispostaQuestionario(int id, String valore,String idDomanda, String CodFiscGenitore) {
         super();
         this.id = id;
         this.valore = valore;
@@ -30,7 +30,7 @@ public class RispostaQuestionario {
      * Metodo che prende il campo Id
      * @param id il parametro inserito
      */
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -38,7 +38,7 @@ public class RispostaQuestionario {
      * Metodo che prende il campo id
      * @return id il parametro inserito
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 

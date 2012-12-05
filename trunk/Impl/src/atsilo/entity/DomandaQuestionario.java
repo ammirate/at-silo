@@ -4,10 +4,9 @@ import java.util.List;
 
 public class DomandaQuestionario {
     
-    private String id;
+    private int id;
     private String descrizione;
     private List<CampoDomandaQuestionario> campi;
-    private RispostaQuestionario risposta;
     private int idQuestionario;
     
 
@@ -30,7 +29,7 @@ public class DomandaQuestionario {
      * @param campi è una lista contenente i campi della domanda
      * @param questionario è settato dopo la lettura
      */
-    public DomandaQuestionario(String id, int idQuestionario, String descrizione, List<CampoDomandaQuestionario> campi){
+    public DomandaQuestionario(int id, int idQuestionario, String descrizione, List<CampoDomandaQuestionario> campi){
         super();
         this.id = id;
         this.descrizione = descrizione;
@@ -38,7 +37,7 @@ public class DomandaQuestionario {
         idQuestionario = idQuestionario;
     }
     
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -46,7 +45,7 @@ public class DomandaQuestionario {
      * Metodo che prende il campo Id
      * @return iD il parametro inserito
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -85,19 +84,7 @@ public class DomandaQuestionario {
         campi.add(c);
     }
 
-    /**
-     * @return idRisposta
-     */
-    public RispostaQuestionario getRisposta() {
-        return risposta;
-    }
-
-    /**
-     * @param idRisposta nuovo idRisposta
-     */
-    public void setRisposta(RispostaQuestionario risposta) {
-        this.risposta = risposta;
-    }
+ 
 
     /**
      * @return idQuestionario

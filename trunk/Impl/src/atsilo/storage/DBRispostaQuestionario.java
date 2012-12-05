@@ -82,7 +82,7 @@ public class DBRispostaQuestionario extends DBBeans {
         RispostaQuestionario ris = new RispostaQuestionario();
         if(r.next())
         {
-            ris.setId(r.getString("id"));
+            ris.setId(r.getInt("id"));
             ris.setValore(r.getString("valore"));
             ris.setCFgenitore(r.getString("genitore"));
             ris.setIdDomanda(r.getString("domanda"));           
@@ -99,20 +99,20 @@ public class DBRispostaQuestionario extends DBBeans {
      * @return lista di RisposteQuestionario o null
      * @throws SQLException
      */
-    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
+    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario> ();
         RispostaQuestionario ris=new RispostaQuestionario();
         
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
                 " WHERE genitore = ? AND domanda = ?");
-        tabella.setParam(stmt, 1,"genitore", g.getCodiceFiscale());
+        tabella.setParam(stmt, 1,"genitore", g);
         tabella.setParam(stmt, 2, "domanda", idDomanda);
         ResultSet res = stmt.executeQuery();
         
         while (res.next()){
             
-            ris.setId(res.getString("id"));
+            ris.setId(res.getInt("id"));
             ris.setValore(res.getString("valore"));
             ris.setCFgenitore(res.getString("genitore"));
             ris.setIdDomanda(res.getString("domanda"));
@@ -143,7 +143,7 @@ public class DBRispostaQuestionario extends DBBeans {
         
         while (res.next()){
             
-            r.setId(res.getString("id"));
+            r.setId(res.getInt("id"));
             r.setValore(res.getString("valore"));
             r.setCFgenitore(res.getString("genitore"));
             r.setIdDomanda(res.getString("domanda"));

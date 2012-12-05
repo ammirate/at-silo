@@ -32,7 +32,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      * Costruttore
      * @param db connessione al db
      */
-    public DBDomandaQuestionario(Database db){super("DomandaQuestionario",db);}
+    public DBDomandaQuestionario(Database db){super("domanda_questionario",db);}
     
     /**
      * Metodo che crea la chiave
@@ -83,7 +83,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      */    
     protected DomandaQuestionario creaBean(ResultSet r) throws SQLException {
         DomandaQuestionario temp = new DomandaQuestionario();
-        temp.setId(r.getString("id"));
+        temp.setId(r.getInt("id"));
         temp.setDescrizione(r.getString("descrizione"));
         temp.setIdQuestionario(r.getInt("questionario"));          
         return temp;
@@ -98,20 +98,21 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      * @return domanda questionario con id=idDomanda oppure null
      * @throws SQLException
      */
-    public DomandaQuestionario getDomanda(String idDomanda) throws SQLException{
+    public DomandaQuestionario getDomanda(int idDomanda) throws SQLException{
         
         DomandaQuestionario q=new DomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+                "SELECT * FROM " + "domanda_questionario" + " WHERE id = ?");
         tabella.setParam(stmt, 1, "id", idDomanda);
+        
         ResultSet res = stmt.executeQuery();
         
-        if(res.next()){
-            q.setId(res.getString("id"));
+        while(res.next()){
+            q.setId(res.getInt("id"));
             q.setDescrizione(res.getString("descrizione"));
             q.setIdQuestionario(res.getInt("questionario"));  
-            q.getRisposta().setId(res.getString("risposta"));
+           
         }
         res.close();
         return q;
@@ -128,20 +129,17 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
     public List<DomandaQuestionario> getDomandeQuestionario(int idQuestionario)
             throws SQLException{
         List<DomandaQuestionario> l=new ArrayList<DomandaQuestionario>();
-        DomandaQuestionario temp = new DomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE questionario = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE questionario = ?");
         tabella.setParam(stmt, 1, "questionario", idQuestionario);
         ResultSet res = stmt.executeQuery();
         
         while (res.next()){
-            
-            temp.setId(res.getString("id"));
+            DomandaQuestionario temp = new DomandaQuestionario();
+            temp.setId(res.getInt("id"));
             temp.setDescrizione(res.getString("descrizione"));
             temp.setIdQuestionario(res.getInt("questionario"));  
-            temp.getRisposta().setId(res.getString("risposta"));
-            
             l.add(temp);
         }
         res.close();
