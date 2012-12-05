@@ -38,7 +38,20 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                     </td>
                 </tr>
                 <tr>
-                	<td></td>
+                	<td>Inserire le vaccinazioni obbligatorie fatte</td>
+                    <td>
+                    <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                	<td>Inserire le malattie infettive contratte</td>
+                    <td><form name="form1" method="post" action="">
+                      <label for="malattie_contratte"></label>
+                      <textarea name="malattie_contratte" id="malattie_contratte" cols="45" rows="5"></textarea>
+                  </form></td>
+                </tr>
+                <tr>
+                	<td height="80"></td>
                 </tr>
               </table>
               <p><br>
