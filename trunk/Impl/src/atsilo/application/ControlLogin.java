@@ -23,26 +23,24 @@ import javax.security.auth.login.LoginException;
 import atsilo.entity.Account;
 import atsilo.entity.Utente;
 import atsilo.exception.DBConnectionException;
-import atsilo.storage.DBAccount;
-import atsilo.storage.Database;
+import atsilo.storage.*;
 
-/*
- *-----------------------------------------------------------------
- * This file is licensed under GPL 3.0:
- * http://www.gnu.org/licenses/gpl-3.0.html
- *-----------------------------------------------------------------
- * FILE: ControlLogin.java
- *-----------------------------------------------------------------
- * PROGETTO: Atsilo
- *-----------------------------------------------------------------
- * OWNER
- * Parisi Marco, 27/11/2012 (non responsabile)
- *-----------------------------------------------------------------
+//TODO inserire l'autore della classe
+
+/**
+ * 
+ *
  */
-
 public class ControlLogin {
     private static ControlLogin control;
     private DBAccount dbAccount;
+    private DBGenitore dbGenitore; //
+    private DBPersonaleAsilo dbPersonaleAsilo;//
+    private DBPsicopedagogo dbPsicopedagogo;//
+    private DBResponsabileQuestionario dbResponsabileQuestionario;//
+    private DBEducatoreDidattico dbEducatoreDidattico;//
+    private DBEventPlanner dbEventPlanner;//
+    private DBTirocinante dbTirocinante;//
     
     
     private ControlLogin() throws DBConnectionException {
@@ -61,7 +59,7 @@ public class ControlLogin {
      * @throws DBConnectionException
      * @throws LoginException
      */
-    Account getValoreLogin(String username, String password)
+    Account getValoreLogin(String username, String password, String tipo)
             throws DBConnectionException, LoginException {
         // Come prima cosa, bisogna creare un'istanza di database e aprire una
         // connessione
@@ -78,7 +76,8 @@ public class ControlLogin {
                 account = dbAccount.ricercaPerUsername(username);
                 
                 if (account == null) {
-                    throw new LoginException("Username o Password Errato");
+                    throw new LoginException(
+                            "Username o Password o Tipologia Errata");
                 }
                 
                 else {
@@ -87,8 +86,50 @@ public class ControlLogin {
                         return account;
                     
                     else {
-                        
-                        throw new LoginException("Username o Password Errato");
+                        if (tipo.compareTo("genitore") == 0)
+                            if ((dbGenitore.ricercaGenitoreCf(account
+                                    .getOwner().getCodiceFiscale())) != null)
+                                return account;
+                            else
+                                throw new LoginException("Username o Password o Tipologia Errata");
+                        else 
+                            if (tipo.compareTo("personale_esilo") == 0)
+                                if ((dbPersonaleAsilo.CercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                    return account;
+                                else
+                                    throw new LoginException("Username o Password o Tipologia Errata");
+                            else
+                                if (tipo.compareTo("psicopedagogo") == 0)
+                                    if ((dbPsicopedagogo.ricercaPsicopedagogoCf(account.getOwner().getCodiceFiscale())) != null)
+                                        return account;
+                                    else
+                                        throw new LoginException("Username o Password o Tipologia Errata");
+                                else
+                                    if (tipo.compareTo("resposabile_questionario") == 0)
+                                        if ((dbResponsabileQuestionario.CercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                            return account;
+                                        else
+                                            throw new LoginException("Username o Password o Tipologia Errata");
+                                    else
+                                        if (tipo.compareTo("educatore_didattico") == 0)
+                                            if ((dbEducatoreDidattico.ricercaEducatoreDidatticoPerCf(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                                return account;
+                                            else
+                                                throw new LoginException("Username o Password o Tipologia Errata");
+                                        else
+                                            if (tipo.compareTo("event_planner") == 0)
+                                                if ((dbEventPlanner.ricercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                                    return account;
+                                                else
+                                                    throw new LoginException("Username o Password o Tipologia Errata");
+                                            else
+                                                if (tipo.compareTo("tirocinante") == 0)
+                                                    if ((dbTirocinante.ricercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                                        return account;
+                                                    else
+                                                        throw new LoginException("Username o Password o Tipologia Errata");
+                                                else  throw new LoginException("Username o Password o Tipologia Errata");
+                                                    
                         
                     }
                 }
@@ -110,7 +151,7 @@ public class ControlLogin {
      * @return
      */
     
-
+    
     public static ControlLogin getInstance() {
         
         return control;
