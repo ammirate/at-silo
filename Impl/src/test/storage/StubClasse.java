@@ -35,8 +35,28 @@ public class StubClasse {
         c = new Classe();
     }
 
-    public Classe RicercaClassePerId (String id){
+    public Classe ricercaClassePerId (String id){
         return c;
+    }
+    
+    public boolean inserisciClasse (Classe c){
+        return true;
+    }
+    
+    public boolean cancellaClasse (Classe c){
+        return true;
+    }
+    
+    public boolean replace(Classe c1, Classe c2){
+        return true;
+    }
+    
+    public boolean confermaClasse(Classe c){
+        return true;
+    }
+    
+    public boolean rifiutaClasse(Classe c){
+        return true;
     }
     
     

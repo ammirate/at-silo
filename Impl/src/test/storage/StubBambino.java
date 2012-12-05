@@ -16,6 +16,8 @@
 
 package test.storage;
 
+import java.util.List;
+
 import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
@@ -26,10 +28,12 @@ public class StubBambino
 {
     Bambino b;
     Database database;
+    List<Bambino> lb;
     
     public StubBambino(Database db){
         database=db;
         b = new Bambino();
+        lb.add(b);
     }
         
     public Bambino ricercaBambino(String cf){
@@ -46,6 +50,46 @@ public class StubBambino
     
     public Boolean inserisci(Bambino b){
         return true;
+    }
+    
+    public List<Bambino> ricercaBambiniIdonei(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniNonIdonei(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniRichiestaPrimoAnno(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniAnniPrecedenti(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniFineCicloScolastico(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniRinunciatari(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniServizioMensa(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniServizioPartTime(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniServizioFullTime(){
+        return lb;
+    }
+    
+    public List<Bambino> ricercaBambiniServizioDisabili(){
+        return lb;
     }
 
 }

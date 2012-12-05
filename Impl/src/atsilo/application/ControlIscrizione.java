@@ -25,6 +25,22 @@ import atsilo.exception.GenitoreException;
 import atsilo.exception.UtenteException;
 import atsilo.storage.Database;
 
+
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlDatiPersonali.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Elisa D'Eugenio, 03/12/2012
+ *-----------------------------------------------------------------
+ */
+
+
 public class ControlIscrizione {
 
     private static final ControlIscrizione ISTANCE = new ControlIscrizione();
@@ -45,9 +61,10 @@ public class ControlIscrizione {
         StubUtente stub2 = new StubUtente(db);
         if(stub2.ricercaUtente(cf) != null)
             throw new AccountException("L'utente esite già");
-        //Si suppone che la password sia un codice numerico composto di 8 cifre, si suppone.. intero
+        //Generazione della password
         Random generatore = new Random(8);
         int password = generatore.nextInt(10000001) + 99999999;
+        //Converesione in stringa della password
         String psw = "" + password;
         
         //Credo che in questa prima fase vengano messi tutti i dati relativi all'entità utente 
@@ -158,7 +175,6 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    //ATTENDO di sapere queli parametri mi verranno passati
     public boolean inserisciDomandaIscrizione(String dataPresentazione, int iD, int punteggio,
             String posizione, Genitore genitore, Bambino bambino) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
@@ -299,7 +315,7 @@ public class ControlIscrizione {
     }
 
     public static ControlIscrizione getIstance() {
-        return null;
+        return ISTANCE;
     }
     
 }
