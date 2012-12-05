@@ -4,6 +4,8 @@ import atsilo.entity.Utente;
 
 import java.util.List;
 
+//TODO scrivere la javadoc per la classe e i metodi
+
 public class ControlRicercaDati {
     private static final ControlRicercaDati ISTANCE;
 

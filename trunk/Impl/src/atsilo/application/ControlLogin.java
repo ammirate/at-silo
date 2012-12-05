@@ -26,6 +26,8 @@ import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBAccount;
 import atsilo.storage.Database;
 
+//TODO inserire l'autore della classe
+
 /**
  * 
  *

@@ -2,6 +2,8 @@ package atsilo.application;
 
 import atsilo.entity.Servizio;
 
+//TODO scrivere la javadoc
+
 public class ControlMensa {
     
     private static final ControlMensa cme;

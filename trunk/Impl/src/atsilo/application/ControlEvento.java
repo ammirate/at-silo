@@ -16,6 +16,7 @@ import java.util.List;
 import test.storage.StubEvento;
 import test.storage.StubRegistro;
 
+//TODO inserire l'autore della classe
 
 /*
  * ====EVENTO===
