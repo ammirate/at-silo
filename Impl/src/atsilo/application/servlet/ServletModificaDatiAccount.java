@@ -47,13 +47,11 @@ public class ServletModificaDatiAccount extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	   //Prendo nome pagina chiamante
 	    
-	    String a = request.getRequestURI();
-	    String[] b = a.split("/");
-	    String nome_chiamante = b[b.length-1];
 	    
 	    
 	    PrintWriter out = response.getWriter();
-	    System.out.println(nome_chiamante);//cancellare
+	    HttpSession sessione = request.getSession();
+	    String nome_pagina_chiamante=((String)sessione.getAttribute("nome_pagina_chiamante"));
 	    
             //i campi del form non possono essere nulli quindi non viene fatto nessun controllo
 	    String username= request.getParameter("username");
@@ -71,8 +69,8 @@ public class ServletModificaDatiAccount extends HttpServlet {
             // Set response content type
             response.setContentType("text/html");
             // New location to be redirected
-            String modifica_ok = new String("prototipo/index_"+nome_chiamante+"?modifica=ok");//reindirizzo al chiamante della servlet
-            String modifica_error = new String("prototipo/index_"+nome_chiamante+"?modifica=failed");
+            String modifica_ok = new String("prototipo/index_"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
+            String modifica_error = new String("prototipo/index_"+nome_pagina_chiamante+"?successo=failed");
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             
             if (cdp.updateAccount(username, password, email, tipologia_genitore)){//setto dati account

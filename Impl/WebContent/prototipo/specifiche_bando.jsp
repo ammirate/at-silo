@@ -14,12 +14,7 @@
 		}
 	}
 %>
-<script type="text/javascript">
-	function miaFunzione(){
-		
-		
-	}
-</script>
+
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 	<tbody>

@@ -12,15 +12,3 @@
  	}
 
  %>
- <%!
- 	String readOnly="readonly='readonly'";
-	String  action="";
-	String nome_bottone="Modifica";
- 	
-	//metodo invocato alla pressione del tasto modifica
-	void cambioValoriForm(){
-		readOnly=" ";
-		action="http://localhost:8080/Atsilo/ServletModificaDatiAccount";
-		nome_bottone="Salva";
-	}
- %>
