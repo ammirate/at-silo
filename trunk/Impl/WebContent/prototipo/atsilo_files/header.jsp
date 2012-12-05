@@ -13,6 +13,12 @@
 	sessione.setAttribute("homepage", "index_impiegato.jsp");
 	String homepage=(String)sessione.getAttribute("homepage");
 	
+	//imposta come variabile di sessione il nome della pagina chiamante
+	String a = request.getRequestURI();
+    String[] b = a.split("/");
+    String temp_nome_chiamante = b[b.length-1];
+    sessione.setAttribute("nome_pagina_chiamante", temp_nome_chiamante);
+    
 	//controllo se utente ha effettuato il login
 	//se username non settato 
 	/*
