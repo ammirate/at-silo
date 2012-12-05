@@ -63,7 +63,7 @@ public class TestDBAccount {
     }
 
      /** 
-     * Testa il metodo ricercaPerUsername della classe Account. 
+     * Testa il metodo ricercaPerUsername della classe Account ricercando per un username corretto. 
      * @param utenteDaTestare contiene il nome di un utente presente nel database
      * @throws SQLException 
      */
@@ -77,7 +77,40 @@ public class TestDBAccount {
          assertNotNull(u);
          assertEquals(u.getUserName(),utenteDaTestare);
     }
-
+    
+    /** 
+     * Testa il metodo ricercaPerUsername della classe Account ricercando per un username sbagliato(non presente nel database). 
+     * @param utenteDaTestare contiene il nome di un utente non presente nel database
+     * @throws SQLException 
+     */
+    @Test
+    public void testRicercaPerUsernameUserSbagliato() throws SQLException {
+         Account u=new Account();
+         String utenteDaTestare ="d.tanfa";
+         DBAccount dba = new DBAccount(db);
+         u=dba.ricercaPerUsername(utenteDaTestare);
+         
+         assertEquals(u.getUserName(),null);
+         
+    }
+    
+    
+    /** 
+     * Testa il metodo ricercaPerUsername della classe Account ricercando per un username = "null"(non presente nel database). 
+     * @param utenteDaTestare contiene il nome di un utente null nel database
+     * @throws SQLException 
+     */
+    @Test
+    public void testRicercaPerUsernameUserNull() throws SQLException {
+         Account u=new Account();
+         String utenteDaTestare =null;
+         DBAccount dba = new DBAccount(db);
+         u=dba.ricercaPerUsername(utenteDaTestare);
+         
+         assertEquals(u.getUserName(),null);
+         
+    }
+    
 
 
  
