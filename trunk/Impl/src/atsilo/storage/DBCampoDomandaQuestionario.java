@@ -123,7 +123,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String idDomanda) throws SQLException{
         
-        List<CampoDomandaQuestionario> l=null;
+        List<CampoDomandaQuestionario> l=new ArrayList<CampoDomandaQuestionario>();
         CampoDomandaQuestionario c=new CampoDomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(

@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -99,7 +100,7 @@ public class DBRispostaQuestionario extends DBBeans {
      * @throws SQLException
      */
     public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
-        List<RispostaQuestionario> l =null;
+        List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario> ();
         RispostaQuestionario ris=new RispostaQuestionario();
         
         
@@ -131,12 +132,12 @@ public class DBRispostaQuestionario extends DBBeans {
      * @throws SQLException
      */    
     public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{        
-        List<RispostaQuestionario> l=null;
+        List<RispostaQuestionario> l=new ArrayList <RispostaQuestionario>();
         RispostaQuestionario r=new RispostaQuestionario();
         
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE domanda = ?");
+                "SELECT * FROM compila" + "WHERE questionario= ?");
         tabella.setParam(stmt, 1, "domanda", d.getId());
         ResultSet res = stmt.executeQuery();
         
@@ -153,6 +154,9 @@ public class DBRispostaQuestionario extends DBBeans {
         return l;
         
     }
+    
+
+    
 }
 
 

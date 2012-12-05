@@ -88,6 +88,14 @@ public class Questionario {
     public Date getPeriodo_fine() {
         return periodo_fine;
     }
+    
+    public String getPeriodo_fineString() {
+        return periodo_fine.toString();
+    }
+    
+    public String getPeriodo_inizioString() {
+        return periodo_inizio.toString();
+    }
 
     /**
      * Metodo che setta il campo descrizione

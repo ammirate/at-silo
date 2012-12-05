@@ -55,7 +55,7 @@ public class TESTControlQuestionarioTestTest {
     public void setUp() throws FileNotFoundException, SQLException {
         Database db = new Database();
         db.apriConnessione();
-        DBUtil.execScript(db, "../SDD/Dati Persistenti/atsilo popolato.sql");
+        DBUtil.execScript(db, "D:\\Tony\\Unisa\\IS\\PROGETTO\\atsilo\\SDD\\Dati Persistenti\\atsilo popolato.sql");
         db.chiudiConnessione();
     }
     
