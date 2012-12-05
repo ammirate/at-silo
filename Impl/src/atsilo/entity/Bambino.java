@@ -13,40 +13,32 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
 
 public class Bambino {
     
-    /**
-     * @attribute nome di tipo stringa
-     */
-    private String nome;
-
-    /**
-     * @attribute DataNascita di tipo DATE
-     */
+    
     private Date dataNascita;
-
-    /**
-     * @attribute CategoriaAppartenenza di tipo stringa
-     */
-    private String categoriaAppartenenza;
-
-    /**
-     * @attribute indirizzo di tipo indirizzo
-     */
-    private String indirizzo;
-
-    /**
-     * @attribute classe di tipo intero
-     */
-    private int classe;
-
-    /**
-     * @attribute cognome di tipo stringa
-     */
+    private String nome;
     private String cognome;
+    private String codiceFiscale;
+    private String comuneNascita;
+    private String cittadinanza;
+    private String indirizzoResidenza;
+    private int numeroCivicoResidenza;
+    private int capResidenza;
+    private String comuneResidenza;
+    private String provinciaResidenza;
+    private String indirizzoDomicilio;
+    private int numeroCivicoDomicilio;
+    private int capDomicilio;
+    private String comuneDomicilio;
+    private String provinciaDomicilio;
+    private String categoriaAppartenenza;
+    private int classe;
 
     /**
      *  La variabile genitore avrà il valore della variabile di Genitore
@@ -54,10 +46,8 @@ public class Bambino {
      */
     private Genitore genitore;
 
-    /**
-     * @attribute CodiceFiscale di tipo stringa
-     */
-    private String codiceFiscale;
+    
+ 
 
     /**
      *  La variabile assenza avrà i valore della lista Assenza
@@ -71,53 +61,63 @@ public class Bambino {
     public Bambino() {}
     
     /**
-     * @param nome il parametro fissato
-     * @param dataNascita il parametro fissato
+     * @param dataNascita il paramentro è fissato
+     * @param nome il paramentro è fissato
+     * @param cognome il paramentro è fissato
+     * @param codiceFiscale il paramentro è fissato
+     * @param comuneNascita il paramentro è fissato
+     * @param indirizzoResidenza  il paramentro è fissato
+     * @param cittadinanza il parametro è fissato
+     * @param numeroCivicoResidenza il parametro è fissato
+     * @param capResidenza il parametro è fissato
+     * @param comuneResidenza il parametro è fissato
+     * @param provinciaResidenza il parametro è fissato
+     * @param indirizzoDomicilio il parametro è fissato
+     * @param numeroCivicoDomicilio il parametro è fissato
+     * @param capDomicilio il parametro è fissato
+     * @param comuneDomicilio il parametro è fissato
+     * @param provinciaDomicilio il parametro è fissato
      * @param categoriaAppartenenza il parametro fissato
-     * @param indirizzo il parametro fissato
      * @param classe il parametro fissato
-     * @param cognome il parametro fissato
      * @param genitore è settato dopo la lettura
-     * @param codiceFiscale il parametro fissato
      * @param assenze è settato dopo la lettura
      */
-    public Bambino(String nome, Date dataNascita, String categoriaAppartenenza,
-            String indirizzo, int classe, String cognome, Genitore genitore,
-            String codiceFiscale, List<Assenza> assenze) {
+    public Bambino(Date dataNascita, String nome, String cognome,
+            String codiceFiscale,  String comuneNascita,
+            String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) {
         super();
-        this.nome = nome;
         this.dataNascita = dataNascita;
-        this.categoriaAppartenenza = categoriaAppartenenza;
-        this.indirizzo = indirizzo;
-        this.classe = classe;
+        this.nome = nome;
         this.cognome = cognome;
-        this.genitore = genitore;
         this.codiceFiscale = codiceFiscale;
+        this.comuneNascita = comuneNascita;
+        this.indirizzoResidenza = indirizzoResidenza;
+        this.cittadinanza = cittadinanza;
+        this.numeroCivicoResidenza = numeroCivicoResidenza;
+        this.capResidenza = capResidenza;
+        this.comuneResidenza = comuneResidenza;
+        this.provinciaResidenza = provinciaResidenza;
+        this.indirizzoDomicilio = indirizzoDomicilio;
+        this.numeroCivicoDomicilio = numeroCivicoDomicilio;
+        this.capDomicilio = capDomicilio;
+        this.comuneDomicilio = comuneDomicilio;
+        this.provinciaDomicilio = provinciaDomicilio;
+        this.categoriaAppartenenza = categoriaAppartenenza;
+        this.classe = classe;
+        this.genitore = genitore;
         this.assenze = assenze;
     }
     
     /**
-     * Metodo che setta il campo Nome
-     * @param Nome il parametro fissato
+     * Metodo che prende il campo dataNascita
+     * @param dataNascita il parametro inserito
      */
-    public void setNome(String Nome) {
-        this.nome = Nome;
-    }
-
-    /**
-     * Metodo che prende il campo Nome
-     * @return nome il paramentro inserito
-     */
-    public String getNome() {
-        return nome;
-    }
-
-    /**
-     * Metodo che setta il campo DataNascita
-     * @param DataNascita il parametro fissato
-     */
-    public void setDataNascita(Date DataNascita) {
-        this.dataNascita = DataNascita;
+    public void setDataNascita(Date dataNascita) {
+        this.dataNascita = dataNascita;
     }
 
     /**
@@ -128,6 +128,246 @@ public class Bambino {
         return dataNascita;
     }
 
+    /**
+     * Metodo che prende il campo nome
+     * @param nome il parametro inserito
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * Metodo che prende il campo nome
+     * @return nome il parametro inserito
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * Metodo che prende il campo cognome
+     * @param cognome il parametro inserito
+     */
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    /**
+     * Metodo che prende il campo cognome
+     * @return cognome il parametro inserito
+     */
+    public String getCognome() {
+        return cognome;
+    }
+
+    /**
+     * Metodo che prende il campo codiceFiscale
+     * @param codiceFiscale il parametro inserito
+     */
+    public void setCodiceFiscale(String codiceFiscale) {
+        this.codiceFiscale = codiceFiscale;
+    }
+
+    /**
+     * Metodo che prende il campo CodiceFiscale
+     * @return CodiceFiscale il parametro inserito
+     */
+    public String getCodiceFiscale() {
+        return codiceFiscale;
+    }
+
+    /**
+     * Metodo che prende il campo comune nascita
+     * @param comuneNascita il parametro inserito
+     */
+    public void setComuneNascita(String comuneNascita) {
+        this.comuneNascita = comuneNascita;
+    }
+
+    /**
+     * Metodo che prende il campo Comune di nascita
+     * @return ComuneNascita il parametro inserito
+     */
+    public String getComuneNascita() {
+        return comuneNascita;
+    }
+
+    /**
+     * Metodo che prende il campo cittadinanza
+     * @param cittadinanza il parametro inserito
+     */
+    public void setCittadinanza(String cittadinanza) {
+        this.cittadinanza = cittadinanza;
+    }
+
+    /**
+     * Metodo che prende il campo cittadinazna
+     * @return cittadinanza il parametro inserito
+     */
+    public String getcittadinanza() {
+        return cittadinanza;
+    }
+    
+    /**
+     * Metodo che prende il campo indirizzoResidenza
+     * @param indirizzoResidenza il parametro inserito
+     */
+    public void setIndirizzoResidenza(String indirizzoResidenza) {
+        this.indirizzoResidenza = indirizzoResidenza;
+    }
+
+    /**
+     * Metodo che prende il campo indirizzoResidenza
+     * @return indirizzoResidenza il parametro inserito
+     */
+    public String getIndirizzoResidenza() {
+        return indirizzoResidenza;
+    }
+    
+    /**
+     * Metodo che prende il campo numeroCivicoResidenza
+     * @param numeroCivicoResidenza il parametro inserito
+     */
+    public void setNumeroCivicoResidenza(int numeroCivicoResidenza) {
+        this.numeroCivicoResidenza = numeroCivicoResidenza;
+    }
+
+    /**
+     * Metodo che prende il campo numeroCivicoResidenza
+     * @return numeroCivicoResidenza il parametro inserito
+     */
+    public int getNumeroCivicoResidenza() {
+        return numeroCivicoResidenza;
+    }
+    
+    /**
+     * Metodo che prende il campo capResidenza
+     * @param capResidenza il parametro inserito
+     */
+    public void setCapResidenza(int capResidenza) {
+        this.capResidenza = capResidenza;
+    }
+
+    /**
+     * Metodo che prende il campo capResidenza
+     * @return capResidenza il parametro inserito
+     */
+    public int getCapResidenza() {
+        return capResidenza;
+    }
+    
+    /**
+     * Metodo che prende il campo comuneResidenza
+     * @param comuneResidenza il parametro inserito
+     */
+    public void setComuneResidenza(String comuneResidenza) {
+        this.comuneResidenza = comuneResidenza;
+    }
+
+    /**
+     * Metodo che prende il campo comuneResidenza
+     * @return comuneResidenza il parametro inserito
+     */
+    public String getComuneResidenza() {
+        return comuneResidenza;
+    }
+    
+    /**
+     * Metodo che prende il campo provinciaResidenza
+     * @param provinciaResidenza il parametro inserito
+     */
+    public void setProvinciaResidenza(String provinciaResidenza) {
+        this.provinciaResidenza = provinciaResidenza;
+    }
+
+    /**
+     * Metodo che prende il campo provinciaResidenza
+     * @return provinciaResidenza il parametro inserito
+     */
+    public String getProvinciaResidenza() {
+        return provinciaResidenza;
+    }
+    
+    /**
+     * Metodo che prende il campo indirizzoDomicilio
+     * @param indirizzoDomicilio il parametro inserito
+     */
+    public void setIndirizzoDomicilio(String indirizzoDomicilio) {
+        this.indirizzoDomicilio = indirizzoDomicilio;
+    }
+
+    /**
+     * Metodo che prende il campo indirizzoDomicilio
+     * @return indirizzoDomicilio il parametro inserito
+     */
+    public String getIndirizzoDomicilio() {
+        return indirizzoDomicilio;
+    }
+    
+    /**
+     * Metodo che prende il campo numeroCivicoDomicilio
+     * @param numeroCivicoDomicilio il parametro inserito
+     */
+    public void setNumeroCivicoDomicilio(int numeroCivicoDomicilio) {
+        this.numeroCivicoDomicilio = numeroCivicoDomicilio;
+    }
+
+    /**
+     * Metodo che prende il campo numeroCivicoDomicilio
+     * @return numeroCivicoDomicilio il parametro inserito
+     */
+    public int getNumeroCivicoDomicilio() {
+        return numeroCivicoDomicilio;
+    }
+    
+    /**
+     * Metodo che prende il campo capDomicilio
+     * @param capDomicilio il parametro inserito
+     */
+    public void setCapDomicilio(int capDomicilio) {
+        this.capDomicilio = capDomicilio;
+    }
+
+    /**
+     * Metodo che prende il campo capDomicilio
+     * @return capDomicilio il parametro inserito
+     */
+    public int getCapDomicilio() {
+        return capDomicilio;
+    }
+    
+    /**
+     * Metodo che prende il campo comuneDomicilio
+     * @param comuneDomicilio il parametro inserito
+     */
+    public void setComuneDomicilio(String comuneDomicilio) {
+        this.comuneDomicilio = comuneDomicilio;
+    }
+
+    /**
+     * Metodo che prende il campo comuneDomicilio
+     * @return comuneDomicilio il parametro inserito
+     */
+    public String getComuneDomicilio() {
+        return comuneDomicilio;
+    }
+    
+    /**
+     * Metodo che prende il campo provinciaDomicilio
+     * @param provinciaDomicilio il parametro inserito
+     */
+    public void setProvinciaDomicilio(String provinciaDomicilio) {
+        this.provinciaDomicilio = provinciaDomicilio;
+    }
+
+    /**
+     * Metodo che prende il campo provinciaDomicilio
+     * @return provinciaDomicilio il parametro inserito
+     */
+    public String getProvinciaDomicilio() {
+        return provinciaDomicilio;
+    }
+   
     /**
      * Metodo che setta il campo CategoriaAppartenenza
      * @param CategoriaAppartenenza il parametro fissato
@@ -144,22 +384,7 @@ public class Bambino {
         return categoriaAppartenenza;
     }
 
-    /**
-     * Metodo che setta il campo Indirizzo
-     * @param Indirizzo il parametro fissato
-     */
-    public void setIndirizzo(String Indirizzo) {
-        this.indirizzo = Indirizzo;
-    }
-
-    /**
-     * Metodo che prende il campo Indirizzo
-     * @return indirizzo il paramentro inserito
-     */
-    public String getIndirizzo() {
-        return indirizzo;
-    }
-
+   
     /**
      * Metodo che setta il valore Classe
      * @param Classe il parametro fissato
@@ -176,21 +401,7 @@ public class Bambino {
         return classe;
     }
 
-    /**
-     * Metodo che setta il campo Cognome
-     * @param Cognome il parametro fissato
-     */
-    public void setCognome(String Cognome) {
-        this.cognome = Cognome;
-    }
-
-    /**
-     * Metodo che prende il campo Cognome
-     * @return cognome il parametro inserito
-     */
-    public String getCognome() {
-        return cognome;
-    }
+   
 
     /**
      * Metodo che setta il parametro letto dalla classe Genitore
@@ -208,21 +419,7 @@ public class Bambino {
         return genitore;
     }
 
-    /**
-     * Metodo che setta il campo CodiceFiscale
-     * @param Codice_Fiscale il parametro fissato
-     */
-    public void setCodice_Fiscale(String Codice_Fiscale) {
-        this.codiceFiscale = Codice_Fiscale;
-    }
-
-    /**
-     * Metodo che prende il campo CodiceFiscale
-     * @return codiceFiscale il parametro inserito
-     */
-    public String getCodice_Fiscale() {
-        return codiceFiscale;
-    }
+   
 
     /**
      * Metodo che setta il parametro letto dalla classe assenza
