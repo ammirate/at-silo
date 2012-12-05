@@ -13,8 +13,22 @@ import atsilo.entity.Classe;
 import atsilo.entity.Genitore;
 import atsilo.entity.Psicopedagogo;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBPsicopedagoga.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, Ferdinando Di Palma, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+
 public class DBPsicopedagogo extends DBBeans {
-    
+  
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     

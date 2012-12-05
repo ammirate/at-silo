@@ -27,14 +27,24 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Tabella.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * 
  * Classe che permette di eseguire operazioni su una tabella del database
  * implements ManagerDB
- * 
- * @author Angelo G. Scafuro
- * @version 1.0
- * 
  */
 public class Tabella /* implements ManagerDB */{
     private static final String SELECT_STAR = "SELECT * FROM ";

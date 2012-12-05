@@ -14,27 +14,30 @@ import java.util.List;
 import java.util.Map;
 import java.util.Collections;
 
-
-
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBBambino.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
 
 public class DBBambino extends DBBeans<Bambino> {    
-    
-    
-    
+   
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
-    
-    
-    
+
     /**
      * Costruttore 
      * @param db 
      */
     public DBBambino(Database db){super("Bambino",db);}
-    
-    
-
-
 
     /* (non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
