@@ -10,7 +10,7 @@
 	HttpSession sessione = request.getSession();
 	String username=(String)sessione.getAttribute("username");
 	String tipologia=(String)sessione.getAttribute("tipologia_utente");
-	sessione.setAttribute("homepage", "index_impiegato.jsp");
+	//sessione.setAttribute("homepage", "index_impiegato.jsp");
 	String homepage=(String)sessione.getAttribute("homepage");
 	
 	String a = request.getRequestURI();

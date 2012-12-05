@@ -1,3 +1,8 @@
+<%
+//sessione gia' dichiarata nell'header
+//la variabile homepage sarà il riferimento al tasto home dell'header
+sessione.setAttribute("homepage", "index_impiegato_bando.jsp");
+%>
 <table class="colonnasx" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td valign="top" class="colonnasx" width="209">
