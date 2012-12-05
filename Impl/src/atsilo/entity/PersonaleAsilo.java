@@ -29,8 +29,18 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
      */
     public PersonaleAsilo(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
-            String telefono, String residenza, String categoriaAppartenenza) {
-        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, String categoriaAppartenenza) {
+        super(dataNascita, nome, cognome,
+                codiceFiscale, email, comuneNascita,
+              telefono, cittadinanza, indirizzoResidenza,
+                numeroCivicoResidenza, capResidenza, comuneResidenza,
+                provinciaResidenza, indirizzoDomicilio,
+               numeroCivicoDomicilio, capDomicilio,comuneDomicilio,
+               provinciaDomicilio);
         this.categoriaAppartenenza = categoriaAppartenenza;
     }
 

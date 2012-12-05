@@ -24,6 +24,11 @@ public class Tirocinante extends Utente{
     
     private int oreTotali;
     private int oreLavoro;
+    private String stato;
+    private int matricola;
+    private String giudizioFinale;
+    private String disponibilita;
+
     
     /**
      * La variabile personaleAsilo è nulla c'è bisogno di una lettura della classe PersonaleAsilo
@@ -40,15 +45,34 @@ public class Tirocinante extends Utente{
      * @param oreTotali il paramentro è fissato
      * @param oreLavoro il paramentro è fissato
      * @param personaleAsilo è settato dopo la lettura 
+     * @param stato il parametro è fissato
+     * @param matricola il parametro è fissato
+     * @param giudizioFinale il parametro è fissato
+     * @param disponibilita il parametro è fissato
      */
     public Tirocinante(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
-            String telefono, String residenza, int oreTotali, int oreLavoro,
-            PersonaleAsilo personaleAsilo) {
-        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, int oreTotali, int oreLavoro,
+            PersonaleAsilo personaleAsilo, String stato, int matricola,
+            String giudizioFinale, String disponibilita) {
+        super(dataNascita, nome, cognome,
+                codiceFiscale, email, comuneNascita,
+              telefono, cittadinanza, indirizzoResidenza,
+                numeroCivicoResidenza, capResidenza, comuneResidenza,
+                provinciaResidenza, indirizzoDomicilio,
+               numeroCivicoDomicilio, capDomicilio,comuneDomicilio,
+               provinciaDomicilio);
         this.oreTotali = oreTotali;
         this.oreLavoro = oreLavoro;
         this.personaleAsilo = personaleAsilo;
+        this.stato = stato;
+        this.matricola = matricola;
+        this.giudizioFinale = giudizioFinale;
+        this.disponibilita = disponibilita;
     }
 
 
@@ -98,5 +122,69 @@ public class Tirocinante extends Utente{
      */
     public PersonaleAsilo getPersonaleAsilo() {
         return personaleAsilo;
+    }
+    
+    /**
+     * Metodo che prende il valore stato
+     * @return stato il parametro inserito
+     */
+    public String getStato() {
+        return stato;
+    }
+
+    /**
+     * Metodo che prende il valore stato
+     * @param stato il parametro inserito
+     */
+    public void setStato(String stato) {
+        this.stato = stato;
+    }
+    
+    /**
+     * Metodo che prende il valore matricola
+     * @return matricola il parametro inserito
+     */
+    public int getMatricola() {
+        return matricola;
+    }
+
+    /**
+     * Metodo che prende il valore matricola
+     * @param matricola il parametro inserito
+     */
+    public void setMatricola(int matricola) {
+        this.matricola = matricola;
+    }
+    
+    /**
+     * Metodo che prende il valore giudizioFinale
+     * @return giudizioFinale il parametro inserito
+     */
+    public String getGiudizioFinale() {
+        return giudizioFinale;
+    }
+
+    /**
+     * Metodo che prende il valore giudizioFinale
+     * @param giudizioFinale il parametro inserito
+     */
+    public void setGiudizioFinale(String giudizioFinale) {
+        this.giudizioFinale = giudizioFinale;
+    }
+    
+    /**
+     * Metodo che prende il valore disponibilita
+     * @return disponibilita il parametro inserito
+     */
+    public String getDisponibilita() {
+        return disponibilita;
+    }
+
+    /**
+     * Metodo che prende il valore disponibilita
+     * @param disponibilita il parametro inserito
+     */
+    public void setDisponibilita(String disponibilita) {
+        this.disponibilita = disponibilita;
     }
 }
