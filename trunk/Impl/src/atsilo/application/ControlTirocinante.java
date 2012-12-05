@@ -8,7 +8,21 @@ import java.sql.Date;
 
 import java.util.List;
 
-//TODO scrivere la javado per metodi e classi , inserire l'autore della classe
+//TODO scrivere la javado per metodi e classi
+
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlTirocinante.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Mariella Ferrara, 20/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
 
 public class ControlTirocinante {
     private static final ControlTirocinante c;

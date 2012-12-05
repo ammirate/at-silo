@@ -3,10 +3,22 @@ package atsilo.application;
 import atsilo.entity.*;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlDomandaQuestionario.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 27/11/2012
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Class that controls and mannages the questions of a questionnaire
- * 
- * @author Antonio Cesarano
  */
 public class ControlDomandaQuestionario {
     

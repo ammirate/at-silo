@@ -8,7 +8,21 @@ import atsilo.entity.Servizio;
 
 import java.util.List;
 
-//TODO fare javadoc per classe, motodi e inserire l'attore
+//TODO fare javadoc per classe, motodi
+
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlServizio.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 27/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
 
 public class ControlServizio {
 private static final ControlServizio cs;

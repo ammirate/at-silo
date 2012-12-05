@@ -33,6 +33,20 @@ import test.storage.StubBando;
 import test.storage.StubDomandaIscrizione;
 import test.storage.StubEvento;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlGestioneBando.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Gianfranco Bottiglieri, 27/11/2012
+ *-----------------------------------------------------------------
+ */
+
 public class ControlGestioneBando {
     private static final ControlGestioneBando INSTANCE = new ControlGestioneBando();
     private StubBando dbBando;

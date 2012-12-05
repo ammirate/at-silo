@@ -3,10 +3,22 @@ package atsilo.application;
 import atsilo.entity.ProgrammaEducativoSettimanale;
 import java.util.List;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlProgrammaEducativo.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 27/11/2012
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Class that controls and manages a weekly educative program
- * 
- * @author Antonio Cesarano
  */
 public class ControlProgrammaEducativo {
     
