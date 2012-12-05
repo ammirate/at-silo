@@ -14,6 +14,8 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -47,7 +49,7 @@ public class Registro {
      */
     public Registro(int classe, Date anno, int id,EducatoreDidattico educatoreDidattico) {
         super();
-        classe = classe;
+        this.classe = classe;
         this.anno = anno;
         this.id = id;
         this.educatoreDidattico = educatoreDidattico;
