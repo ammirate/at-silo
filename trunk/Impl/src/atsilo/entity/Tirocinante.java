@@ -24,6 +24,7 @@ public class Tirocinante extends Utente{
     //ata_di_nascita,comune_di_nascita,indirizzo residenza,titolo_di_studi,
     //ore_totali,ore_lavoro,PERSONALE_ASILO
     
+    private String titoloDiStudi;
     private int oreTotali;
     private int oreLavoro;
     private String stato;
@@ -51,6 +52,7 @@ public class Tirocinante extends Utente{
      * @param matricola il parametro è fissato
      * @param giudizioFinale il parametro è fissato
      * @param disponibilita il parametro è fissato
+     * @param titoloDiStudi il parametro è fissato
      */
     public Tirocinante(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
@@ -60,7 +62,7 @@ public class Tirocinante extends Utente{
             int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, int oreTotali, int oreLavoro,
             PersonaleAsilo personaleAsilo, String stato, int matricola,
-            String giudizioFinale, String disponibilita) {
+            String giudizioFinale, String disponibilita, String titoloDiStudi) {
         super(dataNascita, nome, cognome,
                 codiceFiscale, email, comuneNascita,
               telefono, cittadinanza, indirizzoResidenza,
@@ -75,6 +77,7 @@ public class Tirocinante extends Utente{
         this.matricola = matricola;
         this.giudizioFinale = giudizioFinale;
         this.disponibilita = disponibilita;
+        this.titoloDiStudi = titoloDiStudi;
     }
 
 
@@ -188,5 +191,21 @@ public class Tirocinante extends Utente{
      */
     public void setDisponibilita(String disponibilita) {
         this.disponibilita = disponibilita;
+    }
+    
+    /**
+     * Metodo che prende il valore titoloDiStudi
+     * @return titoloDiStudi il parametro inserito
+     */
+    public String getTitoloDiStudi() {
+        return titoloDiStudi;
+    }
+
+    /**
+     * Metodo che prende il valore titoloDiStudi
+     * @param titoloDiStudi il parametro inserito
+     */
+    public void setTitoloDiStudi(String titoloDiStudi) {
+        this.titoloDiStudi = titoloDiStudi;
     }
 }
