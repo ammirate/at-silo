@@ -2,6 +2,7 @@
 package test.storage;
 
 
+import java.sql.SQLException;
 import java.util.List;
 
 import atsilo.entity.DomandaIscrizione;
@@ -53,6 +54,15 @@ public class StubDomandaIscrizione
     
     public List<DomandaIscrizione> ricercaDomandeInAttesa(){
         return ldi;
+    }
+
+    /**
+     * @param id
+     * @return
+     */
+    public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException{
+      
+        return di;
     }
 
 
