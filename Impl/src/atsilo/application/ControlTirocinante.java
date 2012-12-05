@@ -8,6 +8,8 @@ import java.sql.Date;
 
 import java.util.List;
 
+//TODO scrivere la javado per metodi e classi , inserire l'autore della classe
+
 public class ControlTirocinante {
     private static final ControlTirocinante c;
 
