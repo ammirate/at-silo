@@ -52,7 +52,7 @@ public class ControlGestioneBando {
      * @throws DBConnectionException
      * @throws BandoException
      */
-    boolean inserisciPunteggio(DomandaIscrizione iscrizione,int punteggio) throws DBConnectionException,BandoException
+    public boolean inserisciPunteggio(DomandaIscrizione iscrizione,int punteggio) throws DBConnectionException,BandoException
     {
         Database db = new Database();
         
@@ -96,7 +96,7 @@ public class ControlGestioneBando {
      * @throws DBConnectionException
      * @throws BandoException
      */
-    boolean inserisciIntervalloBando(String inizio, String fine) throws DBConnectionException,BandoException
+    public boolean inserisciIntervalloBando(String inizio, String fine) throws DBConnectionException,BandoException
     {
         //Come prima cosa, bisogna creare un'istanza di database e aprire una connessione
         Database db = new Database();
@@ -134,7 +134,7 @@ public class ControlGestioneBando {
      * @throws DBConnectionException
      * @throws BandoException
      */
-    boolean modificaBando(Bando bando,String inizio, String fine) throws DBConnectionException,BandoException
+    public boolean modificaBando(Bando bando,String inizio, String fine) throws DBConnectionException,BandoException
     {
         Database db = new Database();
         if (!db.apriConnessione()) 
