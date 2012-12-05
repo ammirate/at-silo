@@ -16,5 +16,6 @@ sessione.invalidate();
 	<!-- Others -->
 	<meta name="Author" content="Angelo G. Scafuro" />
 </head>
+Disconnessione in corso..
 
 </html>

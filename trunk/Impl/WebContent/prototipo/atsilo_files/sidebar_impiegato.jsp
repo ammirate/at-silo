@@ -1,3 +1,14 @@
+<%
+//sessione gia' dichiarata nell'header
+//la variabile homepage sarà il riferimento al tasto home dell'header
+sessione.setAttribute("homepage", "index_impiegato_asilo.jsp");
+%>
+<%
+//controllo se questa tipologia utente ha accesso alle pagine in cui e' inclusa questa sidebar
+if (!tipologia.equals("impiegato_asilo") )
+		response.sendRedirect("index_impiegato_asilo.jsp");
+%>
+
 <table class="colonnasx" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td valign="top" class="colonnasx" width="209">

@@ -1,3 +1,13 @@
+<%
+//sessione gia' dichiarata nell'header
+//la variabile homepage sarà il riferimento al tasto home dell'header
+sessione.setAttribute("homepage", "index_psicopedagoga.jsp");
+%>
+<%
+//controllo se questa tipologia utente ha accesso alle pagine in cui e' inclusa questa sidebar
+if (!tipologia.equals("psicopedagogo") )
+		response.sendRedirect("index_psicopedagogo.jsp");
+%>
 <table class="colonnasx" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td valign="top" class="colonnasx" width="209">

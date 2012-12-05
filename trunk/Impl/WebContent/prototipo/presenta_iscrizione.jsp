@@ -19,15 +19,28 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
     <tr>
       <td><table border="0">
         <tbody>
-      
+      	
           <tr>
-            <td ><p>PER COMPLETARE LA DOMANDA DI ISCRIIZONE &Egrave; NECESSARIO ALLEGARE I SEGUENTI DOCUMENTI ALLA DOMANDA DA PRESENTARE IN SEGRETERIA:</p>
-              <p>COPIA FRONTE/RETRO DEL DOCUMENTO DI RICONOSCIMENTO VALIDO DEL RICHIEDENTE (obbligatorio)</p>
+            <td ><p>IL COMPLETAMENTO DELLA DOMANDA &Egrave; OBBLIGATORIO PER COMPLETARE L'ISCRIZIONE DOPO LA PUBBLICAZIONI DELLE GRADUATORIE.
+              </p>
               <p><br>
                 PRIMA DELL'INVIO DELLA DOMANDA SI RACCOMANDA DI CONTROLLARE L'ESATTA COMPILAZIONE DI TUTTI I CAMPI POICHE', DOPO L'INVIO, NON SARA' POSSIBILE EFFETTUARE ALCUNA MODIFICA</p>
               <p><br>
                 N.B.: Per completare l'invio della domanda &egrave; necessario compilare i seguenti campi:</p>
               <table>
+                  <tr>
+    				<td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vogliono inserire le informazioni</label>
+     				 <br>
+                    </td>
+      
+  					</tr>
+ 					 <tr>
+ 				 <td colspan="2">
+                 <select name="select">
+  				  <option selected>Selezionare il nome del bambino</option>
+ 					</select></td>
+  				   <td>&nbsp;</td>
+  					</tr>
               	<tr>
                 	<td>Selezionare tipo di servizio desiderato</td>
                     <td>

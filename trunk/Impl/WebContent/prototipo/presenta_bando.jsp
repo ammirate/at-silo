@@ -19,14 +19,24 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
     <tr>
       <td><table border="0">
         <tbody>
+      	    <tr>
+    <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vuole inviare la domanda di iscrizione</label>
+      <br></td>
       
+  </tr>
+  <tr>
+  <td colspan="2"><select name="select">
+    <option selected>Selezionare il nome del bambino</option>
+  </select></td>
+     <td>&nbsp;</td>
+  </tr>
           <tr>
-            <td >Si ricorda che per presentare la domanda di iscrizione è necessario aver compilato tutti i campi relativi a Dati Account e Dati Bambino ed è obbligatorio l'invio della stessa entro i termini indicati dal bando.</td>
+            <td >Si ricorda che per presentare la domanda di iscrizione &egrave; necessario aver compilato tutti i campi relativi a Dati Account e Dati Bambino ed &egrave; obbligatorio l'invio della stessa entro i termini indicati dal bando.</td>
             
             </tr>
             <tr>
               <td>&nbsp;</td></tr>
-                <!-- Se tutti i dati sono stati compilati correttamente e non è scaduto il bando, il tasto PRESENTA DOMANDA ISCRIZIONE sarà abilitato, altrimenti sarà disabled-->
+                <!-- Se tutti i dati sono stati compilati correttamente e non &egrave; scaduto il bando, il tasto PRESENTA DOMANDA ISCRIZIONE sarà abilitato, altrimenti sarà disabled-->
              <tr>
             <td ><form name="presenta_domanda_bando" action="" method="post" nSubmit="return confirm('Presentando la domanda ora non potrai più modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
             	<input type="submit" value="Invio Domanda Iscrizione"  >
