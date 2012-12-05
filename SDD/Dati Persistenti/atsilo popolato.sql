@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 05 dic, 2012 at 02:48 PM
+-- Generato il: 05 dic, 2012 at 03:23 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -261,6 +261,17 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
   `certificato_malattie` varchar(20) NOT NULL,
   `certificato_vaccinazioni` varchar(20) NOT NULL,
   `certificato_privacy` varchar(20) NOT NULL,
+  `bambino_disabile` tinyint(1) NOT NULL,
+  `genitore_invalido` tinyint(1) NOT NULL,
+  `genitore_solo` tinyint(1) NOT NULL,
+  `genitore_vedovo` tinyint(1) NOT NULL,
+  `genitore_nubile` tinyint(1) NOT NULL,
+  `genitore_separato` tinyint(1) NOT NULL,
+  `figlio_non_riconosciuto` tinyint(1) NOT NULL,
+  `affido_esclusivo` tinyint(1) NOT NULL,
+  `altri_componenti_disabili` tinyint(1) NOT NULL,
+  `condizioni_calcolo_punteggio` text NOT NULL,
+  `isee` float NOT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
@@ -271,16 +282,16 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
 -- Dump dei dati per la tabella `DOMANDA_ISCRIZIONE`
 --
 
-INSERT INTO `DOMANDA_ISCRIZIONE` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`) VALUES
-(1, '2012-07-19', '94/100', '1', 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', ''),
-(2, '2012-08-13', '93/100', '2', 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', ''),
-(3, '2012-08-13', '94/100', '3', 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', ''),
-(4, '2012-11-01', '91/100', '4', 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', ''),
-(5, '2012-06-12', '90/100', '5', 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', ''),
-(6, '2012-09-25', '88/100', '6', 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', ''),
-(7, '2012-08-01', '85/100', '7', 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', ''),
-(8, '2012-08-28', '79/100', '8', 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', ''),
-(9, '2012-08-28', '79/100', '9', 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '');
+INSERT INTO `DOMANDA_ISCRIZIONE` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`) VALUES
+(1, '2012-07-19', '94/100', '1', 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(2, '2012-08-13', '93/100', '2', 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(3, '2012-08-13', '94/100', '3', 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(4, '2012-11-01', '91/100', '4', 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(5, '2012-06-12', '90/100', '5', 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(6, '2012-09-25', '88/100', '6', 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(7, '2012-08-01', '85/100', '7', 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(8, '2012-08-28', '79/100', '8', 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(9, '2012-08-28', '79/100', '9', 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -441,6 +452,22 @@ CREATE TABLE IF NOT EXISTS `GENITORE` (
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
+  `cittadinanza` varchar(50) NOT NULL,
+  `comune_residenza` varchar(100) NOT NULL,
+  `numero_civico_residenza` int(4) NOT NULL,
+  `cap_residenza` int(5) NOT NULL,
+  `provincia_residenza` varchar(50) NOT NULL,
+  `comune_domicilio` varchar(50) NOT NULL,
+  `indirizzo_domicilio` varchar(100) NOT NULL,
+  `numero_civico_domicilio` int(4) NOT NULL,
+  `cap_domicilio` int(5) NOT NULL,
+  `provincia_domicilio` varchar(100) NOT NULL,
+  `dipendente_presso` varchar(200) NOT NULL,
+  `rapporti_ateneo_salerno` text NOT NULL,
+  `rapporti_comune_fisciano` text NOT NULL,
+  `rapporto_parentela` varchar(50) NOT NULL,
+  `status_lavorativo` varchar(100) NOT NULL,
+  `scadenza_contratto` date NOT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -448,14 +475,14 @@ CREATE TABLE IF NOT EXISTS `GENITORE` (
 -- Dump dei dati per la tabella `GENITORE`
 --
 
-INSERT INTO `GENITORE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`) VALUES
-('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma, 2 - Fisciano (SA)', 'RESIDENTE', 'ISCRITTO'),
-('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'INSEGNANTE', 'ISCRITTO'),
-('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'INSEGNANTE', 'ISCRITTO'),
-('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'STUDENTE', 'ISCRITTO'),
-('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'NON-RESIDENTE', 'ISCRITTO'),
-('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'STUDENTE', 'ISCRITTO'),
-('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'INSEGNANTE', 'ISCRITTO');
+INSERT INTO `GENITORE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`) VALUES
+('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma, 2 - Fisciano (SA)', 'RESIDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
+('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'INSEGNANTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
+('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'INSEGNANTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
+('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'STUDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
+('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'NON-RESIDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
+('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'STUDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
+('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'INSEGNANTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -669,8 +696,8 @@ CREATE TABLE IF NOT EXISTS `QUESTIONARIO` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `flag_rinuncia` varchar(50) DEFAULT NULL,
   `pathname` varchar(100) DEFAULT NULL,
-  `periodo_inizio` varchar(50) DEFAULT NULL,
-  `periodo_fine` varchar(50) DEFAULT NULL,
+  `periodo_inizio` date DEFAULT NULL,
+  `periodo_fine` date DEFAULT NULL,
   `nome` varchar(50) DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -681,8 +708,8 @@ CREATE TABLE IF NOT EXISTS `QUESTIONARIO` (
 --
 
 INSERT INTO `QUESTIONARIO` (`id`, `flag_rinuncia`, `pathname`, `periodo_inizio`, `periodo_fine`, `nome`, `descrizione`) VALUES
-(1, NULL, NULL, 'Inizio anno scolastico', 'Fine anno scolastico', 'Controllo qualità', 'QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI'),
-(2, NULL, NULL, 'Inizio X', 'Fine X', 'Questionario X', 'Questionario relativo a X');
+(1, NULL, NULL, '2012-12-06', '2012-12-20', 'Controllo qualità', 'QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI'),
+(2, NULL, NULL, '2012-11-01', '2012-12-18', 'Questionario X', 'Questionario relativo a X');
 
 -- --------------------------------------------------------
 
@@ -796,9 +823,11 @@ CREATE TABLE IF NOT EXISTS `RISPOSTA_QUESTIONARIO` (
   `valore` varchar(50) DEFAULT NULL,
   `questionario` int(11) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
+  `domanda` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `questionario` (`questionario`),
-  KEY `genitore` (`genitore`)
+  KEY `genitore` (`genitore`),
+  KEY `domanda` (`domanda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
@@ -869,3 +898,13 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
 INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`) VALUES
 ('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D'),
 ('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E');
+
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `RISPOSTA_QUESTIONARIO`
+--
+ALTER TABLE `RISPOSTA_QUESTIONARIO`
+  ADD CONSTRAINT `risposta_questionario_ibfk_1` FOREIGN KEY (`domanda`) REFERENCES `domanda_questionario` (`id`) ON UPDATE CASCADE;
