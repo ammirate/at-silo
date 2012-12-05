@@ -6,6 +6,10 @@ public class DomandaIscrizione {
     private int id;
     private int punteggio;
     private String posizione;
+    private String statoDomanda;
+    private String certificatoMalattie;
+    private String certificatoVaccinazioni;
+    private String certificatoPrivacy;
     
     /**
      * La variabile genitore avrà il valore della variabile di Genitore
@@ -32,9 +36,13 @@ public class DomandaIscrizione {
      * @param posizione il parametro è fissato
      * @param genitore è settato dopo la lettura
      * @param bambino è settato dopo la lettura
+     * @param statoDomanda è fissato
+     * @param certificatoMalattie è fissato
+     * @param certificatoVaccinazioni è fissato
      */
     public DomandaIscrizione(String dataPresentazione, int iD, int punteggio,
-            String posizione, Genitore genitore, Bambino bambino) {
+            String posizione, Genitore genitore, Bambino bambino, String statoDomanda,
+            String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy) {
         super();
         this.dataPresentazione = dataPresentazione;
         this.id = iD;
@@ -42,6 +50,10 @@ public class DomandaIscrizione {
         this.posizione = posizione;
         this.genitore = genitore;
         this.bambino = bambino;
+        this.statoDomanda = statoDomanda;
+        this.certificatoMalattie = certificatoMalattie;
+        this.certificatoVaccinazioni = certificatoVaccinazioni;
+        this.certificatoPrivacy = certificatoPrivacy;
     }
     
     /**
@@ -138,5 +150,69 @@ public class DomandaIscrizione {
      */
     public Bambino getBambino() {
         return bambino;
+    }
+    
+    /**
+     * Metodo che prende il campo statoDomanda
+     * @return statoDomanda il paramentro inserito
+     */
+    public String getStatoDomanda() {
+            return statoDomanda;
+    }
+
+    /**
+     * Metodo che setta il campo statoDomanda
+     * @param statoDomanda il parametro fissato
+     */
+    public void setStatoDomanda(String statoDomanda) {
+            this.statoDomanda = statoDomanda;
+    }
+    
+    /**
+     * Metodo che prende il campo certificatoMalattie
+     * @return certificatoMalattie il paramentro inserito
+     */
+    public String getCertificatoMalattie() {
+            return certificatoMalattie;
+    }
+
+    /**
+     * Metodo che setta il campo certificatoMalattie
+     * @param certificatoMalattie il parametro fissato
+     */
+    public void setCertificatoMalattie(String certificatoMalattie) {
+            this.certificatoMalattie = certificatoMalattie;
+    }
+    
+    /**
+     * Metodo che prende il campo certificatoVaccinazioni
+     * @return certificatoVaccinazioni il paramentro inserito
+     */
+    public String getCertificatoVaccinazioni() {
+            return certificatoVaccinazioni;
+    }
+
+    /**
+     * Metodo che setta il campo certificatoVaccinazioni
+     * @param certificatoVaccinazioni il parametro fissato
+     */
+    public void setCertificatoVaccinazioni(String certificatoVaccinazioni) {
+            this.certificatoVaccinazioni = certificatoVaccinazioni;
+    }
+    
+    /**
+     * Metodo che prende il campo certificatoPrivacy
+     * @return certificatoPrivacy il paramentro inserito
+     */
+    public String getCertificatoPrivacy() {
+            return certificatoPrivacy;
+    }
+
+    /**
+     * Metodo che setta il campo certificatoPrivacy
+     * @param certificatoPrivacy il parametro fissato
+     */
+    public void setCertificatoPrivacy(String certificatoPrivacy) {
+            this.certificatoPrivacy = certificatoPrivacy;
     }
 }
