@@ -15,9 +15,10 @@
 	
 	//controllo se utente ha effettuato il login
 	//se username non settato 
+	/*
 	if (username.isEmpty() )
 		response.sendRedirect("errore_accesso.htm");
-	
+	*/
 
 String a = request.getRequestURI();
 String[] b = a.split("/");
@@ -115,7 +116,7 @@ else if (nf.equals("cancella_fascia_oraria.jsp"))
 </head>
 
 
-<body>
+<body onload="miaFunzione()">
 <table class="header" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td align="left"><img src="atsilo_images/testata.jpg" align="middle" alt="" border="0"></td>
