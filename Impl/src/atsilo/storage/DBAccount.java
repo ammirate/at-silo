@@ -1,6 +1,7 @@
 package atsilo.storage;
 import atsilo.entity.Account;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -38,8 +39,8 @@ public class DBAccount extends DBBeans<Account>
     private static Map<String,String> creaMapping()
     {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("user_name","userName");
-        res.put("pass_word","passWord");
+        res.put("userName", "username");
+        res.put("passWord", "password");
         
         return Collections.unmodifiableMap(res);
     }
@@ -77,13 +78,15 @@ public class DBAccount extends DBBeans<Account>
      */
     public Account ricercaPerUsername(String user) throws SQLException 
     {
-        Account a = null;
-        
-        ResultSet res = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE username =" + user);
+        Account a = new Account();
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE username = ?");
+            tabella.setParam(stmt, 1, "username", user);
+            ResultSet res = stmt.executeQuery();  
         if (res.next()) // dovrebbe trovare solo un account perch� l'username � unico. quindi restituisce un unico record. 
         {
-            a.setUserName(res.getString("user_name"));
-            a.setPassWord(res.getString("pass_word"));
+            a.setUserName(res.getString("username"));
+            a.setPassWord(res.getString("password"));
         }
          
             res.close();  
@@ -100,8 +103,8 @@ public class DBAccount extends DBBeans<Account>
         Account a = null;
         if(r.next())
         {
-            a.setUserName(r.getString("user_name"));
-            a.setPassWord(r.getString("pass_word"));
+            a.setUserName(r.getString("username"));
+            a.setPassWord(r.getString("password"));
         }
         return a;
         
