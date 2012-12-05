@@ -89,13 +89,19 @@ public class ControlGestioneBandoTest {
     
     /**
      * Test method for {@link atsilo.application.ControlGestioneBando#inserisciIntervalloBando(java.lang.String, java.lang.String)}.
+     * @throws BandoException 
+     * @throws DBConnectionException 
      */
     @Test
-    public final void testInserisciIntervalloBando() 
+    public final void testInserisciIntervalloBando() throws DBConnectionException, BandoException 
     {
         DBBando dbBando=new DBBando(db);
-        Bando bando=new Bando(23, "ciao", "bye");
+        Bando bando=new Bando();
+        bando.setDataInizio("ciao");
+        bando.setDataFine("bye");
         dbBando.inserisci(bando);
+        System.out.println("l'id è questo"+bando.getiD());
+        control.inserisciIntervalloBando("ciao", "fine");
         
     }
     
