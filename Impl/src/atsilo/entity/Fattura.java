@@ -1,5 +1,19 @@
 package atsilo.entity;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Fattura.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 14/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class Fattura {
     private int id;
     private String descrizione;

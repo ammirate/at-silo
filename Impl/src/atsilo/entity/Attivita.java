@@ -1,7 +1,21 @@
 package atsilo.entity;
 
-public class Attivita {
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Attività.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 13/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
 
+public class Attivita {
+    
     /**
      * @attribute descrizione di tipo stringa
      */

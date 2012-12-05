@@ -16,12 +16,22 @@
 
 package atsilo.entity;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: CompilaQuestionario.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Fabio Napoli, 15/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 /**
  * Classe CompilaQuestionario
- * <>
- * 
- * @author fabio
- * 
  */
 public class CompilaQuestionario implements Beans {
     

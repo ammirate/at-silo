@@ -1,7 +1,21 @@
 package atsilo.entity;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Account.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Barba, 13/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class Account implements Beans{
-    
+
     private String userName;
     private String passWord;
 

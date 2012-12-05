@@ -2,6 +2,20 @@ package atsilo.entity;
 
 import java.sql.Date;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: Utente.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Barba, 13/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class Utente implements Beans {
     private Date dataNascita;
     private String nome;
