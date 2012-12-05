@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 19 nov, 2012 at 10:24 PM
+-- Generato il: 05 dic, 2012 at 02:48 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -152,8 +152,12 @@ INSERT INTO `BAMBINO` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `
 
 CREATE TABLE IF NOT EXISTS `BANDO` (
   `id` int(11) NOT NULL,
-  `data_inizio` date DEFAULT NULL,
-  `data_fine` date DEFAULT NULL,
+  `data_inizio_bando` date DEFAULT NULL,
+  `data_fine_bando` date DEFAULT NULL,
+  `data_inizio_presentazione_rinuncia` date NOT NULL,
+  `data_fine_presentazione_rinuncia` date NOT NULL,
+  `data_fine_rinuncia` date NOT NULL,
+  `posti_disponibili` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -161,9 +165,9 @@ CREATE TABLE IF NOT EXISTS `BANDO` (
 -- Dump dei dati per la tabella `BANDO`
 --
 
-INSERT INTO `BANDO` (`id`, `data_inizio`, `data_fine`) VALUES
-(1, '2012-11-01', '2012-11-30'),
-(2, '2011-11-01', '2012-11-30');
+INSERT INTO `BANDO` (`id`, `data_inizio_bando`, `data_fine_bando`, `data_inizio_presentazione_rinuncia`, `data_fine_presentazione_rinuncia`, `data_fine_rinuncia`, `posti_disponibili`) VALUES
+(1, '2012-11-01', '2012-11-30', '0000-00-00', '0000-00-00', '0000-00-00', 0),
+(2, '2011-11-01', '2012-11-30', '0000-00-00', '0000-00-00', '0000-00-00', 0);
 
 -- --------------------------------------------------------
 
@@ -253,6 +257,10 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
   `genitore` varchar(50) DEFAULT NULL,
   `servizio` int(11) DEFAULT NULL,
   `bambino` varchar(50) DEFAULT NULL,
+  `stato_domanda` varchar(50) NOT NULL,
+  `certificato_malattie` varchar(20) NOT NULL,
+  `certificato_vaccinazioni` varchar(20) NOT NULL,
+  `certificato_privacy` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
@@ -263,16 +271,16 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
 -- Dump dei dati per la tabella `DOMANDA_ISCRIZIONE`
 --
 
-INSERT INTO `DOMANDA_ISCRIZIONE` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`) VALUES
-(1, '2012-07-19', '94/100', '1', 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C'),
-(2, '2012-08-13', '93/100', '2', 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C'),
-(3, '2012-08-13', '94/100', '3', 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C'),
-(4, '2012-11-01', '91/100', '4', 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D'),
-(5, '2012-06-12', '90/100', '5', 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C'),
-(6, '2012-09-25', '88/100', '6', 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B'),
-(7, '2012-08-01', '85/100', '7', 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X '),
-(8, '2012-08-28', '79/100', '8', 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I'),
-(9, '2012-08-28', '79/100', '9', 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I');
+INSERT INTO `DOMANDA_ISCRIZIONE` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`) VALUES
+(1, '2012-07-19', '94/100', '1', 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', ''),
+(2, '2012-08-13', '93/100', '2', 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', ''),
+(3, '2012-08-13', '94/100', '3', 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', ''),
+(4, '2012-11-01', '91/100', '4', 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', ''),
+(5, '2012-06-12', '90/100', '5', 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', ''),
+(6, '2012-09-25', '88/100', '6', 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', ''),
+(7, '2012-08-01', '85/100', '7', 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', ''),
+(8, '2012-08-28', '79/100', '8', 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', ''),
+(9, '2012-08-28', '79/100', '9', 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -286,7 +294,7 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_QUESTIONARIO` (
   `questionario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `questionario` (`questionario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dump dei dati per la tabella `DOMANDA_QUESTIONARIO`
@@ -514,7 +522,7 @@ CREATE TABLE IF NOT EXISTS `ORARIO_UTENTE` (
   `data_fine` date DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dump dei dati per la tabella `ORARIO_UTENTE`
@@ -666,7 +674,7 @@ CREATE TABLE IF NOT EXISTS `QUESTIONARIO` (
   `nome` varchar(50) DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dump dei dati per la tabella `QUESTIONARIO`
