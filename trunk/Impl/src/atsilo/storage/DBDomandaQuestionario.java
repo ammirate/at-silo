@@ -117,7 +117,7 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         DomandaQuestionario q=new DomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + "domanda_questionario" + " WHERE id = ?");
+                "SELECT * FROM " +  tabella.getNomeTabella()  + " WHERE id = ?");
         tabella.setParam(stmt, 1, "id", idDomanda);
         
         ResultSet res = stmt.executeQuery();
@@ -160,4 +160,33 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         return l;
     }
     
+    /**
+     * Data l'id di una domanda e l id del questionario viene restituito 
+     * vero o falso a seconda se la domanda è presente o meno nel Questionario
+     * @param idDomanda id della domanda da controllare
+     * @param idQuestionario id del questionario dove verificare l'esistenza della domanda
+     * @return boolean 
+     * @throws SQLException
+     */
+    public boolean isDomandaInQuestionario(int idDomanda,int idQuestionario) throws SQLException{
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella()  + " WHERE id = ? AND questionario = ?");
+        tabella.setParam(stmt, 1, "id", idDomanda);
+        tabella.setParam(stmt, 2, "questionario", idQuestionario);
+
+        ResultSet res = stmt.executeQuery();
+        
+        if(res.next()){
+            res.close();
+            return true;
+        }   
+        else{
+            res.close();
+            return false;
+        }
+        
+        
+        
+    }
 }
