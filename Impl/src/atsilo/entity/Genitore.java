@@ -14,12 +14,21 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
 
 public class Genitore extends Utente {
 
     private String tipo;
+    private String dipendentePresso;
+    private String rapportiAteneoSalerno;
+    private String rapportiComuneFisciano;
+    private String statusLavorativo;
+    private Date scadenzaContratto;
+    private String categoriaAppartenenza;
+    
     
     /**
      * La variabile figli è nulla c'è bisogno di una lettura della classe Bambino
@@ -41,15 +50,38 @@ public class Genitore extends Utente {
      * @param tipo il paramentro è fissato
      * @param figli è settato dopo la lettura
      * @param questionariCompilati è settato dopo la lettura
+     * @param dipendentePresso il parametro è fissato
+     * @param rapportiAteneoSalerno il parametro è fissato
+     * @param rapportiComuneFisciano il parametro è fissato
+     * @param statusLavorativo il parametro è fissato
+     * @param scadenzaContratto il parametro è fissato
+     * @param categoriaAppartenenza il parametro è fissato
      */
     public Genitore(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
-            String telefono, String residenza, String tipo, List<Bambino> figli,
-            List<Questionario> questionariCompilati) {
-        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, residenza);
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, List<Bambino> figli,
+            List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
+            String rapportiAteneoSalerno, String rapportiComuneFisciano,
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza) {
+        super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
+               telefono, cittadinanza, indirizzoResidenza,
+                numeroCivicoResidenza, capResidenza, comuneResidenza,
+                provinciaResidenza, indirizzoDomicilio,
+                numeroCivicoDomicilio,  capDomicilio, comuneDomicilio,
+                provinciaDomicilio);
         this.tipo = tipo;
         this.figli = figli;
         this.questionariCompilati = questionariCompilati;
+        this.dipendentePresso = dipendentePresso;
+        this.rapportiAteneoSalerno = rapportiAteneoSalerno;
+        this.rapportiComuneFisciano = rapportiComuneFisciano;
+        this.statusLavorativo = statusLavorativo;
+        this.scadenzaContratto = scadenzaContratto;
+        this.categoriaAppartenenza = categoriaAppartenenza;
     }
 
 
@@ -69,7 +101,104 @@ public class Genitore extends Utente {
     public String getTipo() {
         return tipo;
     }
+    
+    /**
+     * Metodo che prende il parametro dipendentePresso
+     * @param dipendentePresto il parametro inserito
+     */
+    public void setDipendentePresso(String dipendentePresso) {
+        this.dipendentePresso = dipendentePresso;
+    }
 
+    /**
+     * Metodo che prende il parametro dipendentePresso
+     * @return dipendentePresso il parametro inserito
+     */
+    public String getDipendentePresso() {
+        return dipendentePresso;
+    }
+    
+    /**
+     * Metodo che prende il parametro rapportiAteneoSalerno
+     * @param rapportiAteneoSalerno il parametro inserito
+     */
+    public void setRapportiAteneoSalerno(String rapportiAteneoSalerno) {
+        this.rapportiAteneoSalerno = rapportiAteneoSalerno;
+    }
+
+    /**
+     * Metodo che prende il parametro rapportiAteneoSalerno
+     * @return rapportiAteneoSalerno il parametro inserito
+     */
+    public String getRapportiAteneoSalerno() {
+        return rapportiAteneoSalerno;
+    }
+
+    /**
+     * Metodo che prende il parametro rapportiComuneFisciano
+     * @param rapportiComuneFisciano il parametro inserito
+     */
+    public void setRapportiComuneFisciano(String rapportiComuneFisciano) {
+        this.rapportiComuneFisciano = rapportiComuneFisciano;
+    }
+
+    /**
+     * Metodo che prende il parametro rapportiComuneFisciano
+     * @return rapportiComuneFisciano il parametro inserito
+     */
+    public String getRapportiComuenFisciano() {
+        return rapportiComuneFisciano;
+    }
+    
+    /**
+     * Metodo che prende il parametro statusLavorativo
+     * @param statusLavorativo il parametro inserito
+     */
+    public void setStasuLavorativo(String statusLavorativo) {
+        this.statusLavorativo = statusLavorativo;
+    }
+
+    /**
+     * Metodo che prende il parametro statusLavorativo
+     * @return statusLavorativo il parametro inserito
+     */
+    public String getStatusLavorativo() {
+        return statusLavorativo;
+    }
+
+    /**
+     * Metodo che prende il parametro scadenzaContratto
+     * @param scadenzaContratto il parametro inserito
+     */
+    public void setScadenzaContratto(Date scadenzaContratto) {
+        this.scadenzaContratto = scadenzaContratto;
+    }
+
+    /**
+     * Metodo che prende il parametro scadenzaContratto
+     * @return scadenzaContratto il parametro inserito
+     */
+    public Date getScadenzaContratto() {
+        return scadenzaContratto;
+    }
+
+    /**
+     * Metodo che prende il parametro categoriaAppartenenza
+     * @param categoriaAppartenenza il parametro inserito
+     */
+    public void setCategoriaAppartenenza(String categoriaAppartenenza) {
+        this.categoriaAppartenenza = categoriaAppartenenza;
+    }
+
+    /**
+     * Metodo che prende il parametro categoriaAppartenenza
+     * @return categoriaAppartenenza il parametro inserito
+     */
+    public String getCategoriaAppartenenza() {
+        return categoriaAppartenenza;
+    }
+
+    
     /**
      * Metodo che setta il parametro letto dalla classe Bambino
      * @param figli è settato dopo la lettura

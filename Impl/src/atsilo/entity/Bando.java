@@ -11,6 +11,8 @@ package atsilo.entity;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -52,6 +54,11 @@ public class Bando implements Beans {
     private int postiDisponibili;
     
     /**
+     * @attribute path di tipo stringa
+     */
+    private String path;
+    
+    /**
      * Costruttore vuoto
      */
     public Bando() {
@@ -66,8 +73,11 @@ public class Bando implements Beans {
      * @param dataFinePresentazioneRinuncia il parametro fissato
      * @param dataFineRinuncia il parametro fissato
      * @param postiDisponibili il parametro fissato
+     * @param path il parametro fissato
      */
-    public Bando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, String dataFinePresentazioneRinuncia, String dataFineRinuncia, int postiDisponibili) {
+    public Bando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia, int postiDisponibili,
+            String path) {
         super();
         this.id = id;
         this.dataInizioBando = dataInizioBando;
@@ -76,6 +86,7 @@ public class Bando implements Beans {
         this.dataFinePresentazioneRinuncia = dataFinePresentazioneRinuncia;
         this.dataFineRinuncia = dataFineRinuncia;
         this.postiDisponibili = postiDisponibili;
+        this.path = path;
     }
 
     /**
@@ -188,5 +199,21 @@ public class Bando implements Beans {
      */
     public void setPostiDisponibili(int postiDisponibili) {
             this.postiDisponibili = postiDisponibili;
+    }
+    
+    /**
+     * Metodo che prende il campo path
+     * @return path il parametro inserito
+     */
+    public String getPath() {
+            return path;
+    }
+
+    /**
+     * Metodo che setta il valore path
+     * @param path il parametro fissato
+     */
+    public void setPath(String path) {
+            this.path = path;
     }
 }

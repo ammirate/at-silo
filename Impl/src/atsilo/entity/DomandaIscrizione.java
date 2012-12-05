@@ -11,6 +11,8 @@ package atsilo.entity;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -24,6 +26,17 @@ public class DomandaIscrizione {
     private String certificatoMalattie;
     private String certificatoVaccinazioni;
     private String certificatoPrivacy;
+    private boolean bambinoDisabile;
+    private boolean genitoreInvalido;
+    private boolean genitoreSolo;
+    private boolean genitoreVedovo;
+    private boolean genitoreNubile;
+    private boolean genitoreSeparato;
+    private boolean figlioNonRiconosciuto;
+    private boolean affidoEsclusivo;
+    private boolean altriComponentiDisabili;
+    private String condizioniCalcoloPunteggio;
+    private float isee;
     
     /**
      * La variabile genitore avrà il valore della variabile di Genitore
@@ -53,10 +66,24 @@ public class DomandaIscrizione {
      * @param statoDomanda è fissato
      * @param certificatoMalattie è fissato
      * @param certificatoVaccinazioni è fissato
+     * @param bambinoDisabile è fissato
+     * @param genitoreInvalido è fissato
+     * @param genitoreSolo è fissato
+     * @param genitoreVedovo è fissato
+     * @param genitoreNubile è fissato
+     * @param genitoreSeparato è fissato
+     * @param figlioNonRiconosciuto è fissato
+     * @param affidoEsclusivo è fissato
+     * @param altriComponentiDisabili è fissato
+     * @param isee è fissato
      */
     public DomandaIscrizione(String dataPresentazione, int iD, int punteggio,
             String posizione, Genitore genitore, Bambino bambino, String statoDomanda,
-            String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy) {
+            String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
+            boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
+            boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
+            boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
+            String condizioniCalcoloPunteggio, float isee) {
         super();
         this.dataPresentazione = dataPresentazione;
         this.id = iD;
@@ -68,6 +95,17 @@ public class DomandaIscrizione {
         this.certificatoMalattie = certificatoMalattie;
         this.certificatoVaccinazioni = certificatoVaccinazioni;
         this.certificatoPrivacy = certificatoPrivacy;
+        this.bambinoDisabile = bambinoDisabile;
+        this.genitoreInvalido = genitoreInvalido;
+        this.genitoreSolo = genitoreSolo;
+        this.genitoreVedovo = genitoreVedovo;
+        this.genitoreNubile = genitoreNubile;
+        this.genitoreSeparato = genitoreSeparato;
+        this.figlioNonRiconosciuto = figlioNonRiconosciuto;
+        this.affidoEsclusivo = affidoEsclusivo;
+        this.altriComponentiDisabili = altriComponentiDisabili;
+        this.condizioniCalcoloPunteggio = condizioniCalcoloPunteggio;
+        this.isee = isee;
     }
     
     /**
@@ -228,5 +266,181 @@ public class DomandaIscrizione {
      */
     public void setCertificatoPrivacy(String certificatoPrivacy) {
             this.certificatoPrivacy = certificatoPrivacy;
+    }
+    
+    /**
+     * Metodo che prende il campo bambinoDisabile
+     * @return bambinoDisabile il paramentro inserito
+     */
+    public boolean getBambinoDisabile() {
+            return bambinoDisabile;
+    }
+
+    /**
+     * Metodo che setta il campo bambinoDisabile
+     * @param bambinoDisabile il parametro fissato
+     */
+    public void setBambinoDisabile(boolean bambinoDisabile) {
+            this.bambinoDisabile = bambinoDisabile;
+    }
+    
+    /**
+     * Metodo che prende il campo genitoreInvalido
+     * @return genitoreInvalido il paramentro inserito
+     */
+    public boolean getGenitoreInvalido() {
+            return genitoreInvalido;
+    }
+
+    /**
+     * Metodo che setta il campo genitoreInvalido
+     * @param genitoreInvalido il parametro fissato
+     */
+    public void setGenitoreInvalido(boolean genitoreInvalido) {
+            this.genitoreInvalido = genitoreInvalido;
+    }
+    
+    /**
+     * Metodo che prende il campo genitoreSolo
+     * @return genitoreSolo il paramentro inserito
+     */
+    public boolean getGenitoreSolo() {
+            return genitoreSolo;
+    }
+
+    /**
+     * Metodo che setta il campo genitoreSolo
+     * @param genitoreSolo il parametro fissato
+     */
+    public void setGenitoreSolo(boolean genitoreSolo) {
+            this.genitoreSolo = genitoreSolo;
+    }
+    
+    /**
+     * Metodo che prende il campo genitoreVedovo
+     * @return genitoreVedovo il paramentro inserito
+     */
+    public boolean getGenitoreVedovo() {
+            return genitoreVedovo;
+    }
+
+    /**
+     * Metodo che setta il campo genitoreVedovo
+     * @param genitoreVedovo il parametro fissato
+     */
+    public void setGenitoreVedovo(boolean genitoreVedovo) {
+            this.genitoreVedovo = genitoreVedovo;
+    }
+    
+    /**
+     * Metodo che prende il campo genitoreNubile
+     * @return genitoreNubile il paramentro inserito
+     */
+    public boolean getGenitoreNubile() {
+            return genitoreNubile;
+    }
+
+    /**
+     * Metodo che setta il campo genitoreNubile
+     * @param genitoreNubile il parametro fissato
+     */
+    public void setGenitoreNubile(boolean genitoreNubile) {
+            this.genitoreNubile = genitoreNubile;
+    }
+    
+    /**
+     * Metodo che prende il campo genitoreSeparato
+     * @return genitoreSeparato il paramentro inserito
+     */
+    public boolean getGenitoreSeparato() {
+            return genitoreSeparato;
+    }
+
+    /**
+     * Metodo che setta il campo genitoreSeparato
+     * @param genitoreSeparato il parametro fissato
+     */
+    public void setGenitoreSeparato(boolean genitoreSeparato) {
+            this.genitoreSeparato = genitoreSeparato;
+    }
+    
+    /**
+     * Metodo che prende il campo figlioNonRiconosciuto
+     * @return figlioNonRiconosciuto il paramentro inserito
+     */
+    public boolean getFiglioNonRiconosciuto() {
+            return figlioNonRiconosciuto;
+    }
+
+    /**
+     * Metodo che setta il campo figlioNonRiconosciuto
+     * @param figlioNonRiconosciuto il parametro fissato
+     */
+    public void setFiglioNonRiconosciuto(boolean figlioNonRiconosciuto) {
+            this.figlioNonRiconosciuto = figlioNonRiconosciuto;
+    }
+    
+    /**
+     * Metodo che prende il campo affidoEsclusivo
+     * @return affidoEsclusivo il paramentro inserito
+     */
+    public boolean getAffidoEsclusivo() {
+            return affidoEsclusivo;
+    }
+
+    /**
+     * Metodo che setta il campo affidoEsclusivo
+     * @param affidoEsclusivo il parametro fissato
+     */
+    public void setAffidoEsclusivo(boolean affidoEsclusivo) {
+            this.affidoEsclusivo = affidoEsclusivo;
+    }
+    
+    /**
+     * Metodo che prende il campo altriComponentiDisabili
+     * @return altriComponentiDisabili il paramentro inserito
+     */
+    public boolean getAltriComponentiDisabili() {
+            return altriComponentiDisabili;
+    }
+
+    /**
+     * Metodo che setta il campo altriComponentiDisabili
+     * @param altriComponentiDisabili il parametro fissato
+     */
+    public void setAltriComponentiDisabili(boolean altriComponentiDisabili) {
+            this.altriComponentiDisabili = altriComponentiDisabili;
+    }
+    
+    /**
+     * Metodo che prende il campo condizioniCalcoloPunteggio
+     * @return condizioniCalcoloPunteggio il paramentro inserito
+     */
+    public String getCondizioniCalcoloPunteggio() {
+            return condizioniCalcoloPunteggio;
+    }
+
+    /**
+     * Metodo che setta il campo condizioniCalcoloPunteggio
+     * @param condizioniCalcoloPunteggio il parametro fissato
+     */
+    public void setCondizioniCalcoloPunteggio(String condizioniCalcoloPunteggio) {
+            this.condizioniCalcoloPunteggio = condizioniCalcoloPunteggio;
+    }
+    
+    /**
+     * Metodo che prende il campo isee
+     * @return isee il paramentro inserito
+     */
+    public float getIsee() {
+            return isee;
+    }
+
+    /**
+     * Metodo che setta il campo isee
+     * @param isee il parametro fissato
+     */
+    public void setIsee(float isee) {
+            this.isee = isee;
     }
 }

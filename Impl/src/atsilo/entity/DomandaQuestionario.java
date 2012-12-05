@@ -13,6 +13,8 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Cesarano, 16/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -46,7 +48,7 @@ public class DomandaQuestionario {
         this.id = id;
         this.descrizione = descrizione;
         this.campi = campi;
-        idQuestionario = idQuestionario;
+        this.idQuestionario = idQuestionario;
     }
     
     public void setId(int id) {

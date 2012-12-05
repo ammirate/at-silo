@@ -26,6 +26,7 @@ public class Questionario {
     private String nome;
     private int id;
     private Date periodo_inizio;
+    private String pathname;
     private List<Genitore> listaGenitori;
     private List<DomandaQuestionario> domande;
     
@@ -50,7 +51,8 @@ public class Questionario {
      * @param periodo_inizio il paramentro è fissato
      * @param pathname il paramentro è fissato
      */
-    public Questionario( String descrizione,String flag_rinuncia, String nome, int id, Date periodo_inizio,Date periodo_fine) {
+    public Questionario( String descrizione,String flag_rinuncia, 
+            String nome, int id, Date periodo_inizio,Date periodo_fine, String pathname) {
         super();
         this.periodo_fine = periodo_fine;
         this.descrizione = descrizione;
@@ -60,6 +62,7 @@ public class Questionario {
         this.periodo_inizio = periodo_inizio;
         this.listaGenitori = new ArrayList<Genitore>();
         this.domande = new ArrayList<DomandaQuestionario>();
+        this.pathname = pathname;
     }
 
 
@@ -173,6 +176,22 @@ public class Questionario {
         return id;
     }
 
+    /**
+     * Metodo che setta il valore pathname
+     * @param pathname il parametro fissato
+     */
+    public void setPathname(String pathname) {
+        this.pathname = pathname;
+    }
+
+    /**
+     * Metodo che restituisce il valore pathname
+     * @return pathname il parametro inserito
+     */
+    public String getPathname() {
+        return pathname;
+    }
+    
     /**
      * Metodo che setta il campo periodo inizio
      * @param periodo_inizio il parametro fissato
