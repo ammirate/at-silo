@@ -105,7 +105,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
         
         List <String> l=new ArrayList<String> ();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE questionario = ? ");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE questionario = ? ");
         tabella.setParam(stmt, 1, "questionario", idQuestionario);
         ResultSet res = stmt.executeQuery();
         while(res.next()){
@@ -129,7 +129,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
         
         List <Integer> l=new ArrayList<Integer> ();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE genitore = ?");
         tabella.setParam(stmt, 1, "genitore", codiceFiscale);
         ResultSet res = stmt.executeQuery();
         while(res.next()){
@@ -152,7 +152,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
     public boolean isCompilatoDa(int idQuestionario,String codiceFiscale) throws SQLException{
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE genitore = ?AND questionario = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE genitore = ? AND questionario = ?");
         tabella.setParam(stmt, 1, "genitore", codiceFiscale);
         tabella.setParam(stmt, 2, "questionario", idQuestionario);
         
