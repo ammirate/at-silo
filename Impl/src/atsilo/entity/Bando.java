@@ -52,7 +52,7 @@ public class Bando implements Beans {
      * @param dataFineRinuncia il parametro fissato
      * @param postiDisponibili il parametro fissato
      */
-    public Bando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, String dataFinePresentazioneRinuncia, String dataFineRinuncia) {
+    public Bando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, String dataFinePresentazioneRinuncia, String dataFineRinuncia, int postiDisponibili) {
         super();
         this.id = id;
         this.dataInizioBando = dataInizioBando;
