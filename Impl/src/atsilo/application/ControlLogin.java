@@ -26,12 +26,20 @@ import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBAccount;
 import atsilo.storage.Database;
 
-//TODO inserire l'autore della classe
-
-/**
- * 
- *
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlLogin.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Parisi Marco, 27/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
  */
+
 public class ControlLogin {
     private static ControlLogin control;
     private DBAccount dbAccount;

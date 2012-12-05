@@ -7,6 +7,20 @@ import java.util.List;
 
 //TODO scrivere javadoc per classe e metodi
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: ControlMenu.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Antonio Cesarano, 27/11/2012 (non responsabile)
+ *-----------------------------------------------------------------
+ */
+
 public class ControlMenu {
     
 private static final ControlMenu cm;

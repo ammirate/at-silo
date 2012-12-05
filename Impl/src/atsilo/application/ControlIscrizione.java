@@ -31,7 +31,7 @@ import atsilo.storage.Database;
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: ControlDatiPersonali.java
+ * FILE: ControlIscrizione.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
