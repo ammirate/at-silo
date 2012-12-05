@@ -53,7 +53,7 @@ public final class DBUtil {
         Scanner s = new Scanner(new File(rebaseScript));
         /*Pattern stmtExpr = Pattern.compile(
                 "^([^\"'`;]*(\"[^\"]*\")?('[^']*')?(`[^`]*`)?)+;", Pattern.MULTILINE);*/
-        s.useDelimiter(";\\n");
+        s.useDelimiter(";\\r?\\n");
         String stmt;
         //while ((stmt = s.findWithinHorizon(stmtExpr, 0)) != null) {
         while (s.hasNext()) {
