@@ -39,32 +39,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      * Costruttore
      * @param db connesione al database
      */
-    public DBCampoDomandaQuestionario(Database db){ super("CampoDomandaQuestionario",db);}
-    
-    /**
-     * Ricerca campodomandaquestionario per tipo
-     * @param tipo
-     * @return restituisce una lista di campodomandaquestionario
-     * @throws SQLException 
-     */
-    public List<CampoDomandaQuestionario> ricercaPerTipo(String tipo) throws SQLException
-    {
-        List<CampoDomandaQuestionario> a= new ArrayList<CampoDomandaQuestionario> ();
-        
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE tipo = ?");
-        tabella.setParam(stmt, 1, "tipo", tipo);
-        ResultSet res = stmt.executeQuery();
-        for (CampoDomandaQuestionario c : iteraResultSet(res)) 
-            a.add(c);
-        
-        
-        res.close();
-        return a;
-    } 
-    
-    
-    
+    public DBCampoDomandaQuestionario(Database db){ super("campo_domanda_questionario",db);}
     
     /*(non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()
@@ -127,18 +102,18 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     
     /**
      * Restituisce tutti i campi domanda di una determinata domanda questionario
-     * @param i id della domanda di cui restituire i campi domanda
+     * @param idDomanda id della domanda di cui restituire i campi domanda
      * @return lista di campi domanda oppure null
      * @throws SQLException
      */
-    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(int i) throws SQLException{
+    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String idDomanda) throws SQLException{
         
         List<CampoDomandaQuestionario> l=new ArrayList<CampoDomandaQuestionario>();
         CampoDomandaQuestionario c=new CampoDomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-        tabella.setParam(stmt, 1, "id", i);
+        tabella.setParam(stmt, 1, "id", idDomanda);
         ResultSet res = stmt.executeQuery();
         
         while(res.next()){
