@@ -28,6 +28,7 @@ public class Genitore extends Utente {
     private String statusLavorativo;
     private Date scadenzaContratto;
     private String categoriaAppartenenza;
+    private String rapportoParentela;
     
     
     /**
@@ -56,6 +57,7 @@ public class Genitore extends Utente {
      * @param statusLavorativo il parametro è fissato
      * @param scadenzaContratto il parametro è fissato
      * @param categoriaAppartenenza il parametro è fissato
+     * @param rapportoParentela il parametro è fissato
      */
     public Genitore(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
@@ -66,7 +68,8 @@ public class Genitore extends Utente {
             String provinciaDomicilio, List<Bambino> figli,
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
-            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza) {
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            String rapportoParentela) {
         super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
                telefono, cittadinanza, indirizzoResidenza,
                 numeroCivicoResidenza, capResidenza, comuneResidenza,
@@ -82,6 +85,7 @@ public class Genitore extends Utente {
         this.statusLavorativo = statusLavorativo;
         this.scadenzaContratto = scadenzaContratto;
         this.categoriaAppartenenza = categoriaAppartenenza;
+        this.rapportoParentela = rapportoParentela;
     }
 
 
@@ -164,6 +168,22 @@ public class Genitore extends Utente {
      */
     public String getStatusLavorativo() {
         return statusLavorativo;
+    }
+    
+    /**
+     * Metodo che prende il parametro rapportoParentela
+     * @param rapportoParentela il parametro inserito
+     */
+    public void setRapportoParentela(String rapportoParentela) {
+        this.rapportoParentela = rapportoParentela;
+    }
+
+    /**
+     * Metodo che prende il parametro rapportoParentela
+     * @return rapportoParentela il parametro inserito
+     */
+    public String getRapportoParentela() {
+        return rapportoParentela;
     }
 
     /**
