@@ -16,6 +16,10 @@
 
 package atsilo.stub.storage;
 
+import java.sql.SQLException;
+
+import atsilo.storage.Database;
+
 /**
  * Classe StubGenitore
  * <Descrizione classe>
@@ -24,6 +28,22 @@ package atsilo.stub.storage;
  * 
  */
 public class StubGenitore {
+
+    /**
+     * @param db
+     */
+    public StubGenitore(Database db) {
+        // TODO Scheletro di costruttore autogenerato
+    }
+
+    /**
+     * @param codiceFiscale
+     * @return
+     */
+    public Object ricercaGenitorePerCf(String codiceFiscale) throws SQLException{
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
     //Logger
     /*
      * private static final java.util.Logger LOG

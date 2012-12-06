@@ -16,6 +16,12 @@
 
 package atsilo.stub.storage;
 
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
+
+import atsilo.storage.Database;
+
 /**
  * Classe StubEducatoreDidattico
  * <Descrizione classe>
@@ -24,6 +30,23 @@ package atsilo.stub.storage;
  * 
  */
 public class StubEducatoreDidattico {
+
+    /**
+     * @param db
+     */
+    public StubEducatoreDidattico(Database db) {
+        // TODO Scheletro di costruttore autogenerato
+    }
+
+    /**
+     * @param codiceFiscale
+     * @return
+     */
+    
+    public Object ricercaEducatoreDidatticoPerCf(String codiceFiscale) throws SQLException{
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
     //Logger
     /*
      * private static final java.util.Logger LOG

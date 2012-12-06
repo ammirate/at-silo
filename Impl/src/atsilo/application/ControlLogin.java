@@ -23,7 +23,8 @@ import javax.security.auth.login.LoginException;
 import atsilo.entity.Account;
 import atsilo.entity.Utente;
 import atsilo.exception.DBConnectionException;
-import atsilo.storage.*;
+import atsilo.storage.Database;
+import atsilo.stub.storage.*;
 
 
 
@@ -33,14 +34,14 @@ import atsilo.storage.*;
  */
 public class ControlLogin {
     private static ControlLogin control;
-    private DBAccount dbAccount;
-    private DBGenitore dbGenitore;
-    private DBPersonaleAsilo dbPersonaleAsilo;
-    private DBPsicopedagogo dbPsicopedagogo;
-    private DBResponsabileQuestionario dbResponsabileQuestionario;
-    private DBEducatoreDidattico dbEducatoreDidattico;
-    private DBEventPlanner dbEventPlanner;
-    private DBTirocinante dbTirocinante;
+    private StubAccount dbAccount;
+    private StubGenitore dbGenitore;
+    private StubPersonaleAsilo dbPersonaleAsilo;
+    private StubPsicopedagogo dbPsicopedagogo;
+    private StubResponsabileQuestionario dbResponsabileQuestionario;
+    private StubEducatoreDidattico dbEducatoreDidattico;
+    private StubEventPlanner dbEventPlanner;
+    private StubTirocinante dbTirocinante;
     
     
     private ControlLogin() throws DBConnectionException {
@@ -70,7 +71,15 @@ public class ControlLogin {
         
         // Quindi, si possono creare tutti i gestori di tabelle necessari
         try {
-            dbAccount = new DBAccount(db);
+            dbAccount = new StubAccount(db);
+            dbGenitore = new StubGenitore(db);
+            dbPersonaleAsilo = new StubPersonaleAsilo(db);
+            dbPsicopedagogo = new StubPsicopedagogo(db);
+            dbResponsabileQuestionario = new StubResponsabileQuestionario(db);
+            dbEducatoreDidattico = new StubEducatoreDidattico(db);
+            dbEventPlanner = new StubEventPlanner(db);
+            dbTirocinante = new StubTirocinante(db);
+            
             Account account = new Account();
             try {
                 account = dbAccount.ricercaPerUsername(username);
@@ -87,7 +96,7 @@ public class ControlLogin {
                     
                     else {
                         if (tipo.compareTo("genitore") == 0)
-                            if ((dbGenitore.ricercaGenitoreCf(account
+                            if ((dbGenitore.ricercaGenitorePerCf(account
                                     .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
@@ -102,7 +111,7 @@ public class ControlLogin {
                                 throw new LoginException(
                                         "Username o Password o Tipologia Errata");
                         else if (tipo.compareTo("psicopedagogo") == 0)
-                            if ((dbPsicopedagogo.ricercaPsicopedagogoCf(account
+                            if ((dbPsicopedagogo.ricercaPsicopedagogoPerCf(account
                                     .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
