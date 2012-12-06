@@ -18,19 +18,19 @@ public class CampoDomandaQuestionario {
     private String tipo;
     private String descrizione;
     private String valore;
-    private String  idDomandaQuestionario;
-    private String idRispostaQuestionario;
+    private int  idDomandaQuestionario;
+    private int idRispostaQuestionario;
 
     public CampoDomandaQuestionario() {
         super();
     }
     
-    public CampoDomandaQuestionario(String tipo, String desc, String valore, String idDomanda){
+    public CampoDomandaQuestionario(String tipo, String desc, String valore, int idDomanda){
         this.tipo = tipo;
         this.descrizione = desc;
         this.valore = valore;
         this.idDomandaQuestionario = idDomanda;
-        this.idRispostaQuestionario = null;
+        this.idRispostaQuestionario = (Integer)null;
     }
 
     /**
@@ -78,28 +78,28 @@ public class CampoDomandaQuestionario {
     /**
      * @return idDomandaQuestionario
      */
-    public String getIdDomandaQuestionario() {
+    public int getIdDomandaQuestionario() {
         return idDomandaQuestionario;
     }
 
     /**
-     * @param idDomandaQuestionario nuovo idDomandaQuestionario
+     * @param i nuovo idDomandaQuestionario
      */
-    public void setIdDomandaQuestionario(String idDomandaQuestionario) {
-        this.idDomandaQuestionario = idDomandaQuestionario;
+    public void setIdDomandaQuestionario(int i) {
+        this.idDomandaQuestionario = i;
     }
 
     /**
      * @return idRispostaQuestionario
      */
-    public String getIdRispostaQuestionario() {
+    public int getIdRispostaQuestionario() {
         return idRispostaQuestionario;
     }
 
     /**
      * @param idRispostaQuestionario nuovo idRispostaQuestionario
      */
-    public void setIdRispostaQuestionario(String idRispostaQuestionario) {
+    public void setIdRispostaQuestionario(int idRispostaQuestionario) {
         this.idRispostaQuestionario = idRispostaQuestionario;
     }
 

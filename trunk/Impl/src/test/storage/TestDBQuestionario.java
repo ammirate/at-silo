@@ -22,10 +22,12 @@ import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
 
+import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
 import atsilo.entity.RispostaQuestionario;
+import atsilo.storage.DBCampoDomandaQuestionario;
 import atsilo.storage.DBCompilaQuestionario;
 import atsilo.storage.DBDomandaQuestionario;
 import atsilo.storage.DBQuestionario;
@@ -154,9 +156,18 @@ public class TestDBQuestionario {
      // for(int i=0;i<l.size();i++)
         //  System.out.println("Risposta Codice _ "+l.get(i).getValore());
       l=dbr.getRisposteQuestionarioPerGenitore("CVLMRA69A23B333C", 1);
-      for(int i=0;i<l.size();i++)
-          System.out.println("Risposta valore _ "+l.get(i).getValore());
-    db.chiudiConnessione();
+     // for(int i=0;i<l.size();i++)
+       //   System.out.println("Risposta valore _ "+l.get(i).getValore());
+    //___testDBCampoDomandaQuestionario
+      DBCampoDomandaQuestionario dbcd=new DBCampoDomandaQuestionario(db);
+      List<CampoDomandaQuestionario> ll=dbcd.getCampiDomandaQuestionario(8);
+      for(int i=0;i<ll.size();i++)
+           System.out.println("CampoDOmanda _ "+ll.get(i).getValore());
+      
+      db.chiudiConnessione();
+    
     }
+    
+    
    
 }
