@@ -15,7 +15,7 @@ import java.util.List;
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
  * REVISION
- * Andrea Micco, 5/12/2012
+ * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -60,9 +60,9 @@ public class Genitore extends Utente {
     public Genitore(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, List<Bambino> figli,
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,

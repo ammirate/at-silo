@@ -14,21 +14,19 @@ import java.sql.Date;
  * OWNER
  * Antonio Cesarano, 14/11/2012 (non responsabile)
  * REVISION
- * Andrea Micco, 5/12/2012
+ * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
 
 public class Tirocinante extends Utente{
     
-    //nome,cognome,codice_fiscale,telefono,email,d
-    //ata_di_nascita,comune_di_nascita,indirizzo residenza,titolo_di_studi,
-    //ore_totali,ore_lavoro,PERSONALE_ASILO
+   
     
     private String titoloDiStudi;
     private int oreTotali;
     private int oreLavoro;
     private String stato;
-    private int matricola;
+    private String matricola;
     private String giudizioFinale;
     private String disponibilita;
 
@@ -57,11 +55,11 @@ public class Tirocinante extends Utente{
     public Tirocinante(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, int oreTotali, int oreLavoro,
-            PersonaleAsilo personaleAsilo, String stato, int matricola,
+            PersonaleAsilo personaleAsilo, String stato, String matricola,
             String giudizioFinale, String disponibilita, String titoloDiStudi) {
         super(dataNascita, nome, cognome,
                 codiceFiscale, email, comuneNascita,
@@ -149,7 +147,7 @@ public class Tirocinante extends Utente{
      * Metodo che prende il valore matricola
      * @return matricola il parametro inserito
      */
-    public int getMatricola() {
+    public String getMatricola() {
         return matricola;
     }
 
@@ -157,7 +155,7 @@ public class Tirocinante extends Utente{
      * Metodo che prende il valore matricola
      * @param matricola il parametro inserito
      */
-    public void setMatricola(int matricola) {
+    public void setMatricola(String matricola) {
         this.matricola = matricola;
     }
     

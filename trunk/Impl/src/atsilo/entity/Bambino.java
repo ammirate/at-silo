@@ -28,13 +28,13 @@ public class Bambino {
     private String comuneNascita;
     private String cittadinanza;
     private String indirizzoResidenza;
-    private int numeroCivicoResidenza;
-    private int capResidenza;
+    private String numeroCivicoResidenza;
+    private String capResidenza;
     private String comuneResidenza;
     private String provinciaResidenza;
     private String indirizzoDomicilio;
-    private int numeroCivicoDomicilio;
-    private int capDomicilio;
+    private String numeroCivicoDomicilio;
+    private String capDomicilio;
     private String comuneDomicilio;
     private String provinciaDomicilio;
     private String categoriaAppartenenza;
@@ -85,9 +85,9 @@ public class Bambino {
     public Bambino(Date dataNascita, String nome, String cognome,
             String codiceFiscale,  String comuneNascita,
             String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) {
         super();
         this.dataNascita = dataNascita;
@@ -228,7 +228,7 @@ public class Bambino {
      * Metodo che prende il campo numeroCivicoResidenza
      * @param numeroCivicoResidenza il parametro inserito
      */
-    public void setNumeroCivicoResidenza(int numeroCivicoResidenza) {
+    public void setNumeroCivicoResidenza(String numeroCivicoResidenza) {
         this.numeroCivicoResidenza = numeroCivicoResidenza;
     }
 
@@ -236,7 +236,7 @@ public class Bambino {
      * Metodo che prende il campo numeroCivicoResidenza
      * @return numeroCivicoResidenza il parametro inserito
      */
-    public int getNumeroCivicoResidenza() {
+    public String getNumeroCivicoResidenza() {
         return numeroCivicoResidenza;
     }
     
@@ -244,7 +244,7 @@ public class Bambino {
      * Metodo che prende il campo capResidenza
      * @param capResidenza il parametro inserito
      */
-    public void setCapResidenza(int capResidenza) {
+    public void setCapResidenza(String capResidenza) {
         this.capResidenza = capResidenza;
     }
 
@@ -252,7 +252,7 @@ public class Bambino {
      * Metodo che prende il campo capResidenza
      * @return capResidenza il parametro inserito
      */
-    public int getCapResidenza() {
+    public String getCapResidenza() {
         return capResidenza;
     }
     
@@ -308,7 +308,7 @@ public class Bambino {
      * Metodo che prende il campo numeroCivicoDomicilio
      * @param numeroCivicoDomicilio il parametro inserito
      */
-    public void setNumeroCivicoDomicilio(int numeroCivicoDomicilio) {
+    public void setNumeroCivicoDomicilio(String numeroCivicoDomicilio) {
         this.numeroCivicoDomicilio = numeroCivicoDomicilio;
     }
 
@@ -316,7 +316,7 @@ public class Bambino {
      * Metodo che prende il campo numeroCivicoDomicilio
      * @return numeroCivicoDomicilio il parametro inserito
      */
-    public int getNumeroCivicoDomicilio() {
+    public String getNumeroCivicoDomicilio() {
         return numeroCivicoDomicilio;
     }
     
@@ -324,7 +324,7 @@ public class Bambino {
      * Metodo che prende il campo capDomicilio
      * @param capDomicilio il parametro inserito
      */
-    public void setCapDomicilio(int capDomicilio) {
+    public void setCapDomicilio(String capDomicilio) {
         this.capDomicilio = capDomicilio;
     }
 
@@ -332,7 +332,7 @@ public class Bambino {
      * Metodo che prende il campo capDomicilio
      * @return capDomicilio il parametro inserito
      */
-    public int getCapDomicilio() {
+    public String getCapDomicilio() {
         return capDomicilio;
     }
     
