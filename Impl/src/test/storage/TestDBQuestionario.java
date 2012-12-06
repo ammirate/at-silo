@@ -8,7 +8,7 @@
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Antonio, 05/dic/2012
+ * Fabio Napoli, 05/dic/2012
  * REVISION
  * <nome revisore>, <data revisione>
  *-----------------------------------------------------------------
@@ -17,7 +17,8 @@
 package test.storage;
 
 
-//testate DBCompilaQuestionario,DBDomandaQuestionario,DBQuestionario
+//testate DBCompilaQuestionario,DBDomandaQuestionario,DBQuestionario,DBCampoDomandaQuestionario
+//DBRispostaQuestionario
 import java.sql.SQLException;
 import java.util.Iterator;
 import java.util.List;
