@@ -137,14 +137,10 @@ public class TestDBAssenza {
         String cf="DFZGNN12L14A909D";
         
         l=dba.ricercaAssenzaPerBambino(cf);
-        
-        
-        
+  
         for (Assenza a: l )
-        {
-            
             assertEquals(a.getBambino().getCodiceFiscale(),cf);
-        }
+        
     }
     
     
@@ -162,12 +158,8 @@ public class TestDBAssenza {
         
         l=dba.ricercaAssenzaPerBambino(cf);
         
-        
-        
         for (Assenza a: l )
-        {
-            
-            assertEquals(a.getBambino().getCodiceFiscale(),null);
-        }
+          assertEquals(a.getBambino().getCodiceFiscale(),null);
+        
     }
 }
