@@ -53,6 +53,17 @@ public class DBResponsabileQuestionario extends DBBeans {
     protected Object creaBean(ResultSet r) throws SQLException {
         // TODO Scheletro generato automaticamente
         return null;
+    }
+
+
+    /**
+     * Mi serve questo metodo per il controlLogin by Parisi
+     * @param codiceFiscale
+     * @return
+     */
+    public Object ricercaResponsabileQuestionarioPerCF(String codiceFiscale) {
+        // TODO Scheletro generato automaticamente
+        return null;
     } 
     
 }

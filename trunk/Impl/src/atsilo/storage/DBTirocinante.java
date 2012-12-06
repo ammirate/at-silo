@@ -111,6 +111,16 @@ public class DBTirocinante extends DBBeans {
         
         return t;
     }
+
+    /**
+     * Mi serve questo metodo per il controlLogin by Parisi
+     * @param codiceFiscale
+     * @return
+     */
+    public Object ricercaTirocinantePerCF(String codiceFiscale) {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
     
     
 }
