@@ -45,7 +45,7 @@ public class DBRispostaQuestionario extends DBBeans {
      * Costruttore con parametri
      * @param db database con relativa connessione
      */
-    public DBRispostaQuestionario(Database db){ super("RispostaQuestionario",db);}
+    public DBRispostaQuestionario(Database db){ super("risposta_questionario",db);}
     
     /**
      * Metodo che crea la chiave
@@ -98,7 +98,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(r.getInt("id"));
             ris.setValore(r.getString("valore"));
             ris.setCFgenitore(r.getString("genitore"));
-            ris.setIdDomanda(r.getString("domanda"));           
+            ris.setIdDomanda(r.getInt("domanda"));
         }
         return ris;
     }
@@ -106,20 +106,20 @@ public class DBRispostaQuestionario extends DBBeans {
     
     /**
      * Restituisce la lista delle risposte data da un
-     * determinato genitore ad una determinata domanda di un questionario
-     * @param g genitore di cui vogliamo le risposte
-     * @param idDomanda id della domanda di cui vogliamo verificare le risposte
+     * determinato genitore ad un questionario
+     * @param g Codice fiscale genitore di cui vogliamo le risposte
+     * @param idQuestionario id del questionario di cui vogliamo  le risposte
      * @return lista di RisposteQuestionario o null
      * @throws SQLException
      */
-    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String g,String idDomanda) throws SQLException{
+    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String g,int idQuestionario) throws SQLException{
         List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario> ();
         
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
-                " WHERE genitore = ? AND domanda = ?");
+                " WHERE genitore = ? AND questionario = ?");
         tabella.setParam(stmt, 1,"genitore", g);
-        tabella.setParam(stmt, 2, "domanda", idDomanda);
+        tabella.setParam(stmt, 2, "questionario", idQuestionario);
         ResultSet res = stmt.executeQuery();
         
         while (res.next()){
@@ -128,7 +128,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(res.getInt("id"));
             ris.setValore(res.getString("valore"));
             ris.setCFgenitore(res.getString("genitore"));
-            ris.setIdDomanda(res.getString("domanda"));
+            ris.setIdDomanda(res.getInt("domanda"));
             
             l.add(ris);
         }
@@ -140,45 +140,22 @@ public class DBRispostaQuestionario extends DBBeans {
     /**
      * Restituisce la lista delle risposte date da tutti i genitori
      * ad una specifica domanda di un questionario
-     * @param d domandaQuestionario di cui vogliamo le risposte
+     * @param d id domanda di cui vogliamo le risposte
      * @return lista di RisposteQuestionario o null
      * @throws SQLException
      */    
-    public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{        
+    public List<RispostaQuestionario> getRisposteDomandaSpecifica(int  d) throws SQLException{        
         List<RispostaQuestionario> l=new ArrayList <RispostaQuestionario>();
-        RispostaQuestionario r=new RispostaQuestionario();
         
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM compila" + "WHERE questionario= ?");
-        tabella.setParam(stmt, 1, "domanda", d.getId());
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE domanda= ?");
+        tabella.setParam(stmt, 1, "domanda", d);
         ResultSet res = stmt.executeQuery();
         
         while (res.next()){
-            
-            r.setId(res.getInt("id"));
-            r.setValore(res.getString("valore"));
-            r.setCFgenitore(res.getString("genitore"));
-            r.setIdDomanda(res.getString("domanda"));
-            
-            l.add(r);
-        }
-        res.close();
-        return l;
-        
-    }
-    
-    public List<RispostaQuestionario> getRisposteGenitore(String CFgenitore) throws SQLException{        
-        List<RispostaQuestionario> l=new ArrayList <RispostaQuestionario>();
-        RispostaQuestionario r=new RispostaQuestionario();
-        
-        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
-                " WHERE genitore = ?");
-        tabella.setParam(stmt, 1,"genitore", CFgenitore);
-        ResultSet res = stmt.executeQuery();
-        
-        while (res.next()){
-            
+            RispostaQuestionario r=new RispostaQuestionario();
+
             r.setId(res.getInt("id"));
             r.setValore(res.getString("valore"));
             r.setCFgenitore(res.getString("genitore"));
@@ -190,7 +167,35 @@ public class DBRispostaQuestionario extends DBBeans {
         return l;
         
     }
-   
+    
+    /**
+     * Restituisce la lista delle risposte date da un genitore
+     * @param CFgenitore Codice fiscale del genitore di cui vogliamo le risposte
+     * @return lista di RisposteQuestionario o null
+     * @throws SQLException
+     */    
+    public List<RispostaQuestionario> getRisposteGenitore(String CFgenitore) throws SQLException{        
+        List<RispostaQuestionario> l=new ArrayList <RispostaQuestionario>();
+        
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
+                " WHERE genitore = ?");
+        tabella.setParam(stmt, 1,"genitore", CFgenitore);
+        ResultSet res = stmt.executeQuery();
+        
+        while (res.next()){
+            RispostaQuestionario r=new RispostaQuestionario();
+
+            r.setId(res.getInt("id"));
+            r.setValore(res.getString("valore"));
+            r.setCFgenitore(res.getString("genitore"));
+            r.setIdDomanda(res.getInt("domanda"));
+            
+            l.add(r);
+        }
+        res.close();
+        return l;
+        
+    }
     
 }
 
