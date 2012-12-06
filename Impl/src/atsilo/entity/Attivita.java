@@ -36,6 +36,11 @@ public class Attivita {
      * @attribute titolo di tipo stringa
      */
     private String titolo;
+    
+    /**
+     * @attribute path di tipo stringa
+     */
+    private String path;
 
     /**
      *  La variabile registro avrà il valore della variabile di Registro
@@ -60,13 +65,14 @@ public class Attivita {
      */
     public Attivita(String descrizione, String categoria,
             ProgrammaEducativoSettimanale progEdSettimanale, String titolo,
-            Registro registro) {
+            Registro registro, String path) {
         super();
         this.descrizione = descrizione;
         this.categoria = categoria;
         this.programmaEducativoSettimanale = progEdSettimanale;
         this.titolo = titolo;
         this.registro = registro;
+        this.path = path;
     }
     
     /**
@@ -131,6 +137,22 @@ public class Attivita {
      */
     public String getTitolo() {
         return titolo;
+    }
+
+    /**
+     * Metodo che setta il parametro path
+     * @param path il parametro settato
+     */
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    /**
+     * Metodo che prende il campo path
+     * @return path il parametro inserito
+     */
+    public String getPath() {
+        return path;
     }
 
     /**
