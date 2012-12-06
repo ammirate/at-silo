@@ -29,6 +29,7 @@ public class Tirocinante extends Utente{
     private String matricola;
     private String giudizioFinale;
     private String disponibilita;
+    private String tutorEsterno;
 
     
     /**
@@ -51,6 +52,7 @@ public class Tirocinante extends Utente{
      * @param giudizioFinale il parametro è fissato
      * @param disponibilita il parametro è fissato
      * @param titoloDiStudi il parametro è fissato
+     * @param tutorEsterno il parametro è fissato
      */
     public Tirocinante(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
@@ -60,7 +62,8 @@ public class Tirocinante extends Utente{
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, int oreTotali, int oreLavoro,
             PersonaleAsilo personaleAsilo, String stato, String matricola,
-            String giudizioFinale, String disponibilita, String titoloDiStudi) {
+            String giudizioFinale, String disponibilita, String titoloDiStudi,
+            String tutorEsterno) {
         super(dataNascita, nome, cognome,
                 codiceFiscale, email, comuneNascita,
               telefono, cittadinanza, indirizzoResidenza,
@@ -76,6 +79,7 @@ public class Tirocinante extends Utente{
         this.giudizioFinale = giudizioFinale;
         this.disponibilita = disponibilita;
         this.titoloDiStudi = titoloDiStudi;
+        this.tutorEsterno = tutorEsterno;
     }
 
 
@@ -205,5 +209,21 @@ public class Tirocinante extends Utente{
      */
     public void setTitoloDiStudi(String titoloDiStudi) {
         this.titoloDiStudi = titoloDiStudi;
+    }
+    
+    /**
+     * Metodo che prende il valore tutorEsterno
+     * @return tutorEsterno il parametro inserito
+     */
+    public String getTutorEsterno() {
+        return tutorEsterno;
+    }
+
+    /**
+     * Metodo che prende il valore tutorEsterno
+     * @param tutorEsterno il parametro inserito
+     */
+    public void setTutorEsterno(String tutorEsterno) {
+        this.tutorEsterno = tutorEsterno;
     }
 }
