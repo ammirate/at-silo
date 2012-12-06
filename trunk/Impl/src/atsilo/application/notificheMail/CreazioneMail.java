@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  **/
 
-package application.notificheMail;
+package atsilo.application.notificheMail;
 
 import java.util.Properties;
 import javax.mail.Message;

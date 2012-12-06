@@ -3,7 +3,7 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: NotificaComposizioneClasseTest.java
+ * FILE: NotificaLicenziamentoTest.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -12,8 +12,7 @@
  * REVISION
  * nome revisore, data revisione
  *-----------------------------------------------------------------
- **/
-package application.notificheMail;
+ **/package atsilo.application.notificheMail;
 
 import static org.junit.Assert.*;
 
@@ -24,7 +23,7 @@ import org.junit.Test;
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: NotificaComposizioneClasseTest.java
+ * FILE: NotificaLicenziamentoTest.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -33,13 +32,7 @@ import org.junit.Test;
  *-----------------------------------------------------------------
  */
 
-/**
- * Classe NotificaComposizioneClasseTest
- * <Descrizione classe>
- * 
- * 
- */
-public class NotificaComposizioneClasseTest {
+public class NotificaLicenziamentoTest {
     
     @Test
     public void test() {
