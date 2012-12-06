@@ -20,18 +20,13 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
-import atsilo.stub.application.StubDomandaIscrizione;
+import atsilo.stub.storage.StubBando;
 
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.Iterator;
-
-import org.apache.tomcat.dbcp.dbcp.DbcpException;
-
 import com.sun.org.apache.bcel.internal.generic.NEW;
 
-import test.storage.StubBando;
-import test.storage.StubEvento;
 
 /*
  *-----------------------------------------------------------------
