@@ -11,6 +11,8 @@ package atsilo.entity;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -20,6 +22,8 @@ public class OrarioUtente {
     private String oraInizio;
     private String oraFine;
     private String descrizione;
+    private String nome;
+    private float prezzo;
     
     /**
      * Costruttore vuoto
@@ -32,14 +36,18 @@ public class OrarioUtente {
      * @param oraInizio il paramentro è fissato
      * @param oraFine il paramentro è fissato
      * @param descrizione il paramentro è fissato
+     * @param nome il parametro è fissato
+     * @param prezzo il parametro è fissato
      */
     public OrarioUtente(String id, String oraInizio, String oraFine,
-            String descrizione) {
+            String descrizione, String nome, float prezzo) {
         super();
         this.id = id;
         this.oraInizio = oraInizio;
         this.oraFine = oraFine;
         this.descrizione = descrizione;
+        this.nome = nome;
+        this.prezzo = prezzo;
     }
 
 
@@ -106,4 +114,36 @@ public class OrarioUtente {
     public String getDescrizione() {
         return descrizione;
     }
+    
+    /**
+    * Metodo che setta il parametro nome
+    * @param nome il parametro fissato
+    */
+   public void setNome(String nome) {
+       this.nome = nome;
+   }
+   
+   /**
+    * Metodo che prende il parametro nome
+    * @return nome il parametro inserito
+    */
+   public String getNome() {
+       return nome;
+   }
+   
+   /**
+   *  Metodo che setta il parametro prezzo
+   * @param prezzo il parametro fissato
+   */
+  public void setPrezzo(float prezzo) {
+      this.prezzo = prezzo;
+  }
+  
+  /**
+   * Metodo che prende il parametro prezzo
+   * @return prezzo il parametro inserito
+   */
+  public float getPrezzo() {
+      return prezzo;
+  }
 }
