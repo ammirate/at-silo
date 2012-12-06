@@ -98,7 +98,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(r.getInt("id"));
             ris.setValore(r.getString("valore"));
             ris.setCFgenitore(r.getString("genitore"));
-            ris.setIdDomanda(r.getInt("domanda"));           
+            ris.setIdDomanda(r.getString("domanda"));           
         }
         return ris;
     }
@@ -128,7 +128,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(res.getInt("id"));
             ris.setValore(res.getString("valore"));
             ris.setCFgenitore(res.getString("genitore"));
-            ris.setIdDomanda(res.getInt("domanda"));
+            ris.setIdDomanda(res.getString("domanda"));
             
             l.add(ris);
         }
@@ -159,7 +159,7 @@ public class DBRispostaQuestionario extends DBBeans {
             r.setId(res.getInt("id"));
             r.setValore(res.getString("valore"));
             r.setCFgenitore(res.getString("genitore"));
-            r.setIdDomanda(res.getInt("domanda"));
+            r.setIdDomanda(res.getString("domanda"));
             
             l.add(r);
         }
