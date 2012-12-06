@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 06 dic, 2012 at 06:01 PM
+-- Generato il: 06 dic, 2012 at 09:49 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -32,32 +32,34 @@ CREATE TABLE IF NOT EXISTS `ACCOUNT` (
   `personale_asilo` varchar(50) DEFAULT NULL,
   `psico_pedagogo` varchar(50) DEFAULT NULL,
   `responsabile_questionario` varchar(50) DEFAULT NULL,
+  `responsabile_tirocini` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`username`),
   KEY `genitore` (`genitore`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
-  KEY `responsabile_questionario` (`responsabile_questionario`)
+  KEY `responsabile_questionario` (`responsabile_questionario`),
+  KEY `responsabile_tirocini` (`responsabile_tirocini`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `ACCOUNT`
 --
 
-INSERT INTO `ACCOUNT` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`) VALUES
-('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL),
-('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL),
-('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B'),
-('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL),
-('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y	', NULL, NULL),
-('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL),
-('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL),
-('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL),
-('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL),
-('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL),
-('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL),
-('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL),
-('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL),
-('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL);
+INSERT INTO `ACCOUNT` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`) VALUES
+('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL),
+('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL, NULL),
+('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL),
+('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL),
+('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y	', NULL, NULL, NULL),
+('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL, NULL),
+('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL),
+('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL),
+('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL),
+('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL),
+('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL),
+('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL),
+('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL),
+('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -92,22 +94,45 @@ CREATE TABLE IF NOT EXISTS `ATTIVITA` (
   `programma_educativo_settimanale` int(11) DEFAULT NULL,
   `registro` int(11) DEFAULT NULL,
   `path` varchar(256) DEFAULT NULL,
+  `nota` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`titolo`),
   KEY `programma_educativo_settimanale` (`programma_educativo_settimanale`),
-  KEY `registro` (`registro`)
+  KEY `registro` (`registro`),
+  KEY `nota` (`nota`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `ATTIVITA`
 --
 
-INSERT INTO `ATTIVITA` (`titolo`, `descrizione`, `categoria`, `programma_educativo_settimanale`, `registro`, `path`) VALUES
-('Attività X1', 'X1', 'X', 1, 1, NULL),
-('Attività X2', 'X2', 'X', 1, 1, NULL),
-('Attività Y1', 'Y1', 'Y', 2, 2, NULL),
-('Attività Y2', 'Y2', 'Y', 2, 2, NULL),
-('Attività Z1', 'Z1', 'Z', 3, 3, NULL),
-('Attività Z2', 'Z2', 'Z', 3, 3, NULL);
+INSERT INTO `ATTIVITA` (`titolo`, `descrizione`, `categoria`, `programma_educativo_settimanale`, `registro`, `path`, `nota`) VALUES
+('Attività X1', 'X1', 'X', 1, 1, NULL, NULL),
+('Attività X2', 'X2', 'X', 1, 1, NULL, NULL),
+('Attività Y1', 'Y1', 'Y', 2, 2, NULL, NULL),
+('Attività Y2', 'Y2', 'Y', 2, 2, NULL, NULL),
+('Attività Z1', 'Z1', 'Z', 3, 3, NULL, NULL),
+('Attività Z2', 'Z2', 'Z', 3, 3, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `ATTIVITA_TIROCINANTE`
+--
+
+CREATE TABLE IF NOT EXISTS `ATTIVITA_TIROCINANTE` (
+  `id` int(50) NOT NULL,
+  `descrizione` varchar(100) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `ora_inizio` varchar(10) DEFAULT NULL,
+  `ora_fine` varchar(10) DEFAULT NULL,
+  `valutazione` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `ATTIVITA_TIROCINANTE`
+--
+
 
 -- --------------------------------------------------------
 
@@ -252,6 +277,24 @@ CREATE TABLE IF NOT EXISTS `COMPILA` (
 
 --
 -- Dump dei dati per la tabella `COMPILA`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `CONTESTAZIONE`
+--
+
+CREATE TABLE IF NOT EXISTS `CONTESTAZIONE` (
+  `id` int(5) NOT NULL,
+  `data` date DEFAULT NULL,
+  `descrizione` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `CONTESTAZIONE`
 --
 
 
@@ -543,6 +586,25 @@ INSERT INTO `INSEGNA` (`educatore_didattico`, `classe`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `MASSIMO`
+--
+
+CREATE TABLE IF NOT EXISTS `MASSIMO` (
+  `id` int(5) NOT NULL,
+  `valore` varchar(10) DEFAULT NULL,
+  `personale_asilo` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `personale_asilo` (`personale_asilo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `MASSIMO`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `MENU_MENSA`
 --
 
@@ -565,6 +627,23 @@ CREATE TABLE IF NOT EXISTS `MENU_MENSA` (
 INSERT INTO `MENU_MENSA` (`categoria_bambino`, `tipologia`, `primo_piatto`, `secondo_piatto`, `frutta`, `data`, `id`, `contorno`) VALUES
 ('Svezzati', 'Carne', 'Pasta al ragù', 'Cotoletta di pollo', 'Banana', '2012-11-08', 1, NULL),
 ('Svezzati', 'Pesce', 'Pasta al pomodoro', 'Bastoncini di merluzzo', 'Pera', '2012-11-22', 2, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `NOTA`
+--
+
+CREATE TABLE IF NOT EXISTS `NOTA` (
+  `titolo` varchar(50) NOT NULL,
+  `descrizione` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`titolo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `NOTA`
+--
+
 
 -- --------------------------------------------------------
 
@@ -642,18 +721,22 @@ CREATE TABLE IF NOT EXISTS `PERSONALE_ASILO` (
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`codice_fiscale`)
+  `richiesta_tirocinante` int(5) DEFAULT NULL,
+  `registro_tirocinante` int(5) DEFAULT NULL,
+  PRIMARY KEY (`codice_fiscale`),
+  KEY `richiesta_tirocinante` (`richiesta_tirocinante`),
+  KEY `registro_tirocinante` (`registro_tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `PERSONALE_ASILO`
 --
 
-INSERT INTO `PERSONALE_ASILO` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
-('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'IMPIEGATO SEGRETERIA', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Veronica', 'Mars', 'MRSVRN90A32B235B', 'IMPIEGATO SEGRETERIA', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'DIRETTORE', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'IMPIEGATO SEGRETERIA', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `PERSONALE_ASILO` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `richiesta_tirocinante`, `registro_tirocinante`) VALUES
+('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'IMPIEGATO SEGRETERIA', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Veronica', 'Mars', 'MRSVRN90A32B235B', 'IMPIEGATO SEGRETERIA', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'DIRETTORE', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'IMPIEGATO SEGRETERIA', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -772,10 +855,10 @@ INSERT INTO `QUESTIONARIO` (`id`, `flag_rinuncia`, `pathname`, `periodo_inizio`,
 --
 
 CREATE TABLE IF NOT EXISTS `REGISTRO` (
-  `classe` int(11) DEFAULT NULL,
-  `anno` varchar(50) DEFAULT NULL,
-  `educatore_didattico` varchar(50) DEFAULT NULL,
   `id` int(11) NOT NULL,
+  `anno` varchar(50) DEFAULT NULL,
+  `classe` int(11) DEFAULT NULL,
+  `educatore_didattico` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `classe` (`classe`),
   KEY `educatore_didattico` (`educatore_didattico`)
@@ -785,11 +868,27 @@ CREATE TABLE IF NOT EXISTS `REGISTRO` (
 -- Dump dei dati per la tabella `REGISTRO`
 --
 
-INSERT INTO `REGISTRO` (`classe`, `anno`, `educatore_didattico`, `id`) VALUES
-(1, '2012/2013', '1', 1),
-(2, '2012/2013', '2', 2),
-(3, '2012/2013', '3', 3),
-(4, '2012/2013', NULL, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `REGISTRO_TIROCINANTE`
+--
+
+CREATE TABLE IF NOT EXISTS `REGISTRO_TIROCINANTE` (
+  `id` int(5) NOT NULL,
+  `descrizione` varchar(50) DEFAULT NULL,
+  `ore_totali` varchar(10) DEFAULT NULL,
+  `valutazione` varchar(150) DEFAULT NULL,
+  `attivita_tirocinante` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `attivita_tirocinante` (`attivita_tirocinante`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `REGISTRO_TIROCINANTE`
+--
+
 
 -- --------------------------------------------------------
 
@@ -825,6 +924,39 @@ CREATE TABLE IF NOT EXISTS `RESPONSABILE_QUESTIONARIO` (
 
 INSERT INTO `RESPONSABILE_QUESTIONARIO` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
 ('Arturo', 'De Santis', 'DSTRTR58L32A333B', 'ads@live.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `RESPONSABILE_TIROCINI`
+--
+
+CREATE TABLE IF NOT EXISTS `RESPONSABILE_TIROCINI` (
+  `nome` varchar(50) DEFAULT NULL,
+  `cognome` varchar(50) DEFAULT NULL,
+  `codice_fiscale` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `data_di_nascita` date DEFAULT NULL,
+  `comune_di_nascita` varchar(50) DEFAULT NULL,
+  `telefono` varchar(50) DEFAULT NULL,
+  `indirizzo_residenza` varchar(50) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
+  `comune_domicilio` varchar(100) DEFAULT NULL,
+  `provincia_domicilio` varchar(50) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`codice_fiscale`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `RESPONSABILE_TIROCINI`
+--
+
 
 -- --------------------------------------------------------
 
@@ -888,6 +1020,27 @@ INSERT INTO `RICHIESTA` (`id`, `tipo`, `menu_richiesto`, `orario_richiesto`, `al
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `RICHIESTA_TIROCINANTE`
+--
+
+CREATE TABLE IF NOT EXISTS `RICHIESTA_TIROCINANTE` (
+  `id` int(5) NOT NULL,
+  `descrizione` varchar(100) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `ora_inizio` varchar(10) DEFAULT NULL,
+  `ora_fine` varchar(10) DEFAULT NULL,
+  `numero_tirocinanti` int(3) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `RICHIESTA_TIROCINANTE`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `RISPOSTA_QUESTIONARIO`
 --
 
@@ -905,6 +1058,27 @@ CREATE TABLE IF NOT EXISTS `RISPOSTA_QUESTIONARIO` (
 
 --
 -- Dump dei dati per la tabella `RISPOSTA_QUESTIONARIO`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `SCHEDULAZIONE`
+--
+
+CREATE TABLE IF NOT EXISTS `SCHEDULAZIONE` (
+  `id` int(11) NOT NULL,
+  `data` date DEFAULT NULL,
+  `tirocinante` varchar(50) DEFAULT NULL,
+  `massimo` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `tirocinante` (`tirocinante`),
+  KEY `massimo` (`massimo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `SCHEDULAZIONE`
 --
 
 
@@ -975,24 +1149,70 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
   `cittadinanza` varchar(50) DEFAULT NULL,
   `tutor_esterno` varchar(50) DEFAULT NULL,
   `disponibilita` varchar(50) DEFAULT NULL,
+  `contestazione` int(5) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
-  KEY `personale_asilo` (`personale_asilo`)
+  KEY `personale_asilo` (`personale_asilo`),
+  KEY `contestazione` (`contestazione`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `TIROCINANTE`
 --
 
-INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `tutor_esterno`, `disponibilita`) VALUES
-('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `tutor_esterno`, `disponibilita`, `contestazione`) VALUES
+('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Limiti per le tabelle scaricate
 --
 
 --
+-- Limiti per la tabella `ACCOUNT`
+--
+ALTER TABLE `ACCOUNT`
+  ADD CONSTRAINT `account_ibfk_1` FOREIGN KEY (`responsabile_tirocini`) REFERENCES `responsabile_tirocini` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `ATTIVITA`
+--
+ALTER TABLE `ATTIVITA`
+  ADD CONSTRAINT `attivita_ibfk_1` FOREIGN KEY (`nota`) REFERENCES `nota` (`titolo`);
+
+--
+-- Limiti per la tabella `MASSIMO`
+--
+ALTER TABLE `MASSIMO`
+  ADD CONSTRAINT `massimo_ibfk_1` FOREIGN KEY (`personale_asilo`) REFERENCES `personale_asilo` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `PERSONALE_ASILO`
+--
+ALTER TABLE `PERSONALE_ASILO`
+  ADD CONSTRAINT `personale_asilo_ibfk_2` FOREIGN KEY (`registro_tirocinante`) REFERENCES `registro_tirocinante` (`id`),
+  ADD CONSTRAINT `personale_asilo_ibfk_1` FOREIGN KEY (`richiesta_tirocinante`) REFERENCES `richiesta_tirocinante` (`id`);
+
+--
+-- Limiti per la tabella `REGISTRO_TIROCINANTE`
+--
+ALTER TABLE `REGISTRO_TIROCINANTE`
+  ADD CONSTRAINT `registro_tirocinante_ibfk_1` FOREIGN KEY (`attivita_tirocinante`) REFERENCES `attivita_tirocinante` (`id`);
+
+--
 -- Limiti per la tabella `RISPOSTA_QUESTIONARIO`
 --
 ALTER TABLE `RISPOSTA_QUESTIONARIO`
   ADD CONSTRAINT `risposta_questionario_ibfk_1` FOREIGN KEY (`domanda`) REFERENCES `domanda_questionario` (`id`) ON UPDATE CASCADE;
+
+--
+-- Limiti per la tabella `SCHEDULAZIONE`
+--
+ALTER TABLE `SCHEDULAZIONE`
+  ADD CONSTRAINT `schedulazione_ibfk_2` FOREIGN KEY (`massimo`) REFERENCES `massimo` (`id`),
+  ADD CONSTRAINT `schedulazione_ibfk_1` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `TIROCINANTE`
+--
+ALTER TABLE `TIROCINANTE`
+  ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);

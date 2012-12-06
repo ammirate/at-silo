@@ -614,7 +614,7 @@ fg=red</panel_attributes>
     <coordinates>
       <x>798</x>
       <y>0</y>
-      <w>112</w>
+      <w>114</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>N</panel_attributes>
@@ -925,7 +925,7 @@ puo ritirare</panel_attributes>
     <coordinates>
       <x>354</x>
       <y>582</y>
-      <w>38</w>
+      <w>40</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
@@ -2234,6 +2234,7 @@ fg=red</panel_attributes>
     </coordinates>
     <panel_attributes>Schedulazione
 --
+-Id
 -Data
 
 bg=gray
@@ -2292,10 +2293,11 @@ fg=red</panel_attributes>
       <x>1530</x>
       <y>48</y>
       <w>90</w>
-      <h>30</h>
+      <h>36</h>
     </coordinates>
     <panel_attributes>Massimo
 --
+-Id
 -Valore
 bg=gray
 fg=red
