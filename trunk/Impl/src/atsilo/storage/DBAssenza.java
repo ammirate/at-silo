@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Collections;
 
 import atsilo.entity.Assenza;
+import atsilo.entity.Bambino;
 
 /*
  *-----------------------------------------------------------------
@@ -28,7 +29,7 @@ import atsilo.entity.Assenza;
  */
 
 public class DBAssenza extends DBBeans<Assenza> {
-    Tabella tabella;
+    
     
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
@@ -81,7 +82,7 @@ public class DBAssenza extends DBBeans<Assenza> {
         Assenza temp=new Assenza();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE data = ? ");
             tabella.setParam(stmt, 1, "data", d);
             ResultSet res = stmt.executeQuery();  
         while(res.next())
@@ -105,15 +106,16 @@ public class DBAssenza extends DBBeans<Assenza> {
     public List<Assenza> ricercaAssenzaPerBambino(String codicefiscale) throws SQLException {
         Assenza temp=new Assenza();
         List<Assenza> a=new ArrayList<Assenza>();
-       
+        Bambino b=new Bambino();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", codicefiscale);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE bambino = ? ");
+            tabella.setParam(stmt, 1, "bambino", codicefiscale);
             ResultSet res = stmt.executeQuery();  
         while(res.next())
         {
-            temp.setData(res.getDate("data"));
             
+            b.setCodiceFiscale(res.getString("bambino"));
+            temp.setBambino(b);
             a.add(temp);
            
         }
