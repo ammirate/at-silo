@@ -48,16 +48,13 @@ if (!tipologia.equals("delegato_rettore") )
 <td align="left" class="menuprimosel">&nbsp;<b>Questionari</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="visualizza_questionari.html">Visualizza</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_questionari.jsp">Elenco Questionari</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_questionario.html">Inserisci</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_questionario.jsp">Nuovo Questionario</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_questionario.html">Modifica</a></td>
-</tr>
-<tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_questionario.html">Cancella</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_questionari.jsp">Modifica Questionari</a></td>
 </tr>
 </tbody></table>
 
