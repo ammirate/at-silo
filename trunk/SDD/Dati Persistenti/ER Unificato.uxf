@@ -145,7 +145,7 @@ fg=red
       <x>726</x>
       <y>846</y>
       <w>90</w>
-      <h>66</h>
+      <h>78</h>
     </coordinates>
     <panel_attributes>Evento
 --
@@ -154,6 +154,7 @@ fg=red
 -Data
 -Tipo
 -CC
+-Path
 bg=gray
 fg=red
 </panel_attributes>
@@ -163,12 +164,12 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>720</x>
-      <y>894</y>
+      <y>906</y>
       <w>144</w>
-      <h>186</h>
+      <h>174</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>18;18;18;174;132;174</additional_attributes>
+    <additional_attributes>18;18;18;162;132;162</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -1806,12 +1807,12 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>750</x>
-      <y>894</y>
+      <y>906</y>
       <w>390</w>
-      <h>150</h>
+      <h>138</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>18;18;18;138;378;138</additional_attributes>
+    <additional_attributes>18;18;18;126;378;126</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
