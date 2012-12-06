@@ -95,9 +95,9 @@ public class DBBambino extends DBBeans<Bambino> {
         {
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
-            b.setCodice_Fiscale(r.getString("codice_fiscale"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
             b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzo(r.getString("indirizzo"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
@@ -129,9 +129,9 @@ public class DBBambino extends DBBeans<Bambino> {
         {
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
-            b.setCodice_Fiscale(r.getString("codice_fiscale"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
             b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzo(r.getString("indirizzo"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
@@ -163,9 +163,9 @@ public class DBBambino extends DBBeans<Bambino> {
         {
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
-            b.setCodice_Fiscale(r.getString("codice_fiscale"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
             b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzo(r.getString("indirizzo"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
@@ -198,9 +198,9 @@ public class DBBambino extends DBBeans<Bambino> {
         {
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
-            b.setCodice_Fiscale(r.getString("codice_fiscale"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
             b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzo(r.getString("indirizzo"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
@@ -233,9 +233,9 @@ public class DBBambino extends DBBeans<Bambino> {
         {
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
-            b.setCodice_Fiscale(r.getString("codice_fiscale"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
             b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzo(r.getString("indirizzo"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
@@ -260,7 +260,7 @@ public class DBBambino extends DBBeans<Bambino> {
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodice_Fiscale());
+            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
             ResultSet r = stmt.executeQuery();
         String ind="";
         if(r.next())
@@ -279,7 +279,7 @@ public class DBBambino extends DBBeans<Bambino> {
     public int ricercaClasseBambino(Bambino b) throws SQLException{
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodice_Fiscale());
+            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
             ResultSet r = stmt.executeQuery();
         int c = 0;
         if(r.next())
