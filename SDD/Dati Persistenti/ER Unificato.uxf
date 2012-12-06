@@ -546,15 +546,29 @@ fg=red</panel_attributes>
       <x>144</x>
       <y>726</y>
       <w>108</w>
-      <h>96</h>
+      <h>210</h>
     </coordinates>
     <panel_attributes>Responsabile
 Questionario
 --
--Email
 -Nome
 -Cognome
--Cod.Fiscale
+-Codice Fiscale
+-Telefono
+-Email
+-Cittadinanza
+-Data di nascita
+-Comune di nascita
+-Indirizzo residenza
+-Numero civico residenza
+-CAP residenza
+-Comune residenza
+-Provincia residenza
+-Indirizzo domicilio
+-Numero civico domicilio
+-CAP domicilio
+-Comune domicilio
+-Provincia domicilio
 
 bg=gray
 fg=red</panel_attributes>
