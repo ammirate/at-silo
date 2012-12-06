@@ -31,50 +31,51 @@ import atsilo.storage.Database;
  * @author Frank
  * 
  */
-public class StubBando implements Iterable<Bando>{
-    Bando bando;
-    Iterable<Bando> bandi;
-    List<Bando> bandilista;
-    Database database;
+public class StubBando {
+    private Bando bando;
     
     
-    public StubBando(Database db) {
-        bando =new Bando();
-        database = db;
-        bandilista.add(bando);
-      
+    public StubBando(Database db) 
+    {
+        bando =new Bando();  
     }
 
 
     /**
-     * @param bando2
+     * @param bando
      * @return
      */
-    public boolean inserisci(Bando bando2) {
-        // TODO Scheletro generato automaticamente
+    public boolean inserisciBando(Bando bando) throws SQLException
+    {
+        this.bando=bando;
         return true;
     }
 
 
+    public boolean modificaBando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia, int postiDisponibili,
+            String path)
+    {
+        bando.setiD(id);
+        bando.setDataInizioBando(dataInizioBando);
+        bando.setDataFineBando(dataFineBando);
+        bando.setDataInizioPresentazioneRinuncia(dataInizioPresentazioneRinuncia);
+        bando.setDataFinePresentazioneRinuncia(dataFinePresentazioneRinuncia);
+        bando.setDataFineRinuncia(dataFineRinuncia);
+        bando.setPostiDisponibili(postiDisponibili);
+        bando.setPath(path);
+        return true;
+    }
     /**
      * @param getiD
      * @return
      */
-    public Bando cercaBandoPerId(int getiD) throws SQLException {
-        // TODO Scheletro generato automaticamente
+    public Bando getBando() throws SQLException 
+    {
         return bando;
     }
 
 
-    public Iterable<Bando> getAll() 
-    {
-        return this;
-    }
-
-
-    public Iterator<Bando> iterator() {
-        return (Iterator<Bando>) bandilista;
-    }
     
     
     
