@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 06 dic, 2012 at 04:11 PM
+-- Generato il: 06 dic, 2012 at 06:01 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -384,6 +384,7 @@ CREATE TABLE IF NOT EXISTS `EVENTO` (
   `psico_pedagogo` varchar(50) DEFAULT NULL,
   `educatore_didattico` varchar(50) DEFAULT NULL,
   `path` varchar(256) DEFAULT NULL,
+  `tipo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`nome`,`data`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
@@ -394,9 +395,9 @@ CREATE TABLE IF NOT EXISTS `EVENTO` (
 -- Dump dei dati per la tabella `EVENTO`
 --
 
-INSERT INTO `EVENTO` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`) VALUES
-('Gita X', '2012-11-21', 'Gita a X', '', 'SSSLRL78B19B908X', NULL, NULL),
-('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, NULL);
+INSERT INTO `EVENTO` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`) VALUES
+('Gita X', '2012-11-21', 'Gita a X', '', 'SSSLRL78B19B908X', NULL, NULL, NULL),
+('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -576,6 +577,8 @@ CREATE TABLE IF NOT EXISTS `ORARIO_UTENTE` (
   `data_inizio` date DEFAULT NULL,
   `data_fine` date DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
+  `nome` varchar(50) DEFAULT NULL,
+  `prezzo` float DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
@@ -583,9 +586,9 @@ CREATE TABLE IF NOT EXISTS `ORARIO_UTENTE` (
 -- Dump dei dati per la tabella `ORARIO_UTENTE`
 --
 
-INSERT INTO `ORARIO_UTENTE` (`id`, `data_inizio`, `data_fine`, `descrizione`) VALUES
-(1, '2012-11-01', '2012-11-30', 'X'),
-(2, '2012-09-17', '2012-09-30', 'Y');
+INSERT INTO `ORARIO_UTENTE` (`id`, `data_inizio`, `data_fine`, `descrizione`, `nome`, `prezzo`) VALUES
+(1, '2012-11-01', '2012-11-30', 'X', NULL, NULL),
+(2, '2012-09-17', '2012-09-30', 'Y', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -715,7 +718,7 @@ CREATE TABLE IF NOT EXISTS `PSICO_PEDAGOGO` (
   `data_di_nascita` date DEFAULT NULL,
   `comune_di_nascita` varchar(50) DEFAULT NULL,
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
-  `numero_classi` varchar(50) DEFAULT NULL,
+  `numero_classi` int(50) DEFAULT NULL,
   `numero_civico_residenza` varchar(10) DEFAULT NULL,
   `cap_residenza` varchar(10) DEFAULT NULL,
   `comune_residenza` varchar(100) DEFAULT NULL,
@@ -734,8 +737,8 @@ CREATE TABLE IF NOT EXISTS `PSICO_PEDAGOGO` (
 --
 
 INSERT INTO `PSICO_PEDAGOGO` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `numero_classi`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
-('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo, 3 - Fisciano (SA)', '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z, 3 - Salerno (SA)', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo, 3 - Fisciano (SA)', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z, 3 - Salerno (SA)', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -830,9 +833,14 @@ INSERT INTO `RESPONSABILE_QUESTIONARIO` (`nome`, `cognome`, `codice_fiscale`, `e
 --
 
 CREATE TABLE IF NOT EXISTS `RETTA` (
-  `importo` varchar(50) DEFAULT NULL,
+  `importoDovuto` double DEFAULT NULL,
   `id` int(11) NOT NULL,
   `genitore` varchar(50) DEFAULT NULL,
+  `descrizioneTassa` varchar(100) DEFAULT NULL,
+  `descrizioneRata` varchar(100) DEFAULT NULL,
+  `data` date DEFAULT NULL,
+  `importoPagato` float DEFAULT NULL,
+  `nome` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -841,14 +849,14 @@ CREATE TABLE IF NOT EXISTS `RETTA` (
 -- Dump dei dati per la tabella `RETTA`
 --
 
-INSERT INTO `RETTA` (`importo`, `id`, `genitore`) VALUES
-('150.00', 1, 'CVLMRA69A23B333C'),
-('630.00', 2, 'DBNGPP69A23B222C'),
-('325.00', 3, 'DCSGVN74A23B224X'),
-('250.00', 4, 'DFZNDR91L14A909D'),
-('130.00', 5, 'DRGSNT81A26B045C'),
-('469.00', 6, 'PSSSNN85L98A980I'),
-('790.00', 7, 'VLLLRU83A24T928B');
+INSERT INTO `RETTA` (`importoDovuto`, `id`, `genitore`, `descrizioneTassa`, `descrizioneRata`, `data`, `importoPagato`, `nome`) VALUES
+(150, 1, 'CVLMRA69A23B333C', '', '', '0000-00-00', 0, ''),
+(630, 2, 'DBNGPP69A23B222C', '', '', '0000-00-00', 0, ''),
+(325, 3, 'DCSGVN74A23B224X', '', '', '0000-00-00', 0, ''),
+(250, 4, 'DFZNDR91L14A909D', '', '', '0000-00-00', 0, ''),
+(130, 5, 'DRGSNT81A26B045C', '', '', '0000-00-00', 0, ''),
+(469, 6, 'PSSSNN85L98A980I', '', '', '0000-00-00', 0, ''),
+(790, 7, 'VLLLRU83A24T928B', '', '', '0000-00-00', 0, '');
 
 -- --------------------------------------------------------
 
@@ -965,6 +973,8 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
+  `tutor_esterno` varchar(50) DEFAULT NULL,
+  `disponibilita` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `personale_asilo` (`personale_asilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -973,9 +983,9 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
 -- Dump dei dati per la tabella `TIROCINANTE`
 --
 
-INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
-('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `TIROCINANTE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `tutor_esterno`, `disponibilita`) VALUES
+('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Limiti per le tabelle scaricate

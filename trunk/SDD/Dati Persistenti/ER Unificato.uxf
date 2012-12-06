@@ -1586,7 +1586,7 @@ fg=red</panel_attributes>
       <x>1686</x>
       <y>528</y>
       <w>108</w>
-      <h>264</h>
+      <h>282</h>
     </coordinates>
     <panel_attributes>Tirocinante
 --
@@ -1917,12 +1917,12 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>18</x>
-      <y>774</y>
+      <y>792</y>
       <w>1752</w>
-      <h>270</h>
+      <h>252</h>
     </coordinates>
     <panel_attributes>m1=1</panel_attributes>
-    <additional_attributes>1740;18;1740;174;612;174;612;258;306;258;18;258;18;78</additional_attributes>
+    <additional_attributes>1740;18;1740;156;612;156;612;240;306;240;18;240;18;60</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -2053,12 +2053,12 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>1710</x>
-      <y>774</y>
+      <y>792</y>
       <w>30</w>
-      <h>120</h>
+      <h>102</h>
     </coordinates>
     <panel_attributes>m1= 1</panel_attributes>
-    <additional_attributes>18;18;18;108</additional_attributes>
+    <additional_attributes>18;18;18;90</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
