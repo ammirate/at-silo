@@ -26,9 +26,9 @@ public class Questionario {
     private String nome;
     private int id;
     private Date periodo_inizio;
-    private String pathname;
     private List<Genitore> listaGenitori;
     private List<DomandaQuestionario> domande;
+    private List<RispostaQuestionario> rispostePrecaricate;
     
     /**
      * Costruttore vuoto
@@ -37,6 +37,7 @@ public class Questionario {
 
         this.listaGenitori = new ArrayList<Genitore>();
         this.domande = new ArrayList<DomandaQuestionario>();
+        this.rispostePrecaricate = new ArrayList<RispostaQuestionario>();
     }
     
     
@@ -62,7 +63,6 @@ public class Questionario {
         this.periodo_inizio = periodo_inizio;
         this.listaGenitori = new ArrayList<Genitore>();
         this.domande = new ArrayList<DomandaQuestionario>();
-        this.pathname = pathname;
     }
 
 
@@ -176,21 +176,7 @@ public class Questionario {
         return id;
     }
 
-    /**
-     * Metodo che setta il valore pathname
-     * @param pathname il parametro fissato
-     */
-    public void setPathname(String pathname) {
-        this.pathname = pathname;
-    }
 
-    /**
-     * Metodo che restituisce il valore pathname
-     * @return pathname il parametro inserito
-     */
-    public String getPathname() {
-        return pathname;
-    }
     
     /**
      * Metodo che setta il campo periodo inizio
@@ -248,21 +234,6 @@ public class Questionario {
     
     
     
-    /**
-     * Metodo che assegna ad ogni domanda del questionario la relativa risposta
-     * @param risposte e la lista di risposte
-     */
-    public void compila(List<RispostaQuestionario> risposte, Genitore chiCompila){
-        
-        for(DomandaQuestionario d : domande)
-            for(RispostaQuestionario r : risposte)
-                if(r.getIdDomanda().equalsIgnoreCase(d.getId()) ){
-                    d.setRisposta(r);
-                    r.setCFgenitore(chiCompila.getCodiceFiscale());
-                }
-        this.listaGenitori.add(chiCompila);
-        
-    }
     
     
     public String toString(){
@@ -278,5 +249,19 @@ public class Questionario {
     }
     
     
+    /**
+     * Inserisce le risposte già inserite dall'utente in una List
+     * così da poterle caricare e visualizzare
+     * @param d domanda vera del questionario a cui risponde la domanda
+     * @param r risposta del genitore
+     */
+    public void precaricaRispostaAllaDomanda(DomandaQuestionario d, RispostaQuestionario r){
+        r.setIdDomanda(d.getId());
+        rispostePrecaricate.add(r);
+    }
+    
+    public List<RispostaQuestionario> getRispostePrecaricate(){
+        return rispostePrecaricate;
+    }
     
 }
