@@ -94,7 +94,7 @@ public class ControlLogin {
                                 throw new LoginException("Username o Password o Tipologia Errata");
                         else 
                             if (tipo.compareTo("personale_esilo") == 0)
-                                if ((dbPersonaleAsilo.CercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                if ((dbPersonaleAsilo.ricercaPersonaleAsiloPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
                                     return account;
                                 else
                                     throw new LoginException("Username o Password o Tipologia Errata");
@@ -106,7 +106,7 @@ public class ControlLogin {
                                         throw new LoginException("Username o Password o Tipologia Errata");
                                 else
                                     if (tipo.compareTo("resposabile_questionario") == 0)
-                                        if ((dbResponsabileQuestionario.CercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                        if ((dbResponsabileQuestionario.ricercaResponsabileQuestionarioPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
                                             return account;
                                         else
                                             throw new LoginException("Username o Password o Tipologia Errata");
@@ -118,13 +118,13 @@ public class ControlLogin {
                                                 throw new LoginException("Username o Password o Tipologia Errata");
                                         else
                                             if (tipo.compareTo("event_planner") == 0)
-                                                if ((dbEventPlanner.ricercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                                if ((dbEventPlanner.ricercaEventPlannerPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
                                                     return account;
                                                 else
                                                     throw new LoginException("Username o Password o Tipologia Errata");
                                             else
                                                 if (tipo.compareTo("tirocinante") == 0)
-                                                    if ((dbTirocinante.ricercaPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
+                                                    if ((dbTirocinante.ricercaTirocinantePerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
                                                         return account;
                                                     else
                                                         throw new LoginException("Username o Password o Tipologia Errata");
