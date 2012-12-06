@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 06 dic, 2012 at 03:57 PM
+-- Generato il: 06 dic, 2012 at 04:11 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -128,13 +128,13 @@ CREATE TABLE IF NOT EXISTS `BAMBINO` (
   `comune_di_nascita` varchar(50) DEFAULT NULL,
   `numero_civico_residenza` varchar(10) DEFAULT NULL,
   `cap_residenza` varchar(10) DEFAULT NULL,
-  `comune_residenza` int(100) DEFAULT NULL,
-  `provincia_residenza` int(50) DEFAULT NULL,
-  `indirizzo_domicilio` int(100) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
   `numero_civico_domicilio` varchar(10) DEFAULT NULL,
   `cap_domicilio` varchar(10) DEFAULT NULL,
-  `comune_domicilio` int(100) DEFAULT NULL,
-  `provincia_domicilio` int(50) DEFAULT NULL,
+  `comune_domicilio` varchar(100) DEFAULT NULL,
+  `provincia_domicilio` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`)
@@ -481,13 +481,13 @@ CREATE TABLE IF NOT EXISTS `GENITORE` (
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
   `comune_residenza` varchar(100) DEFAULT NULL,
-  `numero_civico_residenza` int(10) DEFAULT NULL,
-  `cap_residenza` int(10) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
   `provincia_residenza` varchar(50) DEFAULT NULL,
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `indirizzo_domicilio` varchar(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(10) DEFAULT NULL,
-  `cap_domicilio` int(10) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   `dipendente_presso` varchar(200) DEFAULT NULL,
   `rapporti_ateneo_salerno` text,
@@ -503,13 +503,13 @@ CREATE TABLE IF NOT EXISTS `GENITORE` (
 --
 
 INSERT INTO `GENITORE` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`) VALUES
-('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma, 2 - Fisciano (SA)', 'RESIDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
-('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'INSEGNANTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
-('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'INSEGNANTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
-('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'STUDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
-('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'NON-RESIDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
-('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'STUDENTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00'),
-('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'INSEGNANTE', 'ISCRITTO', '', '', 0, 0, '', '', '', 0, 0, '', '', '', '', '', '', '0000-00-00');
+('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma, 2 - Fisciano (SA)', 'RESIDENTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00'),
+('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'INSEGNANTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00'),
+('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'INSEGNANTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00'),
+('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'STUDENTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00'),
+('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'NON-RESIDENTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00'),
+('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'STUDENTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00'),
+('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'INSEGNANTE', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -718,9 +718,9 @@ CREATE TABLE IF NOT EXISTS `PSICO_PEDAGOGO` (
   `numero_classi` varchar(50) DEFAULT NULL,
   `numero_civico_residenza` varchar(10) DEFAULT NULL,
   `cap_residenza` varchar(10) DEFAULT NULL,
-  `comune_residenza` int(100) DEFAULT NULL,
-  `provincia_residenza` int(50) DEFAULT NULL,
-  `indirizzo_domicilio` int(100) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
   `numero_civico_domicilio` varchar(10) DEFAULT NULL,
   `cap_domicilio` varchar(10) DEFAULT NULL,
   `comune_domicilio` varchar(50) DEFAULT NULL,
@@ -799,6 +799,20 @@ CREATE TABLE IF NOT EXISTS `RESPONSABILE_QUESTIONARIO` (
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
   `email` varchar(50) DEFAULT NULL,
+  `data_di_nascita` date DEFAULT NULL,
+  `comune_di_nascita` varchar(50) DEFAULT NULL,
+  `telefono` varchar(50) DEFAULT NULL,
+  `indirizzo_residenza` varchar(50) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
+  `comune_residenza` varchar(100) DEFAULT NULL,
+  `provincia_residenza` varchar(50) DEFAULT NULL,
+  `indirizzo_domicilio` varchar(100) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
+  `comune_domicilio` varchar(100) DEFAULT NULL,
+  `provincia_domicilio` varchar(50) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -806,8 +820,8 @@ CREATE TABLE IF NOT EXISTS `RESPONSABILE_QUESTIONARIO` (
 -- Dump dei dati per la tabella `RESPONSABILE_QUESTIONARIO`
 --
 
-INSERT INTO `RESPONSABILE_QUESTIONARIO` (`nome`, `cognome`, `codice_fiscale`, `email`) VALUES
-('Arturo', 'De Santis', 'DSTRTR58L32A333B', 'ads@live.it');
+INSERT INTO `RESPONSABILE_QUESTIONARIO` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Arturo', 'De Santis', 'DSTRTR58L32A333B', 'ads@live.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
