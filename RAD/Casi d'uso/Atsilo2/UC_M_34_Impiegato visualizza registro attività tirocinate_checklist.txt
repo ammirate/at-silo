@@ -12,13 +12,13 @@
 [x] Le specializzazioni sono segnalate secondo le convenzioni previste
 [x] Entry e exit condition sono specificate
 [x] Il flusso degli eventi è correttamente numerato
-[x] È presente una didascalia che riporti l'indentificativo del caso d'uso e una breve descrizione
+
 
 LINEE GUIDA SOSTANZIALI
 [x] Il nome è coerente con il contenuto
 [x] Il flusso degli eventi è coerente con i requisiti fuzionali
 [x] I requisiti qualitativi sono misurabili
-[x] È sempre chiaro l'utente che esegue le azioni elencate (non viene MAI usato il termine "l'utente")
+[x] È sempre chiaro l'utente che esegue le azioni elencate
 [x] Si fa sempre riferimento al sistema con il termine "il sistema"
 [x] Il caso d'uso realizza almeno un requisito funzionale
 [x] Per ogni form/modulo, sono specificati tutti i campi in esso contenuti
@@ -32,4 +32,3 @@ LINEE GUIDA SOSTANZIALI
 [x] L'esecuzione del caso d'uso deve essere possibile tramite gli oggetti individuati nel relativo dizionario dei dati
 
 ALTRE ANNOTAZIONI:
-nel punto uno del flusso degli eventi si fa riferimento ad una lista 1, il numero è un errore di battitura?
