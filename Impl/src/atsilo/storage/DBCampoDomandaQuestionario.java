@@ -80,7 +80,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     private static List<String> creaChiave(){
         
-        List<String> res=  Arrays.asList("domanda_questionario","risposta_questionario");// da chiarire
+        List<String> res=  Arrays.asList("domanda_questionario");
         
         return Collections.unmodifiableList(res);
     }
@@ -92,8 +92,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
         CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
-        temp.setIdDomandaQuestionario(res.getString("domanda_questionario"));
-        temp.setIdRispostaQuestionario(res.getString("risposta_questionario"));
+        temp.setIdDomandaQuestionario(res.getInt("domanda_questionario"));
+        temp.setIdRispostaQuestionario(res.getInt("risposta_questionario"));
         temp.setTipo(res.getString("tipo"));
         temp.setDescrizione(res.getString("descrizione"));
         temp.setValore(res.getString("valore"));
@@ -106,19 +106,20 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      * @return lista di campi domanda oppure null
      * @throws SQLException
      */
-    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String idDomanda) throws SQLException{
+    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(int idDomanda) throws SQLException{
         
         List<CampoDomandaQuestionario> l=new ArrayList<CampoDomandaQuestionario>();
-        CampoDomandaQuestionario c=new CampoDomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-        tabella.setParam(stmt, 1, "id", idDomanda);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE domanda_questionario = ?");
+        tabella.setParam(stmt, 1, "domanda_questionario", idDomanda);
         ResultSet res = stmt.executeQuery();
         
         while(res.next()){
-            c.setIdDomandaQuestionario(res.getString("domanda_questionario"));
-            c.setIdRispostaQuestionario(res.getString("risposta_questionario"));
+            CampoDomandaQuestionario c=new CampoDomandaQuestionario();
+            
+            c.setIdDomandaQuestionario(res.getInt("domanda_questionario"));
+            c.setIdRispostaQuestionario(res.getInt("risposta_questionario"));
             c.setTipo(res.getString("tipo"));
             c.setDescrizione(res.getString("descrizione"));
             c.setValore(res.getString("valore"));   
@@ -129,6 +130,5 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     }
     
 }
-    
 
-  
+
