@@ -168,7 +168,29 @@ public class DBRispostaQuestionario extends DBBeans {
         
     }
     
-
+    public List<RispostaQuestionario> getRisposteGenitore(String CFgenitore) throws SQLException{        
+        List<RispostaQuestionario> l=new ArrayList <RispostaQuestionario>();
+        RispostaQuestionario r=new RispostaQuestionario();
+        
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
+                " WHERE genitore = ?");
+        tabella.setParam(stmt, 1,"genitore", CFgenitore);
+        ResultSet res = stmt.executeQuery();
+        
+        while (res.next()){
+            
+            r.setId(res.getInt("id"));
+            r.setValore(res.getString("valore"));
+            r.setCFgenitore(res.getString("genitore"));
+            r.setIdDomanda(res.getInt("domanda"));
+            
+            l.add(r);
+        }
+        res.close();
+        return l;
+        
+    }
+   
     
 }
 
