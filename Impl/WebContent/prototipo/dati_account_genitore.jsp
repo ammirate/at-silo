@@ -1,25 +1,26 @@
 <%@ include file="atsilo_files/header.jsp" %>
 <%@ include file="atsilo_files/modifica_dati_account.jsp" %>
-<script type="text/javascript">
-function rimuoviAttributi(slf){
-	
 
-	
-	document.getElementById("modifica_account").setAttribute("action","http://localhost:8080/Atsilo/ServletModificaDatiAccount");
-	//var f = document.forms[0];
-	
-	//var n = f.elements.length;
-	  
-	 // for(var i = 0; i < n; i++){
-	//	  f.
-//}
-	 
-	 document.getElementById("username").removeAttribute("readonly");
+<script type="text/javascript">
+function risettaAttributi(slf){
+	 document.getElementById("modifica_account").setAttribute("action","http://localhost:8080/Atsilo/ServletModificaDatiAccount");
+	 document.getElementById("password").removeAttribute("readonly");
+	 document.getElementById("indirizzo_email").removeAttribute("readonly");
 	 document.getElementById("bottone_submit").setAttribute("value","Salva");
 	 slf.onclick=null;
 	 return false;
 }
-</script>			 
+</script>	
+<%
+	if ((request.getParameter("successo")) != null) {
+		if (request.getParameter("successo").equals("ok")) {
+			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+		}
+		else {
+			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+		}
+	}
+%>		 
 
  
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -54,8 +55,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
           </tr>
           <tr> 
         	<td>Indirizzo email</td>
-       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email" value="<%=email %>" readonly="readonly"   />
-       	 	  </td>
+       	 	<td><input name="indirizzo_email" type="text" id="indirizzo_email" value="<%=email %>" readonly="readonly"   /> </td>
           </tr>
           <tr> 
         	<td>Profilo di appartenenza</td>
@@ -67,7 +67,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
             <td><strong>N.B. All'indirizzo di posta elettronica verr&agrave; inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
           <tr> 
         	<td></td>
-       	 	<td><input type="submit" name="bottone_submit" id="bottone_submit" value="Modifica" onClick="return rimuoviAttributi(this)"/>
+       	 	<td><input type="submit" name="bottone_submit" id="bottone_submit" value="Modifica" onClick="return risettaAttributi(this)"/>
                 <input type="reset" name="reset" value="Annulla" />
             </td>
           </tr>

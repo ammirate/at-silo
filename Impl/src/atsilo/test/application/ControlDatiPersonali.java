@@ -75,11 +75,12 @@ public class ControlDatiPersonali {
          
     }
     
-    public Utente getUtenteFromUsername(String cf){
+    public Utente getUtenteFromUsername(String username){
         Utente u=new Utente();
-        u.setCodiceFiscale(cf);
+        //ricerca utente per username
+        u.setCodiceFiscale("codiceFiscaleDiPRova");
         u.setCognome("Cognome");
-        u.setEmail("email");
+        u.setEmail("emailDiProva");
         u.setTelefono("telefono");
         return u ;
         
@@ -208,37 +209,34 @@ public class ControlDatiPersonali {
     
  
     /**
-     * Inserisce genitore
+     * Inserisce o modifica i dati di un genitore tranne codiceFiscale
      * @param genitore da inserire
      * @return 
      * @throws DBConnectionException 
      * @throws GenitoreException
      */
-    public void inserisciGenitore(Date dataNascita, String nome, String cognome,
+    //Modfiicare aggiungendo altri campi
+    public boolean setDatiGenitore(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
-            String telefono, String residenza, String tipo, List<Bambino> figli,
-            List<Questionario> questionariCompilati) throws GenitoreException, DBConnectionException{
-        Database db = new Database();
-        DBGenitore g = new DBGenitore(db);
-        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
-                telefono, residenza, tipo, figli, questionariCompilati);
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, List<Bambino> figli,
+            List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
+            String rapportiAteneoSalerno, String rapportiComuneFisciano,
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza) throws GenitoreException, DBConnectionException{
         
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            
-            if(!g.inserisci(genitore))
-                throw new GenitoreException("Inserimento fallito");
-        }
-        finally{
-            db.chiudiConnessione();
-        }
+        Genitore genitore = new Genitore(dataNascita, cognome, cognome, codiceFiscale, email, comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano, statusLavorativo, scadenzaContratto, categoriaAppartenenza);
+        return true;
+   
     }
     
     /**
-     * 
-     * @param cf
-     * @return
+     * Crea un nuovo utente associandolo al genitore con quel cf
+     * @param cf codice fiscale
+     * @return true se proceduara andata a buon fine
+     *         false altrimenti
      */
     public boolean createUtente(String cf){
         return true;
@@ -355,4 +353,7 @@ public class ControlDatiPersonali {
     public static ControlDatiPersonali getIstance(){
         return INSTANCE;
     }
+
+
+    
 }
