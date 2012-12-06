@@ -118,4 +118,16 @@ public class DBPersonaleAsilo extends DBBeans {
         }
         return p;
     }
+
+    /**
+     * Mi serve questo metodo per il controlLogin by Parisi
+     * @param codiceFiscale
+     * @return
+     */
+    public Object ricercaPersonaleAsiloPerCF(String codiceFiscale) {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+
+   
 }
