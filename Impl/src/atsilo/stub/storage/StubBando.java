@@ -52,13 +52,13 @@ public class StubBando {
     }
 
 
-    public boolean modificaPostiDisponibili( int postiDisponibili)
+    public boolean modificaPostiDisponibili( int postiDisponibili)throws SQLException
     {
         bando.setPostiDisponibili(postiDisponibili);
         return true;
     }
     public boolean modificaintervalli (String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
-            String dataFinePresentazioneRinuncia, String dataFineRinuncia)
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia)throws SQLException
     {
 
         bando.setDataInizioBando(dataInizioBando);
