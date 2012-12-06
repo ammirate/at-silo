@@ -5,7 +5,10 @@ import atsilo.entity.Evento;
 import atsilo.entity.PersonaleAsilo;
 
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
 /*
  *-----------------------------------------------------------------
@@ -23,40 +26,95 @@ import java.util.List;
 
 public class DBEvento extends DBBeans {
     
+    
+    /**
+     * Costruttore
+     * @param db
+     */
     public DBEvento(Database db){
         super("Evento",db);
     }
     
-    public boolean inserisciEventoNelDatabase(Evento e){
-        return false;
-    }
     
+    
+    
+    /**
+     * inserisce una lista di CC ad un evento
+     * @param e è l'evento in cui inserire CC
+     * @param cc è la lista di invitati all'evento
+     * @return true se l'operazione è avvenuta correttemente, false altrimenti
+     */
     public boolean inserisciCCEvento(Evento e, List<String> cc){
         return false;
     }
     
-    public Evento rimuoviEvento(Evento e){
-        return e;
-    }
+
     
-    public boolean setData(Evento e, Date data){
-        return false;
-    }
-    
+    /**
+     * ricerca un evento per nome
+     * @param nome è il nome dell'evento
+     * @return l'evento trovato, se esiste
+     */
     public Evento ricercaEventoNome(String nome){
-        Evento e;
-        return e;
-    }
-    public List<Evento> ricercaEventoData(Date data){
-        Evento e;
-        return e;
-    }
-    public EventPlanner ricercaEventPlannerEvento(Evento e){
-        EventPlanner ep;
-        return ep;
+        return null;
     }
     
+    
+    /**
+     * ricerca tutti gli eventi in una data
+     * @param data è la data interessata
+     * @return una lista di eventi che si svolgeranno nella data inserita
+     */
+    public List<Evento> ricercaEventoData(Date data){
+        return null;
+    }
+    
+    
+    
+    /**
+     * ricerca l'organizzatore dell'evento
+     * @param e è l'evento per cui ricercare l'organizzatore
+     * @return l'EventPlanner che ha creato l'evento
+     */
+    public EventPlanner ricercaEventPlannerEvento(Evento e){
+        return null;
+    }
+    
+    
+    
+    /**
+     * ricerca tutti gli eventi creati da un EventPlanner
+     * @param p è l'organizzatore dell'evento
+     * @return una lista di eventi organizzati da EventPlanner
+     */
     public List<Evento> ricercaEventoPerPersonale(PersonaleAsilo p){
+        return null;
+    }
+
+    /**
+     * @see atsilo.storage.DBBeans#getMappingFields()
+     */
+    @Override
+    protected Map getMappingFields() {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+
+    /**
+     * @see atsilo.storage.DBBeans#getKeyFields()
+     */
+    @Override
+    protected List getKeyFields() {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+
+    /**
+     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     */
+    @Override
+    protected Object creaBean(ResultSet r) throws SQLException {
+        // TODO Scheletro generato automaticamente
         return null;
     }
     
