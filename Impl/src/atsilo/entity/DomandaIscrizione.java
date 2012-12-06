@@ -23,7 +23,7 @@ public class DomandaIscrizione {
     private Date dataPresentazione;
     private int id;
     private int punteggio;
-    private String posizione;
+    private int posizione;
     private String statoDomanda;
     private String certificatoMalattie;
     private String certificatoVaccinazioni;
@@ -80,7 +80,7 @@ public class DomandaIscrizione {
      * @param isee è fissato
      */
     public DomandaIscrizione(Date dataPresentazione, int iD, int punteggio,
-            String posizione, Genitore genitore, Bambino bambino, String statoDomanda,
+           int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
             String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
@@ -162,7 +162,7 @@ public class DomandaIscrizione {
      * Metodo che prende il campo posizione
      * @return posizione il paramentro inserito
      */
-    public String getPosizione() {
+    public int getPosizione() {
             return posizione;
     }
 
@@ -170,7 +170,7 @@ public class DomandaIscrizione {
      * Metodo che setta il campo posizione
      * @param posizione il parametro fissato
      */
-    public void setPosizione(String posizione) {
+    public void setPosizione(int posizione) {
             this.posizione = posizione;
     }
 
