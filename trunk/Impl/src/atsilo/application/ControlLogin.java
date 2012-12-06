@@ -40,7 +40,6 @@ public class ControlLogin {
     private StubPsicopedagogo dbPsicopedagogo;
     private StubResponsabileQuestionario dbResponsabileQuestionario;
     private StubEducatoreDidattico dbEducatoreDidattico;
-    private StubEventPlanner dbEventPlanner;
     private StubTirocinante dbTirocinante;
     
     
@@ -77,7 +76,6 @@ public class ControlLogin {
             dbPsicopedagogo = new StubPsicopedagogo(db);
             dbResponsabileQuestionario = new StubResponsabileQuestionario(db);
             dbEducatoreDidattico = new StubEducatoreDidattico(db);
-            dbEventPlanner = new StubEventPlanner(db);
             dbTirocinante = new StubTirocinante(db);
             
             Account account = new Account();
@@ -129,15 +127,6 @@ public class ControlLogin {
                             if ((dbEducatoreDidattico
                                     .ricercaEducatoreDidatticoPerCf(account
                                             .getOwner().getCodiceFiscale())) != null)
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else if (tipo.compareTo("event_planner") == 0)
-                            if ((dbEventPlanner
-                                    .ricercaEventPlannerPerCF(account
-                                            .getOwner().getCodiceFiscale())) != null)
-                                
                                 return account;
                             else
                                 throw new LoginException(
