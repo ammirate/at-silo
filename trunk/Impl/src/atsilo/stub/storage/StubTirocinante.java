@@ -16,6 +16,10 @@
 
 package atsilo.stub.storage;
 
+import java.sql.SQLException;
+
+import atsilo.storage.Database;
+
 /**
  * Classe StubTirocinante
  * <Descrizione classe>
@@ -24,6 +28,22 @@ package atsilo.stub.storage;
  * 
  */
 public class StubTirocinante {
+
+    /**
+     * @param db
+     */
+    public StubTirocinante(Database db) {
+        // TODO Scheletro di costruttore autogenerato
+    }
+
+    /**
+     * @param codiceFiscale
+     * @return
+     */
+    public Object ricercaTirocinantePerCF(String codiceFiscale) throws SQLException{
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
     //Logger
     /*
      * private static final java.util.Logger LOG
