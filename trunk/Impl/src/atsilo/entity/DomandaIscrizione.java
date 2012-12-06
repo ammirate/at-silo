@@ -14,7 +14,7 @@ import java.sql.Date;
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
  * REVISION
- * Andrea Micco, 5/12/2012
+ * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -53,6 +53,12 @@ public class DomandaIscrizione {
     private Bambino bambino;
     
     /**
+     * La variabile servizio avrà il valore della variabile di Servizio
+     * La variabile Servizio è nulla c'è bisogno di una lettura della classe Servizioo
+     */
+    private Servizio servizio;
+    
+    /**
      * Costruttore vuoto
      */
     public DomandaIscrizione() {
@@ -78,6 +84,7 @@ public class DomandaIscrizione {
      * @param affidoEsclusivo è fissato
      * @param altriComponentiDisabili è fissato
      * @param isee è fissato
+     * @param servizio è fissato dopo la lettura
      */
     public DomandaIscrizione(Date dataPresentazione, int iD, int punteggio,
            int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
@@ -85,7 +92,7 @@ public class DomandaIscrizione {
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-            String condizioniCalcoloPunteggio, float isee) {
+            String condizioniCalcoloPunteggio, float isee, Servizio servizio) {
         super();
         this.dataPresentazione = dataPresentazione;
         this.id = iD;
@@ -108,6 +115,7 @@ public class DomandaIscrizione {
         this.altriComponentiDisabili = altriComponentiDisabili;
         this.condizioniCalcoloPunteggio = condizioniCalcoloPunteggio;
         this.isee = isee;
+        this.servizio = servizio;
     }
     
     /**
@@ -444,5 +452,21 @@ public class DomandaIscrizione {
      */
     public void setIsee(float isee) {
             this.isee = isee;
+    }
+    
+    /**
+     * Metodo che setta il parametro letto dalla classe Servizio
+     * @param servizio è settato dopo la lettura
+     */
+    public void setServizio(Servizio servizio) {
+        this.servizio = servizio;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe Servizio
+     * @return servizio parametro preso dalla lettura
+     */
+    public Servizio getServizio() {
+        return servizio;
     }
 }
