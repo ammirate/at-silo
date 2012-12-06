@@ -30,6 +30,11 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
      */
     private List<RichiestaTirocinante> listaRichiestaTirocinante;
     
+    /**
+     * La variabile listaRegistroTirocinante è nulla c'è bisogno di una lettura della classe RegistroTirocinante
+     */
+    private List<RegistroTirocinante> listaRegistroTirocinante;
+    
     
     /**
      * Costruttore vuoto
@@ -56,6 +61,7 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
                provinciaDomicilio);
         this.categoriaAppartenenza = categoriaAppartenenza;
         this.listaRichiestaTirocinante = null;
+        this.listaRegistroTirocinante = null;
     }
 
     /**
@@ -88,5 +94,21 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
      */
     public List<RichiestaTirocinante> getListaRichiestaTirocinante() {
         return listaRichiestaTirocinante;
+    }
+    
+    /**
+     * Metodo che setta il parametro letto dalla classe RegistroTirocinante
+     * @param listaRegistroTirocinante è settato dopo la lettura
+     */
+    public void setListaRegistroTirocinante(List<RegistroTirocinante> listaRegistroTirocinante) {
+        this.listaRegistroTirocinante = listaRegistroTirocinante;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe RegistroTirocinante
+     * @return listaRegistroTirocinante preso dalla lettura
+     */
+    public List<RegistroTirocinante> getListaRegistroTirocinante() {
+        return listaRegistroTirocinante;
     }
 }
