@@ -7,7 +7,6 @@ import java.util.List;
 
 import test.storage.StubCampoDomandaQuestionario;
 import test.storage.StubDomandaQuestionario;
-import test.storage.StubGenitore;
 import test.storage.StubQuestionario;
 import test.storage.StubRispostaQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
@@ -25,6 +24,7 @@ import atsilo.storage.DBGenitore;
 import atsilo.storage.DBQuestionario;
 import atsilo.storage.DBRispostaQuestionario;
 import atsilo.storage.Database;
+import atsilo.stub.application.StubGenitore;
 
 /**
  * Class that control and manages a questionnaire

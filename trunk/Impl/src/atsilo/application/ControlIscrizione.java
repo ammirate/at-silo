@@ -4,12 +4,12 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import test.storage.StubAccount;
-import test.storage.StubBambino;
-import test.storage.StubDomandaIscrizione;
-import test.storage.StubGenitore;
-import test.storage.StubUtente;
+
+
+
 import atsilo.entity.Account;
 import atsilo.entity.Assenza;
 import atsilo.entity.Bambino;
@@ -22,8 +22,14 @@ import atsilo.exception.BambinoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
+import atsilo.exception.InserimentoDatiException;
 import atsilo.exception.UtenteException;
 import atsilo.storage.Database;
+import atsilo.stub.application.StubAccount;
+import atsilo.stub.application.StubBambino;
+import atsilo.stub.application.StubDomandaIscrizione;
+import atsilo.stub.application.StubGenitore;
+import atsilo.stub.application.StubUtente;
 
 
 /*
@@ -52,13 +58,39 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws UtenteException
      * @throws AccountException
+     * @throws InserimentoDatiException 
      */
     Boolean creaAccount(String cf, String username, Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
-            String telefono, String residenza) throws AccountException, DBConnectionException, UtenteException{
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio) throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException{
         Database db = new Database();
         StubAccount stub = new StubAccount(db); 
         StubUtente stub2 = new StubUtente(db);
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(cf.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+        
+        //controllo sulla data di Nascita da inserire
+        if((dataNascita.getMonth() > 12) || (dataNascita.getMonth() < 1) || (dataNascita.getDay() > 31) || 
+                (dataNascita.getDay() < 28)) 
+            throw new InserimentoDatiException("La data inserita non è valida");
+        
+        //controllo sulla mail
+        Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
+        Matcher m = p.matcher(email);
+        boolean matchFound = m.matches();
+        if (!matchFound)
+            throw new InserimentoDatiException("La mail inserita non è valida");
+        
+        //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
+        if((capDomicilio < 10000 || capDomicilio > 99999) || (capResidenza < 10000 || capResidenza > 99999))
+        
+ 
         if(stub2.ricercaUtente(cf) != null)
             throw new AccountException("L'utente esite già");
         //Generazione della password
@@ -68,8 +100,10 @@ public class ControlIscrizione {
         String psw = "" + password;
         
         //Credo che in questa prima fase vengano messi tutti i dati relativi all'entità utente 
-        Utente utente = new Utente(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
-                telefono, residenza);
+        Utente utente = new Utente(dataNascita, nome, cognome, codiceFiscale, email,
+                comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, 
+                comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio,
+                comuneDomicilio, provinciaDomicilio);
         
         Account account = new Account(username, psw, utente);
         
@@ -84,6 +118,22 @@ public class ControlIscrizione {
         finally{
             db.chiudiConnessione();
         }
+        return true;
+    }
+    
+    
+    /**
+     * Modifica i dati di un account , SE VIENE PASSATO NULL ad un valore quest'ultimo non viene aggiornato e rimane con il vecchio valore
+     * @param username username da modifica
+     * @param password password da modificare
+     * @param email email da modificare
+     * @param profilo_appartenenza profilo di appartenenza da modificare (valido solo per i genitori)
+     * @return true un caso di modifica effettuata
+     *         false 
+     */
+    boolean updateAccount(String username,String password,String email,String profilo_appartenenza){
+       // TODO
+        //si attende sapere il parametro di ricerca dell'account da modificare
         return true;
     }
     
@@ -146,13 +196,19 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws BambinoException
      */
-    boolean inserisciIscritto(String nome, Date dataNascita, String categoriaAppartenenza,
-            String indirizzo, int classe, String cognome, Genitore genitore,
-            String codiceFiscale, List<Assenza> assenze) throws BambinoException, DBConnectionException{
+    boolean inserisciIscritto(Date dataNascita, String nome, String cognome,
+            String codiceFiscale,  String comuneNascita,
+            String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) throws BambinoException, DBConnectionException{
         Database db = new Database();
         StubBambino stub = new StubBambino(db); 
-        Bambino bambino = new Bambino(nome, dataNascita, categoriaAppartenenza, indirizzo, classe, cognome, 
-                genitore, codiceFiscale, assenze);
+        Bambino bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
+                cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza,
+                provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
+                provinciaDomicilio, categoriaAppartenenza, classe, genitore, assenze);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -176,11 +232,19 @@ public class ControlIscrizione {
      * @throws DomandaIscrizioneException
      */
     public boolean inserisciDomandaIscrizione(String dataPresentazione, int iD, int punteggio,
-            String posizione, Genitore genitore, Bambino bambino) throws DomandaIscrizioneException, DBConnectionException{
+            String posizione, Genitore genitore, Bambino bambino, String statoDomanda,
+            String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
+            boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
+            boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
+            boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
+            String condizioniCalcoloPunteggio, float isee) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db); 
         DomandaIscrizione domandaIscrizione = new DomandaIscrizione(dataPresentazione, iD, punteggio,
-                posizione, genitore, bambino);
+                posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
+                certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
+                genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
+                condizioniCalcoloPunteggio, isee);
         //DBDomandaIscrizione di = new DBDomandaIscrizione(db);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -265,13 +329,23 @@ public class ControlIscrizione {
      */
     public boolean inserisciGenitore(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
-            String telefono, String residenza, String tipo, List<Bambino> figli,
-            List<Questionario> questionariCompilati) throws GenitoreException, DBConnectionException{
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, List<Bambino> figli,
+            List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
+            String rapportiAteneoSalerno, String rapportiComuneFisciano,
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza) throws GenitoreException, DBConnectionException{
         Database db = new Database();
         StubGenitore stub = new StubGenitore(db);
         //DBGenitore g = new DBGenitore(db);
-        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
-                telefono, residenza, tipo, figli, questionariCompilati);
+        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, 
+                comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, 
+                capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio,
+                capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, 
+                dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano,
+                statusLavorativo, scadenzaContratto, categoriaAppartenenza);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");

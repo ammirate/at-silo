@@ -3,41 +3,42 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: Utente.java
+ * FILE: StubAccount.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Elisa, 01/dic/2012
+ * Elisa, 04/dic/2012
  * REVISION
  * <nome revisore>, <data revisione>
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.stub.application;
+
 
 import atsilo.entity.Account;
-import atsilo.entity.Utente;
+import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
 
-public class StubUtente
+public class StubAccount
 {
-   Utente u;
+    Account a;
     Database database;
     
-    public StubUtente(Database db){
+    public StubAccount(Database db){
         database=db;
-        u = new Utente();
+        a = new Account();
     }
         
-    public Utente ricercaUtente(String cf){
-        Utente utente1=new Utente();
-        return utente1;
-    }
-    
-    public boolean inserisci(Utente u){
+    public boolean inserisci(Account a){
         return true;
     }
     
+    public Account ricercaAccount(String codiceFiscale){
+        return a;
+    }
+
+
 
 }

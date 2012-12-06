@@ -1,14 +1,14 @@
 package atsilo.application;
 
 
-import java.sql.Date;
-import java.sql.SQLException;
+
 import java.util.List;
 
-import test.storage.*;
+
 import atsilo.entity.*;
 import atsilo.exception.*;
 import atsilo.storage.*;
+import atsilo.stub.application.StubBambino;
 
 /*
  *-----------------------------------------------------------------
@@ -49,8 +49,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniIdonei();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -73,8 +73,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniNonIdonei();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -98,8 +98,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniRichiestaPrimoAnno();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -123,8 +123,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniAnniPrecedenti();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -148,8 +148,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniFineCicloScolastico();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -173,8 +173,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniRinunciatari();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -197,8 +197,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniServizioMensa();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -222,8 +222,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniServizioPartTime();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -247,8 +247,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniServizioFullTime();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{
@@ -272,8 +272,8 @@ public class ControlIscritti {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniServizioDisabili();
-            if(b == null)
-                throw new BambinoException("Bambini non trovato");
+            if(b.isEmpty())
+                throw new BambinoException("Lista vuota");
             return b;
         }
         finally{

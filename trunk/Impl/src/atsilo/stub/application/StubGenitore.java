@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.stub.application;
 
 import java.util.ArrayList;
 import java.util.Date;
