@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -23,22 +24,27 @@ import atsilo.entity.Utente;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Antonio Cesarano, Ferdinando Di Palma, 17/11/2012 (non responsabili)
+ * Angelo Scafuro,Fabio Napoli 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
-
+/**
+ * Crea un gestore per il bean Questionario
+ */
 public class DBPersonaleAsilo extends DBBeans {
-    
+   
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
-    
-    public DBPersonaleAsilo(Database db)
-    {
-        super("PersonaleAsilo",db);
+    /**
+     * Costruttore con parametri
+     * @param db database con relativa connessione
+     */ 
+    public DBPersonaleAsilo(Database db){
+        super("personale_asilo",db);
     }
 
     /**
-     * @return
+     * Metodo che crea la chiave della tabella
+     * @return Collection.unmodiableList
      */
     private static List<String> creaChiave() {
         List<String> res=  Arrays.asList("codice_fiscale");
@@ -46,7 +52,9 @@ public class DBPersonaleAsilo extends DBBeans {
     }
 
     /**
-     * @return
+     * metodo che associa all' attributo del database (nome attributo db) 
+     * il rispettivo valore(nome attributo classe)
+     * @return mappa <chiave,valore>
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
@@ -58,31 +66,22 @@ public class DBPersonaleAsilo extends DBBeans {
         res.put("email", "email");
         res.put("comune_nascita", "comuneNascita");
         res.put("telefono", "telefono");
-        res.put("residenza", "residenza");
+        res.put("cittadinanza", "cittadinanza");
+        res.put("indirizzo_residenza", "indirizzoResidenza");
+        res.put("numero_civico_residenza", "numeroCivicoResidenza");
+        res.put("cap_residenza", "capResidenza");
+        res.put("comune_residenza", "comuneResidenza");
+        res.put("provincia_residenza", "provinciaResidenza");
+        res.put("indirizzo_domicilio", "indirizzoDomicilio");
+        res.put("numero_civico_domicilio", "numCivicoDomicilio");
+        res.put("cap_domicilio", "capDomicilio");
+        res.put("comune_domicilio", "comuneDomicilio");
+        res.put("provincia_domicilio", "provinciaDomicilio");
+       
         return res;
     }
 
-    public PersonaleAsilo CercaPerCategoria(String categoria) throws SQLException 
-        {
-        PersonaleAsilo p=null;
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE categoria_appartenenza =" + categoria);
-        if(r.next())
-        {
-            p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
-            p.setNome(r.getString("nome"));
-            p.setCognome(r.getString("cognome"));
-            p.setCodiceFiscale(r.getString("codice_fiscale"));
-            p.setDataNascita(r.getDate("data_nascita"));
-            p.setResidenza(r.getString("residenza"));
-            p.setEmail(r.getString("email"));
-            p.setComuneNascita(r.getString("comune_nascita"));
-            p.setTelefono(r.getString("telefono")); 
-        }
-        r.close();
-        return p;
-        }
-
-    /**
+   /**
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     @Override
@@ -101,32 +100,84 @@ public class DBPersonaleAsilo extends DBBeans {
     /**
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
      */
-    @Override
+    
     protected PersonaleAsilo creaBean(ResultSet r) throws SQLException {
-        PersonaleAsilo p=null;
-        if(r.next())
+        PersonaleAsilo p=new PersonaleAsilo();
         {
-            p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
+            p.setDataNascita(r.getDate("data_di_nascita"));
             p.setNome(r.getString("nome"));
             p.setCognome(r.getString("cognome"));
             p.setCodiceFiscale(r.getString("codice_fiscale"));
-            p.setDataNascita(r.getDate("data_nascita"));
-            p.setResidenza(r.getString("residenza"));
             p.setEmail(r.getString("email"));
-            p.setComuneNascita(r.getString("comune_nascita"));
-            p.setTelefono(r.getString("telefono"));   
+            p.setComuneNascita(r.getString("comune_di_nascita"));
+            p.setTelefono(r.getString("telefono"));
+            p.setCittadinanza(r.getString("cittadinanza"));
+            p.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            p.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            p.setCapResidenza(r.getString("cap_residenza"));
+            p.setComuneResidenza(r.getString("comune_residenza"));
+            p.setProvinciaResidenza(r.getString("provincia_residenza"));
+            p.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            p.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            p.setCapDomicilio(r.getString("cap_domicilio"));
+            p.setComuneDomicilio(r.getString("comune_domicilio"));
+            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+                      
         }
         return p;
     }
 
     /**
-     * Mi serve questo metodo per il controlLogin by Parisi
-     * @param codiceFiscale
-     * @return
+     * Dato un codice fiscale restituisce il PersonaleAsilo corrispondente
+     * @param codiceFiscale codice fiscale del PersonaleAsilo
+     * @return PersonaleAsilo o null
+     * @throws SQLException 
      */
-    public Object ricercaPersonaleAsiloPerCF(String codiceFiscale) {
-        // TODO Scheletro generato automaticamente
-        return null;
+    public PersonaleAsilo getPersonaleAsiloPerCF(String codiceFiscale) 
+            throws SQLException {
+        PersonaleAsilo p = new PersonaleAsilo();
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+                + tabella.getNomeTabella() + " WHERE codice_fiscale= ?");
+        tabella.setParam(stmt, 1, "codice_fiscale", codiceFiscale);
+        ResultSet r = stmt.executeQuery();
+        
+        if(r.next()){
+            p.setDataNascita(r.getDate("data_di_nascita"));
+            p.setNome(r.getString("nome"));
+            p.setCognome(r.getString("cognome"));
+            p.setCodiceFiscale(r.getString("codice_fiscale"));
+            p.setEmail(r.getString("email"));
+            p.setComuneNascita(r.getString("comune_di_nascita"));
+            p.setTelefono(r.getString("telefono"));
+            p.setCittadinanza(r.getString("cittadinanza"));
+            p.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            p.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            p.setCapResidenza(r.getString("cap_residenza"));
+            p.setComuneResidenza(r.getString("comune_residenza"));
+            p.setProvinciaResidenza(r.getString("provincia_residenza"));
+            p.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            p.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            p.setCapDomicilio(r.getString("cap_domicilio"));
+            p.setComuneDomicilio(r.getString("comune_domicilio"));
+            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));   
+        }
+        r.close();
+        return p;
+    }
+    
+    public String getCategoriaAppartenenzaPersonaleAsilo(String codiceFiscale) throws SQLException{
+        
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+                + tabella.getNomeTabella() + " WHERE codice_fiscale= ?");
+        tabella.setParam(stmt, 1, "codice_fiscale", codiceFiscale);
+        ResultSet r = stmt.executeQuery();
+        PersonaleAsilo p = new PersonaleAsilo();
+        String s=null;
+        if(r.next()){
+        s = r.getString("categoria_appartenenza");
+                }
+       return s;
+       
     }
 
    
