@@ -98,7 +98,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(r.getInt("id"));
             ris.setValore(r.getString("valore"));
             ris.setCFgenitore(r.getString("genitore"));
-            ris.setIdDomanda(r.getString("domanda"));           
+            ris.setIdDomanda(r.getInt("domanda"));           
         }
         return ris;
     }
@@ -114,7 +114,6 @@ public class DBRispostaQuestionario extends DBBeans {
      */
     public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario> ();
-        RispostaQuestionario ris=new RispostaQuestionario();
         
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
@@ -124,11 +123,12 @@ public class DBRispostaQuestionario extends DBBeans {
         ResultSet res = stmt.executeQuery();
         
         while (res.next()){
-            
+            RispostaQuestionario ris=new RispostaQuestionario();
+
             ris.setId(res.getInt("id"));
             ris.setValore(res.getString("valore"));
             ris.setCFgenitore(res.getString("genitore"));
-            ris.setIdDomanda(res.getString("domanda"));
+            ris.setIdDomanda(res.getInt("domanda"));
             
             l.add(ris);
         }
@@ -159,7 +159,7 @@ public class DBRispostaQuestionario extends DBBeans {
             r.setId(res.getInt("id"));
             r.setValore(res.getString("valore"));
             r.setCFgenitore(res.getString("genitore"));
-            r.setIdDomanda(res.getString("domanda"));
+            r.setIdDomanda(res.getInt("domanda"));
             
             l.add(r);
         }
