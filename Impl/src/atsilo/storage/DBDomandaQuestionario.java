@@ -168,11 +168,12 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
      * @return boolean 
      * @throws SQLException
      */
-    public boolean isDomandaInQuestionario(int idDomanda) throws SQLException{
+    public boolean isDomandaInQuestionario(int idDomanda,int idQuestionario) throws SQLException{
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella()  + " WHERE id = ?");
+                "SELECT * FROM " + tabella.getNomeTabella()  + " WHERE id = ? AND questionario = ?");
         tabella.setParam(stmt, 1, "id", idDomanda);
+        tabella.setParam(stmt, 2, "questionario", idQuestionario);
 
         ResultSet res = stmt.executeQuery();
         

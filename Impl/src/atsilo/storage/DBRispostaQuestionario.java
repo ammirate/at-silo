@@ -98,7 +98,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(r.getInt("id"));
             ris.setValore(r.getString("valore"));
             ris.setCFgenitore(r.getString("genitore"));
-            ris.setIdDomanda(r.getInt("domanda"));           
+            ris.setIdDomanda(r.getString("domanda"));           
         }
         return ris;
     }
@@ -107,19 +107,19 @@ public class DBRispostaQuestionario extends DBBeans {
     /**
      * Restituisce la lista delle risposte data da un
      * determinato genitore ad una determinata domanda di un questionario
-     * @param idGenitore genitore di cui vogliamo le risposte
+     * @param g genitore di cui vogliamo le risposte
      * @param idDomanda id della domanda di cui vogliamo verificare le risposte
      * @return lista di RisposteQuestionario o null
      * @throws SQLException
      */
-    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String idGenitore, int idDomanda) throws SQLException{
+    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String g,String idDomanda) throws SQLException{
         List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario> ();
         RispostaQuestionario ris=new RispostaQuestionario();
         
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
                 " WHERE genitore = ? AND domanda = ?");
-        tabella.setParam(stmt, 1,"genitore", idGenitore);
+        tabella.setParam(stmt, 1,"genitore", g);
         tabella.setParam(stmt, 2, "domanda", idDomanda);
         ResultSet res = stmt.executeQuery();
         
@@ -128,7 +128,7 @@ public class DBRispostaQuestionario extends DBBeans {
             ris.setId(res.getInt("id"));
             ris.setValore(res.getString("valore"));
             ris.setCFgenitore(res.getString("genitore"));
-            ris.setIdDomanda(res.getInt("domanda"));
+            ris.setIdDomanda(res.getString("domanda"));
             
             l.add(ris);
         }
@@ -159,7 +159,7 @@ public class DBRispostaQuestionario extends DBBeans {
             r.setId(res.getInt("id"));
             r.setValore(res.getString("valore"));
             r.setCFgenitore(res.getString("genitore"));
-            r.setIdDomanda(res.getInt("domanda"));
+            r.setIdDomanda(res.getString("domanda"));
             
             l.add(r);
         }
@@ -167,24 +167,6 @@ public class DBRispostaQuestionario extends DBBeans {
         return l;
         
     }
-    
-    
-    
-    /**
-     * Restituisce la lista delle risposte date da un genitore
-     * @param CFgenitore è il codice fiscale del genitore
-     * @return lista di RisposteQuestionario o null
-     * @throws SQLException
-     */    
-    public List<RispostaQuestionario> getRisposteGenitore(String CFgenitore) throws SQLException{        
-        List<RispostaQuestionario> l=new ArrayList <RispostaQuestionario>();
-        RispostaQuestionario r=new RispostaQuestionario();
-        
-        //
-        return null;
-        
-    }
-    
     
 
     
