@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 06 dic, 2012 at 10:27 AM
+-- Generato il: 06 dic, 2012 at 03:57 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -264,8 +264,8 @@ CREATE TABLE IF NOT EXISTS `COMPILA` (
 CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
   `id` int(11) NOT NULL,
   `data_presentazione` date DEFAULT NULL,
-  `punteggio` varchar(50) DEFAULT NULL,
-  `posizione` varchar(50) DEFAULT NULL,
+  `punteggio` int(50) DEFAULT NULL,
+  `posizione` int(50) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
   `servizio` int(11) DEFAULT NULL,
   `bambino` varchar(50) DEFAULT NULL,
@@ -295,15 +295,15 @@ CREATE TABLE IF NOT EXISTS `DOMANDA_ISCRIZIONE` (
 --
 
 INSERT INTO `DOMANDA_ISCRIZIONE` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`) VALUES
-(1, '2012-07-19', '94/100', '1', 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(2, '2012-08-13', '93/100', '2', 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(3, '2012-08-13', '94/100', '3', 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(4, '2012-11-01', '91/100', '4', 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(5, '2012-06-12', '90/100', '5', 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(6, '2012-09-25', '88/100', '6', 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(7, '2012-08-01', '85/100', '7', 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(8, '2012-08-28', '79/100', '8', 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
-(9, '2012-08-28', '79/100', '9', 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0);
+(1, '2012-07-19', 94, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(2, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(3, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(4, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(5, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(6, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(7, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(8, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0),
+(9, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0);
 
 -- --------------------------------------------------------
 
