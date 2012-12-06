@@ -47,6 +47,12 @@ public class Attivita {
      * @attribute registro La variabile è nulla c'è bisogno di una lettura della classe Registro
      */
     private Registro registro;
+    
+    /**
+     * La variabile nota avrà il valore della variabile di Nota 
+     * @attribute nota La variabile è nulla c'è bisogno di una lettura della classe Nota
+     */
+    private Nota nota;
 
 
     /**
@@ -73,6 +79,7 @@ public class Attivita {
         this.titolo = titolo;
         this.registro = registro;
         this.path = path;
+        this.nota = null;
     }
     
     /**
@@ -169,5 +176,21 @@ public class Attivita {
      */
     public Registro getRegistro() {
         return registro;
+    }
+    
+    /**
+     * Metodo che setta il parametro letto dalla classe Nota
+     * @param nota è settato dopo la lettura
+     */    
+    public void setNota(Nota nota) {
+        this.nota = nota;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe Nota
+     * @return nota parametro preso dalla lettura
+     */
+    public Nota getNota() {
+        return nota;
     }
 }
