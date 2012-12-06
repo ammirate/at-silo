@@ -16,11 +16,11 @@
     <td>Cognome</td>
     <td> <input name="cognome" type="text" id="cognome" value="" size="25" maxlength="25" readonly="readonly"></td>
     <td>Nome</td>
-    <td> <input name="nome" type="text" id="nome" value="" size="25" maxlength="50" readonly="readonly"></td>
+    <td> <input name="nome_richiedente" type="text" id="nome_richiedente" value="" size="25" maxlength="50" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Nato/a a</td>
-    <td><input name="natoa" type="text" id="natoa" value=""  size="25" maxlength="25" readonly="readonly"></td>
+    <td><input name="data_nascita_richiedente" type="text" id="data_nascita_richiedente" value=""  size="25" maxlength="25" readonly="readonly"></td>
     <td>Nato il</td>
     <td><input name="natoil" type="text" id="natoil" value=""  size="25" maxlength="10" readonly="readonly"></td>
   </tr>
