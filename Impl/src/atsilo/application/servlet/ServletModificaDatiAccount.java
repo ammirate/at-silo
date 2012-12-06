@@ -39,7 +39,7 @@ public class ServletModificaDatiAccount extends HttpServlet {
      * @see HttpServlet#HttpServlet()
      */
     public ServletModificaDatiAccount() {
-        cdp=cdp.getIstance();
+        cdp=ControlDatiPersonali.getIstance();
     }
 
 	/**

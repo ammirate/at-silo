@@ -1,8 +1,8 @@
-<form>
+<form id="dati_bando" name="dati_bando" action="" method="post" >
 <table border="0" cellspacing="0">
   <tr>
     <td>In qualita' di</td>
-    <td><select id="qualita" name="qualita">
+    <td><select id="rapporto_parentela" name="rapporto_parentela">
     <option value="Seleziona">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>
@@ -26,7 +26,7 @@
   </tr>
   <tr>
     <td>Codice Fiscale</td>
-    <td><input id="codice_fiscale" value="" name="codice_fiscale"  size="25" maxlength="16" type="text" /></td>
+    <td><input id="codice_fiscale_genitore_richiedente" value="" name="codice_fiscale_genitore_richiedente"  size="25" maxlength="16" type="text" /></td>
     <td>Cittadinanza</td>
     <td><input id="cittadinanza" value="" name="cittadinanza"  size="25" maxlength="25" type="text" /></td>
   </tr>
@@ -99,11 +99,12 @@
     <td>&nbsp;</td>
     <td colspan="3">&nbsp;</td>
   </tr>
-   <tr>
-     <td colspan="4"><input value="Salva Dati" name="salva_dati" type="submit" />
-     <input value="Modifica Dati" name="modifica_dati" type="submit" />
-     </td>
+   <td></td>
+       	 	<td><input type="submit" name="bottone_submit" id="bottone_submit" value="Modifica" onClick="return settaAttributi(this)"/>
+                <input type="reset" name="reset" value="Annulla" />
+            </td>
+          </tr>
     
-  </tr>
+
 </table>
 </form>
