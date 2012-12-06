@@ -1,5 +1,7 @@
 package atsilo.entity;
 
+import java.util.List;
+
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
@@ -50,9 +52,9 @@ public class Attivita {
     
     /**
      * La variabile nota avrà il valore della variabile di Nota 
-     * @attribute nota La variabile è nulla c'è bisogno di una lettura della classe Nota
+     * @attribute listaNota La variabile è nulla c'è bisogno di una lettura della classe List<Nota>
      */
-    private Nota nota;
+    private List<Nota> listaNota;
 
 
     /**
@@ -79,7 +81,7 @@ public class Attivita {
         this.titolo = titolo;
         this.registro = registro;
         this.path = path;
-        this.nota = null;
+        this.listaNota = null;
     }
     
     /**
@@ -179,18 +181,18 @@ public class Attivita {
     }
     
     /**
-     * Metodo che setta il parametro letto dalla classe Nota
-     * @param nota è settato dopo la lettura
+     * Metodo che setta il parametro letto dalla classe List<Nota>
+     * @param listaNota è settato dopo la lettura
      */    
-    public void setNota(Nota nota) {
-        this.nota = nota;
+    public void setListaNota(List<Nota> listaNota) {
+        this.listaNota = listaNota;
     }
 
     /**
-     * Metodo che prende il parametro letto dalla classe Nota
-     * @return nota parametro preso dalla lettura
+     * Metodo che prende il parametro letto dalla classe List<Nota>
+     * @return listaNota parametro preso dalla lettura
      */
-    public Nota getNota() {
-        return nota;
+    public List<Nota> getListaNota() {
+        return listaNota;
     }
 }
