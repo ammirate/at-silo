@@ -16,19 +16,30 @@ import java.sql.Date;
  * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
+import java.util.List;
 
 public class PersonaleAsilo extends Utente implements EventPlanner{
-    
+    /**
+     * @param categoriaAppartenenza è settato dopo la lettura 
+     */
     private String categoriaAppartenenza;
+    
+    
+    /**
+     * La variabile listaRichiestaTirocinante è nulla c'è bisogno di una lettura della classe RichiestaTirocinante
+     */
+    private List<RichiestaTirocinante> listaRichiestaTirocinante;
+    
     
     /**
      * Costruttore vuoto
      */
     public PersonaleAsilo(){}
     
-    /**
-     * @param categoriaAppartenenza è settato dopo la lettura 
-     */
+ 
+    
+
+    
     public PersonaleAsilo(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
@@ -44,6 +55,7 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
                numeroCivicoDomicilio, capDomicilio,comuneDomicilio,
                provinciaDomicilio);
         this.categoriaAppartenenza = categoriaAppartenenza;
+        this.listaRichiestaTirocinante = null;
     }
 
     /**
@@ -60,5 +72,21 @@ public class PersonaleAsilo extends Utente implements EventPlanner{
      */
     public String getCategoriaAppartenenza() {
         return categoriaAppartenenza;
+    }
+    
+    /**
+     * Metodo che setta il parametro letto dalla classe RichiestaTirocinante
+     * @param listaRichiestaTirocinante è settato dopo la lettura
+     */
+    public void setListaRichiestaTirocinante(List<RichiestaTirocinante> listaRichiestaTirocinante) {
+        this.listaRichiestaTirocinante = listaRichiestaTirocinante;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe RichiestaTirocinante
+     * @return listaRichiestaTirocinante preso dalla lettura
+     */
+    public List<RichiestaTirocinante> getListaRichiestaTirocinante() {
+        return listaRichiestaTirocinante;
     }
 }
