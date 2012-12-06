@@ -53,7 +53,7 @@ public class Questionario {
      * @param pathname il paramentro è fissato
      */
     public Questionario( String descrizione,String flag_rinuncia, 
-            String nome, int id, Date periodo_inizio,Date periodo_fine, String pathname) {
+            String nome, int id, Date periodo_inizio,Date periodo_fine) {
         super();
         this.periodo_fine = periodo_fine;
         this.descrizione = descrizione;
