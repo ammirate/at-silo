@@ -26,10 +26,10 @@ import atsilo.exception.DBConnectionException;
 import atsilo.storage.*;
 
 
+
 /**
  * 
  * @author Marko
- * 
  */
 public class ControlLogin {
     private static ControlLogin control;
