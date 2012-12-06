@@ -25,6 +25,7 @@ import java.util.List;
 import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
+import atsilo.entity.RispostaQuestionario;
 import atsilo.storage.DBCompilaQuestionario;
 import atsilo.storage.DBDomandaQuestionario;
 import atsilo.storage.DBQuestionario;
@@ -140,6 +141,21 @@ public class TestDBQuestionario {
      boolean f=dbd.isDomandaInQuestionario(6, 1);
      System.out.println(f);
       */
+      
+      
+      //__testClasseDBRispostaQuerstionario___metodo___getRispostaGenitore
+      DBRispostaQuestionario dbr=new DBRispostaQuestionario(db);
+      List<RispostaQuestionario> l=dbr.getRisposteGenitore("CVLMRA69A23B333C");
+      //for(int i=0;i<l.size();i++)
+      //    System.out.println("Risposta Codice _ "+l.get(i).getId());
+      //test_____getRisposteDomandaSpecifica
+     // l=dbr.getRisposteDomandaSpecifica(5);
+     
+     // for(int i=0;i<l.size();i++)
+        //  System.out.println("Risposta Codice _ "+l.get(i).getValore());
+      l=dbr.getRisposteQuestionarioPerGenitore("CVLMRA69A23B333C", 1);
+      for(int i=0;i<l.size();i++)
+          System.out.println("Risposta valore _ "+l.get(i).getValore());
     db.chiudiConnessione();
     }
    
