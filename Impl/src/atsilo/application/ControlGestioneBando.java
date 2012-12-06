@@ -21,11 +21,8 @@ import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
 import atsilo.stub.storage.StubBando;
-
-import java.sql.Date;
+import atsilo.stub.storage.StubDomandaIscrizione;
 import java.sql.SQLException;
-import java.util.Iterator;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 
 /*
@@ -62,16 +59,15 @@ public class ControlGestioneBando {
      * @return
      * @throws DBConnectionException
      * @throws BandoException
+     * @throws SQLException
      */
     public boolean inserisciPunteggio(DomandaIscrizione iscrizione,
-            int punteggio) throws DBConnectionException, BandoException {
+            int punteggio) throws DBConnectionException, BandoException,
+            SQLException {
         Database db = new Database();
-        
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
-        
-        // Quindi, si possono creare tutti i gestori di tabelle necessari
         try {
             dbBando = new StubBando(db);
             dbDomandaIscrizione = new StubDomandaIscrizione(db);
@@ -89,103 +85,59 @@ public class ControlGestioneBando {
             dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             return true;
         } finally {
-            /*
-             * Alla fine dell'interazione, prima di uscire dal metodo, bisogna
-             * chiudere la connessione.
-             */
             db.chiudiConnessione();
         }
     }
     
-    /**
-     * metodo che inserisci l'intervallo del bando
-     * 
-     * @param inizio
-     * @param fine
-     * @return
-     * @throws DBConnectionException
-     * @throws BandoException
-     */
-    public boolean inserisciIntervalloBando(String inizio, String fine)
-            throws DBConnectionException, BandoException {
-        // Come prima cosa, bisogna creare un'istanza di database e aprire una
-        // connessione
-        Database db = new Database();
-        if (!db.apriConnessione()) {
-            throw new DBConnectionException("Connessione Fallita");
-        }
-        
-        // Quindi, si possono creare tutti i gestori di tabelle necessari
-        try {
-            dbBando = new StubBando(db);
-            dbDomandaIscrizione = new StubDomandaIscrizione(db);
-            Bando bando = new Bando();
-            bando.setDataFine(fine);
-            bando.setDataInizio(inizio);
-            if (dbBando.inserisci(bando))
-                return true;
-            else
-                return false;
-        } finally {
-            /*
-             * Alla fine dell'interazione, prima di uscire dal metodo, bisogna
-             * chiudere la connessione.
-             */
-            db.chiudiConnessione();
-        }
-    }
+    public boolean inserisciBando(int id, String dataInizioBando,
+            String dataFineBando, String dataInizioPresentazioneRinuncia,
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia,
+            int postiDisponibili, String path) throws DBConnectionException {
     
-    /**
-     * modifica un bando
-     * 
-     * @param bando
-     * @param inizio
-     * @param fine
-     * @return
-     * @throws DBConnectionException
-     * @throws BandoException
-     */
-    public boolean modificaBando(Bando bando, String inizio, String fine)
-            throws DBConnectionException, BandoException {
         Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
-        
         try {
-            Bando bandoDaModificare = new Bando();
+            
+            Bando bando = new Bando(id, dataInizioBando, dataFineBando,
+                    dataInizioPresentazioneRinuncia,
+                    dataFinePresentazioneRinuncia, dataFineRinuncia,
+                    postiDisponibili, path);
             try {
-                bandoDaModificare = dbBando.cercaBandoPerId(bando.getiD());
+                dbBando.inserisciBando(bando);
             } catch (SQLException e) {
                 throw new DBConnectionException("connessione fallita");
             }
-            if (bandoDaModificare == null)
-                throw new BandoException("bando non trovato");
-            return true;
+            return false;
         } finally {
             db.chiudiConnessione();
         }
     }
+    public boolean modificaBando(int id, String dataInizioBando,
+            String dataFineBando, String dataInizioPresentazioneRinuncia,
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia,
+            int postiDisponibili, String path) throws DBConnectionException {
     
-    public Bando getBando() throws DBConnectionException {
         Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
-        
         try {
-            StubBando dbBando = new StubBando(db);
-            Iterable<Bando> bandi = dbBando.getAll();
-            Bando bando = null;
-            if (bandi.iterator().hasNext())
-                bando = bandi.iterator().next();
             
-            return bando;
+            Bando bando = new Bando(id, dataInizioBando, dataFineBando,
+                    dataInizioPresentazioneRinuncia,
+                    dataFinePresentazioneRinuncia, dataFineRinuncia,
+                    postiDisponibili, path);
+            try {
+                dbBando.inserisciBando(bando);
+            } catch (SQLException e) {
+                throw new DBConnectionException("connessione fallita");
+            }
+            return false;
         } finally {
             db.chiudiConnessione();
         }
-        
-        
     }
     
     public static ControlGestioneBando getIstance() {
