@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 05 dic, 2012 at 11:22 PM
+-- Generato il: 06 dic, 2012 at 10:27 AM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -126,13 +126,13 @@ CREATE TABLE IF NOT EXISTS `BAMBINO` (
   `classe` int(11) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
   `comune_di_nascita` varchar(50) DEFAULT NULL,
-  `numero_civico_residenza` int(4) DEFAULT NULL,
-  `cap_residenza` int(5) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
   `comune_residenza` int(100) DEFAULT NULL,
   `provincia_residenza` int(50) DEFAULT NULL,
   `indirizzo_domicilio` int(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(4) DEFAULT NULL,
-  `cap_domicilio` int(5) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
   `comune_domicilio` int(100) DEFAULT NULL,
   `provincia_domicilio` int(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
@@ -348,14 +348,14 @@ CREATE TABLE IF NOT EXISTS `EDUCATORE_DIDATTICO` (
   `email` varchar(50) DEFAULT NULL,
   `comune_di_nascita` varchar(50) DEFAULT NULL,
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
-  `numero_civico_residenza` int(4) DEFAULT NULL,
-  `cap_residenza` int(5) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
   `comune_residenza` varchar(100) DEFAULT NULL,
   `provincia_residenza` varchar(50) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
   `indirizzo_domicilio` varchar(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(4) DEFAULT NULL,
-  `cap_domicilio` int(5) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
@@ -366,9 +366,9 @@ CREATE TABLE IF NOT EXISTS `EDUCATORE_DIDATTICO` (
 --
 
 INSERT INTO `EDUCATORE_DIDATTICO` (`nome`, `cognome`, `codice_fiscale`, `titolo_di_studi`, `data_di_nascita`, `telefono`, `email`, `comune_di_nascita`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `cittadinanza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`) VALUES
-('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, 0, '', ''),
-('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, 0, '', ''),
-('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 0, 0, '', '');
+('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', ''),
+('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', ''),
+('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', '');
 
 -- --------------------------------------------------------
 
@@ -481,13 +481,13 @@ CREATE TABLE IF NOT EXISTS `GENITORE` (
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
   `comune_residenza` varchar(100) DEFAULT NULL,
-  `numero_civico_residenza` int(4) DEFAULT NULL,
-  `cap_residenza` int(5) DEFAULT NULL,
+  `numero_civico_residenza` int(10) DEFAULT NULL,
+  `cap_residenza` int(10) DEFAULT NULL,
   `provincia_residenza` varchar(50) DEFAULT NULL,
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `indirizzo_domicilio` varchar(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(4) DEFAULT NULL,
-  `cap_domicilio` int(5) DEFAULT NULL,
+  `numero_civico_domicilio` int(10) DEFAULT NULL,
+  `cap_domicilio` int(10) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   `dipendente_presso` varchar(200) DEFAULT NULL,
   `rapporti_ateneo_salerno` text,
@@ -626,16 +626,16 @@ CREATE TABLE IF NOT EXISTS `PERSONALE_ASILO` (
   `categoria_appartenenza` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `data_di_nascita` date DEFAULT NULL,
-  `comune_di_nascita` int(50) DEFAULT NULL,
+  `comune_di_nascita` varchar(50) DEFAULT NULL,
   `telefono` varchar(50) DEFAULT NULL,
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
-  `numero_civico_residenza` int(4) DEFAULT NULL,
-  `cap_residenza` int(5) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
   `comune_residenza` varchar(100) DEFAULT NULL,
   `provincia_residenza` varchar(50) DEFAULT NULL,
   `indirizzo_domicilio` varchar(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(4) DEFAULT NULL,
-  `cap_domicilio` int(5) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
@@ -716,16 +716,16 @@ CREATE TABLE IF NOT EXISTS `PSICO_PEDAGOGO` (
   `comune_di_nascita` varchar(50) DEFAULT NULL,
   `indirizzo_residenza` varchar(50) DEFAULT NULL,
   `numero_classi` varchar(50) DEFAULT NULL,
-  `numero_civico_residenza` int(4) DEFAULT NULL,
-  `cap_residenza` int(5) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
   `comune_residenza` int(100) DEFAULT NULL,
   `provincia_residenza` int(50) DEFAULT NULL,
   `indirizzo_domicilio` int(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(4) DEFAULT NULL,
-  `cap_domicilio` int(5) DEFAULT NULL,
-  `comune_domicilio` int(50) DEFAULT NULL,
-  `provincia_domicilio` int(100) DEFAULT NULL,
-  `cittadinanza` int(50) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
+  `comune_domicilio` varchar(50) DEFAULT NULL,
+  `provincia_domicilio` varchar(100) DEFAULT NULL,
+  `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -939,15 +939,15 @@ CREATE TABLE IF NOT EXISTS `TIROCINANTE` (
   `ore_lavoro` int(11) DEFAULT NULL,
   `personale_asilo` varchar(50) DEFAULT NULL,
   `stato` varchar(50) DEFAULT NULL,
-  `matricola` int(50) DEFAULT NULL,
+  `matricola` varchar(50) DEFAULT NULL,
   `giudizio_finale` text,
-  `numero_civico_residenza` int(4) DEFAULT NULL,
-  `cap_residenza` int(5) DEFAULT NULL,
+  `numero_civico_residenza` varchar(10) DEFAULT NULL,
+  `cap_residenza` varchar(10) DEFAULT NULL,
   `comune_residenza` varchar(100) DEFAULT NULL,
   `provincia_residenza` varchar(50) DEFAULT NULL,
   `indirizzo_domicilio` varchar(100) DEFAULT NULL,
-  `numero_civico_domicilio` int(4) DEFAULT NULL,
-  `cap_domicilio` int(5) DEFAULT NULL,
+  `numero_civico_domicilio` varchar(10) DEFAULT NULL,
+  `cap_domicilio` varchar(10) DEFAULT NULL,
   `comune_domicilio` varchar(50) DEFAULT NULL,
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   `cittadinanza` varchar(50) DEFAULT NULL,
