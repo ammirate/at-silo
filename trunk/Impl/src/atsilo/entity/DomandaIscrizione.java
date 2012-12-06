@@ -1,5 +1,7 @@
 package atsilo.entity;
 
+import java.sql.Date;
+
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
@@ -18,7 +20,7 @@ package atsilo.entity;
 
 public class DomandaIscrizione {
     
-    private String dataPresentazione;
+    private Date dataPresentazione;
     private int id;
     private int punteggio;
     private String posizione;
@@ -77,7 +79,7 @@ public class DomandaIscrizione {
      * @param altriComponentiDisabili è fissato
      * @param isee è fissato
      */
-    public DomandaIscrizione(String dataPresentazione, int iD, int punteggio,
+    public DomandaIscrizione(Date dataPresentazione, int iD, int punteggio,
             String posizione, Genitore genitore, Bambino bambino, String statoDomanda,
             String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
@@ -112,7 +114,7 @@ public class DomandaIscrizione {
      * Metodo che prende il campo DataPresentazione
      * @return DataPresentazione il paramentro inserito
      */
-    public String getDataPresentazione() {
+    public Date getDataPresentazione() {
             return dataPresentazione;
     }
 
@@ -120,7 +122,7 @@ public class DomandaIscrizione {
      * Metodo che setta il campo DataPresentazione
      * @param dataPresentazione il parametro fissato
      */
-    public void setDataPresentazione(String dataPresentazione) {
+    public void setDataPresentazione(Date dataPresentazione) {
             this.dataPresentazione = dataPresentazione;
     }
 
