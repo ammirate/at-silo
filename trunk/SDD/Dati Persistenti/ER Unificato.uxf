@@ -286,6 +286,7 @@ fg=red
 -Titolo
 -Descrizione
 -Categoria
+-Path
 bg=gray
 fg=red
 </panel_attributes>
