@@ -202,12 +202,36 @@ public class DBBando extends DBBeans<Bando> {
     /**
      * dato che il bando è uno solo invece di fare i metodi di ricerca fammi un
      * solo metodo che mi restituisce un bando con il record completo
-     * 
+     *  e i metodi di modifica dei campi dei record 
      * @return
      */
     public Bando getBAndo() {
         return null;
     }
+    /**
+     * 
+     * @param dataInizioBando
+     * @param dataFineBando
+     * @param dataInizioPresentazioneRinuncia
+     * @param dataFinePresentazioneRinuncia
+     * @param dataFineRinuncia
+     * @return
+     */
     
+    public boolean modificaintervalli (String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia)
+    {
+        return true;
+    }
+    /**
+     * 
+     * @param postiDisponibili
+     * @return
+     * 
+     */
+    public boolean modificaPostiDisponibili( int postiDisponibili)
+    {
+        return true;
+    }
     
 }

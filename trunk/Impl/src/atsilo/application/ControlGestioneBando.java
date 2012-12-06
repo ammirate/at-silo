@@ -94,7 +94,7 @@ public class ControlGestioneBando {
             String dataFineBando, String dataInizioPresentazioneRinuncia,
             String dataFinePresentazioneRinuncia, String dataFineRinuncia,
             int postiDisponibili, String path) throws DBConnectionException {
-    
+        
         Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
@@ -116,27 +116,44 @@ public class ControlGestioneBando {
         }
     }
     
-    public boolean modificaBando(int id, String dataInizioBando,
+    public boolean modificaintervalli(String dataInizioBando,
             String dataFineBando, String dataInizioPresentazioneRinuncia,
-            String dataFinePresentazioneRinuncia, String dataFineRinuncia,
-            int postiDisponibili, String path) throws DBConnectionException {
-    
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia)
+            throws DBConnectionException {
+        
         Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            
-            Bando bando = new Bando(id, dataInizioBando, dataFineBando,
-                    dataInizioPresentazioneRinuncia,
-                    dataFinePresentazioneRinuncia, dataFineRinuncia,
-                    postiDisponibili, path);
             try {
-                dbBando.replace(dbBando.getBando(),bando);
-            } catch (SQLException e) {
-                throw new DBConnectionException("connessione fallita");
+                dbBando.modificaintervalli(dataInizioBando, dataFineBando,
+                        dataInizioPresentazioneRinuncia, 
+                        dataFinePresentazioneRinuncia, dataFineRinuncia);
+            } catch (SQLException e) 
+            {
+                throw new DBConnectionException("Connessione Fallita");
             }
-            return false;
+            return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    public boolean modificaPostiDisponibili(int postiDisponibili)
+            throws DBConnectionException {
+        
+        Database db = new Database();
+        if (!db.apriConnessione()) {
+            throw new DBConnectionException("Connessione Fallita");
+        }
+        try {
+            try {
+                dbBando.modificaPostiDisponibili(postiDisponibili);
+            } catch (SQLException e) 
+            {
+                throw new DBConnectionException("Connessione Fallita");
+            }
+            return true;
         } finally {
             db.chiudiConnessione();
         }
