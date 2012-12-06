@@ -37,7 +37,6 @@ public class DBTirocinante extends DBBeans {
         res.put("ore_lavoro","oreLavoro");
         res.put("ore_totali","oreTotali");
         res.put("personale_asilo","PersonaleAsilo");
-        
         res.put("nome","nome");
         res.put("data_di_nascita","dataNascita");
         res.put("cognome","cognome");
