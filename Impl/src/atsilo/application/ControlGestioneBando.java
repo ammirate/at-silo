@@ -19,6 +19,7 @@ import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
+import atsilo.storage.DBBando;
 import atsilo.storage.Database;
 import atsilo.stub.storage.StubBando;
 import atsilo.stub.storage.StubDomandaIscrizione;
@@ -114,6 +115,7 @@ public class ControlGestioneBando {
             db.chiudiConnessione();
         }
     }
+    
     public boolean modificaBando(int id, String dataInizioBando,
             String dataFineBando, String dataInizioPresentazioneRinuncia,
             String dataFinePresentazioneRinuncia, String dataFineRinuncia,
@@ -130,7 +132,7 @@ public class ControlGestioneBando {
                     dataFinePresentazioneRinuncia, dataFineRinuncia,
                     postiDisponibili, path);
             try {
-                dbBando.inserisciBando(bando);
+                dbBando.replace(dbBando.getBando(),bando);
             } catch (SQLException e) {
                 throw new DBConnectionException("connessione fallita");
             }

@@ -52,24 +52,30 @@ public class StubBando {
     }
 
 
-    public boolean modificaBando(int id, String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
-            String dataFinePresentazioneRinuncia, String dataFineRinuncia, int postiDisponibili,
-            String path)
+    public boolean modificaPostiDisponibili( int postiDisponibili)
     {
-        bando.setiD(id);
+        bando.setPostiDisponibili(postiDisponibili);
+        return true;
+    }
+    public boolean modificaintervalli (String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
+            String dataFinePresentazioneRinuncia, String dataFineRinuncia)
+    {
+
         bando.setDataInizioBando(dataInizioBando);
         bando.setDataFineBando(dataFineBando);
         bando.setDataInizioPresentazioneRinuncia(dataInizioPresentazioneRinuncia);
         bando.setDataFinePresentazioneRinuncia(dataFinePresentazioneRinuncia);
         bando.setDataFineRinuncia(dataFineRinuncia);
-        bando.setPostiDisponibili(postiDisponibili);
-        bando.setPath(path);
         return true;
     }
     /**
      * @param getiD
      * @return
      */
+    public void replace(Bando darimpazziare ,Bando rimpiazzo)
+    {
+        this.bando=rimpiazzo;
+    }
     public Bando getBando() throws SQLException 
     {
         return bando;

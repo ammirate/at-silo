@@ -13,7 +13,7 @@
  * nome revisore, data revisione
  *-----------------------------------------------------------------
  **/
-package application.notificheMail;
+package atsilo.application.notificheMail;
 
 import static org.junit.Assert.*;
 

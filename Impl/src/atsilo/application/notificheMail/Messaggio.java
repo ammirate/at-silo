@@ -3,7 +3,7 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: NotificaLicenziamentoTest.java
+ * FILE: Messaggio.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -12,18 +12,15 @@
  * REVISION
  * nome revisore, data revisione
  *-----------------------------------------------------------------
- **/package application.notificheMail;
-
-import static org.junit.Assert.*;
-
-import org.junit.Test;
+ **/
+package atsilo.application.notificheMail;
 
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: NotificaLicenziamentoTest.java
+ * FILE: Messaggio.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -32,20 +29,7 @@ import org.junit.Test;
  *-----------------------------------------------------------------
  */
 
-public class NotificaLicenziamentoTest {
+public interface Messaggio {
+    void invia()throws Throwable;
     
-    @Test
-    public void test() {
-        fail("Not yet implemented");
-    }
-    //Logger
-    //private static final java.util.Logger LOG = ...
-    
-    //Variabili di istanza
-    
-    
-    //Costruttori
-    
-    
-    //Metodi
 }
