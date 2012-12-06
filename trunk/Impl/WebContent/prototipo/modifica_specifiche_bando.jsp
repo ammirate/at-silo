@@ -50,7 +50,9 @@ include file="atsilo_files/sidebar_direttore.jsp"
        	 	<td>&nbsp;</td>
           </tr>
         	<td></td>
-       	 	<td><input type="submit" name="salva" value="Salva Dati" />       	 	  <input type="submit" name="modifica" value="Modifica dati " /></td>
+       	 	<td><input type="submit" name="salva" value="Salva Dati" />  
+       	 	    <input type="submit" name="modifica" value="Modifica dati " />
+       	   </td>
           </tr>
           
          </table>

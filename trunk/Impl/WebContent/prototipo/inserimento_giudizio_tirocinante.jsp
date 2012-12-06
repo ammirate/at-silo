@@ -9,7 +9,7 @@
 </tr>
 </tbody></table>
 <%@
-include file="atsilo_files/sidebar_impiegato.jsp"
+include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
  %>
  
  
