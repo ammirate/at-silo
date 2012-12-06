@@ -5,14 +5,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import test.storage.StubCampoDomandaQuestionario;
-import test.storage.StubDomandaQuestionario;
-import test.storage.StubQuestionario;
-import test.storage.StubRispostaQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.DomandaQuestionario;
-import atsilo.entity.Genitore;
 import atsilo.entity.Questionario;
 import atsilo.entity.RispostaQuestionario;
 import atsilo.exception.DBConnectionException;
@@ -61,15 +56,27 @@ public class ControlQuestionario {
     public void inserisciQuestionario(Questionario questionario) throws DBConnectionException, QuestionarioException {
         
         Database db = new Database();
-        DBQuestionario storage = new DBQuestionario(db);
+        DBQuestionario storageQ = new DBQuestionario(db);
+        DBDomandaQuestionario storageD = new DBDomandaQuestionario(db);
+        DBCampoDomandaQuestionario storageC = new DBCampoDomandaQuestionario(db);
+        List<DomandaQuestionario> domande = questionario.getDomande();
+        List<CampoDomandaQuestionario> campi;
         
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            if(!storage.inserisci(questionario))
+            if(!storageQ.inserisci(questionario))
                 throw new QuestionarioException("Inserimento fallito");
+            for(DomandaQuestionario d : domande){
+                if(!storageD.inserisci(d))
+                    throw new QuestionarioException("inserimento domanda fallito");
+                    
+                    campi = d.getCampi();
+                    for(CampoDomandaQuestionario c : campi)
+                        storageC.inserisci(c);    
+            }
         }
         finally{
             db.chiudiConnessione();
@@ -320,13 +327,16 @@ public class ControlQuestionario {
         DBQuestionario storage = new DBQuestionario(db);
         DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
         DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+        DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
+        List<DomandaQuestionario> domande;
+        List<RispostaQuestionario> risposte;
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             Questionario toReturn = storage.getQuestionario(idQuestionario);
             //setto le domande del questionario
-            List<DomandaQuestionario> domande = storageDomande.getDomandeQuestionario(idQuestionario);
+            domande = storageDomande.getDomandeQuestionario(idQuestionario);
             toReturn.setDomande(domande);
             
             //setto i campi per ogni domanda
@@ -334,7 +344,21 @@ public class ControlQuestionario {
                 List<CampoDomandaQuestionario> campi = storageCampi.getCampiDomandaQuestionario(d.getId());
                 d.setCampi(campi);
             }
-            //dovrei ancora caricare le risposte delle domande
+            
+            //controllo per il caricamento delle risposte già inserite dal genitore
+            risposte = storageRisposte.getRisposteGenitore(CFgenitore);
+            for(RispostaQuestionario r : risposte){
+                DomandaQuestionario dTemp = storageDomande.getDomanda(r.getIdDomanda());//prendo la domanda a cui fa riferimento la risposta
+                
+                //controllo se la risposta dTemp, appartenente a qualche altro questionario,
+                //corrisponde a qualche domanda all'interno del nostro questionario
+                //in tal caso la risposta a tale domanda sarà la stessa della domanda dTemp
+                for(DomandaQuestionario d : domande)
+                    if(d.getDescrizione().equalsIgnoreCase(dTemp.getDescrizione()))
+                        toReturn.precaricaRispostaAllaDomanda(d, r);
+            }
+                
+            
             return toReturn;
             
         }
@@ -378,7 +402,7 @@ public class ControlQuestionario {
      * @throws DBConnectionException
      * @throws QuestionarioException
      */
-    public void eliminaDomanda(String idDomanda) throws DBConnectionException, QuestionarioException{
+    public void eliminaDomanda(int idDomanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
         
@@ -408,7 +432,7 @@ public class ControlQuestionario {
      * @throws DBConnectionException
      * @throws QuestionarioException
      */
-    public void modificaDomanda(String idVecchiaDomanda, DomandaQuestionario newDomanda) throws DBConnectionException, QuestionarioException{
+    public void modificaDomanda(int idVecchiaDomanda, DomandaQuestionario newDomanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
         
@@ -417,7 +441,7 @@ public class ControlQuestionario {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             try {
-                if(!idVecchiaDomanda.equalsIgnoreCase(newDomanda.getId()) )
+                if(idVecchiaDomanda != newDomanda.getId() )
                     throw new SQLException();
                 storageDomanda.replace(storageDomanda.getDomanda(idVecchiaDomanda), newDomanda);
                 
@@ -466,11 +490,13 @@ public class ControlQuestionario {
     
     
     
+    
+    
     /**
      * Gets the single istance of this class
      * @return a new ControlQuestionario
      */
-    public ControlQuestionario getIstance(){
+    public static ControlQuestionario getIstance(){
         return INSTANCE;
     }
     

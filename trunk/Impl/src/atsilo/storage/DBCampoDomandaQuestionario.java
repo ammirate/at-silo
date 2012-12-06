@@ -127,18 +127,18 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     
     /**
      * Restituisce tutti i campi domanda di una determinata domanda questionario
-     * @param idDomanda id della domanda di cui restituire i campi domanda
+     * @param i id della domanda di cui restituire i campi domanda
      * @return lista di campi domanda oppure null
      * @throws SQLException
      */
-    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String idDomanda) throws SQLException{
+    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(int i) throws SQLException{
         
         List<CampoDomandaQuestionario> l=new ArrayList<CampoDomandaQuestionario>();
         CampoDomandaQuestionario c=new CampoDomandaQuestionario();
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-        tabella.setParam(stmt, 1, "id", idDomanda);
+        tabella.setParam(stmt, 1, "id", i);
         ResultSet res = stmt.executeQuery();
         
         while(res.next()){
