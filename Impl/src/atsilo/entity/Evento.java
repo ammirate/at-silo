@@ -13,6 +13,8 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Cesarano, 13/11/2012 (non responsabile)
+ * REVISION
+ * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -23,7 +25,7 @@ public class Evento {
     private List<String> CC;
     private Date data;
     private String Tipo;
-   // private 
+    private String path;
     
     /**
      * @attribute Data di tipo DATE
@@ -55,10 +57,11 @@ public class Evento {
      * @param data2  il paramentro è fissato
      * @param classi è settato dopo la lettura
      * @param organizzatore è settato dopo la lettura
+     * @param path il parametro è fissato
      */
     public Evento(String descrizione, String nome, List<String> cC, Date data,
             String tipo, Date data2, List<Classe> classi,
-            EventPlanner organizzatore) {
+            EventPlanner organizzatore, String path) {
         super();
         Descrizione = descrizione;
         Nome = nome;
@@ -68,6 +71,7 @@ public class Evento {
         Data = data2;
         this.classi = classi;
         this.organizzatore = organizzatore;
+        this.path = path;
     }
 
     /**
@@ -172,5 +176,13 @@ public class Evento {
 
     public String getTipo() {
         return Tipo;
+    }
+    
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getPath() {
+        return path;
     }
 }
