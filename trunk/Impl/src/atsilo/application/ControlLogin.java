@@ -25,22 +25,22 @@ import atsilo.entity.Utente;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.*;
 
-//TODO inserire l'autore della classe
 
 /**
  * 
- *
+ * @author Marko
+ * 
  */
 public class ControlLogin {
     private static ControlLogin control;
     private DBAccount dbAccount;
-    private DBGenitore dbGenitore; //
-    private DBPersonaleAsilo dbPersonaleAsilo;//
-    private DBPsicopedagogo dbPsicopedagogo;//
-    private DBResponsabileQuestionario dbResponsabileQuestionario;//
-    private DBEducatoreDidattico dbEducatoreDidattico;//
-    private DBEventPlanner dbEventPlanner;//
-    private DBTirocinante dbTirocinante;//
+    private DBGenitore dbGenitore;
+    private DBPersonaleAsilo dbPersonaleAsilo;
+    private DBPsicopedagogo dbPsicopedagogo;
+    private DBResponsabileQuestionario dbResponsabileQuestionario;
+    private DBEducatoreDidattico dbEducatoreDidattico;
+    private DBEventPlanner dbEventPlanner;
+    private DBTirocinante dbTirocinante;
     
     
     private ControlLogin() throws DBConnectionException {
@@ -91,45 +91,60 @@ public class ControlLogin {
                                     .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
-                                throw new LoginException("Username o Password o Tipologia Errata");
-                        else 
-                            if (tipo.compareTo("personale_esilo") == 0)
-                                if ((dbPersonaleAsilo.ricercaPersonaleAsiloPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
-                                    return account;
-                                else
-                                    throw new LoginException("Username o Password o Tipologia Errata");
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else if (tipo.compareTo("personale_esilo") == 0)
+                            if ((dbPersonaleAsilo
+                                    .ricercaPersonaleAsiloPerCF(account
+                                            .getOwner().getCodiceFiscale())) != null)
+                                return account;
                             else
-                                if (tipo.compareTo("psicopedagogo") == 0)
-                                    if ((dbPsicopedagogo.ricercaPsicopedagogoCf(account.getOwner().getCodiceFiscale())) != null)
-                                        return account;
-                                    else
-                                        throw new LoginException("Username o Password o Tipologia Errata");
-                                else
-                                    if (tipo.compareTo("resposabile_questionario") == 0)
-                                        if ((dbResponsabileQuestionario.ricercaResponsabileQuestionarioPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
-                                            return account;
-                                        else
-                                            throw new LoginException("Username o Password o Tipologia Errata");
-                                    else
-                                        if (tipo.compareTo("educatore_didattico") == 0)
-                                            if ((dbEducatoreDidattico.ricercaEducatoreDidatticoPerCf(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
-                                                return account;
-                                            else
-                                                throw new LoginException("Username o Password o Tipologia Errata");
-                                        else
-                                            if (tipo.compareTo("event_planner") == 0)
-                                                if ((dbEventPlanner.ricercaEventPlannerPerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
-                                                    return account;
-                                                else
-                                                    throw new LoginException("Username o Password o Tipologia Errata");
-                                            else
-                                                if (tipo.compareTo("tirocinante") == 0)
-                                                    if ((dbTirocinante.ricercaTirocinantePerCF(account.getOwner().getCodiceFiscale())) != null)// manca metodo CercaPerCF
-                                                        return account;
-                                                    else
-                                                        throw new LoginException("Username o Password o Tipologia Errata");
-                                                else  throw new LoginException("Username o Password o Tipologia Errata");
-                                                    
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else if (tipo.compareTo("psicopedagogo") == 0)
+                            if ((dbPsicopedagogo.ricercaPsicopedagogoCf(account
+                                    .getOwner().getCodiceFiscale())) != null)
+                                return account;
+                            else
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else if (tipo.compareTo("resposabile_questionario") == 0)
+                            if ((dbResponsabileQuestionario
+                                    .ricercaResponsabileQuestionarioPerCF(account
+                                            .getOwner().getCodiceFiscale())) != null)
+                                return account;
+                            else
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else if (tipo.compareTo("educatore_didattico") == 0)
+                            if ((dbEducatoreDidattico
+                                    .ricercaEducatoreDidatticoPerCf(account
+                                            .getOwner().getCodiceFiscale())) != null)
+                                return account;
+                            else
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else if (tipo.compareTo("event_planner") == 0)
+                            if ((dbEventPlanner
+                                    .ricercaEventPlannerPerCF(account
+                                            .getOwner().getCodiceFiscale())) != null)
+                                
+                                return account;
+                            else
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else if (tipo.compareTo("tirocinante") == 0)
+                            if ((dbTirocinante.ricercaTirocinantePerCF(account
+                                    .getOwner().getCodiceFiscale())) != null)
+                                
+                                return account;
+                            else
+                                throw new LoginException(
+                                        "Username o Password o Tipologia Errata");
+                        else
+                            throw new LoginException(
+                                    "Username o Password o Tipologia Errata");
+                        
                         
                     }
                 }
