@@ -57,6 +57,22 @@ public class Assenza {
     public Date getData() {
         return data;
     }
+    
+    /**
+     * Metodo che setta il campo bambino
+     * @param bambino il parametro fissato
+     */
+    public void setBambino(Bambino bambino) {
+        this.bambino = bambino;
+    }
+    
+    /**
+     * Metodo che prende il campo bambino
+     * @return bambino il parametro inserito
+     */
+    public Bambino getBambino() {
+        return bambino;
+    }
 
 
     
