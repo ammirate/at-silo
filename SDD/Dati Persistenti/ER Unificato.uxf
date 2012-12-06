@@ -1318,6 +1318,7 @@ fg=red</panel_attributes>
     </coordinates>
     <panel_attributes>Orario Utente
 --
+-ID
 -Descrizione
 -Data Inizio 
 -Data Fine 
