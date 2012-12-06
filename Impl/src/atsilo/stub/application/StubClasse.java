@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.stub.application;
 
 import atsilo.entity.Classe;
 import atsilo.storage.Database;

@@ -4,11 +4,13 @@ package atsilo.application;
 
 import java.sql.SQLException;
 import java.util.List;
-
-import test.storage.*;
 import atsilo.entity.*;
 import atsilo.exception.*;
 import atsilo.storage.*;
+import atsilo.stub.application.StubBambino;
+import atsilo.stub.application.StubDomandaIscrizione;
+import atsilo.stub.application.StubGenitore;
+import atsilo.stub.application.StubUtente;
 
 /*
  *-----------------------------------------------------------------

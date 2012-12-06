@@ -1,5 +1,5 @@
 
-package test.storage;
+package atsilo.stub.application;
 
 
 import java.sql.SQLException;

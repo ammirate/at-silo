@@ -1,12 +1,12 @@
 package atsilo.test.application;
 
-import test.storage.StubClasse;
 import test.storage.StubRegistro;
 import atsilo.entity.Classe;
 import atsilo.entity.Registro;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.RegistroException;
 import atsilo.storage.Database;
+import atsilo.stub.application.StubClasse;
 
 /*
  *-----------------------------------------------------------------

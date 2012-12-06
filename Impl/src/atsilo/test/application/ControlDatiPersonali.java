@@ -9,6 +9,8 @@ import test.storage.*;
 import atsilo.entity.*;
 import atsilo.exception.*;
 import atsilo.storage.*;
+import atsilo.stub.application.StubDomandaIscrizione;
+import atsilo.stub.application.StubUtente;
 
 /**
  * 
@@ -262,7 +264,7 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws UtenteException
      */
-    public Utente getValoriUtente(Utente utente) throws UtenteException, DBConnectionException{
+    public Utente getValoriUtente(String cf) throws UtenteException, DBConnectionException{
         Database db = new Database();
         StubUtente stub = new StubUtente(db);
         
@@ -270,7 +272,7 @@ public class ControlDatiPersonali {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            Utente u = stub.ricercaUtente(utente);
+            Utente u = stub.ricercaUtente(cf);
             if(u == null)
                 throw new UtenteException("Utente non trovato");
             return u;
