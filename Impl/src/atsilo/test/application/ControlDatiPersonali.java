@@ -69,8 +69,10 @@ public class ControlDatiPersonali {
         genitore.setCodiceFiscale(codiceFiscale);
         genitore.setCognome("CognomeProva");
         genitore.setNome("Nome di prova");
+        genitore.setComuneDomicilio("ConuneDomicilio di prova");
         genitore.setDataNascita(new Date(1970, 05, 20));
-        genitore.setTipo("profilo di appartenenza");
+        genitore.setTipo("personale");
+        //genitore.setRapportiAteneoSalerno("I rapporti con l'ateneo");
         return genitore;
        
         
@@ -132,29 +134,40 @@ public class ControlDatiPersonali {
     }
     
     /**
-     * Inserisce una Domanda di Iscrizione
-     * @param domanda di iscrizione da visualizzare
-     * @return domanda di iscrizione
+     * Il metodo non serve per inviare la domanda di iscriizone ma per inserire i dati della domanda
+     * @param 
+     * @return 
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    //ATTENDO di sapere queli parametri mi verranno passati
-    public void inserisciDomandaIscrizione() throws DomandaIscrizioneException, DBConnectionException{
-        Database db = new Database();
-        DomandaIscrizione domandaIscrizione = new DomandaIscrizione();
-        DBDomandaIscrizione di = new DBDomandaIscrizione(db);
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            
-            if(!di.inserisci(domandaIscrizione))
-                throw new DomandaIscrizioneException("Inserimento fallito");
-        }
-        finally{
-            db.chiudiConnessione();
-        }
+    
+    public boolean inserisciDatiDomandaIscrizione(String codice_fiscale_bambino, String statoDomanda, boolean bambinoDisabile,boolean genitoreInvalido, boolean genitoreSolo,boolean genitoreVedovo,boolean genitoreNubile,boolean genitoreSeparato,boolean figlioNonRiconosciuto,boolean affidoEsclusivo,boolean altriComponentiDisabili,String condizioniCalcoloPunteggio,float isee) throws DomandaIscrizioneException, DBConnectionException{
+        //se invocato la prima volta crea l'entità domanda di iscrizione
+        //controlli che i dati siano corretti
+        //
+        return true;
     }
-     
+    /**
+     * Presenta domanda di iscrizione (PrimoStep) 
+     * @param cf_bambino
+     * @param username_account
+     * @return
+     */
+    public boolean presentaDomandaIscrizionePrimoStep(String cf_bambino,String username_account){
+        //calcolo data e inserimento in iscrizione
+        return false;
+        
+    }
+    /**
+     * Completa la domanda di iscrizione, dopo che il bambino è risultato idoneio in graduatoria
+     * @param cf_bambino
+     * @param username_account
+     * @return
+     */
+    public boolean completaIscrizione(String cf_bambino,String username_account, String certificatoMalattie, String certificatoVaccinazioni,String servizio_scelto,String certificato_privacy){
+        return true;
+        
+    }
     
     /**
      * Elimina una domanda di iscrizione

@@ -6,7 +6,7 @@
  %>
  <%
  	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
-  	Utente utente=cdt.getUtenteFromUsername(username);
+  	Utente utente=cdt.getUtenteFromUsername(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
   	String tipologia_genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale()).getTipo();
  %>
  <!--Script per gestire i form -->
@@ -18,8 +18,7 @@ function settaAttributi(slf){
 	 var n = f.elements.length;
 	 for(var i = 1; i < n; i++)
 		 document.forms[0].elements[i].removeAttribute("readonly");
-	 document.getElementById("codice_fiscale_genitore_richiedente").setAttribute("readonly","readonly");
-	 
+	 document.getElementById("codiceFiscale").setAttribute("readonly","readonly");
 	 slf.onclick=null;
 	 return false;
 	 
@@ -49,7 +48,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
  
-<!--A seconda del tipo di genitore sara'  incluso il file con il form dati adeguato -->
+<!--A seconda del tipo di genitore sara'Â  incluso il file con il form dati adeguato -->
 
 <% if ( tipologia_genitore.equals("personale") ) { %>
   <%@include file="atsilo_files/dati_genitore_richiedente_personale.jsp"%>
@@ -59,9 +58,6 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
    <%@include file="atsilo_files/dati_genitore_richiedente_altro.jsp"%>
    <% } %>
 
-<%@
-include file="atsilo_files/dati_genitore_richiedente_personale.jsp"
- %>
 
 </td><!--Chiudi content -->
 

@@ -1,8 +1,30 @@
+<%@ page import="atsilo.test.application.*,atsilo.entity.*"
+ %>
+ <% 
+	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
+ 	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
+	Genitore genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale());
+ 	String cognome=genitore.getCognome();
+ 	String nome=genitore.getNome();
+ 	String codiceFiscale=genitore.getCodiceFiscale();
+ 	String dataNascita="dataNascita";
+ 	String comuneNascita=genitore.getComuneNascita(); 
+ 	String telefono=genitore.getTelefono();
+ 	String cittadinanza=genitore.getcittadinanza();
+ 	String indirizzoResidenza=genitore.getIndirizzoResidenza();
+ 	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
+ 	String capResidenza=genitore.getCapResidenza();
+ 	String comuneResidenza=genitore.getComuneResidenza();
+ 	String provinciaResidenza=genitore.getProvinciaResidenza();
+ 	String rapportoParentela=genitore.getRapportoParentela();
+
+
+ %>
 <form id="dati_bando" name="dati_bando" action="" method="post" >
-<table border="0" cellspacing="0">
+<table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
-    <td><select id="rapporto_parentela" name="rapporto_parentela">
+    <td><select id="rapportoParentela" name="rapportoParentela">
     <option value="Seleziona">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>
@@ -14,36 +36,36 @@
   </tr>
   <tr>
     <td>Cognome</td>
-    <td> <input id="cognome" value="" name="cognome" size="25" maxlength="25" type="text"></td>
+    <td> <input name="cognome" type="text" id="cognome" value="<%=cognome %>" size="25" maxlength="25" readonly="readonly"></td>
     <td>Nome</td>
-    <td> <input id="nome_richiedente" value="" name="nome_richiedente" size="25" maxlength="50" type="text"></td>
+    <td> <input name="nome" type="text" id="nome" value="<%=nome %>" size="25" maxlength="50" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Nato/a a</td>
-    <td><input id="data_nascita_richiedente" value="" name="data_nascita_richiedente"  size="25" maxlength="25" type="text"></td>
+    <td><input name="comuneNascita" type="text" id="comuneNascita" value="<%=dataNascita %>"  size="25" maxlength="25" readonly="readonly"></td>
     <td>Nato il</td>
-    <td><input id="natoil" value="" name="natoil"  size="25" maxlength="10" type="text"></td>
+    <td><input name="dataNascita" type="text" id="dataNascita" value="<%=dataNascita%>"  size="25" maxlength="10" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Codice Fiscale</td>
-    <td><input id="codice_fiscale_genitore_richiedente" value="" name="codice_fiscale_genitore_richiedente"  size="25" maxlength="16" type="text" /></td>
+    <td><input name="codiceFiscale" type="text" id="codiceFiscale" value="<%=codiceFiscale %>"  size="25" maxlength="16" readonly="readonly" /></td>
     <td>Cittadinanza</td>
-    <td><input id="cittadinanza" value="" name="cittadinanza"  size="25" maxlength="25" type="text" /></td>
+    <td><input name="cittadinanza" type="text" id="cittadinanza" value="<%=cittadinanza %>"  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>Residente a</td>
-    <td><input id="residente_a" value="" name="residente_a"  size="25" maxlength="25" type="text" /></td>
+    <td><input name="comuneResidenza" type="text" id="comuneResidenza" value="<%=comuneResidenza%>"  size="25" maxlength="25" readonly="readonly" /></td>
     <td>Via/Piazza</td>
-    <td><input id="residente_via" value="" name="residente_via"  size="25" maxlength="25" type="text" /></td>
+    <td><input name="indirizzoResidenza" type="text" id="indirizzoResidenza" value="<%=indirizzoResidenza%>"  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>Numero civico</td>
-    <td><input id="residente_numero_civico" value="" name="residente_numero_civico"  size="25" maxlength="5" type="text" /></td>
+    <td><input name="numeroCivicoResidenza" type="text" id="numeroCivicoResidenza" value="<%=numeroCivicoResidenza %>"  size="25" maxlength="5" readonly="readonly" /></td>
     <td>CAP</td>
-    <td><input id="residente_cap" value="" name="residente_cap"  size="5" maxlength="5" type="text" /></td>
+    <td><input name="capResidenza" type="text" id="capResidenza" value="<%=capResidenza %>"  size="5" maxlength="5" readonly="readonly" /></td>
   <tr>
     <td>Provincia</td>
-    <td><input id="residente_provincia" value="" name="residente_provincia"  size="2" maxlength="2" type="text" /></td>
+    <td><input id="provinciaResidenza" value="<%=provinciaResidenza %>" name="provinciaResidenza"  size="2" maxlength="2" type="text" /></td>
    
     <td>&nbsp;</td>
     <td>&nbsp;</td>

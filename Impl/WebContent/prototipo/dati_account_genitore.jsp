@@ -2,7 +2,7 @@
 <%@ include file="atsilo_files/modifica_dati_account.jsp" %>
 
 <script type="text/javascript">
-function risettaAttributi(slf){
+function settaAttributi(slf){
 	 document.getElementById("modifica_account").setAttribute("action","http://localhost:8080/Atsilo/ServletModificaDatiAccount");
 	 document.getElementById("password").removeAttribute("readonly");
 	 document.getElementById("indirizzo_email").removeAttribute("readonly");
@@ -67,7 +67,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
             <td><strong>N.B. All'indirizzo di posta elettronica verr&agrave; inviata la ricevuta dell'iscrizione da stampare e consegnare all'ufficio secondo quando previsto nel bando</strong></td></tr>
           <tr> 
         	<td></td>
-       	 	<td><input type="submit" name="bottone_submit" id="bottone_submit" value="Modifica" onClick="return risettaAttributi(this)"/>
+       	 	<td><input type="submit" name="bottone_submit" id="bottone_submit" value="Modifica" onClick="return settaAttributi(this)"/>
                 <input type="reset" name="reset" value="Annulla" />
             </td>
           </tr>
