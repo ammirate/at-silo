@@ -16,6 +16,7 @@ import java.util.List;
  * Antonio Cesarano, 14/11/2012 (non responsabile)
  * REVISION
  * Andrea Micco, 6/12/2012
+ * Fabio Napoli, 7/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -36,7 +37,7 @@ public class Tirocinante extends Utente{
     /**
      * La variabile personaleAsilo è nulla c'è bisogno di una lettura della classe PersonaleAsilo
      */
-    private PersonaleAsilo personaleAsilo;
+    private String personaleAsilo;
     
     /**
      * La variabile listaContestazione è nulla c'è bisogno di una lettura della classe List<Contestazione>
@@ -67,7 +68,7 @@ public class Tirocinante extends Utente{
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, int oreTotali, int oreLavoro,
-            PersonaleAsilo personaleAsilo, String stato, String matricola,
+            String personaleAsilo, String stato, String matricola,
             String giudizioFinale, String disponibilita, String titoloDiStudi,
             String tutorEsterno) {
         super(dataNascita, nome, cognome,
@@ -126,7 +127,7 @@ public class Tirocinante extends Utente{
      * Metodo che setta il parametro letto dalla classe PersonaleAsilo
      * @param personaleAsilo è settato dopo la lettura
      */
-    public void setPersonaleAsilo(PersonaleAsilo personaleAsilo) {
+    public void setPersonaleAsilo(String personaleAsilo) {
         this.personaleAsilo = personaleAsilo;
     }
 
@@ -134,7 +135,7 @@ public class Tirocinante extends Utente{
      * Metodo che prende il parametro letto dalla classe PersonaleAsilo
      * @return personaleAsilo preso dalla lettura
      */
-    public PersonaleAsilo getPersonaleAsilo() {
+    public String getPersonaleAsilo() {
         return personaleAsilo;
     }
     

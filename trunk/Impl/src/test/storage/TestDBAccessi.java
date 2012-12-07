@@ -19,8 +19,10 @@ package test.storage;
 import java.sql.SQLException;
 
 import atsilo.entity.PersonaleAsilo;
+import atsilo.entity.Tirocinante;
 import atsilo.storage.DBPersonaleAsilo;
 import atsilo.storage.DBQuestionario;
+import atsilo.storage.DBTirocinante;
 import atsilo.storage.Database;
 
 /**
@@ -43,6 +45,7 @@ public class TestDBAccessi {
         
         DBPersonaleAsilo q=new DBPersonaleAsilo(db);
         //___testClasseDBPersonaleAsilo
+       
         //metodo_getPersonaleAsiloPerCf
        /* PersonaleAsilo a=q.getPersonaleAsiloPerCF("MRSVRN90A32B235B");
         System.out.println("Nome : "+a.getCognome());
@@ -51,10 +54,13 @@ public class TestDBAccessi {
         //metodo_getCategoriaAppartenenzaPersonaleAsilo
       /* String s=q.getCategoriaAppartenenzaPersonaleAsilo("MRSVRN90A32B235B");
        System.out.println("Eccoti la cat : "+s);*/
+      /*metodo_getTirocinantePerCf*/
+        
+        DBTirocinante dbt=new DBTirocinante(db);
+        Tirocinante t=dbt.getTirocinantePerCF("MZZCRS91L44X098Y");
+        System.out.println("Tirocinante : ="+t.getCapDomicilio()+t.getTelefono()+t.getEmail());
         db.chiudiConnessione();
-        
-        
-        
+ 
     }
     //Logger
     /*
