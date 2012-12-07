@@ -17,11 +17,16 @@
 package test.storage;
 
 import java.sql.SQLException;
+import java.util.List;
 
+import atsilo.entity.Genitore;
 import atsilo.entity.PersonaleAsilo;
+import atsilo.entity.ResponsabileQuestionario;
 import atsilo.entity.Tirocinante;
+import atsilo.storage.DBGenitore;
 import atsilo.storage.DBPersonaleAsilo;
 import atsilo.storage.DBQuestionario;
+import atsilo.storage.DBResponsabileQuestionario;
 import atsilo.storage.DBTirocinante;
 import atsilo.storage.Database;
 
@@ -56,11 +61,35 @@ public class TestDBAccessi {
        System.out.println("Eccoti la cat : "+s);*/
       /*metodo_getTirocinantePerCf*/
         
-        DBTirocinante dbt=new DBTirocinante(db);
+        /*DBTirocinante dbt=new DBTirocinante(db);
         Tirocinante t=dbt.getTirocinantePerCF("MZZCRS91L44X098Y");
         System.out.println("Tirocinante : ="+t.getCapDomicilio()+t.getTelefono()+t.getEmail());
-        db.chiudiConnessione();
- 
+       */
+        //testClasseDBResponsabileQuestionario_
+        //metodo_getResponsabileQuestionarioPerCF
+        DBResponsabileQuestionario dbrq=new DBResponsabileQuestionario(db);
+        
+      /* ResponsabileQuestionario res=new ResponsabileQuestionario();
+       res= dbrq.getResponsabileQuestionarioPerCF("NPLFBA91D03H703H");
+       System.out.println("Email e altro RESQUEst ="+res.getCognome()+res.getEmail());*/
+      /*___test_classe_DBGenitore
+       * test_metodo_getGenitoriPerCategoriaAppartenenza
+       */
+        DBGenitore dbg=new DBGenitore(db);
+      
+      List<Genitore> g=dbg.getGenitoriPerCategoriaAppartenenza("Miao");
+      
+      for(int i=0;i<g.size();i++){
+          System.out.println("Codice Fiscale : = "+g.get(i).getCodiceFiscale());
+      }
+      //test_metodo_getCategoriaAppartenenza
+      Genitore h=dbg.getGenitorePerCF("DRGSNT81A26B045C");
+      System.out.println("dati genitore ricercato : = "+h.getCategoriaAppartenenza()+h.getEmail()+h.getIndirizzoResidenza()+h.getTipo());
+      
+      String s=dbg.getCategoriaAppartenenzaGenitore("CVLMRA69A23B333C");
+      System.out.println("Cat appartenenza := "+s);
+      db.chiudiConnessione();
+
     }
     //Logger
     /*
