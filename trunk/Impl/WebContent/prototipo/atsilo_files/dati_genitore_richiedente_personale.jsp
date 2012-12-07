@@ -1,14 +1,13 @@
 <%@ page import="atsilo.test.application.*,atsilo.entity.*"
  %>
  <% 
-	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
- 	Utente utente=cdt.getUtenteFromUsername(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
+	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
+ 	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
 	Genitore genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale());
  	String cognome=genitore.getCognome();
- 	String dataNascita="dataNascita";
  	String nome=genitore.getNome();
- 	String cognome=genitore.getCognome();
  	String codiceFiscale=genitore.getCodiceFiscale();
+ 	String dataNascita="dataNascita";
  	String comuneNascita=genitore.getComuneNascita(); 
  	String telefono=genitore.getTelefono();
  	String cittadinanza=genitore.getcittadinanza();
@@ -22,22 +21,17 @@
  	String capDomicilio=genitore.getCapDomicilio();
  	String comuneDomicilio=genitore.getComuneDomicilio();
  	String provinciaDomicilio=genitore.getProvinciaDomicilio();
- 	String dipendentePresso=genitore.getDipendentePresso();
- 	String rapportiAteneoSalerno=genitore.getRapportiAteneoSalerno();
- 	String rapportiComuneFisciano=genitore.getRapportiComuenFisciano();
  	String statusLavorativo=genitore.getStatusLavorativo();
  	String scadenzaContratto="scadenzaContratto";
- 	String categoriaAppartenenza=genitore.getCategoriaAppartenenza();
  	String rapportoParentela=genitore.getRapportoParentela();
 
- 	
 
  %>
 <form id="dati_bando" name="dati_bando" action="" method="post" >
 <table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
-    <td><select id="rapporto_parentela" name="rapporto_parentela">
+    <td><select id="rapportoParentela" name="rapportoParentela">
     <option value="Seleziona">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>
@@ -49,36 +43,36 @@
   </tr>
   <tr>
     <td>Cognome</td>
-    <td> <input name="cognome" type="text" id="cognome" value="" size="25" maxlength="25" readonly="readonly"></td>
+    <td> <input name="cognome" type="text" id="cognome" value="<%=cognome %>" size="25" maxlength="25" readonly="readonly"></td>
     <td>Nome</td>
-    <td> <input name="nome_richiedente" type="text" id="nome_richiedente" value="" size="25" maxlength="50" readonly="readonly"></td>
+    <td> <input name="nome" type="text" id="nome" value="<%=nome %>" size="25" maxlength="50" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Nato/a a</td>
-    <td><input name="data_nascita_richiedente" type="text" id="data_nascita_richiedente" value=""  size="25" maxlength="25" readonly="readonly"></td>
+    <td><input name="comuneNascita" type="text" id="comuneNascita" value="<%=dataNascita %>"  size="25" maxlength="25" readonly="readonly"></td>
     <td>Nato il</td>
-    <td><input name="natoil" type="text" id="natoil" value=""  size="25" maxlength="10" readonly="readonly"></td>
+    <td><input name="dataNascita" type="text" id="dataNascita" value="<%=dataNascita%>"  size="25" maxlength="10" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Codice Fiscale</td>
-    <td><input name="codice_fiscale_genitore_richiedente" type="text" id="codice_fiscale_genitore_richiedente" value=""  size="25" maxlength="16" readonly="readonly" /></td>
+    <td><input name="codiceFiscale" type="text" id="codiceFiscale" value="<%=codiceFiscale %>"  size="25" maxlength="16" readonly="readonly" /></td>
     <td>Cittadinanza</td>
-    <td><input name="cittadinanza" type="text" id="cittadinanza" value=""  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="cittadinanza" type="text" id="cittadinanza" value="<%=cittadinanza %>"  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>Residente a</td>
-    <td><input name="residente_a" type="text" id="residente_a" value=""  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="comuneResidenza" type="text" id="comuneResidenza" value="<%=comuneResidenza%>"  size="25" maxlength="25" readonly="readonly" /></td>
     <td>Via/Piazza</td>
-    <td><input name="residente_via" type="text" id="residente_via" value=""  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="indirizzoResidenza" type="text" id="indirizzoResidenza" value="<%=indirizzoResidenza%>"  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>Numero civico</td>
-    <td><input name="residente_numero_civico" type="text" id="residente_numero_civico" value=""  size="25" maxlength="5" readonly="readonly" /></td>
+    <td><input name="numeroCivicoResidenza" type="text" id="numeroCivicoResidenza" value="<%=numeroCivicoResidenza %>"  size="25" maxlength="5" readonly="readonly" /></td>
     <td>CAP</td>
-    <td><input name="residente_cap" type="text" id="residente_cap" value=""  size="5" maxlength="5" readonly="readonly" /></td>
+    <td><input name="capResidenza" type="text" id="capResidenza" value="<%=capResidenza %>"  size="5" maxlength="5" readonly="readonly" /></td>
   <tr>
     <td>Provincia</td>
-    <td><input id="residente_provincia" value="" name="residente_provincia"  size="2" maxlength="2" type="text" /></td>
+    <td><input id="provinciaResidenza" value="<%=provinciaResidenza %>" name="provinciaResidenza"  size="2" maxlength="2" type="text" /></td>
    
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -90,19 +84,19 @@
   </tr>
   
     <td>Domiciliato a</td>
-    <td><input name="domiciliato_a" type="text" id="domiciliato_a" value=""  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="domiciliato_a" type="text" id="domiciliato_a" value="<%=comuneDomicilio%>"  size="25" maxlength="25" readonly="readonly" /></td>
     <td>Via/Piazza</td>
-    <td><input name="domicilio_via" type="text" id="domicilio_via" value=""  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="indirizzoDomicilio" type="text" id="indirizzoDomicilio" value="<%=comuneDomicilio%>"  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>Numero civico</td>
-    <td><input name="domicilio_numero_civico" type="text" id="domicilio_numero_civico" value=""  size="25" maxlength="5" readonly="readonly" /></td>
+    <td><input name="numeroCivicoDomicilio" type="text" id="numeroCivicoDomicilio" value="<%=numeroCivicoDomicilio%>"  size="25" maxlength="5" readonly="readonly" /></td>
     <td>CAP</td>
-    <td><input name="domicilio_cap" type="text" id="domicilio_cap" value=""  size="5" maxlength="5" readonly="readonly" /></td>
+    <td><input name="capDomicilio" type="text" id="capDomicilio" value="<%=capDomicilio%>"  size="5" maxlength="5" readonly="readonly" /></td>
   <tr>
     <td>Provincia</td>
-    <td><input name="domicilio_provincia" type="text" id="domicilio_provincia" value=""  size="2" maxlength="2" readonly="readonly" /></td>
-    </
+    <td><input name="provinciaDomicilio" type="text" id="provinciaDomicilio" value="<%=provinciaDomicilio%>"  size="2" maxlength="2" readonly="readonly" /></td>
+    </tr>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
@@ -118,7 +112,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-  <td colspan="4"><select id="status_lavorativo_richiedente" name="status_lavorativo_richiedente"  readonly="readonly" >
+  <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  readonly="readonly" >
 <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
       <option value="di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; ">di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; </option>
@@ -135,7 +129,7 @@
   </tr>
   <tr>
     <td colspan="3">Scadenza del contratto (solo per assegnisti, borsisti, dottorandi o contrattisti)</td>
-    <td><input name="domicilio_numero_civico2" type="text" id="domicilio_numero_civico2" value=""  size="25" maxlength="5" readonly="readonly" /></td>
+    <td><input name="scadenza_contratto_richiedente" type="text" id="scadenza_contratto_richiedente" value="<%=scadenzaContratto%>"  size="25" maxlength="5" readonly="readonly" /></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>

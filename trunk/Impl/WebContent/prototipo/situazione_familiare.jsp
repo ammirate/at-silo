@@ -90,7 +90,7 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   </tr>
   <tr>
     <td colspan="2">ALTRE CONDIZIONI RILEVANTI AI FINI DEL PUNTEGGIO</td>
-    <td colspan="1"><textarea name="altre_condizioni" cols="100" rows="5"></textarea></td>
+    <td colspan="1"><textarea name="altre_condizioni" cols="50" rows="5"></textarea></td>
   </tr>
     <tr>
     <td colspan="2">&nbsp;</td>

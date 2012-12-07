@@ -77,68 +77,68 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             
             //variabili utente -genitore richiedente
              Date dataNascita=null;
-             if ( request.getParameter("data_nascita_richiedente")!=null){
+             if ( request.getParameter("dataNascita")!=null){
                  dataNascita=new Date(01, 01, 01);
              }
              String nome=null;
-             if ( request.getParameter("nome_richiedente")!=null)
-                 nome=request.getParameter("nome_richiedente");
+             if ( request.getParameter("nome")!=null)
+                 nome=request.getParameter("nome");
              String cognome=null;
-             if ( request.getParameter("cognome_richiedente")!=null)
-                 cognome=request.getParameter("cognome_richiedente");
+             if ( request.getParameter("cognome")!=null)
+                 cognome=request.getParameter("cognome");
              String codiceFiscale=null;
-             if ( request.getParameter("cf_richiedente")!=null)
-                 codiceFiscale= request.getParameter("cf_richiedente");
+             if ( request.getParameter("codiceFiscale")!=null)
+                 codiceFiscale= request.getParameter("codiceFiscale");
              String email=null;
-             if ( request.getParameter("email_richiedente")!=null)
-                 email=request.getParameter("email_richiedente");
+             if ( request.getParameter("email")!=null)
+                 email=request.getParameter("email");
              String comuneNascita=null;
-             if ( request.getParameter("comune_nascita_richiedente")!=null)
-                 comuneNascita=request.getParameter("comune_nascita_richiedente");
+             if ( request.getParameter("comuneNascita")!=null)
+                 comuneNascita=request.getParameter("comuneNascita");
              String telefono=null;
-             if ( request.getParameter("telefono_richiedente")!=null)
-                 telefono= request.getParameter("telefono_richiedente");
+             if ( request.getParameter("telefono")!=null)
+                 telefono= request.getParameter("telefono");
              String cittadinanza=null;
-             if ( request.getParameter("cittadinanza_richiedente")!=null)
-                 cittadinanza=request.getParameter("cittadinanza_richiedente");
+             if ( request.getParameter("cittadinanza")!=null)
+                 cittadinanza=request.getParameter("cittadinanza");
              String indirizzoResidenza=null;
-             if ( request.getParameter("indirizzo_residenza_richiedente")!=null)
-                 indirizzoResidenza=request.getParameter("indirizzo_residenza_richiedente");
+             if ( request.getParameter("indirizzoResidenza")!=null)
+                 indirizzoResidenza=request.getParameter("indirizzoResidenza");
              String numeroCivicoResidenza=null;
-             if ( request.getParameter("numero_civico_residenza_richiedente")!=null)
-                 numeroCivicoResidenza=request.getParameter("numero_civico_residenza_richiedente");
+             if ( request.getParameter("numeroCivicoResidenza")!=null)
+                 numeroCivicoResidenza=request.getParameter("numeroCivicoResidenza");
              String capResidenza=null;
-             if ( request.getParameter("cap_residenza_richiedente")!=null)
-                 capResidenza=request.getParameter("cap_residenza_richiedente");
+             if ( request.getParameter("capResidenza")!=null)
+                 capResidenza=request.getParameter("capResidenza");
              String comuneResidenza=null;
-             if ( request.getParameter("comune_residenza_richiedente")!=null)
-                 comuneResidenza=request.getParameter("comune_residenza_richiedente");
+             if ( request.getParameter("comuneResidenza")!=null)
+                 comuneResidenza=request.getParameter("comuneResidenza");
              String provinciaResidenza=null;
-             if ( request.getParameter("provincia_residenza_richiedente")!=null)
-                 provinciaResidenza=request.getParameter("provincia_residenza_richiedente");
+             if ( request.getParameter("provinciaResidenza")!=null)
+                 provinciaResidenza=request.getParameter("provinciaResidenza");
              String indirizzoDomicilio=null;
-             if ( request.getParameter("indirizzo_domicilio_richiedente")!=null)
-                 indirizzoDomicilio=request.getParameter("indirizzo_domicilio_richiedente");
+             if ( request.getParameter("indirizzoDomicilio")!=null)
+                 indirizzoDomicilio=request.getParameter("indirizzoDomicilio");
              String numeroCivicoDomicilio=null;
-             if ( request.getParameter("civico_domicilio_richiedente")!=null)
-                 numeroCivicoDomicilio=request.getParameter("civico_domicilio_richiedente");
+             if ( request.getParameter("numeroCivicoDomicilio")!=null)
+                 numeroCivicoDomicilio=request.getParameter("numeroCivicoDomicilio");
              String capDomicilio=null;
-             if ( request.getParameter("cap_domicilio_richiedente")!=null)
-                 capDomicilio=request.getParameter("cap_domicilio_richiedente");
+             if ( request.getParameter("capDomicilio")!=null)
+                 capDomicilio=request.getParameter("capDomicilio");
              String comuneDomicilio=null;
-             if ( request.getParameter("comune_domicilio_richiedente")!=null)
-                 comuneDomicilio=request.getParameter("comune_domicilio_richiedente");
+             if ( request.getParameter("comuneDomicilio")!=null)
+                 comuneDomicilio=request.getParameter("comuneDomicilio");
              String provinciaDomicilio=null;
-             if ( request.getParameter("provincia_domicilio_richiedente")!=null)
-                 provinciaDomicilio=request.getParameter("provincia_domicilio_richiedente");
+             if ( request.getParameter("provinciaDomicilio")!=null)
+                 provinciaDomicilio=request.getParameter("provinciaDomicilio");
            
              //variabili genitore -genitore richiedente
              String tipologia_genitore=null;
              if (request.getParameter("tipologia_genitore") != null)
                  tipologia_genitore=request.getParameter("tipologia_genitore");
-             String dipendente_presso_richiedente=null;
-             if (request.getParameter("dipendente_presso_richiedente") != null)
-                 dipendente_presso_richiedente=request.getParameter("dipendente_presso_richiedente");
+             String dipendente_presso=null;
+             if (request.getParameter("dipendente_presso") != null)
+                 dipendente_presso=request.getParameter("dipendente_presso");
              String rapporti_ateneo_salerno=null;
              if (request.getParameter("rapporti_ateneo_salerno_richiedente") != null)
                  rapporti_ateneo_salerno=request.getParameter("rapporti_ateneo_salerno_richiedente");
@@ -146,17 +146,17 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
              if (request.getParameter("rapporti_comune_fisciano_richiedente") != null)
                  rapporti_comune_fisciano=request.getParameter("rapporti_comune_fisciano_richiedente");
              String status_lavorativo=null;
-             if (request.getParameter("status_lavorativo_richiedente") != null)
-                 status_lavorativo=request.getParameter("status_lavorativo_richiedente");
+             if (request.getParameter("status_lavorativo") != null)
+                 status_lavorativo=request.getParameter("status_lavorativo");
              Date scadenza_contratto=null;
              if (request.getParameter("scadenza_contratto_richiedente") != null)
                  request.getParameter("scadenza_contratto_richiedente");
              String categoria_appartenenza=null;
              if (request.getParameter("categoria_appartenenza_richiedente") != null)
                  categoria_appartenenza=request.getParameter("categoria_appartenenza_richiedente");
-             String rapporto_parentela=null;
-             if (request.getParameter("rapporto_parentela_richiedente") != null)
-                 rapporto_parentela=request.getParameter("rapporto_parentela_richiedente");
+             String rapportoParentela=null;
+             if (request.getParameter("rapportoParentela") != null)
+                 rapportoParentela=request.getParameter("rapportoParentela");
              
              //variabili utente -genitore non richiedente
              Date dataNascita_genitore_non_richiedente=null;
@@ -290,7 +290,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
           
             
             try {
-                if (controlDatiPersonali.setDatiGenitore(username_utente,dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono_genitore_non_richiedente, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso_richiedente, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza,rapporto_parentela)){
+                if (controlDatiPersonali.setDatiGenitore(username_utente,dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono_genitore_non_richiedente, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza,rapportoParentela)){
 
                         // Set response content type
                         response.setContentType("text/html");
