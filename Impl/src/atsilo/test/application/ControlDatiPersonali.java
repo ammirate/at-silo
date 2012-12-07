@@ -63,7 +63,7 @@ public class ControlDatiPersonali {
      * @throws GenitoreException
      * @throws SQLException 
      */
-    public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
+    public Genitore getDatiGenitoreFromCF(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
       
         Genitore genitore = new Genitore();
         genitore.setCodiceFiscale(codiceFiscale);
@@ -72,9 +72,15 @@ public class ControlDatiPersonali {
         genitore.setDataNascita(new Date(1970, 05, 20));
         genitore.setTipo("profilo di appartenenza");
         return genitore;
-         
+       
+        
     }
-    
+
+    /**
+     * 
+     * @param username
+     * @return
+     */
     public Utente getUtenteFromUsername(String username){
         Utente u=new Utente();
         //ricerca utente per username
@@ -209,27 +215,50 @@ public class ControlDatiPersonali {
     
  
     /**
-     * Inserisce o modifica i dati di un genitore tranne codiceFiscale
-     * @param genitore da inserire
-     * @return 
+     * Inserisce o modifica i dati di un genitore
+     * 
+     * @param codiceFiscale verrà passato solo se è di un genitore non richiedente, quello del genitore richiedente non è modificabile
+     * @usernmae username username dell'account che ha inviiato i dati da modificare
+     * @return true in caso di inserimento riuscito
+     *         false altrimenti
      * @throws DBConnectionException 
      * @throws GenitoreException
      */
-    //Modfiicare aggiungendo altri campi
-    public boolean setDatiGenitore(Date dataNascita, String nome, String cognome,
+    
+  
+    public boolean setDatiGenitore(String username,Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio, List<Bambino> figli,
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
-            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza) throws GenitoreException, DBConnectionException{
-        
-        Genitore genitore = new Genitore(dataNascita, cognome, cognome, codiceFiscale, email, comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano, statusLavorativo, scadenzaContratto, categoriaAppartenenza);
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            String rapportoParentela) throws GenitoreException, DBConnectionException{
+     
+
+        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano, statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela);
         return true;
    
+    }
+    /**
+     * 
+     * @param username dell'account di cui modificare i dati, a cui è associato il bambino
+     * @param codiceFiscale che una volta inserito servirà per distinguere più bambini associati a quell account
+     * @return
+     */
+    public boolean setDatiBambino(String username,Date dataNascita, String nome, String cognome,
+            String codiceFiscale,  String comuneNascita,
+            String cittadinanza, String indirizzoResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze){
+            Bambino bambino=new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, categoriaAppartenenza, classe, genitore, assenze);
+                return true;
+        
     }
     
     /**
@@ -238,7 +267,7 @@ public class ControlDatiPersonali {
      * @return true se proceduara andata a buon fine
      *         false altrimenti
      */
-    public boolean createUtente(String cf){
+    public boolean createAccount(String cf){
         return true;
     }
      
