@@ -17,8 +17,6 @@ package atsilo.application.notificheMail;
 
 import java.util.ArrayList;
 
-import javax.mail.MessagingException;
-
 import atsilo.entity.Evento;
 import atsilo.entity.Utente;
 
@@ -37,6 +35,7 @@ import atsilo.entity.Utente;
  */
 
 /**
+ * @author Frank
  * Classe NotificaMailEvento
  * <Descrizione classe>
  * classe che invia la notifica email della crazione di un evento.
@@ -51,17 +50,28 @@ public class NotificaMailEvento extends NotificaMail {
     
     //Costruttori
     
-    /** 
+    /**
+     *  
      * @param destinatari
-     *  a cui arrivera l'email
-     * @param evento 
-     *  di cui si notifica la creazione
+     * a cui arriva l'email
+     * @param oggetto
+     * dell'email
+     * @param testo
+     * dell'email
+     * @param evento
+     * di cui si notifica la creazione
      */
+    
+    
     public NotificaMailEvento(ArrayList<Utente> destinatari,String oggetto,String testo,Evento evento) 
     {
         super(destinatari, oggetto, testo);
         this.evento=evento;
     }
+    /**
+     *
+     * ritorna il testo dell'email
+     */
     public String getTestoMail() 
     {
         String testo= this.getTesto()+"L'evento si chimera"+evento.getNome();
@@ -69,7 +79,7 @@ public class NotificaMailEvento extends NotificaMail {
     }
 
     /**
-     * @see atsilo.application.notificheMail.NotificaMail#getOggettoMail()
+     * ritorna l'oggetto dell'email
      */
     public String getOggettoMail() {
         
@@ -78,11 +88,11 @@ public class NotificaMailEvento extends NotificaMail {
     }
 
     /**
-     * @see atsilo.application.notificheMail.NotificaMail#getDestinatariMail()
+     * ritorna i destinatari del messaggio 
      */
     public ArrayList<Utente> getDestinatariMail() 
     {
-        return this.getDestinatariMail();
+        return this.getDestinatari();
     }
     
 

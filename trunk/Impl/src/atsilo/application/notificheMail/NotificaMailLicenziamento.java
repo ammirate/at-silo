@@ -16,9 +16,6 @@
 package atsilo.application.notificheMail;
 
 import java.util.ArrayList;
-
-import javax.mail.MessagingException;
-
 import atsilo.entity.Utente;
 
 /*
@@ -36,28 +33,34 @@ import atsilo.entity.Utente;
  */
 
 /**
+ * @author Frank
  * Classe MessaggioLicenziamento
  * <Descrizione classe>
  * classe che invia ad membro o membri del Personale dell'Asilo,un email che gli notifica l'avvenuto licenziamento.
  * 
  */
 public class NotificaMailLicenziamento extends NotificaMail {
-    //Logger
-    //private static final java.util.Logger LOG = ...
-    
     //Variabili di istanza
     private Utente licenziato;
 
     //Costruttori
     
     /**
+     * 
      * @param destinatari
+     * @param oggetto
+     * @param testo
+     * @param licenziato
      */
     public NotificaMailLicenziamento(ArrayList<Utente> destinatari,String oggetto,String testo,Utente licenziato) 
     {
         super(destinatari, oggetto, testo);
         this.licenziato=licenziato;
     }
+    //metodi 
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getTestoMail()
+     */
 
     public String getTestoMail() 
     {
@@ -79,8 +82,8 @@ public class NotificaMailLicenziamento extends NotificaMail {
      */
     public ArrayList<Utente> getDestinatariMail() 
     {
-        return this.getDestinatariMail();
-    }    
+        return this.getDestinatari();
+    }
     
 
 }

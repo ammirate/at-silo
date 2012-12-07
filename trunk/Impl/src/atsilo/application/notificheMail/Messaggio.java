@@ -32,12 +32,28 @@ import atsilo.entity.Utente;
  * Gianfranco Bottiglieri, 27/11/2012 (non responsabile)
  *-----------------------------------------------------------------
  */
-
+/**
+ * 
+ * Classe Messaggio
+ * <Descrizione classe>
+ * interfaccia delle notifiche email
+ * @author Frank
+ *
+ */
 public interface Messaggio {
-    
+    /**
+     * medoto che restituisce il testo del messaggio
+     * @return
+     */
     String getTestoMail();
-    
+    /**
+     * metodo che restituisce l'oggetto del messaggio 
+     * @return
+     */
     String getOggettoMail();
-    
+    /**
+     * metodo che restituisce i destinatari
+     * @return
+     */
     ArrayList<Utente> getDestinatariMail();
 }
