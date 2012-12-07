@@ -30,7 +30,6 @@ public class CampoDomandaQuestionario {
         this.descrizione = desc;
         this.valore = valore;
         this.idDomandaQuestionario = idDomanda;
-        this.idRispostaQuestionario = (Integer)null;
     }
 
     /**
