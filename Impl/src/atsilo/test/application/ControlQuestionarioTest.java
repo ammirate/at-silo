@@ -357,7 +357,7 @@ public class ControlQuestionarioTest {
      * @throws DBConnectionException
      * @throws QuestionarioException
      */
-    public void eliminaDomanda(String idDomanda) throws DBConnectionException, QuestionarioException{
+    public void eliminaDomanda(int idDomanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
         
