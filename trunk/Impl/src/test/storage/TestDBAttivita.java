@@ -68,7 +68,7 @@ public class TestDBAttivita {
      * @throws SQLException
      */
     @Test
-    public void testRicercaAttivitaPerDataCorretta() throws SQLException {
+    public void testRicercaAttivitaPerTitoloCorretto() throws SQLException {
         
         DBAttivita at=new DBAttivita(db);
         Attivita a=new Attivita();
@@ -84,7 +84,7 @@ public class TestDBAttivita {
      * @throws SQLException
      */
     @Test
-    public void testRicercaAttivitaPerDataSbagliata() throws SQLException
+    public void testRicercaAttivitaPerTitoloSbagliato() throws SQLException
     {
         
         DBAttivita at=new DBAttivita(db);
