@@ -1,8 +1,11 @@
+<%@page import="java.sql.Date"%>
 <%@
 	include file="atsilo_files/header.jsp"
 %>
 <%@page import="atsilo.entity.*"%>
 <%@page import="java.util.*"%>
+<%@page import="java.sql.*"%>
+
 <%@page import="atsilo.application.*"%>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
@@ -38,12 +41,17 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		id = -1;
 	}
 	Questionario quest = null;
-	Questionario quest1 = new Questionario("questa è una prova", "no", "linda è antipatica?", 10, null, null);
-	Questionario quest2 = new Questionario("questa è una prova2", "no", "giulio è antipatico?", 12, null, null);
+	
+	Questionario quest1 = new Questionario("questa è una prova", "no", "linda è antipatica?", 10, new Date(10,10,2012),  new Date(10,10,2012));
+	Questionario quest2 = new Questionario("questa è una prova2", "no", "giulio è antipatico?", 12, new Date(10,10,2012),  new Date(10,10,2012));
 	List<Questionario> list = new ArrayList<Questionario>();
 	List<DomandaQuestionario> d1 = new ArrayList<DomandaQuestionario>();
 	List<CampoDomandaQuestionario> c1 = new ArrayList<CampoDomandaQuestionario>();
-	DomandaQuestionario d = new DomandaQuestionario(91, quest.getId(), "prova", null);
+	c1.add(new CampoDomandaQuestionario("checkbox","bene","bene",1 ));
+	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
+	c1.add(new CampoDomandaQuestionario("checkbox","malissimo","malissimo", 1));
+	c1.add(new CampoDomandaQuestionario("checkbox","non so","non so",1));
+	//DomandaQuestionario d = new DomandaQuestionario(91, quest.getId(), "prova", c1);
 	/*
 	c1.add(new CampoDomandaQuestionario("checkbox","bene","bene",1 ));
 	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
