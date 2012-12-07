@@ -49,7 +49,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
 	c1.add(new CampoDomandaQuestionario("checkbox","malissimo","malissimo", 1));
 	c1.add(new CampoDomandaQuestionario("checkbox","non so","non so",1));
-	/*List<CampoDomandaQuestionario> c2 = new ArrayList<CampoDomandaQuestionario>();
+	List<CampoDomandaQuestionario> c2 = new ArrayList<CampoDomandaQuestionario>();
 	c2.add(new CampoDomandaQuestionario("radio","bene","bene", 2));
 	c2.add(new CampoDomandaQuestionario("radio","male","male", 2));
 	c2.add(new CampoDomandaQuestionario("radio","malissimo","malissimo",2));
