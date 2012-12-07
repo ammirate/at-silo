@@ -13,6 +13,7 @@ package atsilo.entity;
  * Antonio Barba, 13/11/2012 (non responsabile)
  * REVISION
  * Andrea Micco, 6/12/2012
+ * Mariella Ferrara, 7/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -24,6 +25,8 @@ public class OrarioUtente {
     private String descrizione;
     private String nome;
     private float prezzo;
+    private String dataInizio;
+    private String dataFine;
     
     /**
      * Costruttore vuoto
@@ -38,9 +41,11 @@ public class OrarioUtente {
      * @param descrizione il paramentro è fissato
      * @param nome il parametro è fissato
      * @param prezzo il parametro è fissato
+     * @param dataInizio il parametro è fissato
+     * @param dataFine il parametro è fissato
      */
     public OrarioUtente(int id, String oraInizio, String oraFine,
-            String descrizione, String nome, float prezzo) {
+            String descrizione, String nome, float prezzo, String dataInizio, String dataFine) {
         super();
         this.id = id;
         this.oraInizio = oraInizio;
@@ -48,6 +53,8 @@ public class OrarioUtente {
         this.descrizione = descrizione;
         this.nome = nome;
         this.prezzo = prezzo;
+        this.dataInizio=dataInizio;
+        this.dataFine=dataFine;
     }
 
 
@@ -146,4 +153,27 @@ public class OrarioUtente {
   public float getPrezzo() {
       return prezzo;
   }
+  
+  
+  /**
+   *  Metodo che setta il parametro dataInizio
+   * @param dataInizio il parametro fissato
+   */
+  public void setDataInizio(String dataInizio) {
+      this.dataInizio = dataInizio;
+  }
+  
+  /**
+   * Metodo che prende il parametro dataFine
+   * @return dataFine il parametro inserito
+   */
+  public String getdataFine() {
+      return dataFine;
+  }
+  
+  
+  
+  
+  
+  
 }

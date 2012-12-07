@@ -10,7 +10,7 @@
  * OWNER
  * Andrea Micco, 07/dic/2012
  * REVISION
- * <nome revisore>, <data revisione>
+ * MARIELLA FERRARA, 07/dic/2012
  *-----------------------------------------------------------------
  */
 
@@ -21,7 +21,6 @@ import java.util.List;
 
 
 public class Schedulazione {
-   private int id;
    private Date data;
    
    /**
@@ -46,28 +45,13 @@ public class Schedulazione {
     * @param id il parametro fissato
     * @param data il parametro fissato
     */
-   public Schedulazione(int id, Date data){
-       this.id = id;
+   public Schedulazione(Date data){
        this.data = data;
        this.listaTirocinante = null;
        this.massimo = null;
    }
    
-   /**
-    * Metodo che setta il parametro id
-    * @param id il parametro settato
-    */
-   public void setId(int id) {
-       this.id = id;
-   }
-
-   /**
-    * Metodo che prende il campo id
-    * @return id il parametro inserito
-    */
-   public int getId() {
-       return id;
-   }
+ 
    
    /**
     * Metodo che setta il parametro data
