@@ -62,7 +62,7 @@ public class ControlQuestionario {
         List<DomandaQuestionario> domande = questionario.getDomande();
         List<CampoDomandaQuestionario> campi;
         
-        
+        //TODO inserire campi e domande
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -82,11 +82,6 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
-    
-    
-    
-    
-    
     
     
     /**

@@ -8,6 +8,7 @@ import atsilo.entity.Psicopedagogo;
 import atsilo.entity.RispostaQuestionario;
 
 import atsilo.entity.Questionario;
+import atsilo.storage.DBBeans.Assegnazione;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -188,5 +189,24 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         
         
         
+    }
+    
+    /**
+     * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
+     * assegnazioni predefinite relativamente a un bean.<br/>
+     * Nella sua implementazione predefinita, questo metodo restituisce sempre
+     * {@link #NESSUNA_ASSEGNAZIONE}. Le classi estendenti possono sovrascrivere
+     * questo metodo per indicare in modo comodo delle assegnazioni predefinite
+     * per tutti i metodi di modifica della base di dati.
+     * 
+     * @param bean
+     *            Bean per cui valutare le assegnazioni
+     * @return Array di assegnazioni
+     */
+    protected Assegnazione[] creaAssegnazioni(DomandaQuestionario bean) {
+        Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("questionario",bean.getIdQuestionario());
+        Assegnazione[] DBAssign = new Assegnazione[0];
+        DBAssign[0]=DBDomandaQuestionario_assegnazione;
+        return DBAssign;
     }
 }

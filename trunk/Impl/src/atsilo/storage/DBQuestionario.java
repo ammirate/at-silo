@@ -7,6 +7,7 @@ import atsilo.entity.Questionario;
 import atsilo.entity.Registro;
 
 import atsilo.entity.RispostaQuestionario;
+import atsilo.storage.DBBeans.Assegnazione;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -109,6 +110,8 @@ public class DBQuestionario extends DBBeans<Questionario>{
         return Collections.unmodifiableList(res);
     }
     
+    
+   
     /**
      * Ricerca nel database un questionario a 
      * seconda del nome fornito in input.
