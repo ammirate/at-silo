@@ -19,8 +19,10 @@ public class Classe {
     
     /**
      * @attribute id di tipo stringa
+     * @attribute classe di tipo stringa
      */
     private String id;
+    private String classe;
    
     /** 
      * La variabile educatori è settatta a Null quindi c'è bisogno di una lettura
@@ -98,4 +100,26 @@ public class Classe {
    public void aggiungiBambino(Bambino b){
        bambini.add(b);
    }
+
+   /**
+     * Metodo che prende il campo classe
+     * @return classe il paramentro inserito
+    */
+   public String getClasse() {
+       return classe;
+   }
+
+   /**
+    * Metodo che setta il campo Classe
+     * @param classe il parametro fissato
+         */
+   public void setClasse(String classe) {
+       this.classe = classe;
+   }
+   
+   
+   
+   
+   
+   
 }
