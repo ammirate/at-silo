@@ -14,13 +14,15 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Barba, 13/11/2012 (non responsabile)
+ * REVISION
+ * Mariella Ferrara, 07/12/2012
  *-----------------------------------------------------------------
  */
 
 public class Extra {
     private float importo;
     private String descrizione;
-    private String id;
+    private int id;
     private Date dataInizio;
     private Date dataFine;
     private List<Retta> retteAssociate;
@@ -39,7 +41,7 @@ public class Extra {
      * @param dataFine il paramentro è fissato
      * @param retteAssociate fissato dopo la lettura
      */
-    public Extra(float importo, String descrizione, String id, Date dataInizio,
+    public Extra(float importo, String descrizione, int id, Date dataInizio,
             Date dataFine, List<Retta> retteAssociate) {
         super();
         this.importo = importo;
@@ -86,7 +88,7 @@ public class Extra {
      * Metodo che prende il campo Id
      * @return id il parametro inserito
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -94,7 +96,7 @@ public class Extra {
      * Metodo che setta il campo Id
      * @param id il parametro fissato
      */
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

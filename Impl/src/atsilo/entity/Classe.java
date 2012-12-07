@@ -20,9 +20,9 @@ public class Classe {
     
     /**
      * @attribute id di tipo stringa
-     * @attribute statoClasse di tipo stringa
+     * @attribute statoClasse di tipo int
      */
-    private String id;
+    private int id;
     private String statoClasse;
    
     /** 
@@ -48,7 +48,7 @@ public class Classe {
      * @param eventi è settato dopo la lettura
      * @param statoClasse è settato dopo la lettura
      */
-    public Classe(String id,String statoClasse, List<EducatoreDidattico> educatori) {
+    public Classe(int id,String statoClasse, List<EducatoreDidattico> educatori) {
         this.id = id;
         this.educatori = educatori;
         this.statoClasse=statoClasse;
@@ -58,7 +58,7 @@ public class Classe {
      * Metodo che setta il campo Id
      * @param id il parametro fissato
      */
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -66,7 +66,7 @@ public class Classe {
      * Metodo che prende il campo Id
      * @return Id il paramentro inserito
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 
