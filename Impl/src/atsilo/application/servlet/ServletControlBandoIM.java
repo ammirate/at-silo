@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import atsilo.test.application.ControlGestioneBandoTest;
+import atsilo.stub.application.*;
 
 /**
  * Servlet implementation class ServletControlBandoIM
@@ -17,7 +17,7 @@ import atsilo.test.application.ControlGestioneBandoTest;
 @WebServlet("/ServletControlBandoIM")
 public class ServletControlBandoIM extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-        private ControlGestioneBandoTest crt;
+        private ControlGestioneBandoSTUB crt;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -43,13 +43,20 @@ public class ServletControlBandoIM extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    PrintWriter out = response.getWriter();
-	    String success = "successo=ok";
-	    String dataInizio = (String) request.getParameter("iniziobando");
-	    String dataFine = (String) request.getParameter("finebando");
-	    crt.modificaBando(dataInizio, dataFine);
+	    String dataInizioBando = (String) request.getParameter("iniziobando");
+	    String dataFineBando = (String) request.getParameter("finebando");
+	    String dataInizioPresentazione = (String) request.getParameter("iniziopresentazione");
+	    String dataFinePresentazione = (String) request.getParameter("finepresentazione");
+	    String dataFineRinuncia = (String) request.getParameter("finerinuncia");
+	    int posti = Integer.parseInt( (String) request.getParameter("postidisp"));
+	    if((crt.modificaBando(dataInizioBando, dataFineBando, dataInizioPresentazione, dataFinePresentazione, dataFineRinuncia, posti, null)) != false){
 	    response.setStatus(response.SC_MOVED_TEMPORARILY);
-	    
-	    response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+success);
-	}
+	    response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=y");
+	    }
+	    else{
+	        response.setStatus(response.SC_MOVED_TEMPORARILY);
+	        response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=n"); 
+	    }
 
+	}
 }
