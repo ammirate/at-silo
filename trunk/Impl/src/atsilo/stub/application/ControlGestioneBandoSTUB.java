@@ -30,9 +30,8 @@ public class ControlGestioneBandoSTUB {
     
     private static final ControlGestioneBandoSTUB INSTANCE = new ControlGestioneBandoSTUB();
     private Bando b;
-    private ControlGestioneBandoSTUB() 
-    {
-        this.b = new Bando(1, "2010", "2012");
+    private ControlGestioneBandoSTUB(){
+        this.b = new Bando(1, "2005", "2012", "2007", "2013", "2014", 15, null);
     } 
     
 
@@ -40,19 +39,24 @@ public class ControlGestioneBandoSTUB {
     public static ControlGestioneBandoSTUB getIstance() {
         return INSTANCE;
     }
+    
     public Bando getBando(){
         return b;
     }
-    public boolean modificaBando(String inizio, String fine){
+
+    public boolean modificaBando(String inizioBando, String fineBando,String inizioPresentazione, String finePresentazione,String fineRinuncia,int posti,String path){
         if(getBando() != null){
-            getBando().setDataFine(fine);
-            getBando().setDataInizio(inizio);
-            System.out.println(getBando().getDataInizio()+" "+getBando().getDataFine());
+            getBando().setDataInizioBando(inizioBando);
+            getBando().setDataFineBando(fineBando);
+            getBando().setDataInizioPresentazioneRinuncia(inizioPresentazione);
+            getBando().setDataFinePresentazioneRinuncia(finePresentazione);
+            getBando().setDataFineRinuncia(fineRinuncia);
+            getBando().setPostiDisponibili(posti);
+            getBando().setPath(path);
             return true;
         }
         else{
-            Bando b = new Bando(1,inizio,fine);
-            System.out.println(b.getDataInizio()+" "+b.getDataFine());
+            Bando b = new Bando(1,inizioBando,fineBando,inizioPresentazione,finePresentazione,fineRinuncia,posti,path);
             return true;
         }
     }
