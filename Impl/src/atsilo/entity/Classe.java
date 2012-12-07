@@ -12,6 +12,7 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Cesarano, 14/11/2012 (non responsabile)
+ * Mariella Ferrara, 7/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -19,10 +20,10 @@ public class Classe {
     
     /**
      * @attribute id di tipo stringa
-     * @attribute classe di tipo stringa
+     * @attribute statoClasse di tipo stringa
      */
     private String id;
-    private String classe;
+    private String statoClasse;
    
     /** 
      * La variabile educatori è settatta a Null quindi c'è bisogno di una lettura
@@ -45,10 +46,12 @@ public class Classe {
      * @param id il paramentro è fissato
      * @param educatori è settato dopo la lettura 
      * @param eventi è settato dopo la lettura
+     * @param statoClasse è settato dopo la lettura
      */
-    public Classe(String id, List<EducatoreDidattico> educatori) {
+    public Classe(String id,String statoClasse, List<EducatoreDidattico> educatori) {
         this.id = id;
         this.educatori = educatori;
+        this.statoClasse=statoClasse;
     }
     
     /**
@@ -102,19 +105,19 @@ public class Classe {
    }
 
    /**
-     * Metodo che prende il campo classe
-     * @return classe il paramentro inserito
+     * Metodo che prende il campo statoClasse
+     * @return statoClasse il paramentro inserito
     */
-   public String getClasse() {
-       return classe;
+   public String getStatoClasse() {
+       return statoClasse;
    }
 
    /**
-    * Metodo che setta il campo Classe
-     * @param classe il parametro fissato
+    * Metodo che setta il campo statoClasse
+     * @param statoClasse il parametro fissato
          */
-   public void setClasse(String classe) {
-       this.classe = classe;
+   public void setStatoClasse(String statoClasse) {
+       this.statoClasse = statoClasse;
    }
    
    

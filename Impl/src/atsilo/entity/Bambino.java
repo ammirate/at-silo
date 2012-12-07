@@ -15,6 +15,7 @@ import java.util.List;
  * Antonio Barba, 13/11/2012 (non responsabile)
  * REVISION
  * Andrea Micco, 6/12/2012
+ * Mariella Ferrara, 7/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -47,7 +48,13 @@ public class Bambino {
     private Genitore genitore;
 
     
- 
+    /**
+     *  La variabile genitoreNonRichiedente avrà il valore della variabile di Genitore
+     * La variabile genitoreNonRichiedente è nulla c'è bisogno di una lettura della classe genitore
+     */
+    private Genitore genitoreNonRichiedente;
+
+    
 
     /**
      *  La variabile assenza avrà i valore della lista Assenza
@@ -88,7 +95,7 @@ public class Bambino {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) {
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze) {
         super();
         this.dataNascita = dataNascita;
         this.nome = nome;
@@ -110,6 +117,7 @@ public class Bambino {
         this.classe = classe;
         this.genitore = genitore;
         this.assenze = assenze;
+        this.genitoreNonRichiedente=genitoreNonRichiedente;
     }
     
     /**
@@ -436,4 +444,29 @@ public class Bambino {
     public List<Assenza> getAssenze() {
         return assenze;
     }
+
+    /**
+     * Metodo che setta il parametro letto dalla classe Genitore
+     * @return genitoreNonRichiedente preso dalla lettura
+     */
+    public Genitore getGenitoreNonRichiedente() {
+        return genitoreNonRichiedente;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe Genitore
+     * @param genitoreNonRichiedente è settato dopo la lettura
+     */
+    public void setGenitoreNonRichiedente(Genitore genitoreNonRichiedente) {
+        this.genitoreNonRichiedente = genitoreNonRichiedente;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

@@ -8,7 +8,7 @@ import java.util.List;
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: Account.java
+ * FILE: Tirocinante.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -17,6 +17,7 @@ import java.util.List;
  * REVISION
  * Andrea Micco, 6/12/2012
  * Fabio Napoli, 7/12/2012
+ * Mariella Ferrara, 7/12/2012
  *-----------------------------------------------------------------
  */
 

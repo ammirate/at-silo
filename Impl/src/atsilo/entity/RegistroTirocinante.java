@@ -9,6 +9,8 @@
  *-----------------------------------------------------------------
  * OWNER
  * Andrea Micco, 07/dic/2012
+ * REVISION
+ * Mariella Ferrara 07/dic/2012
  *-----------------------------------------------------------------
  */
 
@@ -23,6 +25,12 @@ public class RegistroTirocinante {
     private String oreTotali;
     private String valutazione;
     
+    /**
+     * La variabile listaTirocinante avrà il valore della variabile di List<Tirocinante> 
+     * @attribute listaTirocinante La variabile è nulla c'è bisogno di una lettura della classe List<Tirocinante>
+     */
+    private List<Tirocinante> listaTirocinante;
+
     /**
      * La variabile listaAttivitaTirocinante avrà il valore della variabile di List<AttivitaTirocinante> 
      * @attribute listaAttivitaTirocinante La variabile è nulla c'è bisogno di una lettura della classe List<AttivitaTirocinante>
@@ -47,6 +55,7 @@ public class RegistroTirocinante {
         this.oreTotali = oreTotali;
         this.valutazione = valutazione;
         this.listaAttivitaTirocinante = null;
+        this.listaTirocinante = null;
     }
     
     /**
@@ -127,6 +136,22 @@ public class RegistroTirocinante {
      */
     public List<AttivitaTirocinante> getListaAttivitaTirocinante() {
         return listaAttivitaTirocinante;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe List<Tirocinante>
+     * @return listaTirocinante parametro preso dalla lettura
+     */
+    public List<Tirocinante> getListaTirocinante() {
+        return listaTirocinante;
+    }
+
+    /**
+     * Metodo che setta il parametro letto dalla classe List<Tirocinante>
+     * @param listaTirocinante è settato dopo la lettura
+     */
+    public void setListaTirocinante(List<Tirocinante> listaTirocinante) {
+        this.listaTirocinante = listaTirocinante;
     }
     
 }

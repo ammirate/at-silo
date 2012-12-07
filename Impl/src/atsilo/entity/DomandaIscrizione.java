@@ -15,6 +15,7 @@ import java.sql.Date;
  * Antonio Barba, 13/11/2012 (non responsabile)
  * REVISION
  * Andrea Micco, 6/12/2012
+ * Mariella Ferrara, 7/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -39,6 +40,7 @@ public class DomandaIscrizione {
     private boolean altriComponentiDisabili;
     private String condizioniCalcoloPunteggio;
     private float isee;
+    private String stato_convalidazione;
     
     /**
      * La variabile genitore avrà il valore della variabile di Genitore
@@ -85,6 +87,7 @@ public class DomandaIscrizione {
      * @param altriComponentiDisabili è fissato
      * @param isee è fissato
      * @param servizio è fissato dopo la lettura
+     * @param stato_convalidazione è fissato
      */
     public DomandaIscrizione(Date dataPresentazione, int iD, int punteggio,
            int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
@@ -92,7 +95,7 @@ public class DomandaIscrizione {
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-            String condizioniCalcoloPunteggio, float isee, Servizio servizio) {
+            String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) {
         super();
         this.dataPresentazione = dataPresentazione;
         this.id = iD;
@@ -116,6 +119,7 @@ public class DomandaIscrizione {
         this.condizioniCalcoloPunteggio = condizioniCalcoloPunteggio;
         this.isee = isee;
         this.servizio = servizio;
+        this.stato_convalidazione=stato_convalidazione;
     }
     
     /**
@@ -469,4 +473,27 @@ public class DomandaIscrizione {
     public Servizio getServizio() {
         return servizio;
     }
+
+    /**
+     * Metodo che prende il campo stato_convalidazione
+     * @return stato_convalidazione il parametro inserito
+     */
+    public String getStato_convalidazione() {
+        return stato_convalidazione;
+    }
+
+    /**
+     * Metodo che setta il campo stato_convalidazione
+     * @param stato_convalidazione il parametro fissato
+     */
+    public void setStato_convalidazione(String stato_convalidazione) {
+        this.stato_convalidazione = stato_convalidazione;
+    }
+    
+    
+    
+    
+    
+    
+    
 }
