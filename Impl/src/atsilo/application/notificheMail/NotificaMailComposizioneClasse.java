@@ -16,9 +16,6 @@
 package atsilo.application.notificheMail;
 
 import java.util.ArrayList;
-
-import javax.mail.MessagingException;
-
 import atsilo.entity.Utente;
 
 
@@ -37,23 +34,34 @@ import atsilo.entity.Utente;
  */
 
 /**
- * Classe NotificaMailComposizioneClasse <Descrizione classe> classe che invia
- * la notifica email della composizione della classe di un evento.
+ * @author Frank
+ * Classe NotificaMailComposizioneClasse
+ *  <Descrizione classe> classe che invia la notifica email della composizione della classe.
  * 
  */
 public class NotificaMailComposizioneClasse extends NotificaMail {
     //variabili di istanza
     String linkpagina;
-    
-    /**costruttore
+    /**
+     * 
      * @param destinatari
+     * destinari dell'email
+     * @param oggetto
+     * oggetto dell'eamil
+     * @param testo
+     * testo dell'email
+     * @param linkpagina
+     * link della pagina dove si trova la composizione della classe
      */
     public NotificaMailComposizioneClasse(ArrayList<Utente> destinatari,
             String oggetto, String testo,String linkpagina) {
         super(destinatari, oggetto, testo);
         this.linkpagina=linkpagina;
     }
-
+    /**
+     * 
+     * metodo che restiuisce il testo dell'email con l'aggiunta del link della pagina dove vi è la composizione della classe
+     */
     public String getTestoMail() 
     {
         String testo= this.getTesto()+""+linkpagina;
@@ -61,7 +69,7 @@ public class NotificaMailComposizioneClasse extends NotificaMail {
     }
 
     /**
-     * @see atsilo.application.notificheMail.NotificaMail#getOggettoMail()
+     * metodo che restituisce l'oggeto dell'email con il predefinito in defaul 
      */
     @Override
     public String getOggettoMail() {
@@ -71,12 +79,12 @@ public class NotificaMailComposizioneClasse extends NotificaMail {
     }
 
     /**
-     * @see atsilo.application.notificheMail.NotificaMail#getDestinatariMail()
+     * metodo che restituisce i destinatari della notifica 
      */
     @Override
     public ArrayList<Utente> getDestinatariMail() 
     {
-        return this.getDestinatariMail();
+        return this.getDestinatari();
     }
     
 }
