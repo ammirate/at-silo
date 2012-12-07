@@ -15,7 +15,7 @@ package atsilo.entity;
  */
 
 public class Servizio {
-    private String id;
+    private int id;
     private String orarioInizio;
     private String orarioFine;
     private String pianoPasto;
@@ -44,8 +44,8 @@ public class Servizio {
      * @param bambino è settato dopo la lettura
      * @param orarioUtente è settato dopo la lettura
      */
-    public Servizio(String id, String orarioInizio, String orarioFine,
-            String pianoPasto, String bambino, OrarioUtente orarioUtente) {
+    public Servizio(int id, String orarioInizio, String orarioFine,
+            String pianoPasto, String bambino, int orarioUtente) {
         super();
         this.id = id;
         this.orarioInizio = orarioInizio;
@@ -59,7 +59,7 @@ public class Servizio {
      * Metodo che prende il campo Id
      * @param id il parametro inserito
      */
-    public void setId(String id){
+    public void setId(int id){
         this.id=id;
         }
     
@@ -67,7 +67,7 @@ public class Servizio {
      * Metodo che prende il campo id
      * @return id il parametro inserito
      */
-    public String getId(){
+    public int getId(){
         return this.id;
     }
     /**
@@ -138,7 +138,7 @@ public class Servizio {
      * Metodo che prende il parametro letto dalla classe OrarioUtente
      * @return orarioUtente preso dalla lettura
      */
-    public OrarioUtente getOrarioUtente() {
+    public int getOrarioUtente() {
         return orarioUtente;
     }
 
@@ -146,7 +146,7 @@ public class Servizio {
      * Metodo che setta il parametro letto dalla classe orarioUtente
      * @param orarioUtente è settato dopo la lettura
      */
-    public void setOrarioUtente(OrarioUtente orarioUtente) {
+    public void setOrarioUtente(int orarioUtente) {
         this.orarioUtente = orarioUtente;
     }
 }

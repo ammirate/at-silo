@@ -39,7 +39,7 @@ public class OrarioUtente {
      * @param nome il parametro è fissato
      * @param prezzo il parametro è fissato
      */
-    public OrarioUtente(String id, String oraInizio, String oraFine,
+    public OrarioUtente(int id, String oraInizio, String oraFine,
             String descrizione, String nome, float prezzo) {
         super();
         this.id = id;
@@ -55,7 +55,7 @@ public class OrarioUtente {
      * Metodo che setta il parametro id
      * @param id il parametro fissato
      */
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -63,7 +63,7 @@ public class OrarioUtente {
      * Metodo che prende il parametro Id
      * @return id il parametro inserito
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 
