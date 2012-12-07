@@ -109,6 +109,8 @@ public class TESTControlQuestionarioTestTest {
         domande.add(d2);
         domande.add(d3);
         
+        q1.setDomande(domande);
+        
         ControlQuestionario control = ControlQuestionario.getIstance();
         control.inserisciQuestionario(q1);
         
