@@ -3,6 +3,7 @@ package atsilo.application;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import atsilo.entity.CampoDomandaQuestionario;
@@ -69,6 +70,7 @@ public class ControlQuestionario {
             
             if(!storageQ.inserisci(questionario))
                 throw new QuestionarioException("Inserimento fallito");
+            
             for(DomandaQuestionario d : domande){
                 if(!storageD.inserisci(d))
                     throw new QuestionarioException("inserimento domanda fallito");
@@ -85,25 +87,46 @@ public class ControlQuestionario {
     
     
     /**
-     * Deletes a quiestionnaire from the database
+     * Deletes a quiestionnaire from the database if the questionnaire is not active
+     * (the actually date is not between the start date and the end date)
      * @param id is the quiestionnaire identificative
      * @return the questionnaire deleted
      */
     public void eliminaQuestionario(int id) throws DBConnectionException, QuestionarioException {
         
         Database db = new Database();
-        DBQuestionario storage = new DBQuestionario(db);
-        Questionario toReturn;
-        
+        DBQuestionario storageQ = new DBQuestionario(db);
+
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            if(!storage.delete(storage.getQuestionario(id)) );
-            throw new QuestionarioException("Questionario inesistente");
-        } catch (SQLException e) {
-            throw new QuestionarioException("Impossibile eliminare il questionario. OPS this is embarrassing XD");
-        }
+            try {
+                Questionario daCancellare = storageQ.getQuestionario(id);
+                
+                Calendar dataAttuale = Calendar.getInstance();
+                int anno = dataAttuale.get(Calendar.YEAR);
+                int mese = dataAttuale.get(Calendar.MONTH) + 1;
+                int giorno = dataAttuale.get(Calendar.DAY_OF_MONTH);
+            //    System.out.println("giorno:"+giorno+" mese:"+mese+" anno:"+anno);
+                
+                Date dataNow = new Date(anno, mese, giorno);   
+                
+                Date dataI = daCancellare.getPeriodo_inizio();
+                Date dataF = daCancellare.getPeriodo_fine();
+              //  System.out.println(dataI);
+              //  System.out.println(dataF+"\n\n");
+                
+                
+                if(dataNow.after(dataI) && dataNow.before(dataF)){
+                    throw new QuestionarioException("Impossibile eliminare un questionario attivo");
+                }
+                
+                storageQ.delete(daCancellare);
+            } catch (SQLException e) {
+                throw new QuestionarioException("Questionario non trovato");
+            }
+        } 
         finally{
             db.chiudiConnessione();
         }
@@ -120,6 +143,8 @@ public class ControlQuestionario {
     QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
+        DBDomandaQuestionario storageD = new DBDomandaQuestionario(db);
+        DBCampoDomandaQuestionario storageC = new DBCampoDomandaQuestionario(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -127,6 +152,20 @@ public class ControlQuestionario {
             try {
                 if(!storage.replace(storage.getQuestionario(idQuestionario), newQuestionario))
                     throw new QuestionarioException("Inserimento domande nel questionario fallito");
+                
+                List<DomandaQuestionario> domande = newQuestionario.getDomande();
+                
+                for(DomandaQuestionario d: domande)
+                    if(!storageD.isDomandaInQuestionario(d.getId(), idQuestionario)){
+                        storageD.inserisci(d);                       
+                        List<CampoDomandaQuestionario> campi = d.getCampi();
+                        for(CampoDomandaQuestionario c:campi)
+                            storageC.inserisci(c);
+                    }
+                        
+                
+                
+                
             } catch (SQLException e) {
                 new QuestionarioException("Impossibile scrivere nel Database");
             }
