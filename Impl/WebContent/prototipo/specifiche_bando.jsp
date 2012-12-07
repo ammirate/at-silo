@@ -1,12 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 <%@
 	include file="atsilo_files/header.jsp"%>
 <%@
 	include file="atsilo_files/modifica_specifiche_bando.jsp"%>
+
+
+<script type="text/javascript">
+	function cambiaValori(slf){
+		document.getElementById("im_bando").setAttribute("action","http://localhost:8080/Atsilo/ServletControlBandoIM");
+		document.getElementById("inizioB").removeAttribute("readonly");
+		document.getElementById("fineB").removeAttribute("readonly");
+		document.getElementById("inizioP").removeAttribute("readonly");
+		document.getElementById("fineP").removeAttribute("readonly");
+		document.getElementById("postiD").removeAttribute("readonly");
+		document.getElementById("fineR").removeAttribute("readonly");
+		document.getElementById("mod").setAttribute("value","Salva");
+		slf.onClick=null;
+		return false;
+	}
+</script>
+
+
 <%
 	if ((request.getParameter("successo")) != null) {
-		if (request.getParameter("successo").equals("ok")) {
+		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}
 		else {
@@ -14,6 +30,9 @@
 		}
 	}
 %>
+
+
+
 
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -38,47 +57,47 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 				<td><table border="0">
 						<tbody>
 							<tr>
-								<td class="tplTitolo"><form name="creazione_account"
+								<td class="tplTitolo"><form name="bando" id="im_bando"
 										action="" method="post">
 										<table class="tabelle_form">
 											<tr>
 												<td>Data inizio bando</td>
 												<td><input name="iniziobando" type="text" id="inzioB"
-													maxlength="16" value="<%=dataInizioBando%>"  /></td>
+													maxlength="16" value="<%=dataInizioBando%>" readonly="readonly"  /></td>
 											</tr>
 											<tr>
 												<td>Data fine bando</td>
 												<td><input name="finebando" type="text" id="fineB"
-													maxlength="20" value="<%=dataFineBando%>"  /></td>
+													maxlength="20" value="<%=dataFineBando%>" readonly="readonly" /></td>
 											</tr>
 											<tr>
 											<tr>
 												<td>Data inizio presentazione rinuncia</td>
 												<td><input name="iniziopresentazione" type="text"
-													id="inizioP" maxlength="16"  /></td>
+													id="inizioP" maxlength="16"  value="<%=dataInizioPresentazione%>" readonly="readonly" /></td>
 											</tr>
 											<tr>
 												<td>Data fine presentazione rinuncia</td>
 												<td><input name="finepresentazione" type="text"
-													id="fineP" maxlength="20"  /></td>
+													id="fineP" maxlength="20" value="<%=dataFinePresentazione%>" readonly="readonly" /></td>
 											</tr>
 											<tr>
 												<td>Data fine rinuncia</td>
-												<td><input name="finerinuncia" type="text" id="fineR"
-													 /></td>
+												<td><input name="finerinuncia" type="text" id="fineR" value="<%=dataFineRinuncia%>"
+													 readonly="readonly" /></td>
 											</tr>
 											<tr>
 												<td>Posti disponibili</td>
 												<td><input name="postidisp" type="text" id="postiD"
-													size="7" maxlength="4"  /></td>
+													size="7" maxlength="4" value="<%=posti%>" readonly="readonly" /></td>
 											</tr>
 											<tr>
 												<td>&nbsp;</td>
 												<td>&nbsp;</td>
 											</tr>
 											<td></td>
-											<td><input type="submit" name="modifica"
-												value="" onclick="" /></td>
+											<td><input type="submit" name="modifica" id="mod"
+												value="Modifica" onClick="return cambiaValori(this)" /></td>
 											</tr>
 
 										</table>
