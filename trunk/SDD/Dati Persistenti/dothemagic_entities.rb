@@ -87,7 +87,7 @@ end
 # ent is supposed to be an entity
 #######################################
 def parse_attributes_description(f, ent)
-	expr = /(.*?):([^\n]*)/
+	expr = /(.*?): *([^\n]*)/
 	attr = ent.attributi
 	l = attr.size
 	for i in 0..l-1
@@ -100,7 +100,18 @@ def parse_attributes_description(f, ent)
 		end while m == nil
 		
 		attr_name = m[1].strip.upcase
-		if not attr.has_key?(attr_name) then
+		
+		if attr_name.downcase == "nome dell'entità" then
+			puts "ERROR: descrizione mancante per"
+			for a in attr.values
+				if  a.descrizione == nil then
+					puts "\t#{a.nome}"
+				end
+			end
+			exit 1
+		end
+		
+		while not attr.has_key?(attr_name)
 			puts "Attributo '#{attr_name}' non trovato in #{ent.nome}"
 			puts "Attributi disponibili:"
 			for a in attr.keys
@@ -144,8 +155,9 @@ def parse_entity(f)
 			end
 			
 			#Parse descriptions
-			while not f.readline.chomp.strip == "Descrizione Attributi"
+			while not (l = f.readline.chomp.strip.downcase) == "descrizione attributi"
 				puts "Mi aspettavo la stringa 'Descrizione attributi' per l'entita' '#{e.nome}'"
+				puts "\tTrovato '#{l}'"
 			end
 			
 			parse_attributes_description(f, e)
