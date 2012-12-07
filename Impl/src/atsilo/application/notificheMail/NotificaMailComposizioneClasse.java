@@ -1,18 +1,18 @@
 /**
- *-----------------------------------------------------------------
+ * -----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
- *-----------------------------------------------------------------
- * FILE: NotificaLicenzimaneto.java
- *-----------------------------------------------------------------
+ * -----------------------------------------------------------------
+ * FILE: NotificaMailComposizioneClasse.java
+ * -----------------------------------------------------------------
  * PROGETTO: Atsilo
- *-----------------------------------------------------------------
+ * -----------------------------------------------------------------
  * OWNER
- * Bottiglieri Gianfranco, 25/11/2012 
+ * Bottiglieri Gianfranco, 25/11/2012
  * REVISION
  * nome revisore, data revisione
- *-----------------------------------------------------------------
- **/
+ * -----------------------------------------------------------------
+ */
 package atsilo.application.notificheMail;
 
 import java.util.ArrayList;
@@ -21,12 +21,13 @@ import javax.mail.MessagingException;
 
 import atsilo.entity.Utente;
 
+
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: NotificaLicenziamento.java
+ * FILE: NotificaComposizioneClasse.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -36,25 +37,25 @@ import atsilo.entity.Utente;
  */
 
 /**
- * Classe MessaggioLicenziamento
+ * Classe NotificaMailComposizioneClasse
  * <Descrizione classe>
- * classe che invia ad membro o membri del Personale dell'Asilo,un email che gli notifica l'avvenuto licenziamento.
- * 
+ * classe che invia la notifica email della composizione della classe di un evento.
+ *
  */
-public class NotificaLicenziamento implements Messaggio{
+public class NotificaMailComposizioneClasse extends NotificaMail {
     //Logger
     //private static final java.util.Logger LOG = ...
     
     //Variabili di istanza
-    private ArrayList<Utente> destinatari;
-    
-    
+
+
     //Costruttori
     
     /**
+     * 
      * @param destinatari
      */
-    public NotificaLicenziamento(ArrayList<Utente> destinatari) 
+    public NotificaMailComposizioneClasse (ArrayList<Utente> destinatari) 
     {
         super();
         this.destinatari = destinatari;
@@ -73,7 +74,7 @@ public class NotificaLicenziamento implements Messaggio{
             emailDest= utente.getEmail();
             oggetto="Notifica di Licenziamento";
             testo="Caro Signore/a "+utente.getNome() +" "+utente.getCognome()+" n la informiamo con nostro dispiacere che è stato\\a " +
-            		"licenziato  per ulteriori informazioni contatti la segreteria. \n NON RISPONDA A QUESTA EMAIL";
+                        "licenziato  per ulteriori informazioni contatti la segreteria. \n NON RISPONDA A QUESTA EMAIL";
             
             try 
             {
