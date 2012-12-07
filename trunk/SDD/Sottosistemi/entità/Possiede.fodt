@@ -477,7 +477,7 @@
     <table:table-column table:style-name="Tabella1.A" table:number-columns-repeated="5"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A1" table:number-columns-spanned="5" office:value-type="string">
-      <text:h text:style-name="Heading_20_4" text:outline-level="4">Registro</text:h>
+      <text:h text:style-name="Heading_20_4" text:outline-level="4">Possiede</text:h>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
@@ -523,67 +523,33 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Classe</text:p>
+      <text:p text:style-name="Table_20_Contents">Retta</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Integer(11)</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">NO</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Foreign</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Anno</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">NO</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"></text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Educatore didattico</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">NO</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Foreign</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">ID</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Integer(11)</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">SÌ</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">primary</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Extra</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Integer(11)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Foreign</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents"></text:p>
@@ -595,26 +561,14 @@
     <table:table-column table:style-name="Tabella2.A"/>
     <table:table-row table:style-name="Tabella2.1">
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">Classe</text:p>
-      <text:p text:style-name="Definizione_20_Valore">classe a cui appartiene il REGISTRO.</text:p>
+      <text:p text:style-name="Definizione_20_Nome">Retta</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella2.1">
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">Anno</text:p>
-      <text:p text:style-name="Definizione_20_Valore">anno a cui si riferisce il REGISTRO.</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella2.1">
-     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">Educatore didattico</text:p>
-      <text:p text:style-name="Definizione_20_Valore">educatore didattico del REGISTRO.</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row table:style-name="Tabella2.1">
-     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">ID</text:p>
-      <text:p text:style-name="Definizione_20_Valore">identifico univico del REGISTRO.</text:p>
+      <text:p text:style-name="Definizione_20_Nome">Extra</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
