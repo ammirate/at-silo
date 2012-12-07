@@ -127,9 +127,15 @@ public class ControlGestioneBando {
         }
         try {
             try {
-                dbBando.modificaintervalli(dataInizioBando, dataFineBando,
-                        dataInizioPresentazioneRinuncia, 
-                        dataFinePresentazioneRinuncia, dataFineRinuncia);
+                Bando bando=dbBando.getBando();
+                bando.setDataInizioBando(dataInizioBando);
+                bando.setDataFineBando(dataFineBando);
+                bando.setDataInizioPresentazioneRinuncia(dataInizioPresentazioneRinuncia);
+                bando.setDataFinePresentazioneRinuncia(dataFinePresentazioneRinuncia);
+                bando.setDataFineRinuncia(dataFineRinuncia);
+                
+                dbBando.replace(dbBando.getBando(), bando);
+                
             } catch (SQLException e) 
             {
                 throw new DBConnectionException("Connessione Fallita");
@@ -148,7 +154,9 @@ public class ControlGestioneBando {
         }
         try {
             try {
-                dbBando.modificaPostiDisponibili(postiDisponibili);
+                Bando bando=dbBando.getBando();
+                bando.setPostiDisponibili(postiDisponibili);
+                dbBando.replace(dbBando.getBando(), bando);
             } catch (SQLException e) 
             {
                 throw new DBConnectionException("Connessione Fallita");
