@@ -29,24 +29,31 @@ import java.util.Map;
  */
 public class StatisticheQuestionario {
  
-    public StatisticheQuestionario(Questionario questionario)
-    {
+    
+    /**
+     * Costruttore
+     * @param questionario
+     */
+    public StatisticheQuestionario(Questionario questionario){
        this.questionario= questionario;
        risposte = new HashMap<String,Map<String, Integer>>();
     }
     
-    public void setRisposte (HashMap<String,Map<String, Integer>> risposte)
-    {
+    
+    
+    public void setRisposte (HashMap<String,Map<String, Integer>> risposte){
         this.risposte=risposte;
     }
     
-    public HashMap<String,Map<String, Integer>> getRisposte()
-    {
+    
+    
+    public HashMap<String,Map<String, Integer>> getRisposte(){
         return risposte;
     }
     
-    public Integer getPercentualiFromDomanda(String domanda, String campo_risposte)
-    {
+    
+    
+    public Integer getPercentualiFromDomanda(String domanda, String campo_risposte){
       Map<String, Integer> m=risposte.get(domanda);
       return m.get(campo_risposte);
       
