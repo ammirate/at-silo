@@ -84,7 +84,7 @@ public class DBAttivita extends DBBeans<Attivita> {
         
         res.put("titolo","titolo");
         res.put("descrizione","descrizione");
-        res.put("Programma_educativo_settimanale","progEdSettimanale");
+        res.put("progEdSettimanale","Programma_educativo_settimanale");
         res.put("categoria","categoria");
         res.put("registro","registro");
         
@@ -115,12 +115,12 @@ public class DBAttivita extends DBBeans<Attivita> {
         Attivita temp=new Attivita();
         int reg;
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo = ?");
+                " SELECT * FROM " + tabella.getNomeTabella() + " WHERE titolo = ? ");
             tabella.setParam(stmt, 1, "titolo", titolo);
             ResultSet res = stmt.executeQuery();  
         if(res.next())
         {
-            
+            temp.setTitolo(titolo);
             temp.setCategoria(res.getString("categoria"));
             temp.setDescrizione(res.getString("descrizione"));
             ProgrammaEducativoSettimanale p=new ProgrammaEducativoSettimanale();
@@ -150,11 +150,12 @@ public class DBAttivita extends DBBeans<Attivita> {
          Attivita temp=new Attivita();
         int reg;
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE categoria = ?");
+                " SELECT * FROM " + tabella.getNomeTabella() + " WHERE categoria = ? ");
             tabella.setParam(stmt, 1, "categoria", cat);
             ResultSet res = stmt.executeQuery();  
         if(res.next())
         {
+            temp.setTitolo(res.getString("titolo"));
             temp.setCategoria(res.getString("categoria"));
             temp.setDescrizione(res.getString("descrizione"));
             ProgrammaEducativoSettimanale p=new ProgrammaEducativoSettimanale();
