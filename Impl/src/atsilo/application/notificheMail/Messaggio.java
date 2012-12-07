@@ -15,6 +15,10 @@
  **/
 package atsilo.application.notificheMail;
 
+import java.util.ArrayList;
+
+import atsilo.entity.Utente;
+
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
@@ -30,6 +34,10 @@ package atsilo.application.notificheMail;
  */
 
 public interface Messaggio {
-    void invia()throws Throwable;
     
+    String getTestoMail();
+    
+    String getOggettoMail();
+    
+    ArrayList<Utente> getDestinatariMail();
 }
