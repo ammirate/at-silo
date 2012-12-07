@@ -57,48 +57,33 @@ public class NotificaMailEvento extends NotificaMail {
      * @param evento 
      *  di cui si notifica la creazione
      */
-    public NotificaMailEvento(ArrayList<Utente> destinatari,Evento evento) 
+    public NotificaMailEvento(ArrayList<Utente> destinatari,String oggetto,String testo,Evento evento) 
     {
-        super();
-        this.destinatari = destinatari;
+        super(destinatari, oggetto, testo);
         this.evento=evento;
     }
-    
-    
-    //Metodi
-    /**
-     * metodo che invia l'email usando il metodo statico di CreazioneMail e passandogli i campi destinatario email oggetto e testo
-     */
-    public void invia() throws Throwable
+    public String getTestoMail() 
     {
-        String emailDestinatario="";
-        String oggetto="";
-        String testo="";
-        
-        for (Utente utente: destinatari) 
-        {
-            emailDestinatario= utente.getEmail();
-            oggetto="Notifica Evento";
-            testo="Caro Signore/a "+utente.getNome() +" "+utente.getCognome()+
-                  " n la informiamo che il giorno  " + evento.getData() +
-                  "si terra l'evento dal nome "+evento.getNome()+
-                  "al quale parteciperanno le seguenti classi "+ evento.getClassi()+
-                  "organizato da " + evento.getOrganizzatore()+
-                  "\n NON RISPONDA A QUESTA EMAIL";
-            
-            try 
-            {
-                    CreazioneMail.inviaMail(emailDestinatario,oggetto, testo);
-                    System.out.println("Invio messaggio OK!");
-            } 
-                    catch (MessagingException e) 
-                    {
-                            e.printStackTrace();
-                            System.out.println("Invio messaggio FALLITO!");
-                    }
-
-            
-        }
-        
+        String testo= this.getTesto()+"L'evento si chimera"+evento.getNome();
+        return testo;
     }
+
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getOggettoMail()
+     */
+    public String getOggettoMail() {
+        
+        String oggetto="Notifica di Creazione Evento"+this.getOggetto();
+        return oggetto;
+    }
+
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getDestinatariMail()
+     */
+    public ArrayList<Utente> getDestinatariMail() 
+    {
+        return this.getDestinatariMail();
+    }
+    
+
 }

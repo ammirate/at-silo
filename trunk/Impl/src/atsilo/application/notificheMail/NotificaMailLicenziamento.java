@@ -46,47 +46,41 @@ public class NotificaMailLicenziamento extends NotificaMail {
     //private static final java.util.Logger LOG = ...
     
     //Variabili di istanza
-
+    private Utente licenziato;
 
     //Costruttori
     
     /**
      * @param destinatari
      */
-    public NotificaMailLicenziamento(ArrayList<Utente> destinatari) 
+    public NotificaMailLicenziamento(ArrayList<Utente> destinatari,String oggetto,String testo,Utente licenziato) 
     {
-        super();
-        this.destinatari = destinatari;
+        super(destinatari, oggetto, testo);
+        this.licenziato=licenziato;
     }
-    
-    
-    //Metodi
-    public void invia() throws Throwable
-    {
-        String emailDest="";
-        String oggetto="";
-        String testo="";
-        
-        for (Utente utente: destinatari) 
-        {
-            emailDest= utente.getEmail();
-            oggetto="Notifica di Licenziamento";
-            testo="Caro Signore/a "+utente.getNome() +" "+utente.getCognome()+" n la informiamo con nostro dispiacere che è stato\\a " +
-            		"licenziato  per ulteriori informazioni contatti la segreteria. \n NON RISPONDA A QUESTA EMAIL";
-            
-            try 
-            {
-                    CreazioneMail.inviaMail(emailDest,oggetto, testo);
-                    System.out.println("Invio messaggio OK!");
-            } 
-                    catch (MessagingException e) 
-                    {
-                            e.printStackTrace();
-                            System.out.println("Invio messaggio FALLITO!");
-                    }
 
-            
-        }
-        
+    public String getTestoMail() 
+    {
+        String testo= "Caro sign."+licenziato.getCognome()+this.getTesto();
+        return testo;
     }
+
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getOggettoMail()
+     */
+    public String getOggettoMail() {
+        
+        String oggetto="Notifica di composizione di classe"+this.getOggetto();
+        return oggetto;
+    }
+
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getDestinatariMail()
+     */
+    public ArrayList<Utente> getDestinatariMail() 
+    {
+        return this.getDestinatariMail();
+    }    
+    
+
 }

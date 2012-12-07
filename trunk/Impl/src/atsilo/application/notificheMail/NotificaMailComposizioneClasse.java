@@ -37,58 +37,46 @@ import atsilo.entity.Utente;
  */
 
 /**
- * Classe NotificaMailComposizioneClasse
- * <Descrizione classe>
- * classe che invia la notifica email della composizione della classe di un evento.
- *
+ * Classe NotificaMailComposizioneClasse <Descrizione classe> classe che invia
+ * la notifica email della composizione della classe di un evento.
+ * 
  */
 public class NotificaMailComposizioneClasse extends NotificaMail {
-    //Logger
-    //private static final java.util.Logger LOG = ...
+    //variabili di istanza
+    String linkpagina;
     
-    //Variabili di istanza
-
-
-    //Costruttori
-    
-    /**
-     * 
+    /**costruttore
      * @param destinatari
      */
-    public NotificaMailComposizioneClasse (ArrayList<Utente> destinatari) 
-    {
-        super();
-        this.destinatari = destinatari;
+    public NotificaMailComposizioneClasse(ArrayList<Utente> destinatari,
+            String oggetto, String testo,String linkpagina) {
+        super(destinatari, oggetto, testo);
+        this.linkpagina=linkpagina;
     }
-    
-    
-    //Metodi
-    public void invia() throws Throwable
-    {
-        String emailDest="";
-        String oggetto="";
-        String testo="";
-        
-        for (Utente utente: destinatari) 
-        {
-            emailDest= utente.getEmail();
-            oggetto="Notifica di Licenziamento";
-            testo="Caro Signore/a "+utente.getNome() +" "+utente.getCognome()+" n la informiamo con nostro dispiacere che è stato\\a " +
-                        "licenziato  per ulteriori informazioni contatti la segreteria. \n NON RISPONDA A QUESTA EMAIL";
-            
-            try 
-            {
-                    CreazioneMail.inviaMail(emailDest,oggetto, testo);
-                    System.out.println("Invio messaggio OK!");
-            } 
-                    catch (MessagingException e) 
-                    {
-                            e.printStackTrace();
-                            System.out.println("Invio messaggio FALLITO!");
-                    }
 
-            
-        }
-        
+    public String getTestoMail() 
+    {
+        String testo= this.getTesto()+""+linkpagina;
+        return testo;
     }
+
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getOggettoMail()
+     */
+    @Override
+    public String getOggettoMail() {
+        
+        String oggetto="Notifica di composizione di classe"+this.getOggetto();
+        return oggetto;
+    }
+
+    /**
+     * @see atsilo.application.notificheMail.NotificaMail#getDestinatariMail()
+     */
+    @Override
+    public ArrayList<Utente> getDestinatariMail() 
+    {
+        return this.getDestinatariMail();
+    }
+    
 }
