@@ -28,6 +28,7 @@
 
  %>
 <form id="dati_bando" name="dati_bando" action="" method="post" >
+<input name="chiamante" type="hidden" id="chiamante" value="genitore">
 <table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
