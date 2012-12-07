@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import atsilo.entity.Assenza;
+import atsilo.entity.Bando;
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.DomandaQuestionario;
@@ -63,7 +64,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         res.put("id","id");
         res.put("punteggio","punteggio");
         res.put("posizione","posizione");
-        res.put("data_presentazione","dataPresentazione");
+        res.put("dataPresentazione","data_resentazione");
         res.put("genitore","genitore");
         res.put("bambino","bambino");
         
@@ -99,9 +100,9 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             String ba=r.getString("bambino");
            DomandaIscrizione temp = new DomandaIscrizione();
             temp.setId(r.getInt("id"));
-            temp.setPosizione(r.getString("posizione"));
+            temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
-            temp.setDataPresentazione(r.getString("dataPresentazione"));
+            temp.setDataPresentazione(r.getDate("dataPresentazione"));
             temp.setBambino(b);
             temp.setGenitore(g);
             return temp;
@@ -119,13 +120,13 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         DomandaIscrizione d=new DomandaIscrizione();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodice_Fiscale());
+            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
             ResultSet res = stmt.executeQuery();
         for(DomandaIscrizione t : iteraResultSet(res))
         {
             
             Bambino ba=t.getBambino();
-            if(ba.getCodice_Fiscale().equals(b.getCodice_Fiscale()))
+            if(ba.getCodiceFiscale().equals(b.getCodiceFiscale()))
             {
                 lista.add(t);
             }
@@ -181,11 +182,13 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         {
             String ge=res.getString("genitore");
             String ba=res.getString("bambino");
+            g.setCodiceFiscale(ge);
+            b.setCodiceFiscale(ba);
             d.setBambino(b);
             d.setGenitore(g);
-            d.setDataPresentazione(res.getString("data_presentazione"));
+            d.setDataPresentazione(res.getDate("data_presentazione"));
             d.setId(res.getInt("id"));
-            d.setPosizione(res.getString("posizione"));
+            d.setPosizione(res.getInt("posizione"));
             d.setPunteggio(res.getInt("punteggio"));
         }
         res.close();
@@ -231,7 +234,32 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         res.close();
         return lista;
         }
-    
-    
-    
+    /**
+     * riceve l'id di una domanda d'iscrizione e vede se la sua posizione rientra nella graduatoria
+     * @param id è l'identificativo della domanda d'iscrizione
+     * @return
+     * @throws SQLException
+     */
+    public String getValoreStatoIscrizione(int id) throws SQLException{
+        
+        
+        DomandaIscrizione d=new DomandaIscrizione();
+        d=ricercaDomandaDaId(id);
+        
+        DBBando b=new DBBando(db);
+        Bando bando= new Bando();
+        bando=b.cercaBandoAttivoPerData(d.getDataPresentazione());
+        
+        if(bando.getPostiDisponibili() > d.getPosizione())
+            return "idoneo";
+        else
+            return "non idoneo";
+       }
+    // da implementare
+    public boolean modificaCertificatiIscrizione(int id, boolean vaccinazioni, boolean malattie, boolean privacy) throws SQLException 
+    {
+        return true;
+        
+        
+    }
 }
