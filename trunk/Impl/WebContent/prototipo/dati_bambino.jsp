@@ -15,6 +15,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
 include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
 <form>
+<input name="chiamante" type="hidden" id="chiamante" value="bambino">
   <table width="80%" border="0" cellspacing="0">
   <tr>
     <td>&nbsp; </td></tr>
