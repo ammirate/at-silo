@@ -83,8 +83,8 @@ public class DBBando extends DBBeans<Bando> {
         Bando b = new Bando();
         if (r.next()) {
             b.setiD(r.getInt("id"));
-            b.setDataInizio(r.getString("data_inizio"));
-            b.setDataFine(r.getString("data_fine"));
+            b.setDataInizioBando(r.getString("data_inizio"));
+            b.setDataFineBando(r.getString("data_fine"));
         }
         
         return b;
@@ -130,8 +130,8 @@ public class DBBando extends DBBeans<Bando> {
         ResultSet r = stmt.executeQuery();
         if (r.next()) {
             b.setiD(id);
-            b.setDataInizio(r.getString("data_inizio"));
-            b.setDataFine(r.getString("data_fine"));
+            b.setDataInizioBando(r.getString("data_inizio"));
+            b.setDataFineBando(r.getString("data_fine"));
             
         }
         r.close();
@@ -161,8 +161,8 @@ public class DBBando extends DBBeans<Bando> {
         ResultSet r = stmt.executeQuery();
         if (r.next()) {
             b.setiD(r.getInt("id"));
-            b.setDataInizio(r.getString("data_inizio"));
-            b.setDataFine(r.getString("data_fine"));
+            b.setDataInizioBando(r.getString("data_inizio"));
+            b.setDataFineBando(r.getString("data_fine"));
             lb.add(b);
             
         }
@@ -190,8 +190,8 @@ public class DBBando extends DBBeans<Bando> {
         ResultSet r = stmt.executeQuery();
         if (r.next()) {
             b.setiD(r.getInt("id"));
-            b.setDataInizio(r.getString("data_inizio"));
-            b.setDataFine(r.getString("data_fine"));
+            b.setDataInizioBando(r.getString("data_inizio"));
+            b.setDataFineBando(r.getString("data_fine"));
             lb.add(b);
             
         }
@@ -200,38 +200,52 @@ public class DBBando extends DBBeans<Bando> {
     }
     
     /**
-     * dato che il bando è uno solo invece di fare i metodi di ricerca fammi un
-     * solo metodo che mi restituisce un bando con il record completo
-     *  e i metodi di modifica dei campi dei record 
-     * @return
-     */
-    public Bando getBAndo() {
-        return null;
-    }
-    /**
+     * restituisce l'unico bando presente nel database
      * 
-     * @param dataInizioBando
-     * @param dataFineBando
-     * @param dataInizioPresentazioneRinuncia
-     * @param dataFinePresentazioneRinuncia
-     * @param dataFineRinuncia
+     *  
      * @return
+     * @throws SQLException 
      */
+    public Bando getBAndo() throws SQLException {
+        
+        Bando b=new Bando();
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+                + tabella.getNomeTabella());
+        
+        ResultSet r = stmt.executeQuery();
+        
+        b.setiD(r.getInt("id"));
+        b.setDataInizioBando(r.getString("data_inizio"));
+        b.setDataFineBando(r.getString("data_fine"));
+        
+        return b;
+    }
+ 
+  
     
-    public boolean modificaintervalli (String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
-            String dataFinePresentazioneRinuncia, String dataFineRinuncia)
-    {
-        return true;
-    }
     /**
-     * 
-     * @param postiDisponibili
+     * metodo che riceve una data e da in output un bando che è in corso in quella data. la data deve essere compresa tra data_inizio e data_fine
+     * @param d data da ricercare nella tabella dei bandi.
      * @return
-     * 
+     * @throws SQLException
      */
-    public boolean modificaPostiDisponibili( int postiDisponibili)
-    {
-        return true;
-    }
+      public Bando cercaBandoAttivoPerData(Date d) throws SQLException
+      {
+          Bando b=new Bando();
+          
+          ResultSet r= tabella.getDatabase().directQuery("SELECT * FROM" + tabella.getNomeTabella() + " WHERE data_inizio <= " + d + " AND data_fine >= " + d);
+          
+             
+          if(r.next())
+          {
+              b.setiD(r.getInt("id"));
+              b.setDataInizioBando(r.getString("data_inizio"));
+              b.setDataFineBando(r.getString("data_fine"));
+              
+              
+          }
+             r.close();
+          return b;
+      }
     
 }
