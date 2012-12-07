@@ -20,7 +20,7 @@ public class ContestoRicerca {
     /**
      * @associates <{application.AlgoritmoRicerca}>
      */
-    private List AlgoritmiRicerca;
+    private List<AlgoritmoRicerca> AlgoritmiRicerca;
 
     public ContestoRicerca();
     

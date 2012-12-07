@@ -25,7 +25,8 @@ import java.util.List;
  */
 
 public class ControlServizio {
-private static final ControlServizio cs;
+    private static final ControlServizio cs;
+
     private ControlServizio(){
     
 }

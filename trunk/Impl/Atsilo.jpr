@@ -38,6 +38,7 @@
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="EJB"/>
+         <string v="EJB-Modeling"/>
          <string v="HTML"/>
          <string v="JAVASCRIPT"/>
          <string v="JSP"/>
