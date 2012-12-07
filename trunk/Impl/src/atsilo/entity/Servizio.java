@@ -23,7 +23,7 @@ public class Servizio {
     /**
      * La variabile bambino è nulla c'è bisogno di una lettura della classe Bambino
      */
-    private Bambino bambino;
+    private String bambino;
     
     /**
      * La variabile orarioUtente è nulla c'è bisogno di una lettura della classe OrarioUtente
@@ -45,7 +45,7 @@ public class Servizio {
      * @param orarioUtente è settato dopo la lettura
      */
     public Servizio(String id, String orarioInizio, String orarioFine,
-            String pianoPasto, Bambino bambino, OrarioUtente orarioUtente) {
+            String pianoPasto, String bambino, OrarioUtente orarioUtente) {
         super();
         this.id = id;
         this.orarioInizio = orarioInizio;
@@ -122,7 +122,7 @@ public class Servizio {
      * Metodo che prende il parametro letto dalla classe Bambino
      * @return Bambino preso dalla lettura
      */
-    public Bambino getBambino() {
+    public String getBambino() {
             return bambino;
     }
 
@@ -130,7 +130,7 @@ public class Servizio {
      * Metodo che setta il parametro letto dalla classe Bambino
      * @param bambino è settato dopo la lettura
      */
-    public void setBambino(Bambino bambino) {
+    public void setBambino(String bambino) {
             this.bambino = bambino;
     }
     
