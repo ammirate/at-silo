@@ -91,7 +91,7 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean cancellaClasse(String id, Bambino bambino) throws ClasseException, DBConnectionException{
+    boolean inserisciBambinoNellaClasse(String id, Bambino bambino) throws ClasseException, DBConnectionException{
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 
         if(!db.apriConnessione())

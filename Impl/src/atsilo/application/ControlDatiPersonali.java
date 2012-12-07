@@ -4,6 +4,9 @@ package atsilo.application;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import atsilo.entity.*;
 import atsilo.exception.*;
 import atsilo.storage.*;
@@ -31,7 +34,7 @@ public class ControlDatiPersonali {
     /**
      * Contructor
      */
-    ControlDatiPersonali() {
+    public ControlDatiPersonali() {
     }
 
 
@@ -42,11 +45,9 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    String getValoreStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
-        /* I dati mostrati dal sistema sono: lo stato dell'iscrizione, 
-         * se attivo o meno, saldo pagamenti, prossimo pagamento, 
-         * eventuali ritardi nei pagamenti, infine una parte dedicata ad avvisi vari.
-         * Non trovo queste informazioni nelle entity, non so come comportarmi*/
+    public String getValoreStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+        /* TODO
+         * questo metodo è collegato ad un control di bassa priorità, per cui verrà implementato in seguito*/
         return "";
     }
 
@@ -58,17 +59,20 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws GenitoreException
      * @throws SQLException 
+     * @throws InserimentoDatiException 
      */
-    Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException{
+    public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
         Database db = new Database();
         StubGenitore stub = new StubGenitore(db);
-        //DBGenitore genitore = new DBGenitore(db);
+
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(codiceFiscale.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");   
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{            
             Genitore g = stub.ricercaGenitore(codiceFiscale);
-            //Genitore g = genitore.ricercaGenitoreCf(codiceFiscale);
             if(g == null)
                 throw new GenitoreException("Genitore non trovato");
             return g;
@@ -86,17 +90,20 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws BambinoException
      * @throws SQLException 
+     * @throws InserimentoDatiException 
      */
-    Bambino getDatiBambino(String codiceFiscale) throws BambinoException, DBConnectionException, SQLException{
+    public Bambino getDatiBambino(String codiceFiscale) throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException{
         Database db = new Database();
         StubBambino stub = new StubBambino(db);
-        //DBBambino bambino = new DBBambino(db);
-        
+
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(codiceFiscale.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+   
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             Bambino b = stub.ricercaBambino(codiceFiscale);
-            //Bambino b = bambino.ricercaBambinoPerCodFiscale(codiceFiscale);
             if(b == null)
                 throw new BambinoException("Bambino non trovato");
             return b;
@@ -112,11 +119,16 @@ public class ControlDatiPersonali {
      * @return utente
      * @throws DBConnectionException 
      * @throws UtenteException
+     * @throws InserimentoDatiException 
      */
-    public Utente getValoriUtente(String cf) throws UtenteException, DBConnectionException{
+    public Utente getValoriUtente(String cf) throws UtenteException, DBConnectionException, InserimentoDatiException{
         Database db = new Database();
         StubUtente stub = new StubUtente(db);
         
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(cf.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+                
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -139,8 +151,7 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws DomandaIScrizioneException
      */
-    //da completare
-    public boolean modificaCertificatiIscrizione(int id, Boolean vaccinazioni, Boolean malattie, Boolean privacy) throws DomandaIscrizioneException, DBConnectionException{
+    public boolean modificaCertificatiIscrizione(int id, String vaccinazioni, String malattie, String privacy) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
@@ -151,10 +162,15 @@ public class ControlDatiPersonali {
             if(domandaIscrizioneDaModificare == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
             DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
-            //si presume che la domanda iscrizione contenga tre valodi booleani relativo ai tre certificati
-            //domanaIsczizione.setCertificatoVaccinazioni(vaccinazioni);
-            //domanaIsczizione.setCertificatoMalattie(malattie);
-            //domanaIsczizione.setCertificatoPrivacy(privacy);
+            
+            //vengono modificati i campi interessati ai certificati
+            if(vaccinazioni != null)
+               domandaIscrizione.setCertificatoVaccinazioni(vaccinazioni);
+            if(malattie != null)
+               domandaIscrizione.setCertificatoMalattie(malattie);
+            if(privacy != null)
+               domandaIscrizione.setCertificatoPrivacy(privacy);
+            
             if(!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
@@ -203,9 +219,10 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    // qui si dovrebbero inserire tipo di servizio desiderato e situazione sanitaria del bambino, ma non so cosa si intende
-    //se per situazione sanitaria intendiamo i tre tipo di certificati, allora per quello esiste già un metodo
     public boolean completaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+        /*
+         * TODO
+         * questo control è legato ad un control con bassa priorità ancora da implementare */
         return true;
     }
     

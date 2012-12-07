@@ -16,6 +16,7 @@ import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
 import atsilo.entity.Questionario;
+import atsilo.entity.Servizio;
 import atsilo.entity.Utente;
 import atsilo.exception.AccountException;
 import atsilo.exception.BambinoException;
@@ -60,25 +61,20 @@ public class ControlIscrizione {
      * @throws AccountException
      * @throws InserimentoDatiException 
      */
-    Boolean creaAccount(String cf, String username, Date dataNascita, String nome, String cognome,
+    public Boolean creaAccount(String username, Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
             String provinciaDomicilio) throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException{
         Database db = new Database();
         StubAccount stub = new StubAccount(db); 
         StubUtente stub2 = new StubUtente(db);
         
         //controllo sul codice fiscale che deve essere a 16 cifre
-        if(cf.length() != 16)
+        if(codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
-        
-        //controllo sulla data di Nascita da inserire
-        if((dataNascita.getMonth() > 12) || (dataNascita.getMonth() < 1) || (dataNascita.getDay() > 31) || 
-                (dataNascita.getDay() < 28)) 
-            throw new InserimentoDatiException("La data inserita non è valida");
         
         //controllo sulla mail
         Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
@@ -88,10 +84,13 @@ public class ControlIscrizione {
             throw new InserimentoDatiException("La mail inserita non è valida");
         
         //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
-        if((capDomicilio < 10000 || capDomicilio > 99999) || (capResidenza < 10000 || capResidenza > 99999))
+        if(capDomicilio.length() != 5)
+            throw new InserimentoDatiException("Il cap del domicilio non è valido");
+        if(capResidenza.length() != 5)
+            throw new InserimentoDatiException("Il cap della residenza non è valido");
         
  
-        if(stub2.ricercaUtente(cf) != null)
+        if(stub2.ricercaUtente(codiceFiscale) != null)
             throw new AccountException("L'utente esite già");
         //Generazione della password
         Random generatore = new Random(8);
@@ -131,7 +130,7 @@ public class ControlIscrizione {
      * @return true un caso di modifica effettuata
      *         false 
      */
-    boolean updateAccount(String username,String password,String email,String profilo_appartenenza){
+    public boolean updateAccount(String username,String password,String email,String profilo_appartenenza){
        // TODO
         //si attende sapere il parametro di ricerca dell'account da modificare
         return true;
@@ -145,10 +144,15 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws SQLException
      * @throws AccountException
+     * @throws InserimentoDatiException 
      */
-    Account getAccount(String codiceFiscale) throws AccountException, SQLException, DBConnectionException{
+    public Account getAccount(String codiceFiscale) throws AccountException, SQLException, DBConnectionException, InserimentoDatiException{
         Database db = new Database();
         StubAccount stub = new StubAccount(db);
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(codiceFiscale.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -171,7 +175,7 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    DomandaIscrizione getDomanda(int id) throws DomandaIscrizioneException, DBConnectionException{
+    public DomandaIscrizione getDomanda(int id) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
@@ -195,16 +199,29 @@ public class ControlIscrizione {
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws BambinoException
+     * @throws InserimentoDatiException 
      */
-    boolean inserisciIscritto(Date dataNascita, String nome, String cognome,
+    public boolean inserisciIscritto(Date dataNascita, String nome, String cognome,
             String codiceFiscale,  String comuneNascita,
             String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) throws BambinoException, DBConnectionException{
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) throws BambinoException, DBConnectionException, InserimentoDatiException{
+        
         Database db = new Database();
         StubBambino stub = new StubBambino(db); 
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(codiceFiscale.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+        
+        //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
+        if(capDomicilio.length() != 5)
+            throw new InserimentoDatiException("Il cap del domicilio non è valido");
+        if(capResidenza.length() != 5)
+            throw new InserimentoDatiException("Il cap della residenza non è valido");
+        
         Bambino bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
                 cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza,
                 provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
@@ -231,21 +248,23 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    public boolean inserisciDomandaIscrizione(String dataPresentazione, int iD, int punteggio,
-            String posizione, Genitore genitore, Bambino bambino, String statoDomanda,
+    public boolean inserisciDomandaIscrizione(Date dataPresentazione, int iD, int punteggio,
+           int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
             String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-            String condizioniCalcoloPunteggio, float isee) throws DomandaIscrizioneException, DBConnectionException{
+            String condizioniCalcoloPunteggio, float isee, Servizio servizio) throws DomandaIscrizioneException, DBConnectionException{
+        
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db); 
+
         DomandaIscrizione domandaIscrizione = new DomandaIscrizione(dataPresentazione, iD, punteggio,
                 posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
                 certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
                 genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
-                condizioniCalcoloPunteggio, isee);
-        //DBDomandaIscrizione di = new DBDomandaIscrizione(db);
+                condizioniCalcoloPunteggio, isee, servizio);
+
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -297,11 +316,15 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws BambinoException
      * @throws SQLException 
+     * @throws InserimentoDatiException 
      */
-    public Bambino eliminaIscritto(String cf) throws BambinoException, DBConnectionException, SQLException{
+    public Bambino eliminaIscritto(String cf) throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException{
         Database db = new Database();
         StubBambino stub = new StubBambino(db);
-        //DBBambino b = new DBBambino(db);
+
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(cf.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -326,26 +349,46 @@ public class ControlIscrizione {
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws GenitoreException
+     * @throws InserimentoDatiException 
      */
     public boolean inserisciGenitore(Date dataNascita, String nome, String cognome,
-            String codiceFiscale, String email, String comuneNascita,
-            String telefono, String cittadinanza, String indirizzoResidenza,
-            int numeroCivicoResidenza, int capResidenza, String comuneResidenza,
-            String provinciaResidenza, String indirizzoDomicilio,
-            int numeroCivicoDomicilio, int capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, List<Bambino> figli,
-            List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
-            String rapportiAteneoSalerno, String rapportiComuneFisciano,
-            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza) throws GenitoreException, DBConnectionException{
+    String codiceFiscale, String email, String comuneNascita,
+    String telefono, String cittadinanza, String indirizzoResidenza,
+    String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
+    String provinciaResidenza, String indirizzoDomicilio,
+    String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
+    String provinciaDomicilio, List<Bambino> figli,
+    List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
+    String rapportiAteneoSalerno, String rapportiComuneFisciano,
+    String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+    String rapportoParentela) throws GenitoreException, DBConnectionException, InserimentoDatiException{
+        
         Database db = new Database();
         StubGenitore stub = new StubGenitore(db);
-        //DBGenitore g = new DBGenitore(db);
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(codiceFiscale.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+        
+        //controllo sulla mail
+        Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
+        Matcher m = p.matcher(email);
+        boolean matchFound = m.matches();
+        if (!matchFound)
+            throw new InserimentoDatiException("La mail inserita non è valida");
+        
+        //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
+        if(capDomicilio.length() != 5)
+            throw new InserimentoDatiException("Il cap del domicilio non è valido");
+        if(capResidenza.length() != 5)
+            throw new InserimentoDatiException("Il cap della residenza non è valido");
+        
         Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, 
                 comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, 
                 capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio,
                 capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, 
                 dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano,
-                statusLavorativo, scadenzaContratto, categoriaAppartenenza);
+                statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -368,7 +411,7 @@ public class ControlIscrizione {
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
      */
-    String visualizzaStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+    public String visualizzaStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
@@ -385,7 +428,7 @@ public class ControlIscrizione {
         }
     }
 
-    ControlIscrizione() {
+    public ControlIscrizione() {
     }
 
     public static ControlIscrizione getIstance() {
