@@ -18,7 +18,7 @@ public class DBServizio extends DBBeans {
     private static final List<String> CHIAVE=creaChiave(); 
     
     public DBServizio(Database db){
-        super("Servizio",db);
+        super("servizio",db);
     }
 
     /**
@@ -43,15 +43,15 @@ public class DBServizio extends DBBeans {
         return Collections.unmodifiableList(res);
     }
 
-    public Servizio ricercaServizioPerBambino(Bambino b) throws SQLException {
-        Servizio s= null;
+    public Servizio ricercaServizioPerBambino(String b) throws SQLException {
+        Servizio s= new Servizio();
         ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE bambino =" + b.getCodice_Fiscale());
         if(r.next()){
             s.setId(r.getString("id"));
             s.setOrarioFine(r.getString("orario_fine"));
             s.setOrarioInizio(r.getString("orario_inizio"));
             s.setPianoPasto(r.getString("piano_pasto"));
-            s.setBambino((Bambino) r.getObject("bambino"));
+            s.setBambino(r.getString("bambino"));
             s.setOrarioUtente((OrarioUtente) r.getObject("orario_utente"));
         }
         r.close();

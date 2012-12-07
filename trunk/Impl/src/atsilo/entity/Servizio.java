@@ -28,7 +28,7 @@ public class Servizio {
     /**
      * La variabile orarioUtente è nulla c'è bisogno di una lettura della classe OrarioUtente
      */
-    private OrarioUtente orarioUtente;
+    private int orarioUtente;
 
     /**
      * Costruttore vuoto

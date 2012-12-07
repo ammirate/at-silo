@@ -18,7 +18,7 @@ package atsilo.entity;
 
 public class OrarioUtente {
     
-    private String id;
+    private int  id;
     private String oraInizio;
     private String oraFine;
     private String descrizione;
