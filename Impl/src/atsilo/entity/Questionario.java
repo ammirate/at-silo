@@ -197,7 +197,8 @@ public class Questionario {
     
     
     /**
-     * @return domande
+     * Restituisce tutte le domande del questionario
+     * @return domande che è un arrayList di DomandaQuestionario
      */
     public List<DomandaQuestionario> getDomande() {
         return domande;
@@ -206,10 +207,15 @@ public class Questionario {
     
     
     /**
-     * @param domande nuovo domande
+     * Setta tutte le domande di un questionario
+     * @param domande è un arrayList di DomandaQuestionario
      */
     public void setDomande(List<DomandaQuestionario> domande) {
+        
+        for(DomandaQuestionario d: domande)
+            d.setIdQuestionario(getId());
         this.domande = domande;
+
     }
     
     

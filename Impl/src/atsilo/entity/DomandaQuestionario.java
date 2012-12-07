@@ -1,5 +1,6 @@
 package atsilo.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -47,8 +48,9 @@ public class DomandaQuestionario {
         super();
         this.id = id;
         this.descrizione = descrizione;
-        this.campi = campi;
         this.idQuestionario = idQuestionario;
+        if(campi==null || campi.isEmpty())
+            this.campi = new ArrayList<CampoDomandaQuestionario>();
     }
     
     public void setId(int id) {
@@ -90,12 +92,16 @@ public class DomandaQuestionario {
      * @param campi nuovo campi
      */
     public void setCampi(List<CampoDomandaQuestionario> campi) {
+        for(CampoDomandaQuestionario c : campi)
+            c.setIdDomandaQuestionario(id);
         this.campi = campi;
     }
     
     
     public void aggiungiCampo(CampoDomandaQuestionario c){
+        c.setIdDomandaQuestionario(id);
         campi.add(c);
+        
     }
 
  
