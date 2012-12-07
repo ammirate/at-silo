@@ -39,7 +39,9 @@ import javax.mail.internet.MimeMessage;
  *-----------------------------------------------------------------
  */
 
-public class CreazioneMail {
+public class ControlNotificaMail {
+    
+    private static ControlNotificaMail INSTANCE = new ControlNotificaMail();
     
     //Metodi
     /**
@@ -53,7 +55,7 @@ public class CreazioneMail {
      * @throws MessagingException
      * @throws Throwable
      */
-    public static void inviaMail(String dest, String oggetto,String testoEmail) throws MessagingException, Throwable {
+    public void inviaMail(Messaggio messaggio) throws MessagingException, Throwable {
         
         // Creazione di una mail session
         String mittente ="atsilonoreply@gmail.com";
@@ -89,5 +91,9 @@ public class CreazioneMail {
         
         // Invio del messaggio
         Transport.send(message);
+    }
+    
+    public static ControlNotificaMail getInstance() {
+        return INSTANCE;
     }
 }
