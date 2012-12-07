@@ -146,7 +146,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     protected Assegnazione[] creaAssegnazioni(CampoDomandaQuestionario bean) {
         Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("domanda_questionario",bean.getIdDomandaQuestionario());
         Assegnazione DBDomandaQuestionario_assegnazione1 = new Assegnazione("risposta_questionario",bean.getIdRispostaQuestionario());
-        Assegnazione[] DBAssign = new Assegnazione[1];
+        Assegnazione[] DBAssign = new Assegnazione[2];
         DBAssign[0]=DBDomandaQuestionario_assegnazione;
         DBAssign[1]=DBDomandaQuestionario_assegnazione1;
         

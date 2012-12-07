@@ -213,7 +213,7 @@ public class DBRispostaQuestionario extends DBBeans {
      */
     protected Assegnazione[] creaAssegnazioni(RispostaQuestionario bean) {
         Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("domanda",bean.getIdDomanda());
-        Assegnazione[] DBAssign = new Assegnazione[0];
+        Assegnazione[] DBAssign = new Assegnazione[1];
         DBAssign[0]=DBDomandaQuestionario_assegnazione;
         return DBAssign;
     }
