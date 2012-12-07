@@ -4,11 +4,10 @@
 <!--Prende i dati del genitore -->
 <%@ page import="atsilo.test.application.*,atsilo.entity.*"
  %>
- <% 
-	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
- 	Utente utente=cdt.getUtenteFromUsername(username);
- 	String tipologia_genitore=cdt.getDatiGenitore(utente.getCodiceFiscale()).getTipo();
-
+ <%
+ 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+  	Utente utente=cdt.getUtenteFromUsername(username);
+  	String tipologia_genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale()).getTipo();
  %>
  <!--Script per gestire i form -->
  <script type="text/javascript">

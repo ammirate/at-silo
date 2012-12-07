@@ -1,3 +1,38 @@
+<%@ page import="atsilo.test.application.*,atsilo.entity.*"
+ %>
+ <% 
+	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+ 	Utente utente=cdt.getUtenteFromUsername(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
+	Genitore genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale());
+ 	String cognome=genitore.getCognome();
+ 	String dataNascita="dataNascita";
+ 	String nome=genitore.getNome();
+ 	String cognome=genitore.getCognome();
+ 	String codiceFiscale=genitore.getCodiceFiscale();
+ 	String comuneNascita=genitore.getComuneNascita(); 
+ 	String telefono=genitore.getTelefono();
+ 	String cittadinanza=genitore.getcittadinanza();
+ 	String indirizzoResidenza=genitore.getIndirizzoResidenza();
+ 	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
+ 	String capResidenza=genitore.getCapResidenza();
+ 	String comuneResidenza=genitore.getComuneResidenza();
+ 	String provinciaResidenza=genitore.getProvinciaResidenza();
+ 	String indirizzoDomicilio=genitore.getIndirizzoDomicilio();
+ 	String numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();
+ 	String capDomicilio=genitore.getCapDomicilio();
+ 	String comuneDomicilio=genitore.getComuneDomicilio();
+ 	String provinciaDomicilio=genitore.getProvinciaDomicilio();
+ 	String dipendentePresso=genitore.getDipendentePresso();
+ 	String rapportiAteneoSalerno=genitore.getRapportiAteneoSalerno();
+ 	String rapportiComuneFisciano=genitore.getRapportiComuenFisciano();
+ 	String statusLavorativo=genitore.getStatusLavorativo();
+ 	String scadenzaContratto="scadenzaContratto";
+ 	String categoriaAppartenenza=genitore.getCategoriaAppartenenza();
+ 	String rapportoParentela=genitore.getRapportoParentela();
+
+ 	
+
+ %>
 <form id="dati_bando" name="dati_bando" action="" method="post" >
 <table border="0" cellspacing="0" >
   <tr>
@@ -83,7 +118,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-  <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  readonly="readonly" >
+  <td colspan="4"><select id="status_lavorativo_richiedente" name="status_lavorativo_richiedente"  readonly="readonly" >
 <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
       <option value="di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; ">di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; </option>

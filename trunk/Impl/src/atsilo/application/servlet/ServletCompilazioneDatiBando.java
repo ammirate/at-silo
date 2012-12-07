@@ -71,6 +71,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             PrintWriter out = response.getWriter();
             HttpSession sessione = request.getSession();
             String nome_pagina_chiamante=((String)sessione.getAttribute("nome_pagina_chiamante"));
+            String username_utente=((String)sessione.getAttribute("username"));
             
             //setto tutte le variabili a null in modo che, se non vengono passate alla servlet,non vengono modificate (null indica al metodo di non fare update su quel campo) 
             
@@ -230,63 +231,88 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
                  rapporto_parentela_genitore_non_richiedente=request.getParameter("rapporto_parentela_genitore_non_richiedente");
              
              //variabili bambino
-             Date dataNascita_bambinov;
+             Date data_nascita_bambino;
+             if ( request.getParameter("data_nascita_bambino")!=null){
+                 request.getParameter("data_nascita_bambino");
+             }
              String nome_bambino=null;
+             if ( request.getParameter("nome_bambino")!=null)
+                 nome_bambino=request.getParameter("nome_bambino");
              String cognome_bambino=null;
-             String codiceFiscale_bambino=null;
-             String comuneNascita_bambino=null;
+             if ( request.getParameter("cognome_bambino")!=null)
+                 cognome_bambino=request.getParameter("cognome_bambino");
+             String codice_fiscale_bambino=null;
+             if ( request.getParameter("codice_fiscale_bambino")!=null)
+                 codice_fiscale_bambino=request.getParameter("codice_fiscale_bambino");
+             String comune_nascita_bambino=null;
+             if ( request.getParameter("comune_nascita_bambino")!=null)
+                 comune_nascita_bambino= request.getParameter("comune_nascita_bambino");
              String cittadinanza_bambino=null;
-             String indirizzoResidenza_bambino=null;
-             String numeroCivicoResidenza_bambino=null;
-             String capResidenza_bambino=null;
-             String comuneResidenza_bambino=null;
-             String provinciaResidenza_bambino=null;
-             String indirizzoDomicilio_bambino=null;
-             String numeroCivicoDomicilio_bambino=null;
-             String capDomicilio_bambino=null;
-             String comuneDomicilio_bambino=null;
-             String provinciaDomicilio_bambino=null;
-             String categoriaAppartenenza_bambino=null;
+             if ( request.getParameter("cittadinanza_bambino")!=null)
+                 cittadinanza_bambino=request.getParameter("cittadinanza_bambino");
+             String indirizzo_residenza_bambino=null;
+             if ( request.getParameter("indirizzo_residenza_bambino")!=null)
+                 indirizzo_residenza_bambino=request.getParameter("indirizzo_residenza_bambino");
+             String numero_civico_residenza_bambino=null;
+             if ( request.getParameter("numero_civico_residenza_bambino")!=null)
+                 numero_civico_residenza_bambino=request.getParameter("numero_civico_residenza_bambino");
+             String cap_residenza_bambino=null;
+             if ( request.getParameter("cap_residenza_bambino")!=null)
+                 cap_residenza_bambino= request.getParameter("cap_residenza_bambino");
+             String comune_residenza_bambino=null;
+             if ( request.getParameter("comune_residenza_bambino")!=null)
+                 comune_residenza_bambino= request.getParameter("comune_residenza_bambino");
+             String provincia_residenza_bambino=null;
+             if ( request.getParameter("provincia_residenza_bambino")!=null)
+                 provincia_residenza_bambino=request.getParameter("provincia_residenza_bambino");
+             String indirizzo_domicilio_bambino=null;
+             if ( request.getParameter("indirizzo_domicilio_bambino")!=null)
+                 indirizzo_domicilio_bambino=request.getParameter("indirizzo_domicilio_bambino");
+             String numero_civico_domicilio_bambino=null;
+             if ( request.getParameter("numero_civico_domicilio_bambino")!=null)
+                 numero_civico_domicilio_bambino=request.getParameter("numero_civico_domicilio_bambino");
+             String cap_domicilio_bambino=null;
+             if ( request.getParameter("cap_domicilio_bambino")!=null)
+                 cap_domicilio_bambino=request.getParameter("cap_domicilio_bambino");
+             String comune_domicilio_bambino=null;
+             if ( request.getParameter("comune_domicilio_bambino")!=null)
+                 comune_domicilio_bambino=request.getParameter("comune_domicilio_bambino");
+             String provincia_domicilio_bambino=null;
+             if ( request.getParameter("provincia_domicilio_bambino")!=null)
+                 provincia_domicilio_bambino=request.getParameter("provincia_domicilio_bambino");
+             String categoria_appartenenza_bambino=null;
+             if ( request.getParameter("categoria_appartenenza_bambino")!=null)
+                 categoria_appartenenza_bambino=request.getParameter("categoria_appartenenza_bambino");
              int classe;
+             if ( request.getParameter("classe")!=null)
+                 classe=Integer.parseInt(request.getParameter("classe"));
             
           
             
             try {
-                if (controlDatiPersonali.setDatiGenitore(null, nome_richiedente, cognome_richiedente, cf, email_richidente, null, tel_richiedente, null, null, -1, -1, null, null, null, -1, -1, null, null, null, null, null, null, null, null, null, null, null)){
-                    
-                        //creazione account ed entità andata a buon fine
-                        //autologin nel sistema
-                        
-                        
+                if (controlDatiPersonali.setDatiGenitore(username_utente,dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono_genitore_non_richiedente, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso_richiedente, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza,rapporto_parentela)){
+
                         // Set response content type
                         response.setContentType("text/html");
                         // New location to be redirected
-                        String login_ok = new String("prototipo/dati_account_genitore.jsp");
                         response.setStatus(response.SC_MOVED_TEMPORARILY);
-                        
-                        Account newAccount=controlDatiPersonali.getAccount(cf);//account appena creato
-                        
-                        
-                        //Setto le variabili di sessione
-                        HttpSession sessione = request.getSession();
-                        sessione.setAttribute("username", newAccount.getUserName());
-                        String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
-                        sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
+                        String modifica_ok = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
+
                         
                         //reindirizzo verso index della tipologia di utente
-                        response.setHeader("Location", login_ok);    
+                        response.setHeader("Location", modifica_ok);    
                       
-                }//fine if creo account    
+                }//fine if   
                 else {  
-                    String login_error = new String("prototipo/registrazione_account.jsp");
-                    response.setHeader("Location", login_error);   
+                    String modifica_error = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                    response.setHeader("Location", modifica_error);   
                 }
             } catch (GenitoreException e) {
                 // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                LOG.log(Level.SEVERE, getServletName()+" Errore inserimento genitore", e);
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                LOG.log(Level.SEVERE,getServletName()+ " Errore connessione database", e);
             }
 
     }

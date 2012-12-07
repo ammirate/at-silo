@@ -81,11 +81,13 @@ public class ServletRegistrazioneAccount extends HttpServlet {
         java.sql.Date data_nascita = null;
         
         //creazione account utente ed entità genitore associata
-        
+      
+
         
         
             try {
-                if (controlDatiPersonali.createUtente(cf) && controlDatiPersonali.setDatiGenitore(null, nome_richiedente, cognome_richiedente, cf, email_richidente, null, tel_richiedente, null, null, -1, -1, null, null, null, -1, -1, null, null, null, null, null, null, null, null, null, null, null)){
+                if (controlDatiPersonali.createAccount(cf) && controlDatiPersonali.setDatiGenitore(null, null, nome_richiedente, cognome_richiedente, cf, email_richidente, null, tel_richiedente, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)){
+                    
                     
                         //creazione account ed entità andata a buon fine
                         //autologin nel sistema

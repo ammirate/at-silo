@@ -51,14 +51,14 @@ public class ControlDatiPersonaliTest {
     @Test
     // visualizzazione genitore normale
     public void getDatiGenitoreTest() throws GenitoreException, DBConnectionException, SQLException  {
-         g = control.getDatiGenitore("MSCGNN75H43H654K");
+         g = control.getDatiGenitoreFromCF("MSCGNN75H43H654K");
          assertNotNull(g);
     }
     
     @Test
     // visualizzazione genitore con codice fiscale non valido
     public void getDatiGenitoreTest2() throws GenitoreException, DBConnectionException, SQLException  {
-         g = control.getDatiGenitore("MSCGNN75H43H654");
+         g = control.getDatiGenitoreFromCF("MSCGNN75H43H654");
          assertNotNull(g);
     }
    
