@@ -31,7 +31,7 @@ import atsilo.entity.Utente;
  * Crea un gestore per il bean Questionario
  */
 public class DBPersonaleAsilo extends DBBeans {
-   
+    
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     /**
@@ -41,7 +41,7 @@ public class DBPersonaleAsilo extends DBBeans {
     public DBPersonaleAsilo(Database db){
         super("personale_asilo",db);
     }
-
+    
     /**
      * Metodo che crea la chiave della tabella
      * @return Collection.unmodiableList
@@ -50,7 +50,7 @@ public class DBPersonaleAsilo extends DBBeans {
         List<String> res=  Arrays.asList("codice_fiscale");
         return Collections.unmodifiableList(res);
     }
-
+    
     /**
      * metodo che associa all' attributo del database (nome attributo db) 
      * il rispettivo valore(nome attributo classe)
@@ -77,18 +77,18 @@ public class DBPersonaleAsilo extends DBBeans {
         res.put("cap_domicilio", "capDomicilio");
         res.put("comune_domicilio", "comuneDomicilio");
         res.put("provincia_domicilio", "provinciaDomicilio");
-       
+        
         return res;
     }
-
-   /**
+    
+    /**
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     @Override
     protected Map getMappingFields() {
         return MAPPINGS;
     }
-
+    
     /**
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
@@ -96,11 +96,12 @@ public class DBPersonaleAsilo extends DBBeans {
     protected List getKeyFields() {
         return CHIAVE;
     }
-
-    /**
-     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
-     */
     
+    /**
+     *@see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     *@throws SQLException
+     *@return PersonaleAsilo
+     */
     protected PersonaleAsilo creaBean(ResultSet r) throws SQLException {
         PersonaleAsilo p=new PersonaleAsilo();
         {
@@ -122,11 +123,11 @@ public class DBPersonaleAsilo extends DBBeans {
             p.setCapDomicilio(r.getString("cap_domicilio"));
             p.setComuneDomicilio(r.getString("comune_domicilio"));
             p.setProvinciaDomicilio(r.getString("provincia_domicilio"));
-                      
+            
         }
         return p;
     }
-
+    
     /**
      * Dato un codice fiscale restituisce il PersonaleAsilo corrispondente
      * @param codiceFiscale codice fiscale del PersonaleAsilo
@@ -164,8 +165,15 @@ public class DBPersonaleAsilo extends DBBeans {
         r.close();
         return p;
     }
-    
-    public String getCategoriaAppartenenzaPersonaleAsilo(String codiceFiscale) throws SQLException{
+    /**
+     * Dato un codice fiscale restituisce la categoria di
+     * appartenenza del Personale asilo
+     * @param codiceFiscale codice fiscale del PersonaleAsilo
+     * @return String o null
+     * @throws SQLException 
+     */
+    public String getCategoriaAppartenenzaPersonaleAsilo(String codiceFiscale) 
+            throws SQLException{
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
                 + tabella.getNomeTabella() + " WHERE codice_fiscale= ?");
@@ -174,11 +182,11 @@ public class DBPersonaleAsilo extends DBBeans {
         PersonaleAsilo p = new PersonaleAsilo();
         String s=null;
         if(r.next()){
-        s = r.getString("categoria_appartenenza");
-                }
-       return s;
-       
+            s = r.getString("categoria_appartenenza");
+        }
+        return s;
+        
     }
-
-   
+    
+    
 }
