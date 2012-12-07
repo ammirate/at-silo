@@ -477,7 +477,7 @@
     <table:table-column table:style-name="Tabella1.A" table:number-columns-repeated="5"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A1" table:number-columns-spanned="5" office:value-type="string">
-      <text:h text:style-name="Heading_20_4" text:outline-level="4">Registro</text:h>
+      <text:h text:style-name="Heading_20_4" text:outline-level="4">Tirocinante</text:h>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
@@ -523,16 +523,16 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Classe</text:p>
+      <text:p text:style-name="Table_20_Contents">Nome</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Integer(11)</text:p>
+      <text:p text:style-name="Table_20_Contents">Varchar (50)</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">NO</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Foreign</text:p>
+      <text:p text:style-name="Table_20_Contents"></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents"></text:p>
@@ -540,7 +540,7 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Anno</text:p>
+      <text:p text:style-name="Table_20_Contents">Cognome</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
@@ -557,27 +557,10 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Educatore didattico</text:p>
+      <text:p text:style-name="Table_20_Contents">Codice Fiscale</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">NO</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Foreign</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents"></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">ID</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
-      <text:p text:style-name="Table_20_Contents">Integer(11)</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
       <text:p text:style-name="Table_20_Contents">SÌ</text:p>
@@ -589,32 +572,532 @@
       <text:p text:style-name="Table_20_Contents"></text:p>
      </table:table-cell>
     </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Telefono/cellulare</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">E_mail</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Data di nascita</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Date</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Comune di nascita</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Indirizzo residenza</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Personale asilo</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Titolo di studi</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Ore totali</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">integer(11)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Ore lavoro</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Integer(11)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Stato</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Matricola</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Giudizio finale</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Numero civico residenza</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(10)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Cap residenza</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(10)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Comune residenza</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(100)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Provincia residenza</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Indirizzo domicilio</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(100)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Numero civico domicilio</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(10)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Cap domicilio</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(10)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Comune domicilio</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Provincia domicilio</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(100)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Cittadinanza</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">Varchar(50)</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents">NO</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.D5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.E5" office:value-type="string">
+      <text:p text:style-name="Table_20_Contents"></text:p>
+     </table:table-cell>
+    </table:table-row>
    </table:table>
    <text:h text:style-name="Heading_20_5" text:outline-level="5">Descrizione degli attributi</text:h>
    <table:table table:name="Tabella2" table:style-name="Tabella2">
     <table:table-column table:style-name="Tabella2.A"/>
     <table:table-row table:style-name="Tabella2.1">
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">Classe</text:p>
-      <text:p text:style-name="Definizione_20_Valore">classe a cui appartiene il REGISTRO.</text:p>
+      <text:p text:style-name="Definizione_20_Nome">Nome</text:p>
+      <text:p text:style-name="Definizione_20_Valore">nome del TIROCINANTE</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella2.1">
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">Anno</text:p>
-      <text:p text:style-name="Definizione_20_Valore">anno a cui si riferisce il REGISTRO.</text:p>
+      <text:p text:style-name="Definizione_20_Nome">Cognome</text:p>
+      <text:p text:style-name="Definizione_20_Valore">cognome del TIROCINANTE.</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella2.1">
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">Educatore didattico</text:p>
-      <text:p text:style-name="Definizione_20_Valore">educatore didattico del REGISTRO.</text:p>
+      <text:p text:style-name="Definizione_20_Nome">Codice Fiscale</text:p>
+      <text:p text:style-name="Definizione_20_Valore">codice fiscale del TIROCINANTE</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row table:style-name="Tabella2.1">
      <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
-      <text:p text:style-name="Definizione_20_Nome">ID</text:p>
-      <text:p text:style-name="Definizione_20_Valore">identifico univico del REGISTRO.</text:p>
+      <text:p text:style-name="Definizione_20_Nome">Telefono/cellulare</text:p>
+      <text:p text:style-name="Definizione_20_Valore">recapito telefonico del TIROCINANTE</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">E_mail</text:p>
+      <text:p text:style-name="Definizione_20_Valore">email del TIROCINANTE</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Data di nascita</text:p>
+      <text:p text:style-name="Definizione_20_Valore">data di nascita del TIROCINANTE</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Comune di nascita</text:p>
+      <text:p text:style-name="Definizione_20_Valore">comune di nascita del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Indirizzo residenza</text:p>
+      <text:p text:style-name="Definizione_20_Valore">indirizzo di residenza del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Personale asilo</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Titolo di studi</text:p>
+      <text:p text:style-name="Definizione_20_Valore">titolo di studi del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Ore totali</text:p>
+      <text:p text:style-name="Definizione_20_Valore">ore totali  del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Ore lavoro</text:p>
+      <text:p text:style-name="Definizione_20_Valore">ore di lavoro  del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Stato</text:p>
+      <text:p text:style-name="Definizione_20_Valore">stato del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Matricola</text:p>
+      <text:p text:style-name="Definizione_20_Valore">matricola del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Giudizio finale</text:p>
+      <text:p text:style-name="Definizione_20_Valore">giudizio finale che rilasciano al TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Numero civico residenza</text:p>
+      <text:p text:style-name="Definizione_20_Valore">numero civico del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Cap residenza</text:p>
+      <text:p text:style-name="Definizione_20_Valore">cap di residenza del TIROCINANTE.</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Comune residenza</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Provincia residenza</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Indirizzo domicilio</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Numero civico domicilio</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Cap domicilio</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Comune domicilio</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Provincia domicilio</text:p>
+      <text:p text:style-name="Definizione_20_Valore"></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row table:style-name="Tabella2.1">
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="Definizione_20_Nome">Cittadinanza</text:p>
+      <text:p text:style-name="Definizione_20_Valore">cittadinanza del TIROCINANTE.</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
