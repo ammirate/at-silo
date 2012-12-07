@@ -1,6 +1,7 @@
 package atsilo.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 /*
  *-----------------------------------------------------------------
@@ -36,6 +37,11 @@ public class Tirocinante extends Utente{
      * La variabile personaleAsilo è nulla c'è bisogno di una lettura della classe PersonaleAsilo
      */
     private PersonaleAsilo personaleAsilo;
+    
+    /**
+     * La variabile listaContestazione è nulla c'è bisogno di una lettura della classe List<Contestazione>
+     */
+    private List<Contestazione> listaContestazione;
     
     /**
      * Costruttore vuoto
@@ -80,6 +86,7 @@ public class Tirocinante extends Utente{
         this.disponibilita = disponibilita;
         this.titoloDiStudi = titoloDiStudi;
         this.tutorEsterno = tutorEsterno;
+        this.listaContestazione = null;
     }
 
 
@@ -225,5 +232,21 @@ public class Tirocinante extends Utente{
      */
     public void setTutorEsterno(String tutorEsterno) {
         this.tutorEsterno = tutorEsterno;
+    }
+    
+    /**
+     * Metodo che setta il parametro letto dalla classe List<Contestazione>
+     * @param listaContestazione è settato dopo la lettura
+     */
+    public void setListaContestazione(List<Contestazione> listaContestazione) {
+        this.listaContestazione = listaContestazione;
+    }
+
+    /**
+     * Metodo che prende il parametro letto dalla classe List<Contestazione>
+     * @return listaContestazione preso dalla lettura
+     */
+    public List<Contestazione> getListaContestazione() {
+        return listaContestazione;
     }
 }
