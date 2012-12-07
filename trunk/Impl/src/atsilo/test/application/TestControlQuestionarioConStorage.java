@@ -19,6 +19,7 @@ package atsilo.test.application;
 import static org.junit.Assert.*;
 
 import java.sql.Date;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +34,7 @@ import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
+import atsilo.storage.DBQuestionario;
 import atsilo.storage.Database;
 
 /**
@@ -69,11 +71,25 @@ public class TestControlQuestionarioConStorage {
         db.chiudiConnessione();
     }
     
+    
+    
+    
+    
     @Test
-    public void test() throws DBConnectionException, QuestionarioException {
+    public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
-        inserimentoTest();
+   //    inserimentoTest();
+        modificaTest();
+      // ControlQuestionario control = ControlQuestionario.getIstance();
+      /* control.eliminaQuestionario(1);
+       control.eliminaQuestionario(21);
+       control.eliminaQuestionario(2);
+       */
     }
+    
+    
+    
+    
     
     //Variabili di istanza
     Database db;
@@ -81,7 +97,6 @@ public class TestControlQuestionarioConStorage {
     Date dataFine = new Date(2012,3,31);
     
     Questionario q1 = new Questionario("inizio anno", "no", "inizio", 21, dataInizio, dataFine);
-    Questionario q2 = new Questionario("meta anno", "no", "meta", 22, dataInizio, dataFine);
     
     DomandaQuestionario d1 = new DomandaQuestionario(10,21,"quanti anni hai?",null);
     CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", 10);
@@ -123,6 +138,19 @@ public class TestControlQuestionarioConStorage {
         
         ControlQuestionario control = ControlQuestionario.getIstance();
         control.inserisciQuestionario(q1);
+    }
+    
+    
+    public void modificaTest() throws DBConnectionException, QuestionarioException{
+        Questionario q2 = q1;
+        
+        DomandaQuestionario d4 = new DomandaQuestionario(13,21,"quante lauree hai?",null);
+        CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("check", "una", "1",13);
+        CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("check", "due", "2",13);
+        CampoDomandaQuestionario c9 = new CampoDomandaQuestionario("check", "faccio il muratore!", "0", 13);
+        
+        ControlQuestionario control = ControlQuestionario.getIstance();
+        control.modificaQuestionario(q1.getId(), q2);
     }
     
     
