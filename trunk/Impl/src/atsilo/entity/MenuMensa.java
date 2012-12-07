@@ -18,7 +18,7 @@ import java.sql.Date;
 public class MenuMensa {
     
     //categoria_bambino,tipologia,primo_piatto,secondo_piatto,contorno,frutta,data,id
-    private String id;
+    private int id;
     private String categoriaBambino;
     private String tipologia;
     private String primoPiatto;
@@ -43,7 +43,7 @@ public class MenuMensa {
      * @param frutta il paramentro è fissato
      * @param data il paramentro è fissato
      */
-    public MenuMensa(String id, String categoriaBambino, String tipologia,
+    public MenuMensa(int id, String categoriaBambino, String tipologia,
             String primoPiatto, String secondoPiatto, String contorno,
             String frutta, Date data) {
         super();
@@ -62,7 +62,7 @@ public class MenuMensa {
      * Metodo che setta il parametro id
      * @param id il parametro fissato
      */
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -70,7 +70,7 @@ public class MenuMensa {
      * Metodo che prende il parametro Id
      * @return id il parametro inserito
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 

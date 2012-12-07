@@ -16,6 +16,7 @@ import java.sql.Date;
  * Antonio Cesarano, 14/11/2012 (non responsabile)
  * REVISION
  * Andrea Micco, 6/12/2012
+ * Mariella Ferrara 7/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -24,7 +25,7 @@ public class Retta {
     
    
    
-    private String id;
+    private int id;
     private String descrizioneTassa;
     private String descrizioneRata;
     private Date data;
@@ -59,7 +60,7 @@ public class Retta {
      * @param data il parametro è fissato
      * @param nome il parametro è fissato
      */
-    public Retta(float importoDovuto, String id, List<Extra> extra, Genitore genitore,
+    public Retta(float importoDovuto, int id, List<Extra> extra, Genitore genitore,
             float importoPagato, String descrizioneTassa, String descrizioneRata, 
             Date data, String nome) {
         super();
@@ -78,7 +79,7 @@ public class Retta {
      * Metodo che prende il campo Id
      * @param id il parametro inserito
      */
-    public void setId(String id){
+    public void setId(int id){
         this.id=id;
         }
     
@@ -86,7 +87,7 @@ public class Retta {
      * Metodo che prende il campo id
      * @return id il parametro inserito
      */
-    public String getId(){
+    public int getId(){
         return this.id;
         }
     
