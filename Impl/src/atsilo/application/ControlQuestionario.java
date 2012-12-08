@@ -577,5 +577,18 @@ public class ControlQuestionario {
     public static ControlQuestionario getIstance(){
         return INSTANCE;
     }
+
+
+    /**
+     * @param id
+     * @return
+     * @throws SQLException 
+     */
+    public Questionario getQuestionario(int id) throws SQLException {
+        // TODO Scheletro generato automaticamente
+        Database db = new Database();
+        DBQuestionario storageQ = new DBQuestionario(db);
+        return storageQ.getQuestionario(id);
+    }
     
 }

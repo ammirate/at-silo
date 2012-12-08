@@ -34,11 +34,18 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 
 <%
 	int id;
+	String cf="";
 	try {
 		id = Integer.parseInt(request.getParameter("id"));
 	}
 	catch (Exception e) {
 		id = -1;
+	}
+	try {
+		cf = request.getParameter("codfis");
+	}
+	catch (Exception e) {
+		
 	}
 	Questionario quest = null;
 	
@@ -51,27 +58,23 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
 	c1.add(new CampoDomandaQuestionario("checkbox","malissimo","malissimo", 1));
 	c1.add(new CampoDomandaQuestionario("checkbox","non so","non so",1));
-	//DomandaQuestionario d = new DomandaQuestionario(91, quest.getId(), "prova", c1);
-	/*
-	c1.add(new CampoDomandaQuestionario("checkbox","bene","bene",1 ));
-	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","malissimo","malissimo", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","non so","non so",1));
 	List<CampoDomandaQuestionario> c2 = new ArrayList<CampoDomandaQuestionario>();
 	c2.add(new CampoDomandaQuestionario("radio","bene","bene", 2));
 	c2.add(new CampoDomandaQuestionario("radio","male","male", 2));
 	c2.add(new CampoDomandaQuestionario("radio","malissimo","malissimo",2));
 	c2.add(new CampoDomandaQuestionario("radio","non so","non so",2));
+	d1.add(new DomandaQuestionario(1, quest1.getId(), "Come ti trovi con i pm", c1));
+	d1.add(new DomandaQuestionario(2, quest1.getId(), "Come li valuti i pm", c2));
 	quest2.setDomande(d1);
 	list.add(quest1);
 	list.add(quest2);
 	
-	/*Questionario quest = null;
-	 ControlQuestionario q = null;
-	q=q.getIstance();
+	/*ControlQuestionario q = null;
+	/q=q.getIstance();
 	List<Questionario> list = q.getAllQuestionari();
 	List<Questionario> list = new List<Questionario>();
 	list.get(0).getDomande().get(0); 
+	*/
 	for (int i = 0; i < list.size(); i++) {
 
 		if (list.get(i).getId() == id) {
@@ -79,13 +82,13 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	break;
 		}
 	}
-	/*
+	
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
 	}
 	else {
 
-		out.println("<form action=\"http://localhost:8080/Atsilo/servletControlSottomettiQuestionario\" method='POST'>");
+		out.println("<form action=\"http://localhost:8080/Atsilo/ControlCompilaQuestionario\" method='POST'>");
 		out.println("<div id=formdomande>");
 
 		out.println("<H2>Titolo Questionario: " + quest.getNome()+ "</h2><br><br><BR><BR>");
@@ -97,18 +100,29 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<tr><td><h3>Domanda </h3><td><h3>"
 					+ quest.getDomande().get(i).getDescrizione()
 					+ "'</h3></td></tr>");
+			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
-				out.println("<tr><td colspan=2><input type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione"+ i + "[]\">" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+				out.println("<tr><td colspan=2><input type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + i + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
 			}
 			out.println("</table><br><br>");
 			out.println("</fieldset><br><br>");
 		}
 
-		out.println("<center><input type=submit value=\"Sottometti Questionario\"></center>");
-		out.println("<input type=hidden name=action value=modify>");
+		if(cf!=null) {
+			out.println("<input type=hidden name=codfis value='"+cf+"'>");
+			out.println("<input type=hidden name=questID value='"+quest.getId()+"'>");
+
+			out.println("<center><input type=submit value=\"Sottometti Questionario\"></center>");
+		
+		}
+		else 
+		{
+			out.println("<center><input type=submit disabled='disabled' value=\"Sottometti Questionario\"></center>");
+		}
+
 		out.println("</form>");
 	}
-	*/
+	
 %>
 
 <p><strong><br />
