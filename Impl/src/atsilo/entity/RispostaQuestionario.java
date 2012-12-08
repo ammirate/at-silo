@@ -101,9 +101,11 @@ public class RispostaQuestionario {
     }
 
 
-    /**
-     * @return domanda
-     */
+    public String toString(){
+        return "RISPOSTA     ID:"+id+ "  valore:"+valore+"  IDdomanda:"+idDomanda+" CFgenitore:"+CFgenitore;
+    }
+
+    
    
     
     
