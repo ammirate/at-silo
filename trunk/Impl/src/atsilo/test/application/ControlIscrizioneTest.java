@@ -48,7 +48,9 @@ import atsilo.exception.UtenteException;
 public class ControlIscrizioneTest {
     
     ControlIscrizione control = new  ControlIscrizione();
+    //TODO Oggetti nulli?
     Genitore g;
+    Genitore g2;
     Bambino b;
 
     
@@ -115,7 +117,7 @@ public class ControlIscrizioneTest {
     public void inserisciIscrittoTest() throws BambinoException, DBConnectionException, InserimentoDatiException  {
         assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTHG75H43H654K", 
                 "Salerno", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, null));  
+            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null));  
     }
     
     @Test
@@ -123,7 +125,7 @@ public class ControlIscrizioneTest {
     public void inserisciIscrittoTest1() throws BambinoException, DBConnectionException, InserimentoDatiException  {
         assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTGHG75H43H654K", 
                 "Salerno", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, null));  
+            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null));  
     }
     
     @Test
@@ -131,7 +133,7 @@ public class ControlIscrizioneTest {
     public void inserisciIscrittoTest2() throws BambinoException, DBConnectionException, InserimentoDatiException  {
         assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTHG75H43H654K", 
                 "Salerno", "italiana","Via Roma", "56", "8505", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, null));  
+            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null));  
     }
     
     @Test
@@ -139,7 +141,7 @@ public class ControlIscrizioneTest {
     public void inserisciDomandaIscrizioneTest() throws DomandaIscrizioneException, DBConnectionException  {
         assertTrue(control.inserisciDomandaIscrizione(new Date(2012, 8, 8), 2, 50, 10, g, b, "convalidata", "consegnato",
                 "mancante", "consegnato", false, false, false, false, false, false, false, false, false, "condizioni", 
-                24500, null));             
+                24500F, null,"DomandaInviataInAttesaDiGraduatoria"));             
     }
        
     @Test
