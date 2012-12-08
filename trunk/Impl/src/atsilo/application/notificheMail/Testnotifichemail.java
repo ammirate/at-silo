@@ -22,8 +22,6 @@ import javax.mail.MessagingException;
 
 import atsilo.entity.Utente;
 
-import sun.rmi.runtime.NewThreadAction;
-
 /**
  * Classe Testnotifichemail <Descrizione classe>
  * 

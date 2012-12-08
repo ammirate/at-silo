@@ -19,7 +19,6 @@ import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
-import atsilo.storage.DBBando;
 import atsilo.storage.Database;
 import atsilo.stub.storage.StubBando;
 import atsilo.stub.storage.StubDomandaIscrizione;
@@ -127,7 +126,14 @@ public class ControlGestioneBando {
         }
         try {
             try {
-                Bando bando=dbBando.getBando();
+                Bando bando = new Bando(dbBando.getBando().getiD(),
+                        dbBando.getBando().getDataInizioBando(),
+                        dbBando.getBando().getDataFineBando(), 
+                        dbBando.getBando().getDataInizioPresentazioneRinuncia(),
+                        dbBando.getBando().getDataFinePresentazioneRinuncia(),
+                        dbBando.getBando().getDataFineRinuncia(),
+                        dbBando.getBando().getPostiDisponibili(),
+                        dbBando.getBando().getPath());
                 bando.setDataInizioBando(dataInizioBando);
                 bando.setDataFineBando(dataFineBando);
                 bando.setDataInizioPresentazioneRinuncia(dataInizioPresentazioneRinuncia);
@@ -136,8 +142,7 @@ public class ControlGestioneBando {
                 
                 dbBando.replace(dbBando.getBando(), bando);
                 
-            } catch (SQLException e) 
-            {
+            } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
             }
             return true;
@@ -145,6 +150,7 @@ public class ControlGestioneBando {
             db.chiudiConnessione();
         }
     }
+    
     public boolean modificaPostiDisponibili(int postiDisponibili)
             throws DBConnectionException {
         
@@ -154,11 +160,17 @@ public class ControlGestioneBando {
         }
         try {
             try {
-                Bando bando=dbBando.getBando();
+                Bando bando = new Bando(dbBando.getBando().getiD(),
+                        dbBando.getBando().getDataInizioBando(),
+                        dbBando.getBando().getDataFineBando(), 
+                        dbBando.getBando().getDataInizioPresentazioneRinuncia(),
+                        dbBando.getBando().getDataFinePresentazioneRinuncia(),
+                        dbBando.getBando().getDataFineRinuncia(),
+                        dbBando.getBando().getPostiDisponibili(),
+                        dbBando.getBando().getPath());
                 bando.setPostiDisponibili(postiDisponibili);
                 dbBando.replace(dbBando.getBando(), bando);
-            } catch (SQLException e) 
-            {
+            } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
             }
             return true;
