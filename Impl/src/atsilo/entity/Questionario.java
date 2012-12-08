@@ -64,6 +64,26 @@ public class Questionario {
         this.listaGenitori = new ArrayList<Genitore>();
         this.domande = new ArrayList<DomandaQuestionario>();
     }
+    
+    /**
+     * @param periodo_fine il paramentro è fissato
+     * @param descrizione il paramentro è fissato
+     * @param flag_rinuncia il paramentro è fissato
+     * @param nome il paramentro è fissato
+     * @param periodo_inizio il paramentro è fissato
+     * @param pathname il paramentro è fissato
+     */
+    public Questionario( String descrizione,String flag_rinuncia, 
+            String nome, Date periodo_inizio,Date periodo_fine) {
+        super();
+        this.periodo_fine = periodo_fine;
+        this.descrizione = descrizione;
+        this.flag_rinuncia = flag_rinuncia;
+        this.nome = nome;
+        this.periodo_inizio = periodo_inizio;
+        this.listaGenitori = new ArrayList<Genitore>();
+        this.domande = new ArrayList<DomandaQuestionario>();
+    }
 
 
     /**
