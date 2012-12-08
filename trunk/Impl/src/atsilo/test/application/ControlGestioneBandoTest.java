@@ -75,7 +75,7 @@ public class ControlGestioneBandoTest {
         Bambino bambino=new Bambino();
         DomandaIscrizione domanda=new DomandaIscrizione(new Date(2012, 8, 8), 9999, 0,0, genitore, bambino, "convalidata", "consegnato",
                 "mancante", "consegnato", false, false, false, false, false, false, false, false, false, "condizioni", 
-                24500F, null,"DomandaInviataInAttesaDiGraduatoria");
+                24500F, new Servizio(),"DomandaInviataInAttesaDiGraduatoria");
         dbDomande.inserisci(domanda);
        
         control.inserisciPunteggio(domanda, 54);
