@@ -104,7 +104,7 @@ public class CampoDomandaQuestionario {
 
   
     public String toString(){
-        return "Tipo:"+tipo+ "  descrizione:"+descrizione+"  valore:"+valore+" IDdomanda:"+idDomandaQuestionario;
+        return "CAMPO      Tipo:"+tipo+ "  descrizione:"+descrizione+"  valore:"+valore+" IDdomanda:"+idDomandaQuestionario;
     }
 
     
