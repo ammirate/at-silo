@@ -21,7 +21,7 @@ import java.util.Collections;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Luigi Lomastro, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Luigi Lomastro,Fabio Napoli 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -95,14 +95,24 @@ public class DBAccount extends DBBeans<Account>
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE username = ?");
             tabella.setParam(stmt, 1, "username", user);
-            ResultSet res = stmt.executeQuery();  
-        if (res.next()) // dovrebbe trovare solo un account perch� l'username � unico. quindi restituisce un unico record. 
+            ResultSet r = stmt.executeQuery();  
+        if (r.next()) // dovrebbe trovare solo un account perch� l'username � unico. quindi restituisce un unico record. 
         {
-            a.setUserName(res.getString("username"));
-            a.setPassWord(res.getString("password"));
+            a.setUserName(r.getString("username"));
+            a.setPassWord(r.getString("password"));
+            if(r.getString("genitore")!=null)
+                a.setOwner(r.getString("genitore"));
+                if(r.getString("psico_pedagogo")!=null)
+                    a.setOwner(r.getString("psico_pedagogo"));
+                if(r.getString("tirocinante")!=null)
+                    a.setOwner(r.getString("tirocinante"));
+                if(r.getString("responsabile_questionario")!=null)
+                    a.setOwner(r.getString("responsabile_questionario"));
+                if(r.getString("personale_asilo")!=null)
+                    a.setOwner(r.getString("personale_asilo"));
         }
          
-            res.close();  
+            r.close();  
              return a;
        
     }
@@ -113,12 +123,20 @@ public class DBAccount extends DBBeans<Account>
      */
     @Override
     protected Account creaBean(ResultSet r) throws SQLException {
-        Account a = null;
-        if(r.next())
-        {
+        Account a = new Account();
             a.setUserName(r.getString("username"));
             a.setPassWord(r.getString("password"));
-        }
+            if(r.getString("genitore")!=null)
+            a.setOwner(r.getString("genitore"));
+            if(r.getString("psico_pedagogo")!=null)
+                a.setOwner(r.getString("psico_pedagogo"));
+            if(r.getString("tirocinante")!=null)
+                a.setOwner(r.getString("tirocinante"));
+            if(r.getString("responsabile_questionario")!=null)
+                a.setOwner(r.getString("responsabile_questionario"));
+            if(r.getString("personale_asilo")!=null)
+                a.setOwner(r.getString("personale_asilo"));
+            
         return a;
         
     }

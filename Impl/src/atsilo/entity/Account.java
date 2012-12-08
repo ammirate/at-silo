@@ -22,7 +22,7 @@ public class Account implements Beans{
     /**
      * La variabile è nulla bisogna leggere dalla classe Utente
      */
-    private Utente owner;
+    private String owner;
 
     /**
      * Costruttore vuoto
@@ -35,7 +35,7 @@ public class Account implements Beans{
      * @param passWord il paramentro è settato
      * @param owner il parametro preso in lettura
      */
-    public Account(String userName, String passWord, Utente owner) {
+    public Account(String userName, String passWord, String owner) {
         super();
         this.userName = userName;
         this.passWord = passWord;
@@ -78,7 +78,7 @@ public class Account implements Beans{
      * Metodo che setta il parametro letto dalla classe utente
      * @param owner è settato dopo la lettura
      */
-    public void setOwner(Utente owner) {
+    public void setOwner(String owner) {
         this.owner = owner;
     }
 
@@ -86,7 +86,7 @@ public class Account implements Beans{
      * Metodo che prende il parametro letto dalla classe utente
      * @return owner parametro preso dalla lettura
      */
-    public Utente getOwner() {
+    public String getOwner() {
         return owner;
     }
 }
