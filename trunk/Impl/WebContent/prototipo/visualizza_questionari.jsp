@@ -101,6 +101,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 					+ quest.getDomande().get(i).getDescrizione()
 					+ "'</h3></td></tr>");
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
+			quest.getDomande().get(i).getCampi().size();
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
 				out.println("<tr><td colspan=2><input type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + i + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
 			}
