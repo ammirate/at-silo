@@ -1,4 +1,6 @@
 
+<%@page import="atsilo.exception.QuestionarioException"%>
+<%@page import="atsilo.exception.DBConnectionException"%>
 <%@page import="java.sql.Date"%>
 <%@page import="atsilo.application.ControlQuestionario"%>
 <%@page import="atsilo.entity.*" %>
@@ -50,43 +52,30 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	try {
 		if (request.getParameter("action").equals("cancel")) {
 			int id = Integer.parseInt(request.getParameter("id"));
-			//		q.eliminaQuestionario(id);
-			out.println("<script type='text/javascript'>alert('Questionario eliminato con successo')</script>");
+			try {
+				q.eliminaQuestionario(id);
+				out.println("<script type='text/javascript'>alert('Questionario eliminato con successo')</script>");
+			} catch (DBConnectionException d) {
+				out.println("<script type='text/javascript'>alert('Impossibile connettersi al database: Riprova più tardi')</script>");
+			} catch (QuestionarioException qe) {
+				out.println("<script type='text/javascript'>alert('Errore: il questionario non esiste')</script>");
+			} catch (Exception e) {
+				out.println("<script type='text/javascript'>alert('C'è stato un errore, riprova di nuovo')</script>");
+			}
 		}
 	} catch (Exception e) {
 	}
 	try {
 		if (request.getParameter("type").equals("genitore")) {
-			g=true;
+			g = true;
 			cf = request.getParameter("cf");
 		}
 	} catch (Exception e) {
 	}
-	
-	Questionario quest1 = new Questionario("questa è una prova", "no",
-			"linda è antipatica?", 10, null, null);
+	List<Questionario> list = q.getAllQuestionari();
+	if (g)
+		list = q.getQuestionariDaCompilare(cf);
 
-	Calendar c = Calendar.getInstance();
-	c.set(2012, 10, 14);
-	quest1.setPeriodo_inizio(new Date(c.getTimeInMillis()));
-	c.set(2012, 10, 20);
-	quest1.setPeriodo_fine(new Date(c.getTimeInMillis()));
-
-	Questionario quest2 = new Questionario("questa è una prova2", "no",
-			"giulio è antipatico?", 12, null, null);
-	c.set(2012, 12, 14);
-	quest2.setPeriodo_inizio(new Date(c.getTimeInMillis()));
-	c.set(2012, 12, 18);
-
-	quest2.setPeriodo_fine(new Date(c.getTimeInMillis()));
-
-	List<Questionario> list = new ArrayList<Questionario>();
-	list.add(quest1);
-	list.add(quest2);
-	
-//	list = q.getAllQuestionari();
-//	if(g)	list = q.getQuestionariDaCompilare(cf);
-	
 	if (list.size() == 0)
 		out.println("<tr><td colspan=5>Non sono presenti Questionari in archivio.</td></tr>");
 	String datainizio = "";
@@ -98,27 +87,26 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		datafine = list.get(i).getPeriodo_fine().toString();
 		String[] df = datafine.split("-");
 		datafine = df[2] + "/" + df[1] + "/" + df[0];
-		out.println("<tr><td align=center>"
-				+ (i + 1)
-				+ "<td>"
-				+ list.get(i).getNome()
-				+ "<td align=center>"
-				+ datainizio
-				+ "<td align=center>"
-				+ datafine);
+		out.println("<tr><td align=center>" + (i + 1) + "<td>"
+				+ list.get(i).getNome() + "<td align=center>"
+				+ datainizio + "<td align=center>" + datafine);
 		if (g) {
 			out.print("<td align=center><a href='visualizza_questionari.jsp?id="
 					+ list.get(i).getId()
-					+ "&codfis="+cf+"'><img src='atsilo_images/visualizza.gif'></a></tr>");
-		}
-		else {
-				out.print("<td align=center style='padding: 10px'><a href='modifica_questionario.jsp?id="
-				+ list.get(i).getId()
-				+ "'><img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
-				+ list.get(i).getId()
-				+ "'><img src='atsilo_images/cancella.png'></a><a href='visualizza_questionari.jsp?id="
-				+ list.get(i).getId()
-				+ "'><img src='atsilo_images/visualizza.gif'></a></tr>");
+					+ "&codfis="
+					+ cf
+					+ "'><img src='atsilo_images/visualizza.gif'></a></tr>");
+		} else {
+			out.print("<td align=center style='padding: 10px'><a href='modifica_questionario.jsp?id="
+					+ list.get(i).getId()
+					+ "'><img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
+					+ list.get(i).getId()
+					+ "'><img src='atsilo_images/cancella.png'></a><a href='visualizza_questionari.jsp?id="
+					+ list.get(i).getId()
+					+ "'><img src='atsilo_images/visualizza.gif'></a><a href='statistica_questionario.jsp?id="
+					+ list.get(i).getId()
+					+ "'><img src='atsilo_images/grafico.jpg' width=50 height=50></a>"
+					+ "</tr>");
 		}
 	}
 %>
