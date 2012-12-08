@@ -105,39 +105,7 @@ public class DBRispostaQuestionario extends DBBeans {
     }
     
     
-    /**
-     * Restituisce la lista delle risposte data da un
-     * determinato genitore ad un questionario
-     * @param g Codice fiscale genitore di cui vogliamo le risposte
-     * @param idQuestionario id del questionario di cui vogliamo  le risposte
-     * @return lista di RisposteQuestionario o null
-     * @throws SQLException
-     */
-    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(String g,int idQuestionario) throws SQLException{
-        List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario> ();
-        
-        
-        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
-                " WHERE genitore = ? AND questionario = ?");
-        tabella.setParam(stmt, 1,"genitore", g);
-        tabella.setParam(stmt, 2, "questionario", idQuestionario);
-        ResultSet res = stmt.executeQuery();
-        
-        while (res.next()){
-            RispostaQuestionario ris=new RispostaQuestionario();
-
-            ris.setId(res.getInt("id"));
-            ris.setValore(res.getString("valore"));
-            ris.setCFgenitore(res.getString("genitore"));
-            ris.setIdDomanda(res.getInt("domanda"));
-            
-            l.add(ris);
-        }
-        res.close();
-        return l;
-    }
-    
-    
+      
     /**
      * Restituisce la lista delle risposte date da tutti i genitori
      * ad una specifica domanda di un questionario
