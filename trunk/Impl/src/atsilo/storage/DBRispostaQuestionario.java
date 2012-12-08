@@ -211,10 +211,13 @@ public class DBRispostaQuestionario extends DBBeans {
      *            Bean per cui valutare le assegnazioni
      * @return Array di assegnazioni
      */
-    protected Assegnazione[] creaAssegnazioni(RispostaQuestionario bean) {
+    protected Assegnazione[] creaAssegnazioni(RispostaQuestionario bean, Genitore genitore) {
         Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("domanda",bean.getIdDomanda());
-        Assegnazione[] DBAssign = new Assegnazione[1];
-        DBAssign[0]=DBDomandaQuestionario_assegnazione;
+        Assegnazione DBGenitore_assegnazione = new Assegnazione("genitore",genitore.getCodiceFiscale());
+        
+        Assegnazione[] DBAssign = new Assegnazione[2];
+        DBAssign[0] = DBDomandaQuestionario_assegnazione;
+        DBAssign[1] = DBGenitore_assegnazione;
         return DBAssign;
     }
     
