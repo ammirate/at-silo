@@ -30,7 +30,7 @@ import java.util.Map;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
