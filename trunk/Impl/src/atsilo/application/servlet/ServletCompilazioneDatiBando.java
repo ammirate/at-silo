@@ -19,7 +19,7 @@ import atsilo.entity.Beans;
 import atsilo.entity.Genitore;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.GenitoreException;
-import atsilo.stub.application.ControlDatiPersonali;
+import atsilo.stub.application.StubControlDatiPersonali;
 
 /*
  *-----------------------------------------------------------------
@@ -41,14 +41,14 @@ import atsilo.stub.application.ControlDatiPersonali;
 @WebServlet("/ServletCompilazioneDatiBando")
 public class ServletCompilazioneDatiBando extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private ControlDatiPersonali controlDatiPersonali ;
+    private StubControlDatiPersonali controlDatiPersonali ;
     private static final Logger LOG = Logger.getLogger("global");
     
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ServletCompilazioneDatiBando() {
-        controlDatiPersonali=ControlDatiPersonali.getIstance();
+        controlDatiPersonali=StubControlDatiPersonali.getIstance();
     }
     
     /**
@@ -288,7 +288,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         if ( request.getParameter("chiamante").equals("genitore")){//se chiamante è una pagina genitore     
             try {
-                if (controlDatiPersonali.setDatiGenitore(username_utente,dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono_genitore_non_richiedente, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza,rapportoParentela))
+                if (controlDatiPersonali.setDatiGenitore(username_utente,dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza,rapportoParentela))
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 
                 else 

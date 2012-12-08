@@ -1,4 +1,4 @@
-<%@ page import="atsilo.test.application.*,atsilo.entity.*"
+<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
  %>
  <% 
 	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente

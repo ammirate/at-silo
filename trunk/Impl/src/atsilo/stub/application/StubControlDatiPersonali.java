@@ -18,13 +18,13 @@ import atsilo.storage.*;
  * @author Angelo G. Scafuro
  *
  */
-public class ControlDatiPersonali {
-    private static final ControlDatiPersonali INSTANCE = new ControlDatiPersonali();
+public class StubControlDatiPersonali {
+    private static final StubControlDatiPersonali INSTANCE = new StubControlDatiPersonali();
 
     /**
      * Contructor
      */
-    ControlDatiPersonali() {
+    StubControlDatiPersonali() {
     }
 
 
@@ -266,8 +266,8 @@ public class ControlDatiPersonali {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze){
-            Bambino bambino=new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, categoriaAppartenenza, classe, genitore, assenze);
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, List<Assenza> assenze){
+            Bambino bambino=new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, categoriaAppartenenza, classe, genitore_richiedente, null, assenze);
                 return true;
         
     }
@@ -390,7 +390,7 @@ public class ControlDatiPersonali {
      * Gets the single istance of this class
      * @return a new ControlDatiPersonali
      */
-    public static ControlDatiPersonali getIstance(){
+    public static StubControlDatiPersonali getIstance(){
         return INSTANCE;
     }
 

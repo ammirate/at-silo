@@ -17,35 +17,33 @@ include file="atsilo_files/sidebar_genitore.jsp"
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
 <!--Dati genitore non richiedente-->
-<%@ page import="atsilo.test.application.*,atsilo.entity.*"
+<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
  %>
- <% 
-	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
- 	Utente utente=cdt.getUtenteFromUsername(username);
-	Genitore genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale());
- 	String cognome=genitore.getCognome();
- 	String nome=genitore.getNome();
- 	String codiceFiscale=genitore.getCodiceFiscale();
- 	String dataNascita="dataNascita";
- 	String comuneNascita=genitore.getComuneNascita(); 
- 	String cittadinanza=genitore.getcittadinanza();
- 	String indirizzoResidenza=genitore.getIndirizzoResidenza();
- 	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
- 	String capResidenza=genitore.getCapResidenza();
- 	String comuneResidenza=genitore.getComuneResidenza();
- 	String provinciaResidenza=genitore.getProvinciaResidenza();
- 	String indirizzoDomicilio=genitore.getIndirizzoDomicilio();
- 	String numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();
- 	String capDomicilio=genitore.getCapDomicilio();
- 	String comuneDomicilio=genitore.getComuneDomicilio();
- 	String provinciaDomicilio=genitore.getProvinciaDomicilio();
- 	String rapportoParentela=genitore.getRapportoParentela();
-	
-	String condizioneLavorativa=genitore.getCondizioneLavorativa();
- 	String tipoContratto=genitore.getTipoContratto();
- 	String sedeDiLavoro=genitore.getDipendentePresso();
-
-
+ <%
+ 	StubControlDatiPersonali cdt= StubControlDatiPersonali.getIstance();
+  	Utente utente=cdt.getUtenteFromUsername(username);
+ 	Genitore genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale());
+  	String cognome=genitore.getCognome();
+  	String nome=genitore.getNome();
+  	String codiceFiscale=genitore.getCodiceFiscale();
+  	String dataNascita="dataNascita";
+  	String comuneNascita=genitore.getComuneNascita(); 
+  	String cittadinanza=genitore.getcittadinanza();
+  	String indirizzoResidenza=genitore.getIndirizzoResidenza();
+  	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
+  	String capResidenza=genitore.getCapResidenza();
+  	String comuneResidenza=genitore.getComuneResidenza();
+  	String provinciaResidenza=genitore.getProvinciaResidenza();
+  	String indirizzoDomicilio=genitore.getIndirizzoDomicilio();
+  	String numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();
+  	String capDomicilio=genitore.getCapDomicilio();
+  	String comuneDomicilio=genitore.getComuneDomicilio();
+  	String provinciaDomicilio=genitore.getProvinciaDomicilio();
+  	String rapportoParentela=genitore.getRapportoParentela();
+ 	
+ 	String condizioneLavorativa=genitore.getCondizioneLavorativa();
+  	String tipoContratto=genitore.getTipoContratto();
+  	String sedeDiLavoro=genitore.getDipendentePresso();
  %>
 <form>
 <input name="chiamante" type="hidden" id="chiamante" value="genitore_non_richiedente">

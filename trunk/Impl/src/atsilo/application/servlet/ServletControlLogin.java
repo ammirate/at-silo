@@ -2,15 +2,13 @@ package atsilo.application.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import atsilo.test.application.ControlLogin;
+import atsilo.stub.application.StubControlLogin;
 
 /*
  *-----------------------------------------------------------------
@@ -33,13 +31,13 @@ import atsilo.test.application.ControlLogin;
 @WebServlet("/ServletControlLogin")
 public class ServletControlLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ControlLogin login ;
+	private StubControlLogin login ;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ServletControlLogin() {
-         login = ControlLogin.getInstance();
+         login = StubControlLogin.getInstance();
         
     }
 
