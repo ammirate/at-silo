@@ -29,12 +29,12 @@ import java.util.Map;
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: DBAQuestionario.java
+ * FILE: DBQuestionario.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Fabio Napoli,17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -92,7 +92,6 @@ public class DBQuestionario extends DBBeans<Questionario>{
         res.put("descrizione", "descrizione");
         res.put("id", "id");
         res.put("flag_rinuncia", "flag_rinuncia");
-        res.put("pathname", "pathname");
         res.put("nome", "nome");
         res.put("periodo_inizio", "periodo_inizio");
         res.put("periodo_fine", "periodo_fine");
@@ -167,11 +166,7 @@ public class DBQuestionario extends DBBeans<Questionario>{
         while(it.hasNext())
         {
             q=it.next();
-           // System.out.println("comp-all"+q.getDescrizione());
-          /*  ResultSet res=tabella.getDatabase().directQuery("SELECT * FROM "
-             + tabella.getNomeTabella()+ "WHERE  id="+q.getId()+ " AND NOW() "
-             +" BETWEEN "+ q.getPeriodo_inizioString()+" AND "+q.getPeriodo_fineString());
-            */
+         
             PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
                     " WHERE id = ? AND NOW() BETWEEN ? AND ? " );
             tabella.setParam(stmt, 1,"id", q.getId());
