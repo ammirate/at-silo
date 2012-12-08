@@ -7,7 +7,7 @@
       <x>0</x>
       <y>0</y>
       <w>730</w>
-      <h>810</h>
+      <h>910</h>
     </coordinates>
     <panel_attributes>Utente del sistema
 	Genitore
@@ -22,7 +22,9 @@
 
 	Delegato del rettore
 		Delegato Questionari
-	Resp. Scientifico</panel_attributes>
+	Resp. Scientifico
+	Responsabile Tirocini
+	Tirocinante</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
