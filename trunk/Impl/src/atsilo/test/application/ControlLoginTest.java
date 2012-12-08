@@ -8,7 +8,7 @@
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Marko, 07/dic/2012
+ * fabio, 08/dic/2012
  * REVISION
  * <nome revisore>, <data revisione>
  *-----------------------------------------------------------------
@@ -16,27 +16,49 @@
 
 package atsilo.test.application;
 
-import static org.junit.Assert.*;
+import javax.security.auth.login.LoginException;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import atsilo.application.ControlLogin;
+import atsilo.entity.Account;
+import atsilo.exception.DBConnectionException;
+import atsilo.storage.Database;
 
 /**
  * Classe ControlLoginTest
  * <Descrizione classe>
  * 
- * @author Marko
+ * @author fabio
  * 
  */
 public class ControlLoginTest {
     
-   
-    @Test
-    public void test() {
-        fail("Not yet implemented");
+    /**
+     * @param args
+     * @throws DBConnectionException 
+     * @throws LoginException 
+     */
+    public static void main(String[] args) throws LoginException, DBConnectionException {
+        // TODO Scheletro generato automaticamente
+     
+        
+        ControlLogin control=ControlLogin.getInstance();
+        Account a=new Account();
+        a=control.getValoreLogin("a.damelia", "alfonsoda","genitore");
+        System.out.println("Usernae : = "+a.getUserName());
+        System.out.println("Password : = "+a.getPassWord());
+        
     }
-
+    //Logger
+    /*
+     * private static final java.util.Logger LOG
+     *         = Logger.getLogger(ControlLoginTest.class.getName());
+     */
+    
+    //Variabili di istanza
+    
+    
+    //Costruttori
+    
+    
+    //Metodi
 }
