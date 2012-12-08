@@ -126,7 +126,7 @@ public class DomandaQuestionario {
         if(this.campi == null || this.campi.isEmpty())
             campi = "vuoto";
         else campi="lista di campi";
-        return "DOMANDA      ID:"+id+ "  descrizione:"+descrizione+"  campi:"+campi;
+        return "DOMANDA      ID:"+id+ "  descrizione:"+descrizione+" IdQuestionario:"+idQuestionario+"  campi:"+campi;
     }
 
     
