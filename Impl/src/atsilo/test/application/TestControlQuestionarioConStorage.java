@@ -80,7 +80,7 @@ public class TestControlQuestionarioConStorage {
     @Test
     public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
-        System.out.println("********************** Test 1 *********************************");
+      /*  System.out.println("********************** Test 1 *********************************");
        inserimentoTest();
        
        System.out.println("\n********************** Test 2 *********************************");
@@ -94,8 +94,9 @@ public class TestControlQuestionarioConStorage {
        stampaQuestionario();
        
        System.out.println("\n\n********************** Test 5 *********************************");
-       compilaTest();
-       
+       compilaTest();*/
+        System.out.println("\n\n********************** Test 6 *********************************");
+        this.cancellaTest();
         
     }
 
@@ -123,29 +124,7 @@ public class TestControlQuestionarioConStorage {
     
     
     //Variabili di istanza
-    Database db;
-    Date dataInizio = new Date(2012, 1, 1);
-    Date dataFine = new Date(2012,3,31);
-    
-    Questionario q1 = new Questionario("inizio anno", "no", "inizio", 21, dataInizio, dataFine);
-    
-    DomandaQuestionario d1 = new DomandaQuestionario(10,21,"quanti anni hai?",null);
-    CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", 10);
-    CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("check", "dai 26 ai 30", "26-30", 10);
-    CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("check", "dai 31 ai 36", "31-36", 10);  
-    
-    DomandaQuestionario d2 = new DomandaQuestionario(11,21,"dove abiti?",null);
-    CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "italia", "italia",11);
-    CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "europa", "europa",11);
-    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "altro", "altro", 11);
-  
-    DomandaQuestionario d3 = new DomandaQuestionario(12,21,"quanti figli hai?",null);
-    CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("check", "uno", "1",12);
-    CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("check", "due", "2",12);
-    CampoDomandaQuestionario c9 = new CampoDomandaQuestionario("check", "piu di due", "2+", 12);
-    
-   DomandaQuestionario d5;
-    
+   
     //Metodi
     /**
      * Test inserimento questionario
@@ -178,7 +157,14 @@ public class TestControlQuestionarioConStorage {
     
     
     
-    
+    public void cancellaTest() throws DBConnectionException, SQLException, QuestionarioException
+    {
+        
+        ControlQuestionario control = ControlQuestionario.getIstance();
+        Questionario q = control.getQuestionario(22);
+        control.eliminaQuestionario(q.getId());
+        
+    }
     
     /**
      * test modifica Questionario
@@ -216,10 +202,11 @@ public class TestControlQuestionarioConStorage {
      */
     public Questionario caricaTest() throws DBConnectionException, SQLException{
         ControlQuestionario control = ControlQuestionario.getIstance();
-        Questionario q = control.caricaQuestionarioDaCompilare(21, "csrntn91l26c129j");
+        Questionario q = control.caricaQuestionarioDaCompilare(2, "csrntn91l26c129j");
         return q;
     }
     
+  
     
     
     
@@ -227,18 +214,40 @@ public class TestControlQuestionarioConStorage {
         
         ControlQuestionario control = ControlQuestionario.getIstance();
         List<RispostaQuestionario> risposte = new ArrayList<RispostaQuestionario>();
-        String codFisc = "DBNGPP69A23B222C";
+  
         
-        risposte.add(new RispostaQuestionario(d1.getId(),"22-26",d1.getId(),codFisc));
-        risposte.add(new RispostaQuestionario(d2.getId(),"italia",d2.getId(),codFisc));
-        risposte.add(new RispostaQuestionario(d3.getId(),"uno",d3.getId(),codFisc));
-        risposte.add(new RispostaQuestionario(d5.getId(),"faccio il muratore!",d5.getId(),codFisc));
+        risposte.add(new RispostaQuestionario(21,"22-26",13,"DBNGPP69A23B222C"));
+        //risposte.add(new RispostaQuestionario(d2.getId(),"italia",d2.getId(),codFisc));
+        //risposte.add(new RispostaQuestionario(d3.getId(),"uno",d3.getId(),codFisc));
+        //risposte.add(new RispostaQuestionario(d5.getId(),"faccio il muratore!",d5.getId(),codFisc));
         
         
-        control.compilaQuestionario(21, risposte, codFisc);
+        control.compilaQuestionario(21, risposte, "DBNGPP69A23B222C");
         
     }
     
+    Database db;
+    Date dataInizio = new Date(2012, 1, 1);
+    Date dataFine = new Date(2012,3,31);
+    
+    Questionario q1 = new Questionario("inizio anno", "no", "inizio", 21, dataInizio, dataFine);
+    
+    DomandaQuestionario d1 = new DomandaQuestionario(10,21,"quanti anni hai?",null);
+    CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", 10);
+    CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("check", "dai 26 ai 30", "26-30", 10);
+    CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("check", "dai 31 ai 36", "31-36", 10);  
+    
+    DomandaQuestionario d2 = new DomandaQuestionario(11,21,"dove abiti?",null);
+    CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "italia", "italia",11);
+    CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "europa", "europa",11);
+    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "altro", "altro", 11);
+  
+    DomandaQuestionario d3 = new DomandaQuestionario(12,21,"quanti figli hai?",null);
+    CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("check", "uno", "1",12);
+    CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("check", "due", "2",12);
+    CampoDomandaQuestionario c9 = new CampoDomandaQuestionario("check", "piu di due", "2+", 12);
+    
+   DomandaQuestionario d5;
 }
 
 
