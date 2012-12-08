@@ -23,6 +23,13 @@ import javax.security.auth.login.LoginException;
 import atsilo.entity.Account;
 import atsilo.entity.Utente;
 import atsilo.exception.DBConnectionException;
+import atsilo.storage.DBAccount;
+import atsilo.storage.DBEducatoreDidattico;
+import atsilo.storage.DBGenitore;
+import atsilo.storage.DBPersonaleAsilo;
+import atsilo.storage.DBPsicopedagogo;
+import atsilo.storage.DBResponsabileQuestionario;
+import atsilo.storage.DBTirocinante;
 import atsilo.storage.Database;
 import atsilo.stub.storage.*;
 
@@ -30,17 +37,17 @@ import atsilo.stub.storage.*;
 
 /**
  * 
- * @author Marko
+ * @author Marko,Fabio Napoli
  */
 public class ControlLogin {
     private static ControlLogin control;
-    private StubAccount dbAccount;
-    private StubGenitore dbGenitore;
-    private StubPersonaleAsilo dbPersonaleAsilo;
-    private StubPsicopedagogo dbPsicopedagogo;
-    private StubResponsabileQuestionario dbResponsabileQuestionario;
-    private StubEducatoreDidattico dbEducatoreDidattico;
-    private StubTirocinante dbTirocinante;
+    private DBAccount dbAccount;
+    private DBGenitore dbGenitore;
+    private DBPersonaleAsilo dbPersonaleAsilo;
+    private DBPsicopedagogo dbPsicopedagogo;
+    private DBResponsabileQuestionario dbResponsabileQuestionario;
+    private DBEducatoreDidattico dbEducatoreDidattico;
+    private DBTirocinante dbTirocinante;
     
     
     private ControlLogin() throws DBConnectionException {
@@ -59,7 +66,7 @@ public class ControlLogin {
      * @throws DBConnectionException
      * @throws LoginException
      */
-    Account getValoreLogin(String username, String password, String tipo)
+    public Account getValoreLogin(String username, String password, String tipo)
             throws DBConnectionException, LoginException {
         // Come prima cosa, bisogna creare un'istanza di database e aprire una
         // connessione
@@ -70,13 +77,13 @@ public class ControlLogin {
         
         // Quindi, si possono creare tutti i gestori di tabelle necessari
         try {
-            dbAccount = new StubAccount(db);
-            dbGenitore = new StubGenitore(db);
-            dbPersonaleAsilo = new StubPersonaleAsilo(db);
-            dbPsicopedagogo = new StubPsicopedagogo(db);
-            dbResponsabileQuestionario = new StubResponsabileQuestionario(db);
-            dbEducatoreDidattico = new StubEducatoreDidattico(db);
-            dbTirocinante = new StubTirocinante(db);
+            dbAccount = new DBAccount(db);
+            dbGenitore = new DBGenitore(db);
+            dbPersonaleAsilo = new DBPersonaleAsilo(db);
+            dbPsicopedagogo = new DBPsicopedagogo(db);
+            dbResponsabileQuestionario = new DBResponsabileQuestionario(db);
+            dbEducatoreDidattico = new DBEducatoreDidattico(db);
+            dbTirocinante = new DBTirocinante(db);
             
             Account account = new Account();
             try {
@@ -94,22 +101,22 @@ public class ControlLogin {
                     
                     else {
                         if (tipo.compareTo("genitore") == 0)
-                            if ((dbGenitore.ricercaGenitorePerCf(account
+                            if ((dbGenitore.getGenitorePerCF(account
                                     .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
                                         "Username o Password o Tipologia Errata");
-                        else if (tipo.compareTo("personale_esilo") == 0)
+                        else if (tipo.compareTo("personale_asilo") == 0)
                             if ((dbPersonaleAsilo
-                                    .ricercaPersonaleAsiloPerCF(account
+                                    .getPersonaleAsiloPerCF(account
                                             .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
                                         "Username o Password o Tipologia Errata");
                         else if (tipo.compareTo("psicopedagogo") == 0)
-                            if ((dbPsicopedagogo.ricercaPsicopedagogoPerCf(account
+                            if ((dbPsicopedagogo.getPsicopedagogoPerCF(account
                                     .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
@@ -117,7 +124,7 @@ public class ControlLogin {
                                         "Username o Password o Tipologia Errata");
                         else if (tipo.compareTo("resposabile_questionario") == 0)
                             if ((dbResponsabileQuestionario
-                                    .ricercaResponsabileQuestionarioPerCF(account
+                                    .getResponsabileQuestionarioPerCF(account
                                             .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
@@ -125,14 +132,14 @@ public class ControlLogin {
                                         "Username o Password o Tipologia Errata");
                         else if (tipo.compareTo("educatore_didattico") == 0)
                             if ((dbEducatoreDidattico
-                                    .ricercaEducatoreDidatticoPerCf(account
+                                    .getEducatoreDidatticoPerCF(account
                                             .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
                                         "Username o Password o Tipologia Errata");
                         else if (tipo.compareTo("tirocinante") == 0)
-                            if ((dbTirocinante.ricercaTirocinantePerCF(account
+                            if ((dbTirocinante.getTirocinantePerCF(account
                                     .getOwner().getCodiceFiscale())) != null)
                                 
                                 return account;
