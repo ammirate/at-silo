@@ -161,7 +161,7 @@ public class TestControlQuestionarioConStorage {
     {
         
         ControlQuestionario control = ControlQuestionario.getIstance();
-        Questionario q = control.getQuestionario(22);
+        Questionario q = control.getQuestionario(27);
         control.eliminaQuestionario(q.getId());
         
     }

@@ -105,23 +105,10 @@ public class ControlQuestionario {
         try{
             
             try {
+                
                 Questionario daCancellare = storageQ.getQuestionario(id);
                 
-                Calendar dataAttuale = Calendar.getInstance();
-                int anno = dataAttuale.get(Calendar.YEAR);
-                int mese = dataAttuale.get(Calendar.MONTH) + 1;
-                int giorno = dataAttuale.get(Calendar.DAY_OF_MONTH);
-                System.out.println("giorno:"+giorno+" mese:"+mese+" anno:"+anno);
-                
-                Date dataNow = new Date(anno, mese, giorno);   
-                
-                Date dataI = daCancellare.getPeriodo_inizio();
-                Date dataF = daCancellare.getPeriodo_fine();
-              //  System.out.println(dataI);
-              //  System.out.println(dataF+"\n\n");
-                
-                
-                if(dataNow.before(dataI) && dataNow.after(dataF)){
+                if(!this.isEditable(daCancellare)){
                     throw new QuestionarioException("Impossibile eliminare un questionario attivo");
                 }
                 else {
@@ -135,8 +122,36 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
+    /**
+     * This method check if the questionario is editable
+     * A questionario is editable if the actual date is before the inital date of questionario
+     * and the actual date is after the final date of questionario
+     * @param Questionario 
+     * @return true if the questionario is deletable, false is the questionario isnt deletable
+     */
+    public boolean isEditable(Questionario q)
+    {
+        Calendar dataAttuale = Calendar.getInstance();
+        int anno = dataAttuale.get(Calendar.YEAR);
+        int mese = dataAttuale.get(Calendar.MONTH) + 1;
+        int giorno = dataAttuale.get(Calendar.DAY_OF_MONTH);
+        Date dataNow = new Date(dataAttuale.getTimeInMillis());
+        
+        Date dataInizio = q.getPeriodo_inizio();
+        Date dataFine = q.getPeriodo_fine();
+        
+        if(dataNow.after(dataInizio) &&  dataNow.before(dataFine)){
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+        
+        
+    }
     
-    
+   
     /**
      * Substitutes the questionnaire questions list with a new quiestions list
      * 
@@ -592,7 +607,10 @@ public class ControlQuestionario {
         // TODO Scheletro generato automaticamente
         Database db = new Database();
         DBQuestionario storageQ = new DBQuestionario(db);
-        return storageQ.getQuestionario(id);
+        db.apriConnessione();
+        Questionario q=storageQ.getQuestionario(id);
+        db.chiudiConnessione();
+        return q;
     }
     
 }
