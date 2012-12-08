@@ -40,7 +40,7 @@ import atsilo.stub.storage.*;
  * @author Marko,Fabio Napoli
  */
 public class ControlLogin {
-    private static ControlLogin control;
+    private static ControlLogin control = new ControlLogin();
     private DBAccount dbAccount;
     private DBGenitore dbGenitore;
     private DBPersonaleAsilo dbPersonaleAsilo;
@@ -50,7 +50,7 @@ public class ControlLogin {
     private DBTirocinante dbTirocinante;
     
     
-    private ControlLogin() throws DBConnectionException {
+    private ControlLogin(){
         control = new ControlLogin();
         
     }
