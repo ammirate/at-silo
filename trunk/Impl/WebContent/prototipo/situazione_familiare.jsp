@@ -14,7 +14,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
-  <form>
+ <form id="dati_bando" name="dati_bando" action="" method="post" >
   <table width="100%" border="0" cellspacing="0">
     <tr>
     <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vogliono inserire le informazioni</label>
@@ -90,18 +90,18 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   </tr>
   <tr>
     <td colspan="2">ALTRE CONDIZIONI RILEVANTI AI FINI DEL PUNTEGGIO</td>
-    <td colspan="1"><textarea name="altre_condizioni" cols="50" rows="5"></textarea></td>
+    <td colspan="1"><textarea name="altre_condizioni" cols="50" rows="5" readonly="readonly"></textarea></td>
   </tr>
     <tr>
     <td colspan="2">&nbsp;</td>
     <td colspan="2"></td>
   </tr>
    <tr>
-     <td colspan="4"><input value="Salva Dati" name="salva_dati" type="submit" />
-     <input value="Modifica Dati" name="modifica_dati" type="submit" />
-     </td>
-    
-  </tr>
+     <td></td>
+       	 	<td><input type="submit" name="bottone_submit" id="bottone_submit" value="Modifica" onClick="return settaAttributi(this)"/>
+                <input type="reset" name="reset" value="Annulla" />
+            </td>
+          </tr>
 </table>
  
 </form>

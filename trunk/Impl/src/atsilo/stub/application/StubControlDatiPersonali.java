@@ -3,6 +3,7 @@ package atsilo.stub.application;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import test.storage.*;
@@ -100,7 +101,7 @@ public class StubControlDatiPersonali {
      * @throws BambinoException
      * @throws SQLException 
      */
-    Bambino getDatiBambino(String codiceFiscale) throws BambinoException, DBConnectionException, SQLException{
+    public Bambino getDatiBambino(String codiceFiscale) throws BambinoException, DBConnectionException, SQLException{
         Database db = new Database();
         DBBambino bambino = new DBBambino(db);
         
@@ -116,6 +117,17 @@ public class StubControlDatiPersonali {
             db.chiudiConnessione();
         }
     }
+    /**
+     * Restituisce il cf dei bambini associati all account con username in input
+     * @return
+     */
+ public List<String> getCfBambini(String username){
+     List<String> lista=new ArrayList<String>();
+     lista.add("cfBambino");
+    return lista;
+     
+ }
+  
     
     /**
      * Modifica i dati di un account , SE VIENE PASSATO NULL ad un valore quest'ultimo non viene aggiornato e rimane con il vecchio valore
@@ -139,7 +151,7 @@ public class StubControlDatiPersonali {
      * @throws DomandaIscrizioneException
      */
     
-    public boolean inserisciDatiDomandaIscrizione(String codice_fiscale_bambino, String statoDomanda, boolean bambinoDisabile,boolean genitoreInvalido, boolean genitoreSolo,boolean genitoreVedovo,boolean genitoreNubile,boolean genitoreSeparato,boolean figlioNonRiconosciuto,boolean affidoEsclusivo,boolean altriComponentiDisabili,String condizioniCalcoloPunteggio,float isee) throws DomandaIscrizioneException, DBConnectionException{
+    public boolean inserisciDatiDomandaIscrizione(String codiceFiscaleBambino,String codiceFiscaleGenitore, boolean bambinoDisabile,boolean genitoreInvalido, boolean genitoreSolo,boolean genitoreVedovo,boolean genitoreNubile,boolean genitoreSeparato,boolean figlioNonRiconosciuto,boolean affidoEsclusivo,boolean altriComponentiDisabili,String condizioniCalcoloPunteggio,float isee) throws DomandaIscrizioneException, DBConnectionException{
         //se invocato la prima volta crea l'entità domanda di iscrizione
         //controlli che i dati siano corretti
         //
@@ -247,13 +259,14 @@ public class StubControlDatiPersonali {
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
             String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
-            String rapportoParentela) throws GenitoreException, DBConnectionException{
+            String rapportoParentela,String condizioneLavorativa, String tipoContratto) throws GenitoreException, DBConnectionException{
      
 
-        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano, statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela);
+        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano, statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela, condizioneLavorativa, tipoContratto);
         return true;
    
     }
+
     /**
      * 
      * @param username dell'account di cui modificare i dati, a cui è associato il bambino
@@ -370,6 +383,20 @@ public class StubControlDatiPersonali {
     //da completare
     public DomandaIscrizione getValoriIscrizioniNonConvalidate() throws DomandaIscrizioneException, DBConnectionException{
         return null;
+    }
+    /**
+     * 
+     * @param username username dell'account di cui si desiderano i dati dell iscriizone
+     * @param cfBambino codice fiscale del bambino di cui si vogliono i dati della domanda di iscrizione
+     *        
+     * @return dati domanda di iscrizione: se cfBambino è null restituire solo i dati collegati all'account (Dati genitori e situazione reddituale, senza i dati dei bambini e la situazione familiare)
+     *                                     se cfBambino diverso da null restituire tutti i dati compresi quelli del bambino e la sitauzione familiare
+     */
+    public DomandaIscrizione getDatiIscrizione(String username,String cfBambino){
+       DomandaIscrizione domandaiscrizione=new DomandaIscrizione();
+       
+       return domandaiscrizione;
+       
     }
     
     
