@@ -280,7 +280,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
      */
     protected final Map<String, Object> getFieldsFromBean(B realBean) {
         Map<String, PropertyDescriptor> descr = getProps(realBean);
-        Map<String, Object> res = new HashMap<String, Object>(descr);
+        Map<String, Object> res = new HashMap<String, Object>();
         Map<String, String> mapping = getMappingFields();
         String colName;
         Object propVal;
