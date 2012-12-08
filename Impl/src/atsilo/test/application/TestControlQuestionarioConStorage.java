@@ -32,8 +32,10 @@ import atsilo.application.ControlQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
+import atsilo.entity.RispostaQuestionario;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
+import atsilo.storage.DBDomandaQuestionario;
 import atsilo.storage.DBQuestionario;
 import atsilo.storage.Database;
 
@@ -79,12 +81,22 @@ public class TestControlQuestionarioConStorage {
     public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
    //    inserimentoTest();
-        modificaTest();
+       // modificaTest();
       // ControlQuestionario control = ControlQuestionario.getIstance();
       /* control.eliminaQuestionario(1);
        control.eliminaQuestionario(21);
        control.eliminaQuestionario(2);
        */
+         Questionario q = caricaTest();
+         System.out.println(q.toString());
+         for(DomandaQuestionario d : q.getDomande()){
+             System.out.println("\n"+d);
+             for(CampoDomandaQuestionario c : d.getCampi())
+                 System.out.println(c);
+         }
+         System.out.println("\n\n\n");
+         for(RispostaQuestionario r: q.getRispostePrecaricate())
+             System.out.println(r);
     }
     
     
@@ -144,16 +156,24 @@ public class TestControlQuestionarioConStorage {
     public void modificaTest() throws DBConnectionException, QuestionarioException{
         Questionario q2 = q1;
         
-        DomandaQuestionario d4 = new DomandaQuestionario(13,21,"quante lauree hai?",null);
+        DomandaQuestionario d5 = new DomandaQuestionario(14,21,"quante lauree hai?",null);
         CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("check", "una", "1",13);
         CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("check", "due", "2",13);
         CampoDomandaQuestionario c9 = new CampoDomandaQuestionario("check", "faccio il muratore!", "0", 13);
+        
+        q2.aggiungiDomanda(d5);
         
         ControlQuestionario control = ControlQuestionario.getIstance();
         control.modificaQuestionario(q1.getId(), q2);
     }
     
     
-    
+    public Questionario caricaTest() throws DBConnectionException, SQLException{
+        Database db = new Database();
+        ControlQuestionario control = ControlQuestionario.getIstance();
+        
+        Questionario q = control.caricaQuestionarioDaCompilare(21, "csrntn91l26c129j");
+        return q;
+    }
     
 }
