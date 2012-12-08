@@ -1,5 +1,13 @@
 package atsilo.storage;
 import atsilo.entity.Account;
+import atsilo.entity.DomandaQuestionario;
+import atsilo.entity.Genitore;
+import atsilo.entity.Psicopedagogo;
+import atsilo.entity.ResponsabileQuestionario;
+import atsilo.entity.Utente;
+import atsilo.storage.DBBeans.Assegnazione;
+import atsilo.entity.Tirocinante;
+import atsilo.entity.PersonaleAsilo;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -42,7 +50,7 @@ public class DBAccount extends DBBeans<Account>
      * @param nomeTabella
      * @param db
      */
-    public DBAccount(Database db){super("Account",db); }
+    public DBAccount(Database db){super("account",db); }
     
     
     /**
@@ -54,6 +62,8 @@ public class DBAccount extends DBBeans<Account>
         Map<String,String> res= new HashMap<String,String>();
         res.put("userName", "username");
         res.put("passWord", "password");
+       
+        
         
         return Collections.unmodifiableMap(res);
     }
@@ -100,16 +110,27 @@ public class DBAccount extends DBBeans<Account>
         {
             a.setUserName(r.getString("username"));
             a.setPassWord(r.getString("password"));
-            if(r.getString("genitore")!=null)
-                a.setOwner(r.getString("genitore"));
-                if(r.getString("psico_pedagogo")!=null)
-                    a.setOwner(r.getString("psico_pedagogo"));
-                if(r.getString("tirocinante")!=null)
-                    a.setOwner(r.getString("tirocinante"));
-                if(r.getString("responsabile_questionario")!=null)
-                    a.setOwner(r.getString("responsabile_questionario"));
-                if(r.getString("personale_asilo")!=null)
-                    a.setOwner(r.getString("personale_asilo"));
+        Utente u=new Utente();
+        
+        
+            
+            if(r.getString("genitore")!=null){
+                u.setCodiceFiscale(r.getString("genitore"));
+            }
+            if(r.getString("psico_pedagogo")!=null){
+                u.setCodiceFiscale(r.getString("psico_pedagogo"));
+            }
+            if(r.getString("tirocinante")!=null){
+                u.setCodiceFiscale(r.getString("tirocinante"));
+            }
+            
+            if(r.getString("responsabile_questionario")!=null){
+                u.setCodiceFiscale(r.getString("responsabile_questionario"));
+            }
+            if(r.getString("personale_asilo")!=null){
+                u.setCodiceFiscale(r.getString("personale_asilo"));
+           a.setOwner(u);
+            }
         }
          
             r.close();  
@@ -124,24 +145,75 @@ public class DBAccount extends DBBeans<Account>
     @Override
     protected Account creaBean(ResultSet r) throws SQLException {
         Account a = new Account();
-            a.setUserName(r.getString("username"));
-            a.setPassWord(r.getString("password"));
-            if(r.getString("genitore")!=null)
-            a.setOwner(r.getString("genitore"));
-            if(r.getString("psico_pedagogo")!=null)
-                a.setOwner(r.getString("psico_pedagogo"));
-            if(r.getString("tirocinante")!=null)
-                a.setOwner(r.getString("tirocinante"));
-            if(r.getString("responsabile_questionario")!=null)
-                a.setOwner(r.getString("responsabile_questionario"));
-            if(r.getString("personale_asilo")!=null)
-                a.setOwner(r.getString("personale_asilo"));
-            
+        a.setUserName(r.getString("username"));
+        a.setPassWord(r.getString("password"));
+        if(r.getString("genitore")!=null)
+            a.getOwner().setCodiceFiscale(r.getString("genitore"));
+        if(r.getString("psico_pedagogo")!=null)
+            a.getOwner().setCodiceFiscale(r.getString("psico_pedagogo"));
+        if(r.getString("tirocinante")!=null)
+            a.getOwner().setCodiceFiscale(r.getString("tirocinante"));
+        if(r.getString("responsabile_questionario")!=null)
+            a.getOwner().setCodiceFiscale(r.getString("responsabile_questionario"));
+        if(r.getString("personale_asilo")!=null)
+            a.getOwner().setCodiceFiscale(r.getString("personale_asilo"));
+        
         return a;
         
     }
+    
+    /**
+     * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
+     * assegnazioni predefinite relativamente a un bean.<br/>
+     * Nella sua implementazione predefinita, questo metodo restituisce sempre
+     * {@link #NESSUNA_ASSEGNAZIONE}. Le classi estendenti possono sovrascrivere
+     * questo metodo per indicare in modo comodo delle assegnazioni predefinite
+     * per tutti i metodi di modifica della base di dati.
+     * 
+     * @param bean
+     *            Bean per cui valutare le assegnazioni
+     * @return Array di assegnazioni
+     */
+    protected Assegnazione[] creaAssegnazioni(Account bean) {
+        Assegnazione DBAccount_assegnazione = new Assegnazione("responsabile_questionario",null);
+        Assegnazione DBAccount_assegnazione1 = new Assegnazione("genitore",null);
+        Assegnazione DBAccount_assegnazione2 = new Assegnazione("tirocinante",null);
+        Assegnazione DBAccount_assegnazione3 = new Assegnazione("personale_asilo",null);
+        Assegnazione DBAccount_assegnazione4 = new Assegnazione("psico_pedagogo",null);
+        Assegnazione DBAccount_assegnazione5;
+        
+        
+        Assegnazione[] DBAssign = new Assegnazione[6];
+        
+        DBAssign[0]=DBAccount_assegnazione;
+        DBAssign[1]=DBAccount_assegnazione1;
+        DBAssign[2]=DBAccount_assegnazione2;
+        DBAssign[3]=DBAccount_assegnazione3;
+        DBAssign[4]=DBAccount_assegnazione4;
+        
+        if(bean.getOwner() instanceof ResponsabileQuestionario){
+            DBAccount_assegnazione5 = new Assegnazione("responsabile_questionario",bean.getOwner().getCodiceFiscale());
+            DBAssign[0]=DBAccount_assegnazione5;
+        }
+        if(bean.getOwner() instanceof Genitore){
+            DBAccount_assegnazione5 = new Assegnazione("genitore",bean.getOwner().getCodiceFiscale());
+            DBAssign[1]=DBAccount_assegnazione5;
+        }
+        if(bean.getOwner() instanceof Tirocinante){
+            DBAccount_assegnazione5 = new Assegnazione("tirocinante",bean.getOwner().getCodiceFiscale());
+            DBAssign[2]=DBAccount_assegnazione5;
+        }
+        if(bean.getOwner() instanceof PersonaleAsilo){
+            DBAccount_assegnazione5 = new Assegnazione("personale_asilo",bean.getOwner().getCodiceFiscale());
+            DBAssign[3]=DBAccount_assegnazione5;
+        }
+        if(bean.getOwner() instanceof Psicopedagogo){
+            DBAccount_assegnazione5 = new Assegnazione("psico_pedagogo",bean.getOwner().getCodiceFiscale());
+            DBAssign[4]=DBAccount_assegnazione5;
+        }
+        
+        return DBAssign;
+    }
+}
 
-
-  
- }
 

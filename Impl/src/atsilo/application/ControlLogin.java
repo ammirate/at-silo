@@ -97,7 +97,7 @@ public class ControlLogin {
                     else {
                         if ((tipo.compareTo("genitore") == 0 && account.getPassWord().compareTo(password) == 0))
                             if ((dbGenitore.getGenitorePerCF(account
-                                    .getOwner())) != null)
+                                    .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
@@ -105,14 +105,14 @@ public class ControlLogin {
                         else if ((tipo.compareTo("personale_asilo") == 0 && account.getPassWord().compareTo(password) == 0))
                             if ((dbPersonaleAsilo
                                     .getPersonaleAsiloPerCF(account
-                                            .getOwner())) != null)
+                                            .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
                                         "Username o Password o Tipologia Errata");
                         else if ((tipo.compareTo("psicopedagogo") == 0 && account.getPassWord().compareTo(password) == 0))
                             if ((dbPsicopedagogo.getPsicopedagogoPerCF(account
-                                    .getOwner())) != null)
+                                    .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
@@ -120,7 +120,7 @@ public class ControlLogin {
                         else if ((tipo.compareTo("resposabile_questionario") == 0 && account.getPassWord().compareTo(password) == 0))
                             if ((dbResponsabileQuestionario
                                     .getResponsabileQuestionarioPerCF(account
-                                            .getOwner())) != null)
+                                            .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
@@ -128,14 +128,14 @@ public class ControlLogin {
                         else if ((tipo.compareTo("educatore_didattico") == 0 && account.getPassWord().compareTo(password) == 0))
                             if ((dbEducatoreDidattico
                                     .getEducatoreDidatticoPerCF(account
-                                            .getOwner())) != null)
+                                            .getOwner().getCodiceFiscale())) != null)
                                 return account;
                             else
                                 throw new LoginException(
                                         "Username o Password o Tipologia Errata");
                         else if ((tipo.compareTo("tirocinante") == 0 && account.getPassWord().compareTo(password) == 0))
                             if ((dbTirocinante.getTirocinantePerCF(account
-                                    .getOwner())) != null)
+                                    .getOwner().getCodiceFiscale())) != null)
                                 
                                 return account;
                             else
