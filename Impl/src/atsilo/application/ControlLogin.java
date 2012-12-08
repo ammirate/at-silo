@@ -51,8 +51,6 @@ public class ControlLogin {
     
     
     private ControlLogin(){
-        control = new ControlLogin();
-        
     }
     
     /**
