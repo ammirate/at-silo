@@ -72,13 +72,16 @@ public class ControlQuestionario {
                 throw new QuestionarioException("Inserimento fallito");
             
             for(DomandaQuestionario d : domande){
-                if(!storageD.inserisci(d))
+                if(storageD.getDomanda(d.getId()) == null){
+                  if(!storageD.inserisci(d))
                     throw new QuestionarioException("inserimento domanda fallito");
                     
                     campi = d.getCampi();
                     for(CampoDomandaQuestionario c : campi)
-                        storageC.inserisci(c);    
+                        storageC.inserisci(c);   
+                }
             }
+        } catch (SQLException e) {
         }
         finally{
             db.chiudiConnessione();
@@ -382,17 +385,18 @@ public class ControlQuestionario {
             //controllo per il caricamento delle risposte già inserite dal genitore
             risposte = storageRisposte.getRisposteGenitore(CFgenitore);
             for(RispostaQuestionario r : risposte){
-                DomandaQuestionario dTemp = storageDomande.getDomanda(r.getIdDomanda());//prendo la domanda a cui fa riferimento la risposta
+                DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());//prendo la domanda a cui fa riferimento la risposta
                 
                 //controllo se la risposta dTemp, appartenente a qualche altro questionario,
                 //corrisponde a qualche domanda all'interno del nostro questionario
                 //in tal caso la risposta a tale domanda sarà la stessa della domanda dTemp
-                for(DomandaQuestionario d : domande)
-                    if(d.getDescrizione().equalsIgnoreCase(dTemp.getDescrizione()))
-                        toReturn.precaricaRispostaAllaDomanda(d, r);
-            }
+                List<DomandaQuestionario> tutteLeDomandeDiGenitore = getDomandeRisposteDaGenitore(CFgenitore);
+                for(DomandaQuestionario d : tutteLeDomandeDiGenitore)
+                   if( d.getDescrizione().equalsIgnoreCase(domandaRisposta.getDescrizione()))
+                       toReturn.precaricaRispostaAllaDomanda(domandaRisposta, r);
                 
-            
+            }
+                            
             return toReturn;
             
         }
@@ -500,7 +504,11 @@ public class ControlQuestionario {
     }
     
     
-    
+    /**
+     * Gets all the questionnaires 
+     * @return 
+     * @throws DBConnectionException
+     */
     public List<Questionario> getAllQuestionari() throws DBConnectionException{
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
@@ -522,6 +530,35 @@ public class ControlQuestionario {
     }
     
     
+    
+    /**
+     * Gets all the qyestions answered by a parent
+     * @param CFgenitore is the parent key
+     * @return a List of DomandaQuestionario
+     * @throws DBConnectionException
+     * @throws SQLException
+     */
+    private List<DomandaQuestionario> getDomandeRisposteDaGenitore(String CFgenitore) throws DBConnectionException, SQLException{
+        Database db = new Database();
+        DBRispostaQuestionario storageR = new DBRispostaQuestionario(db);
+        DBDomandaQuestionario storageD = new DBDomandaQuestionario(db);
+                
+        if(!db.apriConnessione())
+                throw new DBConnectionException("Connessione al DB fallita");
+                       
+        try{
+            List<RispostaQuestionario> risposte = storageR.getRisposteGenitore(CFgenitore);
+            List<DomandaQuestionario> toReturn = new ArrayList<DomandaQuestionario>();
+            
+            for(RispostaQuestionario r : risposte)
+                toReturn.add(storageD.getDomanda(r.getIdDomanda()));
+            
+            return toReturn;
+        } 
+        finally{
+            db.chiudiConnessione();
+        }
+    }
     
     
     
