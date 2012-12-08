@@ -3,6 +3,7 @@ package atsilo.stub.application;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import atsilo.entity.DomandaIscrizione;
@@ -11,7 +12,7 @@ import atsilo.storage.Database;
 public class StubDomandaIscrizione
 {
     DomandaIscrizione di;
-    List<DomandaIscrizione> ldi;
+    List<DomandaIscrizione> ldi=new ArrayList<DomandaIscrizione>();
     Database database;
     
     public StubDomandaIscrizione(Database db){
