@@ -18,6 +18,7 @@ package atsilo.test.application;
 
 import static org.junit.Assert.*;
 
+import java.sql.Date;
 import java.sql.SQLException;
 
 import org.junit.After;
@@ -31,6 +32,7 @@ import atsilo.entity.Bambino;
 import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
+import atsilo.entity.Servizio;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
@@ -71,7 +73,9 @@ public class ControlGestioneBandoTest {
         StubDomandaIscrizione dbDomande=new StubDomandaIscrizione(db);
         Genitore genitore=new Genitore();
         Bambino bambino=new Bambino();
-        DomandaIscrizione domanda=new DomandaIscrizione("ciao", 9999, 0,"0", genitore, bambino);
+        DomandaIscrizione domanda=new DomandaIscrizione(new Date(2012, 8, 8), 9999, 0,0, genitore, bambino, "convalidata", "consegnato",
+                "mancante", "consegnato", false, false, false, false, false, false, false, false, false, "condizioni", 
+                24500F, null,"DomandaInviataInAttesaDiGraduatoria");
         dbDomande.inserisci(domanda);
        
         control.inserisciPunteggio(domanda, 54);
