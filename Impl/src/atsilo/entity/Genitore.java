@@ -16,6 +16,7 @@ import java.util.List;
  * Antonio Barba, 13/11/2012 (non responsabile)
  * REVISION
  * Andrea Micco, 6/12/2012
+ * Mariella Ferrara 8/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -29,6 +30,8 @@ public class Genitore extends Utente {
     private Date scadenzaContratto;
     private String categoriaAppartenenza;
     private String rapportoParentela;
+    private String condizioneLavorativa;
+    private String tipoContratto;
     
     
     /**
@@ -58,6 +61,8 @@ public class Genitore extends Utente {
      * @param scadenzaContratto il parametro è fissato
      * @param categoriaAppartenenza il parametro è fissato
      * @param rapportoParentela il parametro è fissato
+     * @param condizioneLavorativa il parametro è fissato
+     * @param tipoContratto il parametro è fissato
      */
     public Genitore(Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
@@ -69,7 +74,7 @@ public class Genitore extends Utente {
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
             String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
-            String rapportoParentela) {
+            String rapportoParentela, String condizioneLavorativa, String tipoContratto) {
         super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
                telefono, cittadinanza, indirizzoResidenza,
                 numeroCivicoResidenza, capResidenza, comuneResidenza,
@@ -86,13 +91,15 @@ public class Genitore extends Utente {
         this.scadenzaContratto = scadenzaContratto;
         this.categoriaAppartenenza = categoriaAppartenenza;
         this.rapportoParentela = rapportoParentela;
+        this.condizioneLavorativa=condizioneLavorativa;
+        this.tipoContratto=tipoContratto;
     }
 
 
 
     /**
-     * Metodo che prende il parametro tipo
-     * @param tipo il parametro inserito
+     * Metodo che setta il campo tipo
+     * @param tipo è settato dopo la lettura
      */
     public void setTipo(String tipo) {
         this.tipo = tipo;
@@ -107,8 +114,8 @@ public class Genitore extends Utente {
     }
     
     /**
-     * Metodo che prende il parametro dipendentePresso
-     * @param dipendentePresto il parametro inserito
+     * Metodo che setta il campo dipendentePresso
+     * @param dipendentePresto è settato dopo la lettura
      */
     public void setDipendentePresso(String dipendentePresso) {
         this.dipendentePresso = dipendentePresso;
@@ -123,8 +130,8 @@ public class Genitore extends Utente {
     }
     
     /**
-     * Metodo che prende il parametro rapportiAteneoSalerno
-     * @param rapportiAteneoSalerno il parametro inserito
+     * Metodo che setta il campo rapportiAteneoSalerno
+     * @param rapportiAteneoSalerno è settato dopo la lettura
      */
     public void setRapportiAteneoSalerno(String rapportiAteneoSalerno) {
         this.rapportiAteneoSalerno = rapportiAteneoSalerno;
@@ -139,8 +146,8 @@ public class Genitore extends Utente {
     }
 
     /**
-     * Metodo che prende il parametro rapportiComuneFisciano
-     * @param rapportiComuneFisciano il parametro inserito
+     * Metodo che setta il campo rapportiComuneFisciano
+     * @param rapportiComuneFisciano è settato dopo la lettura
      */
     public void setRapportiComuneFisciano(String rapportiComuneFisciano) {
         this.rapportiComuneFisciano = rapportiComuneFisciano;
@@ -155,8 +162,8 @@ public class Genitore extends Utente {
     }
     
     /**
-     * Metodo che prende il parametro statusLavorativo
-     * @param statusLavorativo il parametro inserito
+     * Metodo che setta il campo statusLavorativo
+     * @param statusLavorativo è settato dopo la lettura
      */
     public void setStasuLavorativo(String statusLavorativo) {
         this.statusLavorativo = statusLavorativo;
@@ -171,8 +178,8 @@ public class Genitore extends Utente {
     }
     
     /**
-     * Metodo che prende il parametro rapportoParentela
-     * @param rapportoParentela il parametro inserito
+     * Metodo che setta il campo rapportoParentela
+     * @param rapportoParentela è settato dopo la lettura
      */
     public void setRapportoParentela(String rapportoParentela) {
         this.rapportoParentela = rapportoParentela;
@@ -187,8 +194,8 @@ public class Genitore extends Utente {
     }
 
     /**
-     * Metodo che prende il parametro scadenzaContratto
-     * @param scadenzaContratto il parametro inserito
+     * Metodo che setta il campo scadenzaContratto
+     * @param scadenzaContratto è settato dopo la lettura
      */
     public void setScadenzaContratto(Date scadenzaContratto) {
         this.scadenzaContratto = scadenzaContratto;
@@ -203,7 +210,7 @@ public class Genitore extends Utente {
     }
 
     /**
-     * Metodo che prende il parametro categoriaAppartenenza
+     * Metodo che setta il campo categoriaAppartenenza
      * @param categoriaAppartenenza il parametro inserito
      */
     public void setCategoriaAppartenenza(String categoriaAppartenenza) {
@@ -255,4 +262,44 @@ public class Genitore extends Utente {
     public void aggiungiQuestionarioCompilato(Questionario q){
         questionariCompilati.add(q);
     }
+
+    /**
+     * Metodo che prende il parametro condizioneLavorativa
+     * @return condizioneLavorativa il parametro inserito
+     */
+    public String getCondizioneLavorativa() {
+        return condizioneLavorativa;
+    }
+
+    /**
+     * Metodo che setta il campo condizioneLavorativa
+     * @param condizioneLavorativa è settato dopo la lettura
+     */
+    public void setCondizioneLavorativa(String condizioneLavorativa) {
+        this.condizioneLavorativa = condizioneLavorativa;
+    }
+
+    /**
+     * Metodo che prende il parametro tipoContratto
+     * @return tipoContratto il parametro inserito
+     */
+    public String getTipoContratto() {
+        return tipoContratto;
+    }
+
+    /**
+     * Metodo che setta il campo tipoContratto
+     * @param tipoContratto è settato dopo la lettura
+     */
+    public void setTipoContratto(String tipoContratto) {
+        this.tipoContratto = tipoContratto;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
