@@ -2,12 +2,12 @@
 	include file="atsilo_files/header.jsp"
 %>
 <!--Prende i dati del genitore -->
-<%@ page import="atsilo.test.application.*,atsilo.entity.*"
+<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
  %>
  <%
- 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
-  	Utente utente=cdt.getUtenteFromUsername(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
-  	String tipologia_genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale()).getTipo();
+ 	StubControlDatiPersonali cdt= StubControlDatiPersonali.getIstance();
+   	Utente utente=cdt.getUtenteFromUsername(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
+   	String tipologia_genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale()).getTipo();
  %>
  <!--Script per gestire i form -->
  <script type="text/javascript">

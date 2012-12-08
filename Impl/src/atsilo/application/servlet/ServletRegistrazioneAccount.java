@@ -18,7 +18,7 @@ import test.storage.TestDBBeans;
 import atsilo.entity.Account;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.GenitoreException;
-import atsilo.stub.application.ControlDatiPersonali;
+import atsilo.stub.application.StubControlDatiPersonali;
 
 /*
  *-----------------------------------------------------------------
@@ -40,7 +40,7 @@ import atsilo.stub.application.ControlDatiPersonali;
 @WebServlet("/ServletRegistrazioneAccount")
 public class ServletRegistrazioneAccount extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private ControlDatiPersonali controlDatiPersonali;
+    private StubControlDatiPersonali controlDatiPersonali;
     private static final Logger LOG = Logger.getLogger("global");
     
     /**

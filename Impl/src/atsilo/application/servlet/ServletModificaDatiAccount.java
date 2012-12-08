@@ -2,16 +2,14 @@ package atsilo.application.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import atsilo.stub.application.ControlDatiPersonali;
-import atsilo.test.application.ControlLogin;
+import atsilo.stub.application.StubControlDatiPersonali;
+import atsilo.stub.application.StubControlLogin;
 
 /*
  *-----------------------------------------------------------------
@@ -33,13 +31,13 @@ import atsilo.test.application.ControlLogin;
 @WebServlet("/ServletModificaDatiAccount")
 public class ServletModificaDatiAccount extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private ControlDatiPersonali cdp ;
+	private StubControlDatiPersonali cdp ;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ServletModificaDatiAccount() {
-        cdp=ControlDatiPersonali.getIstance();
+        cdp=StubControlDatiPersonali.getIstance();
     }
 
 	/**

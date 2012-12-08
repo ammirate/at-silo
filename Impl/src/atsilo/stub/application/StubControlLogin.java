@@ -6,12 +6,12 @@ package atsilo.stub.application;
  *  
  *  @author Angelo Scafuro
  */
-public class ControlLogin {
+public class StubControlLogin {
     /**
      * Questa variabile verr� inizializzata quando la classe sar� caricata per la prima volta.
      * Singleton vuol dire una sola istanza di questa classe, e sar� memorizzata in INSTANCE.
      */
-    private static final ControlLogin INSTANCE = new ControlLogin();
+    private static final StubControlLogin INSTANCE = new StubControlLogin();
 
     /**
      * Username  password e tipologie di utenti per il funzionamento stub
@@ -24,7 +24,7 @@ public class ControlLogin {
     /**
      * Metodo costruttore
      */
-    ControlLogin() {
+    StubControlLogin() {
        
          
     }
@@ -63,7 +63,7 @@ public class ControlLogin {
      * Restitusice l'istanza di Login
      * @return istanza del controlLogin
      */
-    public static ControlLogin getInstance() {
+    public static StubControlLogin getInstance() {
         /**
          * Questa � una vera implementazione di un singleton.
          * Vedete anche l'inizializzazione di INSTANCE all'inizio del file..
