@@ -111,7 +111,7 @@ public class ControlQuestionario {
                 int anno = dataAttuale.get(Calendar.YEAR);
                 int mese = dataAttuale.get(Calendar.MONTH) + 1;
                 int giorno = dataAttuale.get(Calendar.DAY_OF_MONTH);
-            //    System.out.println("giorno:"+giorno+" mese:"+mese+" anno:"+anno);
+                System.out.println("giorno:"+giorno+" mese:"+mese+" anno:"+anno);
                 
                 Date dataNow = new Date(anno, mese, giorno);   
                 
@@ -121,11 +121,12 @@ public class ControlQuestionario {
               //  System.out.println(dataF+"\n\n");
                 
                 
-                if(dataNow.after(dataI) && dataNow.before(dataF)){
+                if(dataNow.before(dataI) && dataNow.after(dataF)){
                     throw new QuestionarioException("Impossibile eliminare un questionario attivo");
                 }
-                
+                else {
                 storageQ.delete(daCancellare);
+                }
             } catch (SQLException e) {
                 throw new QuestionarioException("Questionario non trovato");
             }
@@ -138,6 +139,7 @@ public class ControlQuestionario {
     
     /**
      * Substitutes the questionnaire questions list with a new quiestions list
+     * 
      * @param idQquestionario is the quiestionnaire identificative
      * @param domande is the new quistions list to add
      * @return true if the list was substituted correctly, else false
@@ -283,9 +285,8 @@ public class ControlQuestionario {
      */
     public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, String CFchiCompila) throws DBConnectionException, QuestionarioException{
         Database db = new Database();    
-        DBQuestionario storage = new DBQuestionario(db);
+       
         DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
-        DBGenitore storageGenitore = new DBGenitore(db);
         DBCompilaQuestionario storageCompila = new DBCompilaQuestionario(db);
         
         
