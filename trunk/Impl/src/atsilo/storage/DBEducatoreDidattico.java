@@ -25,39 +25,45 @@ import atsilo.entity.Utente;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
 public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
     
+    /**
+     * Crea un gestore per il bean EducatoreDidattico
+     */
+   
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
+    /**
+     * Costruttore con parametri
+     * @param db database con relativa connessione
+     */ 
+    public DBEducatoreDidattico(Database db){
+        super("educatore_didattico",db);
+    }
     
-    /**
-     * Costruttore
-     * @param db
-     */
-    public DBEducatoreDidattico(Database db){ super("EducatoreDidattico",db);}
-
 
     /**
-     * @return
+     * Metodo che crea la chiave della tabella
+     * @return Collection.unmodiableList
      */
     private static List<String> creaChiave() {
         List<String> res=  Arrays.asList("codice_fiscale");
         return Collections.unmodifiableList(res);
     }
 
-
     /**
-     * @return
+     * metodo che associa all' attributo del database (nome attributo db) 
+     * il rispettivo valore(nome attributo classe)
+     * @return mappa <chiave,valore>
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
-        //
-        res.put("titolo_di_studio", "TitoloDiStudio");
+        res.put("categoria_appartenenza", "categoriaAppartenenza");
         res.put("nome","nome");
         res.put("data_di_nascita","dataNascita");
         res.put("cognome","cognome");
@@ -65,61 +71,21 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
         res.put("email", "email");
         res.put("comune_nascita", "comuneNascita");
         res.put("telefono", "telefono");
-        res.put("residenza", "residenza");
+        res.put("cittadinanza", "cittadinanza");
+        res.put("indirizzo_residenza", "indirizzoResidenza");
+        res.put("numero_civico_residenza", "numeroCivicoResidenza");
+        res.put("cap_residenza", "capResidenza");
+        res.put("comune_residenza", "comuneResidenza");
+        res.put("provincia_residenza", "provinciaResidenza");
+        res.put("indirizzo_domicilio", "indirizzoDomicilio");
+        res.put("numero_civico_domicilio", "numCivicoDomicilio");
+        res.put("cap_domicilio", "capDomicilio");
+        res.put("comune_domicilio", "comuneDomicilio");
+        res.put("provincia_domicilio", "provinciaDomicilio");
+        res.put("titolo_di_studi", "titoloDiStudi");
+        
         return res;
     }
-
-/**
- * ricerca educatore didattico per titolo di studi
- * @param titoloS è il titolo di studi da ricercare, se è una stringa vuota la ricerca non porta nessun risultato, se è null si verifica un NULLPOINTEREXCEPTION
- * @return una lista di educatori didattici aventi un determinato titolo di studi oppure una lista vuota
- * @throws SQLException se ci sono errori di connessione con il database
- */
-    public List<EducatoreDidattico> ricercaEducatoreDidatticoPerTitoloStudio(String titoloS) throws SQLException{
-        List<EducatoreDidattico> e=new ArrayList<EducatoreDidattico>();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE titolo_di_studi = ?");
-            tabella.setParam(stmt, 1, "titolo_di_studi", titoloS);
-            ResultSet res= stmt.executeQuery();
-        for(EducatoreDidattico ed:iteraResultSet(res))
-           e.add(ed);
-            
-           res.close();
-        return e;
-    }
-    
-    
-    
-    /**
-     * ricerca educatore didattico per codicefiscale 
-     * @param cf è il codice fiscale da ricercare se è una stringa vuota la ricerca non porta nessun risultato, se è null si verifica un NULLPOINTEREXCEPTION
-     * @return un educatore didattico se il cf è stato trovato nel database oppure un oggetto vuoto
-     * @throws SQLException se si verifica un errore di connessione con il database
-     */
-    public EducatoreDidattico ricercaEducatoreDidatticoPerCf(String cf) throws SQLException{
-        EducatoreDidattico e=new EducatoreDidattico();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", cf);
-            ResultSet r= stmt.executeQuery();
-        if(r.next())
-        {
-            //settare lista classi
-            e.setTitoloDiStudio(r.getString("titolo_di_studio"));
-            e.setNome(r.getString("nome"));
-            e.setCognome(r.getString("cognome"));
-            e.setCodiceFiscale(r.getString("codice_fiscale"));
-            e.setDataNascita(r.getDate("data_nascita"));
-            e.setResidenza(r.getString("residenza"));
-            e.setEmail(r.getString("email"));
-            e.setComuneNascita(r.getString("comune_nascita"));
-            e.setTelefono(r.getString("telefono")); 
-        }
-        r.close();
-        return e;
-     
-    }
-
 
     /**
      * @see atsilo.storage.DBBeans#getMappingFields()
@@ -128,8 +94,7 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
     protected Map getMappingFields() {
         return MAPPINGS;
     }
-
-
+    
     /**
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
@@ -137,30 +102,80 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
     protected List getKeyFields() {
         return CHIAVE;
     }
+    
+    /**
+     *@see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     *@throws SQLException
+     *@return EducatoreDidattico
+     */
+    protected EducatoreDidattico creaBean(ResultSet r) throws SQLException {
+        EducatoreDidattico p=new EducatoreDidattico();
+        {
+            p.setDataNascita(r.getDate("data_di_nascita"));
+            p.setNome(r.getString("nome"));
+            p.setCognome(r.getString("cognome"));
+            p.setCodiceFiscale(r.getString("codice_fiscale"));
+            p.setEmail(r.getString("email"));
+            p.setComuneNascita(r.getString("comune_di_nascita"));
+            p.setTelefono(r.getString("telefono"));
+            p.setCittadinanza(r.getString("cittadinanza"));
+            p.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            p.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            p.setCapResidenza(r.getString("cap_residenza"));
+            p.setComuneResidenza(r.getString("comune_residenza"));
+            p.setProvinciaResidenza(r.getString("provincia_residenza"));
+            p.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            p.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            p.setCapDomicilio(r.getString("cap_domicilio"));
+            p.setComuneDomicilio(r.getString("comune_domicilio"));
+            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            p.setTitoloDiStudi(r.getString("titolo_di_studi"));
+            
+        }
+        return p;
+    }
+    
 
 
     /**
-     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     * Dato un codice fiscale restituisce l' educatore didattico corrispondente
+     * @param codiceFiscale codice fiscale dell' educatore didattico
+     * @return EducatoreDidattico o null
+     * @throws SQLException 
      */
-    @Override
-    protected EducatoreDidattico creaBean(ResultSet r) throws SQLException {
-        EducatoreDidattico e=new EducatoreDidattico();
-        if(r.next())
-        {
-            //settare lista classi
-            e.setTitoloDiStudio(r.getString("titolo_di_studio"));
-            e.setNome(r.getString("nome"));
-            e.setCognome(r.getString("cognome"));
-            e.setCodiceFiscale(r.getString("codice_fiscale"));
-            e.setDataNascita(r.getDate("data_nascita"));
-            e.setResidenza(r.getString("residenza"));
-            e.setEmail(r.getString("email"));
-            e.setComuneNascita(r.getString("comune_nascita"));
-            e.setTelefono(r.getString("telefono"));   
+    public EducatoreDidattico getEducatoreDidatticoPerCF(String codiceFiscale) 
+            throws SQLException {
+        EducatoreDidattico p = new EducatoreDidattico();
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+                + tabella.getNomeTabella() + " WHERE codice_fiscale= ?");
+        tabella.setParam(stmt, 1, "codice_fiscale", codiceFiscale);
+        ResultSet r = stmt.executeQuery();
+        
+        if(r.next()){
+            p.setDataNascita(r.getDate("data_di_nascita"));
+            p.setNome(r.getString("nome"));
+            p.setCognome(r.getString("cognome"));
+            p.setCodiceFiscale(r.getString("codice_fiscale"));
+            p.setEmail(r.getString("email"));
+            p.setComuneNascita(r.getString("comune_di_nascita"));
+            p.setTelefono(r.getString("telefono"));
+            p.setCittadinanza(r.getString("cittadinanza"));
+            p.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            p.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            p.setCapResidenza(r.getString("cap_residenza"));
+            p.setComuneResidenza(r.getString("comune_residenza"));
+            p.setProvinciaResidenza(r.getString("provincia_residenza"));
+            p.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            p.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            p.setCapDomicilio(r.getString("cap_domicilio"));
+            p.setComuneDomicilio(r.getString("comune_domicilio"));
+            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));   
+            p.setTitoloDiStudi(r.getString("titolo_di_studi"));
+
+            
         }
-        return e;
+        r.close();
+        return p;
     }
-    
-   
-    
 }
+    

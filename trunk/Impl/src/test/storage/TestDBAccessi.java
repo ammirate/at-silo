@@ -19,12 +19,16 @@ package test.storage;
 import java.sql.SQLException;
 import java.util.List;
 
+import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.Genitore;
 import atsilo.entity.PersonaleAsilo;
+import atsilo.entity.Psicopedagogo;
 import atsilo.entity.ResponsabileQuestionario;
 import atsilo.entity.Tirocinante;
+import atsilo.storage.DBEducatoreDidattico;
 import atsilo.storage.DBGenitore;
 import atsilo.storage.DBPersonaleAsilo;
+import atsilo.storage.DBPsicopedagogo;
 import atsilo.storage.DBQuestionario;
 import atsilo.storage.DBResponsabileQuestionario;
 import atsilo.storage.DBTirocinante;
@@ -34,7 +38,7 @@ import atsilo.storage.Database;
  * Classe TestDBAccessi
  * <Descrizione classe>
  * 
- * @author fabio
+ * @author fabio Napoli
  * 
  */
 public class TestDBAccessi {
@@ -77,7 +81,7 @@ public class TestDBAccessi {
        */
         DBGenitore dbg=new DBGenitore(db);
       
-      List<Genitore> g=dbg.getGenitoriPerCategoriaAppartenenza("Miao");
+    /*  List<Genitore> g=dbg.getGenitoriPerCategoriaAppartenenza("Miao");
       
       for(int i=0;i<g.size();i++){
           System.out.println("Codice Fiscale : = "+g.get(i).getCodiceFiscale());
@@ -87,8 +91,18 @@ public class TestDBAccessi {
       System.out.println("dati genitore ricercato : = "+h.getCategoriaAppartenenza()+h.getEmail()+h.getIndirizzoResidenza()+h.getTipo());
       
       String s=dbg.getCategoriaAppartenenzaGenitore("CVLMRA69A23B333C");
-      System.out.println("Cat appartenenza := "+s);
-      db.chiudiConnessione();
+      System.out.println("Cat appartenenza := "+s);*/
+        //test___Classi_DBPsicopedagogo_e_DBEducatoreDidattico
+        DBPsicopedagogo dbp=new DBPsicopedagogo(db);
+       /* Psicopedagogo p=new Psicopedagogo();
+        p=dbp.getPsicopedagogoPerCF("VRRMDD64T32A048N");
+        System.out.println("Dati Psicopedagogo = "+p.getCognome()+p.getNome()+p.getEmail());*/
+      
+        DBEducatoreDidattico dbe=new DBEducatoreDidattico(db);
+         EducatoreDidattico p=new EducatoreDidattico();
+         p=dbe.getEducatoreDidatticoPerCF("SSSLRL78B19B908X");
+         System.out.println("Dati Educatore = "+p.getCognome()+p.getNome()+p.getEmail());
+        db.chiudiConnessione();
 
     }
     //Logger

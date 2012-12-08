@@ -21,7 +21,7 @@ import java.util.List;
 
 public class EducatoreDidattico extends Utente implements EventPlanner{
 
-    private String TitoloDiStudio;
+    private String titoloDiStudi;
     
     /**
      * La variabile classi è nulla c'è bisogno di una lettura della classe "classe"
@@ -44,31 +44,31 @@ public class EducatoreDidattico extends Utente implements EventPlanner{
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, List<Classe> classi, String TitoloDiStudio) {
+            String provinciaDomicilio, List<Classe> classi, String titoloDiStudi) {
         super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
                telefono, cittadinanza, indirizzoResidenza,
               numeroCivicoResidenza, capResidenza, comuneResidenza,
                 provinciaResidenza, indirizzoDomicilio,
                 numeroCivicoDomicilio, capDomicilio, comuneDomicilio,
                 provinciaDomicilio);
-        this.TitoloDiStudio = TitoloDiStudio;
+        this.titoloDiStudi = titoloDiStudi;
         this.classi = classi;
     }
 
     /**
      * Metodo che setta il campo TitoloDiStudio
-     * @param TitoloDiStudio il parametro fissato
+     * @param titoloDiStudi il parametro fissato
      */
-    public void setTitoloDiStudio(String TitoloDiStudio) {
-        this.TitoloDiStudio = TitoloDiStudio;
+    public void setTitoloDiStudi(String titoloDiStudi) {
+        this.titoloDiStudi = titoloDiStudi;
     }
 
     /**
      * Metodo che prende il campo TitoloDiStudio
-     * @return TitoloDiStudio il paramentro inserito
+     * @return TitoloDiStudi il paramentro inserito
      */
-    public String getTitoloDiStudio() {
-        return TitoloDiStudio;
+    public String getTitoloDiStudi() {
+        return titoloDiStudi;
     }
     
     /**
