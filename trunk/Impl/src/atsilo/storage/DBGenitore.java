@@ -91,7 +91,8 @@ public class DBGenitore extends DBBeans {
         res.put("scadenza_contratto","scadenzaContratto");
         res.put("categoria_appartenenza","categoriaAppartenenza");
         res.put("rapporto_parentela","rapportoParentela");
-        
+        res.put("tipo_contratto","tipoContratto");
+        res.put("condizione_lavorativa", "condizioneLavorativa");
         
         return res;
     }
@@ -146,6 +147,8 @@ public class DBGenitore extends DBBeans {
             p.setScadenzaContratto(r.getDate("scadenza_contratto"));
             p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             p.setRapportoParentela(r.getString("rapporto_parentela"));
+            p.setCondizioneLavorativa(r.getString("condizione_lavorativa"));
+            p.setTipoContratto(r.getString("tipo_contratto"));
 
         }
         return p;
@@ -194,7 +197,8 @@ public class DBGenitore extends DBBeans {
             p.setScadenzaContratto(r.getDate("scadenza_contratto"));
             p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             p.setRapportoParentela(r.getString("rapporto_parentela"));
-
+            p.setCondizioneLavorativa(r.getString("condizione_lavorativa"));
+            p.setTipoContratto(r.getString("tipo_contratto"));
 
         }
         r.close();
@@ -267,6 +271,8 @@ public class DBGenitore extends DBBeans {
             p.setScadenzaContratto(r.getDate("scadenza_contratto"));
             p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             p.setRapportoParentela(r.getString("rapporto_parentela"));
+            p.setCondizioneLavorativa(r.getString("condizione_lavorativa"));
+            p.setTipoContratto(r.getString("tipo_contratto"));
             
             l.add(p);
 
