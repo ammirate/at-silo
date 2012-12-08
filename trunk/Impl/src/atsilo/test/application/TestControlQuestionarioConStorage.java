@@ -80,7 +80,7 @@ public class TestControlQuestionarioConStorage {
     @Test
     public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
-        System.out.println("********************** Test 1 *********************************");
+   /*     System.out.println("********************** Test 1 *********************************");
        inserimentoTest();
        
        System.out.println("\n********************** Test 2 *********************************");
@@ -95,6 +95,8 @@ public class TestControlQuestionarioConStorage {
        
        System.out.println("\n\n********************** Test 5 *********************************");
        compilaTest();
+       */
+        
     }
 
     /**
@@ -225,7 +227,7 @@ public class TestControlQuestionarioConStorage {
         
         ControlQuestionario control = ControlQuestionario.getIstance();
         List<RispostaQuestionario> risposte = new ArrayList<RispostaQuestionario>();
-        String codFisc = "csrntn91l26c129j";
+        String codFisc = "DBNGPP69A23B222C";
         
         risposte.add(new RispostaQuestionario(d1.getId(),"22-26",d1.getId(),codFisc));
         risposte.add(new RispostaQuestionario(d2.getId(),"italia",d2.getId(),codFisc));
