@@ -2,6 +2,7 @@ package atsilo.application;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Matcher;
@@ -10,6 +11,7 @@ import java.util.regex.Pattern;
 
 
 
+import atsilo.application.notificheMail.Messaggio;
 import atsilo.entity.Account;
 import atsilo.entity.Assenza;
 import atsilo.entity.Bambino;
@@ -113,6 +115,10 @@ public class ControlIscrizione {
                 throw new UtenteException("Inserimento fallito");
             if(!stub.inserisci(account))
                 throw new AccountException("Inserimento fallito");
+            //Decidere un messaggio di notifica
+            Messaggio mess = NotificaMail(Utente, "iscrizione", "Registrazione andata a buon fine")
+            if(!inviaMail(mess))
+                throw new AccountException("Invio mail fallito");
         }
         finally{
             db.chiudiConnessione();
@@ -207,7 +213,7 @@ public class ControlIscrizione {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, List<Assenza> assenze) throws BambinoException, DBConnectionException, InserimentoDatiException{
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze) throws BambinoException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
         StubBambino stub = new StubBambino(db); 
@@ -225,7 +231,7 @@ public class ControlIscrizione {
         Bambino bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
                 cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza,
                 provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
-                provinciaDomicilio, categoriaAppartenenza, classe, genitore, assenze);
+                provinciaDomicilio, categoriaAppartenenza, classe, genitore, genitoreNonRichiedente, assenze);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -254,7 +260,7 @@ public class ControlIscrizione {
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-            String condizioniCalcoloPunteggio, float isee, Servizio servizio) throws DomandaIscrizioneException, DBConnectionException{
+            String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) throws DomandaIscrizioneException, DBConnectionException{
         
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db); 
@@ -263,7 +269,7 @@ public class ControlIscrizione {
                 posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
                 certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
                 genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
-                condizioniCalcoloPunteggio, isee, servizio);
+                condizioniCalcoloPunteggio, isee, servizio, stato_convalidazione);
 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");

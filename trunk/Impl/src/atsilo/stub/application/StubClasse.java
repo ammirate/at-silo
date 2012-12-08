@@ -35,7 +35,7 @@ public class StubClasse {
         c = new Classe();
     }
 
-    public Classe ricercaClassePerId (String id){
+    public Classe ricercaClassePerId (int id){
         return c;
     }
     

@@ -39,10 +39,10 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean inserisciClasse(String id, List<EducatoreDidattico> insegnanti) throws ClasseException, DBConnectionException{
+    boolean inserisciClasse(int id, String statoClasse, List<EducatoreDidattico> insegnanti) throws ClasseException, DBConnectionException{
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 
-        Classe classe = new Classe(id, insegnanti);
+        Classe classe = new Classe(id, statoClasse, insegnanti);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -65,7 +65,7 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean cancellaClasse(String id) throws ClasseException, DBConnectionException{
+    boolean cancellaClasse(int id) throws ClasseException, DBConnectionException{
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 
         if(!db.apriConnessione())
@@ -91,7 +91,7 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean inserisciBambinoNellaClasse(String id, Bambino bambino) throws ClasseException, DBConnectionException{
+    boolean inserisciBambinoNellaClasse(int id, Bambino bambino) throws ClasseException, DBConnectionException{
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 
         if(!db.apriConnessione())
@@ -119,7 +119,7 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean inserisciBambiniNellaClasse(String id, List<Bambino> bambini) throws ClasseException, DBConnectionException{
+    boolean inserisciBambiniNellaClasse(int id, List<Bambino> bambini) throws ClasseException, DBConnectionException{
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 
         if(!db.apriConnessione())
@@ -151,7 +151,7 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean ConfermaClasse(String id) throws ClasseException, DBConnectionException{
+    boolean ConfermaClasse(int id) throws ClasseException, DBConnectionException{
         //dovrebbe esserci un campo nella classe: conferma
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 
@@ -179,7 +179,7 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    boolean RifiutaClasse(String id) throws ClasseException, DBConnectionException{
+    boolean RifiutaClasse(int id) throws ClasseException, DBConnectionException{
         //dovrebbe esserci un campo nella classe: conferma
         Database db = new Database();
         StubClasse stub = new StubClasse(db); 

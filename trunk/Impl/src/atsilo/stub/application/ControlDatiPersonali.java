@@ -1,4 +1,4 @@
-package atsilo.test.application;
+package atsilo.stub.application;
 
 
 import java.sql.Date;
@@ -9,8 +9,6 @@ import test.storage.*;
 import atsilo.entity.*;
 import atsilo.exception.*;
 import atsilo.storage.*;
-import atsilo.stub.application.StubDomandaIscrizione;
-import atsilo.stub.application.StubUtente;
 
 /**
  * 
@@ -395,6 +393,8 @@ public class ControlDatiPersonali {
     public static ControlDatiPersonali getIstance(){
         return INSTANCE;
     }
+
+
 
 
     

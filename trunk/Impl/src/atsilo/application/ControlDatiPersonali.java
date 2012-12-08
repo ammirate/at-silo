@@ -241,8 +241,8 @@ public class ControlDatiPersonali {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<DomandaIscrizione> b = stub.ricercaDomandeInAttesa();
-            if(b == null)
-                throw new DomandaIscrizioneException("Bambino non trovato");
+            if(b.isEmpty())
+                throw new DomandaIscrizioneException("Lista vuota");
             return b;
         }
         finally{

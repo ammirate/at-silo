@@ -45,7 +45,7 @@ public class StubDomandaIscrizione
         return true;
     }
     
-    public boolean modificaCertificatiIscrizione(int id){
+    public boolean modificaCertificatiIscrizione(int id, String str1, String str2, String str3){
         return true;
     }
     

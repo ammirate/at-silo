@@ -18,7 +18,7 @@ import test.storage.TestDBBeans;
 import atsilo.entity.Account;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.GenitoreException;
-import atsilo.test.application.ControlDatiPersonali;
+import atsilo.stub.application.ControlDatiPersonali;
 
 /*
  *-----------------------------------------------------------------
