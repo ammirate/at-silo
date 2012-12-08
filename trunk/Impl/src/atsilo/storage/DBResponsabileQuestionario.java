@@ -17,7 +17,7 @@ import atsilo.entity.ResponsabileQuestionario;
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: DBAssenza.java
+ * FILE: DBResponsabileQuestionario.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -134,9 +134,9 @@ public class DBResponsabileQuestionario extends DBBeans {
 
 
     /**
-     * Dato un codice fiscale restituisce il PersonaleAsilo corrispondente
-     * @param codiceFiscale codice fiscale del PersonaleAsilo
-     * @return PersonaleAsilo o null
+     * Dato un codice fiscale restituisce il ResponsabileQuestionario corrispondente
+     * @param codiceFiscale codice fiscale del ResponsabileQuestionario
+     * @return ResponsabileQuestionario o null
      * @throws SQLException 
      */
     public ResponsabileQuestionario getResponsabileQuestionarioPerCF(String codiceFiscale) 
