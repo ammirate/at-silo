@@ -251,7 +251,7 @@ public class Questionario {
         if(this.domande.isEmpty() || this.domande==null)
             domande="[null]";
         
-        return "ID: "+getId()+ " Nome:"+getNome()+" Domande:"+domande+" Genitori:"+genitori;
+        return "QUESTIONARIO    ID: "+getId()+ " Nome:"+getNome()+" Domande:"+domande+" Genitori:"+genitori;
     }
     
     
