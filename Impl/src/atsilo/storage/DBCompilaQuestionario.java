@@ -28,6 +28,8 @@ import java.util.Map;
 
 import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.Questionario;
+import atsilo.entity.RispostaQuestionario;
+import atsilo.storage.DBBeans.Assegnazione;
 
 /*
  *-----------------------------------------------------------------
@@ -59,7 +61,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
      * @return lista string
      */
     private static List<String> creaChiave() {
-        List<String> res=  Arrays.asList("genitore","questionario");
+        List<String> res=  Arrays.asList("-genitore","-questionario");
         
         return Collections.unmodifiableList(res);
     }
@@ -72,8 +74,8 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
         
-        res.put("genitore", "genitore");
-        res.put("questionario", "questionario");
+        res.put("-genitore", "genitore");
+        res.put("-questionario", "questionario");
         
         return Collections.unmodifiableMap(res);
     }
@@ -199,6 +201,29 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
         }
         
         return i;
+    }
+    
+    /**
+     * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
+     * assegnazioni predefinite relativamente a un bean.<br/>
+     * Nella sua implementazione predefinita, questo metodo restituisce sempre
+     * {@link #NESSUNA_ASSEGNAZIONE}. Le classi estendenti possono sovrascrivere
+     * questo metodo per indicare in modo comodo delle assegnazioni predefinite
+     * per tutti i metodi di modifica della base di dati.
+     * 
+     * @param bean
+     *            Bean per cui valutare le assegnazioni
+     * @return Array di assegnazioni
+     */
+    protected Assegnazione[] creaAssegnazioni(CompilaQuestionario bean) {
+        Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("genitore",bean.getGenitore());
+        Assegnazione DBGenitore_assegnazione = new Assegnazione("questionario",bean.getQuestionario());
+        
+        Assegnazione[] DBAssign = new Assegnazione[2];
+        DBAssign[0] = DBDomandaQuestionario_assegnazione;
+        DBAssign[1] = DBGenitore_assegnazione;
+        
+        return DBAssign;
     }
     
     
