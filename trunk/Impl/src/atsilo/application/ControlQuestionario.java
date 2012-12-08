@@ -408,7 +408,8 @@ public class ControlQuestionario {
     
     
     /**
-     * Insert a new question in a questionnaire
+     * Insert a new question in a questionnaire and all its fields
+     * if the fields is null or empty, the method exit with a QuestionarioException
      * @param idQuestionario is the questionnaire identifier
      * @param domanda is the question to add in the questionnaire
      * @throws DBConnectionException
@@ -417,13 +418,19 @@ public class ControlQuestionario {
     public void inserisciDomanda(int idQuestionario, DomandaQuestionario domanda) throws DBConnectionException, QuestionarioException{
         Database db = new Database();
         DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
-        
+        DBCampoDomandaQuestionario storageC = new DBCampoDomandaQuestionario(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
+            if(domanda.getCampi()==null || domanda.getCampi().isEmpty())
+                throw new QuestionarioException("Campi domanda non validi");
+
             if(!storageDomanda.inserisci(domanda))
                 throw new QuestionarioException("Errore inserimento domanda in questionario");
+            
+            for(CampoDomandaQuestionario c : domanda.getCampi() )
+                storageC.inserisci(c);
         } 
         finally{
             db.chiudiConnessione();
