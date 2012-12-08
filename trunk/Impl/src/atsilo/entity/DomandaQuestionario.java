@@ -51,6 +51,8 @@ public class DomandaQuestionario {
         this.idQuestionario = idQuestionario;
         if(campi==null || campi.isEmpty())
             this.campi = new ArrayList<CampoDomandaQuestionario>();
+        else
+            this.campi = campi;
     }
     
     public void setId(int id) {
