@@ -120,13 +120,17 @@ public class DomandaQuestionario {
         this.idQuestionario = idQuestionario;
     }
 
-    /**
-     * @return risposta
-     */
-//    
+
+    public String toString(){
+        String campi;
+        if(this.campi == null || this.campi.isEmpty())
+            campi = "vuoto";
+        else campi="lista di campi";
+        return "ID:"+id+ "  descrizione:"+descrizione+"  campi:"+campi;
+    }
 
     
-    
+   
     
 }
 
