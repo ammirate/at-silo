@@ -108,29 +108,36 @@ public class DBAccount extends DBBeans<Account>
             ResultSet r = stmt.executeQuery();  
         if (r.next()) // dovrebbe trovare solo un account perchï¿½ l'username ï¿½ unico. quindi restituisce un unico record. 
         {
+            Utente u=new Utente();
             a.setUserName(r.getString("username"));
             a.setPassWord(r.getString("password"));
-        Utente u=new Utente();
-        
-        
-            
-            if(r.getString("genitore")!=null){
+            if(r.getString("genitore")!=null)
+            {
+                u = new Genitore();
                 u.setCodiceFiscale(r.getString("genitore"));
+                
             }
-            if(r.getString("psico_pedagogo")!=null){
+            if(r.getString("psico_pedagogo")!=null)
+            {
+                u=new Psicopedagogo();
                 u.setCodiceFiscale(r.getString("psico_pedagogo"));
             }
-            if(r.getString("tirocinante")!=null){
+            if(r.getString("tirocinante")!=null)
+            {
+                u=new Tirocinante();
                 u.setCodiceFiscale(r.getString("tirocinante"));
             }
-            
-            if(r.getString("responsabile_questionario")!=null){
+            if(r.getString("responsabile_questionario")!=null)
+            {
+                u=new ResponsabileQuestionario();
                 u.setCodiceFiscale(r.getString("responsabile_questionario"));
             }
-            if(r.getString("personale_asilo")!=null){
+            if(r.getString("personale_asilo")!=null)
+            {
+                u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("personale_asilo"));
-           a.setOwner(u);
             }
+            a.setOwner(u);
         }
          
             r.close();  
@@ -139,24 +146,47 @@ public class DBAccount extends DBBeans<Account>
     }
 
 
-    /* (non-Javadoc)
+    /** 
      * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     * Questo metodo restituisce un account il cui campo <b>owner</b> è un utente del tipo corretto e che ha come unico campo 
+     * correttamente settato il suo codice fiscale.
+     * Nel caso in cui altre informazioni siano necessarie, occorre sostituire l'Owner con un oggetto
+     * letto dal database tramite il DBBean associato (se l'owner è un genitore, usare DBGenitore sul
+     * codice fiscale già presente nell'account.)
      */
     @Override
     protected Account creaBean(ResultSet r) throws SQLException {
         Account a = new Account();
+        Utente u=new Utente();
         a.setUserName(r.getString("username"));
         a.setPassWord(r.getString("password"));
         if(r.getString("genitore")!=null)
-            a.getOwner().setCodiceFiscale(r.getString("genitore"));
+        {
+            u = new Genitore();
+            u.setCodiceFiscale(r.getString("genitore"));
+            
+        }
         if(r.getString("psico_pedagogo")!=null)
-            a.getOwner().setCodiceFiscale(r.getString("psico_pedagogo"));
+        {
+            u=new Psicopedagogo();
+            u.setCodiceFiscale(r.getString("psico_pedagogo"));
+        }
         if(r.getString("tirocinante")!=null)
-            a.getOwner().setCodiceFiscale(r.getString("tirocinante"));
+        {
+            u=new Tirocinante();
+            u.setCodiceFiscale(r.getString("tirocinante"));
+        }
         if(r.getString("responsabile_questionario")!=null)
-            a.getOwner().setCodiceFiscale(r.getString("responsabile_questionario"));
+        {
+            u=new ResponsabileQuestionario();
+            u.setCodiceFiscale(r.getString("responsabile_questionario"));
+        }
         if(r.getString("personale_asilo")!=null)
-            a.getOwner().setCodiceFiscale(r.getString("personale_asilo"));
+        {
+            u=new PersonaleAsilo();
+            u.setCodiceFiscale(r.getString("personale_asilo"));
+        }
+        a.setOwner(u);
         
         return a;
         
