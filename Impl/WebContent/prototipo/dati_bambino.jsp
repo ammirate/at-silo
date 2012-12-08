@@ -14,7 +14,41 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
-<form>
+ <%@
+include file="atsilo_files/sidebar_top_genitore.jsp"
+ %>
+<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
+ %>
+ <%
+ 	StubControlDatiPersonali cdt= StubControlDatiPersonali.getIstance();
+ 	String codiceFiscaleBambino;
+  	Bambino bambino=cdt.getDatiBambino(codiceFiscaleBambino);
+ %>
+  <!--Script per gestire i form -->
+ <script type="text/javascript">
+function settaAttributi(slf){
+	 document.getElementById("dati_bando").setAttribute("action","http://localhost:8080/Atsilo/ServletCompilazioneDatiBando");
+	 document.getElementById("bottone_submit").setAttribute("value","Salva");
+	 var f = document.forms[0];
+	 var n = f.elements.length;
+	 for(var i = 1; i < n; i++)
+		 document.forms[0].elements[i].removeAttribute("readonly");
+	 slf.onclick=null;
+	 return false;
+	 
+}
+</script>	
+<%
+	if ((request.getParameter("successo")) != null) {
+		if (request.getParameter("successo").equals("ok")) {
+			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+		}
+		else {
+			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+		}
+	}
+%>
+<form id="dati_bando" name="dati_bando" action="" method="post" >
 <input name="chiamante" type="hidden" id="chiamante" value="bambino">
   <table width="80%" border="0" cellspacing="0">
   <tr>

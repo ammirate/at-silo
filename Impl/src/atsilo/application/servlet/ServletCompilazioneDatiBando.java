@@ -18,6 +18,7 @@ import atsilo.entity.Account;
 import atsilo.entity.Beans;
 import atsilo.entity.Genitore;
 import atsilo.exception.DBConnectionException;
+import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
 import atsilo.stub.application.StubControlDatiPersonali;
 
@@ -213,7 +214,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         //variabili genitore -genitore non richiedente
         
-       
+        
         String condizione_lavorativa_genitore_non_richiedente=null;
         if ( request.getParameter("condizione_lavorativa_genitore_non_richiedente")!=null)
             condizione_lavorativa_genitore_non_richiedente=request.getParameter("condizione_lavorativa_genitore_non_richiedente");
@@ -284,11 +285,20 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         if ( request.getParameter("classe")!=null)
             classe=Integer.parseInt(request.getParameter("classe"));
         
+        //situazione reddituale
+        float isee=-1;
+        if ( request.getParameter("isee")!=null)
+            isee=Float.parseFloat(request.getParameter("isee"));
+        
+        //situazione familiare
+        
+        
+        
         String pagina_destinazione = "";
         
-        if ( request.getParameter("chiamante").equals("genitore")){//se chiamante è una pagina genitore     
+        if ( request.getParameter("chiamante").equals("genitore")){//se chiamante è una pagina genitore richiedente    
             try {
-                if (controlDatiPersonali.setDatiGenitore(username_utente,dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza,rapportoParentela))
+                if (controlDatiPersonali.setDatiGenitore(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 
                 else 
@@ -304,23 +314,13 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         }//fine update dati genitore
         
         if ( request.getParameter("chiamante").equals("bambino")){//se chiamante è una pagina bambino  
+            if (controlDatiPersonali.setDatiBambino(username, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, categoriaAppartenenza, classe, genitore_richiedente, assenze))
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
             
-            try {
-                Genitore genitoreBambino = controlDatiPersonali.getDatiGenitoreFromCF(controlDatiPersonali.getUtenteFromUsername("username").getCodiceFiscale());
-                if (controlDatiPersonali.setDatiBambino("username", dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitoreBambino, null))
-                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
-                else  
-                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
-            } catch (GenitoreException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (DBConnectionException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (SQLException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            }
+            else 
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+
+
             
         }//fine update dati bambino
         
@@ -334,6 +334,27 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             
         }//fine update dati genitore non richiedente
         
+        if ( request.getParameter("chiamante").equals("situazione_reddituale")){//se chiamante è la pagina della sitauzione reddituale  
+            
+            String codiceFiscaleGenitore = controlDatiPersonali.getUtenteFromUsername("username").getCodiceFiscale();
+            
+            try {
+                if (controlDatiPersonali.inserisciDatiDomandaIscrizione(null, codiceFiscaleGenitore, false, false, false, false, false, false, false, false, false, null, isee)){
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");
+                    
+                } else  {
+                    pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                }
+                
+            } catch (DomandaIscrizioneException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, getServletName()+"Errore aggiornamento dati domanda iscrizione", e.getMessage());
+            } catch (DBConnectionException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE,getServletName()+ "Erroree connessioen al database", e.getMessage());
+            } 
+            
+        }//fine update sitauzione reddituale
         
         // Set response content type
         response.setContentType("text/html");
