@@ -97,7 +97,7 @@ public class RispostaQuestionario {
      * @param cFgenitore nuovo cFgenitore
      */
     public void setCFgenitore(String cFgenitore) {
-        CFgenitore = cFgenitore;
+        this.CFgenitore = cFgenitore;
     }
 
 
