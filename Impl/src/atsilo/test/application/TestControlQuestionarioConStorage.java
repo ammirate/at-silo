@@ -80,15 +80,32 @@ public class TestControlQuestionarioConStorage {
     @Test
     public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
-   //    inserimentoTest();
-       // modificaTest();
-      // ControlQuestionario control = ControlQuestionario.getIstance();
-      /* control.eliminaQuestionario(1);
-       control.eliminaQuestionario(21);
-       control.eliminaQuestionario(2);
-       */
-         Questionario q = caricaTest();
+        System.out.println("********************** Test 1 *********************************");
+       inserimentoTest();
+       
+       System.out.println("\n********************** Test 2 *********************************");
+        modificaTest();
+      
+        System.out.println("\n********************** Test 3 *********************************");
+        ControlQuestionario control = ControlQuestionario.getIstance();
+       control.eliminaQuestionario(1);
+       
+       System.out.println("\n********************** Test 4 *********************************");
+       stampaQuestionario();
+       
+       System.out.println("\n\n********************** Test 5 *********************************");
+       compilaTest();
+    }
+
+    /**
+     * @throws DBConnectionException
+     * @throws SQLException
+     */
+    public void stampaQuestionario() throws DBConnectionException,SQLException {
+        Questionario q = caricaTest();
+        
          System.out.println(q.toString());
+         
          for(DomandaQuestionario d : q.getDomande()){
              System.out.println("\n"+d);
              for(CampoDomandaQuestionario c : d.getCampi())
@@ -125,9 +142,14 @@ public class TestControlQuestionarioConStorage {
     CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("check", "due", "2",12);
     CampoDomandaQuestionario c9 = new CampoDomandaQuestionario("check", "piu di due", "2+", 12);
     
-   
+   DomandaQuestionario d5;
     
     //Metodi
+    /**
+     * Test inserimento questionario
+     * @throws DBConnectionException
+     * @throws QuestionarioException
+     */
     public void inserimentoTest() throws DBConnectionException, QuestionarioException{
         d1.aggiungiCampo(c1);
         d1.aggiungiCampo(c2);
@@ -153,27 +175,79 @@ public class TestControlQuestionarioConStorage {
     }
     
     
+    
+    
+    
+    /**
+     * test modifica Questionario
+     * @throws DBConnectionException
+     * @throws QuestionarioException
+     */
     public void modificaTest() throws DBConnectionException, QuestionarioException{
         Questionario q2 = q1;
         
-        DomandaQuestionario d5 = new DomandaQuestionario(14,21,"quante lauree hai?",null);
+        d5 = new DomandaQuestionario(14,21,"quante lauree hai?",null);
         CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("check", "una", "1",13);
         CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("check", "due", "2",13);
         CampoDomandaQuestionario c9 = new CampoDomandaQuestionario("check", "faccio il muratore!", "0", 13);
         
+        
+        d5.aggiungiCampo(c7);
+        d5.aggiungiCampo(c8);
+        d5.aggiungiCampo(c9);
+        
         q2.aggiungiDomanda(d5);
+        
         
         ControlQuestionario control = ControlQuestionario.getIstance();
         control.modificaQuestionario(q1.getId(), q2);
     }
     
     
+    
+    
+    /**
+     *  test caricamento questionario
+     * @return
+     * @throws DBConnectionException
+     * @throws SQLException
+     */
     public Questionario caricaTest() throws DBConnectionException, SQLException{
-        Database db = new Database();
         ControlQuestionario control = ControlQuestionario.getIstance();
-        
         Questionario q = control.caricaQuestionarioDaCompilare(21, "csrntn91l26c129j");
         return q;
     }
     
+    
+    
+    
+    public void compilaTest() throws DBConnectionException, QuestionarioException{
+        
+        ControlQuestionario control = ControlQuestionario.getIstance();
+        List<RispostaQuestionario> risposte = new ArrayList<RispostaQuestionario>();
+        String codFisc = "csrntn91l26c129j";
+        
+        risposte.add(new RispostaQuestionario(d1.getId(),"22-26",d1.getId(),codFisc));
+        risposte.add(new RispostaQuestionario(d2.getId(),"italia",d2.getId(),codFisc));
+        risposte.add(new RispostaQuestionario(d3.getId(),"uno",d3.getId(),codFisc));
+        risposte.add(new RispostaQuestionario(d5.getId(),"faccio il muratore!",d5.getId(),codFisc));
+        
+        
+        control.compilaQuestionario(21, risposte, codFisc);
+        
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
