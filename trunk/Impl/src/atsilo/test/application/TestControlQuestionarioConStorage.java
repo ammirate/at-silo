@@ -80,7 +80,7 @@ public class TestControlQuestionarioConStorage {
     @Test
     public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
-   /*     System.out.println("********************** Test 1 *********************************");
+        System.out.println("********************** Test 1 *********************************");
        inserimentoTest();
        
        System.out.println("\n********************** Test 2 *********************************");
@@ -95,7 +95,7 @@ public class TestControlQuestionarioConStorage {
        
        System.out.println("\n\n********************** Test 5 *********************************");
        compilaTest();
-       */
+       
         
     }
 
