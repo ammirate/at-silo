@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import atsilo.test.application.ControlDatiPersonali;
+import atsilo.stub.application.ControlDatiPersonali;
 import atsilo.test.application.ControlLogin;
 
 /*

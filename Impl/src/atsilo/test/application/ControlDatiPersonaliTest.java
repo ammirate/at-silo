@@ -33,6 +33,10 @@ import atsilo.exception.BambinoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
+import atsilo.exception.InserimentoDatiException;
+import atsilo.exception.UtenteException;
+import atsilo.application.ControlDatiPersonali;
+
 
 /**
  * Classe ControlDatiPersonaliTest
@@ -44,57 +48,57 @@ import atsilo.exception.GenitoreException;
 public class ControlDatiPersonaliTest {
     
     ControlDatiPersonali control = new ControlDatiPersonali();
-    Genitore g;
+    Genitore g ;
     
 
     
     @Test
     // visualizzazione genitore normale
-    public void getDatiGenitoreTest() throws GenitoreException, DBConnectionException, SQLException  {
-         g = control.getDatiGenitoreFromCF("MSCGNN75H43H654K");
+    public void getDatiGenitoreTest() throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException  {
+         g = control.getDatiGenitore("MSCGNN75H43H654K");
          assertNotNull(g);
     }
     
     @Test
     // visualizzazione genitore con codice fiscale non valido
-    public void getDatiGenitoreTest2() throws GenitoreException, DBConnectionException, SQLException  {
-         g = control.getDatiGenitoreFromCF("MSCGNN75H43H654");
-         assertNotNull(g);
+    public void getDatiGenitoreTest2() throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException  {
+         g = control.getDatiGenitore("MSCGNN75H43H654");
+         assertNull(g);
     }
    
     @Test
     // visualizzazione iscritto normale
-    public void getDatiBambinoTest() throws BambinoException, DBConnectionException, SQLException   {
+    public void getDatiBambinoTest() throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException   {
          assertNotNull(control.getDatiBambino("MSCGNN75H43H654K"));
     }
     
     @Test
     // visualizzazione iscritto con codice fiscale non valido
-    public void getDatiBambinoTest2() throws BambinoException, DBConnectionException, SQLException   {
-         assertNotNull(control.getDatiBambino("MSCGNN7H43H654K"));
+    public void getDatiBambinoTest2() throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException   {
+         assertNull(control.getDatiBambino("MSCGH43H654K"));
     }
     
     @Test
     // visualizzazione utente normale
-    public void getValoriUtenteTest() throws BambinoException, DBConnectionException, SQLException   {
-         assertNotNull(control.getDatiBambino("MSCGNN75H43H654K"));
+    public void getValoriUtenteTest() throws BambinoException, DBConnectionException, SQLException, UtenteException, InserimentoDatiException   {
+         assertNotNull(control.getValoriUtente("MSCGNN75H43H654K"));
     }
     
     @Test
     // visualizzazione utente con codice fiscale non valido
-    public void getValoriUtenteTest2() throws BambinoException, DBConnectionException, SQLException   {
-         assertNotNull(control.getDatiBambino("MSCGNN7H43H654K"));
+    public void getValoriUtenteTest2() throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException, UtenteException   {
+         assertNull(control.getValoriUtente("MSCGNN7H43H654K"));
     }
 
     @Test
     // modifica certificazioni
-    public void modificaCertificatiIscrizioneTest()   {
+    public void modificaCertificatiIscrizioneTest() throws DomandaIscrizioneException, DBConnectionException   {
          assertTrue(control.modificaCertificatiIscrizione(10, "consegnato", "consegnato", "consegnato"));
     }
     
     @Test
     // convalida Iscrizione
-    public void convalidaIscrizioneTest()   {
+    public void convalidaIscrizioneTest() throws DomandaIscrizioneException, DBConnectionException   {
          assertTrue(control.convalidaIscrizione(10));
     }
     
@@ -106,7 +110,7 @@ public class ControlDatiPersonaliTest {
     
     @Test
     // completa Iscrizione
-    public void escludiIscrizioneTest()   {
+    public void escludiIscrizioneTest() throws DomandaIscrizioneException, DBConnectionException   {
          assertTrue(control.escludiIscrizione(10));
     }
 }

@@ -19,7 +19,7 @@ import atsilo.entity.Beans;
 import atsilo.entity.Genitore;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.GenitoreException;
-import atsilo.test.application.ControlDatiPersonali;
+import atsilo.stub.application.ControlDatiPersonali;
 
 /*
  *-----------------------------------------------------------------
