@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: Dic 08, 2012 alle 10:50
+-- Generato il: Dic 08, 2012 alle 15:25
 -- Versione del server: 5.5.16
 -- Versione PHP: 5.3.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `prova_asilo`
+-- Database: `atsilo popolato`
 --
 
 -- --------------------------------------------------------
@@ -131,6 +131,13 @@ CREATE TABLE IF NOT EXISTS `attivita_tirocinante` (
   `valutazione` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `attivita_tirocinante`
+--
+
+INSERT INTO `attivita_tirocinante` (`id`, `descrizione`, `data`, `ora_inizio`, `ora_fine`, `valutazione`) VALUES
+(978786, 'Recita natalizia', '2012-12-21', '12:00', '13:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -933,6 +940,13 @@ CREATE TABLE IF NOT EXISTS `responsabile_tirocini` (
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `responsabile_tirocini`
+--
+
+INSERT INTO `responsabile_tirocini` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Giovanni', 'De Blasi', 'DBSGVN66B12C761W', 'deblasi@unisa.it', '1966-02-12', 'Caserta', '0823445590', 'via De Gasperi', '12', '81100', 'Caserta', 'CE', NULL, NULL, NULL, NULL, NULL, 'i');
+
 -- --------------------------------------------------------
 
 --
@@ -957,7 +971,7 @@ CREATE TABLE IF NOT EXISTS `retta` (
 --
 
 INSERT INTO `retta` (`importoDovuto`, `id`, `genitore`, `descrizioneTassa`, `descrizioneRata`, `data`, `importoPagato`, `nome`) VALUES
-(150, 1, 'CVLMRA69A23B333C', '', '', '0000-00-00', 0, ''),
+(150, 1, 'CVLMRA69A23B333C', 'Ottobre2012', 'MENSILE', '2012-10-10', 300, 'Fiorenzo Assi'),
 (630, 2, 'DBNGPP69A23B222C', '', '', '0000-00-00', 0, ''),
 (325, 3, 'DCSGVN74A23B224X', '', '', '0000-00-00', 0, ''),
 (250, 4, 'DFZNDR91L14A909D', '', '', '0000-00-00', 0, ''),
@@ -1024,14 +1038,19 @@ INSERT INTO `richiesta_tirocinante` (`id`, `descrizione`, `data`, `ora_inizio`, 
 CREATE TABLE IF NOT EXISTS `risposta_questionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `valore` varchar(50) DEFAULT NULL,
-  `questionario` int(11) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
   `domanda` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `questionario` (`questionario`),
   KEY `genitore` (`genitore`),
   KEY `domanda` (`domanda`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=500003 ;
+
+--
+-- Dump dei dati per la tabella `risposta_questionario`
+--
+
+INSERT INTO `risposta_questionario` (`id`, `valore`, `genitore`, `domanda`) VALUES
+(500002, '5', 'Nobile Alessia', 5);
 
 -- --------------------------------------------------------
 
