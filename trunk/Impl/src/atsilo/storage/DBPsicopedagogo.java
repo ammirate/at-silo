@@ -43,7 +43,7 @@ public class DBPsicopedagogo extends DBBeans {
      * @param db database con relativa connessione
      */ 
     public DBPsicopedagogo(Database db){
-        super("psicopedagogo",db);
+        super("psico_pedagogo",db);
     }
     
 
