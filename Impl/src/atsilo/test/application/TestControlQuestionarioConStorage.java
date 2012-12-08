@@ -80,9 +80,9 @@ public class TestControlQuestionarioConStorage {
     @Test
     public void test() throws DBConnectionException, QuestionarioException, SQLException {
        // fail("Not yet implemented");
-      /*  System.out.println("********************** Test 1 *********************************");
+        System.out.println("********************** Test 1 *********************************");
        inserimentoTest();
-       
+       /*
        System.out.println("\n********************** Test 2 *********************************");
         modificaTest();
       
@@ -93,10 +93,15 @@ public class TestControlQuestionarioConStorage {
        System.out.println("\n********************** Test 4 *********************************");
        stampaQuestionario();
        
-       System.out.println("\n\n********************** Test 5 *********************************");
-       compilaTest();*/
-        System.out.println("\n\n********************** Test 6 *********************************");
+       */System.out.println("\n\n********************** Test 5 *********************************");
+       compilaTest();
+        /*System.out.println("\n\n********************** Test 6 *********************************");
         this.cancellaTest();
+        */
+       System.out.println("********************** Test 7 *********************************");
+       stampaQuestionario();
+       
+        
         
     }
 
@@ -202,7 +207,7 @@ public class TestControlQuestionarioConStorage {
      */
     public Questionario caricaTest() throws DBConnectionException, SQLException{
         ControlQuestionario control = ControlQuestionario.getIstance();
-        Questionario q = control.caricaQuestionarioDaCompilare(2, "csrntn91l26c129j");
+        Questionario q = control.caricaQuestionarioDaCompilare(21, "DBNGPP69A23B222C");
         return q;
     }
     
@@ -216,15 +221,19 @@ public class TestControlQuestionarioConStorage {
         List<RispostaQuestionario> risposte = new ArrayList<RispostaQuestionario>();
   
         
-        risposte.add(new RispostaQuestionario(21,"22-26",13,"DBNGPP69A23B222C"));
-        //risposte.add(new RispostaQuestionario(d2.getId(),"italia",d2.getId(),codFisc));
-        //risposte.add(new RispostaQuestionario(d3.getId(),"uno",d3.getId(),codFisc));
-        //risposte.add(new RispostaQuestionario(d5.getId(),"faccio il muratore!",d5.getId(),codFisc));
+        risposte.add(new RispostaQuestionario(21,"22-26",10,"DBNGPP69A23B222C"));
+        risposte.add(new RispostaQuestionario(d2.getId(),"italia",11,"DBNGPP69A23B222C"));
+        risposte.add(new RispostaQuestionario(d3.getId(),"uno",12,"DBNGPP69A23B222C"));
+    //    risposte.add(new RispostaQuestionario(d5.getId(),"faccio il muratore!",d5.getId(),"DBNGPP69A23B222C"));
         
         
         control.compilaQuestionario(21, risposte, "DBNGPP69A23B222C");
         
     }
+    
+    
+
+    
     
     Database db;
     Date dataInizio = new Date(2012, 1, 1);
