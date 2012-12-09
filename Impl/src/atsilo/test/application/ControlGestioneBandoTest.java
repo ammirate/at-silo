@@ -27,9 +27,7 @@ import org.junit.Test;
 
 
 import atsilo.application.ControlGestioneBando;
-import atsilo.application.ControlRegistro;
 import atsilo.entity.Bambino;
-import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
 import atsilo.entity.Servizio;
@@ -37,7 +35,6 @@ import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
 import atsilo.stub.application.StubDomandaIscrizione;
-import atsilo.stub.storage.StubBando;
 
 public class ControlGestioneBandoTest {
    private  ControlGestioneBando  control=ControlGestioneBando.getIstance();
