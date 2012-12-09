@@ -45,30 +45,30 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 
 	try {
 		if (request.getParameter("error").equals("1")) {
-			out.println("<script type='text/javascript'>alert('Errore: non puoi modificare questo questionario')</script>");
+	out.println("<script type='text/javascript'>alert('Errore: non puoi modificare questo questionario')</script>");
 		}
 	} catch (Exception e) {
 	}
 	try {
 		if (request.getParameter("action").equals("cancel")) {
-			int id = Integer.parseInt(request.getParameter("id"));
-			try {
-				q.eliminaQuestionario(id);
-				out.println("<script type='text/javascript'>alert('Questionario eliminato con successo')</script>");
-			} catch (DBConnectionException d) {
-				out.println("<script type='text/javascript'>alert('Impossibile connettersi al database: Riprova più tardi')</script>");
-			} catch (QuestionarioException qe) {
-				out.println("<script type='text/javascript'>alert('Errore: il questionario non esiste')</script>");
-			} catch (Exception e) {
-				out.println("<script type='text/javascript'>alert('C'è stato un errore, riprova di nuovo')</script>");
-			}
+	int id = Integer.parseInt(request.getParameter("id"));
+	try {
+		q.eliminaQuestionario(id);
+		out.println("<script type='text/javascript'>alert('Questionario eliminato con successo')</script>");
+	} catch (DBConnectionException d) {
+		out.println("<script type='text/javascript'>alert('Impossibile connettersi al database: Riprova più tardi')</script>");
+	} catch (QuestionarioException qe) {
+		out.println("<script type='text/javascript'>alert('Errore: il questionario non esiste')</script>");
+	} catch (Exception e) {
+		out.println("<script type='text/javascript'>alert('C'è stato un errore, riprova di nuovo')</script>");
+	}
 		}
 	} catch (Exception e) {
 	}
 	try {
 		if (request.getParameter("type").equals("genitore")) {
-			g = true;
-			cf = request.getParameter("cf");
+	g = true;
+	cf = request.getParameter("cf");
 		}
 	} catch (Exception e) {
 	}
@@ -88,25 +88,28 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		String[] df = datafine.split("-");
 		datafine = df[2] + "/" + df[1] + "/" + df[0];
 		out.println("<tr><td align=center>" + (i + 1) + "<td>"
-				+ list.get(i).getNome() + "<td align=center>"
-				+ datainizio + "<td align=center>" + datafine);
+		+ list.get(i).getNome() + "<td align=center>"
+		+ datainizio + "<td align=center>" + datafine);
 		if (g) {
-			out.print("<td align=center><a href='visualizza_questionari.jsp?id="
-					+ list.get(i).getId()
-					+ "&codfis="
-					+ cf
-					+ "'><img src='atsilo_images/visualizza.gif'></a></tr>");
+	out.print("<td align=center><a href='visualizza_questionari.jsp?id="
+			+ list.get(i).getId()
+			+ "&codfis="
+			+ cf
+			+ "'><img src='atsilo_images/visualizza.gif'></a></tr>");
 		} else {
-			out.print("<td align=center style='padding: 10px'><a href='modifica_questionario.jsp?id="
-					+ list.get(i).getId()
-					+ "'><img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
-					+ list.get(i).getId()
-					+ "'><img src='atsilo_images/cancella.png'></a><a href='visualizza_questionari.jsp?id="
-					+ list.get(i).getId()
-					+ "'><img src='atsilo_images/visualizza.gif'></a><a href='statistica_questionario.jsp?id="
-					+ list.get(i).getId()
-					+ "'><img src='atsilo_images/grafico.jpg' width=50 height=50></a>"
-					+ "</tr>");
+	out.print("<td align=center style='padding: 10px'><a href='modifica_questionario.jsp?id="
+			+ list.get(i).getId()
+			+ "'>");
+	if(q.isEditable(list.get(i))) {
+			out.println("<img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
+			+ list.get(i).getId()
+			+ "'><img src='atsilo_images/cancella.png'></a><a href='visualizza_questionari.jsp?id="
+			+ list.get(i).getId() + "'>");
+	}
+	out.println("<img src='atsilo_images/visualizza.gif'></a><a href='statistica_questionario.jsp?id="
+			+ list.get(i).getId()
+			+ "'><img src='atsilo_images/grafico.jpg' width=50 height=50></a>"
+			+ "</tr>");
 		}
 	}
 %>
