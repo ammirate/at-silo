@@ -150,7 +150,7 @@ public class ControlLogin {
                 
             } catch (SQLException e) {
                 
-                throw new DBConnectionException("Connessione fallita");
+                throw new DBConnectionException("Errore nella connessione durante la procedura di login");
             }
         } finally {
             /*
