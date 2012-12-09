@@ -210,7 +210,7 @@ CREATE TABLE `bando` (
 
 LOCK TABLES `bando` WRITE;
 /*!40000 ALTER TABLE `bando` DISABLE KEYS */;
-INSERT INTO `bando` VALUES (1,'2012-11-01','2012-11-30','0000-00-00','0000-00-00','0000-00-00',0,NULL),(2,'2011-11-01','2012-11-30','0000-00-00','0000-00-00','0000-00-00',0,NULL);
+INSERT INTO `bando` VALUES (1,'2012-11-01','2012-11-30','2013-12-21','2013-12-21','2013-12-21',0,NULL),(2,'2011-11-01','2012-11-30','2013-12-21','2013-12-21','2013-12-21',0,NULL);
 /*!40000 ALTER TABLE `bando` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -438,7 +438,7 @@ DROP TABLE IF EXISTS `evento`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `evento` (
   `nome` varchar(50) NOT NULL DEFAULT '',
-  `data` date NOT NULL DEFAULT '0000-00-00',
+  `data` date NOT NULL DEFAULT '2013-12-21',
   `descrizione` varchar(100) DEFAULT NULL,
   `personale_asilo` varchar(50) DEFAULT NULL,
   `psico_pedagogo` varchar(50) DEFAULT NULL,
@@ -586,7 +586,7 @@ CREATE TABLE `genitore` (
 
 LOCK TABLES `genitore` WRITE;
 /*!40000 ALTER TABLE `genitore` DISABLE KEYS */;
-INSERT INTO `genitore` VALUES ('Mauro','Chiavelli','CVLMRA69A23B333C','0899601239','mchiav@hotmail.it','1969-11-20','Pontecagnano (SA)','via Roma, 2 - Fisciano (SA)','RESIDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL),('Giuseppe','Del Buono','DBNGPP69A23B222C','0612345678','gdb@msn.it','1969-11-06','Roma','via degli Ulivi, 16 - 00100 Roma','INSEGNANTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL),('Giovanna','Di Costanzo','DCSGVN74A23B224X','0828123456','gds@hotmail.it','1974-12-30','Barano d\'Ischia (NA)','via Ferreria, 12 - Baronissi (SA)','INSEGNANTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL),('Andrea','De Fazio','DFZNDR91L14A909D','0894215524','adf@msn.com','1991-11-22','Vallo della Lucania (SA)','via delle X, 69 - Vallo della Lucania (SA)','STUDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL),('Santo','Del Regno','DRGSNT81A26B045C','0823120345','sdr@msn.com','1981-10-04','Avellino (AV)','via delle Y, 10 - Avellino (AV)','NON-RESIDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL),('Susanna','Passaro','PSSSNN85L98A980I','0822334556','spassaro@virgilio.it','1985-11-08','Salerno','piazza Malta, 23 - Salerno (SA)','STUDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL),('Laura','Vella','VLLLRU83A24T928B','0829718235','laurav@yahoo.it','1983-03-15','Cautano (BN)','piazza Risorgimento, 1 - Benevento (BN)','INSEGNANTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','0000-00-00',NULL,NULL);
+INSERT INTO `genitore` VALUES ('Mauro','Chiavelli','CVLMRA69A23B333C','0899601239','mchiav@hotmail.it','1969-11-20','Pontecagnano (SA)','via Roma, 2 - Fisciano (SA)','RESIDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Giuseppe','Del Buono','DBNGPP69A23B222C','0612345678','gdb@msn.it','1969-11-06','Roma','via degli Ulivi, 16 - 00100 Roma','INSEGNANTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Giovanna','Di Costanzo','DCSGVN74A23B224X','0828123456','gds@hotmail.it','1974-12-30','Barano d\'Ischia (NA)','via Ferreria, 12 - Baronissi (SA)','INSEGNANTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Andrea','De Fazio','DFZNDR91L14A909D','0894215524','adf@msn.com','1991-11-22','Vallo della Lucania (SA)','via delle X, 69 - Vallo della Lucania (SA)','STUDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Santo','Del Regno','DRGSNT81A26B045C','0823120345','sdr@msn.com','1981-10-04','Avellino (AV)','via delle Y, 10 - Avellino (AV)','NON-RESIDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Susanna','Passaro','PSSSNN85L98A980I','0822334556','spassaro@virgilio.it','1985-11-08','Salerno','piazza Malta, 23 - Salerno (SA)','STUDENTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Laura','Vella','VLLLRU83A24T928B','0829718235','laurav@yahoo.it','1983-03-15','Cautano (BN)','piazza Risorgimento, 1 - Benevento (BN)','INSEGNANTE','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL);
 /*!40000 ALTER TABLE `genitore` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1088,7 +1088,7 @@ CREATE TABLE `retta` (
 
 LOCK TABLES `retta` WRITE;
 /*!40000 ALTER TABLE `retta` DISABLE KEYS */;
-INSERT INTO `retta` VALUES (150,1,'CVLMRA69A23B333C','Ottobre2012','MENSILE','2012-10-10',300,'Fiorenzo Assi'),(630,2,'DBNGPP69A23B222C','','','0000-00-00',0,''),(325,3,'DCSGVN74A23B224X','','','0000-00-00',0,''),(250,4,'DFZNDR91L14A909D','','','0000-00-00',0,''),(130,5,'DRGSNT81A26B045C','','','0000-00-00',0,''),(469,6,'PSSSNN85L98A980I','','','0000-00-00',0,''),(790,7,'VLLLRU83A24T928B','','','0000-00-00',0,'');
+INSERT INTO `retta` VALUES (150,1,'CVLMRA69A23B333C','Ottobre2012','MENSILE','2012-10-10',300,'Fiorenzo Assi'),(630,2,'DBNGPP69A23B222C','','','2013-12-21',0,''),(325,3,'DCSGVN74A23B224X','','','2013-12-21',0,''),(250,4,'DFZNDR91L14A909D','','','2013-12-21',0,''),(130,5,'DRGSNT81A26B045C','','','2013-12-21',0,''),(469,6,'PSSSNN85L98A980I','','','2013-12-21',0,''),(790,7,'VLLLRU83A24T928B','','','2013-12-21',0,'');
 /*!40000 ALTER TABLE `retta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1188,7 +1188,7 @@ DROP TABLE IF EXISTS `schedulazione`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `schedulazione` (
-  `data` date NOT NULL DEFAULT '0000-00-00',
+  `data` date NOT NULL DEFAULT '2013-12-21',
   `tirocinante` varchar(50) NOT NULL DEFAULT '',
   `massimo` int(5) DEFAULT NULL,
   PRIMARY KEY (`data`,`tirocinante`),
