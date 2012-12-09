@@ -109,7 +109,7 @@
   </p>
   <p>
     Password
-    <input  type="text" name="pswd_login">
+    <input  type="password" name="pswd_login">
   </p>
   <p>
     Tipologia utente
