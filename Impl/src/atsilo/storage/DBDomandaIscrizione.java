@@ -109,31 +109,24 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         }
         
        /**
-        * ricerca le iscrizioni di un bambino 
-        * @param b è il bambino per il quale vengono cercate le domande d'iscrizione, se è null si verifica un NULLPOINTEREXCEPTION
-        * @return una lista di iscrizioni appartenenti al bambino richiesto oppure una lista di iscrizioni vuota se il bambino non ha fatto domanda d'iscrizione
+        * ricerca l'id della domanda iscrizione di un bambino 
+        * @param b è il bambino per il quale viene cercata la domanda d'iscrizione, se è null si verifica un NULLPOINTEREXCEPTION
+        * @return iscrizione appartenente al bambino richiesto oppure -1 se non ha fatto domanda d'iscrizione
         * @throws SQLException se si verifica un errore di connessione con il database
         */
         
-    public List<DomandaIscrizione> ricercaDomandaDaBambino(Bambino b) throws SQLException {
-        List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
-        DomandaIscrizione d=new DomandaIscrizione();
+    public int ricercaDomandaDaBambino(Bambino b) throws SQLException {
+        int id = -1;
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
+            tabella.setParam(stmt, 1, "bambino", b);
             ResultSet res = stmt.executeQuery();
-        for(DomandaIscrizione t : iteraResultSet(res))
-        {
             
-            Bambino ba=t.getBambino();
-            if(ba.getCodiceFiscale().equals(b.getCodiceFiscale()))
-            {
-                lista.add(t);
-            }
-            
-        }
+            for(DomandaIscrizione t : iteraResultSet(res))
+               id = res.getInt("id");
+
         res.close();
-        return lista;
+        return id;
     }
 
     /**

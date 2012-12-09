@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
 
@@ -14,11 +15,13 @@ public class StubDomandaIscrizione
     DomandaIscrizione di;
     List<DomandaIscrizione> ldi=new ArrayList<DomandaIscrizione>();
     Database database;
+    int id;
     
     public StubDomandaIscrizione(Database db){
         database=db;
         di = new DomandaIscrizione();
         ldi.add(di);
+        id = 1;
     }
         
     public boolean inserisciDomandaIscizione(DomandaIscrizione domanda){
@@ -32,6 +35,10 @@ public class StubDomandaIscrizione
     
     public String verificaStato(int id){
         return "idoneo";
+    }
+    
+    public int ricercaDomandaDaBambino(Bambino b){
+        return id;
     }
     
     public DomandaIscrizione ricercaDomandaPerId(int id){
@@ -64,6 +71,15 @@ public class StubDomandaIscrizione
      */
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException{
       
+        return di;
+    }
+
+    /**
+     * @param username
+     * @param cfBambino
+     * @return
+     */
+    public DomandaIscrizione ricercaDomandaDaUsernameECfBambino(String username, String cfBambino) {
         return di;
     }
 
