@@ -27,14 +27,13 @@ import org.junit.Test;
 
 
 import atsilo.application.ControlGestioneBando;
-import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
-import atsilo.entity.Genitore;
-import atsilo.entity.Servizio;
+
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
-import atsilo.stub.application.StubDomandaIscrizione;
+import atsilo.stub.storage.StubDomandaIscrizione;
+
 
 public class ControlGestioneBandoTest {
    private  ControlGestioneBando  control=ControlGestioneBando.getIstance();
@@ -68,14 +67,15 @@ public class ControlGestioneBandoTest {
     public final void testInsrisciPunteggio() throws DBConnectionException, BandoException, SQLException 
     {
         StubDomandaIscrizione dbDomande=new StubDomandaIscrizione(db);
-        Genitore genitore=new Genitore();
-        Bambino bambino=new Bambino();
-        DomandaIscrizione domanda=new DomandaIscrizione(new Date(2012, 8, 8), 9999, 0,0, genitore, bambino, "convalidata", "consegnato",
-                "mancante", "consegnato", false, false, false, false, false, false, false, false, false, "condizioni", 
-                24500F, new Servizio(),"DomandaInviataInAttesaDiGraduatoria");
-        dbDomande.inserisci(domanda);
-       
-        control.inserisciPunteggio(domanda, 54);
+        DomandaIscrizione domanda=new DomandaIscrizione();
+        
+        Date dataPresentazione=new Date(0);
+        
+        domanda.setDataPresentazione(dataPresentazione);
+        domanda.setId(12);
+        dbDomande.inserisciDomanda(domanda);
+        control.inserisciPunteggio(domanda, 54);  
+        
         assertEquals(54,domanda.getPunteggio());
         
     }

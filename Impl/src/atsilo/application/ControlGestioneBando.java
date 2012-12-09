@@ -74,12 +74,34 @@ public class ControlGestioneBando {
             
             DomandaIscrizione domandaDaModificare = new DomandaIscrizione();
             try {
-                domandaDaModificare = dbDomandaIscrizione
-                        .ricercaDomandaDaId(iscrizione.getId());
+                domandaDaModificare = new DomandaIscrizione(
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getDataPresentazione(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getId(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getPunteggio(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getPosizione(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitore(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getBambino(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getStatoDomanda(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCertificatoMalattie(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCertificatoVaccinazioni(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCertificatoPrivacy(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getBambinoDisabile(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreInvalido(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreSolo(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreVedovo(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreNubile(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreSeparato(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getFiglioNonRiconosciuto(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getAffidoEsclusivo(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getAltriComponentiDisabili(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCondizioniCalcoloPunteggio(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getIsee(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getServizio(), 
+                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getStato_convalidazione());
             } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
             }
-            if (domandaDaModificare == null)
+            if (domandaDaModificare.getDataPresentazione() == null)
                 throw new BandoException("domanda non trovata");
             domandaDaModificare.setPunteggio(punteggio);
             dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);

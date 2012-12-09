@@ -63,4 +63,12 @@ public class StubDomandaIscrizione {
         }
         
     }
+
+    /**
+     * @param domanda2
+     */
+    public void inserisciDomanda(DomandaIscrizione domanda2) {
+        listadomande.add(domanda2);
+        
+    }
 }
