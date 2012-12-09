@@ -2,6 +2,10 @@ package atsilo.application.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.security.auth.login.LoginException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import atsilo.stub.application.StubControlLogin;
 import atsilo.application.*;
+import atsilo.exception.DBConnectionException;
 
 /*
  *-----------------------------------------------------------------
@@ -32,13 +37,14 @@ import atsilo.application.*;
 @WebServlet("/ServletControlLogin")
 public class ServletControlLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private StubControlLogin login ;
+	private ControlLogin login ;
+	private static final Logger LOG = Logger.getLogger("global");
        
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ServletControlLogin() {
-         login = StubControlLogin.getInstance();
+         login = ControlLogin.getInstance();
         
     }
 
@@ -72,19 +78,30 @@ public class ServletControlLogin extends HttpServlet {
             String login_error = new String("prototipo/login.jsp");
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             
-            if (login.getValoreLogin(username, password, tipologia)){
-                
-                //Setto le variabili di sessione
+            try {
+                login.getValoreLogin(username, password, tipologia);
+              //Setto le variabili di sessione
                 HttpSession sessione = request.getSession();
                 sessione.setAttribute("username", username);
                 sessione.setAttribute("tipologia_utente", tipologia);
                 //reindirizzo verso index della tipologia di utente
                 response.setHeader("Location", login_ok);    
-            }
-            
-            else {  
+            } catch (LoginException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "Dati login non validi", e);
+                response.setHeader("Location", login_error);   
+            } catch (DBConnectionException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "Errore di connessione al database", e);
                 response.setHeader("Location", login_error);   
             }
+                
+                
+            
+            
+            
+              
+            
 
 	}
 
