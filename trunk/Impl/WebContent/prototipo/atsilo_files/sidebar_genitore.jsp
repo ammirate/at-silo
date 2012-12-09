@@ -81,7 +81,6 @@ if (!tipologia.equals("genitore") )
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.html">Storico Attivit&agrave; </a></td>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.jsp">Storico Attivit&agrave;</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_questionari.jsp?type=genitore&cf=1">Compila Questionari </a></td>
