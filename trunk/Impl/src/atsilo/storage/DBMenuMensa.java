@@ -12,7 +12,7 @@ import java.util.List;
 public class DBMenuMensa extends DBBeans {
     
     public DBMenuMensa(Database db){
-        super("MenuMensa",db);
+        super("menu_mensa",db);
     }
     
     public List<MenuMensa> ricercaMenuMensaPerCategoriaBambino(String categoria){

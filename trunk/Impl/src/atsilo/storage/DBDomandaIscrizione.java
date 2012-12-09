@@ -38,7 +38,7 @@ import atsilo.entity.RispostaQuestionario;
 public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     
     public DBDomandaIscrizione(Database db){
-        super("DomandaIscrizione",db);
+        super("domanda_iscrizione",db);
     }
 
     private static final Map<String,String> MAPPINGS=creaMapping();

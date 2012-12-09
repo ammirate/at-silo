@@ -19,7 +19,7 @@ public class DBRichiesta extends DBBeans {
     private static final List<String> CHIAVE=creaChiave(); 
     
     public DBRichiesta(Database db){
-        super("Richiesta",db);
+        super("richiesta",db);
     }
     
     /**

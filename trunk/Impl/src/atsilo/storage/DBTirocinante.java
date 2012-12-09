@@ -38,7 +38,7 @@ public class DBTirocinante extends DBBeans {
      * @param db database con relativa connessione
      */
     public DBTirocinante(Database db){
-        super("Tirocinante",db);
+        super("tirocinante",db);
     }
     
     /**

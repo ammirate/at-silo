@@ -37,7 +37,7 @@ public class DBAttivita extends DBBeans<Attivita> {
      * COstruttore
      * @param db
      */
-    public DBAttivita(Database db){ super("Attivita",db);}
+    public DBAttivita(Database db){ super("attivita",db);}
     
     
      /* (non-Javadoc)

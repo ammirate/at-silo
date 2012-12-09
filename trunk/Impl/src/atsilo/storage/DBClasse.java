@@ -67,7 +67,7 @@ public class DBClasse extends DBBeans<Classe>
      * Costruttore
      * @param db
      */
-    public DBClasse(Database db){super("Classe",db);}
+    public DBClasse(Database db){super("classe",db);}
     
     
 /**

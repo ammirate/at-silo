@@ -19,7 +19,7 @@ public class DBRegistro extends DBBeans
     
     public DBRegistro(Database db){
         
-        super("Registro",db);
+        super("registro",db);
     }
     
     

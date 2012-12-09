@@ -32,7 +32,7 @@ public class DBEvento extends DBBeans {
      * @param db
      */
     public DBEvento(Database db){
-        super("Evento",db);
+        super("evento",db);
     }
     
     

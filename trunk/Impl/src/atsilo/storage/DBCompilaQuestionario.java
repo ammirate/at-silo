@@ -54,7 +54,7 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
      * Costruttore
      * @param db connessione al database
      */
-    public DBCompilaQuestionario(Database db){super("Compila",db); }
+    public DBCompilaQuestionario(Database db){super("compila",db); }
     
     /**
      * Metodo che crea la chiave
