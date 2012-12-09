@@ -37,7 +37,7 @@ public class DBBambino extends DBBeans<Bambino> {
      * Costruttore 
      * @param db 
      */
-    public DBBambino(Database db){super("Bambino",db);}
+    public DBBambino(Database db){super("bambino",db);}
 
     /* (non-Javadoc)
      * @see atsilo.storage.DBBeans#getMappingFields()

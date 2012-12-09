@@ -25,7 +25,7 @@ import java.util.Collections;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro,Luigi Lomasto, 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -40,7 +40,7 @@ public class DBBando extends DBBeans<Bando> {
      * @param db
      */
     public DBBando(Database db) {
-        super("Bando", db);
+        super("bando", db);
     }
     
     

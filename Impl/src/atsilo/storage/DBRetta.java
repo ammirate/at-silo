@@ -20,7 +20,7 @@ public class DBRetta extends DBBeans {
     private static final List<String> CHIAVE=creaChiave(); 
     
     public DBRetta(Database db){
-        super("Retta",db);
+        super("retta",db);
     }
     
     /**

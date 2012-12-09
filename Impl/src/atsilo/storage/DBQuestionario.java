@@ -51,7 +51,7 @@ public class DBQuestionario extends DBBeans<Questionario>{
      * Costruttore con parametri
      * @param db database con relativa connessione
      */ 
-    public DBQuestionario(Database db){super("Questionario",db);}
+    public DBQuestionario(Database db){super("questionario",db);}
     
     
     /* (non-Javadoc)

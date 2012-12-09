@@ -39,7 +39,7 @@ public class DBAssenza extends DBBeans<Assenza> {
      * Costruttore
      * @param db
      */
-    public DBAssenza(Database db){super("Assenza",db);}
+    public DBAssenza(Database db){super("assenza",db);}
     
     
     /**

@@ -8,13 +8,16 @@ import atsilo.entity.ProgrammaEducativoSettimanale;
 import atsilo.entity.Tirocinante;
 
 import java.sql.Date;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import java.util.List;
+import java.util.Map;
 
 public class DBProgrammaEducativoSettimanale extends DBBeans {
     
     public DBProgrammaEducativoSettimanale(Database db){
-        super("ProgrammaEducativoSettimanale",db);
+        super("programma_educativo_settimanale",db);
     }
      public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerAttivita(Attivita attivita){
         List<ProgrammaEducativoSettimanale> programmi;
@@ -29,4 +32,28 @@ public class DBProgrammaEducativoSettimanale extends DBBeans {
         List<ProgrammaEducativoSettimanale> programmi;
         return  programmi;   
         }
+    /**
+     * @see atsilo.storage.DBBeans#getMappingFields()
+     */
+    @Override
+    protected Map getMappingFields() {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+    /**
+     * @see atsilo.storage.DBBeans#getKeyFields()
+     */
+    @Override
+    protected List getKeyFields() {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+    /**
+     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     */
+    @Override
+    protected Object creaBean(ResultSet r) throws SQLException {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
 }
