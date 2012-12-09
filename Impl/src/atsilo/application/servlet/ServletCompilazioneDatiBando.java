@@ -248,39 +248,6 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         String cittadinanza_bambino=null;
         if ( request.getParameter("cittadinanza_bambino")!=null)
             cittadinanza_bambino=request.getParameter("cittadinanza_bambino");
-        String indirizzo_residenza_bambino=null;
-        if ( request.getParameter("indirizzo_residenza_bambino")!=null)
-            indirizzo_residenza_bambino=request.getParameter("indirizzo_residenza_bambino");
-        String numero_civico_residenza_bambino=null;
-        if ( request.getParameter("numero_civico_residenza_bambino")!=null)
-            numero_civico_residenza_bambino=request.getParameter("numero_civico_residenza_bambino");
-        String cap_residenza_bambino=null;
-        if ( request.getParameter("cap_residenza_bambino")!=null)
-            cap_residenza_bambino= request.getParameter("cap_residenza_bambino");
-        String comune_residenza_bambino=null;
-        if ( request.getParameter("comune_residenza_bambino")!=null)
-            comune_residenza_bambino= request.getParameter("comune_residenza_bambino");
-        String provincia_residenza_bambino=null;
-        if ( request.getParameter("provincia_residenza_bambino")!=null)
-            provincia_residenza_bambino=request.getParameter("provincia_residenza_bambino");
-        String indirizzo_domicilio_bambino=null;
-        if ( request.getParameter("indirizzo_domicilio_bambino")!=null)
-            indirizzo_domicilio_bambino=request.getParameter("indirizzo_domicilio_bambino");
-        String numero_civico_domicilio_bambino=null;
-        if ( request.getParameter("numero_civico_domicilio_bambino")!=null)
-            numero_civico_domicilio_bambino=request.getParameter("numero_civico_domicilio_bambino");
-        String cap_domicilio_bambino=null;
-        if ( request.getParameter("cap_domicilio_bambino")!=null)
-            cap_domicilio_bambino=request.getParameter("cap_domicilio_bambino");
-        String comune_domicilio_bambino=null;
-        if ( request.getParameter("comune_domicilio_bambino")!=null)
-            comune_domicilio_bambino=request.getParameter("comune_domicilio_bambino");
-        String provincia_domicilio_bambino=null;
-        if ( request.getParameter("provincia_domicilio_bambino")!=null)
-            provincia_domicilio_bambino=request.getParameter("provincia_domicilio_bambino");
-        String categoria_appartenenza_bambino=null;
-        if ( request.getParameter("categoria_appartenenza_bambino")!=null)
-            categoria_appartenenza_bambino=request.getParameter("categoria_appartenenza_bambino");
         int classe;
         if ( request.getParameter("classe")!=null)
             classe=Integer.parseInt(request.getParameter("classe"));
@@ -319,8 +286,8 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             
             else 
                 pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
-
-
+            
+            
             
         }//fine update dati bambino
         

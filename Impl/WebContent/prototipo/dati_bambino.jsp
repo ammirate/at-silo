@@ -67,21 +67,21 @@ function settaAttributi(slf){
   <tr>
   <tr>
     <td>Cognome</td>
-    <td> <input id="cognome" value="" name="cognome" size="25" maxlength="25" type="text"></td>
+    <td> <input id="cognome_bambino" value="" name="cognome_bambino" size="25" maxlength="25" type="text"></td>
     <td>Nome</td>
-    <td> <input id="nome" value="" name="nome" size="25" maxlength="50" type="text"></td>
+    <td> <input id="nome_bambino" value="" name="nome_bambino" size="25" maxlength="50" type="text"></td>
   </tr>
   <tr>
     <td>Nato/a a</td>
-    <td><input id="natoa" value="" name="natoa"  size="25" maxlength="25" type="text"></td>
+    <td><input id="comune_nascita_bambino" value="" name="comune_nascita_bambino"  size="25" maxlength="25" type="text"></td>
     <td>Nato il</td>
-    <td><input id="natoil" value="" name="natoil"  size="25" maxlength="10" type="text"></td>
+    <td><input id="data_nascita_bambino" value="" name="data_nascita_bambino"  size="25" maxlength="10" type="text"></td>
   </tr>
   <tr>
     <td>Codice Fiscale</td>
-    <td><input id="codice_fiscale" value="" name="codice_fiscale"  size="25" maxlength="16" type="text" /></td>
+    <td><input id="codice_fiscale_bambino" value="" name="codice_fiscale_bambino"  size="25" maxlength="16" type="text" /></td>
     <td>Cittadinanza</td>
-    <td><input id="cittadinanza" value="" name="cittadinanza"  size="25" maxlength="25" type="text" /></td>
+    <td><input id="cittadinanza_bambino" value="" name="cittadinanza_bambino"  size="25" maxlength="25" type="text" /></td>
   </tr>
   <tr>
     <td>&nbsp; </td></tr>
