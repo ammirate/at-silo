@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:creation-date>2012-11-07T00:31:17</meta:creation-date><meta:editing-duration>PT31M26S</meta:editing-duration><meta:editing-cycles>8</meta:editing-cycles><meta:generator>LibreOffice/3.6$MacOSX_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-11-16T19:14:04</dc:date><meta:document-statistic meta:table-count="0" meta:image-count="1" meta:object-count="0" meta:page-count="3" meta:paragraph-count="55" meta:word-count="392" meta:character-count="2632" meta:non-whitespace-character-count="2331"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../../../../../../.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T00:31:16"/></office:meta>
+ <office:meta><meta:creation-date>2012-11-07T00:31:17</meta:creation-date><meta:editing-duration>PT31M26S</meta:editing-duration><meta:editing-cycles>9</meta:editing-cycles><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-09T21:45:07.61</dc:date><meta:document-statistic meta:table-count="0" meta:image-count="1" meta:object-count="0" meta:page-count="3" meta:paragraph-count="55" meta:word-count="392" meta:character-count="2631" meta:non-whitespace-character-count="2330"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="template_basic_styles" xlink:href="../../../../../../.config/libreoffice/3/user/template/template_basic_styles.ott" meta:date="2012-11-07T00:31:16"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">50440</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="int">2</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">18004</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">8465</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">27781</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">10917</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">10502</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">2720</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">39603</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="int">2</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">50440</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">18004</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">58903</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">4535</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">32703</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">27781</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">10915</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">38282</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">908350</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">939236</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -439,66 +439,73 @@
   </style:style>
   <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="italic" fo:font-weight="normal" officeooo:paragraph-rsid="00068054" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="0005f105" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="00068054" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-style="italic" fo:font-weight="normal" officeooo:paragraph-rsid="00068054" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="000b7fd4" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="00068054" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:paragraph-rsid="000bdc4f" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="000b7fd4" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties officeooo:rsid="0005f105" officeooo:paragraph-rsid="0005f105"/>
+   <style:text-properties fo:font-style="italic" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:paragraph-rsid="000bdc4f" style:font-style-asian="italic" style:font-weight-asian="normal" style:font-style-complex="italic" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="00068054" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+   <style:text-properties officeooo:rsid="0005f105" officeooo:paragraph-rsid="0005f105"/>
   </style:style>
   <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="000a8388" officeooo:paragraph-rsid="000a8388" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="00068054" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="000ab14d" officeooo:paragraph-rsid="000ab14d" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="000a8388" officeooo:paragraph-rsid="000a8388" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="normal" fo:font-weight="bold" officeooo:rsid="000a8388" officeooo:paragraph-rsid="000a8388" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-style-complex="normal" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="000ab14d" officeooo:paragraph-rsid="000ab14d" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-style="normal" fo:font-weight="bold" officeooo:rsid="000a8388" officeooo:paragraph-rsid="000a8388" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-style-complex="normal" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="000bdc4f" officeooo:paragraph-rsid="000bdc4f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties officeooo:paragraph-rsid="000b7fd4"/>
   </style:style>
-  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Heading_20_1">
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Heading_20_1">
    <style:paragraph-properties>
     <style:tab-stops>
      <style:tab-stop style:position="13.399cm"/>
     </style:tab-stops>
    </style:paragraph-properties>
   </style:style>
-  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="00068054" officeooo:paragraph-rsid="0005f105" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="000ab14d" officeooo:paragraph-rsid="000ab14d" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L2">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:font-weight="normal" officeooo:rsid="000ab14d" officeooo:paragraph-rsid="000ab14d" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="000bdc4f" officeooo:paragraph-rsid="000bdc4f" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="000ab14d" officeooo:paragraph-rsid="000ab14d" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Heading_20_1">
+   <style:paragraph-properties>
+    <style:tab-stops>
+     <style:tab-stop style:position="13.399cm"/>
+    </style:tab-stops>
+   </style:paragraph-properties>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="0005f105"/>
@@ -738,7 +745,7 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:h text:style-name="P20" text:outline-level="1">Pacchetti</text:h>
+   <text:h text:style-name="P22" text:outline-level="1">Pacchetti</text:h>
    <text:p text:style-name="Text_20_body"><draw:frame draw:style-name="fr1" draw:name="immagini1" text:anchor-type="paragraph" svg:width="17cm" svg:height="17.119cm" draw:z-index="0"><draw:image>
       <office:binary-data>iVBORw0KGgoAAAANSUhEUgAABYwAAAWWCAIAAACggHRxAACAAElEQVR42uzdC7xc470//iPE
        SV3OoSqnFZfiEFK3Bk0RVddKCS2C/o4emogfrfuvkebfem1tf6qH8kpdfuoW1KWISuOaFCEu
@@ -1984,145 +1991,145 @@
      </draw:image>
     </draw:frame></text:p>
    <text:p text:style-name="P2">Presentation</text:p>
-   <text:p text:style-name="P14">Il sottosistema Presentation è responsabile della gestione delle interfacce grafiche del sistema @silo, interfacce che permettono l&apos;interazione con l&apos; utente.</text:p>
-   <text:p text:style-name="P14"/>
+   <text:p text:style-name="P15">Il sottosistema Presentation è responsabile della gestione delle interfacce grafiche del sistema @silo, interfacce che permettono l&apos;interazione con l&apos; utente.</text:p>
+   <text:p text:style-name="P15"/>
    <text:p text:style-name="P2">Application</text:p>
    <text:p text:style-name="P5"><text:span text:style-name="T1">Il sottosistema </text:span><text:span text:style-name="T2">Application rappresenta il maggiore livello di astrazione, dove vengono implementate tutte le funzionalità che permettono la gestione, </text:span><text:span text:style-name="T22">la </text:span><text:span text:style-name="T2">manipolazione e</text:span><text:span text:style-name="T22">d il</text:span><text:span text:style-name="T2"> passaggio dei dati dal livello Presentation a quello di Storage. E&apos; suddiviso in due packages:</text:span></text:p>
-   <text:p text:style-name="P21"/>
-   <text:p text:style-name="P11"><text:soft-page-break/><text:span text:style-name="T28">atsilo.gestU</text:span>utenz<text:span text:style-name="T28">eA</text:span>ccessi:<text:span text:style-name="T9"> </text:span><text:span text:style-name="T10">package che si occupa di: gestire gli accessi al sistema, gestire la registrazione, l&apos;inserimento e la modifica di utenti nel sistema, gestire i pagamenti.</text:span></text:p>
-   <text:p text:style-name="P12"><text:span text:style-name="T28">atsilo.g</text:span><text:span text:style-name="T24">est</text:span><text:span text:style-name="T28">R</text:span><text:span text:style-name="T24">icerca:</text:span><text:span text:style-name="T26"> </text:span><text:span text:style-name="T10">package che si occupa della ricerca degli utenti del sistema e del loro criterio di visualizzazione.</text:span></text:p>
-   <text:p text:style-name="P19"><text:span text:style-name="T18">atsilo.g</text:span><text:span text:style-name="T17">est</text:span><text:span text:style-name="T18">S</text:span><text:span text:style-name="T17">ervizi:</text:span><text:span text:style-name="T10"> il package si occupa di tutte le operazioni relative ai servizi offerti dall&apos;asilo agli utenti, come il servizio mensa e quello orario, consentendo la modifica e visualizzazione del servizio; permette inoltre la gestione delle fasce di utenza orarie specifiche. </text:span></text:p>
-   <text:p text:style-name="P10"><text:span text:style-name="T21">atsilo.gestT</text:span><text:span text:style-name="T20">irocinanti</text:span><text:span text:style-name="T12">: </text:span><text:span text:style-name="T10">il package si occupa di gestire il periodo di tirocinio degli studenti della facoltà di Scienze della Formazione, consentendo le operazioni di inserimento, modifica, richiesta e feedback. <text:s/></text:span></text:p>
+   <text:p text:style-name="P10"/>
+   <text:p text:style-name="P12"><text:soft-page-break/><text:span text:style-name="T28">atsilo.gestU</text:span>tenz<text:span text:style-name="T28">eA</text:span>ccessi:<text:span text:style-name="T9"> </text:span><text:span text:style-name="T10">package che si occupa di: gestire gli accessi al sistema, gestire la registrazione, l&apos;inserimento e la modifica di utenti nel sistema, gestire i pagamenti.</text:span></text:p>
+   <text:p text:style-name="P13"><text:span text:style-name="T28">atsilo.g</text:span><text:span text:style-name="T24">est</text:span><text:span text:style-name="T28">R</text:span><text:span text:style-name="T24">icerca:</text:span><text:span text:style-name="T26"> </text:span><text:span text:style-name="T10">package che si occupa della ricerca degli utenti del sistema e del loro criterio di visualizzazione.</text:span></text:p>
+   <text:p text:style-name="P21"><text:span text:style-name="T18">atsilo.g</text:span><text:span text:style-name="T17">est</text:span><text:span text:style-name="T18">S</text:span><text:span text:style-name="T17">ervizi:</text:span><text:span text:style-name="T10"> il package si occupa di tutte le operazioni relative ai servizi offerti dall&apos;asilo agli utenti, come il servizio mensa e quello orario, consentendo la modifica e visualizzazione del servizio; permette inoltre la gestione delle fasce di utenza orarie specifiche. </text:span></text:p>
+   <text:p text:style-name="P11"><text:span text:style-name="T21">atsilo.gestT</text:span><text:span text:style-name="T20">irocinanti</text:span><text:span text:style-name="T12">: </text:span><text:span text:style-name="T10">il package si occupa di gestire il periodo di tirocinio degli studenti della facoltà di Scienze della Formazione, consentendo le operazioni di inserimento, modifica, richiesta e feedback. <text:s/></text:span></text:p>
    <text:p text:style-name="P6"><text:span text:style-name="T16">atsilo.gestQ</text:span><text:span text:style-name="T15">uestionari:</text:span><text:span text:style-name="T11">il package permette la gestione dei questionari inserendoli e modificandoli per ogni utente e visualizzarne le statistiche.</text:span></text:p>
-   <text:p text:style-name="P13"><text:span text:style-name="T28">atsilo.gestR</text:span><text:span text:style-name="T27">egistro:</text:span><text:span text:style-name="T11"> <text:s/>il package permette la gestione del registro di classe permettendo l&apos;inserimento, la modifica e la cancellazione di eventi e attività svolte e di tener traccia delle presenze.</text:span></text:p>
-   <text:p text:style-name="P23"/>
-   <text:p text:style-name="P18">Storage</text:p>
-   <text:p text:style-name="P16">Il sottosistema Storage gestisce ed immagazzina i dati persistenti, e per questo presenta tutte quelle operazioni che permettono la comunicazione con il Database, come operazioni per la connessione, l&apos;accesso ai dati e l&apos;interrogazione (query) di questi. Le classi in cui è suddiviso questo livello sono:</text:p>
-   <text:list xml:id="list1551960625" text:style-name="L1">
+   <text:p text:style-name="P14"><text:span text:style-name="T28">atsilo.gestR</text:span><text:span text:style-name="T27">egistro:</text:span><text:span text:style-name="T11"> <text:s/>il package permette la gestione del registro di classe permettendo l&apos;inserimento, la modifica e la cancellazione di eventi e attività svolte e di tener traccia delle presenze.</text:span></text:p>
+   <text:p text:style-name="P20"/>
+   <text:p text:style-name="P19">Storage</text:p>
+   <text:p text:style-name="P17">Il sottosistema Storage gestisce ed immagazzina i dati persistenti, e per questo presenta tutte quelle operazioni che permettono la comunicazione con il Database, come operazioni per la connessione, l&apos;accesso ai dati e l&apos;interrogazione (query) di questi. Le classi in cui è suddiviso questo livello sono:</text:p>
+   <text:list xml:id="list41593910" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P24">Connection</text:p>
+     <text:p text:style-name="P23">Connection</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBAccount</text:p>
+     <text:p text:style-name="P23">DBAccount</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBBando</text:p>
+     <text:p text:style-name="P23">DBBando</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBPersonaleAsilo</text:p>
+     <text:p text:style-name="P23">DBPersonaleAsilo</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBDomandaIscrizione</text:p>
+     <text:p text:style-name="P23">DBDomandaIscrizione</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBGenitore</text:p>
+     <text:p text:style-name="P23">DBGenitore</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBRetta</text:p>
+     <text:p text:style-name="P23">DBRetta</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBBambino</text:p>
+     <text:p text:style-name="P23">DBBambino</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBServizi</text:p>
+     <text:p text:style-name="P23">DBServizi</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBPagamenti</text:p>
+     <text:p text:style-name="P23">DBPagamenti</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBTirocinanti</text:p>
+     <text:p text:style-name="P23">DBTirocinanti</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBEventi</text:p>
+     <text:p text:style-name="P23">DBEventi</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBRegistro</text:p>
+     <text:p text:style-name="P23">DBRegistro</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBQuestionario</text:p>
+     <text:p text:style-name="P23">DBQuestionario</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P24">DBMen<text:span text:style-name="T27">u</text:span>Mensa</text:p>
+     <text:p text:style-name="P23">DBMen<text:span text:style-name="T27">u</text:span>Mensa</text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P16"/>
-   <text:p text:style-name="P18">Beans</text:p>
+   <text:p text:style-name="P17"/>
+   <text:p text:style-name="P19">Beans</text:p>
    <text:p text:style-name="P8"><text:span text:style-name="T6">Il sott</text:span><text:span text:style-name="T7">osistema Beans permette la gestione dei dati, tramite operazione che si occupano di creare e manipolare le entità che fanno parte del sistema, entità che rappresentano un concetto ben distinto e con un proprio ruolo. Fanno parte dei Beans le classi:</text:span></text:p>
-   <text:list xml:id="list662156646" text:style-name="L2">
+   <text:list xml:id="list41580831" text:style-name="L2">
     <text:list-item>
-     <text:p text:style-name="P22"><text:soft-page-break/>Account</text:p>
+     <text:p text:style-name="P24"><text:soft-page-break/>Account</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Bando</text:p>
+     <text:p text:style-name="P24">Bando</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Personale Asilo</text:p>
+     <text:p text:style-name="P24">Personale Asilo</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Domanda Iscrizione</text:p>
+     <text:p text:style-name="P24">Domanda Iscrizione</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Genitore</text:p>
+     <text:p text:style-name="P24">Genitore</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Retta</text:p>
+     <text:p text:style-name="P24">Retta</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Classe</text:p>
+     <text:p text:style-name="P24">Classe</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Bambino</text:p>
+     <text:p text:style-name="P24">Bambino</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Orario Utente</text:p>
+     <text:p text:style-name="P24">Orario Utente</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Servizi</text:p>
+     <text:p text:style-name="P24">Servizi</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Richiesta</text:p>
+     <text:p text:style-name="P24">Richiesta</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Pagamenti</text:p>
+     <text:p text:style-name="P24">Pagamenti</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Fattura</text:p>
+     <text:p text:style-name="P24">Fattura</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Extra</text:p>
+     <text:p text:style-name="P24">Extra</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Tirocinanti</text:p>
+     <text:p text:style-name="P24">Tirocinanti</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Psicopedagogo</text:p>
+     <text:p text:style-name="P24">Psicopedagogo</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Evento</text:p>
+     <text:p text:style-name="P24">Evento</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Feedback</text:p>
+     <text:p text:style-name="P24">Feedback</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Programma Educativo Settimanale</text:p>
+     <text:p text:style-name="P24">Programma Educativo Settimanale</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Registro</text:p>
+     <text:p text:style-name="P24">Registro</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Responsabile Questionari</text:p>
+     <text:p text:style-name="P24">Responsabile Questionari</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Questionario</text:p>
+     <text:p text:style-name="P24">Questionario</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Assenza</text:p>
+     <text:p text:style-name="P24">Assenza</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Attività</text:p>
+     <text:p text:style-name="P24">Attività</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Menù Mensa</text:p>
+     <text:p text:style-name="P24">Menù Mensa</text:p>
     </text:list-item>
    </text:list>
   </office:text>
