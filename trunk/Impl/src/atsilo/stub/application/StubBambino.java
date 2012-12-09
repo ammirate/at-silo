@@ -16,6 +16,7 @@
 
 package atsilo.stub.application;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import atsilo.entity.Bambino;
@@ -28,12 +29,14 @@ public class StubBambino
 {
     Bambino b;
     Database database;
-    List<Bambino> lb;
+    List<Bambino> lb =new ArrayList<Bambino>();
+    List<String> cf =new ArrayList<String>();
     
     public StubBambino(Database db){
         database=db;
         b = new Bambino();
         lb.add(b);
+        cf.add("DLIK57HWS35GTYM7");
     }
         
     public Bambino ricercaBambino(String cf){
@@ -91,5 +94,11 @@ public class StubBambino
     public List<Bambino> ricercaBambiniServizioDisabili(){
         return lb;
     }
+    
+    public List<String> ricercaCfBambiniPerUsername(String username){
+        return cf;
+    }
+    
+    
 
 }

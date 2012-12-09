@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 
 
 import atsilo.application.notificheMail.Messaggio;
+import atsilo.application.notificheMail.NotificaMail;
 import atsilo.entity.Account;
 import atsilo.entity.Assenza;
 import atsilo.entity.Bambino;
@@ -54,6 +55,64 @@ public class ControlIscrizione {
 
     private static final ControlIscrizione ISTANCE = new ControlIscrizione();
 
+    
+    /**
+     * Presenta domanda di iscrizione (PrimoStep) 
+     * @param cf_bambino
+     * @param username_account
+     * @return
+     * @throws DBConnectionException 
+     * @throws AccountException 
+     * @throws InserimentoDatiException 
+     * @throws UtenteException 
+     */
+    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscale,String username_account) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException{
+        Database db = new Database();
+        StubAccount stub = new StubAccount(db); 
+        StubUtente stub2 = new StubUtente(db);
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(codiceFiscale.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");     
+ 
+        if(stub2.ricercaUtente(codiceFiscale) != null)
+            throw new AccountException("L'utente esite già");
+        //Generazione della password
+        Random generatore = new Random(8);
+        int password = generatore.nextInt(10000001) + 99999999;
+        //Converesione in stringa della password
+        String psw = "" + password;
+        
+        //Credo che in questa prima fase vengano messi tutti i dati relativi all'entità utente 
+        Utente utente = new Utente(null,null, null, codiceFiscale, null,
+                null, null, null, null, null, null, 
+                null, null, null, null, null,
+                null, null);
+        
+        Account account = new Account(username_account, psw, utente);
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            if(!stub2.inserisci(utente))
+                throw new UtenteException("Inserimento fallito");
+            if(!stub.inserisci(account))
+                throw new AccountException("Inserimento fallito");
+            //Decidere un messaggio di notifica
+            List<Utente> ut = new ArrayList<Utente>();
+            ut.add(utente);
+            //Messaggio m = new NotificaMail(ut, "iscrizione", "Registrazione andata a buon fine");
+            //if(!inviaMail(mess))
+              //  throw new AccountException("Invio mail fallito");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+        return true;
+  
+    }
+    
+    
     /**
      * crea un account, verificando che non ce ne sia giù uno esistente con il codice fiscale inserito
      * @param codice fiscale, username, dati generici dell'utente
@@ -116,9 +175,9 @@ public class ControlIscrizione {
             if(!stub.inserisci(account))
                 throw new AccountException("Inserimento fallito");
             //Decidere un messaggio di notifica
-            Messaggio mess = NotificaMail(Utente, "iscrizione", "Registrazione andata a buon fine")
-            if(!inviaMail(mess))
-                throw new AccountException("Invio mail fallito");
+            //Messaggio mess = NotificaMail(Utente, "iscrizione", "Registrazione andata a buon fine")
+            //if(!inviaMail(mess))
+              //  throw new AccountException("Invio mail fallito");
         }
         finally{
             db.chiudiConnessione();
@@ -358,16 +417,16 @@ public class ControlIscrizione {
      * @throws InserimentoDatiException 
      */
     public boolean inserisciGenitore(Date dataNascita, String nome, String cognome,
-    String codiceFiscale, String email, String comuneNascita,
-    String telefono, String cittadinanza, String indirizzoResidenza,
-    String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
-    String provinciaResidenza, String indirizzoDomicilio,
-    String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-    String provinciaDomicilio, List<Bambino> figli,
-    List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
-    String rapportiAteneoSalerno, String rapportiComuneFisciano,
-    String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
-    String rapportoParentela) throws GenitoreException, DBConnectionException, InserimentoDatiException{
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, List<Bambino> figli,
+            List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
+            String rapportiAteneoSalerno, String rapportiComuneFisciano,
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            String rapportoParentela, String condizioneLavorativa, String tipoContratto) throws GenitoreException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
         StubGenitore stub = new StubGenitore(db);
@@ -394,7 +453,7 @@ public class ControlIscrizione {
                 capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio,
                 capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, 
                 dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano,
-                statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela);
+                statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela, condizioneLavorativa, tipoContratto);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");

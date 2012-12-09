@@ -25,6 +25,7 @@ import java.util.List;
 import org.junit.Test;
 
 import atsilo.application.ControlIscrizione;
+import atsilo.entity.Account;
 import atsilo.entity.Assenza;
 import atsilo.entity.Bambino;
 import atsilo.entity.Genitore;
@@ -48,66 +49,36 @@ import atsilo.exception.UtenteException;
 public class ControlIscrizioneTest {
     
     ControlIscrizione control = new  ControlIscrizione();
-    //TODO Oggetti nulli?
-    Genitore g;
-    Genitore g2;
-    Bambino b;
+    Genitore g = null;
+    Genitore g2= null;
+    Bambino b= null;
+    Account a = null;
 
     
-    @Test
-    //creazione account normale
+    
+    @Test (expected=AccountException.class)
+    //creazione account normale (che però esiste già)
     public void creaAccountTest() throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException {
         assertTrue(control.creaAccount("MarioB", new Date(1975, 11, 11), "Mario", "Bianchi", "MSCGNN75H43H654K", "marioB@hotmail.it",
                 "Salerno", "0895245687", "italiana", "Via Roma", "56", "85800", "Salerno", "Salerno", "Via Roma",
             "56", "85800", "Salerno", "Salerno"));  
     }
-    
-    @Test
-    //creazione account con valori null
-    public void creaAccountTest2() throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException {
-        assertTrue(control.creaAccount("MarioB", new Date(1975, 11, 11), "Mario", "Bianchi", "MSCGNN75H43H654K", "marioB@hotmail.it",
-                "Salerno", "0895245687", "italiana", null, "56", "85800", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno"));  
-    }
 
-    @Test
-    //creazione account con codice fiscale non valido (15 caratteri)
-    public void creaAccountTest3() throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException {
-        assertTrue(control.creaAccount("MarioB", new Date(1975, 11, 11), "Mario", "Bianchi", "AMSCGNN75H43H654K", "marioB@hotmail.it",
-                "Salerno", "0895245687", "italiana","Via Roma", "56", "85800", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno"));  
-    }
-    
-    @Test
-    //creazione account con mail non valida
-    public void creaAccountTest4() throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException {
-        assertTrue(control.creaAccount("MarioB", new Date(1975, 11, 11), "Mario", "Bianchi", "AMSCG75H43H654K", "marioBhotmail.it",
-                "Salerno", "0895245687", "italiana","Via Roma", "56", "85800", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno"));  
-    }
-    
-    @Test
-    //creazione account con cap non valido 
-    public void creaAccountTest5() throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException {
-        assertTrue(control.creaAccount("MarioB", new Date(1975, 11, 11), "Mario", "Bianchi", "AMSCG75H43H654K", "marioB@hotmail.it",
-                "Salerno", "0895245687", "italiana","Via Roma", "56", "858005", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno"));  
-    }
     
     @Test
     //visualizzazione account normale
     public void getAccountTest() throws AccountException, SQLException, DBConnectionException, InserimentoDatiException {
-        assertNotNull(control.getAccount("AMSCG75H43H654K"));  
+        assertNotNull(control.getAccount("AMSCG75H43H654KX"));  
     }
     
-    @Test
+    @Test (expected=InserimentoDatiException.class)
     //visualizzazione account con codice fiscale non valido
     public void getAccountTest2() throws AccountException, SQLException, DBConnectionException, InserimentoDatiException {
-        assertNotNull(control.getAccount("AMS5CG75H43H654K"));  
+        a = control.getAccount("AMS5CG75H3H654K");  
     }
     
     @Test
-    //visualizzazione account con codice fiscale non valido
+    //visualizzazione domanda iscrizione
     public void getDomandaTest() throws DomandaIscrizioneException, DBConnectionException {
         assertNotNull(control.getDomanda(12));  
     }
@@ -115,25 +86,25 @@ public class ControlIscrizioneTest {
     @Test
     //inserimento iscritto normale
     public void inserisciIscrittoTest() throws BambinoException, DBConnectionException, InserimentoDatiException  {
-        assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTHG75H43H654K", 
+        assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTHG75H43H654LK", 
                 "Salerno", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
             "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null));  
     }
     
-    @Test
+    @Test (expected=InserimentoDatiException.class)
     //inserimento iscritto con codice fiscale non valido
     public void inserisciIscrittoTest1() throws BambinoException, DBConnectionException, InserimentoDatiException  {
-        assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTGHG75H43H654K", 
+        control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GTGHG43H654K", 
                 "Salerno", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null));  
+            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null);  
     }
-    
-    @Test
+       
+    @Test (expected=InserimentoDatiException.class)
     //inserimento iscritto con cap non valido
     public void inserisciIscrittoTest2() throws BambinoException, DBConnectionException, InserimentoDatiException  {
-        assertTrue(control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTHG75H43H654K", 
+        control.inserisciIscritto(new Date(1975, 11, 11), "Marco", "Bianchi", "GFTHG75H43H654K", 
                 "Salerno", "italiana","Via Roma", "56", "8505", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null));  
+            "56", "85800", "Salerno", "Salerno", "Lattanti", 1, g, g2, null);  
     }
     
     @Test
@@ -153,39 +124,43 @@ public class ControlIscrizioneTest {
     @Test
     //cancellazione iscritto normale
     public void eliminaIscrittoTest() throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException  {
-        assertNotNull(control.eliminaIscritto("AMSCG75H43H654K"));             
+        assertNotNull(control.eliminaIscritto("AMSCG75H43H654LK"));             
     }
     
     @Test
     //inserimento genitore normale
     public void inserisciGenitoreTest() throws GenitoreException, DBConnectionException, InserimentoDatiException {
-        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "GFTHG75H43H654K", "marioB@hotmail.it",
+        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "FTLLHG75H43H654K", "marioB@hotmail.it",
                 "Salerno", "0896524587", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "residente", "pensione", null, null, "categoria", "papà"));  
+            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "dipendente", "residente", "pensione", null,
+            "categoria", "papà", null, null));  
     }
     
-    @Test
+    @Test (expected=InserimentoDatiException.class)
     //inserimento genitore con codice fiscale non valido
     public void inserisciGenitoreTest2() throws GenitoreException, DBConnectionException, InserimentoDatiException {
-        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "FTHG75H43H654K", "marioB@hotmail.it",
+        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "FTHG73H654K", "marioB@hotmail.it",
                 "Salerno", "0896524587", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "residente", "pensione", null, null, "categoria", "papà"));  
+            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "dipendente", "residente", "pensione", null,
+            "categoria", "papà", null, null));  
     }
     
-    @Test
+    @Test (expected=InserimentoDatiException.class)
     //inserimento genitore con mail non valida
     public void inserisciGenitoreTest3() throws GenitoreException, DBConnectionException, InserimentoDatiException {
-        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "GFTHG75H43H654K", "marioB@hotmailit",
+        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "FTLLHG75H43H654K", "marioBhotmail.it",
                 "Salerno", "0896524587", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "residente", "pensione", null, null, "categoria", "papà"));  
+            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "dipendente", "residente", "pensione", null,
+            "categoria", "papà", null, null));  
     }
     
-    @Test
+    @Test (expected=InserimentoDatiException.class)
     //inserimento genitore con cap non valido
     public void inserisciGenitoreTest4() throws GenitoreException, DBConnectionException, InserimentoDatiException {
-        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "GFTHG75H43H654K", "marioB@hotmail.it",
-                "Salerno", "0896524587", "italiana","Via Roma", "56", "85805", "Salerno", "Salerno", "Via Roma",
-            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "residente", "pensione", null, null, "categoria", "papà"));  
+        assertTrue(control.inserisciGenitore(new Date(1975, 11, 11), "Mario", "Bianchi", "FTLLHG75H43H654K", "marioB@hotmail.it",
+                "Salerno", "0896524587", "italiana","Via Roma", "56", "8505", "Salerno", "Salerno", "Via Roma",
+            "56", "85800", "Salerno", "Salerno", null, null, "Altro", "Unisa", "dipendente", "residente", "pensione", null,
+            "categoria", "papà", null, null));  
     }
     
     @Test

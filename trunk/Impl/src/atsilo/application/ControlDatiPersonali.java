@@ -149,15 +149,26 @@ public class ControlDatiPersonali {
      * @param id del certificato di iscrizione e valori booleani dei certificati da inserire
      * @return valore booleano
      * @throws DBConnectionException 
+     * @throws BambinoException 
+     * @throws InserimentoDatiException 
      * @throws DomandaIScrizioneException
      */
-    public boolean modificaCertificatiIscrizione(int id, String vaccinazioni, String malattie, String privacy) throws DomandaIscrizioneException, DBConnectionException{
+    public boolean completaIscrizione(String cf, String vaccinazioni, String malattie, String privacy) throws DomandaIscrizioneException, DBConnectionException, BambinoException, InserimentoDatiException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        StubBambino stub2 = new StubBambino(db);
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(cf.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
+            Bambino b = stub2.ricercaBambino(cf);
+            if(b == null)
+                throw new BambinoException("Bambino non trovato");
+            int id = stub.ricercaDomandaDaBambino(b);
             DomandaIscrizione domandaIscrizioneDaModificare = stub.ricercaDomandaPerId(id);
             if(domandaIscrizioneDaModificare == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
@@ -279,6 +290,62 @@ public class ControlDatiPersonali {
         }
     }
        
+    
+    /**
+    * Restituisce il cf dei bambini associati all account con username in input
+    * @return
+     * @throws BambinoException 
+     * @throws DBConnectionException 
+    */
+    public List<String> getCfBambini(String username) throws BambinoException, DBConnectionException{
+        Database db = new Database();
+        StubBambino stub = new StubBambino(db);
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{        
+            List<String> cf= stub.ricercaCfBambiniPerUsername(username);
+            if(cf.isEmpty())
+                throw new BambinoException("Bambini non trovati");    
+            return cf;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+    }
+    
+    
+    /**
+     * 
+     * @param username username dell'account di cui si desiderano i dati dell iscriizone
+     * @param cfBambino codice fiscale del bambino di cui si vogliono i dati della domanda di iscrizione
+     *        
+     * @return dati domanda di iscrizione: se cfBambino è null restituire solo i dati collegati all'account (Dati genitori e situazione reddituale, senza i dati dei bambini e la situazione familiare)
+     *                                     se cfBambino diverso da null restituire tutti i dati compresi quelli del bambino e la sitauzione familiare
+     * @throws DomandaIscrizioneException 
+     * @throws DBConnectionException 
+     * @throws InserimentoDatiException 
+     */
+    public DomandaIscrizione getDatiIscrizione(String username,String cfBambino) throws DomandaIscrizioneException, DBConnectionException, InserimentoDatiException{
+        Database db = new Database();
+        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        
+      //controllo sul codice fiscale che deve essere a 16 cifre
+        if(cfBambino.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{          
+            DomandaIscrizione d = stub.ricercaDomandaDaUsernameECfBambino(username, cfBambino);
+            if(d == null)
+                throw new DomandaIscrizioneException("Domanda non trovati");    
+            return d;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+    }
     
     /**
      * Gets the single istance of this class
