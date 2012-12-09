@@ -17,12 +17,8 @@
 package atsilo.stub.storage;
 
 import java.sql.SQLException;
-import java.util.Iterator;
-import java.util.List;
 
-import atsilo.entity.Account;
 import atsilo.entity.Bando;
-import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
 
 /**

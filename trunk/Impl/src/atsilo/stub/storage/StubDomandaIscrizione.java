@@ -32,8 +32,6 @@ import atsilo.storage.Database;
 public class StubDomandaIscrizione {
     private DomandaIscrizione domanda;
     private List<DomandaIscrizione> listadomande;
-    private Database database;
-    
     
     /**
      * @param db
@@ -42,7 +40,6 @@ public class StubDomandaIscrizione {
         domanda = new DomandaIscrizione();
         listadomande = new ArrayList<DomandaIscrizione>();
         listadomande.add(domanda);
-        database = db;
     }
     
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException {
