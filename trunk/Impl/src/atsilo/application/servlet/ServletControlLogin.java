@@ -94,6 +94,10 @@ public class ServletControlLogin extends HttpServlet {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "Errore di connessione al database", e);
                 response.setHeader("Location", login_error);   
+            } catch (NullPointerException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "Username non inserito", e);
+                response.setHeader("Location", login_error);   
             }
                 
                 
