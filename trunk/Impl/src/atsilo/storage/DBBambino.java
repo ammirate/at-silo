@@ -139,6 +139,10 @@ public class DBBambino extends DBBeans<Bambino> {
             gen.setCodiceFiscale(g);
             b.setGenitore(gen);
         }
+        else
+        {
+            p=null;
+        }
         r.close();
         return b;
     } 

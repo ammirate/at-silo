@@ -117,22 +117,22 @@ public class DBAccount extends DBBeans<Account>
                 u.setCodiceFiscale(r.getString("genitore"));
                 
             }
-            if(r.getString("psico_pedagogo")!=null)
+            else if(r.getString("psico_pedagogo")!=null)
             {
                 u=new Psicopedagogo();
                 u.setCodiceFiscale(r.getString("psico_pedagogo"));
             }
-            if(r.getString("tirocinante")!=null)
+            else if(r.getString("tirocinante")!=null)
             {
                 u=new Tirocinante();
                 u.setCodiceFiscale(r.getString("tirocinante"));
             }
-            if(r.getString("responsabile_questionario")!=null)
+            else if(r.getString("responsabile_questionario")!=null)
             {
                 u=new ResponsabileQuestionario();
                 u.setCodiceFiscale(r.getString("responsabile_questionario"));
             }
-            if(r.getString("personale_asilo")!=null)
+            else if(r.getString("personale_asilo")!=null)
             {
                 u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("personale_asilo"));

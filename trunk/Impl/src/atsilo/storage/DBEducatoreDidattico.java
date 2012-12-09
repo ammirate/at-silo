@@ -174,6 +174,10 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
 
             
         }
+        else
+        {
+            p=null;
+        }
         r.close();
         return p;
     }

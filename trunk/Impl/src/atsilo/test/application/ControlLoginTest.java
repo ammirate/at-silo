@@ -43,7 +43,7 @@ public class ControlLoginTest {
         
         ControlLogin control=ControlLogin.getInstance();
         Account a=new Account();
-        a=control.getValoreLogin("a.damelia", "alfonsoda","psicopedagogo");
+        a=control.getValoreLogin("a.damelia", "alfonsoda","tirocinante");
         System.out.println("Username : = "+a.getUserName());
         System.out.println("Password : = "+a.getPassWord());
         System.out.println("Tipo utenza:"+a.getOwner().getClass().getName());

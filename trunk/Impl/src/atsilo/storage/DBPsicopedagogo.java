@@ -174,6 +174,10 @@ public class DBPsicopedagogo extends DBBeans {
 
             
         }
+        else
+        {
+            p=null;
+        }
         r.close();
         return p;
     }
