@@ -162,6 +162,10 @@ public class DBPersonaleAsilo extends DBBeans {
             p.setComuneDomicilio(r.getString("comune_domicilio"));
             p.setProvinciaDomicilio(r.getString("provincia_domicilio"));   
         }
+        else
+        {
+            p=null;
+        }
         r.close();
         return p;
     }

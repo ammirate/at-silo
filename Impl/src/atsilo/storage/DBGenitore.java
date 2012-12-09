@@ -201,6 +201,10 @@ public class DBGenitore extends DBBeans {
             p.setTipoContratto(r.getString("tipo_contratto"));
 
         }
+        else
+        {
+            p=null;
+        }
         r.close();
         return p;
     }

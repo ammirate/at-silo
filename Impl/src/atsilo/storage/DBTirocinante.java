@@ -188,6 +188,10 @@ public class DBTirocinante extends DBBeans {
             p.setTutorEsterno(r.getString("tutor_esterno"));
             
         }
+        else
+        {
+            p=null;
+        }
         r.close();
         return p;
     }
