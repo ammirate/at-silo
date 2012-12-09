@@ -50,7 +50,10 @@ if (!tipologia.equals("genitore") )
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Pagamenti</b></td>
 </tr>
 <tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_pagamenti.html">Storico Pagamenti</a></td>
+<tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_pagamenti.jsp">Storico Pagamenti</a></td>
+
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="fattura_mensile.jsp">Fattura Mensile</a></td>
@@ -77,6 +80,10 @@ if (!tipologia.equals("genitore") )
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_pasti.jsp">Modifica Pasti</a></td>
 </tr>
 <tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.html">Storico Attivit&agrave; </a></td>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.jsp">Storico Attivit&agrave;</a></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_questionari.jsp?type=genitore&cf=1">Compila Questionari </a></td>
 </tr>
 </tbody></table>
