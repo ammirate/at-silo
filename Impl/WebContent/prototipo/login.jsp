@@ -94,6 +94,13 @@
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
+<%
+	if ((request.getParameter("successo")) != null) {
+		if (request.getParameter("successo").equals("failed")) {
+			out.print("<script type=text/javascript>alert('Controlla le credenziali di accesso')</script>");
+		}
+	}
+%>	
 <div id="formLogin">
  <form id="login" name="login" method="post" action="http://localhost:8080/Atsilo/ServletControlLogin">
   <p>
