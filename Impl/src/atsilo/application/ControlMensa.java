@@ -41,10 +41,25 @@ public class ControlMensa {
     public static final ControlMensa getInstance(){
         return control;
     }
-    public boolean inserisciPianoPasto(Servizio s, String pianopasto){
-        return false;
+    public boolean inserisciServizio(int id, String orarioInizio, String orarioFine,
+            String pianoPasto, String bambino, int orarioUtente)throws DBConnectionException {
+            
+            Database db = new Database();
+            if (!db.apriConnessione()) {
+                throw new DBConnectionException("Connessione Fallita");
+            }
+            try {
+                    Servizio servizio = new Servizio(id, orarioInizio, orarioFine,
+                            pianoPasto, bambino, orarioUtente);
+                    dbServizio.inserisci(servizio);
+                    return true;
+            } finally {
+                db.chiudiConnessione();
+            }
+        }
         
-    }
+        
+    
 
     public boolean modificaPianoPasto(Servizio s, String pianopasto)throws DBConnectionException {
         
@@ -74,14 +89,24 @@ public class ControlMensa {
             db.chiudiConnessione();
         }
     }
-    {
+   
+    public boolean eliminaPianoPasto(Servizio s) throws DBConnectionException {
         
+        Database db = new Database();
+        if (!db.apriConnessione()) {
+            throw new DBConnectionException("Connessione Fallita");
+        }
+        try {      
+                dbServizio.delete(s);
+                return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+   
        
-    }
-    public boolean eliminaPianoPasto(Servizio s){
-        return false;
         
-    }
+    
 
     public String ricercaPianoPasto(Servizio s){
         return null;
