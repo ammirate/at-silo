@@ -3,7 +3,7 @@
  * Copyleft
  * @author Angelo SCafuro
  */
-package test.storage;
+package atsilo.test.storage;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

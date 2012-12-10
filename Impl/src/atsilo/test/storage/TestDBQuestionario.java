@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.test.storage;
 
 
 //testate DBCompilaQuestionario,DBDomandaQuestionario,DBQuestionario,DBCampoDomandaQuestionario

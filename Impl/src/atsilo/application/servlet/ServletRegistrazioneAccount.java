@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import test.storage.TestDBBeans;
 
 import atsilo.entity.Account;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.GenitoreException;
 import atsilo.stub.application.StubControlDatiPersonali;
+import atsilo.test.storage.TestDBBeans;
 
 /*
  *-----------------------------------------------------------------

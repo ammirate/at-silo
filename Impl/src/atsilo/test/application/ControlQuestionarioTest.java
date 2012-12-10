@@ -5,10 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import test.storage.StubCampoDomandaQuestionario;
-import test.storage.StubDomandaQuestionario;
-import test.storage.StubQuestionario;
-import test.storage.StubRispostaQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.DomandaQuestionario;
@@ -25,6 +21,10 @@ import atsilo.storage.DBQuestionario;
 import atsilo.storage.DBRispostaQuestionario;
 import atsilo.storage.Database;
 import atsilo.stub.application.StubGenitore;
+import atsilo.test.storage.StubCampoDomandaQuestionario;
+import atsilo.test.storage.StubDomandaQuestionario;
+import atsilo.test.storage.StubQuestionario;
+import atsilo.test.storage.StubRispostaQuestionario;
 
 /**
  * Class that control and manages a questionnaire

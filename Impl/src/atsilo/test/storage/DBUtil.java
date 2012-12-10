@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.test.storage;
 
 import java.io.File;
 import java.io.FileNotFoundException;

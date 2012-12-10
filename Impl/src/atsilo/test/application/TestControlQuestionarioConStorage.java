@@ -27,7 +27,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import test.storage.DBUtil;
 import atsilo.application.ControlQuestionario;
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.DomandaQuestionario;
@@ -38,6 +37,7 @@ import atsilo.exception.QuestionarioException;
 import atsilo.storage.DBDomandaQuestionario;
 import atsilo.storage.DBQuestionario;
 import atsilo.storage.Database;
+import atsilo.test.storage.DBUtil;
 
 /**
  * Classe TestControlQuestionarioConStorage
