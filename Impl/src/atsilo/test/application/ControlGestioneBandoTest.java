@@ -27,11 +27,13 @@ import org.junit.Test;
 
 
 import atsilo.application.ControlGestioneBando;
+import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
+import atsilo.stub.storage.StubBando;
 import atsilo.stub.storage.StubDomandaIscrizione;
 
 
@@ -74,25 +76,26 @@ public class ControlGestioneBandoTest {
         domanda.setDataPresentazione(dataPresentazione);
         domanda.setId(12);
         dbDomande.inserisciDomanda(domanda);
-        control.inserisciPunteggio(domanda, 54);  
+        control.inserisciPunteggio(domanda, 54);
+        domanda = dbDomande.ricercaDomandaDaId(domanda.getId());
         
         assertEquals(54,domanda.getPunteggio());
         
     }
     
-    /*
+    
     /**
      * Test method for {@link atsilo.application.ControlGestioneBando#inserisciIntervalloBando(java.lang.String, java.lang.String)}.
      * @throws BandoException 
      * @throws DBConnectionException 
-     
+     */
     @Test
     public final void testInserisciIntervalloBando() throws DBConnectionException, BandoException 
     {
         StubBando dbBando=new StubBando(db);
         Bando bando=new Bando();
-        bando.setDataInizio("ciao");
-        bando.setDataFine("bye");
+        bando.setDataFineBando("ciao");
+        bando.setDataFineRinuncia("bye");
         dbBando.inserisci(bando);
         System.out.println("l'id è questo"+bando.getiD());
         control.inserisciIntervalloBando("ciao", "fine");
