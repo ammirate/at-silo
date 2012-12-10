@@ -22,4 +22,21 @@ public class LoginException extends Exception{
     public LoginException(String s){
         super(s);
     }
+
+    /**
+     * @param message
+     * @param cause
+     */
+    public LoginException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    /**
+     * @param cause
+     */
+    public LoginException(Throwable cause) {
+        super(cause);
+    }
+    
+    
 }

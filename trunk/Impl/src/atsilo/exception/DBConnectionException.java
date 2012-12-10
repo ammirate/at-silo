@@ -22,4 +22,14 @@ public class DBConnectionException extends Exception{
     public DBConnectionException(String s){
         super(s);
     }
+
+    /**
+     * @param message
+     * @param cause
+     */
+    public DBConnectionException(String message, Throwable cause) {
+        super(message, cause);
+    }
+    
+    
 }
