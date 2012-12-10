@@ -25,12 +25,12 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
 
 /**
- * Classe StubDomandaIscrizione <Descrizione classe>
+ * Classe Stub di DBDomandaIscrizione <Descrizione classe>
  * 
  * @author Frank
  * 
  */
-public class StubDomandaIscrizione {
+public class DBDomandaIscrizione {
     private static ArrayList<DomandaIscrizione> listadomande = new ArrayList<DomandaIscrizione>();
     static {
         DomandaIscrizione d = new DomandaIscrizione();
@@ -41,7 +41,7 @@ public class StubDomandaIscrizione {
     /**
      * @param db
      */
-    public StubDomandaIscrizione(Database db) {
+    public DBDomandaIscrizione(Database db) {
     }
     
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException {
