@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.test.storage;
 
 import java.sql.SQLException;
 import java.util.List;

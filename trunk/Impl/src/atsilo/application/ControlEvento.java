@@ -8,13 +8,13 @@ import atsilo.exception.DBConnectionException;
 import atsilo.exception.EventoException;
 import atsilo.exception.RegistroException;
 import atsilo.storage.Database;
+import atsilo.test.storage.StubEvento;
+import atsilo.test.storage.StubRegistro;
 
 import java.sql.Date;
 
 import java.util.List;
 
-import test.storage.StubEvento;
-import test.storage.StubRegistro;
 
 /*
  *-----------------------------------------------------------------

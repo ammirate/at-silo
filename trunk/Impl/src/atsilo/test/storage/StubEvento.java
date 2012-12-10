@@ -14,7 +14,7 @@
  *-----------------------------------------------------------------
  */
 
-package test.storage;
+package atsilo.test.storage;
 
 import java.sql.Date;
 import java.util.List;

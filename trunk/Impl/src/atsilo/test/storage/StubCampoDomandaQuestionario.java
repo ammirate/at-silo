@@ -1,4 +1,4 @@
-package test.storage;
+package atsilo.test.storage;
 
 import atsilo.entity.CampoDomandaQuestionario;
 
