@@ -22,18 +22,17 @@ import atsilo.entity.Bando;
 import atsilo.storage.Database;
 
 /**
- * Classe StubBando <Descrizione classe>
+ * Classe Stub di DBBando <Descrizione classe>
  * 
  * @author Frank
  * 
  */
-public class StubBando {
-    private Bando bando;
+public class DBBando {
+    private static Bando bando=new Bando();
     
     
-    public StubBando(Database db) 
+    public DBBando(Database db) 
     {
-        bando =new Bando();  
     }
 
 
@@ -41,9 +40,9 @@ public class StubBando {
      * @param bando
      * @return
      */
-    public boolean inserisciBando(Bando bando) throws SQLException
+    public boolean inserisci(Bando nuovo) throws SQLException
     {
-        this.bando=bando;
+        bando=nuovo;
         return true;
     }
 
@@ -70,9 +69,9 @@ public class StubBando {
      */
     public void replace(Bando darimpazziare ,Bando rimpiazzo)
     {
-        this.bando=rimpiazzo;
+       bando=rimpiazzo;
     }
-    public Bando getBando() throws SQLException 
+    public Bando getBAndo() throws SQLException 
     {
         return bando;
     }
