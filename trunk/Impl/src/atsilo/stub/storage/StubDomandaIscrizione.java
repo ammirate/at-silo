@@ -18,6 +18,7 @@ package atsilo.stub.storage;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import atsilo.entity.DomandaIscrizione;
@@ -30,16 +31,17 @@ import atsilo.storage.Database;
  * 
  */
 public class StubDomandaIscrizione {
-    private DomandaIscrizione domanda;
-    private List<DomandaIscrizione> listadomande;
+    private static ArrayList<DomandaIscrizione> listadomande = new ArrayList<DomandaIscrizione>();
+    static {
+        DomandaIscrizione d = new DomandaIscrizione();
+        listadomande.add(d);
+    }
+    
     
     /**
      * @param db
      */
     public StubDomandaIscrizione(Database db) {
-        domanda = new DomandaIscrizione();
-        listadomande = new ArrayList<DomandaIscrizione>();
-        listadomande.add(domanda);
     }
     
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException {
@@ -53,17 +55,17 @@ public class StubDomandaIscrizione {
         return null;
     }
     
-    public void replace(DomandaIscrizione iscrizione,DomandaIscrizione domandaDaModificare) throws SQLException {
-        for (DomandaIscrizione domandatrovata : listadomande) {
+    public void replace(DomandaIscrizione iscrizione,
+            DomandaIscrizione domandaDaModificare) throws SQLException {
+        for (int k=0;k<listadomande.size();k++) {
             {
-                if (domandatrovata.getId() == iscrizione.getId())
-                    domandatrovata=domandaDaModificare;
-                    
+                if (listadomande.get(k).getId() == iscrizione.getId())
+                    listadomande.set(k,domandaDaModificare);
             }
         }
         
     }
-
+    
     /**
      * @param domanda2
      */
