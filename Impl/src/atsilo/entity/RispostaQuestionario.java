@@ -39,7 +39,13 @@ public class RispostaQuestionario {
         this.idDomanda = idDomanda;
         this.CFgenitore = CodFiscGenitore;
     }
-
+    public RispostaQuestionario( String valore,int idDomanda, String CodFiscGenitore) {
+        super();
+        this.id = id;
+        this.valore = valore;
+        this.idDomanda = idDomanda;
+        this.CFgenitore = CodFiscGenitore;
+    }
     /**
      * Metodo che prende il campo Id
      * @param id il parametro inserito
