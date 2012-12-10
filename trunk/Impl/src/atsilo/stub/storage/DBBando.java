@@ -27,6 +27,7 @@ import atsilo.storage.Database;
  * @author Frank
  * 
  */
+
 public class DBBando {
     private static Bando bando=new Bando();
     
@@ -45,28 +46,6 @@ public class DBBando {
         bando=nuovo;
         return true;
     }
-
-
-    public boolean modificaPostiDisponibili( int postiDisponibili)throws SQLException
-    {
-        bando.setPostiDisponibili(postiDisponibili);
-        return true;
-    }
-    public boolean modificaintervalli (String dataInizioBando, String dataFineBando, String dataInizioPresentazioneRinuncia, 
-            String dataFinePresentazioneRinuncia, String dataFineRinuncia)throws SQLException
-    {
-
-        bando.setDataInizioBando(dataInizioBando);
-        bando.setDataFineBando(dataFineBando);
-        bando.setDataInizioPresentazioneRinuncia(dataInizioPresentazioneRinuncia);
-        bando.setDataFinePresentazioneRinuncia(dataFinePresentazioneRinuncia);
-        bando.setDataFineRinuncia(dataFineRinuncia);
-        return true;
-    }
-    /**
-     * @param getiD
-     * @return
-     */
     public void replace(Bando darimpazziare ,Bando rimpiazzo)
     {
        bando=rimpiazzo;
