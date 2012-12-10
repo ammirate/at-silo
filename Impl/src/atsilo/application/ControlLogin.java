@@ -54,7 +54,7 @@ public class ControlLogin {
     }
     
     /**
-     * Classe che prende in input username e password e controlla se è presente
+     * Classe che prende in input username e password e controlla se ï¿½ presente
      * nel database in caso positivo restituisce account appartenente in caso
      * negativo lancia un'eccezione
      * 
@@ -150,7 +150,7 @@ public class ControlLogin {
                 
             } catch (SQLException e) {
                 
-                throw new DBConnectionException("Errore nella connessione durante la procedura di login");
+                throw new DBConnectionException("Errore nella connessione durante la procedura di login", e);
             }
         } finally {
             /*
