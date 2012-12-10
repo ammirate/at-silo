@@ -85,6 +85,9 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	        }
 	        try {
                 q.compilaQuestionario(quest.getId(), listR, codfis);
+                for(int f = 0; f<listR.size(); f++) {
+                  System.out.println(listR.get(f).getValore());
+                }
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
 //                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
