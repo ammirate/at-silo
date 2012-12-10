@@ -7,7 +7,7 @@ import atsilo.entity.Servizio;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBServizio;
 import atsilo.storage.Database;
-import atsilo.stub.storage.StubBando;
+import atsilo.stub.storage.DBBando;
 
 //TODO scrivere la javadoc
 

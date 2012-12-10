@@ -20,8 +20,8 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
-import atsilo.stub.storage.StubBando;
-import atsilo.stub.storage.StubDomandaIscrizione;
+import atsilo.stub.storage.DBBando;
+import atsilo.stub.storage.DBDomandaIscrizione;
 import java.sql.SQLException;
 
 
@@ -41,8 +41,8 @@ import java.sql.SQLException;
 
 public class ControlGestioneBando {
     private static final ControlGestioneBando INSTANCE = new ControlGestioneBando();
-    private StubBando dbBando;
-    private StubDomandaIscrizione dbDomandaIscrizione;
+    private DBBando dbBando;
+    private DBDomandaIscrizione dbDomandaIscrizione;
     
     
     private ControlGestioneBando() {
@@ -69,35 +69,60 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            dbBando = new StubBando(db);
-            dbDomandaIscrizione = new StubDomandaIscrizione(db);
+            dbBando = new DBBando(db);
+            dbDomandaIscrizione = new DBDomandaIscrizione(db);
             
             DomandaIscrizione domandaDaModificare = new DomandaIscrizione();
             try {
-                domandaDaModificare = new DomandaIscrizione(
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getDataPresentazione(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getId(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getPunteggio(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getPosizione(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitore(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getBambino(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getStatoDomanda(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCertificatoMalattie(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCertificatoVaccinazioni(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCertificatoPrivacy(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getBambinoDisabile(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreInvalido(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreSolo(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreVedovo(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreNubile(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getGenitoreSeparato(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getFiglioNonRiconosciuto(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getAffidoEsclusivo(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getAltriComponentiDisabili(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getCondizioniCalcoloPunteggio(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getIsee(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getServizio(), 
-                        dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId()).getStato_convalidazione());
+                domandaDaModificare = new DomandaIscrizione(dbDomandaIscrizione
+                        .ricercaDomandaDaId(iscrizione.getId())
+                        .getDataPresentazione(), dbDomandaIscrizione
+                        .ricercaDomandaDaId(iscrizione.getId()).getId(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getPunteggio(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getPosizione(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getGenitore(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getBambino(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getStatoDomanda(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getCertificatoMalattie(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId())
+                                .getCertificatoVaccinazioni(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getCertificatoPrivacy(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getBambinoDisabile(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getGenitoreInvalido(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getGenitoreSolo(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getGenitoreVedovo(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getGenitoreNubile(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getGenitoreSeparato(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getFiglioNonRiconosciuto(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getAffidoEsclusivo(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId())
+                                .getAltriComponentiDisabili(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId())
+                                .getCondizioniCalcoloPunteggio(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getIsee(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getServizio(),
+                        dbDomandaIscrizione.ricercaDomandaDaId(
+                                iscrizione.getId()).getStato_convalidazione());
             } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
             }
@@ -127,7 +152,7 @@ public class ControlGestioneBando {
                     dataFinePresentazioneRinuncia, dataFineRinuncia,
                     postiDisponibili, path);
             try {
-                dbBando.inserisciBando(bando);
+                dbBando.inserisci(bando);
             } catch (SQLException e) {
                 throw new DBConnectionException("connessione fallita");
             }
@@ -137,36 +162,37 @@ public class ControlGestioneBando {
         }
     }
     
-    public boolean modificaintervalli(String dataInizioBando,
-            String dataFineBando, String dataInizioPresentazioneRinuncia,
-            String dataFinePresentazioneRinuncia, String dataFineRinuncia)
-            throws DBConnectionException {
+    public boolean modificaBando(String inizioBando, String fineBando,
+            String inizioPresentazione, String finePresentazione,
+            String fineRinuncia, int posti) {
         
         Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            try {
-                Bando bando = new Bando(dbBando.getBando().getiD(),
-                        dbBando.getBando().getDataInizioBando(),
-                        dbBando.getBando().getDataFineBando(), 
-                        dbBando.getBando().getDataInizioPresentazioneRinuncia(),
-                        dbBando.getBando().getDataFinePresentazioneRinuncia(),
-                        dbBando.getBando().getDataFineRinuncia(),
-                        dbBando.getBando().getPostiDisponibili(),
-                        dbBando.getBando().getPath());
+          
+            if(dbBando.getBAndo()==null)
+            {
+                Bando nuovo =new Bando(String inizioBando, String fineBando,
+                        String inizioPresentazione, String finePresentazione,
+            String fineRinuncia, int posti);
+                
+                Bando bando = new Bando(dbBando.getBAndo().getiD(), dbBando
+                        .getBAndo().getDataInizioBando(), dbBando.getBAndo()
+                        .getDataFineBando(), dbBando.getBAndo()
+                        .getDataInizioPresentazioneRinuncia(), dbBando
+                        .getBAndo().getDataFinePresentazioneRinuncia(), dbBando
+                        .getBAndo().getDataFineRinuncia(), dbBando.getBAndo()
+                        .getPostiDisponibili(), dbBando.getBAndo().getPath());
                 bando.setDataInizioBando(dataInizioBando);
                 bando.setDataFineBando(dataFineBando);
                 bando.setDataInizioPresentazioneRinuncia(dataInizioPresentazioneRinuncia);
                 bando.setDataFinePresentazioneRinuncia(dataFinePresentazioneRinuncia);
                 bando.setDataFineRinuncia(dataFineRinuncia);
                 
-                dbBando.replace(dbBando.getBando(), bando);
+                dbBando.replace(dbBando.getBAndo(), bando);
                 
-            } catch (SQLException e) {
-                throw new DBConnectionException("Connessione Fallita");
-            }
             return true;
         } finally {
             db.chiudiConnessione();
@@ -182,16 +208,15 @@ public class ControlGestioneBando {
         }
         try {
             try {
-                Bando bando = new Bando(dbBando.getBando().getiD(),
-                        dbBando.getBando().getDataInizioBando(),
-                        dbBando.getBando().getDataFineBando(), 
-                        dbBando.getBando().getDataInizioPresentazioneRinuncia(),
-                        dbBando.getBando().getDataFinePresentazioneRinuncia(),
-                        dbBando.getBando().getDataFineRinuncia(),
-                        dbBando.getBando().getPostiDisponibili(),
-                        dbBando.getBando().getPath());
+                Bando bando = new Bando(dbBando.getBAndo().getiD(), dbBando
+                        .getBAndo().getDataInizioBando(), dbBando.getBAndo()
+                        .getDataFineBando(), dbBando.getBAndo()
+                        .getDataInizioPresentazioneRinuncia(), dbBando
+                        .getBAndo().getDataFinePresentazioneRinuncia(), dbBando
+                        .getBAndo().getDataFineRinuncia(), dbBando.getBAndo()
+                        .getPostiDisponibili(), dbBando.getBAndo().getPath());
                 bando.setPostiDisponibili(postiDisponibili);
-                dbBando.replace(dbBando.getBando(), bando);
+                dbBando.replace(dbBando.getBAndo(), bando);
             } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
             }
