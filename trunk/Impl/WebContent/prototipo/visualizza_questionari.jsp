@@ -48,40 +48,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		
 	}
 	Questionario quest = null;
+	ControlQuestionario q = ControlQuestionario.getIstance();
+	quest = q.caricaQuestionarioDaCompilare(id, cf);
 	
-	Questionario quest1 = new Questionario("questa è una prova", "no", "linda è antipatica?", 10, new Date(10,10,2012),  new Date(10,10,2012));
-	Questionario quest2 = new Questionario("questa è una prova2", "no", "giulio è antipatico?", 12, new Date(10,10,2012),  new Date(10,10,2012));
-	List<Questionario> list = new ArrayList<Questionario>();
-	List<DomandaQuestionario> d1 = new ArrayList<DomandaQuestionario>();
-	List<CampoDomandaQuestionario> c1 = new ArrayList<CampoDomandaQuestionario>();
-	c1.add(new CampoDomandaQuestionario("checkbox","bene","bene",1 ));
-	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","malissimo","malissimo", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","non so","non so",1));
-	List<CampoDomandaQuestionario> c2 = new ArrayList<CampoDomandaQuestionario>();
-	c2.add(new CampoDomandaQuestionario("radio","bene","bene", 2));
-	c2.add(new CampoDomandaQuestionario("radio","male","male", 2));
-	c2.add(new CampoDomandaQuestionario("radio","malissimo","malissimo",2));
-	c2.add(new CampoDomandaQuestionario("radio","non so","non so",2));
-	d1.add(new DomandaQuestionario(1, quest1.getId(), "Come ti trovi con i pm", c1));
-	d1.add(new DomandaQuestionario(2, quest1.getId(), "Come li valuti i pm", c2));
-	quest2.setDomande(d1);
-	list.add(quest1);
-	list.add(quest2);
-	
-	/*ControlQuestionario q = null;
-	/q=q.getIstance();
-	List<Questionario> list = q.getAllQuestionari();
-	List<Questionario> list = new List<Questionario>();
-	list.get(0).getDomande().get(0); 
-	*/
-	for (int i = 0; i < list.size(); i++) {
-
-		if (list.get(i).getId() == id) {
-	quest = list.get(i);
-	break;
-		}
-	}
 	
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");

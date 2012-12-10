@@ -120,7 +120,7 @@
       <option value="educatore">Educatore</option>
       <option value="psicopedagogo">Psicopedagogo</option>
       <option value="delegato_scfm">Resp. Scienze Formazione</option>
-      <option value="delegato_rettore">Delegato del rettore</option>
+      <option value="responsabile_questionario">Responsabile del Questionario</option>
        <option value="direttore">Direttore</option>
     </select>
   </p>

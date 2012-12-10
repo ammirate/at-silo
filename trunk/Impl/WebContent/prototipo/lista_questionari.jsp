@@ -42,7 +42,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	boolean g = false;
 	String cf ="";
 	ControlQuestionario q = ControlQuestionario.getIstance();
-
+	
 	try {
 		if (request.getParameter("error").equals("1")) {
 	out.println("<script type='text/javascript'>alert('Errore: non puoi modificare questo questionario')</script>");
@@ -72,10 +72,12 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		}
 	} catch (Exception e) {
 	}
-	List<Questionario> list = q.getAllQuestionari();
+	List<Questionario> list = null;
 	if (g)
 		list = q.getQuestionariDaCompilare(cf);
-
+	else
+		list = q.getAllQuestionari();
+	
 	if (list.size() == 0)
 		out.println("<tr><td colspan=5>Non sono presenti Questionari in archivio.</td></tr>");
 	String datainizio = "";
