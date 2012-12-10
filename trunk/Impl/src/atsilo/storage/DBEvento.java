@@ -23,7 +23,7 @@ import java.util.Map;
  * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
-
+//TODO da implementare
 public class DBEvento extends DBBeans {
     
     
