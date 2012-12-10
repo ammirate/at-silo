@@ -1,3 +1,6 @@
+<%@page import="atsilo.application.*"%>
+<%@page import="atsilo.entity.*"%>
+
 <%
 //sessione gia' dichiarata nell'header
 //la variabile homepage sarÃ  il riferimento al tasto home dell'header
@@ -7,7 +10,10 @@ sessione.setAttribute("homepage", "index_genitore.jsp");
 //controllo se questa tipologia utente ha accesso alle pagine in cui e' inclusa questa sidebar
 if (!tipologia.equals("genitore") )
 		response.sendRedirect("index_genitore.jsp");
+ControlDatiPersonali p = ControlDatiPersonali.getIstance();
+String cf = (String) session.getAttribute("codFis");
 %>
+
 
 <table class="colonnasx" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
@@ -82,7 +88,10 @@ if (!tipologia.equals("genitore") )
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="storico_attivita.html">Storico Attivit&agrave; </a></td>
 </tr>
-<tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_questionari.jsp?type=genitore&cf=1">Compila Questionari </a></td>
-</tr>
+
+<% 
+out.println("<tr><td class=\"menusecondo\">&nbsp;<a class=\"linkmenusecondo\" href=\"lista_questionari.jsp?type=genitore&cf="+ cf + "\">Compila Questionari </a></td></tr>");
+
+%>
+
 </tbody></table>
