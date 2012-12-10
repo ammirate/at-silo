@@ -64,7 +64,7 @@ public class ControlDatiPersonali {
     public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
         Database db = new Database();
         StubGenitore stub = new StubGenitore(db);
-
+        
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");   
@@ -73,6 +73,7 @@ public class ControlDatiPersonali {
             throw new DBConnectionException("Connessione al DB fallita");
         try{            
             Genitore g = stub.ricercaGenitore(codiceFiscale);
+           
             if(g == null)
                 throw new GenitoreException("Genitore non trovato");
             return g;
@@ -81,7 +82,26 @@ public class ControlDatiPersonali {
             db.chiudiConnessione();
         }
     }
-
+   
+    public Genitore getGenitoreFromUsername(String user) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
+        Database db = new Database();
+        StubGenitore stub = new StubGenitore(db);
+        
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{            
+            Genitore g = stub.getGenitoreFromUsername(user);
+           
+            if(g == null)
+                throw new GenitoreException("Genitore non trovato");
+            return g;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+    }
     
     /**
      * Prende la classe bambino

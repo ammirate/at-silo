@@ -12,8 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import atsilo.stub.application.StubControlLogin;
-import atsilo.application.*;
+
+import atsilo.application.ControlLogin;
+import atsilo.entity.Account;
+import atsilo.entity.Utente;
 import atsilo.exception.DBConnectionException;
 
 /*
@@ -70,7 +72,7 @@ public class ServletControlLogin extends HttpServlet {
             String username= request.getParameter("username_login");
             String password= request.getParameter("pswd_login");
             String tipologia= request.getParameter("tipologiaUtente");
-            
+            String codfiscale="";
             // Set response content type
             response.setContentType("text/html");
             // New location to be redirected
@@ -79,10 +81,12 @@ public class ServletControlLogin extends HttpServlet {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             
             try {
-                login.getValoreLogin(username, password, tipologia);
+                Account a = login.getValoreLogin(username, password, tipologia);
+                String u = a.getOwner().getCodiceFiscale();
               //Setto le variabili di sessione
                 HttpSession sessione = request.getSession();
                 sessione.setAttribute("username", username);
+                sessione.setAttribute("codFis", u);
                 sessione.setAttribute("tipologia_utente", tipologia);
                 //reindirizzo verso index della tipologia di utente
                 response.setHeader("Location", login_ok);    

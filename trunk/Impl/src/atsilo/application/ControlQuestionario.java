@@ -318,8 +318,7 @@ public class ControlQuestionario {
             for(RispostaQuestionario r : risposte)
                 storageRisposte.inserisci(r);
             
-            //inserisco una tupla nella tabella di smistamento CompilaQuestionario
-            storageCompila.inserisci(new CompilaQuestionario(idQuestionario,CFchiCompila));
+            
         }
         finally{
             db.chiudiConnessione();
