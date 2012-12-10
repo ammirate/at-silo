@@ -18,8 +18,6 @@ package atsilo.stub.storage;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import atsilo.entity.DomandaIscrizione;
 import atsilo.storage.Database;
