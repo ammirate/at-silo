@@ -1,6 +1,7 @@
 package atsilo.storage;
 
 import atsilo.entity.Bambino;
+
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Extra;
 import atsilo.entity.Genitore;
@@ -14,6 +15,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBRetta.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+
+//TODO da implementare
 public class DBRetta extends DBBeans {
     
     private static final Map<String,String> MAPPINGS=creaMapping();

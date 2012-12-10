@@ -1,5 +1,18 @@
 package atsilo.storage;
-
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBFeedback.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+//TODO da implementare priorità bassa
 import atsilo.entity.Feedback;
 import atsilo.entity.Genitore;
 
@@ -19,15 +32,15 @@ public class DBFeedback extends DBBeans {
     }
     
         public List<Feedback> ricercaFeedbackperImpiegato(PersonaleAsilo impiegato){
-            List<Feedback> feedback;
+            List<Feedback> feedback = null;
             return feedback;
         }
         public List<Feedback> ricercaFeedbackperTirocinante(Tirocinante tirocinante){
-            List<Feedback> feedback;
+            List<Feedback> feedback = null;
             return feedback;
         }
         public List<Feedback> ricercaFeedbackPerId(Integer Id){
-            List<Feedback> feedback;
+            List<Feedback> feedback = null;
             return feedback;
         
         }

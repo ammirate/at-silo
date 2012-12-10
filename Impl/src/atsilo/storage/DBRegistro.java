@@ -11,7 +11,20 @@ import atsilo.entity.Genitore;
 import atsilo.entity.Psicopedagogo;
 import atsilo.entity.Questionario;
 import atsilo.entity.Registro;
-
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBRegistro.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+//TODO da implementare priorità bassa
 public class DBRegistro extends DBBeans 
 {
     private static final Map<String,String> MAPPINGS=creaMapping();

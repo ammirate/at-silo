@@ -12,6 +12,21 @@ import atsilo.entity.Bambino;
 import atsilo.entity.OrarioUtente;
 import atsilo.entity.Servizio;
 
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBServizio.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
+ *-----------------------------------------------------------------
+ */
+//TODO da implementare
+
 public class DBServizio extends DBBeans {
     
     private static final Map<String,String> MAPPINGS=creaMapping();
