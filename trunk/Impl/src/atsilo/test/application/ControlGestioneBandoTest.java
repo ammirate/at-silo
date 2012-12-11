@@ -95,8 +95,10 @@ public class ControlGestioneBandoTest {
             bando.setDataFinePresentazioneRinuncia("2011-05-04");
             bando.setDataFineRinuncia("2011-05-05");
             bando.setPostiDisponibili(40);
+            if(dbBando.getBando()==null)
             dbBando.inserisci(bando);
-            System.out.println(dbBando.getBando().getId());
+            else
+             dbBando.replace(dbBando.getBando(), bando);
             control.modificaBando("2011-05-06", "2011-05-07", "2011-05-08", "2011-05-09", "2011-05-10", 30);
             
             assertEquals("2011-05-06", dbBando.getBando().getDataInizioBando());
@@ -127,15 +129,18 @@ public class ControlGestioneBandoTest {
             DBBando dbBando = new DBBando(db);
             Bando bando = new Bando();
             bando.setId(1);
-            bando.setDataInizioBando("10");
-            bando.setDataFineBando("11");
-            bando.setDataInizioPresentazioneRinuncia("12");
-            bando.setDataFinePresentazioneRinuncia("13");
-            bando.setDataFineRinuncia("14");
+            bando.setDataInizioBando("2011-05-01");
+            bando.setDataFineBando("2011-05-02");
+            bando.setDataInizioPresentazioneRinuncia("2011-05-03");
+            bando.setDataFinePresentazioneRinuncia("2011-05-04");
+            bando.setDataFineRinuncia("2011-05-05");
             bando.setPostiDisponibili(40);
-            bando.setPath("ciaoo");
+            bando.setPath("ciao");
+            if(dbBando.getBando()==null)
+                dbBando.inserisci(bando);
+                else
+                 dbBando.replace(dbBando.getBando(), bando);
             control.modificaPath("bye");
-            
             assertEquals("bye", dbBando.getBando().getPath());
         } finally 
         {

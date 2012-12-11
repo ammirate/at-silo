@@ -41,7 +41,6 @@ import java.sql.SQLException;
 
 public class ControlGestioneBando {
     private static final ControlGestioneBando INSTANCE = new ControlGestioneBando();
-   
     
     
     private ControlGestioneBando() {
@@ -68,10 +67,8 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-
-            DBDomandaIscrizione dbDomandaIscrizione=new DBDomandaIscrizione(db);
-            dbDomandaIscrizione = new DBDomandaIscrizione(db);
             
+            DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
             DomandaIscrizione domandaDaModificare = new DomandaIscrizione();
             try {
                 domandaDaModificare = new DomandaIscrizione(dbDomandaIscrizione
@@ -146,12 +143,12 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-
-            DBBando dbBando=new DBBando(db);
-            Bando bando; 
+            
+            DBBando dbBando = new DBBando(db);
+            Bando bando;
             
             if (dbBando.getBando() == null) {
-                bando = new Bando(0, inizioBando, fineBando,
+                bando = new Bando(45, inizioBando, fineBando,
                         inizioPresentazione, finePresentazione, fineRinuncia,
                         posti, null);
                 dbBando.inserisci(bando);
@@ -164,8 +161,7 @@ public class ControlGestioneBando {
                 
                 return true;
             }
-        } finally 
-        {
+        } finally {
             db.chiudiConnessione();
         }
     }
@@ -179,8 +175,9 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            DBBando dbBando=new DBBando(db);
-            if (dbBando.getBando().getDataInizioBando() == null) {
+            DBBando dbBando = new DBBando(db);
+            
+            if (dbBando.getBando() == null) {
                 throw new DBConnectionException(
                         "Bando non presente impossibile modificare/o inserire il path");
             } else {
@@ -195,8 +192,7 @@ public class ControlGestioneBando {
                 dbBando.replace(dbBando.getBando(), bando);
                 return true;
             }
-        } finally 
-        {
+        } finally {
             db.chiudiConnessione();
         }
     }
