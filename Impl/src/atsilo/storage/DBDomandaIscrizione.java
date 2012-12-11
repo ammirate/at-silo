@@ -324,13 +324,14 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         return temp;
     }
     
+    
     /**
      * ricerca una domanda iscrizione per data
      * @param da la data da ricercare nel database per trovare le domande d'iscrizione. deve avere un valore definito e non successivo alla data nella quale si effettua la richiesta, altrimenti la ricerca non ha risultato
      * @return una lista di domande aventi la stessa data oppure una lista vuota se la ricerca non produce risultato
      * @throws SQLException se c'è errore di connessione con il database
      */
-    public List<DomandaIscrizione> ricercaDomandaPerData(Date da) throws SQLException{
+   /* public List<DomandaIscrizione> ricercaDomandaPerData(Date da) throws SQLException{
         List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
         DomandaIscrizione d=new DomandaIscrizione();
         PreparedStatement stmt = tabella.prepareStatement(
@@ -350,7 +351,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
      * @return una lista di domande aventi lo stesso punteggio  oppure una lista vuota se la ricerca non produce risultato
      * @throws SQLException se c'è errore di connessione con il database
      */
-    public List<DomandaIscrizione> ricercaDomandaPerPunteggio(int p) throws SQLException{
+  /*  public List<DomandaIscrizione> ricercaDomandaPerPunteggio(int p) throws SQLException{
         List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
         DomandaIscrizione d=new DomandaIscrizione();
         PreparedStatement stmt = tabella.prepareStatement(
@@ -362,7 +363,9 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         res.close();
         return lista;
-    }
+    }*/
+    
+    
     /**
      * riceve l'id di una domanda d'iscrizione e vede se la sua posizione rientra nella graduatoria
      * @param id è l'identificativo della domanda d'iscrizione
