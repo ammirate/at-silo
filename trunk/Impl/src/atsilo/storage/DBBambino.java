@@ -393,10 +393,13 @@ public class DBBambino extends DBBeans<Bambino> {
        
         Assegnazione DBBambino_assegnazione = new Assegnazione("cf_genitore_non_richiedente",bean.getGenitoreNonRichiedente().getCodiceFiscale());
         Assegnazione DBBambino_assegnazione1 = new Assegnazione("genitore",bean.getGenitore().getCodiceFiscale());
+        Assegnazione DBBambino_assegnazione2 = new Assegnazione("classe",bean.getClasse());
 
-        Assegnazione[] DBAssign = new Assegnazione[2];
+        Assegnazione[] DBAssign = new Assegnazione[3];
+       
         DBAssign[0]=DBBambino_assegnazione;
         DBAssign[1]=DBBambino_assegnazione1;
+        DBAssign[2]=DBBambino_assegnazione2;
 
         return DBAssign;
     }
