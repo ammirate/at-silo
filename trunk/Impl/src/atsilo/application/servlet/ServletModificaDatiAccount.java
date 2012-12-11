@@ -49,7 +49,7 @@ public class ServletModificaDatiAccount extends HttpServlet {
             pw.println("");
             pw.println("");
             pw.println("");
-            pw.println("<h1>Control Login</h1><br>This servlet should not be accessed this way.");
+            pw.println("<h1>Modifica Dati Account/h1><br>This servlet should not be accessed this way.");
             pw.println("");
         }
 
@@ -66,7 +66,7 @@ public class ServletModificaDatiAccount extends HttpServlet {
 	    String username= request.getParameter("username");
 	    String password;
 	    if ( request.getParameter("password").equals("******"))//controllo se password è settata al valore ******
-	        password=null;//quando password e' null non verra' fatto l'update
+	        password=null;//metto il valore che è già presente
 	    else
 	        password= request.getParameter("password");//l'utente vuole cambiare la password poichè ha inserito una valore diverso di ******
 	    
@@ -82,6 +82,7 @@ public class ServletModificaDatiAccount extends HttpServlet {
             String modifica_ok = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
             String modifica_error = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
             response.setStatus(response.SC_MOVED_TEMPORARILY);
+           
             if (cdp.updateAccount(username, password, email, tipologia_genitore)){//setto dati account
                 //reindirizzo verso index della tipologia di utente
                 response.setHeader("Location", modifica_ok);    
