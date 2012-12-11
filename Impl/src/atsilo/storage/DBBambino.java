@@ -1,7 +1,9 @@
 package atsilo.storage;
 
 import atsilo.entity.Bambino;
+import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
+import atsilo.storage.DBBeans.Assegnazione;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -61,14 +63,26 @@ public class DBBambino extends DBBeans<Bambino> {
     private static Map<String,String> creaMapping()
     {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("nome","nome");// la classe Assenza del package entity ha come attributi (data e bambino)????
+        
+        res.put("nome","nome");
         res.put("data_di_nascita","dataNascita");
-        res.put("Categoria_appartenenza","categoriaAppartenenza");
-        res.put("indirizzo","indirizzo");
+        res.put("categoria_appartenenza","categoriaAppartenenza");
         res.put("classe","classe");
         res.put("cognome","cognome");
         res.put("genitore","genitore");
         res.put("codice_fiscale","codiceFiscale");
+        res.put("comune_nascita", "comuneNascita");
+        res.put("cittadinanza", "cittadinanza");
+        res.put("indirizzo_residenza", "indirizzoResidenza");
+        res.put("numero_civico_residenza", "numeroCivicoResidenza");
+        res.put("provincia_residenza", "provinciaResidenza");
+        res.put("indirizzo_domicilio", "indirizzoDomicilio");
+        res.put("numero_civico_domicilio", "numeroCivicoDomicilio");
+        res.put("cap_domicilio", "capDomicilio");
+        res.put("cap_residenza", "capResidenza");
+        res.put("comune_domicilio", "comuneDomicilio");
+        res.put("provincia_domicilio", "provinciaDomicilio");
+        res.put("cf_genitore_non_richiedente", "genitoreNonRichiedente");
         
         
         return Collections.unmodifiableMap(res);
@@ -91,23 +105,35 @@ public class DBBambino extends DBBeans<Bambino> {
     @Override
     protected Bambino creaBean(ResultSet r) throws SQLException {
         Bambino b=new Bambino();
-        if(r.next())
-        {
+        
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
             b.setCodiceFiscale(r.getString("codice_fiscale"));
-            b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzoDomicilio(r.getString("indirizzo"));
+            b.setDataNascita(r.getDate("data_di_nascita"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
-            String g=r.getString("genitore");
-            gen.setCodiceFiscale(g);
+           String g=r.getString("genitore");
+           gen.setCodiceFiscale(g);
             b.setGenitore(gen);
+            Genitore gg=new Genitore();
+            String s=r.getString("cf_genitore_non_richiedente");
+            gg.setCodiceFiscale(s);
+            b.setGenitoreNonRichiedente(gg);
+            b.setComuneNascita(r.getString("comune_nascita"));
+            b.setCittadinanza(r.getString("cittadinanza"));
+            b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            b.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            b.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            b.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            b.setProvinciaResidenza(r.getString("provincia_residenza"));
+            b.setComuneDomicilio(r.getString("comune_domicilio"));
+            b.setCapResidenza(r.getString("cap_residenza"));
+            b.setCapDomicilio(r.getString("cap_domicilio"));
             
             
-        }
-        
+             
         return b;
     }
 
@@ -122,26 +148,42 @@ public class DBBambino extends DBBeans<Bambino> {
     {
         Bambino b=new Bambino();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codiceFiscale", codicefiscale);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE codice_fiscale = ?");
+            tabella.setParam(stmt, 1, "codice_fiscale", codicefiscale);
             ResultSet r = stmt.executeQuery();
         if(r.next())
         {
+            
             b.setNome(r.getString("nome"));
             b.setCognome(r.getString("cognome"));
             b.setCodiceFiscale(r.getString("codice_fiscale"));
-            b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzoDomicilio(r.getString("indirizzo"));
+            b.setDataNascita(r.getDate("data_di_nascita"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
             Genitore gen=new Genitore();
-            String g=r.getString("genitore");
-            gen.setCodiceFiscale(g);
+           String g=r.getString("genitore");
+           gen.setCodiceFiscale(g);
             b.setGenitore(gen);
+            Genitore gg=new Genitore();
+            String s=r.getString("cf_genitore_non_richiedente");
+            gg.setCodiceFiscale(s);
+            b.setGenitoreNonRichiedente(gg);
+            b.setComuneNascita(r.getString("comune_nascita"));
+            b.setCittadinanza(r.getString("cittadinanza"));
+            b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            b.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            b.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            b.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            b.setProvinciaResidenza(r.getString("provincia_residenza"));
+            b.setComuneDomicilio(r.getString("comune_domicilio"));
+            b.setCapResidenza(r.getString("cap_residenza"));
+            b.setCapDomicilio(r.getString("cap_domicilio"));
+            
         }
         else
         {
-            p=null;
+            b=null;
         }
         r.close();
         return b;
@@ -159,7 +201,7 @@ public class DBBambino extends DBBeans<Bambino> {
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE data = ?");
             tabella.setParam(stmt, 1, "data", d);
             ResultSet r = stmt.executeQuery();
         
@@ -195,7 +237,7 @@ public class DBBambino extends DBBeans<Bambino> {
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE nome = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nome = ?");
             tabella.setParam(stmt, 1, "nome", nome);
             ResultSet r = stmt.executeQuery();        
         while(r.next())
@@ -230,7 +272,7 @@ public class DBBambino extends DBBeans<Bambino> {
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE cognome = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE cognome = ?");
             tabella.setParam(stmt, 1, "cognome", cognome);
             ResultSet r = stmt.executeQuery();       
         while(r.next())
@@ -282,7 +324,7 @@ public class DBBambino extends DBBeans<Bambino> {
      */
     public int ricercaClasseBambino(Bambino b) throws SQLException{
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE codice_fiscale = ?");
             tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
             ResultSet r = stmt.executeQuery();
         int c = 0;
@@ -292,8 +334,72 @@ public class DBBambino extends DBBeans<Bambino> {
         r.close();
         return c;
     }
+    /**
+     * 
+     * @param CFGenitore codice fiscale del genitore di cui ricercare
+     * i bambini figli
+     * @return lista dei bambini figli del genitore con codice fiscale=CFGenitore
+     * @throws SQLException
+     */
+    public List<Bambino> ricercaFigliGenitore(String CFGenitore) throws SQLException {
+        
+        List<Bambino>l=new ArrayList<Bambino>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE genitore = ?");
+            tabella.setParam(stmt, 1, "genitore", CFGenitore);
+            ResultSet r = stmt.executeQuery();
+            
+            
+            while (r.next()){
+            
+            Bambino b=new Bambino();
+            
+            b.setNome(r.getString("nome"));
+            b.setCognome(r.getString("cognome"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
+            b.setDataNascita(r.getDate("data_di_nascita"));
+            b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
+            b.setClasse(r.getInt("classe"));
+            Genitore gen=new Genitore();
+           String g=r.getString("genitore");
+           gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
+            Genitore gg=new Genitore();
+            String s=r.getString("genitore_non_richiedente");
+            gg.setCodiceFiscale(s);
+            b.setGenitoreNonRichiedente(gg);
+            b.setComuneNascita(r.getString("comune_nascuta"));
+            b.setCittadinanza(r.getString("cittadinanza"));
+            b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            b.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            b.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            b.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            b.setProvinciaResidenza(r.getString("provincia_residenza"));
+            b.setComuneDomicilio(r.getString("comune_domicilio"));
+            b.setCapResidenza(r.getString("cap_residenza"));
+            b.setCapDomicilio(r.getString("cap_domicilio"));
+            
+            l.add(b);
+            } 
+            r.close();
+        return l;
+        
+    }
     
-   
+    
+    protected Assegnazione[] creaAssegnazioni(Bambino bean) {
+       
+        Assegnazione DBBambino_assegnazione = new Assegnazione("cf_genitore_non_richiedente",bean.getGenitoreNonRichiedente().getCodiceFiscale());
+        Assegnazione DBBambino_assegnazione1 = new Assegnazione("genitore",bean.getGenitore().getCodiceFiscale());
+
+        Assegnazione[] DBAssign = new Assegnazione[2];
+        DBAssign[0]=DBBambino_assegnazione;
+        DBAssign[1]=DBBambino_assegnazione1;
+
+        return DBAssign;
+    }
 
 
 
