@@ -81,13 +81,13 @@ public class ControlDatiPersonaliTest {
     @Test
     // visualizzazione utente normale
     public void getValoriUtenteTest() throws BambinoException, DBConnectionException, SQLException, UtenteException, InserimentoDatiException   {
-         assertNotNull(control.getValoriUtente("MSCGNN75H43H654K"));
+         assertNotNull(control.getValoriUtenteFromCf("MSCGNN75H43H654K"));
     }
     
     @Test (expected=InserimentoDatiException.class)
     // visualizzazione utente con codice fiscale non valido
     public void getValoriUtenteTest2() throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException, UtenteException   {
-        u = control.getValoriUtente("MSCGNN7H43H654K");
+        u = control.getValoriUtenteFromCf("MSCGNN7H43H654K");
     }
 
     @Test
@@ -123,7 +123,7 @@ public class ControlDatiPersonaliTest {
     @Test
     // prendi cf bambini da account
     public void getCfBambiniTest() throws BambinoException, DBConnectionException    {
-         assertNotNull(control.getCfBambini("MarioB"));
+         assertNotNull(control.getFigli("MarioB"));
     }    
     
     @Test

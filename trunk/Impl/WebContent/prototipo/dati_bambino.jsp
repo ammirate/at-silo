@@ -17,10 +17,10 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
  <%@
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
-<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
+<%@ page import="atsilo.application.*,atsilo.entity.*"
  %>
  <%
- 	StubControlDatiPersonali cdt= StubControlDatiPersonali.getIstance();
+ 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
  	String codiceFiscaleBambino;
   	Bambino bambino=cdt.getDatiBambino(codiceFiscaleBambino);
  %>
@@ -59,7 +59,7 @@ function settaAttributi(slf){
       
   </tr>
   <tr>
-  <td colspan="2"><select name="select">
+  <td colspan="2"><select name="select_bambini">
     <option selected>Selezionare il nome del bambino</option>
   </select></td>
      <td>&nbsp;</td>

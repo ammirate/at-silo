@@ -14,10 +14,10 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
-<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
+<%@ page import="atsilo.application.*,atsilo.entity.*"
  %>
  <%
- 	StubControlDatiPersonali cdt= StubControlDatiPersonali.getIstance();
+ 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
   	DomandaIscrizione domandaIscrizione= cdt.getDatiIscrizione(username, null);
   	Float isee_temp=domandaIscrizione.getIsee();
   	String isee=isee_temp.toString();
