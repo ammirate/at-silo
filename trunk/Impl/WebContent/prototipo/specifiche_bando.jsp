@@ -6,9 +6,39 @@
 
 <script type="text/javascript">
 	function cambiaValori(){
-		var change = "<form name='bando' id='im_bando' action='http://localhost:8080/Atsilo/ServletControlBandoIM' method='post'> <table class='tabelle_form'> <tr> <td>Data inizio bando</td> <td><input name='iniziobando' type='text' id='inizioB' maxlength='16' value= '<%=dataInizioBando%>' /></td> </tr> <tr> <td>Data fine bando</td> <td> <input name='finebando' type='text' id='fineB' maxlength='20' value='<%=dataFineBando%>'/></td> </tr> <tr> <tr> <td>Data inizio presentazione rinuncia</td> <td><input name='iniziopresentazione' type='text' id='inizioP' maxlength='16' value='<%=dataInizioPresentazione%>'/></td> </tr> <tr> <td>Data fine presentazione rinuncia</td> <td><input name='finepresentazione' type='text' id='fineP' maxlength='20' value='<%=dataFinePresentazione%>'/></td> </tr> <tr> <td>Data fine rinuncia</td> <td><input name='finerinuncia' type='text' id='fineR' value='<%=dataFineRinuncia%>'/></td></tr><tr><td>Posti disponibili</td><td><input name='postidisp' type='text' id='postiD' size='7' maxlength='4' value='<%=posti%>'  /></td> </tr><tr> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <td></td> <td><input type='submit' name='salva' id='mod' value='Salva'/></td> </tr> </table> </form>"
+		
+		var change = "<form name='bando' id='im_bando' action='http://localhost:8080/Atsilo/ServletControlBandoIM' method='post'> <table class='tabelle_form'> <tr> <td>Data inizio bando</td> <td><input name='iniziobando' type='text' id='inizioB' maxlength='16' value= '<%=dataInizioBando%>' /></td> </tr> <tr> <td>Data fine bando</td> <td> <input name='finebando' type='text' id='fineB' maxlength='20' value='<%=dataFineBando%>'/></td> </tr> <tr> <tr> <td>Data inizio presentazione rinuncia</td> <td><input name='iniziopresentazione' type='text' id='inizioP' maxlength='16' value='<%=dataInizioPresentazione%>'/></td> </tr> <tr> <td>Data fine presentazione rinuncia</td> <td><input name='finepresentazione' type='text' id='fineP' maxlength='20' value='<%=dataFinePresentazione%>'/></td> </tr> <tr> <td>Data fine rinuncia</td> <td><input name='finerinuncia' type='text' id='fineR' value='<%=dataFineRinuncia%>'/></td></tr><tr><td>Posti disponibili</td><td><input name='postidisp' type='text' id='postiD' size='7' maxlength='4' value='<%=posti%>'  /></td> </tr><tr> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <td></td> <td><input type='submit' name='salva' id='mod' value='Salva' onClick='return checkForm()'/></td> </tr> </table> </form>"
 		
 		document.getElementById("formdisplay").innerHTML = change;
+	}
+	function checkForm(){
+	
+		var inizioB = document.getElementById("inizioB").value;
+		 var fineB = document.getElementById("fineB").value;
+		 var inizioP = document.getElementById("inizioP").value;
+		 var fineP = document.getElementById("fineP").value;
+		 var fineR = document.getElementById("fineR").value;
+		 
+		 if((inizioB.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
+			 alert('rispettare il formato YYYY-MM-DD');
+			 return false;
+		 }
+		 if((fineB.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
+			 alert('rispettare il formato YYYY-MM-DD');
+			 return false;
+		 }
+		 if((inizioP.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
+			 alert('rispettare il formato YYYY-MM-DD');
+			 return false;
+		 }
+		 if((fineP.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
+			 alert('rispettare il formato YYYY-MM-DD');
+			 return false;
+		 }
+		 if((fineR.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
+			 alert('rispettare il formato YYYY-MM-DD');
+			 return false;
+		 }
 	}
 	
 </script>
