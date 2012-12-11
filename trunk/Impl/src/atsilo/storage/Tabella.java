@@ -12,7 +12,7 @@
  * REVISION
  * nome revisore, data revisione
  *-----------------------------------------------------------------
- */ 
+ */
 
 package atsilo.storage;
 
@@ -128,45 +128,33 @@ public class Tabella /* implements ManagerDB */{
      */
     public void setParam(PreparedStatement stmt, int par, int type,
             Object val) throws SQLException {
+        String err = "sconosciuto";
         try {
             if (val == null) {
+                err = "nullo";
                 stmt.setNull(par, type);
             } else {
                 switch (type) {
+                case Types.BOOLEAN:
+                    stmt.setBoolean(par, (Boolean) val);
                 case Types.SMALLINT:
                 case Types.INTEGER:
                 case Types.BIGINT:
+                    err = "numerico intero";
                     stmt.setLong(par, ((Number) val).longValue());
                     break;
                 case Types.DECIMAL:
                 case Types.DOUBLE:
                 case Types.FLOAT:
+                    err = "numerico reale";
                     stmt.setDouble(par, ((Number) val).doubleValue());
                     break;
                 default:
+                    err = "stringa";
                     stmt.setString(par, val.toString());
                 }
             }
-        } catch (ClassCastException ex) {
-            /*
-             * Il parametro fornito non e' di un tipo base
-             */
-            String err;
-            switch (type) {
-            case Types.SMALLINT:
-            case Types.INTEGER:
-            case Types.BIGINT:
-                err = "numerico intero";
-                break;
-            case Types.DECIMAL:
-            case Types.DOUBLE:
-            case Types.FLOAT:
-                err = "numerico reale";
-                break;
-            default:
-                err = "stringa";
-            }
-            
+        } catch (ClassCastException ex) {            
             err = String.format("Il valore (%3$s) fornito e' di tipo %1$s,"
                     + " mentre la colonna e' di tipo %2$s."
                     + " Probabilmente, questo e' causato da un errore di mapping."
