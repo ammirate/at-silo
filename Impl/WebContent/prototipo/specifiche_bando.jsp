@@ -5,18 +5,12 @@
 
 
 <script type="text/javascript">
-	function cambiaValori(slf){
-		document.getElementById("im_bando").setAttribute("action","http://localhost:8080/Atsilo/ServletControlBandoIM");
-		document.getElementById("inizioB").removeAttribute("readonly");
-		document.getElementById("fineB").removeAttribute("readonly");
-		document.getElementById("inizioP").removeAttribute("readonly");
-		document.getElementById("fineP").removeAttribute("readonly");
-		document.getElementById("postiD").removeAttribute("readonly");
-		document.getElementById("fineR").removeAttribute("readonly");
-		document.getElementById("mod").setAttribute("value","Salva");
-		slf.onClick=null;
-		return false;
+	function cambiaValori(){
+		var change = "<form name='bando' id='im_bando' action='http://localhost:8080/Atsilo/ServletControlBandoIM' method='post'> <table class='tabelle_form'> <tr> <td>Data inizio bando</td> <td><input name='iniziobando' type='text' id='inizioB' maxlength='16' value= '<%=dataInizioBando%>' /></td> </tr> <tr> <td>Data fine bando</td> <td> <input name='finebando' type='text' id='fineB' maxlength='20' value='<%=dataFineBando%>'/></td> </tr> <tr> <tr> <td>Data inizio presentazione rinuncia</td> <td><input name='iniziopresentazione' type='text' id='inizioP' maxlength='16' value='<%=dataInizioPresentazione%>'/></td> </tr> <tr> <td>Data fine presentazione rinuncia</td> <td><input name='finepresentazione' type='text' id='fineP' maxlength='20' value='<%=dataFinePresentazione%>'/></td> </tr> <tr> <td>Data fine rinuncia</td> <td><input name='finerinuncia' type='text' id='fineR' value='<%=dataFineRinuncia%>'/></td></tr><tr><td>Posti disponibili</td><td><input name='postidisp' type='text' id='postiD' size='7' maxlength='4' value='<%=posti%>'  /></td> </tr><tr> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <td></td> <td><input type='submit' name='salva' id='mod' value='Salva'/></td> </tr> </table> </form>"
+		
+		document.getElementById("formdisplay").innerHTML = change;
 	}
+	
 </script>
 
 
@@ -57,7 +51,9 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 				<td><table border="0">
 						<tbody>
 							<tr>
-								<td class="tplTitolo"><form name="bando" id="im_bando"
+								<td class="tplTitolo">
+								<div id="formdisplay">
+								<form name="bando" id="im_bando"
 										action="" method="post">
 										<table class="tabelle_form">
 											<tr>
@@ -97,11 +93,13 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 											</tr>
 											<td></td>
 											<td><input type="submit" name="modifica" id="mod"
-												value="Modifica" onClick="return cambiaValori(this)" /></td>
+												value="Modifica" onClick="cambiaValori()" /></td>
 											</tr>
 
 										</table>
-									</form></td>
+									</form>
+									</div>
+									</td>
 							</tr>
 						</tbody>
 					</table></td>
