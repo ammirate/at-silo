@@ -43,24 +43,24 @@ public class ControlMensa {
     }
     public boolean inserisciServizio(int id, String orarioInizio, String orarioFine,
             String pianoPasto, String bambino, int orarioUtente)throws DBConnectionException {
-            
-            Database db = new Database();
-            if (!db.apriConnessione()) {
-                throw new DBConnectionException("Connessione Fallita");
-            }
-            try {
-                    Servizio servizio = new Servizio(id, orarioInizio, orarioFine,
-                            pianoPasto, bambino, orarioUtente);
-                    dbServizio.inserisci(servizio);
-                    return true;
-            } finally {
-                db.chiudiConnessione();
-            }
+        
+        Database db = new Database();
+        if (!db.apriConnessione()) {
+            throw new DBConnectionException("Connessione Fallita");
         }
-        
-        
+        try {
+            Servizio servizio = new Servizio(id, orarioInizio, orarioFine,
+                    pianoPasto, bambino, orarioUtente);
+            dbServizio.inserisci(servizio);
+            return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
     
-
+    
+    
+    
     public boolean modificaPianoPasto(Servizio s, String pianopasto)throws DBConnectionException {
         
         Database db = new Database();
@@ -70,7 +70,7 @@ public class ControlMensa {
         try {
             try {
                 Servizio servizio = new Servizio(
-                      
+                        
                         dbServizio.ricercaServizioPerBambino(s.getBambino()).getId(),
                         dbServizio.ricercaServizioPerBambino(s.getBambino()).getOrarioInizio(),
                         dbServizio.ricercaServizioPerBambino(s.getBambino()).getOrarioFine(),
@@ -78,7 +78,7 @@ public class ControlMensa {
                         dbServizio.ricercaServizioPerBambino(s.getBambino()).getBambino(),
                         dbServizio.ricercaServizioPerBambino(s.getBambino()).getOrarioUtente());
                 servizio.setPianoPasto(pianopasto);
-                          
+                
                 dbServizio.replace(dbServizio.ricercaServizioPerBambino(s.getBambino()), servizio);
                 
             } catch (SQLException e) {
@@ -89,7 +89,7 @@ public class ControlMensa {
             db.chiudiConnessione();
         }
     }
-   
+    
     public boolean eliminaPianoPasto(Servizio s) throws DBConnectionException {
         
         Database db = new Database();
@@ -97,15 +97,15 @@ public class ControlMensa {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {      
-                dbServizio.delete(s);
-                return true;
+            dbServizio.delete(s);
+            return true;
         } finally {
             db.chiudiConnessione();
         }
     }
-   
-       
-        
+    
+    
+    
     
 
     public String ricercaPianoPasto(Servizio s){
