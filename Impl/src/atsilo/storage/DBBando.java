@@ -25,12 +25,16 @@ import java.util.Collections;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro,Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro,Luigi Lomasto,Fabio Napoli 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
 public class DBBando extends DBBeans<Bando> {
     
+    /**
+     * Crea il gestore del bean Bando
+     * 
+     */
     private static final Map<String, String> MAPPINGS = creaMapping();
     private static final List<String> CHIAVE = creaChiave();
     
@@ -52,11 +56,14 @@ public class DBBando extends DBBeans<Bando> {
      */
     private static Map<String, String> creaMapping() {
         Map<String, String> res = new HashMap<String, String>();
-        res.put("id", "id");// la classe Assenza del package entity ha come
-                            // attributi (data e bambino)????
-        res.put("data_inizio", "dataInizio");
-        res.put("data_fine", "dataFine");
-        
+        res.put("id", "id");
+        res.put("data_inizio_bando", "dataInizioBando");
+        res.put("data_fine_bando", "dataFineBando");
+        res.put("data_inizio_presentazione", "dataInizioPresentazione");
+        res.put("data_fine_presentazione", "dataFinePresentazione");
+        res.put("data_fine_rinuncia", "dataFineRinuncia");
+        res.put("posti_disponibili", "postiDisponibili");
+        res.put("path", "path");     
         
         return Collections.unmodifiableMap(res);
     }
@@ -82,9 +89,14 @@ public class DBBando extends DBBeans<Bando> {
     protected Bando creaBean(ResultSet r) throws SQLException {
         Bando b = new Bando();
         if (r.next()) {
-            b.setiD(r.getInt("id"));
-            b.setDataInizioBando(r.getString("data_inizio"));
-            b.setDataFineBando(r.getString("data_fine"));
+            b.setId(r.getInt("id"));
+            b.setDataInizioBando(r.getString("data_inizio_bando"));
+            b.setDataFineBando(r.getString("data_fine_bando"));
+            b.setDataFinePresentazioneRinuncia(r.getString("data_fine_presentazione_rinuncia"));
+            b.setDataInizioPresentazioneRinuncia(r.getString("data_inizio_presentazione_rinuncia"));
+            b.setDataFineRinuncia(r.getString("data_fine_rinuncia"));
+            b.setPostiDisponibili(r.getInt("posti_disponibili"));
+            b.setPath(r.getString("path"));
         }
         
         return b;
@@ -114,148 +126,72 @@ public class DBBando extends DBBeans<Bando> {
     /**
      * cerca bando per il valore di un id specifico.
      * 
-     * @param id
-     *            , identificativo usato per la ricerca del bando
-     * @return restituisce il bando avente id ricercato oppure un bando vuoto
-     *         nel caso in cui non trova un id
+     * @param id identificativo usato per la ricerca del bando
+     * @return restituisce il bando avente id ricercato oppure null
+     *         nel caso in cui non trova un bando con quell id
      * @throws SQLException
      *             nel caso in cui si verifica un errore di connessione
      */
     public Bando cercaBandoPerId(int id) throws SQLException {
+        
         Bando b = new Bando();
         
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
-                + tabella.getNomeTabella() + "WHERE id = ?");
+                + tabella.getNomeTabella() + " WHERE id = ?");
         tabella.setParam(stmt, 1, "id", id);
         ResultSet r = stmt.executeQuery();
+       
         if (r.next()) {
-            b.setiD(id);
-            b.setDataInizioBando(r.getString("data_inizio"));
-            b.setDataFineBando(r.getString("data_fine"));
-            
+            b.setId(r.getInt("id"));
+            b.setDataInizioBando(r.getString("data_inizio_bando"));
+            b.setDataFineBando(r.getString("data_fine_bando"));
+            b.setDataFinePresentazioneRinuncia(r.getString("data_fine_presentazione_rinuncia"));
+            b.setDataInizioPresentazioneRinuncia(r.getString("data_inizio_presentazione_rinuncia"));
+            b.setDataFineRinuncia(r.getString("data_fine_rinuncia"));
+            b.setPostiDisponibili(r.getInt("posti_disponibili"));
+            b.setPath(r.getString("path"));
         }
+        else
+            b=null;
+       
         r.close();
         return b;
     }
     
     
-    /**
-     * ricerca bando per una data inizio
-     * 
-     * @param dataInizio
-     *            da ricercare nel database
-     * @return lista di bandi aventi come data inizio la data passata tra i
-     *         parametri, oppure una lista vuota qualora non ci fossero bandi
-     *         con quella data d'inizio
-     * @throws SQLException
-     *             se si verifica un errore di connessione
-     */
-    public List<Bando> cercaPerDataInizio(String dataInizio)
-            throws SQLException {
-        List<Bando> lb = new ArrayList<Bando>();
-        Bando b = new Bando();
-        
-        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
-                + tabella.getNomeTabella() + "WHERE data_inizio = ?");
-        tabella.setParam(stmt, 1, "data_inizio", dataInizio);
-        ResultSet r = stmt.executeQuery();
-        if (r.next()) {
-            b.setiD(r.getInt("id"));
-            b.setDataInizioBando(r.getString("data_inizio"));
-            b.setDataFineBando(r.getString("data_fine"));
-            lb.add(b);
-            
-        }
-        r.close();
-        return lb;
-    }
-    
-    /**
-     * ricerca bando per una specifica datafine
-     * 
-     * @param dataFine
-     *            è la data ricercata nel database per indivuduare i bandi
-     * @return lista di bandi aventi la datafine richiesta o una lista vuota se
-     *         non esiste un bando avente come data di fine "datafine"
-     * @throws SQLException
-     *             se si verifica un eccezione nella connessione al database
-     */
-    public List<Bando> cercaPerDataFine(String dataFine) throws SQLException {
-        List<Bando> lb = new ArrayList<Bando>();
-        Bando b = new Bando();
-        Date id, fine = new Date();
-        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
-                + tabella.getNomeTabella() + "WHERE data_fine = ?");
-        tabella.setParam(stmt, 1, "data_fine", dataFine);
-        ResultSet r = stmt.executeQuery();
-        if (r.next()) {
-            b.setiD(r.getInt("id"));
-            b.setDataInizioBando(r.getString("data_inizio"));
-            b.setDataFineBando(r.getString("data_fine"));
-            lb.add(b);
-            
-        }
-        r.close();
-        return lb;
-    }
-    
+       
     /**
      * restituisce l'unico bando presente nel database
      * 
      * 
-     * @return
+     * @return Bando se presente null se non vi è alcun bando
      * @throws SQLException
      */
-    public Bando getBAndo() throws SQLException {
+    public Bando getBando() throws SQLException {
         
         Bando b=new Bando();
+        
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
                 + tabella.getNomeTabella());
         ResultSet r = stmt.executeQuery();
-        if(r.next())
-        {
-            
-        b.setiD(r.getInt("id"));
-        b.setDataInizioBando(r.getString("data_inizio_bando"));
-        b.setDataFineBando(r.getString("data_fine_bando"));
-        b.setDataInizioPresentazioneRinuncia(r
-                .getString("data_inizio_presentazione_rinuncia"));
-        b.setDataFinePresentazioneRinuncia("data_fine_presentazione_rinuncia");
-        b.setDataFineRinuncia("data_fine_rinuncia");
-        b.setPostiDisponibili(r.getInt("posti_disponobili"));
-        return b;
-        }
-        return null;
-    }
-    
-    
-    /**
-     * metodo che riceve una data e da in output un bando che è in corso in
-     * quella data. la data deve essere compresa tra data_inizio e data_fine
-     * 
-     * @param d
-     *            data da ricercare nella tabella dei bandi.
-     * @return
-     * @throws SQLException
-     */
-    public Bando cercaBandoAttivoPerData(Date d) throws SQLException {
-        Bando b = new Bando();
-        
-        ResultSet r = tabella.getDatabase().directQuery(
-                "SELECT * FROM" + tabella.getNomeTabella()
-                        + " WHERE data_inizio <= " + d + " AND data_fine >= "
-                        + d);
-        
-        
+      
         if (r.next()) {
-            b.setiD(r.getInt("id"));
-            b.setDataInizioBando(r.getString("data_inizio"));
-            b.setDataFineBando(r.getString("data_fine"));
-            
-            
+            b.setId(r.getInt("id"));
+            b.setDataInizioBando(r.getString("data_inizio_bando"));
+            b.setDataFineBando(r.getString("data_fine_bando"));
+            b.setDataFinePresentazioneRinuncia(r.getString("data_fine_presentazione_rinuncia"));
+            b.setDataInizioPresentazioneRinuncia(r.getString("data_inizio_presentazione_rinuncia"));
+            b.setDataFineRinuncia(r.getString("data_fine_rinuncia"));
+            b.setPostiDisponibili(r.getInt("posti_disponibili"));
+            b.setPath(r.getString("path"));
         }
-        r.close();
+        else
+            b=null;
+        
         return b;
     }
+    
+    
+   
     
 }

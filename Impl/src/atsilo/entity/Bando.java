@@ -93,7 +93,7 @@ public class Bando implements Beans {
      * Metodo che prende il valore Classe
      * @return classe il parametro inserito
      */
-    public int getiD() {
+    public int getId() {
             return id;
     }
 
@@ -101,7 +101,7 @@ public class Bando implements Beans {
      * Metodo che setta il valore Id
      * @param iD il parametro fissato
      */
-    public void setiD(int iD) {
+    public void setId(int iD) {
             this.id = iD;
     }
 

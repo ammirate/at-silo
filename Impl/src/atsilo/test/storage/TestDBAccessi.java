@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import atsilo.entity.Bambino;
+import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.Genitore;
@@ -29,6 +30,7 @@ import atsilo.entity.Psicopedagogo;
 import atsilo.entity.ResponsabileQuestionario;
 import atsilo.entity.Tirocinante;
 import atsilo.storage.DBBambino;
+import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
 import atsilo.storage.DBEducatoreDidattico;
 import atsilo.storage.DBGenitore;
@@ -138,7 +140,7 @@ public class TestDBAccessi {
        }
        */
       Bambino b=new Bambino();
-       b=dbb.ricercaBambinoPerCodFiscale("DBNLCU11A23B222C");
+     /*  b=dbb.ricercaBambinoPerCodFiscale("DBNLCU11A23B222C");
        System.out.println("Bambino Nome := "+b.getNome());
        System.out.println("Bambino CogNome := "+b.getCognome());
        System.out.println("Bambino CodiceFisclae := "+b.getCodiceFiscale());
@@ -147,8 +149,27 @@ public class TestDBAccessi {
        
        c=dbb.ricercaClasseBambino("DBNLCU11A23B222C");
        
-       System.out.println("id classe "+c);
+       System.out.println("id classe "+c);*/
+      DBBando dbbb=new DBBando(db);
+      Bando bando=new Bando();
+      bando=dbbb.cercaBandoPerId(3);
+      if (bando==null)
+          System.out.println("Non esiste alcun bando con quell id");
+      else{
+      System.out.println("id bando : = "+bando.getId());
+      System.out.println("posti bansdo"+bando.getPostiDisponibili());
+      System.out.println("dataFinePresentazioneRinuncia"+bando.getDataFinePresentazioneRinuncia());
+      }
        
+      bando=dbbb.getBando();
+      if (bando==null)
+          System.out.println("Non esiste alcun bando con quell id");
+      else{
+      System.out.println("id bando : = "+bando.getId());
+      System.out.println("posti bansdo"+bando.getPostiDisponibili());
+      System.out.println("dataFinePresentazioneRinuncia"+bando.getDataFinePresentazioneRinuncia());
+      }
+      
         db.chiudiConnessione();
 
     }
