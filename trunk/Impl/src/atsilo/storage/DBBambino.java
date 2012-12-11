@@ -71,7 +71,7 @@ public class DBBambino extends DBBeans<Bambino> {
         res.put("cognome","cognome");
         res.put("genitore","genitore");
         res.put("codice_fiscale","codiceFiscale");
-        res.put("comune_nascita", "comuneNascita");
+        res.put("comune_di_nascita", "comuneNascita");
         res.put("cittadinanza", "cittadinanza");
         res.put("indirizzo_residenza", "indirizzoResidenza");
         res.put("numero_civico_residenza", "numeroCivicoResidenza");
@@ -82,7 +82,7 @@ public class DBBambino extends DBBeans<Bambino> {
         res.put("cap_residenza", "capResidenza");
         res.put("comune_domicilio", "comuneDomicilio");
         res.put("provincia_domicilio", "provinciaDomicilio");
-        res.put("cf_genitore_non_richiedente", "genitoreNonRichiedente");
+        res.put("cf_genitore_nonrichiedente", "genitoreNonRichiedente");
         
         
         return Collections.unmodifiableMap(res);
@@ -117,10 +117,10 @@ public class DBBambino extends DBBeans<Bambino> {
            gen.setCodiceFiscale(g);
             b.setGenitore(gen);
             Genitore gg=new Genitore();
-            String s=r.getString("cf_genitore_non_richiedente");
+            String s=r.getString("cf_genitore_nonrichiedente");
             gg.setCodiceFiscale(s);
             b.setGenitoreNonRichiedente(gg);
-            b.setComuneNascita(r.getString("comune_nascita"));
+            b.setComuneNascita(r.getString("comune_di_nascita"));
             b.setCittadinanza(r.getString("cittadinanza"));
             b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
             b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
@@ -165,10 +165,10 @@ public class DBBambino extends DBBeans<Bambino> {
            gen.setCodiceFiscale(g);
             b.setGenitore(gen);
             Genitore gg=new Genitore();
-            String s=r.getString("cf_genitore_non_richiedente");
+            String s=r.getString("cf_genitore_nonrichiedente");
             gg.setCodiceFiscale(s);
             b.setGenitoreNonRichiedente(gg);
-            b.setComuneNascita(r.getString("comune_nascita"));
+            b.setComuneNascita(r.getString("comune_di_nascita"));
             b.setCittadinanza(r.getString("cittadinanza"));
             b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
             b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
@@ -318,14 +318,14 @@ public class DBBambino extends DBBeans<Bambino> {
     */
     /**
      * ricerca classe di un bambino
-     * @param b
-     * @return una classe
+     * @param b codice fiscale del bambino di cui ricercare la classe
+     * @return int  l id della classe 
      * @throws SQLException
      */
-    public int ricercaClasseBambino(Bambino b) throws SQLException{
+    public int ricercaClasseBambino(String b) throws SQLException{
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
+            tabella.setParam(stmt, 1, "codice_fiscale", b);
             ResultSet r = stmt.executeQuery();
         int c = 0;
         if(r.next())
@@ -366,10 +366,10 @@ public class DBBambino extends DBBeans<Bambino> {
            gen.setCodiceFiscale(g);
             b.setGenitore(gen);
             Genitore gg=new Genitore();
-            String s=r.getString("genitore_non_richiedente");
+            String s=r.getString("cf_genitore_nonrichiedente");
             gg.setCodiceFiscale(s);
             b.setGenitoreNonRichiedente(gg);
-            b.setComuneNascita(r.getString("comune_nascita"));
+            b.setComuneNascita(r.getString("comune_di_nascita"));
             b.setCittadinanza(r.getString("cittadinanza"));
             b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
             b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));

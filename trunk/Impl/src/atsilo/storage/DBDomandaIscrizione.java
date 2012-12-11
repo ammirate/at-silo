@@ -172,12 +172,16 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         DomandaIscrizione temp = new DomandaIscrizione();
         
+        if(r.next()){
         Bambino b=new Bambino();
         Genitore g=new Genitore();
         Servizio s=new Servizio();
-        String ge=r.getString("genitore");g.setCodiceFiscale(ge);
-        String ba=r.getString("bambino");b.setCodiceFiscale(ba);
-        int se=r.getInt("servizio");s.setId(se);
+        String ge=r.getString("genitore");
+        g.setCodiceFiscale(ge);
+        String ba=r.getString("bambino");
+        b.setCodiceFiscale(ba);
+        int se=r.getInt("servizio");
+        s.setId(se);
         
         
         temp.setId(r.getInt("id"));
@@ -203,7 +207,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setStato_convalidazione(r.getString("stato_convalidazione"));
         temp.setStatoDomanda(r.getString("stato_domanda"));
         temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
-        
+        }
         r.close();
         return temp;
     }
@@ -265,6 +269,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             lista.add(temp);
             
         }
+     
         r.close();
         return lista;
     }
@@ -278,7 +283,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
      */
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException {
         DomandaIscrizione temp=new DomandaIscrizione();
-        
+
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
         tabella.setParam(stmt, 1, "id", id);
@@ -319,6 +324,10 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+        }
+        else{
+            r.close();
+            return null;
         }
         r.close();
         return temp;
