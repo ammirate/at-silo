@@ -4,6 +4,8 @@ package atsilo.application;
 
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -18,6 +20,7 @@ import atsilo.stub.application.StubUtente;
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
+
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
  * FILE: ControlDatiPersonali.java
@@ -25,11 +28,13 @@ import atsilo.stub.application.StubUtente;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Elisa D'Eugenio, 28/11/2012
+ * Elisa D'Eugenio,Angelo Scafuro 28/11/2012
  *-----------------------------------------------------------------
  */
 public class ControlDatiPersonali {
     private static final ControlDatiPersonali INSTANCE = new ControlDatiPersonali();
+    private static final Logger LOG = Logger.getLogger("global");
+
 
     /**
      * Contructor
@@ -63,7 +68,10 @@ public class ControlDatiPersonali {
      */
     public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
         Database db = new Database();
-        StubGenitore stub = new StubGenitore(db);
+        DBGenitore dbGenitore= new DBGenitore(db);
+        
+        //StubGenitore stub = new StubGenitore(db);//canc
+        
         
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale.length() != 16)
@@ -72,7 +80,7 @@ public class ControlDatiPersonali {
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{            
-            Genitore g = stub.ricercaGenitore(codiceFiscale);
+            Genitore g = dbGenitore.getGenitorePerCF(codiceFiscale);
            
             if(g == null)
                 throw new GenitoreException("Genitore non trovato");
@@ -112,25 +120,31 @@ public class ControlDatiPersonali {
      * @throws SQLException 
      * @throws InserimentoDatiException 
      */
-    public Bambino getDatiBambino(String codiceFiscale) throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException{
+    public Bambino getDatiBambino(String codiceFiscale) {
         Database db = new Database();
-        StubBambino stub = new StubBambino(db);
+        DBBambino dbBambino= new DBBambino(db);
 
         //controllo sul codice fiscale che deve essere a 16 cifre
-        if(codiceFiscale.length() != 16)
-            throw new InserimentoDatiException("Il codice fiscale non è valido");
-   
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
+       
+        Bambino b=null;
+       
+           
         try{
-            Bambino b = stub.ricercaBambino(codiceFiscale);
-            if(b == null)
-                throw new BambinoException("Bambino non trovato");
-            return b;
-        }
+            db.apriConnessione();
+            b = dbBambino.ricercaBambinoPerCodFiscale(codiceFiscale);
+            
+        
+    } catch (SQLException e) {
+        // TODO Blocco di catch autogenerato
+        LOG.log(Level.SEVERE, "Errore query", e.getMessage());
+        return b;
+    }
+        
         finally{
             db.chiudiConnessione();
         }
+        return b;
+        
     }
     
     /**
@@ -141,7 +155,7 @@ public class ControlDatiPersonali {
      * @throws UtenteException
      * @throws InserimentoDatiException 
      */
-    public Utente getValoriUtente(String cf) throws UtenteException, DBConnectionException, InserimentoDatiException{
+    public Utente getValoriUtenteFromCf(String cf) throws UtenteException, DBConnectionException, InserimentoDatiException{
         Database db = new Database();
         StubUtente stub = new StubUtente(db);
         
@@ -163,6 +177,37 @@ public class ControlDatiPersonali {
         }
     }
     
+    /**
+     * Ricerca utente tramite lo username dell'account
+     * @param username
+     * @return
+     * @throws UtenteException
+     * @throws DBConnectionException
+     * @throws InserimentoDatiException
+     */
+    public Utente getValoriUtente(String username) throws DBConnectionException {
+        Database db = new Database();
+        DBAccount dbAccount= new DBAccount(db);
+        Account account_chiamante = null;
+        Utente utente;
+        
+        try {
+            db.apriConnessione();
+            account_chiamante = dbAccount.ricercaPerUsername(username);
+            utente=account_chiamante.getOwner();
+      
+            
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Errore query", e.getMessage());
+            return new Utente();
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+        return utente;
+ 
+    }
     
     /**
      * Modifica i certificati di iscrizione
@@ -310,14 +355,14 @@ public class ControlDatiPersonali {
         }
     }
        
-    
+   /* 
     /**
     * Restituisce il cf dei bambini associati all account con username in input
     * @return
      * @throws BambinoException 
      * @throws DBConnectionException 
     */
-    public List<String> getCfBambini(String username) throws BambinoException, DBConnectionException{
+   /* public List<String> getCfBambini(String username) throws BambinoException, DBConnectionException{
         Database db = new Database();
         StubBambino stub = new StubBambino(db);
         
@@ -332,39 +377,80 @@ public class ControlDatiPersonali {
         finally{
             db.chiudiConnessione();
         }
-    }
+    }*/
     
-    
-    /**
-     * 
-     * @param username username dell'account di cui si desiderano i dati dell iscriizone
-     * @param cfBambino codice fiscale del bambino di cui si vogliono i dati della domanda di iscrizione
-     *        
-     * @return dati domanda di iscrizione: se cfBambino è null restituire solo i dati collegati all'account (Dati genitori e situazione reddituale, senza i dati dei bambini e la situazione familiare)
-     *                                     se cfBambino diverso da null restituire tutti i dati compresi quelli del bambino e la sitauzione familiare
-     * @throws DomandaIscrizioneException 
-     * @throws DBConnectionException 
-     * @throws InserimentoDatiException 
-     */
-    public DomandaIscrizione getDatiIscrizione(String username,String cfBambino) throws DomandaIscrizioneException, DBConnectionException, InserimentoDatiException{
+    public List<Bambino> getFigli(String cf_genitore){
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        DBBambino dbBambino=new DBBambino(db);
         
-      //controllo sul codice fiscale che deve essere a 16 cifre
-        if(cfBambino.length() != 16)
-            throw new InserimentoDatiException("Il codice fiscale non è valido");
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{          
-            DomandaIscrizione d = stub.ricercaDomandaDaUsernameECfBambino(username, cfBambino);
-            if(d == null)
-                throw new DomandaIscrizioneException("Domanda non trovati");    
-            return d;
+       db.apriConnessione();
+       List<Bambino> cf=null;
+           
+        try{        
+            cf= dbBambino.ricercaFigliGenitore(cf_genitore);
+            
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Sql Error", e);
         }
         finally{
             db.chiudiConnessione();
         }
+        return cf;
+    }
+    
+    /**
+     * Restituisce domanda iscrizione fatta da genitore con username=username 
+     * @param username username dell'account di cui si desiderano i dati dell iscriizone
+     * @param cfBambino codice fiscale del bambino di cui si vogliono i dati della domanda di iscrizione, se null verranno passati tutti i dati della domanda fino ad ora inseriti, tranne il bambino collegato alla domanda
+     *        
+     * @return dati domanda di iscrizione: se cfBambino è null restituire solo i dati collegati all'account (Dati genitori e situazione reddituale, senza i dati dei bambini e la situazione familiare)
+     *                                     se cfBambino diverso da null restituire tutti i dati compresi quelli del bambino e la sitauzione familiare
+     *                                     se Domanda non esiste restituire null
+     * @throws DomandaIscrizioneException 
+     * @throws DBConnectionException 
+     * @throws InserimentoDatiException 
+     */
+    public DomandaIscrizione getDatiIscrizione(String username,String cfBambino) {
+        Database db = new Database();
+        DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
+        DomandaIscrizione domandaIscrizione=null;
+        
+        db.apriConnessione();
+       
+        if (cfBambino==null){
+            List<DomandaIscrizione> a;
+            try {
+                a = dbDomandaIscrizione.ricercaDomandaDaGenitore(getGenitoreFromUsername(username));
+                if (a.size()>0)
+                    domandaIscrizione= a.get(1);
+            } catch (SQLException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (GenitoreException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (DBConnectionException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (InserimentoDatiException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }
+            
+        }
+        /* 
+        else{
+            List<DomandaIscrizione> a = dbDomandaIscrizione.ricercaDomandaDaBambino(getDatiBambino(cfBambino));
+            if (a.size()>0)
+                domandaIscrizione= a.get(1);//restituisce la domanda fatta dal genitore
+            
+        }
+        */
+        
+        
+            db.chiudiConnessione();
+       return domandaIscrizione;
     }
     
     /**

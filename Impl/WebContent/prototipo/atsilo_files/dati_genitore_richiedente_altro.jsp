@@ -1,9 +1,9 @@
-<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
+<%@ page import="atsilo.application.*,atsilo.entity.*"
  %>
  <% 
 	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
  	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
-	Genitore genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale());
+	Genitore genitore=cdt.getDatiGenitore(utente.getCodiceFiscale());
  	String cognome=genitore.getCognome();
  	String nome=genitore.getNome();
  	String codiceFiscale=genitore.getCodiceFiscale();

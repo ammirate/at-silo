@@ -2,12 +2,12 @@
 	include file="atsilo_files/header.jsp"
 %>
 <!--Prende i dati del genitore -->
-<%@ page import="atsilo.stub.application.*,atsilo.entity.*"
+<%@ page import="atsilo.application.*,atsilo.entity.*"
  %>
  <%
- 	StubControlDatiPersonali cdt= StubControlDatiPersonali.getIstance();
-   	Utente utente=cdt.getUtenteFromUsername(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
-   	String tipologia_genitore=cdt.getDatiGenitoreFromCF(utente.getCodiceFiscale()).getTipo();
+ 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+    	Utente utente=cdt.getValoriUtente(username);//restituisce l'utente associato a quello username. (Utente generalizza le varie tipologie di utenti)
+    	String tipologia_genitore=cdt.getDatiGenitore(utente.getCodiceFiscale()).getTipo();
  %>
  <!--Script per gestire i form -->
  <script type="text/javascript">
@@ -50,7 +50,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
  
 <!--A seconda del tipo di genitore sara'  incluso il file con il form dati adeguato -->
 
-<% if ( tipologia_genitore.equals("personale") ) { %>
+<% if ( tipologia_genitore.equals("personale_studenti") ) { %>
   <%@include file="atsilo_files/dati_genitore_richiedente_personale.jsp"%>
 <% } else if ( tipologia_genitore.equals("residenti_fisciano")) { %>
    <%@include file="atsilo_files/dati_genitore_richiedente_residenti_fisciano.jsp"%>
