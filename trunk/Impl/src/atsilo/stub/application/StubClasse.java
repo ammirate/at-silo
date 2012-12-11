@@ -58,6 +58,14 @@ public class StubClasse {
     public boolean rifiutaClasse(Classe c){
         return true;
     }
+
+    /**
+     * @param id
+     * @return
+     */
+    public Classe RicercaClassePerId(int id) {
+        return new Classe();
+    }
     
     
 }

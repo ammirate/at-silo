@@ -377,12 +377,12 @@ public class ControlQuestionarioTest {
          * @throws DBConnectionException
          * @throws QuestionarioException
          */
-        public void modificaDomanda(String idVecchiaDomanda, DomandaQuestionario newDomanda) throws DBConnectionException, QuestionarioException{
+        public void modificaDomanda(int idVecchiaDomanda, DomandaQuestionario newDomanda) throws DBConnectionException, QuestionarioException{
             Database db = new Database();
             DBDomandaQuestionario storageDomanda = new DBDomandaQuestionario(db);
             
             try {
-                if(!idVecchiaDomanda.equalsIgnoreCase(newDomanda.getId()) )
+                if(idVecchiaDomanda!=newDomanda.getId() )
                     throw new SQLException();
                 storageDomanda.replace(storageDomanda.getDomanda(idVecchiaDomanda), newDomanda);
                 

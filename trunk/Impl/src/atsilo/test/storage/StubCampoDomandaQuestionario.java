@@ -16,12 +16,12 @@ public class StubCampoDomandaQuestionario {
     
     
     
-    CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", "1");
-    CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("check", "dai 26 ai 30", "26-30", "1");
-    CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("check", "dai 31 ai 36", "31-36", "1");   
-    CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "uno", "1", "3");
-    CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "due", "2", "3");
-    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "pi� di due", "2+", "3");
+    CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", 1);
+    CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("check", "dai 26 ai 30", "26-30", 1);
+    CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("check", "dai 31 ai 36", "31-36", 1);   
+    CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "uno", "1", 3);
+    CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "due", "2", 3);
+    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "pi� di due", "2+", 3);
     
     List<CampoDomandaQuestionario> CAMPI = new ArrayList<CampoDomandaQuestionario>();
     
@@ -67,14 +67,14 @@ public class StubCampoDomandaQuestionario {
 
 
     /**
-     * @param id
+     * @param i
      * @return
      */
-    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(String id) {
+    public List<CampoDomandaQuestionario> getCampiDomandaQuestionario(int i) {
         List<CampoDomandaQuestionario> toReturn = new ArrayList<CampoDomandaQuestionario>();
         
         for(CampoDomandaQuestionario c : CAMPI)
-            if(c.getIdDomandaQuestionario().equals(id))
+            if(c.getIdDomandaQuestionario()==i)
                 toReturn.add(c);
         return toReturn;
     }
