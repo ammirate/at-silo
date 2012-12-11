@@ -20,6 +20,8 @@ import static org.junit.Assert.*;
 
 import java.sql.SQLException;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import atsilo.application.ControlGestioneBando;
@@ -35,9 +37,8 @@ import atsilo.storage.DBBando;
 
 public class ControlGestioneBandoTest {
     private ControlGestioneBando control = ControlGestioneBando.getIstance();
-    private Database db = new Database();
     
-    
+
     /**
      * creo una domanda in locale e gli do punteggio 0 poi la inserisco nel database e tramite il
      * metodo inserisci punteggio cambio il punteggio e verifico che sia andato
@@ -52,7 +53,8 @@ public class ControlGestioneBandoTest {
     @Test
     public final void testInsrisciPunteggio() throws DBConnectionException,
             BandoException, SQLException {
-        
+    
+        Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
@@ -76,32 +78,34 @@ public class ControlGestioneBandoTest {
      */
     @Test
     public final void testInserisciIntervalloBando()
+        
             throws DBConnectionException, BandoException, SQLException {
-        if (!db.apriConnessione()) {
+        Database db = new Database();
+        if (!db.apriConnessione())
+        {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
             DBBando dbBando = new DBBando(db);
             Bando bando = new Bando();
-            System.out.println(dbBando.getBAndo().getiD());
-            bando.setiD(1);
-            bando.setDataInizioBando("10");
-            bando.setDataFineBando("11");
-            bando.setDataInizioPresentazioneRinuncia("12");
-            bando.setDataFinePresentazioneRinuncia("13");
-            bando.setDataFineRinuncia("14");
+            bando.setId(1);
+            bando.setDataInizioBando("2011-05-01");
+            bando.setDataFineBando("2011-05-02");
+            bando.setDataInizioPresentazioneRinuncia("2011-05-03");
+            bando.setDataFinePresentazioneRinuncia("2011-05-04");
+            bando.setDataFineRinuncia("2011-05-05");
             bando.setPostiDisponibili(40);
-            control.modificaBando("15", "16", "17", "18", "19", 30);
             
-            assertEquals("15", dbBando.getBAndo().getDataInizioBando());
-            assertEquals("16", dbBando.getBAndo().getDataFineBando());
-            assertEquals("17", dbBando.getBAndo()
-                    .getDataInizioPresentazioneRinuncia());
-            assertEquals("18", dbBando.getBAndo()
-                    .getDataFinePresentazioneRinuncia());
-            assertEquals("19", dbBando.getBAndo().getDataFineRinuncia());
-            assertEquals(30, dbBando.getBAndo().getPostiDisponibili());
-        } finally {
+            control.modificaBando("2011-05-06", "2011-05-07", "2011-05-08", "2011-05-09", "2011-05-10", 30);
+            
+            assertEquals("2011-05-06", dbBando.getBando().getDataInizioBando());
+            assertEquals("2011-05-07", dbBando.getBando().getDataFineBando());
+            assertEquals("2011-05-08", dbBando.getBando().getDataInizioPresentazioneRinuncia());
+            assertEquals("2011-05-09", dbBando.getBando().getDataFinePresentazioneRinuncia());
+            assertEquals("2011-05-10", dbBando.getBando().getDataFineRinuncia());
+            assertEquals(30, dbBando.getBando().getPostiDisponibili());
+        } finally 
+        {
             db.chiudiConnessione();
         }
     }
@@ -114,13 +118,14 @@ public class ControlGestioneBandoTest {
     @Test
     public final void testModificaPath() throws DBConnectionException,
             BandoException, SQLException {
+        Database db = new Database();
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
             DBBando dbBando = new DBBando(db);
             Bando bando = new Bando();
-            bando.setiD(1);
+            bando.setId(1);
             bando.setDataInizioBando("10");
             bando.setDataFineBando("11");
             bando.setDataInizioPresentazioneRinuncia("12");
@@ -129,8 +134,10 @@ public class ControlGestioneBandoTest {
             bando.setPostiDisponibili(40);
             bando.setPath("ciaoo");
             control.modificaPath("bye");
-            assertEquals("bye", dbBando.getBAndo().getPath());
-        } finally {
+            
+            assertEquals("bye", dbBando.getBando().getPath());
+        } finally 
+        {
             db.chiudiConnessione();
         }
     }
