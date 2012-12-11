@@ -57,12 +57,12 @@ public class DBBando extends DBBeans<Bando> {
     private static Map<String, String> creaMapping() {
         Map<String, String> res = new HashMap<String, String>();
         res.put("id", "id");
-        res.put("data_inizio_bando", "dataInizioBando");
-        res.put("data_fine_bando", "dataFineBando");
-        res.put("data_inizio_presentazione", "dataInizioPresentazione");
-        res.put("data_fine_presentazione", "dataFinePresentazione");
-        res.put("data_fine_rinuncia", "dataFineRinuncia");
-        res.put("posti_disponibili", "postiDisponibili");
+        res.put("dataInizioBando","data_inizio_bando");
+        res.put("dataFineBando","data_fine_bando");
+        res.put("dataInizioPresentazioneRinuncia","data_inizio_presentazione_rinuncia");
+        res.put("dataFinePresentazioneRinuncia","data_fine_presentazione_rinuncia");
+        res.put("dataFineRinuncia","data_fine_rinuncia");
+        res.put("postiDisponibili","posti_disponibili");
         res.put("path", "path");     
         
         return Collections.unmodifiableMap(res);

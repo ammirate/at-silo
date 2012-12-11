@@ -50,7 +50,7 @@ public class ControlGestioneBandoTest {
      * @throws DBConnectionException
      * @throws SQLException
      */
-    @Test
+    /*@Test
     public final void testInsrisciPunteggio() throws DBConnectionException,
             BandoException, SQLException {
     
@@ -67,7 +67,7 @@ public class ControlGestioneBandoTest {
             db.chiudiConnessione();
         }
         
-    }
+    }*/
     
     
     /**
