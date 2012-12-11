@@ -20,8 +20,8 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.Database;
-import atsilo.stub.storage.DBBando;
-import atsilo.stub.storage.DBDomandaIscrizione;
+import atsilo.storage.DBBando;
+import atsilo.storage.DBDomandaIscrizione;
 import java.sql.SQLException;
 
 
@@ -146,7 +146,7 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            Bando bando;
+            Bando bando; 
             
             if (dbBando.getBAndo() == null) {
                 bando = new Bando(0, inizioBando, fineBando,
@@ -184,7 +184,7 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            if (dbBando.getBAndo() == null) {
+            if (dbBando.getBAndo().getDataInizioBando() == null) {
                 throw new DBConnectionException(
                         "Bando non presente impossibile modificare/o inserire il path");
             } else {
