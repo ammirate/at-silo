@@ -66,29 +66,24 @@ public class ControlDatiPersonali {
      * @throws SQLException 
      * @throws InserimentoDatiException 
      */
-    public Genitore getDatiGenitore(String codiceFiscale) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
+    public Genitore getDatiGenitore(String codiceFiscale){
         Database db = new Database();
         DBGenitore dbGenitore= new DBGenitore(db);
-        
-        //StubGenitore stub = new StubGenitore(db);//canc
-        
-        
-        //controllo sul codice fiscale che deve essere a 16 cifre
-        if(codiceFiscale.length() != 16)
-            throw new InserimentoDatiException("Il codice fiscale non è valido");   
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{            
-            Genitore g = dbGenitore.getGenitorePerCF(codiceFiscale);
-           
-            if(g == null)
-                throw new GenitoreException("Genitore non trovato");
-            return g;
+        Genitore genitore=null;
+        try{
+        db.apriConnessione();
+      
+            try {
+                genitore= dbGenitore.getGenitorePerCF(codiceFiscale) ;
+            } catch (SQLException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }
         }
         finally{
             db.chiudiConnessione();
         }
+        return genitore;
     }
    
     public Genitore getGenitoreFromUsername(String user) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
@@ -188,19 +183,23 @@ public class ControlDatiPersonali {
     public Utente getValoriUtente(String username) throws DBConnectionException {
         Database db = new Database();
         DBAccount dbAccount= new DBAccount(db);
+        DBGenitore dbGenitore =new DBGenitore(db);
+        
         Account account_chiamante = null;
-        Utente utente;
+        Utente utente = new Utente();
         
         try {
             db.apriConnessione();
             account_chiamante = dbAccount.ricercaPerUsername(username);
-            utente=account_chiamante.getOwner();
-      
+            String cf=account_chiamante.getOwner().getCodiceFiscale();//codice fiscale account
             
+            //aggiungere controlli per altre tipologie di utente
+            if (dbGenitore.getGenitorePerCF(cf)!=null)
+                utente=dbGenitore.getGenitorePerCF(cf);
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "Errore query", e.getMessage());
-            return new Utente();
+            return utente;
         }
         finally{
             db.chiudiConnessione();
@@ -459,6 +458,23 @@ public class ControlDatiPersonali {
      */
     public static ControlDatiPersonali getIstance(){
         return INSTANCE;
+    }
+
+
+    /**
+     * @param username
+     * @param password
+     * @param email
+     * @param tipologia_genitore
+     * @return
+     */
+    public boolean updateAccount(String username, String password,
+            String email, String tipologia_genitore) {
+        Database db = new Database();
+        DBAccount dbAccount=new DBAccount(db);
+        
+        //aggiungere tutti i dbPersonale e fare update
+        return true;
     }
     
   
