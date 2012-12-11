@@ -86,16 +86,19 @@ public class ControlDatiPersonali {
         return genitore;
     }
    
-    public Genitore getGenitoreFromUsername(String user) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
+    public Genitore getGenitoreFromUsername(String username) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
         Database db = new Database();
-        StubGenitore stub = new StubGenitore(db);
+        DBGenitore dbGenitore= new DBGenitore(db);
+        DBAccount dbAccount= new DBAccount(db);
+        Account account=dbAccount.ricercaPerUsername(username);
+        
         
         //controllo sul codice fiscale che deve essere a 16 cifre
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{            
-            Genitore g = stub.getGenitoreFromUsername(user);
+            Genitore g = dbGenitore.getGenitorePerCF(account.getOwner().getCodiceFiscale());
            
             if(g == null)
                 throw new GenitoreException("Genitore non trovato");

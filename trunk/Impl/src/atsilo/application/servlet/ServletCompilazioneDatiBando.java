@@ -281,7 +281,22 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         }//fine update dati genitore
         
         if ( request.getParameter("chiamante").equals("bambino")){//se chiamante è una pagina bambino  
-            if (controlDatiPersonali.setDatiBambino(username, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, categoriaAppartenenza, classe, genitore_richiedente, assenze))
+            String cf_genitore=(controlDatiPersonali.getUtenteFromUsername(username_utente)).getCodiceFiscale();
+            Genitore genitore_richiedente=new Genitore();
+            try {
+                genitore_richiedente = controlDatiPersonali.getDatiGenitoreFromCF(cf_genitore);
+            } catch (GenitoreException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (DBConnectionException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (SQLException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }
+                    
+            if (controlDatiPersonali.setDatiBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null))
                 pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
             
             else 
