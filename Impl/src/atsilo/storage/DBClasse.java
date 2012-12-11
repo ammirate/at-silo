@@ -84,7 +84,7 @@ public class DBClasse extends DBBeans<Classe>
             tabella.setParam(stmt, 1, "id", id);
             ResultSet res = stmt.executeQuery();
         if(res.next()){
-           cla.setId(res.getString("id"));
+           cla.setId(res.getInt("id"));
            
            // si dovrebbero inserire anche le due liste(educatori ed eventi)
         }
@@ -114,7 +114,7 @@ public class DBClasse extends DBBeans<Classe>
     protected Classe creaBean(ResultSet r) throws SQLException {
         Classe c = new Classe();
         
-        c.setId(r.getString("domanda_questionario"));
+        c.setId(r.getInt("id"));
         
         return c;
         
