@@ -277,29 +277,51 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
      * @throws SQLException se si verifica un errore di connessione con il database.
      */
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException {
-        DomandaIscrizione d=new DomandaIscrizione();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-        tabella.setParam(stmt, 1, "id", id);
-        ResultSet res= stmt.executeQuery();
-        Bambino b=new Bambino();
-        Genitore g=new Genitore();
+        DomandaIscrizione temp=new DomandaIscrizione();
         
-        if(res.next())
-        {
-            String ge=res.getString("genitore");
-            String ba=res.getString("bambino");
-            g.setCodiceFiscale(ge);
-            b.setCodiceFiscale(ba);
-            d.setBambino(b);
-            d.setGenitore(g);
-            d.setDataPresentazione(res.getDate("data_presentazione"));
-            d.setId(res.getInt("id"));
-            d.setPosizione(res.getInt("posizione"));
-            d.setPunteggio(res.getInt("punteggio"));
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
+        tabella.setParam(stmt, 1, "id", id);
+        ResultSet r= stmt.executeQuery();
+        
+        
+        
+        if(r.next()){
+        
+            Bambino b=new Bambino();
+            Genitore g=new Genitore();
+            Servizio s=new Servizio();
+            String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+            String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+            int se=r.getInt("servizio");s.setId(se);
+            
+            
+            temp.setId(r.getInt("id"));
+            temp.setPosizione(r.getInt("posizione"));
+            temp.setPunteggio(r.getInt("punteggio"));
+            temp.setDataPresentazione(r.getDate("data_presentazione"));
+            temp.setBambino(b);
+            temp.setGenitore(g);
+            temp.setServizio(s);
+            temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+            temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+            temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+            temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+            temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+            temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+            temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+            temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+            temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+            temp.setGenitoreSeparato(r.getBoolean("genitoreSeparato"));
+            temp.setGenitoreSolo(r.getBoolean("genitoreSolo"));
+            temp.setGenitoreVedovo(r.getBoolean("genitoreVedovo"));
+            temp.setIsee(r.getFloat("isee"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStatoDomanda(r.getString("stato_domanda"));
+            temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
         }
-        res.close();
-        return d;
+        r.close();
+        return temp;
     }
     
     /**
@@ -347,7 +369,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
      * @return
      * @throws SQLException
      */
-    public String getValoreStatoIscrizione(int id) throws SQLException{
+  /*  public String getValoreStatoIscrizione(int id) throws SQLException{
         
         
         DomandaIscrizione d=new DomandaIscrizione();
@@ -368,7 +390,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         return true;
         
         
-    }
+    }*/
     
     protected Assegnazione[] creaAssegnazioni(DomandaIscrizione bean) {
        
