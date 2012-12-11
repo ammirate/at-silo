@@ -129,6 +129,7 @@ public class Tabella /* implements ManagerDB */{
     public void setParam(PreparedStatement stmt, int par, int type,
             Object val) throws SQLException {
         String err = "sconosciuto";
+                
         try {
             if (val == null) {
                 err = "nullo";
@@ -137,12 +138,32 @@ public class Tabella /* implements ManagerDB */{
                 switch (type) {
                 case Types.BOOLEAN:
                     err = "booleano";
-                    stmt.setBoolean(par, (Boolean) val);
+                    /*
+                     * Permette di assegnare campi Boolean
+                     * utilizzando un intero.
+                     */
+                    if (val instanceof Boolean) {
+                        stmt.setBoolean(par, (Boolean) val);
+                    } else {
+                        int iVal = ((Number) val).intValue();
+                        stmt.setBoolean(par, (iVal != 0));
+                    }
                 case Types.SMALLINT:
                 case Types.INTEGER:
                 case Types.BIGINT:
+                case Types.TINYINT:
                     err = "numerico intero";
-                    stmt.setLong(par, ((Number) val).longValue());
+                    
+                    /*
+                     * Alcuni database (tra cui MySQL)
+                     * implementano i booleani come TINYINT.
+                     * Questo risolve i problemi di cast
+                     */
+                    if (val instanceof Boolean) {
+                        setParam(stmt, par, Types.BOOLEAN, val);
+                    } else {
+                        stmt.setLong(par, ((Number) val).longValue());
+                    }
                     break;
                 case Types.DECIMAL:
                 case Types.DOUBLE:
