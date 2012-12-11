@@ -1,28 +1,32 @@
--- MySQL dump 10.13  Distrib 5.5.28, for debian-linux-gnu (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 3.5.2.2
+-- http://www.phpmyadmin.net
 --
--- Host: localhost    Database: atsilo
--- ------------------------------------------------------
--- Server version	5.5.28-0ubuntu0.12.04.2
+-- Host: 127.0.0.1
+-- Generato il: Dic 11, 2012 alle 13:25
+-- Versione del server: 5.5.27
+-- Versione PHP: 5.4.7
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `account`
+-- Database: `atsilo`
 --
 
-DROP TABLE IF EXISTS `account`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `account` (
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `account`
+--
+
+CREATE TABLE IF NOT EXISTS `account` (
   `username` varchar(50) NOT NULL,
   `password` varchar(256) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
@@ -31,60 +35,63 @@ CREATE TABLE `account` (
   `responsabile_questionario` varchar(50) DEFAULT NULL,
   `responsabile_tirocini` varchar(50) DEFAULT NULL,
   `tirocinante` varchar(50) DEFAULT NULL,
+  `delegato_rettore` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`username`),
   KEY `genitore` (`genitore`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
   KEY `responsabile_questionario` (`responsabile_questionario`),
   KEY `responsabile_tirocini` (`responsabile_tirocini`),
-  KEY `tirocinante` (`tirocinante`),
-  CONSTRAINT `account_ibfk_1` FOREIGN KEY (`responsabile_tirocini`) REFERENCES `responsabile_tirocini` (`codice_fiscale`),
-  CONSTRAINT `account_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`)
+  KEY `tirocinante` (`tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `account`
+-- Dump dei dati per la tabella `account`
 --
 
-LOCK TABLES `account` WRITE;
-/*!40000 ALTER TABLE `account` DISABLE KEYS */;
-INSERT INTO `account` VALUES ('a.damelia','alfonsoda',NULL,NULL,'DMLLFN71L12A333B',NULL,NULL,NULL),('a.defazio','andreadf','DFZNDR91L14A909D',NULL,NULL,NULL,NULL,NULL),('a.desantis','arturods',NULL,NULL,NULL,'DSTRTR58L32A333B',NULL,NULL),('a.senatore','antonellas',NULL,'SNTNTN53N69B309D',NULL,NULL,NULL,NULL),('d.tranfa','domenicot',NULL,'TRNDMN64L12T048Y	',NULL,NULL,NULL,NULL),('g.delbuono','giuseppedb','DBNGPP69A23B222C',NULL,NULL,NULL,NULL,NULL),('g.dicostanzo','giovannadc','DCSGVN74A23B224X',NULL,NULL,NULL,NULL,NULL),('l.vella','laurav','VLLLRU83A24T928B',NULL,NULL,NULL,NULL,NULL),('m.chiavelli','mauroc','CVLMRA69A23B333C',NULL,NULL,NULL,NULL,NULL),('m.verrone','maddalenav',NULL,NULL,'VRRMDD64T32A048N',NULL,NULL,NULL),('s.buselli','silvanab',NULL,'BSLSVN62L12B099E',NULL,NULL,NULL,NULL),('s.delregno','santodr','DRGSNT81A26B045C',NULL,NULL,NULL,NULL,NULL),('s.passaro','susannap','PSSSNN85L98A980I',NULL,NULL,NULL,NULL,NULL),('v.mars','veronicam',NULL,'MRSVRN90A32B235B',NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `account` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`, `tirocinante`, `delegato_rettore`) VALUES
+('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL, NULL, NULL),
+('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL, NULL, NULL, NULL),
+('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL, NULL, NULL),
+('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL),
+('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y	', NULL, NULL, NULL, NULL, NULL),
+('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL, NULL, NULL, NULL),
+('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL, NULL, NULL),
+('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL, NULL, NULL),
+('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL, NULL, NULL),
+('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL, NULL),
+('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL),
+('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL, NULL, NULL),
+('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL, NULL, NULL),
+('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `assenza`
+-- Struttura della tabella `assenza`
 --
 
-DROP TABLE IF EXISTS `assenza`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `assenza` (
+CREATE TABLE IF NOT EXISTS `assenza` (
   `bambino` varchar(50) DEFAULT NULL,
   `data` date DEFAULT NULL,
   KEY `bambino` (`bambino`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `assenza`
+-- Dump dei dati per la tabella `assenza`
 --
 
-LOCK TABLES `assenza` WRITE;
-/*!40000 ALTER TABLE `assenza` DISABLE KEYS */;
-INSERT INTO `assenza` VALUES ('CVLRRA12A23B333C','2012-11-06'),('DFZGNN12L14A909D','2012-09-10');
-/*!40000 ALTER TABLE `assenza` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `assenza` (`bambino`, `data`) VALUES
+('CVLRRA12A23B333C', '2012-11-06'),
+('DFZGNN12L14A909D', '2012-09-10');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `attivita`
+-- Struttura della tabella `attivita`
 --
 
-DROP TABLE IF EXISTS `attivita`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `attivita` (
+CREATE TABLE IF NOT EXISTS `attivita` (
   `titolo` varchar(50) NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   `categoria` varchar(50) DEFAULT NULL,
@@ -95,29 +102,28 @@ CREATE TABLE `attivita` (
   PRIMARY KEY (`titolo`),
   KEY `programma_educativo_settimanale` (`programma_educativo_settimanale`),
   KEY `registro` (`registro`),
-  KEY `nota` (`nota`),
-  CONSTRAINT `attivita_ibfk_1` FOREIGN KEY (`nota`) REFERENCES `nota` (`titolo`)
+  KEY `nota` (`nota`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `attivita`
+-- Dump dei dati per la tabella `attivita`
 --
 
-LOCK TABLES `attivita` WRITE;
-/*!40000 ALTER TABLE `attivita` DISABLE KEYS */;
-INSERT INTO `attivita` VALUES ('Attività X1','X1','X',1,1,NULL,NULL),('Attività X2','X2','X',1,1,NULL,NULL),('Attività Y1','Y1','Y',2,2,NULL,NULL),('Attività Y2','Y2','Y',2,2,NULL,NULL),('Attività Z1','Z1','Z',3,3,NULL,NULL),('Attività Z2','Z2','Z',3,3,NULL,NULL);
-/*!40000 ALTER TABLE `attivita` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `attivita` (`titolo`, `descrizione`, `categoria`, `programma_educativo_settimanale`, `registro`, `path`, `nota`) VALUES
+('Attività X1', 'X1', 'X', 1, 1, NULL, NULL),
+('Attività X2', 'X2', 'X', 1, 1, NULL, NULL),
+('Attività Y1', 'Y1', 'Y', 2, 2, NULL, NULL),
+('Attività Y2', 'Y2', 'Y', 2, 2, NULL, NULL),
+('Attività Z1', 'Z1', 'Z', 3, 3, NULL, NULL),
+('Attività Z2', 'Z2', 'Z', 3, 3, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `attivita_tirocinante`
+-- Struttura della tabella `attivita_tirocinante`
 --
 
-DROP TABLE IF EXISTS `attivita_tirocinante`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `attivita_tirocinante` (
+CREATE TABLE IF NOT EXISTS `attivita_tirocinante` (
   `id` int(50) NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   `data` date DEFAULT NULL,
@@ -126,26 +132,21 @@ CREATE TABLE `attivita_tirocinante` (
   `valutazione` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `attivita_tirocinante`
+-- Dump dei dati per la tabella `attivita_tirocinante`
 --
 
-LOCK TABLES `attivita_tirocinante` WRITE;
-/*!40000 ALTER TABLE `attivita_tirocinante` DISABLE KEYS */;
-INSERT INTO `attivita_tirocinante` VALUES (978786,'Recita natalizia','2012-12-21','12:00','13:00',NULL);
-/*!40000 ALTER TABLE `attivita_tirocinante` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `attivita_tirocinante` (`id`, `descrizione`, `data`, `ora_inizio`, `ora_fine`, `valutazione`) VALUES
+(978786, 'Recita natalizia', '2012-12-21', '12:00', '13:00', NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `bambino`
+-- Struttura della tabella `bambino`
 --
 
-DROP TABLE IF EXISTS `bambino`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `bambino` (
+CREATE TABLE IF NOT EXISTS `bambino` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -169,29 +170,31 @@ CREATE TABLE `bambino` (
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`),
-  KEY `cf_genitore_nonrichiedente` (`cf_genitore_nonrichiedente`),
-  CONSTRAINT `bambino_ibfk_1` FOREIGN KEY (`cf_genitore_nonrichiedente`) REFERENCES `genitore` (`codice_fiscale`)
+  KEY `cf_genitore_nonrichiedente` (`cf_genitore_nonrichiedente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `bambino`
+-- Dump dei dati per la tabella `bambino`
 --
 
-LOCK TABLES `bambino` WRITE;
-/*!40000 ALTER TABLE `bambino` DISABLE KEYS */;
-INSERT INTO `bambino` VALUES ('Aurora','Chiavelli','CVLRRA12A23B333C','2012-09-07','via Roma, 2 - Fisciano (SA)','Lattanti','CVLMRA69A23B333C',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Luca','Del Buono','DBNLCU11A23B222C','2011-12-30','via degli Ulivi, 16 - 00100 Roma','Semisvezzati','DBNGPP69A23B222C',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Maria','Del Buono','DBNMRA11A23B222C','2010-11-17','via degli Ulivi, 16 - 00100 Roma','Svezzati','DBNGPP69A23B222C',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Gennaro','De Fazio','DFZGNN12L14A909D','2012-09-11','via delle X, 69 - Vallo della Lucania (SA)','Lattanti','DFZNDR91L14A909D',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Candida','Del Regno','DRGCND10A26B045C','2010-11-01','via delle Y, 10 - Avellino (AV)','Svezzati','DRGSNT81A26B045C',3,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Luigi','Mascia','MSCLGU12A24T928B','2012-10-16','piazza Risorgimento, 1 - Benevento (BN)','Lattanti','VLLLRU83A24T928B',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Marco','Pilato','PLTMRC11A23B224X	','2011-11-08','via Ferreria, 12 - Baronissi (SA)','Semisvezzati','DCSGVN74A23B224X',3,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Matteo','Scalo','SCLMTT12L98A980I','2012-01-31','piazza Malta, 23 - Salerno (SA)	','Semisvezzati','PSSSNN85L98A980I',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Annalisa','Scalo','SCLNNA11L98A980I','2011-11-22','piazza Malta, 23 - Salerno (SA)	','Svezzati','PSSSNN85L98A980I',3,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `bambino` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `bambino` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cf_genitore_nonrichiedente`) VALUES
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma, 2 - Fisciano (SA)', 'Lattanti', 'CVLMRA69A23B333C', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi, 16 - 00100 Roma', 'Semisvezzati', 'DBNGPP69A23B222C', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y, 10 - Avellino (AV)', 'Svezzati', 'DRGSNT81A26B045C', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento, 1 - Benevento (BN)', 'Lattanti', 'VLLLRU83A24T928B', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria, 12 - Baronissi (SA)', 'Semisvezzati', 'DCSGVN74A23B224X', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta, 23 - Salerno (SA)	', 'Semisvezzati', 'PSSSNN85L98A980I', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta, 23 - Salerno (SA)	', 'Svezzati', 'PSSSNN85L98A980I', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `bando`
+-- Struttura della tabella `bando`
 --
 
-DROP TABLE IF EXISTS `bando`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `bando` (
+CREATE TABLE IF NOT EXISTS `bando` (
   `id` int(11) NOT NULL,
   `data_inizio_bando` date DEFAULT NULL,
   `data_fine_bando` date DEFAULT NULL,
@@ -202,26 +205,22 @@ CREATE TABLE `bando` (
   `path` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `bando`
+-- Dump dei dati per la tabella `bando`
 --
 
-LOCK TABLES `bando` WRITE;
-/*!40000 ALTER TABLE `bando` DISABLE KEYS */;
-INSERT INTO `bando` VALUES (1,'2012-11-01','2012-11-30','2013-12-21','2013-12-21','2013-12-21',0,NULL),(2,'2011-11-01','2012-11-30','2013-12-21','2013-12-21','2013-12-21',0,NULL);
-/*!40000 ALTER TABLE `bando` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `bando` (`id`, `data_inizio_bando`, `data_fine_bando`, `data_inizio_presentazione_rinuncia`, `data_fine_presentazione_rinuncia`, `data_fine_rinuncia`, `posti_disponibili`, `path`) VALUES
+(1, '2012-11-01', '2012-11-30', '2013-12-21', '2013-12-21', '2013-12-21', 0, NULL),
+(2, '2011-11-01', '2012-11-30', '2013-12-21', '2013-12-21', '2013-12-21', 0, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `campo_domanda_questionario`
+-- Struttura della tabella `campo_domanda_questionario`
 --
 
-DROP TABLE IF EXISTS `campo_domanda_questionario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `campo_domanda_questionario` (
+CREATE TABLE IF NOT EXISTS `campo_domanda_questionario` (
   `domanda_questionario` int(11) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
@@ -230,98 +229,81 @@ CREATE TABLE `campo_domanda_questionario` (
   KEY `domanda_questionario` (`domanda_questionario`),
   KEY `risposta_questionario` (`risposta_questionario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `campo_domanda_questionario`
+-- Dump dei dati per la tabella `campo_domanda_questionario`
 --
 
-LOCK TABLES `campo_domanda_questionario` WRITE;
-/*!40000 ALTER TABLE `campo_domanda_questionario` DISABLE KEYS */;
-INSERT INTO `campo_domanda_questionario` VALUES (1,'radio','Lattante','Lattante',NULL),(1,'radio','Semi-divezzi','Semi-divezzi',NULL),(1,'radio','Divezzi','Divezzi',NULL),(2,'radio','Part-time senza pranzo','Part-time senza pranzo',NULL),(2,'radio','Part-time con pranzo','Part-time con pranzo',NULL),(2,'radio','Full-time','Full-time',NULL),(4,'int','Anno di nascita della madre',NULL,NULL),(4,'int','Anno di nascita del padre',NULL,NULL),(5,'int','Numero dei componenti della famiglia',NULL,NULL),(6,'tipo X','Domanda X',NULL,NULL),(7,'tipo Y','Domanda Y',NULL,NULL),(8,'tipo Z','Domanda Z',NULL,NULL),(9,'tipo ABC','Domanda ABC',NULL,NULL);
-/*!40000 ALTER TABLE `campo_domanda_questionario` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `campo_domanda_questionario` (`domanda_questionario`, `tipo`, `descrizione`, `valore`, `risposta_questionario`) VALUES
+(1, 'radio', 'Lattante', 'Lattante', NULL),
+(1, 'radio', 'Semi-divezzi', 'Semi-divezzi', NULL),
+(1, 'radio', 'Divezzi', 'Divezzi', NULL),
+(2, 'radio', 'Part-time senza pranzo', 'Part-time senza pranzo', NULL),
+(2, 'radio', 'Part-time con pranzo', 'Part-time con pranzo', NULL),
+(2, 'radio', 'Full-time', 'Full-time', NULL),
+(4, 'int', 'Anno di nascita della madre', NULL, NULL),
+(4, 'int', 'Anno di nascita del padre', NULL, NULL),
+(5, 'int', 'Numero dei componenti della famiglia', NULL, NULL),
+(6, 'tipo X', 'Domanda X', NULL, NULL),
+(7, 'tipo Y', 'Domanda Y', NULL, NULL),
+(8, 'tipo Z', 'Domanda Z', NULL, NULL),
+(9, 'tipo ABC', 'Domanda ABC', NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `classe`
+-- Struttura della tabella `classe`
 --
 
-DROP TABLE IF EXISTS `classe`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `classe` (
+CREATE TABLE IF NOT EXISTS `classe` (
   `id` int(11) NOT NULL,
   `stato_classe` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `classe`
+-- Dump dei dati per la tabella `classe`
 --
 
-LOCK TABLES `classe` WRITE;
-/*!40000 ALTER TABLE `classe` DISABLE KEYS */;
-INSERT INTO `classe` VALUES (1,'Approvata'),(2,''),(3,''),(4,'');
-/*!40000 ALTER TABLE `classe` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `classe` (`id`, `stato_classe`) VALUES
+(1, 'Approvata'),
+(2, ''),
+(3, ''),
+(4, '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `compila`
+-- Struttura della tabella `compila`
 --
 
-DROP TABLE IF EXISTS `compila`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `compila` (
+CREATE TABLE IF NOT EXISTS `compila` (
   `questionario` int(11) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
   KEY `questionario` (`questionario`),
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `compila`
+-- Struttura della tabella `contestazione`
 --
 
-LOCK TABLES `compila` WRITE;
-/*!40000 ALTER TABLE `compila` DISABLE KEYS */;
-/*!40000 ALTER TABLE `compila` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `contestazione`
---
-
-DROP TABLE IF EXISTS `contestazione`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `contestazione` (
+CREATE TABLE IF NOT EXISTS `contestazione` (
   `id` int(5) NOT NULL,
   `data` date DEFAULT NULL,
   `descrizione` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `contestazione`
+-- Struttura della tabella `domanda_iscrizione`
 --
 
-LOCK TABLES `contestazione` WRITE;
-/*!40000 ALTER TABLE `contestazione` DISABLE KEYS */;
-/*!40000 ALTER TABLE `contestazione` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `domanda_iscrizione`
---
-
-DROP TABLE IF EXISTS `domanda_iscrizione`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `domanda_iscrizione` (
+CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `id` int(11) NOT NULL,
   `data_presentazione` date DEFAULT NULL,
   `punteggio` int(50) DEFAULT NULL,
@@ -350,52 +332,56 @@ CREATE TABLE `domanda_iscrizione` (
   KEY `bambino` (`bambino`),
   KEY `servizio` (`servizio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `domanda_iscrizione`
+-- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
-LOCK TABLES `domanda_iscrizione` WRITE;
-/*!40000 ALTER TABLE `domanda_iscrizione` DISABLE KEYS */;
-INSERT INTO `domanda_iscrizione` VALUES (1,'2012-07-19',94,1,'CVLMRA69A23B333C',1,'CVLRRA12A23B333C','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(2,'2012-08-13',93,2,'DBNGPP69A23B222C',7,'DBNLCU11A23B222C','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(3,'2012-08-13',94,3,'DBNGPP69A23B222C',8,'DBNMRA11A23B222C','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(4,'2012-11-01',91,4,'DFZNDR91L14A909D',2,'DFZGNN12L14A909D','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(5,'2012-06-12',90,5,'DRGSNT81A26B045C',5,'DRGCND10A26B045C','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(6,'2012-09-25',88,6,'VLLLRU83A24T928B',6,'MSCLGU12A24T928B','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(7,'2012-08-01',85,7,'DCSGVN74A23B224X',9,'PLTMRC11A23B224X ','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(8,'2012-08-28',79,8,'PSSSNN85L98A980I',4,'SCLMTT12L98A980I','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL),(9,'2012-08-28',79,9,'PSSSNN85L98A980I',3,'SCLNNA11L98A980I','','','','',0,0,0,0,0,0,0,0,0,'',0,NULL);
-/*!40000 ALTER TABLE `domanda_iscrizione` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `domanda_iscrizione` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`) VALUES
+(1, '2012-07-19', 94, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(2, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(3, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(4, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(5, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(6, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(7, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(8, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
+(9, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `domanda_questionario`
+-- Struttura della tabella `domanda_questionario`
 --
 
-DROP TABLE IF EXISTS `domanda_questionario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `domanda_questionario` (
+CREATE TABLE IF NOT EXISTS `domanda_questionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `descrizione` varchar(100) DEFAULT NULL,
   `questionario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `questionario` (`questionario`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
--- Dumping data for table `domanda_questionario`
+-- Dump dei dati per la tabella `domanda_questionario`
 --
 
-LOCK TABLES `domanda_questionario` WRITE;
-/*!40000 ALTER TABLE `domanda_questionario` DISABLE KEYS */;
-INSERT INTO `domanda_questionario` VALUES (1,'Sezione di appartenenza del bambino',1),(2,'Regime di frequenza del bambino',1),(4,'Anno di nascita dei genitori',1),(5,'Numero dei componenti della famiglia',1),(6,'Domanda X',2),(7,'Domanda Y',2),(8,'Domanda Z',2);
-/*!40000 ALTER TABLE `domanda_questionario` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `domanda_questionario` (`id`, `descrizione`, `questionario`) VALUES
+(1, 'Sezione di appartenenza del bambino', 1),
+(2, 'Regime di frequenza del bambino', 1),
+(4, 'Anno di nascita dei genitori', 1),
+(5, 'Numero dei componenti della famiglia', 1),
+(6, 'Domanda X', 2),
+(7, 'Domanda Y', 2),
+(8, 'Domanda Z', 2);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `educatore_didattico`
+-- Struttura della tabella `educatore_didattico`
 --
 
-DROP TABLE IF EXISTS `educatore_didattico`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `educatore_didattico` (
+CREATE TABLE IF NOT EXISTS `educatore_didattico` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -417,26 +403,23 @@ CREATE TABLE `educatore_didattico` (
   `provincia_domicilio` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `educatore_didattico`
+-- Dump dei dati per la tabella `educatore_didattico`
 --
 
-LOCK TABLES `educatore_didattico` WRITE;
-/*!40000 ALTER TABLE `educatore_didattico` DISABLE KEYS */;
-INSERT INTO `educatore_didattico` VALUES ('Mauro','Sisillo','SLLMRA90A29N830P','Laurea in Lettere',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','0','0','',''),('Lorella','Sessa','SSSLRL78B19B908X','Laurea in Scienze della Formazione',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','0','0','',''),('Elena','Teresi','TRSLNE99S30X203Y','Laurea in Matematica',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'','0','0','','');
-/*!40000 ALTER TABLE `educatore_didattico` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `educatore_didattico` (`nome`, `cognome`, `codice_fiscale`, `titolo_di_studi`, `data_di_nascita`, `telefono`, `email`, `comune_di_nascita`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `cittadinanza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`) VALUES
+('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', ''),
+('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', ''),
+('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `evento`
+-- Struttura della tabella `evento`
 --
 
-DROP TABLE IF EXISTS `evento`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `evento` (
+CREATE TABLE IF NOT EXISTS `evento` (
   `nome` varchar(50) NOT NULL DEFAULT '',
   `data` date NOT NULL DEFAULT '2013-12-21',
   `descrizione` varchar(100) DEFAULT NULL,
@@ -450,26 +433,22 @@ CREATE TABLE `evento` (
   KEY `psico_pedagogo` (`psico_pedagogo`),
   KEY `educatore_didattico` (`educatore_didattico`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `evento`
+-- Dump dei dati per la tabella `evento`
 --
 
-LOCK TABLES `evento` WRITE;
-/*!40000 ALTER TABLE `evento` DISABLE KEYS */;
-INSERT INTO `evento` VALUES ('Gita X','2012-11-21','Gita a X','','SSSLRL78B19B908X',NULL,NULL,NULL),('Recita Y','2012-11-30','Recita su Y',NULL,'VRRMDD64T32A048N',NULL,NULL,NULL);
-/*!40000 ALTER TABLE `evento` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `evento` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`) VALUES
+('Gita X', '2012-11-21', 'Gita a X', '', 'SSSLRL78B19B908X', NULL, NULL, NULL),
+('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `extra`
+-- Struttura della tabella `extra`
 --
 
-DROP TABLE IF EXISTS `extra`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `extra` (
+CREATE TABLE IF NOT EXISTS `extra` (
   `id` int(11) NOT NULL,
   `importo` float DEFAULT NULL,
   `data_inizio` date DEFAULT NULL,
@@ -477,77 +456,58 @@ CREATE TABLE `extra` (
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `extra`
+-- Dump dei dati per la tabella `extra`
 --
 
-LOCK TABLES `extra` WRITE;
-/*!40000 ALTER TABLE `extra` DISABLE KEYS */;
-INSERT INTO `extra` VALUES (1,15,'2012-11-01','2012-11-30','Mantenimento bambino fuori orario'),(2,120,'2012-07-01','2012-07-31','Servizio di intrattenimento optional');
-/*!40000 ALTER TABLE `extra` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `extra` (`id`, `importo`, `data_inizio`, `data_fine`, `descrizione`) VALUES
+(1, 15, '2012-11-01', '2012-11-30', 'Mantenimento bambino fuori orario'),
+(2, 120, '2012-07-01', '2012-07-31', 'Servizio di intrattenimento optional');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `fattura`
+-- Struttura della tabella `fattura`
 --
 
-DROP TABLE IF EXISTS `fattura`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fattura` (
+CREATE TABLE IF NOT EXISTS `fattura` (
   `id` int(11) NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   `personale_asilo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `personale_asilo` (`personale_asilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `fattura`
+-- Struttura della tabella `feedback`
 --
 
-LOCK TABLES `fattura` WRITE;
-/*!40000 ALTER TABLE `fattura` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fattura` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `feedback`
---
-
-DROP TABLE IF EXISTS `feedback`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `feedback` (
+CREATE TABLE IF NOT EXISTS `feedback` (
   `id` int(11) NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   `personale_asilo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `personale_asilo` (`personale_asilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `feedback`
+-- Dump dei dati per la tabella `feedback`
 --
 
-LOCK TABLES `feedback` WRITE;
-/*!40000 ALTER TABLE `feedback` DISABLE KEYS */;
-INSERT INTO `feedback` VALUES (1,'Feedback X','MRSVRN90A32B235B'),(2,'Feedback Y','TRNDMN64L12T048Y');
-/*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `feedback` (`id`, `descrizione`, `personale_asilo`) VALUES
+(1, 'Feedback X', 'MRSVRN90A32B235B'),
+(2, 'Feedback Y', 'TRNDMN64L12T048Y');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `genitore`
+-- Struttura della tabella `genitore`
 --
 
-DROP TABLE IF EXISTS `genitore`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `genitore` (
+CREATE TABLE IF NOT EXISTS `genitore` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -578,78 +538,76 @@ CREATE TABLE `genitore` (
   `tipo_contratto` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `genitore`
+-- Dump dei dati per la tabella `genitore`
 --
 
-LOCK TABLES `genitore` WRITE;
-/*!40000 ALTER TABLE `genitore` DISABLE KEYS */;
-INSERT INTO `genitore` VALUES ('Mauro','Chiavelli','CVLMRA69A23B333C','0899601239','mchiav@hotmail.it','1969-11-20','Pontecagnano (SA)','via Roma, 2 - Fisciano (SA)','residenti_fisciano','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Giuseppe','Del Buono','DBNGPP69A23B222C','0612345678','gdb@msn.it','1969-11-06','Roma','via degli Ulivi, 16 - 00100 Roma','personale','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Giovanna','Di Costanzo','DCSGVN74A23B224X','0828123456','gds@hotmail.it','1974-12-30','Barano d\'Ischia (NA)','via Ferreria, 12 - Baronissi (SA)','personale','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Andrea','De Fazio','DFZNDR91L14A909D','0894215524','adf@msn.com','1991-11-22','Vallo della Lucania (SA)','via delle X, 69 - Vallo della Lucania (SA)','personale_studenti','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Santo','Del Regno','DRGSNT81A26B045C','0823120345','sdr@msn.com','1981-10-04','Avellino (AV)','via delle Y, 10 - Avellino (AV)','altro','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Susanna','Passaro','PSSSNN85L98A980I','0822334556','spassaro@virgilio.it','1985-11-08','Salerno','piazza Malta, 23 - Salerno (SA)','personale_studenti','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL),('Laura','Vella','VLLLRU83A24T928B','0829718235','laurav@yahoo.it','1983-03-15','Cautano (BN)','piazza Risorgimento, 1 - Benevento (BN)','personale','ISCRITTO','','','0','0','','','','0','0','','','','','','','2013-12-21',NULL,NULL);
-/*!40000 ALTER TABLE `genitore` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`, `condizione_lavorativa`, `tipo_contratto`) VALUES
+('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma, 2 - Fisciano (SA)', 'residenti_fisciano', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'personale_studenti', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'altro', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'personale_studenti', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `insegna`
+-- Struttura della tabella `insegna`
 --
 
-DROP TABLE IF EXISTS `insegna`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `insegna` (
+CREATE TABLE IF NOT EXISTS `insegna` (
   `educatore_didattico` varchar(50) DEFAULT NULL,
   `classe` int(11) DEFAULT NULL,
   KEY `educatore_didattico` (`educatore_didattico`),
   KEY `classe` (`classe`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `insegna`
+-- Dump dei dati per la tabella `insegna`
 --
 
-LOCK TABLES `insegna` WRITE;
-/*!40000 ALTER TABLE `insegna` DISABLE KEYS */;
-INSERT INTO `insegna` VALUES ('1',1),('1',2),('1',3),('2',1),('2',2),('2',3),('3',1),('3',2),('3',3);
-/*!40000 ALTER TABLE `insegna` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `insegna` (`educatore_didattico`, `classe`) VALUES
+('1', 1),
+('1', 2),
+('1', 3),
+('2', 1),
+('2', 2),
+('2', 3),
+('3', 1),
+('3', 2),
+('3', 3);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `massimo`
+-- Struttura della tabella `massimo`
 --
 
-DROP TABLE IF EXISTS `massimo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `massimo` (
+CREATE TABLE IF NOT EXISTS `massimo` (
   `id` int(5) NOT NULL,
   `valore` varchar(10) DEFAULT NULL,
   `personale_asilo` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `personale_asilo` (`personale_asilo`),
-  CONSTRAINT `massimo_ibfk_1` FOREIGN KEY (`personale_asilo`) REFERENCES `personale_asilo` (`codice_fiscale`)
+  KEY `personale_asilo` (`personale_asilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `massimo`
+-- Dump dei dati per la tabella `massimo`
 --
 
-LOCK TABLES `massimo` WRITE;
-/*!40000 ALTER TABLE `massimo` DISABLE KEYS */;
-INSERT INTO `massimo` VALUES (2,'4','SNTNTN53N69B309D');
-/*!40000 ALTER TABLE `massimo` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `massimo` (`id`, `valore`, `personale_asilo`) VALUES
+(2, '4', 'SNTNTN53N69B309D');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `menu_mensa`
+-- Struttura della tabella `menu_mensa`
 --
 
-DROP TABLE IF EXISTS `menu_mensa`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `menu_mensa` (
+CREATE TABLE IF NOT EXISTS `menu_mensa` (
   `categoria_bambino` varchar(50) DEFAULT NULL,
   `tipologia` varchar(50) DEFAULT NULL,
   `primo_piatto` varchar(50) DEFAULT NULL,
@@ -660,49 +618,34 @@ CREATE TABLE `menu_mensa` (
   `contorno` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `menu_mensa`
+-- Dump dei dati per la tabella `menu_mensa`
 --
 
-LOCK TABLES `menu_mensa` WRITE;
-/*!40000 ALTER TABLE `menu_mensa` DISABLE KEYS */;
-INSERT INTO `menu_mensa` VALUES ('Svezzati','Carne','Pasta al ragù','Cotoletta di pollo','Banana','2012-11-08',1,NULL),('Svezzati','Pesce','Pasta al pomodoro','Bastoncini di merluzzo','Pera','2012-11-22',2,NULL);
-/*!40000 ALTER TABLE `menu_mensa` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `menu_mensa` (`categoria_bambino`, `tipologia`, `primo_piatto`, `secondo_piatto`, `frutta`, `data`, `id`, `contorno`) VALUES
+('Svezzati', 'Carne', 'Pasta al ragù', 'Cotoletta di pollo', 'Banana', '2012-11-08', 1, NULL),
+('Svezzati', 'Pesce', 'Pasta al pomodoro', 'Bastoncini di merluzzo', 'Pera', '2012-11-22', 2, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `nota`
+-- Struttura della tabella `nota`
 --
 
-DROP TABLE IF EXISTS `nota`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `nota` (
+CREATE TABLE IF NOT EXISTS `nota` (
   `titolo` varchar(50) NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`titolo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `nota`
+-- Struttura della tabella `orario_utente`
 --
 
-LOCK TABLES `nota` WRITE;
-/*!40000 ALTER TABLE `nota` DISABLE KEYS */;
-/*!40000 ALTER TABLE `nota` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `orario_utente`
---
-
-DROP TABLE IF EXISTS `orario_utente`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `orario_utente` (
+CREATE TABLE IF NOT EXISTS `orario_utente` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `data_inizio` date DEFAULT NULL,
   `data_fine` date DEFAULT NULL,
@@ -712,27 +655,23 @@ CREATE TABLE `orario_utente` (
   `ora_inizio` varchar(20) DEFAULT NULL,
   `ora_fine` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `orario_utente`
+-- Dump dei dati per la tabella `orario_utente`
 --
 
-LOCK TABLES `orario_utente` WRITE;
-/*!40000 ALTER TABLE `orario_utente` DISABLE KEYS */;
-INSERT INTO `orario_utente` VALUES (1,'2012-11-01','2012-11-30',NULL,'FULL-TIME',300,'08:00','16:00'),(2,'2012-09-17','2012-09-30',NULL,'PART-TIME mattutino',NULL,NULL,NULL);
-/*!40000 ALTER TABLE `orario_utente` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `orario_utente` (`id`, `data_inizio`, `data_fine`, `descrizione`, `nome`, `prezzo`, `ora_inizio`, `ora_fine`) VALUES
+(1, '2012-11-01', '2012-11-30', NULL, 'FULL-TIME', 300, '08:00', '16:00'),
+(2, '2012-09-17', '2012-09-30', NULL, 'PART-TIME mattutino', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `partecipa`
+-- Struttura della tabella `partecipa`
 --
 
-DROP TABLE IF EXISTS `partecipa`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `partecipa` (
+CREATE TABLE IF NOT EXISTS `partecipa` (
   `evento_data` date DEFAULT NULL,
   `evento_nome` varchar(50) DEFAULT NULL,
   `classe` int(11) DEFAULT NULL,
@@ -740,26 +679,25 @@ CREATE TABLE `partecipa` (
   KEY `evento_nome` (`evento_nome`),
   KEY `classe` (`classe`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `partecipa`
+-- Dump dei dati per la tabella `partecipa`
 --
 
-LOCK TABLES `partecipa` WRITE;
-/*!40000 ALTER TABLE `partecipa` DISABLE KEYS */;
-INSERT INTO `partecipa` VALUES ('2012-11-21','Gita X',2),('2012-11-30','Recita Y',3),('2012-11-21','Gita X',1),('2012-11-30','Recita Y',2),('2012-11-21','Gita X',3);
-/*!40000 ALTER TABLE `partecipa` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `partecipa` (`evento_data`, `evento_nome`, `classe`) VALUES
+('2012-11-21', 'Gita X', 2),
+('2012-11-30', 'Recita Y', 3),
+('2012-11-21', 'Gita X', 1),
+('2012-11-30', 'Recita Y', 2),
+('2012-11-21', 'Gita X', 3);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `personale_asilo`
+-- Struttura della tabella `personale_asilo`
 --
 
-DROP TABLE IF EXISTS `personale_asilo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `personale_asilo` (
+CREATE TABLE IF NOT EXISTS `personale_asilo` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -783,55 +721,49 @@ CREATE TABLE `personale_asilo` (
   `registro_tirocinante` int(5) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `richiesta_tirocinante` (`richiesta_tirocinante`),
-  KEY `registro_tirocinante` (`registro_tirocinante`),
-  CONSTRAINT `personale_asilo_ibfk_1` FOREIGN KEY (`richiesta_tirocinante`) REFERENCES `richiesta_tirocinante` (`id`),
-  CONSTRAINT `personale_asilo_ibfk_2` FOREIGN KEY (`registro_tirocinante`) REFERENCES `registro_tirocinante` (`id`)
+  KEY `registro_tirocinante` (`registro_tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `personale_asilo`
+-- Dump dei dati per la tabella `personale_asilo`
 --
 
-LOCK TABLES `personale_asilo` WRITE;
-/*!40000 ALTER TABLE `personale_asilo` DISABLE KEYS */;
-INSERT INTO `personale_asilo` VALUES ('Silvana','Buselli','BSLSVN62L12B099E','IMPIEGATO ASILO','sbuselli@yahoo.it',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Veronica','Mars','MRSVRN90A32B235B','IMPIEGATO DIRITTO ALLO STUDIO','vmars@libero.it',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Antonella','Senatore','SNTNTN53N69B309D','DIRETTORE','asenatore@yahoo.it',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Domenico','Tranfa','TRNDMN64L12T048Y','DELEGATO RETTORE','dtranfa@yahoo.it',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `personale_asilo` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `personale_asilo` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `richiesta_tirocinante`, `registro_tirocinante`) VALUES
+('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'IMPIEGATO ASILO', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Veronica', 'Mars', 'MRSVRN90A32B235B', 'IMPIEGATO DIRITTO ALLO STUDIO', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'DIRETTORE', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'DELEGATO RETTORE', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `possiede`
+-- Struttura della tabella `possiede`
 --
 
-DROP TABLE IF EXISTS `possiede`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `possiede` (
+CREATE TABLE IF NOT EXISTS `possiede` (
   `retta` int(11) DEFAULT NULL,
   `extra` int(11) DEFAULT NULL,
   KEY `retta` (`retta`),
   KEY `extra` (`extra`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `possiede`
+-- Dump dei dati per la tabella `possiede`
 --
 
-LOCK TABLES `possiede` WRITE;
-/*!40000 ALTER TABLE `possiede` DISABLE KEYS */;
-INSERT INTO `possiede` VALUES (1,1),(4,2),(3,2),(2,1);
-/*!40000 ALTER TABLE `possiede` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `possiede` (`retta`, `extra`) VALUES
+(1, 1),
+(4, 2),
+(3, 2),
+(2, 1);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `programma_educativo_settimanale`
+-- Struttura della tabella `programma_educativo_settimanale`
 --
 
-DROP TABLE IF EXISTS `programma_educativo_settimanale`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `programma_educativo_settimanale` (
+CREATE TABLE IF NOT EXISTS `programma_educativo_settimanale` (
   `id` int(11) NOT NULL,
   `settimana` varchar(50) DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
@@ -840,26 +772,23 @@ CREATE TABLE `programma_educativo_settimanale` (
   PRIMARY KEY (`id`),
   KEY `psico_pedagogo` (`psico_pedagogo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `programma_educativo_settimanale`
+-- Dump dei dati per la tabella `programma_educativo_settimanale`
 --
 
-LOCK TABLES `programma_educativo_settimanale` WRITE;
-/*!40000 ALTER TABLE `programma_educativo_settimanale` DISABLE KEYS */;
-INSERT INTO `programma_educativo_settimanale` VALUES (1,'10-16/10/2012','Programma educativo X','X del bambino','DMLLFN71L12A333B'),(2,'17-23/10/2012','Programma educativo Y','Y del bambino','DMLLFN71L12A333B'),(3,'1-7/12/2012','Programma Educativo Z','Z del bambino','VRRMDD64T32A048N');
-/*!40000 ALTER TABLE `programma_educativo_settimanale` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `programma_educativo_settimanale` (`id`, `settimana`, `descrizione`, `obiettivi`, `psico_pedagogo`) VALUES
+(1, '10-16/10/2012', 'Programma educativo X', 'X del bambino', 'DMLLFN71L12A333B'),
+(2, '17-23/10/2012', 'Programma educativo Y', 'Y del bambino', 'DMLLFN71L12A333B'),
+(3, '1-7/12/2012', 'Programma Educativo Z', 'Z del bambino', 'VRRMDD64T32A048N');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `psico_pedagogo`
+-- Struttura della tabella `psico_pedagogo`
 --
 
-DROP TABLE IF EXISTS `psico_pedagogo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `psico_pedagogo` (
+CREATE TABLE IF NOT EXISTS `psico_pedagogo` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -881,26 +810,22 @@ CREATE TABLE `psico_pedagogo` (
   `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `psico_pedagogo`
+-- Dump dei dati per la tabella `psico_pedagogo`
 --
 
-LOCK TABLES `psico_pedagogo` WRITE;
-/*!40000 ALTER TABLE `psico_pedagogo` DISABLE KEYS */;
-INSERT INTO `psico_pedagogo` VALUES ('Alfonso','D\'Amelia','DMLLFN71L12A333B','0899611333','adam@hotmail.it','1971-11-13','Avellino (AV)','via Faraldo, 3 - Fisciano (SA)',1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Maddalena','Verrone','VRRMDD64T32A048N','0895818293','mverrone@alice.it','1964-11-15','Salerno (SA)','via Z, 3 - Salerno (SA)',2,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `psico_pedagogo` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `psico_pedagogo` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `numero_classi`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo, 3 - Fisciano (SA)', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z, 3 - Salerno (SA)', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `questionario`
+-- Struttura della tabella `questionario`
 --
 
-DROP TABLE IF EXISTS `questionario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `questionario` (
+CREATE TABLE IF NOT EXISTS `questionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `flag_rinuncia` varchar(50) DEFAULT NULL,
   `pathname` varchar(100) DEFAULT NULL,
@@ -909,27 +834,23 @@ CREATE TABLE `questionario` (
   `nome` varchar(50) DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dumping data for table `questionario`
+-- Dump dei dati per la tabella `questionario`
 --
 
-LOCK TABLES `questionario` WRITE;
-/*!40000 ALTER TABLE `questionario` DISABLE KEYS */;
-INSERT INTO `questionario` VALUES (1,NULL,NULL,'2012-12-06','2012-12-20','Controllo qualità','QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI'),(2,NULL,NULL,'2012-11-01','2012-12-18','Questionario X','Questionario relativo a X');
-/*!40000 ALTER TABLE `questionario` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `questionario` (`id`, `flag_rinuncia`, `pathname`, `periodo_inizio`, `periodo_fine`, `nome`, `descrizione`) VALUES
+(1, NULL, NULL, '2012-12-06', '2012-12-20', 'Controllo qualità', 'QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI'),
+(2, NULL, NULL, '2012-11-01', '2012-12-18', 'Questionario X', 'Questionario relativo a X');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `registro`
+-- Struttura della tabella `registro`
 --
 
-DROP TABLE IF EXISTS `registro`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `registro` (
+CREATE TABLE IF NOT EXISTS `registro` (
   `id` int(11) NOT NULL,
   `anno` varchar(50) DEFAULT NULL,
   `classe` int(11) DEFAULT NULL,
@@ -938,25 +859,14 @@ CREATE TABLE `registro` (
   KEY `classe` (`classe`),
   KEY `educatore_didattico` (`educatore_didattico`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `registro`
+-- Struttura della tabella `registro_tirocinante`
 --
 
-LOCK TABLES `registro` WRITE;
-/*!40000 ALTER TABLE `registro` DISABLE KEYS */;
-/*!40000 ALTER TABLE `registro` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `registro_tirocinante`
---
-
-DROP TABLE IF EXISTS `registro_tirocinante`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `registro_tirocinante` (
+CREATE TABLE IF NOT EXISTS `registro_tirocinante` (
   `id` int(5) NOT NULL,
   `descrizione` varchar(50) DEFAULT NULL,
   `ore_totali` varchar(10) DEFAULT NULL,
@@ -965,30 +875,16 @@ CREATE TABLE `registro_tirocinante` (
   `tirocinante` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `attivita_tirocinante` (`attivita_tirocinante`),
-  KEY `tirocinante` (`tirocinante`),
-  CONSTRAINT `registro_tirocinante_ibfk_1` FOREIGN KEY (`attivita_tirocinante`) REFERENCES `attivita_tirocinante` (`id`),
-  CONSTRAINT `registro_tirocinante_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`),
-  CONSTRAINT `registro_tirocinante_ibfk_3` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`)
+  KEY `tirocinante` (`tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `registro_tirocinante`
+-- Struttura della tabella `responsabile_questionario`
 --
 
-LOCK TABLES `registro_tirocinante` WRITE;
-/*!40000 ALTER TABLE `registro_tirocinante` DISABLE KEYS */;
-/*!40000 ALTER TABLE `registro_tirocinante` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `responsabile_questionario`
---
-
-DROP TABLE IF EXISTS `responsabile_questionario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `responsabile_questionario` (
+CREATE TABLE IF NOT EXISTS `responsabile_questionario` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -1009,26 +905,21 @@ CREATE TABLE `responsabile_questionario` (
   `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `responsabile_questionario`
+-- Dump dei dati per la tabella `responsabile_questionario`
 --
 
-LOCK TABLES `responsabile_questionario` WRITE;
-/*!40000 ALTER TABLE `responsabile_questionario` DISABLE KEYS */;
-INSERT INTO `responsabile_questionario` VALUES ('Arturo','De Santis','DSTRTR58L32A333B','ads@live.it',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `responsabile_questionario` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `responsabile_questionario` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Arturo', 'De Santis', 'DSTRTR58L32A333B', 'ads@live.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `responsabile_tirocini`
+-- Struttura della tabella `responsabile_tirocini`
 --
 
-DROP TABLE IF EXISTS `responsabile_tirocini`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `responsabile_tirocini` (
+CREATE TABLE IF NOT EXISTS `responsabile_tirocini` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -1049,26 +940,21 @@ CREATE TABLE `responsabile_tirocini` (
   `cittadinanza` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `responsabile_tirocini`
+-- Dump dei dati per la tabella `responsabile_tirocini`
 --
 
-LOCK TABLES `responsabile_tirocini` WRITE;
-/*!40000 ALTER TABLE `responsabile_tirocini` DISABLE KEYS */;
-INSERT INTO `responsabile_tirocini` VALUES ('Giovanni','De Blasi','DBSGVN66B12C761W','deblasi@unisa.it','1966-02-12','Caserta','0823445590','via De Gasperi','12','81100','Caserta','CE',NULL,NULL,NULL,NULL,NULL,'i');
-/*!40000 ALTER TABLE `responsabile_tirocini` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `responsabile_tirocini` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
+('Giovanni', 'De Blasi', 'DBSGVN66B12C761W', 'deblasi@unisa.it', '1966-02-12', 'Caserta', '0823445590', 'via De Gasperi', '12', '81100', 'Caserta', 'CE', NULL, NULL, NULL, NULL, NULL, 'i');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `retta`
+-- Struttura della tabella `retta`
 --
 
-DROP TABLE IF EXISTS `retta`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `retta` (
+CREATE TABLE IF NOT EXISTS `retta` (
   `importoDovuto` double DEFAULT NULL,
   `id` int(11) NOT NULL,
   `genitore` varchar(50) DEFAULT NULL,
@@ -1080,26 +966,27 @@ CREATE TABLE `retta` (
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `retta`
+-- Dump dei dati per la tabella `retta`
 --
 
-LOCK TABLES `retta` WRITE;
-/*!40000 ALTER TABLE `retta` DISABLE KEYS */;
-INSERT INTO `retta` VALUES (150,1,'CVLMRA69A23B333C','Ottobre2012','MENSILE','2012-10-10',300,'Fiorenzo Assi'),(630,2,'DBNGPP69A23B222C','','','2013-12-21',0,''),(325,3,'DCSGVN74A23B224X','','','2013-12-21',0,''),(250,4,'DFZNDR91L14A909D','','','2013-12-21',0,''),(130,5,'DRGSNT81A26B045C','','','2013-12-21',0,''),(469,6,'PSSSNN85L98A980I','','','2013-12-21',0,''),(790,7,'VLLLRU83A24T928B','','','2013-12-21',0,'');
-/*!40000 ALTER TABLE `retta` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `retta` (`importoDovuto`, `id`, `genitore`, `descrizioneTassa`, `descrizioneRata`, `data`, `importoPagato`, `nome`) VALUES
+(150, 1, 'CVLMRA69A23B333C', 'Ottobre2012', 'MENSILE', '2012-10-10', 300, 'Fiorenzo Assi'),
+(630, 2, 'DBNGPP69A23B222C', '', '', '2013-12-21', 0, ''),
+(325, 3, 'DCSGVN74A23B224X', '', '', '2013-12-21', 0, ''),
+(250, 4, 'DFZNDR91L14A909D', '', '', '2013-12-21', 0, ''),
+(130, 5, 'DRGSNT81A26B045C', '', '', '2013-12-21', 0, ''),
+(469, 6, 'PSSSNN85L98A980I', '', '', '2013-12-21', 0, ''),
+(790, 7, 'VLLLRU83A24T928B', '', '', '2013-12-21', 0, '');
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `richiesta`
+-- Struttura della tabella `richiesta`
 --
 
-DROP TABLE IF EXISTS `richiesta`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `richiesta` (
+CREATE TABLE IF NOT EXISTS `richiesta` (
   `id` int(11) NOT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   `menu_richiesto` varchar(50) DEFAULT NULL,
@@ -1111,26 +998,22 @@ CREATE TABLE `richiesta` (
   KEY `genitore` (`genitore`),
   KEY `servizio` (`servizio`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `richiesta`
+-- Dump dei dati per la tabella `richiesta`
 --
 
-LOCK TABLES `richiesta` WRITE;
-/*!40000 ALTER TABLE `richiesta` DISABLE KEYS */;
-INSERT INTO `richiesta` VALUES (1,'Variazione menu','Latte per intolleranti','13.00',NULL,'CVLMRA69A23B333C	',1),(2,'Variazione menu','Menù per celiaci','12.00',NULL,'DBNGPP69A23B222C',8);
-/*!40000 ALTER TABLE `richiesta` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `richiesta` (`id`, `tipo`, `menu_richiesto`, `orario_richiesto`, `allegato`, `genitore`, `servizio`) VALUES
+(1, 'Variazione menu', 'Latte per intolleranti', '13.00', NULL, 'CVLMRA69A23B333C	', 1),
+(2, 'Variazione menu', 'Menù per celiaci', '12.00', NULL, 'DBNGPP69A23B222C', 8);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `richiesta_tirocinante`
+-- Struttura della tabella `richiesta_tirocinante`
 --
 
-DROP TABLE IF EXISTS `richiesta_tirocinante`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `richiesta_tirocinante` (
+CREATE TABLE IF NOT EXISTS `richiesta_tirocinante` (
   `id` int(5) NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   `data` date DEFAULT NULL,
@@ -1139,84 +1022,66 @@ CREATE TABLE `richiesta_tirocinante` (
   `numero_tirocinanti` int(3) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `richiesta_tirocinante`
+-- Dump dei dati per la tabella `richiesta_tirocinante`
 --
 
-LOCK TABLES `richiesta_tirocinante` WRITE;
-/*!40000 ALTER TABLE `richiesta_tirocinante` DISABLE KEYS */;
-INSERT INTO `richiesta_tirocinante` VALUES (333455,'Colloqui con i genitori','2012-12-12','16:00','18:00',5);
-/*!40000 ALTER TABLE `richiesta_tirocinante` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `richiesta_tirocinante` (`id`, `descrizione`, `data`, `ora_inizio`, `ora_fine`, `numero_tirocinanti`) VALUES
+(333455, 'Colloqui con i genitori', '2012-12-12', '16:00', '18:00', 5);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `risposta_questionario`
+-- Struttura della tabella `risposta_questionario`
 --
 
-DROP TABLE IF EXISTS `risposta_questionario`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `risposta_questionario` (
+CREATE TABLE IF NOT EXISTS `risposta_questionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `valore` varchar(50) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
   `domanda` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
-  KEY `domanda` (`domanda`),
-  CONSTRAINT `risposta_questionario_ibfk_1` FOREIGN KEY (`domanda`) REFERENCES `domanda_questionario` (`id`) ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=500003 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  KEY `domanda` (`domanda`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=500003 ;
 
 --
--- Dumping data for table `risposta_questionario`
+-- Dump dei dati per la tabella `risposta_questionario`
 --
 
-LOCK TABLES `risposta_questionario` WRITE;
-/*!40000 ALTER TABLE `risposta_questionario` DISABLE KEYS */;
-INSERT INTO `risposta_questionario` VALUES (500002,'5','Nobile Alessia',5);
-/*!40000 ALTER TABLE `risposta_questionario` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `risposta_questionario` (`id`, `valore`, `genitore`, `domanda`) VALUES
+(500002, '5', 'Nobile Alessia', 5);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `schedulazione`
+-- Struttura della tabella `schedulazione`
 --
 
-DROP TABLE IF EXISTS `schedulazione`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `schedulazione` (
+CREATE TABLE IF NOT EXISTS `schedulazione` (
   `data` date NOT NULL DEFAULT '2013-12-21',
   `tirocinante` varchar(50) NOT NULL DEFAULT '',
   `massimo` int(5) DEFAULT NULL,
   PRIMARY KEY (`data`,`tirocinante`),
   KEY `tirocinante` (`tirocinante`),
-  KEY `massimo` (`massimo`),
-  CONSTRAINT `schedulazione_ibfk_1` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`),
-  CONSTRAINT `schedulazione_ibfk_2` FOREIGN KEY (`massimo`) REFERENCES `massimo` (`id`)
+  KEY `massimo` (`massimo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `schedulazione`
+-- Dump dei dati per la tabella `schedulazione`
 --
 
-LOCK TABLES `schedulazione` WRITE;
-/*!40000 ALTER TABLE `schedulazione` DISABLE KEYS */;
-INSERT INTO `schedulazione` VALUES ('2012-12-06','MZZCRS91L44X098Y',2);
-/*!40000 ALTER TABLE `schedulazione` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `schedulazione` (`data`, `tirocinante`, `massimo`) VALUES
+('2012-12-06', 'MZZCRS91L44X098Y', 2);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `servizio`
+-- Struttura della tabella `servizio`
 --
 
-DROP TABLE IF EXISTS `servizio`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `servizio` (
+CREATE TABLE IF NOT EXISTS `servizio` (
   `orario_inizio` varchar(50) DEFAULT NULL,
   `orario_fine` varchar(50) DEFAULT NULL,
   `piano_pasto` varchar(50) DEFAULT NULL,
@@ -1227,26 +1092,29 @@ CREATE TABLE `servizio` (
   KEY `bambino` (`bambino`),
   KEY `orario_utente` (`orario_utente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `servizio`
+-- Dump dei dati per la tabella `servizio`
 --
 
-LOCK TABLES `servizio` WRITE;
-/*!40000 ALTER TABLE `servizio` DISABLE KEYS */;
-INSERT INTO `servizio` VALUES ('9.00','18.00','Sì','CVLRRA12A23B333C',1,1),('9.00','13.00','No','DFZGNN12L14A909D',1,2),('9.00','18.00','No','SCLNNA11L98A980I',1,3),('9.00','18.00','No','SCLMTT12L98A980I',1,4),('9.00','12.00','No','DRGCND10A26B045C',2,5),('9.00','15.00','Sì','MSCLGU12A24T928B',2,6),('12.00','18.00','Sì','DBNLCU11A23B222C',1,7),('12.00','18.00','Sì','DBNMRA11A23B222C',1,8),('11.00','16.00','Sì','PLTMRC11A23B224X ',1,9);
-/*!40000 ALTER TABLE `servizio` ENABLE KEYS */;
-UNLOCK TABLES;
+INSERT INTO `servizio` (`orario_inizio`, `orario_fine`, `piano_pasto`, `bambino`, `orario_utente`, `id`) VALUES
+('9.00', '18.00', 'Sì', 'CVLRRA12A23B333C', 1, 1),
+('9.00', '13.00', 'No', 'DFZGNN12L14A909D', 1, 2),
+('9.00', '18.00', 'No', 'SCLNNA11L98A980I', 1, 3),
+('9.00', '18.00', 'No', 'SCLMTT12L98A980I', 1, 4),
+('9.00', '12.00', 'No', 'DRGCND10A26B045C', 2, 5),
+('9.00', '15.00', 'Sì', 'MSCLGU12A24T928B', 2, 6),
+('12.00', '18.00', 'Sì', 'DBNLCU11A23B222C', 1, 7),
+('12.00', '18.00', 'Sì', 'DBNMRA11A23B222C', 1, 8),
+('11.00', '16.00', 'Sì', 'PLTMRC11A23B224X ', 1, 9);
+
+-- --------------------------------------------------------
 
 --
--- Table structure for table `tirocinante`
+-- Struttura della tabella `tirocinante`
 --
 
-DROP TABLE IF EXISTS `tirocinante`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tirocinante` (
+CREATE TABLE IF NOT EXISTS `tirocinante` (
   `nome` varchar(50) DEFAULT NULL,
   `cognome` varchar(50) DEFAULT NULL,
   `codice_fiscale` varchar(50) NOT NULL,
@@ -1277,28 +1145,80 @@ CREATE TABLE `tirocinante` (
   `contestazione` int(5) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `personale_asilo` (`personale_asilo`),
-  KEY `contestazione` (`contestazione`),
-  CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`)
+  KEY `contestazione` (`contestazione`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `tirocinante`
+-- Dump dei dati per la tabella `tirocinante`
 --
 
-LOCK TABLES `tirocinante` WRITE;
-/*!40000 ALTER TABLE `tirocinante` DISABLE KEYS */;
-INSERT INTO `tirocinante` VALUES ('Davide','Ciarmoli','CRMDVD90L12C888B','0283039103','dciarmoli@yahoo.it','1990-01-02','Benevento','Via XXIV Maggio, Benevento','Laureanda in Scienze della Formazione Primaria',300,125,'SNTNTN53N69B309D',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),('Cristina','Mezzano','MZZCRS91L44X098Y','0123456789','cmezz@live.it','1991-12-11','Lacco Ameno (NA)','Via XYZ, Ischia (NA)','Laureanda in Scienze della Formazione Primaria',300,150,'BSLSVN62L12B099E',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `tirocinante` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+INSERT INTO `tirocinante` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `tutor_esterno`, `disponibilita`, `contestazione`) VALUES
+('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+--
+-- Limiti per le tabelle scaricate
+--
+
+--
+-- Limiti per la tabella `account`
+--
+ALTER TABLE `account`
+  ADD CONSTRAINT `account_ibfk_1` FOREIGN KEY (`responsabile_tirocini`) REFERENCES `responsabile_tirocini` (`codice_fiscale`),
+  ADD CONSTRAINT `account_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `attivita`
+--
+ALTER TABLE `attivita`
+  ADD CONSTRAINT `attivita_ibfk_1` FOREIGN KEY (`nota`) REFERENCES `nota` (`titolo`);
+
+--
+-- Limiti per la tabella `bambino`
+--
+ALTER TABLE `bambino`
+  ADD CONSTRAINT `bambino_ibfk_1` FOREIGN KEY (`cf_genitore_nonrichiedente`) REFERENCES `genitore` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `massimo`
+--
+ALTER TABLE `massimo`
+  ADD CONSTRAINT `massimo_ibfk_1` FOREIGN KEY (`personale_asilo`) REFERENCES `personale_asilo` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `personale_asilo`
+--
+ALTER TABLE `personale_asilo`
+  ADD CONSTRAINT `personale_asilo_ibfk_1` FOREIGN KEY (`richiesta_tirocinante`) REFERENCES `richiesta_tirocinante` (`id`),
+  ADD CONSTRAINT `personale_asilo_ibfk_2` FOREIGN KEY (`registro_tirocinante`) REFERENCES `registro_tirocinante` (`id`);
+
+--
+-- Limiti per la tabella `registro_tirocinante`
+--
+ALTER TABLE `registro_tirocinante`
+  ADD CONSTRAINT `registro_tirocinante_ibfk_1` FOREIGN KEY (`attivita_tirocinante`) REFERENCES `attivita_tirocinante` (`id`),
+  ADD CONSTRAINT `registro_tirocinante_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`),
+  ADD CONSTRAINT `registro_tirocinante_ibfk_3` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`);
+
+--
+-- Limiti per la tabella `risposta_questionario`
+--
+ALTER TABLE `risposta_questionario`
+  ADD CONSTRAINT `risposta_questionario_ibfk_1` FOREIGN KEY (`domanda`) REFERENCES `domanda_questionario` (`id`) ON UPDATE CASCADE;
+
+--
+-- Limiti per la tabella `schedulazione`
+--
+ALTER TABLE `schedulazione`
+  ADD CONSTRAINT `schedulazione_ibfk_1` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`),
+  ADD CONSTRAINT `schedulazione_ibfk_2` FOREIGN KEY (`massimo`) REFERENCES `massimo` (`id`);
+
+--
+-- Limiti per la tabella `tirocinante`
+--
+ALTER TABLE `tirocinante`
+  ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2012-12-08 16:50:55
