@@ -7,39 +7,48 @@
 <script type="text/javascript">
 	function cambiaValori(){
 		
-		var change = "<form name='bando' id='im_bando' action='http://localhost:8080/Atsilo/ServletControlBandoIM' method='post'> <table class='tabelle_form'> <tr> <td>Data inizio bando</td> <td><input name='iniziobando' type='text' id='inizioB' maxlength='16' value= '<%=dataInizioBando%>' /></td> </tr> <tr> <td>Data fine bando</td> <td> <input name='finebando' type='text' id='fineB' maxlength='20' value='<%=dataFineBando%>'/></td> </tr> <tr> <tr> <td>Data inizio presentazione rinuncia</td> <td><input name='iniziopresentazione' type='text' id='inizioP' maxlength='16' value='<%=dataInizioPresentazione%>'/></td> </tr> <tr> <td>Data fine presentazione rinuncia</td> <td><input name='finepresentazione' type='text' id='fineP' maxlength='20' value='<%=dataFinePresentazione%>'/></td> </tr> <tr> <td>Data fine rinuncia</td> <td><input name='finerinuncia' type='text' id='fineR' value='<%=dataFineRinuncia%>'/></td></tr><tr><td>Posti disponibili</td><td><input name='postidisp' type='text' id='postiD' size='7' maxlength='4' value='<%=posti%>'  /></td> </tr><tr> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <td></td> <td><input type='submit' name='salva' id='mod' value='Salva' onClick='return checkForm()'/></td> </tr> </table> </form>"
+		var change = "<form name='bando' id='im_bando' action='http://localhost:8080/Atsilo/ServletControlBandoIM' method='post'> <table class='tabelle_form'> <tr> <td>Data inizio bando</td> <td><input name='iniziobando' type='text' id='inizioB' maxlength='16' value= '<%=dataInizioBando%>' /></td> </tr> <tr> <td>Data fine bando</td> <td> <input name='finebando' type='text' id='fineB' maxlength='20' value='<%=dataFineBando%>'/></td> </tr> <tr> <tr> <td>Data inizio presentazione rinuncia</td> <td><input name='iniziopresentazione' type='text' id='inizioP' maxlength='16' value='<%=dataInizioPresentazione%>'/></td> </tr> <tr> <td>Data fine presentazione rinuncia</td> <td><input name='finepresentazione' type='text' id='fineP' maxlength='20' value='<%=dataFinePresentazione%>'/></td> </tr> <tr> <td>Data fine rinuncia</td> <td><input name='finerinuncia' type='text' id='fineR' value='<%=dataFineRinuncia%>'/></td></tr><tr><td>Posti disponibili</td><td><input name='postidisp' type='text' id='postiD' size='7' maxlength='4' value='<%=posti%>' onkeypress='return isNumberKey(event)'  /></td> </tr><tr> <td>&nbsp;</td> <td>&nbsp;</td> </tr> <td></td> <td><input type='submit' name='salva' id='mod' value='Salva' onClick='return checkForm()'/></td> </tr> </table> </form>"
 		
 		document.getElementById("formdisplay").innerHTML = change;
 	}
-	function checkForm(){
 	
-		var inizioB = document.getElementById("inizioB").value;
-		 var fineB = document.getElementById("fineB").value;
-		 var inizioP = document.getElementById("inizioP").value;
-		 var fineP = document.getElementById("fineP").value;
-		 var fineR = document.getElementById("fineR").value;
-		 
-		 if((inizioB.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
-			 alert('rispettare il formato YYYY-MM-DD');
+	function checkForm(){
+	    var reg = /^[0-9]{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/;
+		var inizioB = String(document.getElementById("inizioB").value);
+		var fineB = String(document.getElementById("fineB").value);
+		var inizioP = String(document.getElementById("inizioP").value);
+		var fineP = String(document.getElementById("fineP").value);
+		var fineR = String(document.getElementById("fineR").value);
+		
+		 if((reg.test(inizioB))== false){
+			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
 			 return false;
 		 }
-		 if((fineB.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
-			 alert('rispettare il formato YYYY-MM-DD');
+		 if((reg.test(fineB))== false){
+			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
 			 return false;
 		 }
-		 if((inizioP.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
-			 alert('rispettare il formato YYYY-MM-DD');
+		 if((reg.test(inizioP))== false){
+			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
 			 return false;
 		 }
-		 if((fineP.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
-			 alert('rispettare il formato YYYY-MM-DD');
+		 if((reg.test(fineP))== false){
+			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
 			 return false;
 		 }
-		 if((fineR.match(/^[0-9]{4}-[0.9]{2}-[0.9]{2}$/))== null){
-			 alert('rispettare il formato YYYY-MM-DD');
+		 if((reg.test(fineR))== false){
+			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
 			 return false;
 		 }
 	}
+    function isNumberKey(evt)
+    {
+       var charCode = (evt.which) ? evt.which : event.keyCode
+       if (charCode > 31 && (charCode < 48 || charCode > 57))
+          return false;
+
+       return true;
+    }
 	
 </script>
 
