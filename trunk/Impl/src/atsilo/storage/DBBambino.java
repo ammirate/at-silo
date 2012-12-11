@@ -67,9 +67,7 @@ public class DBBambino extends DBBeans<Bambino> {
         res.put("nome","nome");
         res.put("data_di_nascita","dataNascita");
         res.put("categoria_appartenenza","categoriaAppartenenza");
-        res.put("classe","classe");
         res.put("cognome","cognome");
-        res.put("genitore","genitore");
         res.put("codice_fiscale","codiceFiscale");
         res.put("comune_di_nascita", "comuneNascita");
         res.put("cittadinanza", "cittadinanza");
@@ -82,7 +80,6 @@ public class DBBambino extends DBBeans<Bambino> {
         res.put("cap_residenza", "capResidenza");
         res.put("comune_domicilio", "comuneDomicilio");
         res.put("provincia_domicilio", "provinciaDomicilio");
-        res.put("cf_genitore_nonrichiedente", "genitoreNonRichiedente");
         
         
         return Collections.unmodifiableMap(res);

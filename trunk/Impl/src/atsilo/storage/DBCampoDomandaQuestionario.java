@@ -64,13 +64,10 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     private static Map<String,String> creaMapping(){
         
         Map<String,String> res= new HashMap<String,String>();
-        res.put("domanda_questionario","domandaQuestionario");
         res.put("tipo","tipo");
         res.put("descrizione","descrizione");
         res.put("valore","valore");
-        res.put("risposta_questionario","rispostaQuestionario");
-        res.put("domanda_questionario","domandaQuestionario");
-        res.put("risposta_questionario","rispostaQuestionario");
+     
         
         return Collections.unmodifiableMap(res);
     }

@@ -67,8 +67,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         res.put("punteggio","punteggio");
         res.put("posizione","posizione");
         res.put("dataPresentazione","data_presentazione");
-        res.put("genitore","genitore");
-        res.put("bambino","bambino");
         res.put("statoDomanda", "stato_domanda");
         res.put("certificatoMalattie", "certificato_malattie");
         res.put("certificatoVaccinazioni", "certificato_vaccinazioni");
@@ -84,7 +82,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         res.put("altriComponentiDisabili", "altri_componenti_disabili");
         res.put("condizioniCalcoloPunteggio", "condizioni_calcolo_punteggio");
         res.put("isee", "isee");
-        res.put("servizio", "servizio");
         res.put("stato_convalidazione", "stato_convalidazione");
         
         

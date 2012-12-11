@@ -68,7 +68,6 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         Map<String,String> res= new HashMap<String,String>();
         res.put("id","id");
         res.put("descrizione","descrizione");
-        res.put("questionario","questionario");
         
         return Collections.unmodifiableMap(res);
     }
