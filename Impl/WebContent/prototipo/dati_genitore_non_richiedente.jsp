@@ -20,6 +20,29 @@ include
 		file="atsilo_files/sidebar_top_genitore.jsp"%>
 	<!--Dati genitore non richiedente--> <%@ page
 		import="java.util.*,atsilo.application.*,atsilo.entity.*"%>
+		<%//instanzion variabili
+		String cognome="";
+		String nome="";
+		String codiceFiscale="";
+		String dataNascita="" ;
+ 	 	String comuneNascita="";
+ 	 	String cittadinanza="";
+ 	 	String indirizzoResidenza="";
+		String numeroCivicoResidenza="";
+		String capResidenza="";
+		String 	comuneResidenza="";
+		String provinciaResidenza="";
+		String indirizzoDomicilio="";
+		String numeroCivicoDomicilio="";
+		String capDomicilio="";
+		String comuneDomicilio=""; 
+		String provinciaDomicilio="";
+		String rapportoParentela="";
+		String condizioneLavorativa="";
+		String tipoContratto="";
+		String sedeDiLavoro="";
+		
+		%>
 	<%
 		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
 	   	Utente utente=cdt.getValoriUtente(username);
@@ -32,19 +55,36 @@ include
 	  	
 	    	for (int i=0;i<figli.size();i++){
 	%> <script type=text/javascript>
-  	   		 objSelect = document.getElementById('select_bambini')
-  	  		  objSelect.options[objSelect.options.length] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>
+
+  	   		  objSelect = document.getElementById("select_bambini");
+  	   		//prove  
+  	   		with ( objSelect.elements["select_bambini"] )
+            {
+              options.length          = 0;
+              options[options.length] = new Option( "Testo #1", "Valore_1", false, false );
+              options[options.length] = new Option( "Testo #2", "Valore_2", false, false );
+              options[options.length] = new Option( "Testo #3", "Valore_3", false, false );
+            }
+  	   		  
+  	   	     objSelect.option[<%=i%>]=new Option("Selezionare il bambino", "", true)
+  	  		 objSelect.optionsg[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
 							
-	</script> <%
- 	}
- %> <%!
+	</script> 
+	<%} %>
+	 <%!
     void SettaCampiForm(String cf){
 	 ControlDatiPersonali cdt=ControlDatiPersonali.getIstance();
+	 Genitore genitore=new Genitore();
 	if (cf!=null){ 
 		Bambino bambino_selezionato=new Bambino();
+		
    		bambino_selezionato=cdt.getDatiBambino(cf);
-   		 Genitore genitore=cdt.getDatiGenitore(bambino_selezionato.getGenitoreNonRichiedente().getCodiceFiscale());
-		String cognome=genitore.getCognome(); String nome=genitore.getNome();
+   	    genitore=cdt.getDatiGenitore(bambino_selezionato.getGenitoreNonRichiedente().getCodiceFiscale());
+		        
+	}
+   		
+		String cognome=genitore.getCognome(); 
+		String nome=genitore.getNome();
 		String codiceFiscale=genitore.getCodiceFiscale(); String
 		dataNascita="dataNascita" ;
  	 	String comuneNascita=genitore.getComuneNascita(); String
@@ -63,8 +103,8 @@ include
 		condizioneLavorativa=genitore.getCondizioneLavorativa(); String
 		tipoContratto=genitore.getTipoContratto(); String
 		sedeDiLavoro=genitore.getDipendentePresso();
- 	}
- 	}
+ 	
+ }
  %>
 	<!--Script per gestire i form --> <script type="text/javascript">
 		function settaAttributi(slf) {
@@ -99,16 +139,16 @@ include
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 				<td colspan="4"><label for="altrifisglinido_1">Per
-						inserire i dati del genitore non richiedente è necessario che
+						inserire i dati del genitore non richiedente &egrave; necessario che
 						siano stati inseriti i dati del bambino. Selezionare dal menu il
 						bambino per il quale si vogliono inserire le informazioni del
 						genitore non richiedente.</label> <br></td>
 			</tr>
 			<tr>
 				<td colspan="2"><p>
-						<select name="select_bambini" onChange="SettaCampiForm(this)">
+						<select name="select_bambini" id="select_bambini" onChange="SettaCampiForm(this)">
 
-						</select>
+				    </select>
 					</p>
 					<p>&nbsp;</p></td>
 				<td>&nbsp;</td>

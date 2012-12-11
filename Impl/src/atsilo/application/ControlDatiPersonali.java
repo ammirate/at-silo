@@ -420,7 +420,7 @@ public class ControlDatiPersonali {
         if (cfBambino==null){
             List<DomandaIscrizione> a;
             try {
-                a = dbDomandaIscrizione.ricercaDomandaDaGenitore(getGenitoreFromUsername(username));
+                a = dbDomandaIscrizione.ricercaDomandaDaGenitore(getGenitoreFromUsername(username).getCodiceFiscale());
                 if (a.size()>0)
                     domandaIscrizione= a.get(1);
             } catch (SQLException e) {
@@ -471,11 +471,94 @@ public class ControlDatiPersonali {
     public boolean updateAccount(String username, String password,
             String email, String tipologia_genitore) {
         Database db = new Database();
-        DBAccount dbAccount=new DBAccount(db);
+        DBAccount dbAccount=new DBAccount(db); 
+        DBGenitore dbGenitore=new DBGenitore(db);
+        DBEducatoreDidattico dbEducatoreDidattico=new DBEducatoreDidattico(db);
+        DBPersonaleAsilo dbPersonaleAsilo=new DBPersonaleAsilo(db);
+        DBPsicopedagogo dpPsicopedagogo=new DBPsicopedagogo(db);
+       
+        //creo il nuovo account che sostituirà il vecchio
+       Account newAccount= new Account();
+       try {
+        newAccount.setOwner(getValoriUtente(username));
+    } catch (DBConnectionException e1) {
+        // TODO Blocco di catch autogenerato
+        LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+    }//cambio owner
+       newAccount.setUserName(username);//setto username che non varierà mai
+       if (password==null)
+        try {
+            Account account=new Account();
+            System.out.println(username);
+            account=dbAccount.ricercaPerUsername(username);
+            System.out.println("fgd");
+            newAccount.setPassWord((dbAccount.ricercaPerUsername(username)).getPassWord());
+        } catch (SQLException e1) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+        }
+    else newAccount.setPassWord(password);//cambio password
+       
+       
+       //creo il nuovo utente, con tutti i campi che aveva in precedenza ma con l'email aggiornata
+       Utente newUtente=new Utente();
+       try {
+        newUtente=getValoriUtente(username);
+    } catch (DBConnectionException e1) {
+        // TODO Blocco di catch autogenerato
+        LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+    }//risetto tutti i campi come prima
+       if (email==null)
+        try {
+            newUtente.setEmail(getValoriUtente(username).getEmail());
+        } catch (DBConnectionException e1) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+        }
+    else newUtente.setEmail(email);//cambio email
+       
+       
         
-        //aggiungere tutti i dbPersonale e fare update
+        try{
+        db.apriConnessione();
+           
+       
+        
+            if(!dbAccount.replace(dbAccount.ricercaPerUsername(username), newAccount))//modifica dati account
+                return false;
+            
+            //controlla se utente è Personale asilo ed in quel caso aggiorna la mail
+            if (dbPersonaleAsilo.getPersonaleAsiloPerCF(getValoriUtente(username).getCodiceFiscale()) != null ){
+                PersonaleAsilo realBean = dbPersonaleAsilo.getPersonaleAsiloPerCF(newUtente.getCodiceFiscale());
+                PersonaleAsilo newRealBean=realBean;
+                newRealBean.setEmail(newUtente.getEmail());
+                dbPersonaleAsilo.replace(realBean, newRealBean);
+            }
+            //controlla se utente è genitore ed in quel caso aggiorna la mail
+            if (dbGenitore.getGenitorePerCF(getValoriUtente(username).getCodiceFiscale()) != null ){
+                Genitore realBean = dbGenitore.getGenitorePerCF(newUtente.getCodiceFiscale());
+                Genitore newRealBean=realBean;
+                newRealBean.setEmail(newUtente.getEmail());
+                dbGenitore.replace(realBean, newRealBean);
+            }
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+        } catch (DBConnectionException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+        }
+        
+        
+                        
+                
+                
+      
+        
+        finally{
+            db.chiudiConnessione();
+        }
         return true;
     }
-    
-  
 }
+    
