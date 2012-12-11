@@ -165,7 +165,7 @@ public class DBBando extends DBBeans<Bando> {
      * 
      * 
      * @return Bando se presente null se non vi è alcun bando
-     * @throws SQLException
+     * @throws SQLException 
      */
     public Bando getBando() throws SQLException {
         
