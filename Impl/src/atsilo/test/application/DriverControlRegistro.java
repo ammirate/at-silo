@@ -36,7 +36,7 @@ public class DriverControlRegistro {
         
         //test1
         cr = ControlRegistroTest.getIstance();
-        Classe classe = new Classe("primaA",null);
+        Classe classe = new Classe(1,"primaA",null);
         
         Registro r1 = cr.getRegistro(classe);
         System.out.println("Prova #1: "+r1);

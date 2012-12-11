@@ -17,7 +17,7 @@ public class StubRegistro
     EducatoreDidattico maestra;
     
     public StubRegistro(){
-        maestra = new EducatoreDidattico(null, "antonio", "cesarano", "csrntn91l26c129j", "email@email.com", null, null, null, null, null);
+        maestra = new EducatoreDidattico(null, "antonio", "cesarano", "csrntn91l26c129j", "email@email.com", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
        
         r = new Registro(1,null,1,maestra);
         r1 = new Registro(2,null,2,maestra);
@@ -28,7 +28,7 @@ public class StubRegistro
         return true;
     }
     
-    public boolean assegnaRegistroAClasse(int idRegistro, String IdClasse){
+    public boolean assegnaRegistroAClasse(int idRegistro, int i){
         return false;
     }
 
