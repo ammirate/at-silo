@@ -215,9 +215,12 @@ public class DBBando extends DBBeans<Bando> {
         ResultSet r = stmt.executeQuery();
         
         b.setiD(r.getInt("id"));
-        b.setDataInizioBando(r.getString("data_inizio"));
-        b.setDataFineBando(r.getString("data_fine"));
-        
+        b.setDataInizioBando(r.getString("data_inizio_bando"));
+        b.setDataFineBando(r.getString("data_fine_bando"));
+        b.setDataInizioPresentazioneRinuncia(r.getString("data_inizio_presentazione_rinuncia"));
+        b.setDataFinePresentazioneRinuncia("data_fine_presentazione_rinuncia");
+        b.setDataFineRinuncia("data_fine_rinuncia");
+        b.setPostiDisponibili(r.getInt("posti_disponobili"));
         return b;
     }
  
