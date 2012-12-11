@@ -489,9 +489,7 @@ public class ControlDatiPersonali {
        if (password==null)
         try {
             Account account=new Account();
-            System.out.println(username);
             account=dbAccount.ricercaPerUsername(username);
-            System.out.println("fgd");
             newAccount.setPassWord((dbAccount.ricercaPerUsername(username)).getPassWord());
         } catch (SQLException e1) {
             // TODO Blocco di catch autogenerato
