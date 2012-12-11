@@ -20,27 +20,16 @@
 		var fineP = String(document.getElementById("fineP").value);
 		var fineR = String(document.getElementById("fineR").value);
 		
-		 if((reg.test(inizioB))== false){
+		 if( ((inizioB.match(reg))== null) || ((fineB.match(reg))== null) || ((inizioP.match(reg))== null) || ((fineP.match(reg))== null) || ((fineR.match(reg))== null) ){
 			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
 			 return false;
 		 }
-		 if((reg.test(fineB))== false){
-			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
-			 return false;
+		 var iB = parseInt(inizioB.subString(0,4));
+		 if((iB % 4 == 0) && ((iB % 100 != 0) || (iB % 400 == 0))){
+			 alert("anno bisestile");
 		 }
-		 if((reg.test(inizioP))== false){
-			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
-			 return false;
-		 }
-		 if((reg.test(fineP))== false){
-			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
-			 return false;
-		 }
-		 if((reg.test(fineR))== false){
-			 alert('rispettare il formato YYYY-MM-DD inserendo una data corretta');
-			 return false;
-		 }
-	}
+
+	} 
     function isNumberKey(evt)
     {
        var charCode = (evt.which) ? evt.which : event.keyCode
