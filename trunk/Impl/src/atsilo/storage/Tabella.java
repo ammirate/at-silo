@@ -128,24 +128,50 @@ public class Tabella /* implements ManagerDB */{
      */
     public void setParam(PreparedStatement stmt, int par, int type,
             Object val) throws SQLException {
-        
-        if (val == null) {
-            stmt.setNull(par, type);
-        } else {
+        try {
+            if (val == null) {
+                stmt.setNull(par, type);
+            } else {
+                switch (type) {
+                case Types.SMALLINT:
+                case Types.INTEGER:
+                case Types.BIGINT:
+                    stmt.setLong(par, ((Number) val).longValue());
+                    break;
+                case Types.DECIMAL:
+                case Types.DOUBLE:
+                case Types.FLOAT:
+                    stmt.setDouble(par, ((Number) val).doubleValue());
+                    break;
+                default:
+                    stmt.setString(par, val.toString());
+                }
+            }
+        } catch (ClassCastException ex) {
+            /*
+             * Il parametro fornito non e' di un tipo base
+             */
+            String err;
             switch (type) {
             case Types.SMALLINT:
             case Types.INTEGER:
             case Types.BIGINT:
-                stmt.setLong(par, ((Number) val).longValue());
+                err = "numerico intero";
                 break;
             case Types.DECIMAL:
             case Types.DOUBLE:
             case Types.FLOAT:
-                stmt.setDouble(par, ((Number) val).doubleValue());
+                err = "numerico reale";
                 break;
             default:
-                stmt.setString(par, val.toString());
+                err = "stringa";
             }
+            
+            err = String.format("Il valore (%3$s) fornito e' di tipo %1$s,"
+                    + " mentre la colonna e' di tipo %2$s."
+                    + " Probabilmente, questo e' causato da un errore di mapping."
+                    , val.getClass().getName(), err, val.toString());
+            throw new IllegalArgumentException(err, ex);
         }
     }
     
