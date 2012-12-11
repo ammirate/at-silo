@@ -13,9 +13,9 @@ public class StubRispostaQuestionario {
         super();
     }
     
-    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g,String idDomanda) throws SQLException{
+    public List <RispostaQuestionario> getRisposteQuestionarioPerGenitore(Genitore g, int idDomanda) throws SQLException{
         List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario>();
-        RispostaQuestionario r=new RispostaQuestionario("1","22 anni","1","csrntn91l26c129j");
+        RispostaQuestionario r=new RispostaQuestionario(1,"22 anni",1,"csrntn91l26c129j");
         
         if(r.getCFgenitore() == g.getCodiceFiscale())
             if(r.getIdDomanda() == idDomanda)
@@ -35,9 +35,9 @@ public class StubRispostaQuestionario {
     public List<RispostaQuestionario> getRisposteDomandaSpecifica(DomandaQuestionario d) throws SQLException{        
         
         List<RispostaQuestionario> l =new ArrayList<RispostaQuestionario>();
-        RispostaQuestionario r=new RispostaQuestionario("1","22 anni","1","csrntn91l26c129j");
-        RispostaQuestionario r1=new RispostaQuestionario("2","3 figli","2","csrntn91l26c129j");
-        RispostaQuestionario r2=new RispostaQuestionario("3"," gennaio 2009","3","csrntn91l26c129j");
+        RispostaQuestionario r=new RispostaQuestionario(1,"22 anni",1,"csrntn91l26c129j");
+        RispostaQuestionario r1=new RispostaQuestionario(2,"3 figli",2,"csrntn91l26c129j");
+        RispostaQuestionario r2=new RispostaQuestionario(3," gennaio 2009",3,"csrntn91l26c129j");
       
         l.add(r);
         l.add(r1);

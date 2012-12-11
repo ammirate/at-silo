@@ -9,17 +9,17 @@ import atsilo.entity.DomandaQuestionario;
 public class StubDomandaQuestionario {
     
     
-    DomandaQuestionario d1 = new DomandaQuestionario("1",1,"quanti anni hai?",null);
-    DomandaQuestionario d2 = new DomandaQuestionario("2",1,"dove abiti?",null);
-    DomandaQuestionario d3 = new DomandaQuestionario("3",1,"quanti figli hai?",null);
+    DomandaQuestionario d1 = new DomandaQuestionario(1,1,"quanti anni hai?",null);
+    DomandaQuestionario d2 = new DomandaQuestionario(2,1,"dove abiti?",null);
+    DomandaQuestionario d3 = new DomandaQuestionario(3,1,"quanti figli hai?",null);
 
-    CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", "1");
-    CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("check", "dai 26 ai 30", "26-30", "1");
-    CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("check", "dai 31 ai 36", "31-36", "1");
+    CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("check", "dai 22 a 26", "22-26", 1);
+    CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("check", "dai 26 ai 30", "26-30", 1);
+    CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("check", "dai 31 ai 36", "31-36", 1);
     
-    CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "uno", "1", "3");
-    CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "due", "2", "3");
-    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "pi� di due", "2+", "3");
+    CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("check", "uno", "1", 3);
+    CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("check", "due", "2", 3);
+    CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("check", "pi� di due", "2+", 3);
     List<DomandaQuestionario> DOMANDE;
    
     public StubDomandaQuestionario() {
