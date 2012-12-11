@@ -136,6 +136,7 @@ public class Tabella /* implements ManagerDB */{
             } else {
                 switch (type) {
                 case Types.BOOLEAN:
+                    err = "booleano";
                     stmt.setBoolean(par, (Boolean) val);
                 case Types.SMALLINT:
                 case Types.INTEGER:
