@@ -62,7 +62,12 @@ public class DBAccount extends DBBeans<Account>
         Map<String,String> res= new HashMap<String,String>();
         res.put("userName", "username");
         res.put("passWord", "password");
-       
+        res.put("personaleAsilo","personale_asilo");
+        res.put("psicoPedagogo","psico_pedagogo");
+        res.put("responsabileQuestionario","responsabile_questionario");
+        res.put("responsabileTirocini","responsabile_tirnocini");
+        res.put("tirocinante","tirocinante");
+        res.put("delegatoRettore","delegato_rettore");
         
         
         return Collections.unmodifiableMap(res);
@@ -137,6 +142,11 @@ public class DBAccount extends DBBeans<Account>
                 u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("personale_asilo"));
             }
+            else if(r.getString("delegato_rettore")!=null)
+            {
+                u=new PersonaleAsilo();
+                u.setCodiceFiscale(r.getString("delegato_rettore"));
+            }
             a.setOwner(u);
         }
          
@@ -186,6 +196,11 @@ public class DBAccount extends DBBeans<Account>
             u=new PersonaleAsilo();
             u.setCodiceFiscale(r.getString("personale_asilo"));
         }
+       if(r.getString("delegato_rettore")!=null)
+        {
+            u=new PersonaleAsilo();
+            u.setCodiceFiscale(r.getString("delegato_rettore"));
+        }
         a.setOwner(u);
         
         return a;
@@ -210,36 +225,43 @@ public class DBAccount extends DBBeans<Account>
         Assegnazione DBAccount_assegnazione2 = new Assegnazione("tirocinante",null);
         Assegnazione DBAccount_assegnazione3 = new Assegnazione("personale_asilo",null);
         Assegnazione DBAccount_assegnazione4 = new Assegnazione("psico_pedagogo",null);
-        Assegnazione DBAccount_assegnazione5;
+        Assegnazione DBAccount_assegnazione5 = new Assegnazione("delegato_rettore",null);
+        Assegnazione DBAccount_assegnazione6= null;
         
         
-        Assegnazione[] DBAssign = new Assegnazione[6];
+        Assegnazione[] DBAssign = new Assegnazione[7];
         
         DBAssign[0]=DBAccount_assegnazione;
         DBAssign[1]=DBAccount_assegnazione1;
         DBAssign[2]=DBAccount_assegnazione2;
         DBAssign[3]=DBAccount_assegnazione3;
         DBAssign[4]=DBAccount_assegnazione4;
+        DBAssign[5]=DBAccount_assegnazione5;
+        DBAssign[6]=DBAccount_assegnazione6;
         
         if(bean.getOwner() instanceof ResponsabileQuestionario){
             DBAccount_assegnazione5 = new Assegnazione("responsabile_questionario",bean.getOwner().getCodiceFiscale());
-            DBAssign[0]=DBAccount_assegnazione5;
+            DBAssign[0]=DBAccount_assegnazione6;
         }
         if(bean.getOwner() instanceof Genitore){
             DBAccount_assegnazione5 = new Assegnazione("genitore",bean.getOwner().getCodiceFiscale());
-            DBAssign[1]=DBAccount_assegnazione5;
+            DBAssign[1]=DBAccount_assegnazione6;
         }
         if(bean.getOwner() instanceof Tirocinante){
             DBAccount_assegnazione5 = new Assegnazione("tirocinante",bean.getOwner().getCodiceFiscale());
-            DBAssign[2]=DBAccount_assegnazione5;
+            DBAssign[2]=DBAccount_assegnazione6;
         }
         if(bean.getOwner() instanceof PersonaleAsilo){
             DBAccount_assegnazione5 = new Assegnazione("personale_asilo",bean.getOwner().getCodiceFiscale());
-            DBAssign[3]=DBAccount_assegnazione5;
+            DBAssign[3]=DBAccount_assegnazione6;
         }
         if(bean.getOwner() instanceof Psicopedagogo){
             DBAccount_assegnazione5 = new Assegnazione("psico_pedagogo",bean.getOwner().getCodiceFiscale());
-            DBAssign[4]=DBAccount_assegnazione5;
+            DBAssign[4]=DBAccount_assegnazione6;
+        }
+        if(bean.getOwner() instanceof Psicopedagogo){
+            DBAccount_assegnazione5 = new Assegnazione("delegato_rettore",bean.getOwner().getCodiceFiscale());
+            DBAssign[5]=DBAccount_assegnazione6;
         }
         
         return DBAssign;
