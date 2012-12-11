@@ -14,16 +14,27 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
- <%@
-include file="atsilo_files/sidebar_top_genitore.jsp"
+<%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"
  %>
-<%@ page import="atsilo.application.*,atsilo.entity.*"
- %>
- <%
- 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
- 	String codiceFiscaleBambino;
-  	Bambino bambino=cdt.getDatiBambino(codiceFiscaleBambino);
- %>
+<%
+		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+	   	Utente utente=cdt.getValoriUtente(username);
+	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
+	  	List<Bambino> figli= new ArrayList<Bambino>();
+	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale());
+	  	
+	  	
+	  	
+	  	
+	    	for (int i=0;i<figli.size();i++){
+	%> <script type=text/javascript>
+
+  	   		  objSelect = document.getElementById("select_bambini"); 
+  	   	     objSelect.option[<%=i%>]=new Option("Selezionare il bambino", "", true)
+  	  		 objSelect.optionsg[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
+							
+	</script> 
+	<%} %>
   <!--Script per gestire i form -->
  <script type="text/javascript">
 function settaAttributi(slf){
@@ -85,12 +96,13 @@ function settaAttributi(slf){
   </tr>
   <tr>
     <td>&nbsp; </td></tr>
-     <tr>
-     <td colspan="4"><input value="Salva Dati" name="salva_dati" type="submit" />
-     <input value="Modifica Dati" name="modifica_dati" type="submit" />
-     </td>
-    
-  </tr>
+<tr>
+				<td></td>
+				<td><input type="submit" name="bottone_submit"
+					id="bottone_submit" value="Modifica"
+					onClick="return settaAttributi(this)" /> <input type="reset"
+					name="reset" value="Annulla" /></td>
+			</tr>
 </table>
  
 </form>
