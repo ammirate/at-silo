@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   KEY `responsabile_questionario` (`responsabile_questionario`),
   KEY `responsabile_tirocini` (`responsabile_tirocini`),
   KEY `tirocinante` (`tirocinante`)
+  KEY `delegato_rettore` (`personale_asilo`),
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
