@@ -95,7 +95,8 @@ public class ControlGestioneBandoTest {
             bando.setDataFinePresentazioneRinuncia("2011-05-04");
             bando.setDataFineRinuncia("2011-05-05");
             bando.setPostiDisponibili(40);
-            
+            dbBando.inserisci(bando);
+            System.out.println(dbBando.getBando().getId());
             control.modificaBando("2011-05-06", "2011-05-07", "2011-05-08", "2011-05-09", "2011-05-10", 30);
             
             assertEquals("2011-05-06", dbBando.getBando().getDataInizioBando());

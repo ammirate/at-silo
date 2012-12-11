@@ -41,8 +41,7 @@ import java.sql.SQLException;
 
 public class ControlGestioneBando {
     private static final ControlGestioneBando INSTANCE = new ControlGestioneBando();
-    private DBBando dbBando;
-    private DBDomandaIscrizione dbDomandaIscrizione;
+   
     
     
     private ControlGestioneBando() {
@@ -69,7 +68,8 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            dbBando = new DBBando(db);
+
+            DBDomandaIscrizione dbDomandaIscrizione=new DBDomandaIscrizione(db);
             dbDomandaIscrizione = new DBDomandaIscrizione(db);
             
             DomandaIscrizione domandaDaModificare = new DomandaIscrizione();
@@ -146,32 +146,26 @@ public class ControlGestioneBando {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
+
+            DBBando dbBando=new DBBando(db);
             Bando bando; 
             
-            if (dbBando.getBAndo() == null) {
+            if (dbBando.getBando() == null) {
                 bando = new Bando(0, inizioBando, fineBando,
                         inizioPresentazione, finePresentazione, fineRinuncia,
                         posti, null);
+                dbBando.inserisci(bando);
                 return true;
             } else {
-                bando = new Bando(dbBando.getBAndo().getiD(), dbBando
-                        .getBAndo().getDataInizioBando(), dbBando.getBAndo()
-                        .getDataFineBando(), dbBando.getBAndo()
-                        .getDataInizioPresentazioneRinuncia(), dbBando
-                        .getBAndo().getDataFinePresentazioneRinuncia(), dbBando
-                        .getBAndo().getDataFineRinuncia(), dbBando.getBAndo()
-                        .getPostiDisponibili(), null);
-                bando.setDataInizioBando(inizioBando);
-                bando.setDataFineBando(fineBando);
-                bando.setDataInizioPresentazioneRinuncia(inizioPresentazione);
-                bando.setDataFinePresentazioneRinuncia(finePresentazione);
-                bando.setDataFineRinuncia(fineRinuncia);
-                bando.setPostiDisponibili(posti);
-                dbBando.replace(dbBando.getBAndo(), bando);
+                bando = new Bando(0, inizioBando, fineBando,
+                        inizioPresentazione, finePresentazione, fineRinuncia,
+                        posti, null);
+                dbBando.replace(dbBando.getBando(), bando);
                 
                 return true;
             }
-        } finally {
+        } finally 
+        {
             db.chiudiConnessione();
         }
     }
@@ -180,26 +174,29 @@ public class ControlGestioneBando {
             SQLException {
         
         Database db = new Database();
+        
         if (!db.apriConnessione()) {
             throw new DBConnectionException("Connessione Fallita");
         }
         try {
-            if (dbBando.getBAndo().getDataInizioBando() == null) {
+            DBBando dbBando=new DBBando(db);
+            if (dbBando.getBando().getDataInizioBando() == null) {
                 throw new DBConnectionException(
                         "Bando non presente impossibile modificare/o inserire il path");
             } else {
-                Bando bando = new Bando(dbBando.getBAndo().getiD(), dbBando
-                        .getBAndo().getDataInizioBando(), dbBando.getBAndo()
-                        .getDataFineBando(), dbBando.getBAndo()
+                
+                Bando bando = new Bando(dbBando.getBando().getId(), dbBando
+                        .getBando().getDataInizioBando(), dbBando.getBando()
+                        .getDataFineBando(), dbBando.getBando()
                         .getDataInizioPresentazioneRinuncia(), dbBando
-                        .getBAndo().getDataFinePresentazioneRinuncia(), dbBando
-                        .getBAndo().getDataFineRinuncia(), dbBando.getBAndo()
-                        .getPostiDisponibili(), dbBando.getBAndo().getPath());
-                bando.setPath(path);
-                dbBando.replace(dbBando.getBAndo(), bando);
+                        .getBando().getDataFinePresentazioneRinuncia(), dbBando
+                        .getBando().getDataFineRinuncia(), dbBando.getBando()
+                        .getPostiDisponibili(), path);
+                dbBando.replace(dbBando.getBando(), bando);
                 return true;
             }
-        } finally {
+        } finally 
+        {
             db.chiudiConnessione();
         }
     }
