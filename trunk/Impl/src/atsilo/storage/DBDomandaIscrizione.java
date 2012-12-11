@@ -20,6 +20,8 @@ import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Genitore;
 import atsilo.entity.RispostaQuestionario;
+import atsilo.entity.Servizio;
+import atsilo.storage.DBBeans.Assegnazione;
 
 /*
  *-----------------------------------------------------------------
@@ -31,7 +33,7 @@ import atsilo.entity.RispostaQuestionario;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Ferdinando Di Palma, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -40,7 +42,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     public DBDomandaIscrizione(Database db){
         super("domanda_iscrizione",db);
     }
-
+    
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
     
@@ -50,7 +52,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
      */
     private static List<String> creaChiave()
     {
-        List<String> res=  Arrays.asList("id");// da chiarire
+        List<String> res=  Arrays.asList("id");
         
         return Collections.unmodifiableList(res);
     }
@@ -64,113 +66,225 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         res.put("id","id");
         res.put("punteggio","punteggio");
         res.put("posizione","posizione");
-        res.put("dataPresentazione","data_resentazione");
+        res.put("dataPresentazione","data_presentazione");
         res.put("genitore","genitore");
         res.put("bambino","bambino");
+        res.put("statoDomanda", "stato_domanda");
+        res.put("certificatoMalattie", "certificato_malattie");
+        res.put("certificatoVaccinazioni", "certificato_vaccinazioni");
+        res.put("certificatoPrivacy", "certificato_privacy");
+        res.put("bambinoDisabile", "bambino_disabile");
+        res.put("genitoreInvalido", "genitore_invalido");
+        res.put("genitoreSolo", "genitore_solo");
+        res.put("genitoreVedovo", "genitore_vedovo");
+        res.put("genitoreNubile", "genitore_nubile");
+        res.put("genitoreSeparato", "genitore_separato");
+        res.put("figlioNonRiconosciuto", "figlio_non_riconosciuto");
+        res.put("affidoEsclusivo", "affido_esclusivo");
+        res.put("altriComponentiDisabili", "altri_componenti_disabili");
+        res.put("condizioniCalcoloPunteggio", "condizioni_calcolo_punteggio");
+        res.put("isee", "isee");
+        res.put("servizio", "servizio");
+        res.put("stato_convalidazione", "stato_convalidazione");
+        
+        
         
         return Collections.unmodifiableMap(res);
     }
-
+    
     /**
-         * @see atsilo.storage.DBBeans#getMappingFields()
-         */
-        @Override
-        protected Map getMappingFields() {
-           return MAPPINGS;
-        }
-
-
-        /**
-         * @see atsilo.storage.DBBeans#getKeyFields()
-         */
-        @Override
-        protected List getKeyFields() {
-           return CHIAVE;
-        }
-
-
-        /**
-         * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
-         */
-        @Override
-        protected DomandaIscrizione creaBean(ResultSet r) throws SQLException {
+     * @see atsilo.storage.DBBeans#getMappingFields()
+     */
+    @Override
+    protected Map getMappingFields() {
+        return MAPPINGS;
+    }
+    
+    
+    /**
+     * @see atsilo.storage.DBBeans#getKeyFields()
+     */
+    @Override
+    protected List getKeyFields() {
+        return CHIAVE;
+    }
+    
+    
+    /**
+     * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+     */
+    @Override
+    protected DomandaIscrizione creaBean(ResultSet r) throws SQLException {
+        Bambino b=new Bambino();
+        Genitore g=new Genitore();
+        Servizio s=new Servizio();
+        String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+        String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+        int se=r.getInt("servizio");s.setId(se);
+        
+        DomandaIscrizione temp = new DomandaIscrizione();
+        
+        temp.setId(r.getInt("id"));
+        temp.setPosizione(r.getInt("posizione"));
+        temp.setPunteggio(r.getInt("punteggio"));
+        temp.setDataPresentazione(r.getDate("data_presentazione"));
+        temp.setBambino(b);
+        temp.setGenitore(g);
+        temp.setServizio(s);
+        temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+        temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+        temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+        temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+        temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+        temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+        temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+        temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+        temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+        temp.setGenitoreSeparato(r.getBoolean("genitoreSeparato"));
+        temp.setGenitoreSolo(r.getBoolean("genitoreSolo"));
+        temp.setGenitoreVedovo(r.getBoolean("genitoreVedovo"));
+        temp.setIsee(r.getFloat("isee"));
+        temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+        temp.setStatoDomanda(r.getString("stato_domanda"));
+        temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+        
+        
+        return temp;
+    }
+    
+    /**
+     * ricerca l'id della domanda iscrizione di un bambino 
+     * @param codiceFiscaleB è il codice fiscale del bambino per il quale viene cercata 
+     * la domanda d'iscrizione,se è null si verifica un NULLPOINTEREXCEPTION
+     * @return Domandaiscrizione appartenente al bambino richiesto oppure null se
+     * non ha fatto domanda d'iscrizione
+     * @throws SQLException se si verifica un errore di connessione con il database
+     */
+    
+    public DomandaIscrizione ricercaDomandaDaBambino(String codiceFiscaleB) throws SQLException {
+        
+        DomandaIscrizione d=new DomandaIscrizione();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE bambino = ?");
+        tabella.setParam(stmt, 1, "bambino", codiceFiscaleB);
+        ResultSet r = stmt.executeQuery();
+        
+        DomandaIscrizione temp = new DomandaIscrizione();
+        
+        Bambino b=new Bambino();
+        Genitore g=new Genitore();
+        Servizio s=new Servizio();
+        String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+        String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+        int se=r.getInt("servizio");s.setId(se);
+        
+        
+        temp.setId(r.getInt("id"));
+        temp.setPosizione(r.getInt("posizione"));
+        temp.setPunteggio(r.getInt("punteggio"));
+        temp.setDataPresentazione(r.getDate("data_presentazione"));
+        temp.setBambino(b);
+        temp.setGenitore(g);
+        temp.setServizio(s);
+        temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+        temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+        temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+        temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+        temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+        temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+        temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+        temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+        temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+        temp.setGenitoreSeparato(r.getBoolean("genitoreSeparato"));
+        temp.setGenitoreSolo(r.getBoolean("genitoreSolo"));
+        temp.setGenitoreVedovo(r.getBoolean("genitoreVedovo"));
+        temp.setIsee(r.getFloat("isee"));
+        temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+        temp.setStatoDomanda(r.getString("stato_domanda"));
+        temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+        
+        r.close();
+        return temp;
+    }
+    
+    /**
+     * ricerca le domande di iscrizione  di un genitore
+     * @param codiceFiscaleG  è il codice fiscale del genitore per il quale 
+     * vengono cercate le domande d'iscrizione
+     * @return una lista di Domande di iscrizione appartenenti al genitore 
+     * richiesto oppure una lista di iscrizioni vuota se il genitore non ha 
+     * fatto domanda d'iscrizione
+     * @throws SQLException se si verifica un errore di connessione con il database
+     */
+    public List<DomandaIscrizione> ricercaDomandaDaGenitore(String codiceFiscaleG) 
+            throws SQLException {
+       
+        List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE genitore = ?");
+        tabella.setParam(stmt, 1, "genitore", codiceFiscaleG);
+        ResultSet r = stmt.executeQuery();
+        
+        while(r.next()){
+            
+            DomandaIscrizione temp = new DomandaIscrizione();
+            
             Bambino b=new Bambino();
             Genitore g=new Genitore();
-            String ge=r.getString("genitore");
-            String ba=r.getString("bambino");
-           DomandaIscrizione temp = new DomandaIscrizione();
+            Servizio s=new Servizio();
+            String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+            String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+            int se=r.getInt("servizio");s.setId(se);
+            
+            
             temp.setId(r.getInt("id"));
             temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
-            temp.setDataPresentazione(r.getDate("dataPresentazione"));
+            temp.setDataPresentazione(r.getDate("data_presentazione"));
             temp.setBambino(b);
             temp.setGenitore(g);
-            return temp;
-        }
-        
-       /**
-        * ricerca l'id della domanda iscrizione di un bambino 
-        * @param b è il bambino per il quale viene cercata la domanda d'iscrizione, se è null si verifica un NULLPOINTEREXCEPTION
-        * @return iscrizione appartenente al bambino richiesto oppure -1 se non ha fatto domanda d'iscrizione
-        * @throws SQLException se si verifica un errore di connessione con il database
-        */
-        
-    public int ricercaDomandaDaBambino(Bambino b) throws SQLException {
-        int id = -1;
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "bambino", b);
-            ResultSet res = stmt.executeQuery();
-            
-            for(DomandaIscrizione t : iteraResultSet(res))
-               id = res.getInt("id");
-
-        res.close();
-        return id;
-    }
-
-    /**
-     * ricerca le iscrizioni di un genitore
-     * @param g è il genitore per il quale vengono cercate le domande d'iscrizione, se è null si verifica un NULLPOINTEREXCEPTION
-     * @return una lista di iscrizioni appartenenti al genitore richiesto oppure una lista di iscrizioni vuota se il genitore non ha fatto domanda d'iscrizione
-     * @throws SQLException se si verifica un errore di connessione con il database
-     */
-    public List<DomandaIscrizione> ricercaDomandaDaGenitore(Genitore g) throws SQLException {
-        List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
-        DomandaIscrizione d=new DomandaIscrizione();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", g.getCodiceFiscale());
-            ResultSet res = stmt.executeQuery();
-        for(DomandaIscrizione t : iteraResultSet(res))
-        {
-            
-            Genitore ge=t.getGenitore();
-            if(ge.getCodiceFiscale().equals(g.getCodiceFiscale()))
-            {
-                lista.add(t);
-            }
+            temp.setServizio(s);
+            temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+            temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+            temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+            temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+            temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+            temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+            temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+            temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+            temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+            temp.setGenitoreSeparato(r.getBoolean("genitoreSeparato"));
+            temp.setGenitoreSolo(r.getBoolean("genitoreSolo"));
+            temp.setGenitoreVedovo(r.getBoolean("genitoreVedovo"));
+            temp.setIsee(r.getFloat("isee"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStatoDomanda(r.getString("stato_domanda"));
+            temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            lista.add(temp);
             
         }
-        res.close();
+        r.close();
         return lista;
     }
-
-/**
- * ricerca una domanda d'iscrizione per id 
- * @param id è il valore dell'identificativo da ricercare, può avere un qualsiasi valore appartenente all'intervallo degli interi int.
- * @return una domandaIscrizione che ha l'id ricercato oppure un oggetto vuoto se la domanda non esiste
- * @throws SQLException se si verifica un errore di connessione con il database.
- */
+    
+    /**
+     * da rivedere
+     * ricerca una domanda d'iscrizione per id 
+     * @param id è il valore dell'identificativo da ricercare, può avere un qualsiasi valore appartenente all'intervallo degli interi int.
+     * @return una domandaIscrizione che ha l'id ricercato oppure un oggetto vuoto se la domanda non esiste
+     * @throws SQLException se si verifica un errore di connessione con il database.
+     */
     public DomandaIscrizione ricercaDomandaDaId(int id) throws SQLException {
         DomandaIscrizione d=new DomandaIscrizione();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
-            tabella.setParam(stmt, 1, "id", id);
-            ResultSet res= stmt.executeQuery();
-            Bambino b=new Bambino();
-            Genitore g=new Genitore();
-            
+        tabella.setParam(stmt, 1, "id", id);
+        ResultSet res= stmt.executeQuery();
+        Bambino b=new Bambino();
+        Genitore g=new Genitore();
+        
         if(res.next())
         {
             String ge=res.getString("genitore");
@@ -195,17 +309,17 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
      * @throws SQLException se c'è errore di connessione con il database
      */
     public List<DomandaIscrizione> ricercaDomandaPerData(Date da) throws SQLException{
-    List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
-    DomandaIscrizione d=new DomandaIscrizione();
-    PreparedStatement stmt = tabella.prepareStatement(
-            "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data = ?");
+        List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
+        DomandaIscrizione d=new DomandaIscrizione();
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data = ?");
         tabella.setParam(stmt, 1, "data", da);
         ResultSet res= stmt.executeQuery();
-    for(DomandaIscrizione t : iteraResultSet(res))
-       lista.add(t);
-  
-    res.close();
-    return lista;
+        for(DomandaIscrizione t : iteraResultSet(res))
+            lista.add(t);
+        
+        res.close();
+        return lista;
     }
     
     /**
@@ -219,14 +333,14 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         DomandaIscrizione d=new DomandaIscrizione();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE punteggio = ?");
-            tabella.setParam(stmt, 1, "punteggio", p);
-            ResultSet res= stmt.executeQuery();
+        tabella.setParam(stmt, 1, "punteggio", p);
+        ResultSet res= stmt.executeQuery();
         for(DomandaIscrizione t : iteraResultSet(res))
-           lista.add(t);
-      
+            lista.add(t);
+        
         res.close();
         return lista;
-        }
+    }
     /**
      * riceve l'id di una domanda d'iscrizione e vede se la sua posizione rientra nella graduatoria
      * @param id è l'identificativo della domanda d'iscrizione
@@ -247,7 +361,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             return "idoneo";
         else
             return "non idoneo";
-       }
+    }
     // da implementare
     public boolean modificaCertificatiIscrizione(int id, boolean vaccinazioni, boolean malattie, boolean privacy) throws SQLException 
     {
@@ -255,4 +369,19 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         
     }
+    
+    protected Assegnazione[] creaAssegnazioni(DomandaIscrizione bean) {
+       
+        Assegnazione DBDomandaIscrizione_assegnazione = new Assegnazione("servizio",bean.getServizio().getId());
+        Assegnazione DBDomandaIscrizione_assegnazione1 = new Assegnazione("genitore",bean.getGenitore().getCodiceFiscale());
+        Assegnazione DBDomandaIscrizione_assegnazione2 = new Assegnazione("bambino",bean.getBambino().getCodiceFiscale());
+
+        Assegnazione[] DBAssign = new Assegnazione[3];
+        DBAssign[0]=DBDomandaIscrizione_assegnazione;
+        DBAssign[1]=DBDomandaIscrizione_assegnazione1;
+        DBAssign[2]=DBDomandaIscrizione_assegnazione2;
+
+        return DBAssign;
+    }
+    
 }
