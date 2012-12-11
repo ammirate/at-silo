@@ -65,7 +65,7 @@ public class DBAccount extends DBBeans<Account>
         res.put("personaleAsilo","personale_asilo");
         res.put("psicoPedagogo","psico_pedagogo");
         res.put("responsabileQuestionario","responsabile_questionario");
-        res.put("responsabileTirocini","responsabile_tirnocini");
+        res.put("responsabileTirocini","responsabile_tirocini");
         res.put("tirocinante","tirocinante");
         res.put("delegatoRettore","delegato_rettore");
         
@@ -148,6 +148,10 @@ public class DBAccount extends DBBeans<Account>
                 u.setCodiceFiscale(r.getString("delegato_rettore"));
             }
             a.setOwner(u);
+        }
+        else{
+            r.close();
+            return null;
         }
          
             r.close();  
@@ -259,7 +263,7 @@ public class DBAccount extends DBBeans<Account>
             DBAccount_assegnazione5 = new Assegnazione("psico_pedagogo",bean.getOwner().getCodiceFiscale());
             DBAssign[4]=DBAccount_assegnazione6;
         }
-        if(bean.getOwner() instanceof Psicopedagogo){
+        if(bean.getOwner() instanceof PersonaleAsilo){
             DBAccount_assegnazione5 = new Assegnazione("delegato_rettore",bean.getOwner().getCodiceFiscale());
             DBAssign[5]=DBAccount_assegnazione6;
         }

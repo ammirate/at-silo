@@ -20,6 +20,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import atsilo.entity.Account;
 import atsilo.entity.Bambino;
 import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
@@ -29,6 +30,7 @@ import atsilo.entity.PersonaleAsilo;
 import atsilo.entity.Psicopedagogo;
 import atsilo.entity.ResponsabileQuestionario;
 import atsilo.entity.Tirocinante;
+import atsilo.storage.DBAccount;
 import atsilo.storage.DBBambino;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
@@ -169,6 +171,14 @@ public class TestDBAccessi {
       System.out.println("posti bansdo"+bando.getPostiDisponibili());
       System.out.println("dataFinePresentazioneRinuncia"+bando.getDataFinePresentazioneRinuncia());
       }
+      DBAccount dba=new DBAccount(db);
+      Account a=dba.ricercaPerUsername("dsdgs");
+      if(a==null){
+          System.out.println("Account inesistente");
+      }
+      else
+      System.out.println("Ciao "+a.getOwner().getCodiceFiscale());
+      
       
         db.chiudiConnessione();
 
