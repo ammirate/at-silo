@@ -62,7 +62,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 										<table class="tabelle_form">
 											<tr>
 												<td>Data inizio bando</td>
-												<td><input name="iniziobando" type="text" id="inzioB"
+												<td><input name="iniziobando" type="text" id="inizioB"
 													maxlength="16" value="<%=dataInizioBando%>" readonly="readonly"  /></td>
 											</tr>
 											<tr>
