@@ -61,14 +61,7 @@ public class DBAccount extends DBBeans<Account>
     {
         Map<String,String> res= new HashMap<String,String>();
         res.put("userName", "username");
-        res.put("passWord", "password");
-        res.put("personaleAsilo","personale_asilo");
-        res.put("psicoPedagogo","psico_pedagogo");
-        res.put("responsabileQuestionario","responsabile_questionario");
-        res.put("responsabileTirocini","responsabile_tirocini");
-        res.put("tirocinante","tirocinante");
-        res.put("delegatoRettore","delegato_rettore");
-        
+        res.put("passWord", "password");       
         
         return Collections.unmodifiableMap(res);
     }
@@ -263,10 +256,10 @@ public class DBAccount extends DBBeans<Account>
             DBAccount_assegnazione5 = new Assegnazione("psico_pedagogo",bean.getOwner().getCodiceFiscale());
             DBAssign[4]=DBAccount_assegnazione6;
         }
-        if(bean.getOwner() instanceof PersonaleAsilo){
+        /*if(bean.getOwner() instanceof PersonaleAsilo){
             DBAccount_assegnazione5 = new Assegnazione("delegato_rettore",bean.getOwner().getCodiceFiscale());
             DBAssign[5]=DBAccount_assegnazione6;
-        }
+        }*/
         
         return DBAssign;
     }

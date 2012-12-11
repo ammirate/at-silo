@@ -68,9 +68,7 @@ public class DBRispostaQuestionario extends DBBeans {
         Map<String,String> res= new HashMap<String,String>();
         res.put("id", "id");
         res.put("valore", "valore");
-        res.put("domanda", "domanda");
-        res.put("genitore", "genitore");
-        
+       
         return Collections.unmodifiableMap(res);
     }
     
