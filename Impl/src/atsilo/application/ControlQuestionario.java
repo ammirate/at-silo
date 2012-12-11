@@ -171,7 +171,8 @@ public class ControlQuestionario {
             try {
                 if(!storage.replace(storage.getQuestionario(idQuestionario), newQuestionario))
                     throw new QuestionarioException("Inserimento domande nel questionario fallito");
-                
+                if(!isEditable(storage.getQuestionario(idQuestionario)))
+                    throw new QuestionarioException("Impossibile modificare un questionario attivo");
                 List<DomandaQuestionario> domande = newQuestionario.getDomande();
                 
                 for(DomandaQuestionario d: domande)
@@ -402,8 +403,8 @@ public class ControlQuestionario {
             //controllo per il caricamento delle risposte già inserite dal genitore
             risposte = storageRisposte.getRisposteGenitore(CFgenitore);
             for(RispostaQuestionario r : risposte){
-                DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());//prendo la domanda a cui fa riferimento la risposta
-                
+              //prendo la domanda a cui fa riferimento la risposta   
+                DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());
                 //controllo se la risposta dTemp, appartenente a qualche altro questionario,
                 //corrisponde a qualche domanda all'interno del nostro questionario
                 //in tal caso la risposta a tale domanda sarà la stessa della domanda dTemp
