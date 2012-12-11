@@ -202,53 +202,60 @@ public class DBBando extends DBBeans<Bando> {
     /**
      * restituisce l'unico bando presente nel database
      * 
-     *  
+     * 
      * @return
-     * @throws SQLException 
+     * @throws SQLException
      */
     public Bando getBAndo() throws SQLException {
         
         Bando b=new Bando();
         PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
                 + tabella.getNomeTabella());
-        
         ResultSet r = stmt.executeQuery();
-        
+        if(r.next())
+        {
+            
         b.setiD(r.getInt("id"));
         b.setDataInizioBando(r.getString("data_inizio_bando"));
         b.setDataFineBando(r.getString("data_fine_bando"));
-        b.setDataInizioPresentazioneRinuncia(r.getString("data_inizio_presentazione_rinuncia"));
+        b.setDataInizioPresentazioneRinuncia(r
+                .getString("data_inizio_presentazione_rinuncia"));
         b.setDataFinePresentazioneRinuncia("data_fine_presentazione_rinuncia");
         b.setDataFineRinuncia("data_fine_rinuncia");
         b.setPostiDisponibili(r.getInt("posti_disponobili"));
         return b;
+        }
+        return null;
     }
- 
-  
+    
     
     /**
-     * metodo che riceve una data e da in output un bando che è in corso in quella data. la data deve essere compresa tra data_inizio e data_fine
-     * @param d data da ricercare nella tabella dei bandi.
+     * metodo che riceve una data e da in output un bando che è in corso in
+     * quella data. la data deve essere compresa tra data_inizio e data_fine
+     * 
+     * @param d
+     *            data da ricercare nella tabella dei bandi.
      * @return
      * @throws SQLException
      */
-      public Bando cercaBandoAttivoPerData(Date d) throws SQLException
-      {
-          Bando b=new Bando();
-          
-          ResultSet r= tabella.getDatabase().directQuery("SELECT * FROM" + tabella.getNomeTabella() + " WHERE data_inizio <= " + d + " AND data_fine >= " + d);
-          
-             
-          if(r.next())
-          {
-              b.setiD(r.getInt("id"));
-              b.setDataInizioBando(r.getString("data_inizio"));
-              b.setDataFineBando(r.getString("data_fine"));
-              
-              
-          }
-             r.close();
-          return b;
-      }
+    public Bando cercaBandoAttivoPerData(Date d) throws SQLException {
+        Bando b = new Bando();
+        
+        ResultSet r = tabella.getDatabase().directQuery(
+                "SELECT * FROM" + tabella.getNomeTabella()
+                        + " WHERE data_inizio <= " + d + " AND data_fine >= "
+                        + d);
+        
+        
+        if (r.next()) {
+            b.setiD(r.getInt("id"));
+            b.setDataInizioBando(r.getString("data_inizio"));
+            b.setDataFineBando(r.getString("data_fine"));
+            
+            
+        }
+        r.close();
+        return b;
+    }
     
 }
