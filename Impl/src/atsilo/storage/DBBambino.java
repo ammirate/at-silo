@@ -197,7 +197,7 @@ public class DBBambino extends DBBeans<Bambino> {
      *
      * @throws SQLException
      */
-    public List<Bambino> ricercaBambinoPerDataNascita(Date d) throws SQLException{
+  /*  public List<Bambino> ricercaBambinoPerDataNascita(Date d) throws SQLException{
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
         PreparedStatement stmt = tabella.prepareStatement(
@@ -233,7 +233,7 @@ public class DBBambino extends DBBeans<Bambino> {
      * @return lista di bambini
      * @throws SQLException
      */
-    public List<Bambino> ricercaBambinoPerNome(String nome) throws SQLException{
+  /*  public List<Bambino> ricercaBambinoPerNome(String nome) throws SQLException{
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
         PreparedStatement stmt = tabella.prepareStatement(
@@ -268,7 +268,7 @@ public class DBBambino extends DBBeans<Bambino> {
      * @return lista di bambini
      * @throws SQLException
      */
-    public List<Bambino> ricercaBambinoPerCognome(String cognome) throws SQLException{
+ /*   public List<Bambino> ricercaBambinoPerCognome(String cognome) throws SQLException{
         Bambino b=new Bambino();
         List<Bambino> lb=new ArrayList<Bambino>();
         PreparedStatement stmt = tabella.prepareStatement(
@@ -302,7 +302,7 @@ public class DBBambino extends DBBeans<Bambino> {
      * @return l'indirizzo di un bambino
      * @throws SQLException
      */
-    public String ricercaIndirizzoBambino(Bambino b) throws SQLException{
+  /*  public String ricercaIndirizzoBambino(Bambino b) throws SQLException{
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
@@ -315,7 +315,7 @@ public class DBBambino extends DBBeans<Bambino> {
         r.close();
         return ind;
     }
-    
+    */
     /**
      * ricerca classe di un bambino
      * @param b
