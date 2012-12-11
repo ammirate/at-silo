@@ -369,7 +369,7 @@ public class DBBambino extends DBBeans<Bambino> {
             String s=r.getString("genitore_non_richiedente");
             gg.setCodiceFiscale(s);
             b.setGenitoreNonRichiedente(gg);
-            b.setComuneNascita(r.getString("comune_nascuta"));
+            b.setComuneNascita(r.getString("comune_nascita"));
             b.setCittadinanza(r.getString("cittadinanza"));
             b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
             b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
