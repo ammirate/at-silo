@@ -51,7 +51,7 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
           </tr>
           <tr> 
         	<td>Password</td>
-       	 	<td><input name="password" type="text" id="password" maxlength="20" value="******" readonly="readonly"   /></td>
+       	 	<td><input name="password" type="text" id="password" maxlength="20" value="******" readonly="readonly" /></td>
           </tr>
           <tr> 
         	<td>Indirizzo email</td>
