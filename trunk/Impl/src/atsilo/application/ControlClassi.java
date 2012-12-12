@@ -22,6 +22,8 @@ import atsilo.stub.application.StubClasse;
  * Elisa D'Eugenio, 04/12/2012
  *-----------------------------------------------------------------
  */
+
+
 public class ControlClassi {
     private static final ControlClassi INSTANCE = new ControlClassi();
 
@@ -32,6 +34,20 @@ public class ControlClassi {
     }
     
 
+
+    public boolean modificaClasse(Classe c, String numeroClasse){
+        //Modifica una classe selezionata 
+        return true;
+    }
+    public Classe getClasse(int id){
+        //Seleziona una classe dato un id
+        return null;
+    }
+    public List<Bambino> bambiniSenzaClasse(){
+       //Seleziona dal database tutti i bambini che hanno la classe pari a null
+        return null;
+    }
+    //I metodi conferma e rifiuta classe non servono più
     
     /**
      * inserisce una nuova classe 
@@ -40,10 +56,10 @@ public class ControlClassi {
      * @throws DBConnectionException 
      * @throws ClasseException
      */
-    public boolean inserisciClasse(int id, String statoClasse, List<EducatoreDidattico> insegnanti) throws ClasseException, DBConnectionException{
+    public boolean inserisciClasse(int id, String sezione, List<EducatoreDidattico> insegnanti) throws ClasseException, DBConnectionException{
         Database db = new Database();
         DBClasse stub = new DBClasse(db); 
-        Classe classe = new Classe(id, statoClasse, insegnanti);
+        Classe classe = new Classe(id, sezione, insegnanti);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
