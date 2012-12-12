@@ -122,6 +122,7 @@
       <option value="delegato_scfm">Resp. Scienze Formazione</option>
       <option value="responsabile_questionario">Responsabile del Questionario</option>
        <option value="direttore">Direttore</option>
+       <option value="delegato_rettore">Delegato Rettore</option>
     </select>
   </p>
   <p>
