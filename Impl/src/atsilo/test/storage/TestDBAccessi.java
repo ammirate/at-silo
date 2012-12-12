@@ -153,7 +153,7 @@ public class TestDBAccessi {
        
        System.out.println("id classe "+c);*/
       DBBando dbbb=new DBBando(db);
-      Bando bando=new Bando();
+     /* Bando bando=new Bando();
       bando=dbbb.cercaBandoPerId(3);
       if (bando==null)
           System.out.println("Non esiste alcun bando con quell id");
@@ -170,15 +170,26 @@ public class TestDBAccessi {
       System.out.println("id bando : = "+bando.getId());
       System.out.println("posti bansdo"+bando.getPostiDisponibili());
       System.out.println("dataFinePresentazioneRinuncia"+bando.getDataFinePresentazioneRinuncia());
-      }
+      }*/
       DBAccount dba=new DBAccount(db);
-      Account a=dba.ricercaPerUsername("dsdgs");
+     // Account a=dba.ricercaPerUsername("l.vella");
+      /*if(a==null){
+          System.out.println("Account inesistente");
+      }
+      else{
+      System.out.println("Ciao "+a.getOwner().getCodiceFiscale());
+      System.out.println("Ciao "+a.getUserName());
+      System.out.println("Ciao "+a.getPassWord());}*/
+      
+      Account a=dba.ricercaPerCodiceFiscale("VRRMDD64T32A048N");
       if(a==null){
           System.out.println("Account inesistente");
       }
-      else
+      else{
       System.out.println("Ciao "+a.getOwner().getCodiceFiscale());
-      
+      System.out.println("Ciao "+a.getUserName());
+      System.out.println("Ciao "+a.getPassWord());}
+
       
         db.chiudiConnessione();
 
