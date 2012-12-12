@@ -148,13 +148,13 @@ public class ControlGestioneBando {
             Bando bando;
             
             if (dbBando.getBando() == null) {
-                bando = new Bando(45, inizioBando, fineBando,
+                bando = new Bando(1, inizioBando, fineBando,
                         inizioPresentazione, finePresentazione, fineRinuncia,
                         posti, null);
                 dbBando.inserisci(bando);
                 return true;
             } else {
-                bando = new Bando(0, inizioBando, fineBando,
+                bando = new Bando(1, inizioBando, fineBando,
                         inizioPresentazione, finePresentazione, fineRinuncia,
                         posti, null);
                 dbBando.replace(dbBando.getBando(), bando);
