@@ -60,11 +60,11 @@ public class ControlGestioneBando {
      * @throws SQLException
      */
     public boolean inserisciPunteggio(DomandaIscrizione iscrizione,
-            int punteggio) throws DBConnectionException, BandoException,
-            SQLException {
+            int punteggio) throws BandoException
+            {
         Database db = new Database();
         if (!db.apriConnessione()) {
-            throw new DBConnectionException("Connessione Fallita");
+            throw new BandoException("Connessione Fallita");
         }
         try {
             
@@ -77,7 +77,7 @@ public class ControlGestioneBando {
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
-                throw new DBConnectionException("Connessione Fallita");
+                throw new BandoException("Connessione Fallita");
             }
             return true;
         } finally {
@@ -87,57 +87,62 @@ public class ControlGestioneBando {
     
     public boolean modificaBando(String inizioBando, String fineBando,
             String inizioPresentazione, String finePresentazione,
-            String fineRinuncia, int posti) throws SQLException,
-            DBConnectionException {
+            String fineRinuncia, int posti) throws BandoException {
         
         Database db = new Database();
         if (!db.apriConnessione()) {
-            throw new DBConnectionException("Connessione Fallita");
+            throw new BandoException("Connessione Fallita");
         }
         try {
             
             DBBando dbBando = new DBBando(db);
             Bando bando;
             
-            if (dbBando.getBando() == null) {
-                bando = new Bando(1, inizioBando, fineBando,
-                        inizioPresentazione, finePresentazione, fineRinuncia,
-                        posti, null);
-                dbBando.inserisci(bando);
-                return true;
-            } else {
-                bando = new Bando(1, inizioBando, fineBando,
-                        inizioPresentazione, finePresentazione, fineRinuncia,
-                        posti, null);
-                dbBando.replace(dbBando.getBando(), bando);
-                
-                return true;
+            try {
+                if (dbBando.getBando() == null) {
+                    bando = new Bando(1, inizioBando, fineBando,
+                            inizioPresentazione, finePresentazione, fineRinuncia,
+                            posti, null);
+                    dbBando.inserisci(bando);
+                    return true;
+                } else {
+                    bando = new Bando(1, inizioBando, fineBando,
+                            inizioPresentazione, finePresentazione, fineRinuncia,
+                            posti, null);
+                    dbBando.replace(dbBando.getBando(), bando);
+                    
+                    return true;
+                }
+            } catch (SQLException e) {
+                throw new BandoException("Connessione Fallita");
             }
         } finally {
             db.chiudiConnessione();
         }
     }
     
-    public boolean modificaPath(String path) throws DBConnectionException,
-    SQLException {
+    public boolean modificaPath(String path) throws BandoException{
         
         Database db = new Database();
         
         if (!db.apriConnessione()) {
-            throw new DBConnectionException("Connessione Fallita");
+            throw new BandoException("Connessione Fallita");
         }
         try {
             DBBando dbBando = new DBBando(db);
             
-            if (dbBando.getBando() == null) {
-                throw new DBConnectionException(
-                        "Bando non presente impossibile modificare/o inserire il path");
-            } else {
-                
-                Bando bando = dbBando.getBando();
-                bando.setPath(path);
-                dbBando.replace(dbBando.getBando(), bando);
-                return true;
+            try {
+                if (dbBando.getBando() == null) {
+                    throw new BandoException("Bando non presente impossibile modificare/o inserire il path");
+                } else {
+                    
+                    Bando bando = dbBando.getBando();
+                    bando.setPath(path);
+                    dbBando.replace(dbBando.getBando(), bando);
+                    return true;
+                }
+            } catch (SQLException e) {
+                throw new BandoException("Connessione Fallita");
             }
         } finally {
             db.chiudiConnessione();
@@ -148,20 +153,20 @@ public class ControlGestioneBando {
      * @return
      * @throws DBConnectionException
      */
-    public Bando getBando() throws DBConnectionException
+    public Bando getBando() throws BandoException
     {
         Database db = new Database();
         
         if (!db.apriConnessione()) 
         {
-            throw new DBConnectionException("Connessione Fallita");
+            throw new BandoException("Connessione Fallita");
         }
         try {
             DBBando dbBando = new DBBando(db);
             return dbBando.getBando();   
         } catch (SQLException e) 
         {
-            throw new DBConnectionException("Connessione Fallita");
+            throw new BandoException("Connessione Fallita");
         }
         finally {
             db.chiudiConnessione();

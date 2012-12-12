@@ -61,8 +61,8 @@ public class ControlGestioneBandoTest {
         try {
             DBDomandaIscrizione dbDomande = new DBDomandaIscrizione(db);
             DomandaIscrizione domanda = dbDomande.ricercaDomandaDaId(1);
-            control.inserisciPunteggio(domanda, 54);
-            assertEquals(54, domanda.getPunteggio());
+            control.inserisciPunteggio(domanda, 46);
+            assertEquals(46, dbDomande.ricercaDomandaDaId(1).getPunteggio());
         } finally {
             db.chiudiConnessione();
         }
