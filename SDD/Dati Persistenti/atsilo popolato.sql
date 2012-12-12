@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generato il: Dic 11, 2012 alle 13:25
--- Versione del server: 5.5.27
--- Versione PHP: 5.4.7
+-- Host: localhost
+-- Generato il: 12 dic, 2012 at 10:00 AM
+-- Versione MySQL: 5.1.44
+-- Versione PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -35,7 +34,6 @@ CREATE TABLE IF NOT EXISTS `account` (
   `responsabile_questionario` varchar(50) DEFAULT NULL,
   `responsabile_tirocini` varchar(50) DEFAULT NULL,
   `tirocinante` varchar(50) DEFAULT NULL,
-  `delegato_rettore` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`username`),
   KEY `genitore` (`genitore`),
   KEY `personale_asilo` (`personale_asilo`),
@@ -50,21 +48,24 @@ CREATE TABLE IF NOT EXISTS `account` (
 -- Dump dei dati per la tabella `account`
 --
 
-INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`, `tirocinante`, `delegato_rettore`) VALUES
-('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL, NULL, NULL),
-('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL, NULL, NULL, NULL),
-('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL, NULL, NULL),
-('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL),
-('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y	', NULL, NULL, NULL, NULL, NULL),
-('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL, NULL, NULL, NULL),
-('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL, NULL, NULL),
-('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL, NULL, NULL),
-('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL, NULL, NULL),
-('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL, NULL),
-('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL),
-('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL, NULL, NULL),
-('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL, NULL, NULL),
-('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`, `tirocinante`) VALUES
+('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL, NULL),
+('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL, NULL, NULL),
+('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL, NULL),
+('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL),
+('c.mezzano', 'cristinam', NULL, NULL, NULL, NULL, NULL, 'MZZCRS91L44X098Y'),
+('d.ciarmoli', 'davidec', NULL, NULL, NULL, NULL, NULL, 'CRMDVD90L12C888B'),
+('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y', NULL, NULL, NULL, NULL),
+('g.deblasi', 'giovannidb', NULL, NULL, NULL, NULL, 'DBSGVN66B12C761W', NULL),
+('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL, NULL, NULL),
+('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL, NULL),
+('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL, NULL),
+('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL, NULL),
+('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL),
+('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL),
+('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL, NULL),
+('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL, NULL),
+('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -111,12 +112,12 @@ CREATE TABLE IF NOT EXISTS `attivita` (
 --
 
 INSERT INTO `attivita` (`titolo`, `descrizione`, `categoria`, `programma_educativo_settimanale`, `registro`, `path`, `nota`) VALUES
-('Attività X1', 'X1', 'X', 1, 1, NULL, NULL),
-('Attività X2', 'X2', 'X', 1, 1, NULL, NULL),
-('Attività Y1', 'Y1', 'Y', 2, 2, NULL, NULL),
-('Attività Y2', 'Y2', 'Y', 2, 2, NULL, NULL),
-('Attività Z1', 'Z1', 'Z', 3, 3, NULL, NULL),
-('Attività Z2', 'Z2', 'Z', 3, 3, NULL, NULL);
+('Attività X1', 'X1', 'X', 1, 1, '.../Attività X1', 'Nota X1'),
+('Attività X2', 'X2', 'X', 1, 1, '.../Attività X2', 'Nota X2'),
+('Attività Y1', 'Y1', 'Y', 2, 2, '.../Attività Y1', 'Nota Y1'),
+('Attività Y2', 'Y2', 'Y', 2, 2, '.../Attività Y2', 'Nota Y2'),
+('Attività Z1', 'Z1', 'Z', 3, 3, '.../Attività Z1', 'Nota Z1'),
+('Attività Z2', 'Z2', 'Z', 3, 3, '.../Attività Z2', 'Nota Z2');
 
 -- --------------------------------------------------------
 
@@ -139,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `attivita_tirocinante` (
 --
 
 INSERT INTO `attivita_tirocinante` (`id`, `descrizione`, `data`, `ora_inizio`, `ora_fine`, `valutazione`) VALUES
-(978786, 'Recita natalizia', '2012-12-21', '12:00', '13:00', NULL);
+(978786, 'Recita natalizia', '2012-12-21', '12:00', '13:00', 'La recita è andata a buon fine.');
 
 -- --------------------------------------------------------
 
@@ -179,15 +180,15 @@ CREATE TABLE IF NOT EXISTS `bambino` (
 --
 
 INSERT INTO `bambino` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cf_genitore_nonrichiedente`) VALUES
-('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma, 2 - Fisciano (SA)', 'Lattanti', 'CVLMRA69A23B333C', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi, 16 - 00100 Roma', 'Semisvezzati', 'DBNGPP69A23B222C', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y, 10 - Avellino (AV)', 'Svezzati', 'DRGSNT81A26B045C', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento, 1 - Benevento (BN)', 'Lattanti', 'VLLLRU83A24T928B', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria, 12 - Baronissi (SA)', 'Semisvezzati', 'DCSGVN74A23B224X', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta, 23 - Salerno (SA)	', 'Semisvezzati', 'PSSSNN85L98A980I', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta, 23 - Salerno (SA)	', 'Svezzati', 'PSSSNN85L98A980I', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 1, 'Italiana', 'Salerno', '2', '84084', 'Fisciano', 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', NULL),
+('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL),
+('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL),
+('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', NULL),
+('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', NULL),
+('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL),
+('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL),
+('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL),
+('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL);
 
 -- --------------------------------------------------------
 
@@ -212,8 +213,8 @@ CREATE TABLE IF NOT EXISTS `bando` (
 --
 
 INSERT INTO `bando` (`id`, `data_inizio_bando`, `data_fine_bando`, `data_inizio_presentazione_rinuncia`, `data_fine_presentazione_rinuncia`, `data_fine_rinuncia`, `posti_disponibili`, `path`) VALUES
-(1, '2012-11-01', '2012-11-30', '2013-12-21', '2013-12-21', '2013-12-21', 0, NULL),
-(2, '2011-11-01', '2012-11-30', '2013-12-21', '2013-12-21', '2013-12-21', 0, NULL);
+(1, '2012-11-01', '2012-11-30', '2013-12-21', '2013-12-21', '2013-12-21', 60, '.../Bando X'),
+(2, '2011-11-01', '2012-11-30', '2013-12-21', '2013-12-21', '2013-12-21', 60, '.../Bando Y');
 
 -- --------------------------------------------------------
 
@@ -268,9 +269,9 @@ CREATE TABLE IF NOT EXISTS `classe` (
 
 INSERT INTO `classe` (`id`, `stato_classe`) VALUES
 (1, 'Approvata'),
-(2, ''),
-(3, ''),
-(4, '');
+(2, 'Approvata'),
+(3, 'Approvata'),
+(4, 'In attesa di approvazione');
 
 -- --------------------------------------------------------
 
@@ -285,6 +286,11 @@ CREATE TABLE IF NOT EXISTS `compila` (
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `compila`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -297,6 +303,11 @@ CREATE TABLE IF NOT EXISTS `contestazione` (
   `descrizione` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `contestazione`
+--
+
 
 -- --------------------------------------------------------
 
@@ -327,7 +338,6 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `altri_componenti_disabili` tinyint(1) DEFAULT NULL,
   `condizioni_calcolo_punteggio` text,
   `isee` float DEFAULT NULL,
-  `stato_convalidazione` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
@@ -338,16 +348,16 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
 -- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
-INSERT INTO `domanda_iscrizione` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`) VALUES
-(1, '2012-07-19', 94, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(2, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(3, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(4, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(5, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(6, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(7, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(8, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL),
-(9, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', '', '', '', '', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 0, NULL);
+INSERT INTO `domanda_iscrizione` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`) VALUES
+(1, '2012-07-19', 94, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220),
+(2, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122),
+(3, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122),
+(4, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323),
+(5, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892),
+(6, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523),
+(7, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423),
+(8, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353),
+(9, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353);
 
 -- --------------------------------------------------------
 
@@ -410,9 +420,9 @@ CREATE TABLE IF NOT EXISTS `educatore_didattico` (
 --
 
 INSERT INTO `educatore_didattico` (`nome`, `cognome`, `codice_fiscale`, `titolo_di_studi`, `data_di_nascita`, `telefono`, `email`, `comune_di_nascita`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `cittadinanza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`) VALUES
-('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', ''),
-('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', ''),
-('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '0', '0', '', '');
+('Mauro', 'Sisillo', 'SLLMRA90A29N830P', 'Laurea in Lettere', '1981-12-09', '3256230103', 'm.sisillo@unisa.it', 'Benevento', 'viale Mellusi', '1234', '82100', 'Benevento', 'BN', 'Italiana', 'viale Mellusi', '123', '82100', 'Benevento', 'BN'),
+('Lorella', 'Sessa', 'SSSLRL78B19B908X', 'Laurea in Scienze della Formazione', '1973-09-10', '3613677391', 'l.sessa@unisa.it', 'Avellino', 'via Appia', '22', '83100', 'Avellino', 'AV', 'Italiana', 'via Appia', '22', '83100', 'Avellino', 'AV'),
+('Elena', 'Teresi', 'TRSLNE99S30X203Y', 'Laurea in Matematica', '1961-04-02', '3456789123', 'e.teresi@unisa.it', 'Salerno', 'via XY', '122', '84100', 'Salerno', 'SA', 'Italiana', 'via XY', '122', '84100', 'Salerno', 'SA');
 
 -- --------------------------------------------------------
 
@@ -440,8 +450,8 @@ CREATE TABLE IF NOT EXISTS `evento` (
 --
 
 INSERT INTO `evento` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`) VALUES
-('Gita X', '2012-11-21', 'Gita a X', '', 'SSSLRL78B19B908X', NULL, NULL, NULL),
-('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL);
+('Gita X', '2012-11-21', 'Gita a X', NULL, 'SSSLRL78B19B908X', NULL, '.../Programma Gita X', 'Viaggio d''istruzione'),
+('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, '.../Programma Recita Y', 'Rappresentazione teatrale');
 
 -- --------------------------------------------------------
 
@@ -479,6 +489,16 @@ CREATE TABLE IF NOT EXISTS `fattura` (
   PRIMARY KEY (`id`),
   KEY `personale_asilo` (`personale_asilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `fattura`
+--
+
+INSERT INTO `fattura` (`id`, `descrizione`, `personale_asilo`) VALUES
+(1, 'Fattura X', 'BSLSVN62L12B099E'),
+(2, 'Fattura Y', 'MRSVRN90A32B235B'),
+(3, 'Fattura Z', 'SNTNTN53N69B309D'),
+(4, 'Fattura XYZ', 'TRNDMN64L12T048Y');
 
 -- --------------------------------------------------------
 
@@ -545,7 +565,7 @@ CREATE TABLE IF NOT EXISTS `genitore` (
 --
 
 INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`, `condizione_lavorativa`, `tipo_contratto`) VALUES
-('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma, 2 - Fisciano (SA)', 'residenti_fisciano', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma', 'residenti_fisciano', 'ISCRITTO', 'Italiana', 'Fisciano', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Agenzia X', 'Nessun rapporto precedente', 'Residente del comune di Fisciano', 'Padre', 'Impiegato', '2013-12-21', 'X', 'Tempo indeterminato'),
 ('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
 ('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
 ('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'personale_studenti', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
@@ -639,6 +659,18 @@ CREATE TABLE IF NOT EXISTS `nota` (
   `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`titolo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `nota`
+--
+
+INSERT INTO `nota` (`titolo`, `descrizione`) VALUES
+('Nota X1', 'Descrizione Nota X1'),
+('Nota X2', 'Descrizione Nota X2'),
+('Nota Y1', 'Descrizione Nota Y1'),
+('Nota Y2', 'Descrizione Nota Y2'),
+('Nota Z1', 'Descrizione Nota Z1'),
+('Nota Z2', 'Descrizione Nota Z2');
 
 -- --------------------------------------------------------
 
@@ -861,6 +893,11 @@ CREATE TABLE IF NOT EXISTS `registro` (
   KEY `educatore_didattico` (`educatore_didattico`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `registro`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -878,6 +915,11 @@ CREATE TABLE IF NOT EXISTS `registro_tirocinante` (
   KEY `attivita_tirocinante` (`attivita_tirocinante`),
   KEY `tirocinante` (`tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `registro_tirocinante`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1219,7 +1261,3 @@ ALTER TABLE `schedulazione`
 --
 ALTER TABLE `tirocinante`
   ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
