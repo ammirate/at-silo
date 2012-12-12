@@ -766,6 +766,7 @@ INSERT INTO `personale_asilo` (`nome`, `cognome`, `codice_fiscale`, `categoria_a
 ('Veronica', 'Mars', 'MRSVRN90A32B235B', 'ImpiegatoDirittoStudio', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'Direttore', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'DelegatoRettore', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Domenico', 'Crisi', 'TRNCRS64L12T019Y', 'ResponsabileScientifico', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 

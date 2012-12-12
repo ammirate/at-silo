@@ -35,6 +35,7 @@ public class AtsiloConstants {
     public static final String CAT_IMP_ASILO="ImpiegatoAsilo";
     public static final String CAT_IMP_DIR_STUDIO="ImpiegatoDirittoStudio";
     public static final String CAT_DELEGATO_RETTORE="DelegatoRettore";
+    public static final String CAT_RESP_SCIENTIFICO="ResponsabileScientifico";
     public static final String STATO_DOMANDA_NONCOMPILATA = "DomandaNonCompilata";
     public static final String STATO_DOMANDA_INVIATA="DomandaInviataInAttesaDiGraduatoria";
     public static final String STATO_DOMANDA_RIFIUTATA="DomandaRifiutata";
