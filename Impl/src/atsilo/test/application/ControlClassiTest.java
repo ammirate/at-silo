@@ -50,36 +50,37 @@ public class ControlClassiTest {
     ControlClassi control = ControlClassi.getIstance();
     Bambino b = new Bambino();
     List<Bambino> bb = new ArrayList<Bambino>();
+    List<EducatoreDidattico> ed = new ArrayList<EducatoreDidattico>();
 
     
     @Test
     // inserimento di una classe
     public void inserisciClasseTest() throws ClasseException, DBConnectionException {
-         assertTrue(control.inserisciClasse(5, "Approvata", null));     
+         assertTrue(control.inserisciClasse(10, "Approvata", ed));     
     }
     
     @Test
     // eliminazione di una classe
-    public void cancellaClasseTest() throws ClasseException, DBConnectionException   {
-         assertTrue(control.cancellaClasse(5));     
+    public void cancellaClasseTest() throws ClasseException, DBConnectionException, SQLException   {
+         assertTrue(control.cancellaClasse(10));     
     }
     
     @Test
     // inserimento di un bambino in una classe
-    public void inserisciBambinoNellaClasseTest() throws ClasseException, DBConnectionException   {
+    public void inserisciBambinoNellaClasseTest() throws ClasseException, DBConnectionException, SQLException   {
         b.setCodiceFiscale("CVLRRA12A23B333C");
          assertTrue(control.inserisciBambinoNellaClasse(4, b));     
     }
     
     @Test
     // inserimento di una lista di bambini in una classe
-    public void inserisciBambiniNellaClasseTest() throws ClasseException, DBConnectionException   {
+    public void inserisciBambiniNellaClasseTest() throws ClasseException, DBConnectionException, SQLException   {
          assertTrue(control.inserisciBambiniNellaClasse(5, bb));     
     }
     
     @Test
     // conferma di una classe
-    public void ConfermaClasseTest() throws ClasseException, DBConnectionException   {
+    public void ConfermaClasseTest() throws ClasseException, DBConnectionException, SQLException   {
          assertTrue(control.ConfermaClasse(5));     
     }
     

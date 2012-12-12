@@ -26,7 +26,7 @@ import atsilo.entity.RispostaQuestionario;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -76,12 +76,13 @@ public class DBClasse extends DBBeans<Classe>
  * @return una classe contenente l'id ricercato
  * @throws SQLException se si verifica un errore di connessione con il database
  */
-    public Classe RicercaClassePerId (String id) throws SQLException{
+    public Classe RicercaClassePerId (int id) throws SQLException{
         
         Classe cla=new Classe();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE id = ?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
             tabella.setParam(stmt, 1, "id", id);
+            //System.out.println("query"+stmt);
             ResultSet res = stmt.executeQuery();
         if(res.next()){
            cla.setId(res.getInt("id"));
