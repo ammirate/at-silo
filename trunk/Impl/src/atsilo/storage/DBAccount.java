@@ -1,4 +1,5 @@
 package atsilo.storage;
+
 import atsilo.entity.Account;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Genitore;
@@ -92,13 +93,13 @@ public class DBAccount extends DBBeans<Account>
     
     
     /**
-     * 
-     * @param user
+     * Ricerca username dato in input, e restituisce l'
+     * account con quell'username
+     * @param user username da ricercare
      * @return un account con username=a oppure null
      * @throws SQLException
      */
-    public Account ricercaPerUsername(String user) throws SQLException 
-    {
+    public Account ricercaPerUsername(String user) throws SQLException{
         Account a = new Account();
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE username = ?");
@@ -109,34 +110,28 @@ public class DBAccount extends DBBeans<Account>
             Utente u=new Utente();
             a.setUserName(r.getString("username"));
             a.setPassWord(r.getString("password"));
-            if(r.getString("genitore")!=null)
-            {
+            if(r.getString("genitore")!=null){
                 u = new Genitore();
                 u.setCodiceFiscale(r.getString("genitore"));
                 
             }
-            else if(r.getString("psico_pedagogo")!=null)
-            {
+            else if(r.getString("psico_pedagogo")!=null){
                 u=new Psicopedagogo();
                 u.setCodiceFiscale(r.getString("psico_pedagogo"));
             }
-            else if(r.getString("tirocinante")!=null)
-            {
+            else if(r.getString("tirocinante")!=null){
                 u=new Tirocinante();
                 u.setCodiceFiscale(r.getString("tirocinante"));
             }
-            else if(r.getString("responsabile_questionario")!=null)
-            {
+            else if(r.getString("responsabile_questionario")!=null){
                 u=new ResponsabileQuestionario();
                 u.setCodiceFiscale(r.getString("responsabile_questionario"));
             }
-            else if(r.getString("personale_asilo")!=null)
-            {
+            else if(r.getString("personale_asilo")!=null){
                 u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("personale_asilo"));
             }
-            else if(r.getString("delegato_rettore")!=null)
-            {
+            else if(r.getString("delegato_rettore")!=null){
                 u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("delegato_rettore"));
             }
@@ -160,41 +155,36 @@ public class DBAccount extends DBBeans<Account>
      * Nel caso in cui altre informazioni siano necessarie, occorre sostituire l'Owner con un oggetto
      * letto dal database tramite il DBBean associato (se l'owner è un genitore, usare DBGenitore sul
      * codice fiscale già presente nell'account.)
+     * @throw SQLException può esserci quando si esegue la query
+     * @return Account o null
      */
-    @Override
     protected Account creaBean(ResultSet r) throws SQLException {
         Account a = new Account();
         Utente u=new Utente();
         a.setUserName(r.getString("username"));
         a.setPassWord(r.getString("password"));
-        if(r.getString("genitore")!=null)
-        {
+        if(r.getString("genitore")!=null){
             u = new Genitore();
             u.setCodiceFiscale(r.getString("genitore"));
             
         }
-        if(r.getString("psico_pedagogo")!=null)
-        {
+        if(r.getString("psico_pedagogo")!=null){
             u=new Psicopedagogo();
             u.setCodiceFiscale(r.getString("psico_pedagogo"));
         }
-        if(r.getString("tirocinante")!=null)
-        {
+        if(r.getString("tirocinante")!=null){
             u=new Tirocinante();
             u.setCodiceFiscale(r.getString("tirocinante"));
         }
-        if(r.getString("responsabile_questionario")!=null)
-        {
+        if(r.getString("responsabile_questionario")!=null){
             u=new ResponsabileQuestionario();
             u.setCodiceFiscale(r.getString("responsabile_questionario"));
         }
-        if(r.getString("personale_asilo")!=null)
-        {
+        if(r.getString("personale_asilo")!=null){
             u=new PersonaleAsilo();
             u.setCodiceFiscale(r.getString("personale_asilo"));
         }
-       if(r.getString("delegato_rettore")!=null)
-        {
+       if(r.getString("delegato_rettore")!=null){
             u=new PersonaleAsilo();
             u.setCodiceFiscale(r.getString("delegato_rettore"));
         }
@@ -204,8 +194,71 @@ public class DBAccount extends DBBeans<Account>
         
     }
     
-    /**
-     * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
+    /**Ricerca un account associato ad un utente con codice fiscale=cf
+     * @param cf codice fiscale dell'account da ricercare
+     * @return Account o null
+     * @throws SQLException 
+     */
+    public Account ricercaPerCodiceFiscale(String cf) throws SQLException {
+        
+        Account a = new Account();
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE genitore = ? " +
+                        "OR personale_asilo = ? OR psico_pedagogo = ? OR responsabile_questionario = ? " +
+                "OR responsabile_tirocini = ? OR tirocinante = ? ");
+        
+        tabella.setParam(stmt, 1, "genitore", cf);
+        tabella.setParam(stmt, 2, "personale_asilo", cf);
+        tabella.setParam(stmt, 3, "psico_pedagogo", cf);
+        tabella.setParam(stmt, 4, "responsabile_questionario", cf);
+        tabella.setParam(stmt, 5, "responsabile_tirocini", cf);
+        tabella.setParam(stmt, 6, "tirocinante", cf);
+        
+        ResultSet r = stmt.executeQuery();  
+        if (r.next()){
+            Utente u=new Utente();
+            a.setUserName(r.getString("username"));
+            a.setPassWord(r.getString("password"));
+            if(r.getString("genitore")!=null){
+                u = new Genitore();
+                u.setCodiceFiscale(r.getString("genitore"));
+                
+            }
+            else if(r.getString("psico_pedagogo")!=null){
+                u=new Psicopedagogo();
+                u.setCodiceFiscale(r.getString("psico_pedagogo"));
+            }
+            else if(r.getString("tirocinante")!=null){
+                u=new Tirocinante();
+                u.setCodiceFiscale(r.getString("tirocinante"));
+            }
+            else if(r.getString("responsabile_questionario")!=null){
+                u=new ResponsabileQuestionario();
+                u.setCodiceFiscale(r.getString("responsabile_questionario"));
+            }
+            else if(r.getString("personale_asilo")!=null){
+                u=new PersonaleAsilo();
+                u.setCodiceFiscale(r.getString("personale_asilo"));
+            }
+            else if(r.getString("delegato_rettore")!=null){
+                u=new PersonaleAsilo();
+                u.setCodiceFiscale(r.getString("delegato_rettore"));
+            }
+            a.setOwner(u);
+        }
+        else{
+            r.close();
+            return null;
+        }
+        
+        r.close();  
+        return a;
+    }
+    
+    
+    
+    
+    /** Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
      * assegnazioni predefinite relativamente a un bean.<br/>
      * Nella sua implementazione predefinita, questo metodo restituisce sempre
      * {@link #NESSUNA_ASSEGNAZIONE}. Le classi estendenti possono sovrascrivere
@@ -261,17 +314,9 @@ public class DBAccount extends DBBeans<Account>
         
         return DBAssign;
     }
+       
     
-    /*@todo IMPLEMENTARE QUESTO METODO*/
-    /**Ricerca un account associato ad un utente con codice fiscale=cf
-     * @param cf
-     * 
-     */
-    public Account ricercaPerCodiceFiscale(String cf) {
-        return null;
-        // TODO Scheletro generato automaticamente
-        
-    }
+    
 }
 
 
