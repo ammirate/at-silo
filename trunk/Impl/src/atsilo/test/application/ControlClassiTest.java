@@ -47,8 +47,7 @@ import atsilo.stub.application.StubClasse;
  */
 public class ControlClassiTest {
     
-    ControlClassi control = new ControlClassi();
-    Classe c = null;
+    ControlClassi control = ControlClassi.getIstance();
     Bambino b = new Bambino();
     List<Bambino> bb = new ArrayList<Bambino>();
 
@@ -56,7 +55,7 @@ public class ControlClassiTest {
     @Test
     // inserimento di una classe
     public void inserisciClasseTest() throws ClasseException, DBConnectionException {
-         assertTrue(control.inserisciClasse(5, "", null));     
+         assertTrue(control.inserisciClasse(5, "Approvata", null));     
     }
     
     @Test
@@ -68,7 +67,8 @@ public class ControlClassiTest {
     @Test
     // inserimento di un bambino in una classe
     public void inserisciBambinoNellaClasseTest() throws ClasseException, DBConnectionException   {
-         assertTrue(control.inserisciBambinoNellaClasse(5, b));     
+        b.setCodiceFiscale("CVLRRA12A23B333C");
+         assertTrue(control.inserisciBambinoNellaClasse(4, b));     
     }
     
     @Test

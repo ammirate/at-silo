@@ -27,7 +27,7 @@ public class ControlClassi {
     /**
      * Contructor
      */
-    public ControlClassi() {
+    private ControlClassi() {
     }
     
 
@@ -100,6 +100,8 @@ public class ControlClassi {
             Classe classe = stub.ricercaClassePerId(id);
             if(classe == null)
                 throw new ClasseException("Classe non trovata");
+            //TODO si dovrebbe modificare la chiave esterna di Bambino su Classe tramite DBBambino 
+            //(classe è attributo di bambino)
             Classe nuovaClasse = stub.ricercaClassePerId(id);
             nuovaClasse.aggiungiBambino(bambino);
             if(!stub.replace(classe, nuovaClasse))
