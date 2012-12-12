@@ -123,7 +123,7 @@ public class DBPersonaleAsilo extends DBBeans {
             p.setCapDomicilio(r.getString("cap_domicilio"));
             p.setComuneDomicilio(r.getString("comune_domicilio"));
             p.setProvinciaDomicilio(r.getString("provincia_domicilio"));
-            
+           // p.setCategoriaAppartenenza(this.getCategoriaAppartenenzaPersonaleAsilo(p.getCodiceFiscale()));
         }
         return p;
     }
@@ -160,7 +160,8 @@ public class DBPersonaleAsilo extends DBBeans {
             p.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
             p.setCapDomicilio(r.getString("cap_domicilio"));
             p.setComuneDomicilio(r.getString("comune_domicilio"));
-            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));   
+            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+           // p.setCategoriaAppartenenza(this.getCategoriaAppartenenzaPersonaleAsilo(p.getCodiceFiscale()));
         }
         else
         {
