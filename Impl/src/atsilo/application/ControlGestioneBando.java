@@ -75,13 +75,10 @@ public class ControlGestioneBando {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setPunteggio(punteggio);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
-            } catch (SQLException e) {
+            } catch (SQLException e) 
+            {
                 throw new DBConnectionException("Connessione Fallita");
             }
-            if (domandaDaModificare.getDataPresentazione() == null)
-                throw new BandoException("domanda non trovata");
-            domandaDaModificare.setPunteggio(punteggio);
-            dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             return true;
         } finally {
             db.chiudiConnessione();
@@ -122,7 +119,7 @@ public class ControlGestioneBando {
     }
     
     public boolean modificaPath(String path) throws DBConnectionException,
-            SQLException {
+    SQLException {
         
         Database db = new Database();
         
@@ -143,6 +140,30 @@ public class ControlGestioneBando {
                 return true;
             }
         } finally {
+            db.chiudiConnessione();
+        }
+    }
+    /**
+     * 
+     * @return
+     * @throws DBConnectionException
+     */
+    public Bando getBando() throws DBConnectionException
+    {
+        Database db = new Database();
+        
+        if (!db.apriConnessione()) 
+        {
+            throw new DBConnectionException("Connessione Fallita");
+        }
+        try {
+            DBBando dbBando = new DBBando(db);
+            return dbBando.getBando();   
+        } catch (SQLException e) 
+        {
+            throw new DBConnectionException("Connessione Fallita");
+        }
+        finally {
             db.chiudiConnessione();
         }
     }
