@@ -2,6 +2,8 @@ package atsilo.application.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import atsilo.stub.application.*;
+import atsilo.application.*;
+import atsilo.exception.DBConnectionException;
 
 /**
  * Servlet implementation class ServletControlBandoIM
@@ -17,7 +20,7 @@ import atsilo.stub.application.*;
 @WebServlet("/ServletControlBandoIM")
 public class ServletControlBandoIM extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-        private ControlGestioneBandoSTUB crt;
+        private ControlGestioneBando crt;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -49,14 +52,23 @@ public class ServletControlBandoIM extends HttpServlet {
 	    String dataFinePresentazione = (String) request.getParameter("finepresentazione");
 	    String dataFineRinuncia = (String) request.getParameter("finerinuncia");
 	    int posti = Integer.parseInt( (String) request.getParameter("postidisp"));
-	    if((crt.modificaBando(dataInizioBando, dataFineBando, dataInizioPresentazione, dataFinePresentazione, dataFineRinuncia, posti, null)) != false){
-	    response.setStatus(response.SC_MOVED_TEMPORARILY);
-	    response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=y");
-	    }
-	    else{
-	        response.setStatus(response.SC_MOVED_TEMPORARILY);
-	        response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=n"); 
-	    }
+	    try {
+            if((crt.modificaBando(dataInizioBando, dataFineBando, dataInizioPresentazione, dataFinePresentazione, dataFineRinuncia, posti)) != false){
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=y");
+            }
+            else{
+                response.setStatus(response.SC_MOVED_TEMPORARILY);
+                response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=n"); 
+            }
+        } catch (SQLException e) {
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/errore.html");
+            
+        } catch (DBConnectionException e) {
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/errore.html");
+        }
 
 	}
 }
