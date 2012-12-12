@@ -7,6 +7,7 @@
 <%@page import="java.sql.*"%>
 
 <%@page import="atsilo.application.*"%>
+<script type="text/javascript" src="atsilo_files/validatorQuest.js"></script>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -57,7 +58,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	}
 	else {
 
-		out.println("<form action=\"http://localhost:8080/Atsilo/ControlCompilaQuestionario\" method='POST'>");
+		out.println("<form action=\"http://localhost:8080/Atsilo/ControlCompilaQuestionario\" method='POST' name=formBello>");
 		out.println("<div id=formdomande>");
 
 		out.println("<H2>Titolo Questionario: " + quest.getNome()+ "</h2><br><br><BR><BR>");
@@ -72,7 +73,11 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			quest.getDomande().get(i).getCampi().size();
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
-				out.println("<tr><td colspan=2><input type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + i + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("radio") || quest.getDomande().get(i).getCampi().get(j).getTipo().equals("checkbox"))
+					out.println("<tr><td colspan=2><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+				else
+					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + quest.getDomande().get(i).getCampi().get(j).getValore() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+
 			}
 			out.println("</table><br><br>");
 			out.println("</fieldset><br><br>");
@@ -82,12 +87,12 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name=codfis value='"+cf+"'>");
 			out.println("<input type=hidden name=questID value='"+quest.getId()+"'>");
 
-			out.println("<center><input type=submit value=\"Sottometti Questionario\"></center>");
+			out.println("<center><input type=button  onclick=\"prova()\" value=\"Sottometti Questionario\"></center>");
 		
 		}
 		else 
 		{
-			out.println("<center><input type=submit disabled='disabled' value=\"Sottometti Questionario\"></center>");
+			out.println("<center><input type=button disabled='disabled' value=\"Sottometti Questionario\"></center>");
 		}
 
 		out.println("</form>");
