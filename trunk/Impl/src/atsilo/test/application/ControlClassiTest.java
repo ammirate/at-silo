@@ -18,7 +18,25 @@ package atsilo.test.application;
 
 import static org.junit.Assert.*;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
+
+import atsilo.application.ControlClassi;
+import atsilo.application.ControlDatiPersonali;
+import atsilo.entity.Bambino;
+import atsilo.entity.Classe;
+import atsilo.entity.EducatoreDidattico;
+import atsilo.entity.Genitore;
+import atsilo.entity.Utente;
+import atsilo.exception.ClasseException;
+import atsilo.exception.DBConnectionException;
+import atsilo.exception.GenitoreException;
+import atsilo.exception.InserimentoDatiException;
+import atsilo.storage.Database;
+import atsilo.stub.application.StubClasse;
 
 /**
  * Classe ControlClassiTest
@@ -29,21 +47,46 @@ import org.junit.Test;
  */
 public class ControlClassiTest {
     
+    ControlClassi control = new ControlClassi();
+    Classe c = null;
+    Bambino b = new Bambino();
+    List<Bambino> bb = new ArrayList<Bambino>();
+
+    
     @Test
-    public void test() {
-        fail("Not yet implemented");
+    // inserimento di una classe
+    public void inserisciClasseTest() throws ClasseException, DBConnectionException {
+         assertTrue(control.inserisciClasse(5, "", null));     
     }
-    //Logger
-    /*
-     * private static final java.util.Logger LOG
-     *         = Logger.getLogger(ControlClassiTest.class.getName());
-     */
     
-    //Variabili di istanza
+    @Test
+    // eliminazione di una classe
+    public void cancellaClasseTest() throws ClasseException, DBConnectionException   {
+         assertTrue(control.cancellaClasse(5));     
+    }
     
+    @Test
+    // inserimento di un bambino in una classe
+    public void inserisciBambinoNellaClasseTest() throws ClasseException, DBConnectionException   {
+         assertTrue(control.inserisciBambinoNellaClasse(5, b));     
+    }
     
-    //Costruttori
+    @Test
+    // inserimento di una lista di bambini in una classe
+    public void inserisciBambiniNellaClasseTest() throws ClasseException, DBConnectionException   {
+         assertTrue(control.inserisciBambiniNellaClasse(5, bb));     
+    }
     
+    @Test
+    // conferma di una classe
+    public void ConfermaClasseTest() throws ClasseException, DBConnectionException   {
+         assertTrue(control.ConfermaClasse(5));     
+    }
     
-    //Metodi
+    @Test
+    // rifiuto di una classe
+    public void RifiutaClasseTest() throws ClasseException, DBConnectionException   {
+         assertTrue(control.RifiutaClasse(5));     
+    }
+    
 }

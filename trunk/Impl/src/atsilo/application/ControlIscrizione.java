@@ -121,8 +121,8 @@ public class ControlIscrizione {
      * @throws UtenteException
      * @throws AccountException
      * @throws InserimentoDatiException 
-     */
-    public Boolean creaAccount(String username, Date dataNascita, String nome, String cognome,
+     
+    public Boolean Inserisci(String username, Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
@@ -183,23 +183,25 @@ public class ControlIscrizione {
             db.chiudiConnessione();
         }
         return true;
-    }
+    }*/
+    
     
     
     /**
-     * Modifica i dati di un account , SE VIENE PASSATO NULL ad un valore quest'ultimo non viene aggiornato e rimane con il vecchio valore
-     * @param username username da modifica
-     * @param password password da modificare
-     * @param email email da modificare
-     * @param profilo_appartenenza profilo di appartenenza da modificare (valido solo per i genitori)
-     * @return true un caso di modifica effettuata
-     *         false 
+     * Il metodo non serve per inviare la domanda di iscriizone ma per inserire i dati della domanda
+     * @param 
+     * @return 
+     * @throws DBConnectionException 
+     * @throws DomandaIscrizioneException
      */
-    public boolean updateAccount(String username,String password,String email,String profilo_appartenenza){
-       // TODO
-        //si attende sapere il parametro di ricerca dell'account da modificare
+    //ATTENDO di sapere queli parametri mi verranno passati
+    public boolean inserisciDatiDomandaIscrizione(String codice_fiscale_bambino, String statoDomanda,String certificatoMalattie, String certificatoVaccinazioni,String certificatoPrivacy, boolean bambinoDisabile,boolean genitoreInvalido, boolean genitoreSolo,boolean genitoreVedovo,boolean genitoreNubile,boolean genitoreSeparato,boolean figlioNonRiconosciuto,boolean affidoEsclusivo,boolean altriComponentiDisabili,String condizioniCalcoloPunteggio,float isee) throws DomandaIscrizioneException, DBConnectionException{
+        //controlli che i dati siano corretti
+        //TODO
         return true;
     }
+    
+    
     
     
     /**
