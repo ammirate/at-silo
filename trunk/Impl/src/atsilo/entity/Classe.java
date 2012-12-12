@@ -23,7 +23,7 @@ public class Classe {
      * @attribute statoClasse di tipo int
      */
     private int id;
-    private String statoClasse;
+    private String sezione;
    
     /** 
      * La variabile educatori è settatta a Null quindi c'è bisogno di una lettura
@@ -48,10 +48,10 @@ public class Classe {
      * @param eventi è settato dopo la lettura
      * @param statoClasse è settato dopo la lettura
      */
-    public Classe(int id,String statoClasse, List<EducatoreDidattico> educatori) {
+    public Classe(int id,String sezione, List<EducatoreDidattico> educatori) {
         this.id = id;
         this.educatori = educatori;
-        this.statoClasse=statoClasse;
+        this.sezione=sezione;
     }
     
     /**
@@ -108,16 +108,16 @@ public class Classe {
      * Metodo che prende il campo statoClasse
      * @return statoClasse il paramentro inserito
     */
-   public String getStatoClasse() {
-       return statoClasse;
+   public String getSezione() {
+       return sezione;
    }
 
    /**
     * Metodo che setta il campo statoClasse
      * @param statoClasse il parametro fissato
          */
-   public void setStatoClasse(String statoClasse) {
-       this.statoClasse = statoClasse;
+   public void setSezione(String sezione) {
+       this.sezione = sezione;
    }
    
    
