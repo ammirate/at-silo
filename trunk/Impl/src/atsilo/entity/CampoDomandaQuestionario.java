@@ -19,13 +19,14 @@ public class CampoDomandaQuestionario {
     private String descrizione;
     private String valore;
     private int  idDomandaQuestionario;
-    private int idRispostaQuestionario;
+    private int id;
 
     public CampoDomandaQuestionario() {
         super();
     }
     
-    public CampoDomandaQuestionario(String tipo, String desc, String valore, int idDomanda){
+    public CampoDomandaQuestionario(int id,String tipo, String desc, String valore, int idDomanda){
+      this.id = id;
         this.tipo = tipo;
         this.descrizione = desc;
         this.valore = valore;
@@ -88,21 +89,23 @@ public class CampoDomandaQuestionario {
         this.idDomandaQuestionario = i;
     }
 
-    /**
-     * @return idRispostaQuestionario
-     */
-    public int getIdRispostaQuestionario() {
-        return idRispostaQuestionario;
-    }
 
-    /**
-     * @param idRispostaQuestionario nuovo idRispostaQuestionario
-     */
-    public void setIdRispostaQuestionario(int idRispostaQuestionario) {
-        this.idRispostaQuestionario = idRispostaQuestionario;
-    }
 
   
+    /**
+     * @return id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id nuovo id
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String toString(){
         return "CAMPO      Tipo:"+tipo+ "  descrizione:"+descrizione+"  valore:"+valore+" IDdomanda:"+idDomandaQuestionario;
     }
