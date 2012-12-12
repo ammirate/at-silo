@@ -39,6 +39,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 </tr>
 
 <%
+	
 	boolean g = false;
 	String cf ="";
 	ControlQuestionario q = ControlQuestionario.getIstance();
@@ -75,8 +76,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	List<Questionario> list = null;
 	if (g)
 		list = q.getQuestionariDaCompilare(cf);
-	else
+	else {
 		list = q.getAllQuestionari();
+	}
 	
 	if (list.size() == 0)
 		out.println("<tr><td colspan=5>Non sono presenti Questionari in archivio.</td></tr>");
@@ -99,21 +101,22 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			+ cf
 			+ "'><img src='atsilo_images/visualizza.gif'></a></tr>");
 		} else {
-	out.print("<td align=center style='padding: 10px'><a href='modifica_questionario.jsp?id="
+			out.println("<td align=center style='padding: 10px'>");
+		if(q.isEditable(list.get(i))) {
+			out.println("<a href='modifica_questionario.jsp?id="
+					+ list.get(i).getId()
+					+ "'><img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
 			+ list.get(i).getId()
-			+ "'>");
-	if(q.isEditable(list.get(i))) {
-			out.println("<img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
-			+ list.get(i).getId()
-			+ "'><img src='atsilo_images/cancella.png'></a><a href='visualizza_questionari.jsp?id="
-			+ list.get(i).getId() + "'>");
+			+ "'><img src='atsilo_images/cancella.png'></a>");
 	}
-	out.println("<img src='atsilo_images/visualizza.gif'></a><a href='statistica_questionario.jsp?id="
+	out.println("<a href='visualizza_questionari.jsp?id="
+			+ list.get(i).getId() + "'><img src='atsilo_images/visualizza.gif'></a><a href='statistica_questionario.jsp?id="
 			+ list.get(i).getId()
 			+ "'><img src='atsilo_images/grafico.jpg' width=50 height=50></a>"
 			+ "</tr>");
 		}
 	}
+	
 %>
 </table>
 <p><strong><br />
