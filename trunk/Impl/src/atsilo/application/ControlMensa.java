@@ -2,6 +2,7 @@ package atsilo.application;
 
 import java.sql.SQLException;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.Bando;
 import atsilo.entity.Servizio;
 import atsilo.exception.DBConnectionException;
@@ -69,17 +70,18 @@ public class ControlMensa {
         }
         try {
             try {
+                String bambino = s.getBambino();
                 Servizio servizio = new Servizio(
-                        
-                        dbServizio.ricercaServizioPerBambino(s.getBambino()).getId(),
-                        dbServizio.ricercaServizioPerBambino(s.getBambino()).getOrarioInizio(),
-                        dbServizio.ricercaServizioPerBambino(s.getBambino()).getOrarioFine(),
-                        dbServizio.ricercaServizioPerBambino(s.getBambino()).getPianoPasto(),
-                        dbServizio.ricercaServizioPerBambino(s.getBambino()).getBambino(),
-                        dbServizio.ricercaServizioPerBambino(s.getBambino()).getOrarioUtente());
+                       
+                        dbServizio.ricercaServizioPerBambino(bambino).getId(),
+                        dbServizio.ricercaServizioPerBambino(bambino).getOrarioInizio(),
+                        dbServizio.ricercaServizioPerBambino(bambino).getOrarioFine(),
+                        dbServizio.ricercaServizioPerBambino(bambino).getPianoPasto(),
+                        dbServizio.ricercaServizioPerBambino(bambino).getBambino(),
+                        dbServizio.ricercaServizioPerBambino(bambino).getOrarioUtente());
                 servizio.setPianoPasto(pianopasto);
                 
-                dbServizio.replace(dbServizio.ricercaServizioPerBambino(s.getBambino()), servizio);
+                dbServizio.replace(dbServizio.ricercaServizioPerBambino(bambino), servizio);
                 
             } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
@@ -90,7 +92,7 @@ public class ControlMensa {
         }
     }
     
-    public boolean eliminaPianoPasto(Servizio s) throws DBConnectionException {
+    public boolean eliminaServizio(Servizio s) throws DBConnectionException {
         
         Database db = new Database();
         if (!db.apriConnessione()) {
