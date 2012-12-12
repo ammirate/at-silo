@@ -128,6 +128,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     }
     
     
+  
+    
     /**
      * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
      * assegnazioni predefinite relativamente a un bean.<br/>

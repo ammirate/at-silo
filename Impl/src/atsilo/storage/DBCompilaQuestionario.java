@@ -203,6 +203,8 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
         return i;
     }
     
+
+    
     /**
      * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
      * assegnazioni predefinite relativamente a un bean.<br/>
@@ -225,6 +227,8 @@ public class DBCompilaQuestionario extends DBBeans<CompilaQuestionario> {
         
         return DBAssign;
     }
+    
+    
     
     
 }

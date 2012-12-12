@@ -36,30 +36,32 @@ public class StatisticheQuestionario {
      */
     public StatisticheQuestionario(Questionario questionario){
        this.questionario= questionario;
-       risposte = new HashMap<String,Map<String, Integer>>();
+       risposte = new HashMap<Integer,Map<Integer, Integer>>();
     }
     
     
     
-    public void setRisposte (HashMap<String,Map<String, Integer>> risposte){
+    public void setRisposte (HashMap<Integer,Map<Integer, Integer>> risposte){
         this.risposte=risposte;
     }
     
     
     
-    public HashMap<String,Map<String, Integer>> getRisposte(){
+    
+    
+    public HashMap<Integer,Map<Integer, Integer>> getRisposte(){
         return risposte;
     }
     
     
     
-    public Integer getPercentualiFromDomanda(String domanda, String campo_risposte){
-      Map<String, Integer> m=risposte.get(domanda);
+    public Integer getPercentualiFromDomanda(Integer domanda, String campo_risposte){
+      Map<Integer, Integer> m=risposte.get(domanda);
       return m.get(campo_risposte);
       
     }
     
     
     private Questionario questionario;
-    private HashMap<String,Map<String, Integer>> risposte;
+    private HashMap<Integer,Map<Integer, Integer>> risposte;
 }

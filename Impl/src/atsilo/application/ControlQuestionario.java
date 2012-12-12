@@ -11,6 +11,7 @@ import atsilo.entity.CompilaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
 import atsilo.entity.RispostaQuestionario;
+import atsilo.entity.StatisticheQuestionario;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
 import atsilo.storage.DBCampoDomandaQuestionario;
@@ -523,9 +524,23 @@ public class ControlQuestionario {
      * Gets the statistics from a questionnaire
      * @param questionario is the questionnaire to analyze
      * @return the questionnaire statistics 
+     * @throws QuestionarioException 
      */
-    public List<String> getStatistische(String idQuestionario){
-        return null;
+    public StatisticheQuestionario getStatistische(int idQuestionario) throws QuestionarioException{
+        Database db = new Database();
+        StatisticheQuestionario statq;
+       
+        DBQuestionario dbq =new DBQuestionario (db);
+        try {
+            Questionario sq= dbq.getQuestionario(idQuestionario);
+            statq=new StatisticheQuestionario(sq);
+            
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            throw new QuestionarioException("Impossibile rimuovere la domanda");
+        }
+        return statq;
+        
     }
     
     
