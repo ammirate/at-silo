@@ -45,9 +45,7 @@ public class DBClasse extends DBBeans<Classe>
     {
         Map<String,String> res= new HashMap<String,String>();
         res.put("id","id");
-        res.put("educatori","educatori");
-        res.put("eventi","eventi");
-        res.put("statoClasse","stato_classe");
+        res.put("sezione","sezione");
         
         return Collections.unmodifiableMap(res);
     }
@@ -86,7 +84,7 @@ public class DBClasse extends DBBeans<Classe>
             ResultSet res = stmt.executeQuery();
         if(res.next()){
            cla.setId(res.getInt("id"));
-           cla.setStatoClasse(res.getString("stato_classe"));
+           cla.setSezione(res.getString("sezione"));
            // si dovrebbero inserire anche le due liste(educatori ed eventi)
         }
             
@@ -116,7 +114,7 @@ public class DBClasse extends DBBeans<Classe>
         Classe c = new Classe();
         
         c.setId(r.getInt("id"));
-        
+        c.setSezione(r.getString("sezione"));
         return c;
         
     }
