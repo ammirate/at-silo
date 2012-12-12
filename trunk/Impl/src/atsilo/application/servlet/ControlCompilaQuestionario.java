@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Map.Entry;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -65,10 +67,28 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	            return;
 	        }
 	        int i = 0;
+	        int idDomanda = 0;
+	        for (Entry<String, String[]> entry : request.getParameterMap().entrySet()) {
+	            try {
+	                if(entry.getKey().substring(0, 7).equals("opzione")) {
+	                    System.out.println(entry.getKey() + "=" + Arrays.toString(entry.getValue()));
+	                    int a = entry.getKey().indexOf("[");
+	                    if (a==-1) idDomanda = Integer.parseInt(entry.getKey().substring(7));
+	                    else idDomanda = Integer.parseInt(entry.getKey().substring(7, a));
+	                    System.out.println(idDomanda);
+	                    RispostaQuestionario resp = new RispostaQuestionario(Arrays.toString(entry.getValue()).substring(1,Arrays.toString(entry.getValue()).length()-1 ), idDomanda, codfis);
+	                    listR.add(resp);
+	                }
+	            }
+	            catch (Exception e) {}
+	            
+	        }
+	        /*
 	        while(true) {
 	            try {
 	                String d = request.getParameter("domanda" + i );
 	                if(d==null) break;
+	                System.out.println("opzione" + i);
 	                String[] r = request.getParameterValues("opzione" + i);
 	                for(int j = 0; j<r.length; j++) {
 	                    RispostaQuestionario resp = new RispostaQuestionario(j, r[j], id, codfis);
@@ -77,24 +97,25 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	            }
 	            catch (Exception e)
 	            {
+	                
 	                System.out.println("Eccezione");
 	                break;
 	            }
 	            i++;
 	            
 	        }
-	        try {
-                q.compilaQuestionario(quest.getId(), listR, codfis);
-                for(int f = 0; f<listR.size(); f++) {
-                  System.out.println(listR.get(f).getValore());
-                }
-            } catch (DBConnectionException e) {
-                // TODO Blocco di catch autogenerato
-//                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (QuestionarioException e) {
-                // TODO Blocco di catch autogenerato
-//                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            }
+	        */
+//	        try {
+//                q.compilaQuestionario(quest.getId(), listR, codfis);
+////                for(int f = 0; f<listR.size(); f++) {
+////                  System.out.println(listR.get(f).getValore());
+////                }
+//            } catch (DBConnectionException e) {
+//                // TODO Blocco di catch autogenerato
+////                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+//            } catch (QuestionarioException e) {
+//                // TODO Blocco di catch autogenerato
+////                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+//            }
 	   }
-
 }
