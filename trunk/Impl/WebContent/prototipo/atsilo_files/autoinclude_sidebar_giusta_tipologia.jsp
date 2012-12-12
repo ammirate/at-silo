@@ -10,7 +10,7 @@
 <% } else if ( tipologia.equals("direttore")) { %>
    <%@include file="sidebar_direttore.jsp"%>
 
-<% } else if ( tipologia.equals("delegato_rettore")) { %>
+<% } else if ( tipologia.equals("responsabile_questionario")) { %>
    <%@include file="sidebar_delegato_rettore.jsp"%>
 
 <% } else if ( tipologia.equals("delegato_scfm")) { %>
