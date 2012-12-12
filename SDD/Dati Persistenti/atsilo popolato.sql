@@ -259,7 +259,7 @@ INSERT INTO `campo_domanda_questionario` (`domanda_questionario`, `tipo`, `descr
 
 CREATE TABLE IF NOT EXISTS `classe` (
   `id` int(11) NOT NULL,
-  `stato_classe` varchar(50) NOT NULL,
+  `sezione` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -267,11 +267,11 @@ CREATE TABLE IF NOT EXISTS `classe` (
 -- Dump dei dati per la tabella `classe`
 --
 
-INSERT INTO `classe` (`id`, `stato_classe`) VALUES
-(1, 'Approvata'),
-(2, 'Approvata'),
-(3, 'Approvata'),
-(4, 'In attesa di approvazione');
+INSERT INTO `classe` (`id`, `sezione`) VALUES
+(1, 'A'),
+(2, 'B'),
+(3, 'C'),
+(4, 'D');
 
 -- --------------------------------------------------------
 
