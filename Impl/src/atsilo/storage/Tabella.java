@@ -148,10 +148,12 @@ public class Tabella /* implements ManagerDB */{
                         int iVal = ((Number) val).intValue();
                         stmt.setBoolean(par, (iVal != 0));
                     }
+                    break;
                 case Types.SMALLINT:
                 case Types.INTEGER:
                 case Types.BIGINT:
                 case Types.TINYINT:
+                case Types.BIT:
                     err = "numerico intero";
                     
                     /*
