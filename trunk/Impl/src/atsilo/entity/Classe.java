@@ -100,7 +100,7 @@ public class Classe {
         this.bambini = bambino;
     }
 
-   public void aggiungiBambino(Bambino b){
+   public void aggiungiBambino(int classe, Bambino b){
        bambini.add(b);
    }
 

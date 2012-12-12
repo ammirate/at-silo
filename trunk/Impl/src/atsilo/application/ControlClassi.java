@@ -1,6 +1,7 @@
 package atsilo.application;
 
 
+import java.sql.SQLException;
 import java.util.List;
 
 import atsilo.entity.*;
@@ -48,7 +49,7 @@ public class ControlClassi {
         try{
             
             if(!stub.inserisci(classe))
-                throw new ClasseException("Inserimento fallito");
+                throw new ClasseException("Inserimento fallito, la classe esiste già");
         }
         finally{
             db.chiudiConnessione();
@@ -64,17 +65,18 @@ public class ControlClassi {
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws ClasseException
+     * @throws SQLException 
      */
-    public boolean cancellaClasse(int id) throws ClasseException, DBConnectionException{
+    public boolean cancellaClasse(int id) throws ClasseException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubClasse stub = new StubClasse(db); 
+        DBClasse stub = new DBClasse(db); 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            Classe classe = stub.ricercaClassePerId(id);
+            Classe classe = stub.RicercaClassePerId(id);
             if(classe == null)
                 throw new ClasseException("Classe non trovata");
-            if(!stub.cancellaClasse(classe))
+            if(!stub.delete(classe))
                 throw new ClasseException("eliminazione fallita");
         }
         finally{
@@ -90,20 +92,21 @@ public class ControlClassi {
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws ClasseException
+     * @throws SQLException 
      */
-    public boolean inserisciBambinoNellaClasse(int id, Bambino bambino) throws ClasseException, DBConnectionException{
+    public boolean inserisciBambinoNellaClasse(int id, Bambino bambino) throws ClasseException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubClasse stub = new StubClasse(db); 
+        DBClasse stub = new DBClasse(db); 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            Classe classe = stub.ricercaClassePerId(id);
+            Classe classe = stub.RicercaClassePerId(id);
             if(classe == null)
                 throw new ClasseException("Classe non trovata");
             //TODO si dovrebbe modificare la chiave esterna di Bambino su Classe tramite DBBambino 
             //(classe è attributo di bambino)
-            Classe nuovaClasse = stub.ricercaClassePerId(id);
-            nuovaClasse.aggiungiBambino(bambino);
+            Classe nuovaClasse = stub.RicercaClassePerId(id);
+            nuovaClasse.aggiungiBambino(id, bambino);
             if(!stub.replace(classe, nuovaClasse))
                 throw new ClasseException("operazione fallita");
         }
@@ -120,20 +123,21 @@ public class ControlClassi {
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws ClasseException
+     * @throws SQLException 
      */
-    public boolean inserisciBambiniNellaClasse(int id, List<Bambino> bambini) throws ClasseException, DBConnectionException{
+    public boolean inserisciBambiniNellaClasse(int id, List<Bambino> bambini) throws ClasseException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubClasse stub = new StubClasse(db); 
+        DBClasse stub = new DBClasse(db); 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            Classe classe = stub.ricercaClassePerId(id);
+            Classe classe = stub.RicercaClassePerId(id);
             if(classe == null)
                 throw new ClasseException("Classe non trovata");
-            Classe nuovaClasse = stub.ricercaClassePerId(id);
+            Classe nuovaClasse = stub.RicercaClassePerId(id);
             
             for (int i = 0;i<bambini.size();i++){
-                nuovaClasse.aggiungiBambino(bambini.get(i));
+                nuovaClasse.aggiungiBambino(id, bambini.get(i));
             }
                 
             if(!stub.replace(classe, nuovaClasse))
@@ -152,19 +156,21 @@ public class ControlClassi {
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws ClasseException
+     * @throws SQLException 
      */
-    public boolean ConfermaClasse(int id) throws ClasseException, DBConnectionException{
-        //dovrebbe esserci un campo nella classe: conferma
+    public boolean ConfermaClasse(int id) throws ClasseException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubClasse stub = new StubClasse(db); 
+        DBClasse stub = new DBClasse(db); 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            Classe classe = stub.ricercaClassePerId(id);
+            Classe classe = stub.RicercaClassePerId(id);
             if(classe == null)
                 throw new ClasseException("Classe non trovata");
                 
-            if(!stub.confermaClasse(classe))
+            Classe classeModificata = stub.RicercaClassePerId(id);
+            classeModificata.setStatoClasse("confermata");
+            if(!stub.replace(classe, classeModificata))
                 throw new ClasseException("operazione fallita");
         }
         finally{
@@ -192,7 +198,9 @@ public class ControlClassi {
             if(classe == null)
                 throw new ClasseException("Classe non trovata");
                 
-            if(!stub.rifiutaClasse(classe))
+            Classe classeModificata = stub.RicercaClassePerId(id);
+            classeModificata.setStatoClasse("rifiutata");
+            if(!stub.replace(classe, classeModificata))
                 throw new ClasseException("operazione fallita");
         }
         finally{
