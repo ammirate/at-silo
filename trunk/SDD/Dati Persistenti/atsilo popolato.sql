@@ -591,15 +591,15 @@ CREATE TABLE IF NOT EXISTS `insegna` (
 --
 
 INSERT INTO `insegna` (`educatore_didattico`, `classe`) VALUES
-('1', 1),
-('1', 2),
-('1', 3),
-('2', 1),
-('2', 2),
-('2', 3),
-('3', 1),
-('3', 2),
-('3', 3);
+('SLLMRA90A29N830P', 1),
+('SLLMRA90A29N830P', 2),
+('SLLMRA90A29N830P', 3),
+('SSSLRL78B19B908X', 1),
+('SSSLRL78B19B908X', 2),
+('SSSLRL78B19B908X', 3),
+('TRSLNE99S30X203Y', 1),
+('TRSLNE99S30X203Y', 2),
+('TRSLNE99S30X203Y', 3);
 
 -- --------------------------------------------------------
 
