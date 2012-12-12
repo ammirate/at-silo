@@ -57,12 +57,12 @@ public class ControlLogin {
      * @throws LoginException
      */
     public Account getValoreLogin(String username, String password, String tipo)
-            throws DBConnectionException, LoginException {
+            throws LoginException {
         // Come prima cosa, bisogna creare un'istanza di database e aprire una
         // connessione
         Database db = new Database();
         if (!db.apriConnessione()) {
-            throw new DBConnectionException("Connessione fallita");
+            throw new LoginException("Connessione fallita");
         }
         
         // Quindi, si possono creare tutti i gestori di tabelle necessari
@@ -141,7 +141,7 @@ public class ControlLogin {
                                             }                   
                     } else throw new LoginException("Username o Password o Tipologia Errata");
                 
-            } catch (SQLException e) {throw new DBConnectionException("Errore nella connessione durante la procedura di login", e);}
+            } catch (SQLException e) {throw new LoginException("Connessione fallita");}
         } finally {db.chiudiConnessione();}
     }
     
