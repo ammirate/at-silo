@@ -21,7 +21,7 @@ import java.sql.SQLException;
 import javax.security.auth.login.LoginException;
 
 import atsilo.entity.Account;
-import atsilo.entity.Utente;
+import atsilo.entity.PersonaleAsilo;
 import atsilo.exception.DBConnectionException;
 import atsilo.storage.DBAccount;
 import atsilo.storage.DBEducatoreDidattico;
@@ -34,29 +34,21 @@ import atsilo.storage.Database;
 import atsilo.stub.storage.*;
 
 
-
 /**
  * 
  * @author Marko,Fabio Napoli
  */
 public class ControlLogin {
     private static ControlLogin control = new ControlLogin();
-    private DBAccount dbAccount;
-    private DBGenitore dbGenitore;
-    private DBPersonaleAsilo dbPersonaleAsilo;
-    private DBPsicopedagogo dbPsicopedagogo;
-    private DBResponsabileQuestionario dbResponsabileQuestionario;
-    private DBEducatoreDidattico dbEducatoreDidattico;
-    private DBTirocinante dbTirocinante;
     
     
-    private ControlLogin(){
+    private ControlLogin() {
     }
     
     /**
-     * Classe che prende in input username e password e controlla se � presente
-     * nel database in caso positivo restituisce account appartenente in caso
-     * negativo lancia un'eccezione
+     * Classe che prende in input username e password e controlla se �
+     * presente nel database in caso positivo restituisce account appartenente
+     * in caso negativo lancia un'eccezione
      * 
      * @param username
      * @param password
@@ -75,90 +67,82 @@ public class ControlLogin {
         
         // Quindi, si possono creare tutti i gestori di tabelle necessari
         try {
+            DBAccount dbAccount;
+            DBGenitore dbGenitore;
+            DBPersonaleAsilo dbPersonaleAsilo;
+            DBPsicopedagogo dbPsicopedagogo;
+            DBResponsabileQuestionario dbResponsabileQuestionario;
+            DBEducatoreDidattico dbEducatoreDidattico;
+            DBTirocinante dbTirocinante;
             dbAccount = new DBAccount(db);
-            dbGenitore = new DBGenitore(db);
+            dbGenitore = new DBGenitore(db);//
             dbPersonaleAsilo = new DBPersonaleAsilo(db);
-            dbPsicopedagogo = new DBPsicopedagogo(db);
-            dbResponsabileQuestionario = new DBResponsabileQuestionario(db);
-            dbEducatoreDidattico = new DBEducatoreDidattico(db);
-            dbTirocinante = new DBTirocinante(db);
+            dbPsicopedagogo = new DBPsicopedagogo(db);//
+            dbResponsabileQuestionario = new DBResponsabileQuestionario(db);//
+            dbEducatoreDidattico = new DBEducatoreDidattico(db);//
+            dbTirocinante = new DBTirocinante(db);//
             
             Account account = new Account();
             try {
                 account = dbAccount.ricercaPerUsername(username);
-                
-                if (account == null) {
-                    throw new LoginException(
-                            "Username o Password o Tipologia Errata");
-                }
-
-                    
-               
-                    else {
-                        if ((tipo.compareTo("genitore") == 0 && account.getPassWord().compareTo(password) == 0))
-                            if ((dbGenitore.getGenitorePerCF(account
-                                    .getOwner().getCodiceFiscale())) != null)
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else if ((tipo.compareTo("personale_asilo") == 0 && account.getPassWord().compareTo(password) == 0))
-                            if ((dbPersonaleAsilo
-                                    .getPersonaleAsiloPerCF(account
-                                            .getOwner().getCodiceFiscale())) != null)
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else if ((tipo.compareTo("psicopedagogo") == 0 && account.getPassWord().compareTo(password) == 0))
-                            if ((dbPsicopedagogo.getPsicopedagogoPerCF(account
-                                    .getOwner().getCodiceFiscale())) != null)
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else if ((tipo.compareTo("resposabile_questionario") == 0 && account.getPassWord().compareTo(password) == 0))
-                            if ((dbResponsabileQuestionario
-                                    .getResponsabileQuestionarioPerCF(account
-                                            .getOwner().getCodiceFiscale())) != null)
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else if ((tipo.compareTo("educatore_didattico") == 0 && account.getPassWord().compareTo(password) == 0))
-                            if ((dbEducatoreDidattico
-                                    .getEducatoreDidatticoPerCF(account
-                                            .getOwner().getCodiceFiscale())) != null)
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else if ((tipo.compareTo("tirocinante") == 0 && account.getPassWord().compareTo(password) == 0))
-                            if ((dbTirocinante.getTirocinantePerCF(account
-                                    .getOwner().getCodiceFiscale())) != null)
-                                
-                                return account;
-                            else
-                                throw new LoginException(
-                                        "Username o Password o Tipologia Errata");
-                        else
-                            throw new LoginException(
-                                    "Username o Password o Tipologia Errata");
+                if (account == null) 
+                {throw new LoginException("Username o Password o Tipologia Errata");}
+                else 
+                    if (account.getPassWord().compareTo(password) == 0) 
+                    {
+                        String codiceFiscale = account.getOwner()
+                                .getCodiceFiscale();
                         
-                        
-                    }
+                        /*       
+                         * 
+                         * */
+                        if ((tipo.compareTo("genitore") == 0)) 
+                        {
+                            if((dbGenitore.getGenitorePerCF(codiceFiscale) != null))
+                                return account;
+                            else throw new LoginException("Username o Password o Tipologia Errata");
+                        }
+                        else 
+                            if ((tipo.compareTo("educatore_didattico") == 0)) 
+                            {
+                                if ((dbEducatoreDidattico.getEducatoreDidatticoPerCF(codiceFiscale) != null))
+                                    return account;
+                                else throw new LoginException("Username o Password o Tipologia Errata");
+                            }
+                            else 
+                                if ((tipo.compareTo("tirocinante") == 0)) 
+                                {
+                                    if ((dbTirocinante.getTirocinantePerCF(codiceFiscale) != null))
+                                        return account;
+                                    else throw new LoginException("Username o Password o Tipologia Errata");
+                                    
+                                }
+                                else 
+                                    if ((tipo.compareTo("responsabile_questionario") == 0)) 
+                                    {
+                                        if ((dbResponsabileQuestionario.getResponsabileQuestionarioPerCF(codiceFiscale) != null))
+                                            return account;
+                                        else throw new LoginException("Username o Password o Tipologia Errata");
+                                    } 
+                                    else 
+                                        if ((tipo.compareTo("psicopedagogo") == 0)) 
+                                        {
+                                            if ((dbPsicopedagogo.getPsicopedagogoPerCF(codiceFiscale) != null))
+                                                return account;
+                                            else throw new LoginException("Username o Password o Tipologia Errata");
+                                            
+                                        }
+                                        else { PersonaleAsilo utente = dbPersonaleAsilo.getPersonaleAsiloPerCF(codiceFiscale);
+                                            
+                                                if ((utente == null)) {throw new LoginException("Username o Password o Tipologia Errata");} 
+                                                else if (tipo.compareTo(utente.getCategoriaAppartenenza()) == 0)
+                                                    return account;
+                                                    else throw new LoginException("Username o Password o Tipologia Errata");
+                                            }                   
+                    } else throw new LoginException("Username o Password o Tipologia Errata");
                 
-            } catch (SQLException e) {
-                
-                throw new DBConnectionException("Errore nella connessione durante la procedura di login", e);
-            }
-        } finally {
-            /*
-             * Alla fine dell'interazione, prima di uscire dal metodo, bisogna
-             * chiudere la connessione.
-             */
-            db.chiudiConnessione();
-        }
+            } catch (SQLException e) {throw new DBConnectionException("Errore nella connessione durante la procedura di login", e);}
+        } finally {db.chiudiConnessione();}
     }
     
     /**

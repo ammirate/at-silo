@@ -1,6 +1,6 @@
 /*
  *-----------------------------------------------------------------
- * This file is licensed under GPL 3.0:
+ù * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
  * FILE: ControlLoginTest.java
@@ -30,7 +30,8 @@ import atsilo.storage.Database;
  * @author fabio
  * 
  */
-public class ControlLoginTest {
+public class ControlLoginTest 
+{
     
     /**
      * @param args
@@ -42,25 +43,5 @@ public class ControlLoginTest {
      
         
         ControlLogin control=ControlLogin.getInstance();
-        Account a=new Account();
-        a=control.getValoreLogin("a.damelia", "alfonsoda","tirocinante");
-        System.out.println("Username : = "+a.getUserName());
-        System.out.println("Password : = "+a.getPassWord());
-        System.out.println("Tipo utenza:"+a.getOwner().getClass().getName());
-        System.out.println("Codice Fiscale Utente:"+a.getOwner().getCodiceFiscale());
         
-    }
-    //Logger
-    /*
-     * private static final java.util.Logger LOG
-     *         = Logger.getLogger(ControlLoginTest.class.getName());
-     */
-    
-    //Variabili di istanza
-    
-    
-    //Costruttori
-    
-    
-    //Metodi
 }
