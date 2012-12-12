@@ -49,7 +49,7 @@ public class ServletModificaDatiAccount extends HttpServlet {
             pw.println("");
             pw.println("");
             pw.println("");
-            pw.println("<h1>Modifica Dati Account/h1><br>This servlet should not be accessed this way.");
+            pw.println("<h1>Modifica Dati Account</h1><br>This servlet should not be accessed this way.");
             pw.println("");
         }
 
@@ -70,8 +70,7 @@ public class ServletModificaDatiAccount extends HttpServlet {
 	    else
 	        password= request.getParameter("password");//l'utente vuole cambiare la password poichè ha inserito una valore diverso di ******
 	    
-	    String email=request.getParameter("email");
-    
+	    String email=request.getParameter("indirizzo_email");
             String tipologia_genitore=null;
             if (request.getParameter("tipologia_genitore") != null)// solo account genitore ha il parametro tipologia di genitore
                    tipologia_genitore= request.getParameter("tipologia_genitore");
