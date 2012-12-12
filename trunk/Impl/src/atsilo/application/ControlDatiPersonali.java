@@ -1,7 +1,6 @@
 package atsilo.application;
 
 
-
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -34,111 +33,121 @@ import atsilo.stub.application.StubUtente;
 public class ControlDatiPersonali {
     private static final ControlDatiPersonali INSTANCE = new ControlDatiPersonali();
     private static final Logger LOG = Logger.getLogger("global");
-
-
+    
+    
     /**
      * Contructor
      */
     public ControlDatiPersonali() {
     }
-
-
+    
+    
     /**
      * Prende lo stato di un'iscrizione: idoneo/non idoneo
-     * @param id della domanda di iscrizione da verificare
+     * 
+     * @param id
+     *            della domanda di iscrizione da verificare
      * @return stringa che riporti lo stato dell'iscrizione
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws DomandaIscrizioneException
      */
-    public String getValoreStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
-        /* TODO
-         * questo metodo è collegato ad un control di bassa priorità, per cui verrà implementato in seguito*/
+    public String getValoreStatoIscrizione(int id)
+            throws DomandaIscrizioneException, DBConnectionException {
+        /*
+         * TODO questo metodo è collegato ad un control di bassa priorità, per
+         * cui verrà implementato in seguito
+         */
         return "";
     }
-
+    
     
     /**
      * Prende la classe genitore
-     * @param codice fiscale del genitore da visualizzare
+     * 
+     * @param codice
+     *            fiscale del genitore da visualizzare
      * @return genitore
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws GenitoreException
-     * @throws SQLException 
-     * @throws InserimentoDatiException 
+     * @throws SQLException
+     * @throws InserimentoDatiException
      */
-    public Genitore getDatiGenitore(String codiceFiscale){
+    public Genitore getDatiGenitore(String codiceFiscale) {
         Database db = new Database();
-        DBGenitore dbGenitore= new DBGenitore(db);
-        Genitore genitore=null;
-        try{
-        db.apriConnessione();
-      
+        DBGenitore dbGenitore = new DBGenitore(db);
+        Genitore genitore = null;
+        try {
+            db.apriConnessione();
+            
             try {
-                genitore= dbGenitore.getGenitorePerCF(codiceFiscale) ;
+                genitore = dbGenitore.getGenitorePerCF(codiceFiscale);
             } catch (SQLException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
         return genitore;
     }
-   
-    public Genitore getGenitoreFromUsername(String username) throws GenitoreException, DBConnectionException, SQLException, InserimentoDatiException{
+    
+    public Genitore getGenitoreFromUsername(String username)
+            throws GenitoreException, DBConnectionException, SQLException,
+            InserimentoDatiException {
         Database db = new Database();
-        DBGenitore dbGenitore= new DBGenitore(db);
-        DBAccount dbAccount= new DBAccount(db);
-        Account account=dbAccount.ricercaPerUsername(username);
+        DBGenitore dbGenitore = new DBGenitore(db);
+        DBAccount dbAccount = new DBAccount(db);
+        Account account = dbAccount.ricercaPerUsername(username);
         
         
-        //controllo sul codice fiscale che deve essere a 16 cifre
+        // controllo sul codice fiscale che deve essere a 16 cifre
         
-        if(!db.apriConnessione())
+        if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{            
-            Genitore g = dbGenitore.getGenitorePerCF(account.getOwner().getCodiceFiscale());
-           
-            if(g == null)
+        try {
+            Genitore g = dbGenitore.getGenitorePerCF(account.getOwner()
+                    .getCodiceFiscale());
+            
+            if (g == null)
                 throw new GenitoreException("Genitore non trovato");
             return g;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
     }
     
     /**
      * Prende la classe bambino
-     * @param codice fiscale del bambino da visualizzare
+     * 
+     * @param codice
+     *            fiscale del bambino da visualizzare
      * @return bambino
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws BambinoException
-     * @throws SQLException 
-     * @throws InserimentoDatiException 
+     * @throws SQLException
+     * @throws InserimentoDatiException
      */
     public Bambino getDatiBambino(String codiceFiscale) {
         Database db = new Database();
-        DBBambino dbBambino= new DBBambino(db);
-
-        //controllo sul codice fiscale che deve essere a 16 cifre
-       
-        Bambino b=null;
-       
-           
-        try{
+        DBBambino dbBambino = new DBBambino(db);
+        
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        
+        Bambino b = null;
+        
+        
+        try {
             db.apriConnessione();
             b = dbBambino.ricercaBambinoPerCodFiscale(codiceFiscale);
             
+            
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Errore query", e.getMessage());
+            return b;
+        }
         
-    } catch (SQLException e) {
-        // TODO Blocco di catch autogenerato
-        LOG.log(Level.SEVERE, "Errore query", e.getMessage());
-        return b;
-    }
-        
-        finally{
+        finally {
             db.chiudiConnessione();
         }
         return b;
@@ -147,36 +156,39 @@ public class ControlDatiPersonali {
     
     /**
      * Prende i valori di un utente
-     * @param codice fiscale dell'utente visualizzare
+     * 
+     * @param codice
+     *            fiscale dell'utente visualizzare
      * @return utente
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws UtenteException
-     * @throws InserimentoDatiException 
+     * @throws InserimentoDatiException
      */
-    public Utente getValoriUtenteFromCf(String cf) throws UtenteException, DBConnectionException, InserimentoDatiException{
+    public Utente getValoriUtenteFromCf(String cf) throws UtenteException,
+            DBConnectionException, InserimentoDatiException {
         Database db = new Database();
         StubUtente stub = new StubUtente(db);
         
-        //controllo sul codice fiscale che deve essere a 16 cifre
-        if(cf.length() != 16)
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        if (cf.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
-                
-        if(!db.apriConnessione())
+        
+        if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{
+        try {
             
             Utente u = stub.ricercaUtente(cf);
-            if(u == null)
+            if (u == null)
                 throw new UtenteException("Utente non trovato");
             return u;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
     }
     
     /**
      * Ricerca utente tramite lo username dell'account
+     * 
      * @param username
      * @return
      * @throws UtenteException
@@ -185,8 +197,8 @@ public class ControlDatiPersonali {
      */
     public Utente getValoriUtente(String username) throws DBConnectionException {
         Database db = new Database();
-        DBAccount dbAccount= new DBAccount(db);
-        DBGenitore dbGenitore =new DBGenitore(db);
+        DBAccount dbAccount = new DBAccount(db);
+        DBGenitore dbGenitore = new DBGenitore(db);
         
         Account account_chiamante = null;
         Utente utente = new Utente();
@@ -194,66 +206,72 @@ public class ControlDatiPersonali {
         try {
             db.apriConnessione();
             account_chiamante = dbAccount.ricercaPerUsername(username);
-            String cf=account_chiamante.getOwner().getCodiceFiscale();//codice fiscale account
+            String cf = account_chiamante.getOwner().getCodiceFiscale();// codice
+                                                                        // fiscale
+                                                                        // account
             
-            //aggiungere controlli per altre tipologie di utente
-            if (dbGenitore.getGenitorePerCF(cf)!=null)
-                utente=dbGenitore.getGenitorePerCF(cf);
+            // aggiungere controlli per altre tipologie di utente
+            if (dbGenitore.getGenitorePerCF(cf) != null)
+                utente = dbGenitore.getGenitorePerCF(cf);
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "Errore query", e.getMessage());
             return utente;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
         return utente;
- 
+        
     }
     
     /**
      * Modifica i certificati di iscrizione
-     * @param id del certificato di iscrizione e valori booleani dei certificati da inserire
+     * 
+     * @param id
+     *            del certificato di iscrizione e valori booleani dei
+     *            certificati da inserire
      * @return valore booleano
-     * @throws DBConnectionException 
-     * @throws BambinoException 
-     * @throws InserimentoDatiException 
+     * @throws DBConnectionException
+     * @throws BambinoException
+     * @throws InserimentoDatiException
      * @throws DomandaIScrizioneException
      */
-    public boolean completaIscrizione(String cf, String vaccinazioni, String malattie, String privacy) throws DomandaIscrizioneException, DBConnectionException, BambinoException, InserimentoDatiException{
+    public boolean completaIscrizione(String cf, String vaccinazioni,
+            String malattie, String privacy) throws DomandaIscrizioneException,
+            DBConnectionException, BambinoException, InserimentoDatiException {
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         StubBambino stub2 = new StubBambino(db);
         
-        //controllo sul codice fiscale che deve essere a 16 cifre
-        if(cf.length() != 16)
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        if (cf.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
         
-        if(!db.apriConnessione())
+        if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{
+        try {
             Bambino b = stub2.ricercaBambino(cf);
-            if(b == null)
+            if (b == null)
                 throw new BambinoException("Bambino non trovato");
             int id = stub.ricercaDomandaDaBambino(b);
-            DomandaIscrizione domandaIscrizioneDaModificare = stub.ricercaDomandaPerId(id);
-            if(domandaIscrizioneDaModificare == null)
+            DomandaIscrizione domandaIscrizioneDaModificare = stub
+                    .ricercaDomandaPerId(id);
+            if (domandaIscrizioneDaModificare == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
             DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
             
-            //vengono modificati i campi interessati ai certificati
-            if(vaccinazioni != null)
-               domandaIscrizione.setCertificatoVaccinazioni(vaccinazioni);
-            if(malattie != null)
-               domandaIscrizione.setCertificatoMalattie(malattie);
-            if(privacy != null)
-               domandaIscrizione.setCertificatoPrivacy(privacy);
+            // vengono modificati i campi interessati ai certificati
+            if (vaccinazioni != null)
+                domandaIscrizione.setCertificatoVaccinazioni(vaccinazioni);
+            if (malattie != null)
+                domandaIscrizione.setCertificatoMalattie(malattie);
+            if (privacy != null)
+                domandaIscrizione.setCertificatoPrivacy(privacy);
             
-            if(!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
+            if (!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
     }
@@ -261,29 +279,32 @@ public class ControlDatiPersonali {
     
     /**
      * Convalida una domanda di iscrizione
-     * @param id della domanda di iscrizione
+     * 
+     * @param id
+     *            della domanda di iscrizione
      * @return valore booleano
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws DomandaIscrizioneException
      */
-    public boolean convalidaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+    public boolean convalidaIscrizione(int id)
+            throws DomandaIscrizioneException, DBConnectionException {
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
-        if(!db.apriConnessione())
+        if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            DomandaIscrizione domandaIscrizioneDaModificare = stub.ricercaDomandaPerId(id);
-            if(domandaIscrizioneDaModificare == null)
+        try {
+            DomandaIscrizione domandaIscrizioneDaModificare = stub
+                    .ricercaDomandaPerId(id);
+            if (domandaIscrizioneDaModificare == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
             DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
-            //Supponendo che ci sia un campo convalida in domanda iscrizione           
-            //domanaIsczizione.setConvalida(true);
-            if(!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
+            // Supponendo che ci sia un campo convalida in domanda iscrizione
+            // domanaIsczizione.setConvalida(true);
+            if (!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
     }
@@ -291,39 +312,45 @@ public class ControlDatiPersonali {
     
     /**
      * riceve nuovi dati della domanda iscrizione
-     * @param id della domanda di iscrizione
-     * @param i dati della nuova domanda iscrizione
+     * 
+     * @param id
+     *            della domanda di iscrizione
+     * @param i
+     *            dati della nuova domanda iscrizione
      * @return valore booleano
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws DomandaIscrizioneException
      */
-    public boolean completaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+    public boolean completaIscrizione(int id)
+            throws DomandaIscrizioneException, DBConnectionException {
         /*
-         * TODO
-         * questo control è legato ad un control con bassa priorità ancora da implementare */
+         * TODO questo control è legato ad un control con bassa priorità ancora
+         * da implementare
+         */
         return true;
     }
     
     
     /**
      * Ricerca le domande in attesa di convalida
+     * 
      * @return domande in attesa di convalide
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws DomandaIscrizioneException
      */
-    public List<DomandaIscrizione> getValoriIscrizioniNonConvalidate() throws DomandaIscrizioneException, DBConnectionException{
+    public List<DomandaIscrizione> getValoriIscrizioniNonConvalidate()
+            throws DomandaIscrizioneException, DBConnectionException {
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
-        if(!db.apriConnessione())
+        if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{
+        try {
             List<DomandaIscrizione> b = stub.ricercaDomandeInAttesa();
-            if(b.isEmpty())
+            if (b.isEmpty())
                 throw new DomandaIscrizioneException("Lista vuota");
             return b;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
     }
@@ -331,101 +358,113 @@ public class ControlDatiPersonali {
     
     /**
      * Esclude una domanda d'iscrizione
-     * @param id della domanda di iscrizione
+     * 
+     * @param id
+     *            della domanda di iscrizione
      * @return valore booleano
-     * @throws DBConnectionException 
+     * @throws DBConnectionException
      * @throws DomandaIscrizioneException
      */
-    public Boolean escludiIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+    public Boolean escludiIscrizione(int id) throws DomandaIscrizioneException,
+            DBConnectionException {
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
-        if(!db.apriConnessione())
+        if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            DomandaIscrizione domandaIscrizioneDaModificare = stub.ricercaDomandaPerId(id);
-            if(domandaIscrizioneDaModificare == null)
+        try {
+            DomandaIscrizione domandaIscrizioneDaModificare = stub
+                    .ricercaDomandaPerId(id);
+            if (domandaIscrizioneDaModificare == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);        
-            //domanaIsczizione.setConvalida(false);
-            if(!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
+            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
+            // domanaIsczizione.setConvalida(false);
+            if (!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
     }
-       
-   /* 
-    /**
-    * Restituisce il cf dei bambini associati all account con username in input
-    * @return
-     * @throws BambinoException 
-     * @throws DBConnectionException 
-    */
-   /* public List<String> getCfBambini(String username) throws BambinoException, DBConnectionException{
-        Database db = new Database();
-        StubBambino stub = new StubBambino(db);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{        
-            List<String> cf= stub.ricercaCfBambiniPerUsername(username);
-            if(cf.isEmpty())
-                throw new BambinoException("Bambini non trovati");    
-            return cf;
-        }
-        finally{
-            db.chiudiConnessione();
-        }
-    }*/
     
-    public List<Bambino> getFigli(String cf_genitore){
+    /*
+     * /** Restituisce il cf dei bambini associati all account con username in
+     * input
+     * 
+     * @return
+     * 
+     * @throws BambinoException
+     * 
+     * @throws DBConnectionException
+     */
+    /*
+     * public List<String> getCfBambini(String username) throws
+     * BambinoException, DBConnectionException{ Database db = new Database();
+     * StubBambino stub = new StubBambino(db);
+     * 
+     * if(!db.apriConnessione()) throw new
+     * DBConnectionException("Connessione al DB fallita"); try{ List<String> cf=
+     * stub.ricercaCfBambiniPerUsername(username); if(cf.isEmpty()) throw new
+     * BambinoException("Bambini non trovati"); return cf; } finally{
+     * db.chiudiConnessione(); } }
+     */
+    
+    public List<Bambino> getFigli(String cf_genitore) {
         Database db = new Database();
-        DBBambino dbBambino=new DBBambino(db);
+        DBBambino dbBambino = new DBBambino(db);
         
-       db.apriConnessione();
-       List<Bambino> cf=null;
-           
-        try{        
-            cf= dbBambino.ricercaFigliGenitore(cf_genitore);
+        db.apriConnessione();
+        List<Bambino> cf = null;
+        
+        try {
+            cf = dbBambino.ricercaFigliGenitore(cf_genitore);
             
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "Sql Error", e);
-        }
-        finally{
+        } finally {
             db.chiudiConnessione();
         }
         return cf;
     }
     
     /**
-     * Restituisce domanda iscrizione fatta da genitore con username=username 
-     * @param username username dell'account di cui si desiderano i dati dell iscriizone
-     * @param cfBambino codice fiscale del bambino di cui si vogliono i dati della domanda di iscrizione, se null verranno passati tutti i dati della domanda fino ad ora inseriti, tranne il bambino collegato alla domanda
-     *        
-     * @return dati domanda di iscrizione: se cfBambino è null restituire solo i dati collegati all'account (Dati genitori e situazione reddituale, senza i dati dei bambini e la situazione familiare)
-     *                                     se cfBambino diverso da null restituire tutti i dati compresi quelli del bambino e la sitauzione familiare
-     *                                     se Domanda non esiste restituire null
-     * @throws DomandaIscrizioneException 
-     * @throws DBConnectionException 
-     * @throws InserimentoDatiException 
+     * Restituisce domanda iscrizione fatta da genitore con username=username
+     * 
+     * @param username
+     *            username dell'account di cui si desiderano i dati dell
+     *            iscriizone
+     * @param cfBambino
+     *            codice fiscale del bambino di cui si vogliono i dati della
+     *            domanda di iscrizione, se null verranno passati tutti i dati
+     *            della domanda fino ad ora inseriti, tranne il bambino
+     *            collegato alla domanda
+     * 
+     * @return dati domanda di iscrizione: se cfBambino è null restituire solo i
+     *         dati collegati all'account (Dati genitori e situazione
+     *         reddituale, senza i dati dei bambini e la situazione familiare)
+     *         se cfBambino diverso da null restituire tutti i dati compresi
+     *         quelli del bambino e la sitauzione familiare se Domanda non
+     *         esiste restituire null
+     * @throws DomandaIscrizioneException
+     * @throws DBConnectionException
+     * @throws InserimentoDatiException
      */
-    public DomandaIscrizione getDatiIscrizione(String username,String cfBambino) {
+    public DomandaIscrizione getDatiIscrizione(String username, String cfBambino) {
         Database db = new Database();
         DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
-        DomandaIscrizione domandaIscrizione=null;
+        DomandaIscrizione domandaIscrizione = null;
         
         db.apriConnessione();
-       
-        if (cfBambino==null){
+        
+        if (cfBambino == null) {
             List<DomandaIscrizione> a;
             try {
-                a = dbDomandaIscrizione.ricercaDomandaDaGenitore(getGenitoreFromUsername(username).getCodiceFiscale());
-                if (a.size()>0)
-                    domandaIscrizione= a.get(1);
+                a = dbDomandaIscrizione
+                        .ricercaDomandaDaGenitore(getGenitoreFromUsername(
+                                username).getCodiceFiscale());
+                if (a.size() > 0)
+                    domandaIscrizione = a.get(1);
             } catch (SQLException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
@@ -441,29 +480,30 @@ public class ControlDatiPersonali {
             }
             
         }
-        /* 
-        else{
-            List<DomandaIscrizione> a = dbDomandaIscrizione.ricercaDomandaDaBambino(getDatiBambino(cfBambino));
-            if (a.size()>0)
-                domandaIscrizione= a.get(1);//restituisce la domanda fatta dal genitore
-            
-        }
-        */
+        /*
+         * else{ List<DomandaIscrizione> a =
+         * dbDomandaIscrizione.ricercaDomandaDaBambino
+         * (getDatiBambino(cfBambino)); if (a.size()>0) domandaIscrizione=
+         * a.get(1);//restituisce la domanda fatta dal genitore
+         * 
+         * }
+         */
         
         
-            db.chiudiConnessione();
-       return domandaIscrizione;
+        db.chiudiConnessione();
+        return domandaIscrizione;
     }
     
     /**
      * Gets the single istance of this class
+     * 
      * @return a new ControlDatiPersonali
      */
-    public static ControlDatiPersonali getIstance(){
+    public static ControlDatiPersonali getIstance() {
         return INSTANCE;
     }
-
-
+    
+    
     /**
      * @param username
      * @param password
@@ -474,71 +514,79 @@ public class ControlDatiPersonali {
     public boolean updateAccount(String username, String password,
             String email, String tipologia_genitore) {
         Database db = new Database();
-        DBAccount dbAccount=new DBAccount(db); 
-        DBGenitore dbGenitore=new DBGenitore(db);
-        DBEducatoreDidattico dbEducatoreDidattico=new DBEducatoreDidattico(db);
-        DBPersonaleAsilo dbPersonaleAsilo=new DBPersonaleAsilo(db);
-        DBPsicopedagogo dpPsicopedagogo=new DBPsicopedagogo(db);
-       
-        //creo il nuovo account che sostituirà il vecchio
-       Account newAccount= new Account();
-       try {
-        newAccount.setOwner(getValoriUtente(username));
-    } catch (DBConnectionException e1) {
-        // TODO Blocco di catch autogenerato
-        LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
-    }//cambio owner
-       newAccount.setUserName(username);//setto username che non varierà mai
-       if (password==null)
+        db.apriConnessione();
+        DBAccount dbAccount = new DBAccount(db);
+        DBGenitore dbGenitore = new DBGenitore(db);
+        DBEducatoreDidattico dbEducatoreDidattico = new DBEducatoreDidattico(db);
+        DBPersonaleAsilo dbPersonaleAsilo = new DBPersonaleAsilo(db);
+        DBPsicopedagogo dpPsicopedagogo = new DBPsicopedagogo(db);
+        
+        // creo il nuovo account che sostituirà il vecchio
+        Account newAccount = new Account();
         try {
-            Account account=new Account();
-            account=dbAccount.ricercaPerUsername(username);
-            newAccount.setPassWord((dbAccount.ricercaPerUsername(username)).getPassWord());
-        } catch (SQLException e1) {
-            // TODO Blocco di catch autogenerato
-            LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
-        }
-    else newAccount.setPassWord(password);//cambio password
-       
-       
-       //creo il nuovo utente, con tutti i campi che aveva in precedenza ma con l'email aggiornata
-       Utente newUtente=new Utente();
-       try {
-        newUtente=getValoriUtente(username);
-    } catch (DBConnectionException e1) {
-        // TODO Blocco di catch autogenerato
-        LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
-    }//risetto tutti i campi come prima
-       if (email==null)
-        try {
-            newUtente.setEmail(getValoriUtente(username).getEmail());
+            newAccount.setOwner(getValoriUtente(username));
         } catch (DBConnectionException e1) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
-        }
-    else newUtente.setEmail(email);//cambio email
-       
-       
-        
-        try{
-        db.apriConnessione();
-           
-       
-        
-            if(!dbAccount.replace(dbAccount.ricercaPerUsername(username), newAccount))//modifica dati account
+        }// cambio owner
+        newAccount.setUserName(username);// setto username che non varierà mai
+        if (password == null)
+            try {
+                Account account = new Account();
+                account = dbAccount.ricercaPerUsername(username);
+                newAccount.setPassWord((dbAccount.ricercaPerUsername(username))
+                        .getPassWord());
+            } catch (SQLException e1) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+            }
+        else
+            newAccount.setPassWord(password);// cambio password
+            
+            
+        // creo il nuovo utente, con tutti i campi che aveva in precedenza ma
+        // con l'email aggiornata
+        Utente newUtente = new Utente();
+        try {
+            newUtente = getValoriUtente(username);
+        } catch (DBConnectionException e1) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+        }// risetto tutti i campi come prima
+        if (email == null)
+            try {
+                newUtente.setEmail(getValoriUtente(username).getEmail());
+            } catch (DBConnectionException e1) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+            }
+        else
+            newUtente.setEmail(email);// cambio email
+            
+            
+        try {
+            
+            
+            if (!dbAccount.replace(dbAccount.ricercaPerUsername(username),
+                    newAccount))// modifica dati account
                 return false;
             
-            //controlla se utente è Personale asilo ed in quel caso aggiorna la mail
-            if (dbPersonaleAsilo.getPersonaleAsiloPerCF(getValoriUtente(username).getCodiceFiscale()) != null ){
-                PersonaleAsilo realBean = dbPersonaleAsilo.getPersonaleAsiloPerCF(newUtente.getCodiceFiscale());
-                PersonaleAsilo newRealBean=realBean;
+            // controlla se utente è Personale asilo ed in quel caso aggiorna la
+            // mail
+            if (dbPersonaleAsilo.getPersonaleAsiloPerCF(getValoriUtente(
+                    username).getCodiceFiscale()) != null) {
+                PersonaleAsilo realBean = dbPersonaleAsilo
+                        .getPersonaleAsiloPerCF(newUtente.getCodiceFiscale());
+                PersonaleAsilo newRealBean = realBean;
                 newRealBean.setEmail(newUtente.getEmail());
                 dbPersonaleAsilo.replace(realBean, newRealBean);
             }
-            //controlla se utente è genitore ed in quel caso aggiorna la mail
-            if (dbGenitore.getGenitorePerCF(getValoriUtente(username).getCodiceFiscale()) != null ){
-                Genitore realBean = dbGenitore.getGenitorePerCF(newUtente.getCodiceFiscale());
-                Genitore newRealBean=realBean;
+            // controlla se utente è genitore ed in quel caso aggiorna la mail
+            if (dbGenitore.getGenitorePerCF(getValoriUtente(username)
+                    .getCodiceFiscale()) != null) {
+                Genitore realBean = dbGenitore.getGenitorePerCF(newUtente
+                        .getCodiceFiscale());
+                Genitore newRealBean = realBean;
                 newRealBean.setEmail(newUtente.getEmail());
                 dbGenitore.replace(realBean, newRealBean);
             }
@@ -551,15 +599,9 @@ public class ControlDatiPersonali {
         }
         
         
-                        
-                
-                
-      
-        
-        finally{
+        finally {
             db.chiudiConnessione();
         }
         return true;
     }
 }
-    

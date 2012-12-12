@@ -30,7 +30,7 @@ import atsilo.entity.ResponsabileQuestionario;
  *-----------------------------------------------------------------
  */
 
-public class DBGenitore extends DBBeans {
+public class DBGenitore extends DBBeans<Genitore> {
     
     
     /**
@@ -65,34 +65,34 @@ public class DBGenitore extends DBBeans {
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("nome","nome");
-        res.put("data_di_nascita","dataNascita");
-        res.put("cognome","cognome");
-        res.put("codice_fiscale","codiceFiscale");
+        res.put("nome", "nome");
+        res.put("dataNascita", "data_di_nascita");
+        res.put("cognome", "cognome");
+        res.put("codiceFiscale", "codice_fiscale");
         res.put("email", "email");
-        res.put("comune_nascita", "comuneNascita");
+        res.put("comuneNascita", "comune_nascita");
         res.put("telefono", "telefono");
         res.put("cittadinanza", "cittadinanza");
-        res.put("indirizzo_residenza", "indirizzoResidenza");
-        res.put("numero_civico_residenza", "numeroCivicoResidenza");
-        res.put("cap_residenza", "capResidenza");
-        res.put("comune_residenza", "comuneResidenza");
-        res.put("provincia_residenza", "provinciaResidenza");
-        res.put("indirizzo_domicilio", "indirizzoDomicilio");
-        res.put("numero_civico_domicilio", "numCivicoDomicilio");
-        res.put("cap_domicilio", "capDomicilio");
-        res.put("comune_domicilio", "comuneDomicilio");
-        res.put("provincia_domicilio", "provinciaDomicilio");
-        res.put("tipo","tipo");
-        res.put("dipendente_presso","dipendentePresso");
-        res.put("rapporti_ateneo_salerno","rapportiAteneoSalerno");
-        res.put("rapporti_comune_fisciano","rapportiComuneFisciano");
-        res.put("status_lavorativo","statusLavorativo");
-        res.put("scadenza_contratto","scadenzaContratto");
-        res.put("categoria_appartenenza","categoriaAppartenenza");
-        res.put("rapporto_parentela","rapportoParentela");
-        res.put("tipo_contratto","tipoContratto");
-        res.put("condizione_lavorativa", "condizioneLavorativa");
+        res.put("indirizzoResidenza", "indirizzo_residenza");
+        res.put("numeroCivicoResidenza", "numero_civico_residenza");
+        res.put("capResidenza", "cap_residenza");
+        res.put("comuneResidenza", "comune_residenza");
+        res.put("provinciaResidenza", "provincia_residenza");
+        res.put("indirizzoDomicilio", "indirizzo_domicilio");
+        res.put("numCivicoDomicilio", "numero_civico_domicilio");
+        res.put("capDomicilio", "cap_domicilio");
+        res.put("comuneDomicilio", "comune_domicilio");
+        res.put("provinciaDomicilio", "provincia_domicilio");
+        res.put("tipo", "tipo");
+        res.put("dipendentePresso", "dipendente_presso");
+        res.put("rapportiAteneoSalerno", "rapporti_ateneo_salerno");
+        res.put("rapportiComuneFisciano", "rapporti_comune_fisciano");
+        res.put("statusLavorativo", "status_lavorativo");
+        res.put("scadenzaContratto", "scadenza_contratto");
+        res.put("categoriaAppartenenza", "categoria_appartenenza");
+        res.put("rapportoParentela", "rapporto_parentela");
+        res.put("tipoContratto", "tipo_contratto");
+        res.put("condizioneLavorativa", "condizione_lavorativa");
         
         return res;
     }
@@ -101,7 +101,7 @@ public class DBGenitore extends DBBeans {
      * @see atsilo.storage.DBBeans#getMappingFields()
      */
     @Override
-    protected Map getMappingFields() {
+    protected java.util.Map<String,String> getMappingFields() {
         return MAPPINGS;
     }
     
@@ -109,7 +109,7 @@ public class DBGenitore extends DBBeans {
      * @see atsilo.storage.DBBeans#getKeyFields()
      */
     @Override
-    protected List getKeyFields() {
+    protected List<String> getKeyFields() {
         return CHIAVE;
     }
     

@@ -157,7 +157,7 @@ public class Genitore extends Utente {
      * Metodo che prende il parametro rapportiComuneFisciano
      * @return rapportiComuneFisciano il parametro inserito
      */
-    public String getRapportiComuenFisciano() {
+    public String getRapportiComuneFisciano() {
         return rapportiComuneFisciano;
     }
     
