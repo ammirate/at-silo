@@ -165,7 +165,7 @@ public class ControlDatiPersonali {
      * @throws InserimentoDatiException
      */
     public Utente getValoriUtenteFromCf(String cf) throws UtenteException,
-            DBConnectionException, InserimentoDatiException {
+    DBConnectionException, InserimentoDatiException {
         Database db = new Database();
         StubUtente stub = new StubUtente(db);
         
@@ -207,8 +207,8 @@ public class ControlDatiPersonali {
             db.apriConnessione();
             account_chiamante = dbAccount.ricercaPerUsername(username);
             String cf = account_chiamante.getOwner().getCodiceFiscale();// codice
-                                                                        // fiscale
-                                                                        // account
+            // fiscale
+            // account
             
             // aggiungere controlli per altre tipologie di utente
             if (dbGenitore.getGenitorePerCF(cf) != null)
@@ -366,7 +366,7 @@ public class ControlDatiPersonali {
      * @throws DomandaIscrizioneException
      */
     public Boolean escludiIscrizione(int id) throws DomandaIscrizioneException,
-            DBConnectionException {
+    DBConnectionException {
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
         
@@ -542,8 +542,8 @@ public class ControlDatiPersonali {
             }
         else
             newAccount.setPassWord(password);// cambio password
-            
-            
+        
+        
         // creo il nuovo utente, con tutti i campi che aveva in precedenza ma
         // con l'email aggiornata
         Utente newUtente = new Utente();
@@ -562,8 +562,8 @@ public class ControlDatiPersonali {
             }
         else
             newUtente.setEmail(email);// cambio email
-            
-            
+        
+        
         try {
             
             
@@ -603,5 +603,33 @@ public class ControlDatiPersonali {
             db.chiudiConnessione();
         }
         return true;
+    }
+    
+    /*@todo da implementare e richiamare istruzione per inviare email all'utente*/
+    /**Crea un account, crea una nuova entità genitore e vi associa l'account
+     * @param cf
+     * @return
+     */
+    public boolean createAccount(String cf,String nome,String cognome,String mail, String telefono,String profilo_appartenenza) {
+        // TODO Scheletro generato automaticamente
+        return true;
+    }
+    
+    
+    /**Restituisce l'account associato al codice fiscale dato in input
+     * @param cf
+     * @return
+     */
+    public Account getAccount(String cf) {
+        Database db= new Database();
+        DBAccount dbAccount= new DBAccount(db);
+        
+        try{
+        db.apriConnessione();
+        return dbAccount.ricercaPerCodiceFiscale(cf);
+        
+        }finally {
+            db.chiudiConnessione();
+        }
     }
 }
