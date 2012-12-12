@@ -14,9 +14,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
+import atsilo.application.ControlDatiPersonali;
 import atsilo.entity.Account;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.GenitoreException;
+import atsilo.storage.DBAccount;
 import atsilo.stub.application.StubControlDatiPersonali;
 import atsilo.test.storage.TestDBBeans;
 
@@ -40,7 +42,7 @@ import atsilo.test.storage.TestDBBeans;
 @WebServlet("/ServletRegistrazioneAccount")
 public class ServletRegistrazioneAccount extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private StubControlDatiPersonali controlDatiPersonali;
+    private ControlDatiPersonali controlDatiPersonali;
     private static final Logger LOG = Logger.getLogger("global");
     
     /**
@@ -85,43 +87,36 @@ public class ServletRegistrazioneAccount extends HttpServlet {
 
         
         
-            try {
-                if (controlDatiPersonali.createAccount(cf) && controlDatiPersonali.setDatiGenitore(null, null, nome_richiedente, cognome_richiedente, cf, email_richidente, null, tel_richiedente, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null)){
+            if (controlDatiPersonali.createAccount(cf, nome_richiedente, cognome_richiedente, email_richidente, tel_richiedente, tipologia_genitore_richiedente)){
+                
+                
+                    //creazione account ed entità genitore andata a buon fine
+                    //autologin nel sistema
                     
                     
-                        //creazione account ed entità andata a buon fine
-                        //autologin nel sistema
-                        
-                        
-                        // Set response content type
-                        response.setContentType("text/html");
-                        // New location to be redirected
-                        String login_ok = new String("prototipo/dati_account_genitore.jsp");
-                        response.setStatus(response.SC_MOVED_TEMPORARILY);
-                        
-                        Account newAccount=controlDatiPersonali.getAccount(cf);//account appena creato
-                        
-                        
-                        //Setto le variabili di sessione
-                        HttpSession sessione = request.getSession();
-                        sessione.setAttribute("username", newAccount.getUserName());
-                        String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
-                        sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
-                        
-                        //reindirizzo verso index della tipologia di utente
-                        response.setHeader("Location", login_ok);    
-                      
-                }//fine if creo account    
-                else {  
-                    String login_error = new String("prototipo/registrazione_account.jsp");
-                    response.setHeader("Location", login_error);   
-                }
-            } catch (GenitoreException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (DBConnectionException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                    // Set response content type
+                    response.setContentType("text/html");
+                    // New location to be redirected
+                    String login_ok = new String("prototipo/dati_account_genitore.jsp");
+                    response.setStatus(response.SC_MOVED_TEMPORARILY);
+                    
+                    Account newAccount=controlDatiPersonali.getAccount(cf);//account appena creato
+                   
+                   
+                    
+                    //Setto le variabili di sessione
+                    HttpSession sessione = request.getSession();
+                    sessione.setAttribute("username", newAccount.getUserName());
+                    String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
+                    sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
+                    
+                    //reindirizzo verso index della tipologia di utente
+                    response.setHeader("Location", login_ok);    
+                  
+            }//fine if creo account    
+            else {  
+                String login_error = new String("prototipo/registrazione_account.jsp");
+                response.setHeader("Location", login_error);   
             }
 
     }

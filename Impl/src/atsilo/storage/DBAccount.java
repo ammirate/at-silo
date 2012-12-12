@@ -261,6 +261,17 @@ public class DBAccount extends DBBeans<Account>
         
         return DBAssign;
     }
+    
+    /*@todo IMPLEMENTARE QUESTO METODO*/
+    /**Ricerca un account associato ad un utente con codice fiscale=cf
+     * @param cf
+     * 
+     */
+    public Account ricercaPerCodiceFiscale(String cf) {
+        return null;
+        // TODO Scheletro generato automaticamente
+        
+    }
 }
 
 
