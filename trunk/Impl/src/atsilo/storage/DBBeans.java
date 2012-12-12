@@ -366,7 +366,11 @@ public abstract class DBBeans<B> implements Iterable<B> {
              * preesistenti, assumendo la precedenza
              */
             for (Assegnazione a : fixVals) {
-                tabella.setParam(stmt, meta.get(a.colonna), a.colonna, a.valore);
+                Integer colid = meta.get(a.colonna);
+                if (colid == null) {
+                    throw new IllegalArgumentException("No such column: " + a.colonna);
+                }
+                tabella.setParam(stmt, colid, a.colonna, a.valore);
             }
             
             return (stmt.executeUpdate() == 1);

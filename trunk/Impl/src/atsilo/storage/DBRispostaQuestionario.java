@@ -33,7 +33,7 @@ import java.util.Map;
  *-----------------------------------------------------------------
  */
 
-public class DBRispostaQuestionario extends DBBeans {
+public class DBRispostaQuestionario extends DBBeans<RispostaQuestionario> {
     
     /**
      * Crea un gestore per il bean RispostaQuestionario
@@ -166,6 +166,35 @@ public class DBRispostaQuestionario extends DBBeans {
     
     
     /**
+     * 
+     * @param idDomanda
+     * @param idCampo
+     * @return
+     * @throws SQLException 
+     */
+    public int getNumberOfCompiler(int idDomanda, String valore) throws SQLException
+    {
+        int i=0;
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT COUNT(*) FROM " + tabella.getNomeTabella() + " WHERE domanda = ? AND valore=?");
+        tabella.setParam(stmt, 1, "domanda", idDomanda);
+        tabella.setParam(stmt, 2, "valore", valore);
+        System.out.println("query: "+stmt);
+        ResultSet res = stmt.executeQuery();
+        
+        
+        
+        while (res.next()){
+           i=res.getInt("COUNT(*)");
+        }
+        
+        return i;
+
+    }
+    
+    
+    /**
      * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
      * assegnazioni predefinite relativamente a un bean.<br/>
      * Nella sua implementazione predefinita, questo metodo restituisce sempre
@@ -177,6 +206,7 @@ public class DBRispostaQuestionario extends DBBeans {
      *            Bean per cui valutare le assegnazioni
      * @return Array di assegnazioni
      */
+    @Override
     protected Assegnazione[] creaAssegnazioni(RispostaQuestionario bean) {
         Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("domanda",bean.getIdDomanda());
         Assegnazione DBGenitore_assegnazione = new Assegnazione("genitore",bean.getCFgenitore());
