@@ -20,6 +20,8 @@ import java.sql.SQLException;
 
 import javax.security.auth.login.LoginException;
 
+import org.junit.Test;
+
 import atsilo.application.ControlLogin;
 import atsilo.entity.Account;
 import atsilo.entity.PersonaleAsilo;
@@ -45,9 +47,9 @@ public class ControlLoginTest {
      */
     
     
-    public static void main(String[] args) {
-        // TODO Scheletro generato automaticamente
-        
+    @Test
+    public final void testGetValoreLogin()
+    {        
         
         ControlLogin control = ControlLogin.getInstance();
         
@@ -62,24 +64,16 @@ public class ControlLoginTest {
         }
         try {
             DBPersonaleAsilo asilo=new DBPersonaleAsilo(db);
-            try {
-                
-                PersonaleAsilo personale=asilo.getPersonaleAsiloPerCF("SNTNTN53N69B309D");
-                
-                String username = "a.senatore";
-                String password = "antonellas";
-                String tipo = personale.getCategoriaAppartenenza();
-                System.out.println(tipo+" "+personale.getCodiceFiscale()+" "+personale.getNome());
-                
                 try {
-                    Account account = control.getValoreLogin(username, password, "DIRETTORE");
-                    System.out.println(account.getOwner().getCodiceFiscale());
+                    Account account1 = control.getValoreLogin("", "", "");
+                    Account account2 = control.getValoreLogin("", "", "");
+                    Account account3 = control.getValoreLogin("", "", "");
+                    Account account4= control.getValoreLogin("", "", "");
+                    Account account5 = control.getValoreLogin("", "", "");
                 } catch (LoginException e) {
                     System.out.println("username password o tipologia errati");
                 }
-            } catch (SQLException e1) {
-                System.out.println("codice fiscale non trovato ");
-            }
+            
             
             
         } finally {
