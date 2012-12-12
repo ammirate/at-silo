@@ -69,57 +69,12 @@ public class ControlGestioneBando {
         try {
             
             DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
-            DomandaIscrizione domandaDaModificare = new DomandaIscrizione();
+            DomandaIscrizione domandaDaModificare;
+            
             try {
-                domandaDaModificare = new DomandaIscrizione(dbDomandaIscrizione
-                        .ricercaDomandaDaId(iscrizione.getId())
-                        .getDataPresentazione(), dbDomandaIscrizione
-                        .ricercaDomandaDaId(iscrizione.getId()).getId(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getPunteggio(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getPosizione(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getGenitore(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getBambino(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getStatoDomanda(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getCertificatoMalattie(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId())
-                                .getCertificatoVaccinazioni(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getCertificatoPrivacy(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getBambinoDisabile(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getGenitoreInvalido(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getGenitoreSolo(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getGenitoreVedovo(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getGenitoreNubile(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getGenitoreSeparato(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getFiglioNonRiconosciuto(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getAffidoEsclusivo(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId())
-                                .getAltriComponentiDisabili(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId())
-                                .getCondizioniCalcoloPunteggio(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getIsee(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getServizio(),
-                        dbDomandaIscrizione.ricercaDomandaDaId(
-                                iscrizione.getId()).getStato_convalidazione());
+                domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
+                domandaDaModificare.setPunteggio(punteggio);
+                dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) {
                 throw new DBConnectionException("Connessione Fallita");
             }
@@ -182,13 +137,8 @@ public class ControlGestioneBando {
                         "Bando non presente impossibile modificare/o inserire il path");
             } else {
                 
-                Bando bando = new Bando(dbBando.getBando().getId(), dbBando
-                        .getBando().getDataInizioBando(), dbBando.getBando()
-                        .getDataFineBando(), dbBando.getBando()
-                        .getDataInizioPresentazioneRinuncia(), dbBando
-                        .getBando().getDataFinePresentazioneRinuncia(), dbBando
-                        .getBando().getDataFineRinuncia(), dbBando.getBando()
-                        .getPostiDisponibili(), path);
+                Bando bando = dbBando.getBando();
+                bando.setPath(path);
                 dbBando.replace(dbBando.getBando(), bando);
                 return true;
             }
