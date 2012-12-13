@@ -60,14 +60,15 @@ public class DBServizio extends DBBeans {
 
     public Servizio ricercaServizioPerBambino(String b) throws SQLException {
         Servizio s= new Servizio();
-        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE bambino =" + b.getCodice_Fiscale());
+        ResultSet r = tabella.getDatabase().directQuery("SELECT * FROM " + tabella.getNomeTabella() + "WHERE bambino =" + b);
         if(r.next()){
-            s.setId(r.getString("id"));
+            s.setId(r.getInt("id"));
             s.setOrarioFine(r.getString("orario_fine"));
             s.setOrarioInizio(r.getString("orario_inizio"));
             s.setPianoPasto(r.getString("piano_pasto"));
             s.setBambino(r.getString("bambino"));
-            s.setOrarioUtente((OrarioUtente) r.getObject("orario_utente"));
+            OrarioUtente o= new OrarioUtente();
+            s.setOrarioUtente(r.getInt("orario_utente"));
         }
         r.close();
         return s;
@@ -97,12 +98,12 @@ public class DBServizio extends DBBeans {
         Servizio s =null;
         if(r.next())
         {
-            s.setId(r.getString("id"));
+            s.setId(r.getInt("id"));
             s.setOrarioFine(r.getString("orario_fine"));
             s.setOrarioInizio(r.getString("orario_inizio"));
             s.setPianoPasto(r.getString("piano_pasto"));
-            s.setBambino((Bambino) r.getObject("bambino"));
-            s.setOrarioUtente((OrarioUtente) r.getObject("orario_utente"));
+            s.setBambino( r.getString("bambino"));
+            s.setOrarioUtente( r.getInt("orario_utente"));
     }
         return s;
 
