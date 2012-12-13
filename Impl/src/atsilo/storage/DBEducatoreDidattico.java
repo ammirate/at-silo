@@ -52,7 +52,7 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
      * @return Collection.unmodiableList
      */
     private static List<String> creaChiave() {
-        List<String> res=  Arrays.asList("codice_fiscale");
+        List<String> res=  Arrays.asList("codiceFiscale");
         return Collections.unmodifiableList(res);
     }
 
