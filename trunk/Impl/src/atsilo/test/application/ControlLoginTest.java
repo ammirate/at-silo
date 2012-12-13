@@ -28,11 +28,7 @@ import org.junit.Test;
 
 import atsilo.application.ControlLogin;
 import atsilo.entity.Account;
-import atsilo.entity.PersonaleAsilo;
 import atsilo.exception.DBConnectionException;
-import atsilo.storage.DBPersonaleAsilo;
-import atsilo.storage.DBPsicopedagogo;
-import atsilo.storage.Database;
 import atsilo.util.AtsiloConstants;
 
 /**
@@ -74,9 +70,9 @@ public class ControlLoginTest {
         
         assertEquals("DFZNDR91L14A909D",account5.getOwner().getCodiceFiscale());
 
-        //Account account6 = control.getValoreLogin("a.defazio", "andreadf", "educatore_didattico");
+        //Account account6 = control.getValoreLogin("----", "----", "educatore_didattico");
         
-       // assertEquals("DFZNDR91L14A909D",account6.getOwner().getCodiceFiscale());
+       // assertEquals("-----",account6.getOwner().getCodiceFiscale());
 
         Account account7 = control.getValoreLogin("c.mezzano", "cristinam", "tirocinante");
         
@@ -89,6 +85,10 @@ public class ControlLoginTest {
         Account account9 = control.getValoreLogin("a.damelia", "alfonsoda", "psicopedagogo");
         
         assertEquals("DMLLFN71L12A333B",account9.getOwner().getCodiceFiscale());
+        
+        //Account account10 = control.getValoreLogin("------", "-------",AtsiloConstants.CAT_RESP_SCIENTIFICO );
+        
+        //assertEquals("------",account10.getOwner().getCodiceFiscale());
         
     }
 }
