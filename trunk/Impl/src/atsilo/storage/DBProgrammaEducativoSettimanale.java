@@ -23,6 +23,7 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -32,17 +33,17 @@ public class DBProgrammaEducativoSettimanale extends DBBeans {
         super("programma_educativo_settimanale",db);
     }
      public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerAttivita(Attivita attivita){
-        List<ProgrammaEducativoSettimanale> programmi;
+        List<ProgrammaEducativoSettimanale> programmi=new ArrayList<ProgrammaEducativoSettimanale>();
         return  programmi;   
         }
 
      public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerSettimana(Date data){
         List<ProgrammaEducativoSettimanale> programmi;
-        return  programmi;   
+        return  programmi =new ArrayList<ProgrammaEducativoSettimanale>();
         }
      public List<ProgrammaEducativoSettimanale> ricercaProgrammaEducativoSettimanalePerObbiettivoSettimanale(String ObbiettivoSettimanale){
         List<ProgrammaEducativoSettimanale> programmi;
-        return  programmi;   
+        return  programmi=new ArrayList<ProgrammaEducativoSettimanale>();   
         }
     /**
      * @see atsilo.storage.DBBeans#getMappingFields()
