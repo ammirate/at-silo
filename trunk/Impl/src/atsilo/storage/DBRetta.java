@@ -70,8 +70,8 @@ public class DBRetta extends DBBeans {
         int i=0;
         while(r.next())
         {
-            rt.setId(r.getString("id"));
-            rt.setImporto(r.getFloat("importo"));
+            rt.setId(r.getInt("id"));
+            rt.setImportoPagato(r.getFloat("importo"));
             rt.setGenitore((Genitore) r.getObject("genitore"));
             rt.setExtra((List<Extra>) r.getArray("extra"));
             
@@ -105,8 +105,8 @@ public class DBRetta extends DBBeans {
     protected Retta creaBean(ResultSet r) throws SQLException {
         Retta rt = null;
         if(r.next()){
-            rt.setId(r.getString("id"));
-            rt.setImporto(r.getFloat("importo"));
+            rt.setId(r.getInt("id"));
+            rt.setImportoPagato(r.getFloat("importo"));
             rt.setGenitore((Genitore) r.getObject("genitore"));
             rt.setExtra((List<Extra>) r.getArray("extra"));
         }
