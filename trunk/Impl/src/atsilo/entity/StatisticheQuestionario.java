@@ -29,7 +29,35 @@ import java.util.Map;
  */
 public class StatisticheQuestionario {
  
-    
+    public StatisticheQuestionario(){
+        this.questionario= new Questionario();
+        risposte = new HashMap<Integer,Map<Integer, Integer>>();
+        this.number_comp=0;
+     }
+    /**
+     * @return questionario
+     */
+    public Questionario getQuestionario() {
+        return questionario;
+    }
+    /**
+     * @param questionario nuovo questionario
+     */
+    public void setQuestionario(Questionario questionario) {
+        this.questionario = questionario;
+    }
+    /**
+     * @return number_comp
+     */
+    public int getNumber_comp() {
+        return number_comp;
+    }
+    /**
+     * @param number_comp nuovo number_comp
+     */
+    public void setNumber_comp(int number_comp) {
+        this.number_comp = number_comp;
+    }
     /**
      * Costruttore
      * @param questionario
@@ -37,31 +65,64 @@ public class StatisticheQuestionario {
     public StatisticheQuestionario(Questionario questionario){
        this.questionario= questionario;
        risposte = new HashMap<Integer,Map<Integer, Integer>>();
+       this.number_comp=0;
     }
+    /**
+     * 
+     * @param questionario
+     * @param number_comp
+     */
     
+    public StatisticheQuestionario(Questionario questionario, int number_comp){
+        this.questionario= questionario;
+        risposte = new HashMap<Integer,Map<Integer, Integer>>();
+        this.number_comp=number_comp;
+     }
     
+    public StatisticheQuestionario(Questionario questionario, int number_comp, HashMap<Integer,Map<Integer, Integer>> risposte){
+        this.questionario= questionario;
+        this.risposte = new HashMap<Integer,Map<Integer, Integer>>();
+        this.number_comp=number_comp;
+     }
+    
+    /**
+     * 
+     * @param risposte
+     */
     
     public void setRisposte (HashMap<Integer,Map<Integer, Integer>> risposte){
         this.risposte=risposte;
     }
     
     
-    
+    /**
+     * 
+     * 
+     * @return
+     */
     
     
     public HashMap<Integer,Map<Integer, Integer>> getRisposte(){
         return risposte;
     }
     
-    
-    
-    public Integer getPercentualiFromDomanda(Integer domanda, String campo_risposte){
-      Map<Integer, Integer> m=risposte.get(domanda);
-      return m.get(campo_risposte);
-      
+    public int getNumeroComp ()
+    {
+        return number_comp;
     }
+    /**
+     * 
+     * @param domanda
+     * @param campo_risposte
+     * @return
+     */
     
+    public Integer getPercentualiFromCampo(Integer id_domanda, Integer id_campo){
+      Map<Integer, Integer> m=risposte.get(id_domanda);
+      return m.get(id_campo);
+    }
     
     private Questionario questionario;
     private HashMap<Integer,Map<Integer, Integer>> risposte;
+    private int number_comp;
 }

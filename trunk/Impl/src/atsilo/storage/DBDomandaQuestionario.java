@@ -133,6 +133,8 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         
     }
     
+    
+    
     /**
      * Dato l'id di un questionario vengono restituite le
      * domande che compongono il questionario con id=idQuestionario

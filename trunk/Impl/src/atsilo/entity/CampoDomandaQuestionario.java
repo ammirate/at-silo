@@ -26,7 +26,7 @@ public class CampoDomandaQuestionario {
     }
     
     public CampoDomandaQuestionario(int id,String tipo, String desc, String valore, int idDomanda){
-      this.id = id;
+        this.id = id;
         this.tipo = tipo;
         this.descrizione = desc;
         this.valore = valore;

@@ -166,7 +166,8 @@ public class DBRispostaQuestionario extends DBBeans<RispostaQuestionario> {
     
     
     /**
-     * 
+     * data una domanda e un valore possibile di risposta, restituisce il numero dei
+     * genitori che hanno risposta in quel modo
      * @param idDomanda
      * @param idCampo
      * @return
