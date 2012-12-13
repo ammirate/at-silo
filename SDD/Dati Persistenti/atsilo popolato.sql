@@ -65,7 +65,8 @@ INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `p
 ('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL),
 ('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL, NULL),
 ('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL, NULL),
-('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL);
+('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL),
+('d.crisi', 'domenicoc', NULL, 'CRSDMN64L12T019Y', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
