@@ -67,8 +67,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         res.put("tipo","tipo");
         res.put("descrizione","descrizione");
         res.put("valore","valore");
-     
-        
+        res.put("idDomandaQuestionario","domanda_questionario");
+        res.put("id","id");
         return Collections.unmodifiableMap(res);
     }
     
@@ -78,7 +78,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     private static List<String> creaChiave(){
         
-        List<String> res=  Arrays.asList("domanda_questionario");
+        List<String> res=  Arrays.asList("id");
         
         return Collections.unmodifiableList(res);
     }
@@ -94,6 +94,7 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
         temp.setTipo(res.getString("tipo"));
         temp.setDescrizione(res.getString("descrizione"));
         temp.setValore(res.getString("valore"));
+        temp.setId(res.getInt("id"));
         return temp;
     }
     
@@ -119,11 +120,14 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
             c.setTipo(res.getString("tipo"));
             c.setDescrizione(res.getString("descrizione"));
             c.setValore(res.getString("valore"));   
+            c.setId(res.getInt("id"));
             l.add(c);
         }
         res.close();
         return l;
     }
+    
+    
     
     
   
@@ -142,7 +146,9 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     protected Assegnazione[] creaAssegnazioni(CampoDomandaQuestionario bean) {
         Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("domanda_questionario",bean.getIdDomandaQuestionario());
-        Assegnazione[] DBAssign = new Assegnazione[2];
+
+        Assegnazione[] DBAssign = new Assegnazione[1];
+
         DBAssign[0]=DBDomandaQuestionario_assegnazione;
         
         return DBAssign;
