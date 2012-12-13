@@ -619,8 +619,9 @@ public class ControlDatiPersonali {
     /**Restituisce l'account associato al codice fiscale dato in input
      * @param cf
      * @return
+     * @throws SQLException 
      */
-    public Account getAccount(String cf) {
+    public Account getAccount(String cf) throws SQLException {
         Database db= new Database();
         DBAccount dbAccount= new DBAccount(db);
         

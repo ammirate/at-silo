@@ -26,7 +26,7 @@ import atsilo.entity.RispostaQuestionario;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, Elisa D'Eugenio 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -68,30 +68,31 @@ public class DBClasse extends DBBeans<Classe>
     public DBClasse(Database db){super("classe",db);}
     
     
-/**
- * Ricerca una classe per il valore dell' id(precisamente indica se la classe esiste o meno perchè la classe è composta solo dall'id
- * @param id è il valore dell'identificatore della classe da ricercare nel database
- * @return una classe contenente l'id ricercato
- * @throws SQLException se si verifica un errore di connessione con il database
- */
-    public Classe RicercaClassePerId (int id) throws SQLException{
-        
-        Classe cla=new Classe();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
-            tabella.setParam(stmt, 1, "id", id);
-            //System.out.println("query"+stmt);
-            ResultSet res = stmt.executeQuery();
-        if(res.next()){
-           cla.setId(res.getInt("id"));
-           cla.setSezione(res.getString("sezione"));
-           // si dovrebbero inserire anche le due liste(educatori ed eventi)
-        }
-            
-        res.close();
-        return cla;
-    }
 
+    /**
+     * Ricerca una classe per il valore dell' id(precisamente indica se la classe esiste o meno perchè la classe è composta solo dall'id
+     * @param id è il valore dell'identificatore della classe da ricercare nel database
+     * @return una classe contenente l'id ricercato
+     * @throws SQLException se si verifica un errore di connessione con il database
+     */
+        public Classe RicercaClassePerId (int id) throws SQLException{
+            
+            Classe cla=new Classe();
+            PreparedStatement stmt = tabella.prepareStatement(
+                    "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
+                tabella.setParam(stmt, 1, "id", id);
+                //System.out.println("query"+stmt);
+                ResultSet res = stmt.executeQuery();
+            if(res.next()){
+               cla.setId(res.getInt("id"));
+               cla.setSezione(res.getString("sezione"));
+               // si dovrebbero inserire anche le due liste(educatori ed eventi)
+            }
+                
+            res.close();
+            return cla;
+        }
+        
     
     
     /**
