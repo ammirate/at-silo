@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import atsilo.entity.Attivita;
+import atsilo.entity.Nota;
 import atsilo.entity.ProgrammaEducativoSettimanale;
 import atsilo.entity.Registro;
 
@@ -70,6 +71,12 @@ public class DBAttivita extends DBBeans<Attivita> {
             a.setProgrammaEducativoSettimanale((ProgrammaEducativoSettimanale)r.getObject("Programma_educativo_settimanale"));
             a.setRegistro((Registro)r.getObject("registro"));
             a.setTitolo(r.getString("titolo"));
+            a.setPath(r.getString("path"));
+            List<Nota> ln=new ArrayList<Nota>();
+            Nota n=new Nota();
+            n.setTitolo(r.getString("titolo"));
+            ln.add(n);
+            a.setListaNota(ln);
         }
         
         return a;
@@ -87,7 +94,8 @@ public class DBAttivita extends DBBeans<Attivita> {
         res.put("progEdSettimanale","Programma_educativo_settimanale");
         res.put("categoria","categoria");
         res.put("registro","registro");
-        
+        res.put("path","path");
+        res.put("listanota","nota");
         return Collections.unmodifiableMap(res);
     }
     
@@ -130,6 +138,12 @@ public class DBAttivita extends DBBeans<Attivita> {
             Registro r= new Registro();
             r.setId(reg);
             temp.setRegistro(r);
+            temp.setPath(res.getString("path"));
+            List<Nota> ln=new ArrayList<Nota>();
+            Nota n=new Nota();
+            n.setTitolo(res.getString("titolo"));
+            ln.add(n);
+            temp.setListaNota(ln);
         }
         res.close();
         return temp;
@@ -165,9 +179,14 @@ public class DBAttivita extends DBBeans<Attivita> {
             Registro r= new Registro();
             r.setId(reg);
             temp.setRegistro(r);
-            
             temp.setTitolo(res.getString("titolo"));
             a.add(temp);
+            temp.setPath(res.getString("path"));
+            List<Nota> ln=new ArrayList<Nota>();
+            Nota n=new Nota();
+            n.setTitolo(res.getString("titolo"));
+            ln.add(n);
+            temp.setListaNota(ln);
         }
         res.close();
         return a;
