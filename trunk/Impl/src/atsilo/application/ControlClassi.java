@@ -75,7 +75,7 @@ public class ControlClassi {
      * @throws ClasseException
      * @throws SQLException
      */
-    public Classe getClasse(int id) throws DBConnectionException, ClasseException, SQLException{
+    public Classe getClasseById(int id) throws DBConnectionException, ClasseException, SQLException{
         Database db = new Database();
         DBClasse stub = new DBClasse(db);
         
@@ -233,7 +233,30 @@ public class ControlClassi {
         }
     }
     
-    
+        
+    /**
+     * Seleziona dal database tutti i bambini che hanno la classe pari a null, cioè non sono ancora stati assegnati
+     * @return lista di bambini non ancora assegnato ad una classe
+     * @throws DBConnectionException 
+     * @throws ClasseException
+     * @throws SQLException
+     */
+      public List<Classe> getClassi() throws DBConnectionException, SQLException, ClasseException{
+        Database db = new Database();
+        DBClasse stub = new DBClasse(db);
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            List<Classe> c = stub.RicercaClassi();
+            if(c.isEmpty())
+                throw new ClasseException("Lista vuota");
+            return c;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+      }
     
     
     
