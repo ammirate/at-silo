@@ -658,12 +658,12 @@ fg=red</panel_attributes>
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>792</x>
-      <y>648</y>
+      <y>660</y>
       <w>30</w>
-      <h>114</h>
+      <h>102</h>
     </coordinates>
     <panel_attributes>m2= 1</panel_attributes>
-    <additional_attributes>18;102;18;18</additional_attributes>
+    <additional_attributes>18;90;18;18</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -1422,7 +1422,7 @@ fg=red</panel_attributes>
       <x>768</x>
       <y>480</y>
       <w>114</w>
-      <h>186</h>
+      <h>198</h>
     </coordinates>
     <panel_attributes>Bambino
 --
@@ -1443,6 +1443,7 @@ fg=red</panel_attributes>
 -Comune domicilio
 -Provincia domicilio
 -Categoria d'appartenenza
+-Iscrizione classe
 bg=gray
 fg=red</panel_attributes>
     <additional_attributes/>
