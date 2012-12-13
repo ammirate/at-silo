@@ -4,7 +4,9 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.CompilaQuestionario;
@@ -528,17 +530,58 @@ public class ControlQuestionario {
      */
     public StatisticheQuestionario getStatistische(int idQuestionario) throws QuestionarioException{
         Database db = new Database();
-        StatisticheQuestionario statq;
+        db.apriConnessione();
+        StatisticheQuestionario statq= new StatisticheQuestionario();
        
         DBQuestionario dbq =new DBQuestionario (db);
+        DBCompilaQuestionario dbcq=new DBCompilaQuestionario(db);
+        DBDomandaQuestionario dbdq = new DBDomandaQuestionario(db);
+        DBRispostaQuestionario dbrq =new DBRispostaQuestionario(db);
+        DBCampoDomandaQuestionario dbcmp = new DBCampoDomandaQuestionario(db);
+        HashMap<Integer,Map<Integer, Integer>> statistiche = new HashMap<Integer,Map<Integer, Integer>>();
+       
         try {
             Questionario sq= dbq.getQuestionario(idQuestionario);
-            statq=new StatisticheQuestionario(sq);
+            statq.setQuestionario(sq);
+            statq.setNumber_comp(dbcq.getNumeroCompilazioniQuestionario(idQuestionario));
+            //dato un questionario prelevo le domande del questionario stesso
+            List<DomandaQuestionario> domande = dbdq.getDomandeQuestionario(idQuestionario);
             
+            for(DomandaQuestionario d : domande)
+            {
+               //data una domanda prelevo le risposte possibili
+               List<CampoDomandaQuestionario> campi = dbcmp.getCampiDomandaQuestionario(d.getId());
+               HashMap<Integer, Integer> statistiche_risposte =new HashMap<Integer, Integer>();
+              //data un campo prelevo le risposte che sono associate a quel campo
+               for(CampoDomandaQuestionario c: campi)
+               {
+                   if(statq.getNumeroComp()!=0)
+                   {int num_risp = dbrq.getNumberOfCompiler(d.getId(), c.getValore());
+                  //calcolo percentuale: numero di persone che hanno risposto in un determinato modo
+                 //a quella domanda diviso il numero di persone totale che hanno compilato il questionario
+                   
+                   int perc_num_risp=num_risp / statq.getNumeroComp(); 
+                   System.out.println("campo id: "+c.getId());
+                   System.out.println("perc: "+perc_num_risp);
+                   statistiche_risposte.put(c.getId(), perc_num_risp);
+                   }
+                   else
+                   {
+                      statistiche_risposte.put(c.getId(),0);
+                   }
+                 
+                   
+               }
+               statistiche.put(d.getId(), statistiche_risposte);
+              
+            }
+           
+            statq.setRisposte(statistiche);
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             throw new QuestionarioException("Impossibile rimuovere la domanda");
         }
+        db.chiudiConnessione();
         return statq;
         
     }
