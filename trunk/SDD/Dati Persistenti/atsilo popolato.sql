@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generato il: 12 dic, 2012 at 10:00 AM
+-- Generato il: 13 dic, 2012 at 03:19 PM
 -- Versione MySQL: 5.1.44
 -- Versione PHP: 5.3.1
 
@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `account` (
   `responsabile_questionario` varchar(50) DEFAULT NULL,
   `responsabile_tirocini` varchar(50) DEFAULT NULL,
   `tirocinante` varchar(50) DEFAULT NULL,
+  `educatore_didattico` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`username`),
   KEY `genitore` (`genitore`),
   KEY `personale_asilo` (`personale_asilo`),
@@ -41,32 +42,35 @@ CREATE TABLE IF NOT EXISTS `account` (
   KEY `responsabile_questionario` (`responsabile_questionario`),
   KEY `responsabile_tirocini` (`responsabile_tirocini`),
   KEY `tirocinante` (`tirocinante`),
-  KEY `delegato_rettore` (`personale_asilo`)
+  KEY `educatore_didattico` (`educatore_didattico`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `account`
 --
 
-INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`, `tirocinante`) VALUES
-('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL, NULL),
-('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL, NULL, NULL),
-('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL, NULL),
-('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL),
-('c.mezzano', 'cristinam', NULL, NULL, NULL, NULL, NULL, 'MZZCRS91L44X098Y'),
-('d.ciarmoli', 'davidec', NULL, NULL, NULL, NULL, NULL, 'CRMDVD90L12C888B'),
-('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y', NULL, NULL, NULL, NULL),
-('g.deblasi', 'giovannidb', NULL, NULL, NULL, NULL, 'DBSGVN66B12C761W', NULL),
-('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL, NULL, NULL),
-('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL, NULL),
-('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL, NULL),
-('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL, NULL),
-('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL),
-('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL),
-('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL, NULL),
-('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL, NULL),
-('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL),
-('d.crisi', 'domenicoc', NULL, 'CRSDMN64L12T019Y', NULL, NULL, NULL, NULL);
+INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`, `tirocinante`, `educatore_didattico`) VALUES
+('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL, NULL, NULL),
+('a.defazio', 'andreadf', 'DFZNDR91L14A909D', NULL, NULL, NULL, NULL, NULL, NULL),
+('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL, NULL, NULL),
+('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL),
+('c.mezzano', 'cristinam', NULL, NULL, NULL, NULL, NULL, 'MZZCRS91L44X098Y', NULL),
+('d.ciarmoli', 'davidec', NULL, NULL, NULL, NULL, NULL, 'CRMDVD90L12C888B', NULL),
+('d.crisi', 'domenicoc', NULL, 'CRSDMN64L12T019Y', NULL, NULL, NULL, NULL, NULL),
+('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y', NULL, NULL, NULL, NULL, NULL),
+('e.teresi', 'elenat', NULL, NULL, NULL, NULL, NULL, NULL, 'TRSLNE99S30X203Y'),
+('g.deblasi', 'giovannidb', NULL, NULL, NULL, NULL, 'DBSGVN66B12C761W', NULL, NULL),
+('g.delbuono', 'giuseppedb', 'DBNGPP69A23B222C', NULL, NULL, NULL, NULL, NULL, NULL),
+('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL, NULL, NULL),
+('l.sessa', 'lorellas', NULL, NULL, NULL, NULL, NULL, NULL, 'SSSLRL78B19B908X'),
+('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL, NULL, NULL),
+('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL, NULL, NULL),
+('m.sisillo', 'mauros', NULL, NULL, NULL, NULL, NULL, NULL, 'SLLMRA90A29N830P'),
+('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL, NULL),
+('s.buselli', 'silvanab', NULL, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL),
+('s.delregno', 'santodr', 'DRGSNT81A26B045C', NULL, NULL, NULL, NULL, NULL, NULL),
+('s.passaro', 'susannap', 'PSSSNN85L98A980I', NULL, NULL, NULL, NULL, NULL, NULL),
+('v.mars', 'veronicam', NULL, 'MRSVRN90A32B235B', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -764,10 +768,10 @@ CREATE TABLE IF NOT EXISTS `personale_asilo` (
 
 INSERT INTO `personale_asilo` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `richiesta_tirocinante`, `registro_tirocinante`) VALUES
 ('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'ImpiegatoAsilo', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('Domenico', 'Crisi', 'CRSDMN64L12T019Y', 'ResponsabileScientifico', 'dcrisi@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Veronica', 'Mars', 'MRSVRN90A32B235B', 'ImpiegatoDirittoStudio', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'Direttore', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'DelegatoRettore', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Domenico', 'Crisi', 'CRSDMN64L12T019Y', 'ResponsabileScientifico', 'dcrisi@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'DelegatoRettore', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1209,6 +1213,7 @@ INSERT INTO `tirocinante` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `ema
 -- Limiti per la tabella `account`
 --
 ALTER TABLE `account`
+  ADD CONSTRAINT `account_ibfk_3` FOREIGN KEY (`educatore_didattico`) REFERENCES `educatore_didattico` (`codice_fiscale`),
   ADD CONSTRAINT `account_ibfk_1` FOREIGN KEY (`responsabile_tirocini`) REFERENCES `responsabile_tirocini` (`codice_fiscale`),
   ADD CONSTRAINT `account_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`);
 
