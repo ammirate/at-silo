@@ -115,14 +115,14 @@
     Tipologia utente
     <select name="tipologiaUtente">
       <option value="genitore" selected="selected">Genitore</option>
-      <option value="impiegato_asilo">Impiegato Asilo</option>
-      <option value="impiegato_bando">Impiegato Diritto allo studio</option>
+      <option value="ImpiegatoAsilo">Impiegato Asilo</option>
+      <option value="ImpiegatoDirittoStudio">Impiegato Diritto allo studio</option>
       <option value="educatore">Educatore</option>
       <option value="psicopedagogo">Psicopedagogo</option>
-      <option value="delegato_scfm">Resp. Scienze Formazione</option>
+      <option value="ResponsabileScientifico">Resp. Scienze Formazione</option>
       <option value="responsabile_questionario">Responsabile del Questionario</option>
-       <option value="direttore">Direttore</option>
-       <option value="delegato_rettore">Delegato Rettore</option>
+       <option value="Direttore">Direttore</option>
+       <option value="DelegatoRettore">Delegato Rettore</option>
     </select>
   </p>
   <p>

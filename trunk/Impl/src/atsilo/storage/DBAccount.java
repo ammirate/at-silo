@@ -2,6 +2,7 @@ package atsilo.storage;
 
 import atsilo.entity.Account;
 import atsilo.entity.DomandaQuestionario;
+import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.Genitore;
 import atsilo.entity.Psicopedagogo;
 import atsilo.entity.ResponsabileQuestionario;
@@ -131,10 +132,11 @@ public class DBAccount extends DBBeans<Account>
                 u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("personale_asilo"));
             }
-            else if(r.getString("delegato_rettore")!=null){
-                u=new PersonaleAsilo();
-                u.setCodiceFiscale(r.getString("delegato_rettore"));
+            else if(r.getString("educatore_didattico")!=null){
+                u=new EducatoreDidattico();
+                u.setCodiceFiscale(r.getString("educatore_didattico"));
             }
+           
             a.setOwner(u);
         }
         else{
@@ -184,9 +186,9 @@ public class DBAccount extends DBBeans<Account>
             u=new PersonaleAsilo();
             u.setCodiceFiscale(r.getString("personale_asilo"));
         }
-       if(r.getString("delegato_rettore")!=null){
-            u=new PersonaleAsilo();
-            u.setCodiceFiscale(r.getString("delegato_rettore"));
+        if(r.getString("educatore_didattico")!=null){
+            u=new EducatoreDidattico();
+            u.setCodiceFiscale(r.getString("educatore_didattico"));
         }
         a.setOwner(u);
         
@@ -240,10 +242,11 @@ public class DBAccount extends DBBeans<Account>
                 u=new PersonaleAsilo();
                 u.setCodiceFiscale(r.getString("personale_asilo"));
             }
-            else if(r.getString("delegato_rettore")!=null){
-                u=new PersonaleAsilo();
-                u.setCodiceFiscale(r.getString("delegato_rettore"));
+            else if(r.getString("educatore_didattico")!=null){
+                u=new EducatoreDidattico();
+                u.setCodiceFiscale(r.getString("educatore_didattico"));
             }
+            
             a.setOwner(u);
         }
         else{
@@ -276,9 +279,10 @@ public class DBAccount extends DBBeans<Account>
         Assegnazione DBAccount_assegnazione3 = new Assegnazione("personale_asilo",null);
         Assegnazione DBAccount_assegnazione4 = new Assegnazione("psico_pedagogo",null);
         Assegnazione DBAccount_assegnazione5= new Assegnazione("responsabile_tirocini", null);
+        Assegnazione DBAccount_assegnazione6= new Assegnazione("educatore_didattico", null);
         
         
-        Assegnazione[] DBAssign = new Assegnazione[6];
+        Assegnazione[] DBAssign = new Assegnazione[7];
         
         DBAssign[0]=DBAccount_assegnazione;
         DBAssign[1]=DBAccount_assegnazione1;
@@ -310,6 +314,10 @@ public class DBAccount extends DBBeans<Account>
         if(bean.getOwner() instanceof PersonaleAsilo){
             DBAccount_assegnazione5 = new Assegnazione("responsabile_tirocini",bean.getOwner().getCodiceFiscale());
             DBAssign[5]=DBAccount_assegnazione5;
+        }
+        if(bean.getOwner() instanceof EducatoreDidattico){
+            DBAccount_assegnazione5 = new Assegnazione("educatore_didattico",bean.getOwner().getCodiceFiscale());
+            DBAssign[6]=DBAccount_assegnazione6;
         }
         
         return DBAssign;
