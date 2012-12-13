@@ -3,6 +3,7 @@ package atsilo.storage;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -92,6 +93,30 @@ public class DBClasse extends DBBeans<Classe>
             res.close();
             return cla;
         }
+        
+        /**
+         * Ricerca tutte le classi presenti nel sistema
+         * @return lista di tutte le classi
+         * @throws SQLException se si verifica un errore di connessione con il database
+         */
+            public List<Classe> RicercaClassi () throws SQLException{
+                
+                Classe cla=new Classe();
+                List<Classe> lcla = new ArrayList<Classe>();
+                PreparedStatement stmt = tabella.prepareStatement(
+                        "SELECT * FROM " + tabella.getNomeTabella());
+                    //System.out.println("query"+stmt);
+                    ResultSet res = stmt.executeQuery();
+                if(res.next()){
+                   cla.setId(res.getInt("id"));
+                   cla.setSezione(res.getString("sezione"));
+                   // si dovrebbero inserire anche le due liste(educatori ed eventi)
+                   lcla.add(cla);
+                }
+                    
+                res.close();
+                return lcla;
+            }
         
     
     
