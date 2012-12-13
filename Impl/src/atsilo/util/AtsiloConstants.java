@@ -22,6 +22,7 @@ package atsilo.util;
  * che possono assumere un insieme di valori.
  * il prefisso CAT_ identifica il tipo di utente della categoria Personale Asilo.
  * il prefisso STATO_DOMANDA identifica i possibili stati di una domanda.
+ * il prefisso ISCRIZIONE_CLASSE identifica i possibili stati della richiesta di appartenenza ad una classe.
  * 
  * @author Alfonso
  * 
@@ -41,5 +42,7 @@ public class AtsiloConstants {
     public static final String STATO_DOMANDA_RIFIUTATA="DomandaRifiutata";
     public static final String STATO_DOMANDA_NONCONFERMATA="IscrizioneConfermataInAttesaDiAltriDati";
     public static final String STATO_DOMANDA_NONINVIATA="DomandaNonInviata";
+    public static final String ISCRIZIONE_CLASSE_CONFERMATA="Conferma";
+    public static final String ISCRIZIONE_CLASSE_RIFIUTATA="Rifiuta";
     
 }
