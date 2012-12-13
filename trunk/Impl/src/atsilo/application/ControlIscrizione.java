@@ -274,7 +274,7 @@ public class ControlIscrizione {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze) throws BambinoException, DBConnectionException, InserimentoDatiException{
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze, String iscrizioneClasse) throws BambinoException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
         StubBambino stub = new StubBambino(db); 
@@ -292,7 +292,7 @@ public class ControlIscrizione {
         Bambino bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
                 cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza,
                 provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
-                provinciaDomicilio, categoriaAppartenenza, classe, genitore, genitoreNonRichiedente, assenze);
+                provinciaDomicilio, categoriaAppartenenza, classe, genitore, genitoreNonRichiedente, assenze, iscrizioneClasse);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{

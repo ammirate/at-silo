@@ -26,7 +26,7 @@ import java.util.Collections;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, Elisa D'Eugenio 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
@@ -109,6 +109,7 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setDataNascita(r.getDate("data_di_nascita"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
             Genitore gen=new Genitore();
            String g=r.getString("genitore");
            gen.setCodiceFiscale(g);
@@ -157,6 +158,7 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setDataNascita(r.getDate("data_di_nascita"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
             Genitore gen=new Genitore();
            String g=r.getString("genitore");
            gen.setCodiceFiscale(g);
@@ -358,6 +360,62 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setDataNascita(r.getDate("data_di_nascita"));
             b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             b.setClasse(r.getInt("classe"));
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
+            Genitore gen=new Genitore();
+           String g=r.getString("genitore");
+           gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
+            Genitore gg=new Genitore();
+            String s=r.getString("cf_genitore_nonrichiedente");
+            gg.setCodiceFiscale(s);
+            b.setGenitoreNonRichiedente(gg);
+            b.setComuneNascita(r.getString("comune_di_nascita"));
+            b.setCittadinanza(r.getString("cittadinanza"));
+            b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            b.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            b.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            b.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            b.setProvinciaResidenza(r.getString("provincia_residenza"));
+            b.setComuneDomicilio(r.getString("comune_domicilio"));
+            b.setCapResidenza(r.getString("cap_residenza"));
+            b.setCapDomicilio(r.getString("cap_domicilio"));
+            
+            l.add(b);
+            } 
+            r.close();
+        return l;
+        
+    }
+    
+    
+    
+    /**
+     * 
+     * @return lista dei bambini non assegnati ad alcuna classe
+     * @throws SQLException
+     */
+    public List<Bambino> ricercaBambiniSenzaClasse() throws SQLException {
+        
+        List<Bambino>l=new ArrayList<Bambino>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe = ?");
+            tabella.setParam(stmt, 1, "classe", null);
+            ResultSet r = stmt.executeQuery();
+            
+            
+            while (r.next()){
+            
+            Bambino b=new Bambino();
+            
+            b.setNome(r.getString("nome"));
+            b.setCognome(r.getString("cognome"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
+            b.setDataNascita(r.getDate("data_di_nascita"));
+            b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
+            b.setClasse(r.getInt("classe"));
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
             Genitore gen=new Genitore();
            String g=r.getString("genitore");
            gen.setCodiceFiscale(g);

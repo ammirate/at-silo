@@ -40,6 +40,7 @@ public class Bambino {
     private String provinciaDomicilio;
     private String categoriaAppartenenza;
     private int classe;
+    private String iscrizioneClasse;
 
     /**
      *  La variabile genitore avrà il valore della variabile di Genitore
@@ -88,6 +89,7 @@ public class Bambino {
      * @param classe il parametro fissato
      * @param genitore è settato dopo la lettura
      * @param assenze è settato dopo la lettura
+     * @param iscrizioneClasse parametro fissato
      */
     public Bambino(Date dataNascita, String nome, String cognome,
             String codiceFiscale,  String comuneNascita,
@@ -95,7 +97,7 @@ public class Bambino {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze) {
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze, String iscrizioneClasse) {
         super();
         this.dataNascita = dataNascita;
         this.nome = nome;
@@ -118,6 +120,7 @@ public class Bambino {
         this.genitore = genitore;
         this.assenze = assenze;
         this.genitoreNonRichiedente=genitoreNonRichiedente;
+        this.iscrizioneClasse=iscrizioneClasse;
     }
     
     /**
@@ -407,6 +410,22 @@ public class Bambino {
      */
     public int getClasse() {
         return classe;
+    }
+    
+    /**
+     * Metodo che setta il valore dell'iscrizione ad una classe
+     * @param iscrizioneClasse il parametro fissato
+     */
+    public void setIscrizioneClasse(String iscrizioneClasse) {
+        this.iscrizioneClasse = iscrizioneClasse;
+    }
+
+    /**
+     * Metodo che prende il valore dell'iscrizione ad una classe
+     * @return iscrizioneClasse il parametro inserito
+     */
+    public String getIscrizioneClasse() {
+        return iscrizioneClasse;
     }
 
    
