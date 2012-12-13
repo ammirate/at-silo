@@ -63,26 +63,26 @@ public class DBEducatoreDidattico extends DBBeans<EducatoreDidattico> {
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("categoria_appartenenza", "categoriaAppartenenza");
+        res.put("categoriaAppartenenza","categoria_appartenenza");
         res.put("nome","nome");
-        res.put("data_di_nascita","dataNascita");
+        res.put("dataNascita","data_di_nascita");
         res.put("cognome","cognome");
-        res.put("codice_fiscale","codiceFiscale");
+        res.put("codiceFiscale","codice_fiscale");
         res.put("email", "email");
-        res.put("comune_nascita", "comuneNascita");
+        res.put("comuneNascita","comune_nascita");
         res.put("telefono", "telefono");
         res.put("cittadinanza", "cittadinanza");
-        res.put("indirizzo_residenza", "indirizzoResidenza");
-        res.put("numero_civico_residenza", "numeroCivicoResidenza");
-        res.put("cap_residenza", "capResidenza");
-        res.put("comune_residenza", "comuneResidenza");
-        res.put("provincia_residenza", "provinciaResidenza");
-        res.put("indirizzo_domicilio", "indirizzoDomicilio");
-        res.put("numero_civico_domicilio", "numCivicoDomicilio");
-        res.put("cap_domicilio", "capDomicilio");
-        res.put("comune_domicilio", "comuneDomicilio");
-        res.put("provincia_domicilio", "provinciaDomicilio");
-        res.put("titolo_di_studi", "titoloDiStudi");
+        res.put("indirizzoResidenza","indirizzo_residenza");
+        res.put("numeroCivicoResidenza","numero_civico_residenza");
+        res.put("capResidenza","cap_residenza" );
+        res.put( "comuneResidenza","comune_residenza");
+        res.put("provinciaResidenza","provincia_residenza" );
+        res.put( "indirizzoDomicilio","indirizzo_domicilio");
+        res.put( "numCivicoDomicilio","numero_civico_domicilio");
+        res.put( "capDomicilio","cap_domicilio");
+        res.put( "comuneDomicilio","comune_domicilio");
+        res.put( "provinciaDomicilio","provincia_domicilio");
+        res.put( "titoloDiStudi","titolo_di_studi");
         
         return res;
     }
