@@ -103,8 +103,9 @@ public class ControlLogin {
                             else throw new LoginException("Username o Password o Tipologia Errata");
                         }
                         else 
-                            if ((tipo.compareTo("educatore_didattico") == 0)) 
+                            if ((tipo.compareTo("educatore") == 0)) 
                             {
+                                System.out.println("Cerco per CF.. "+codiceFiscale);
                                 if ((dbEducatoreDidattico.getEducatoreDidatticoPerCF(codiceFiscale) != null))
                                     return account;
                                 else throw new LoginException("Username o Password o Tipologia Errata");
@@ -141,7 +142,7 @@ public class ControlLogin {
                                             }                   
                     } else throw new LoginException("Username o Password o Tipologia Errata");
                 
-            } catch (SQLException e) {throw new LoginException("Connessione fallita");}
+            } catch (SQLException e) {throw new LoginException("Connessione fallita" + e.getMessage());}
         } finally {db.chiudiConnessione();}
     }
     
