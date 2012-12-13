@@ -765,7 +765,7 @@ INSERT INTO `personale_asilo` (`nome`, `cognome`, `codice_fiscale`, `categoria_a
 ('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'ImpiegatoAsilo', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Veronica', 'Mars', 'MRSVRN90A32B235B', 'ImpiegatoDirittoStudio', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'Direttore', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'DelegatoRettore', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'DelegatoRettore', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('Domenico', 'Crisi', 'CRSDMN64L12T019Y', 'ResponsabileScientifico', 'dcrisi@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
