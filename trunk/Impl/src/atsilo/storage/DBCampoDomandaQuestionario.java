@@ -91,7 +91,6 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
     protected CampoDomandaQuestionario creaBean(ResultSet res) throws SQLException {
         CampoDomandaQuestionario temp = new CampoDomandaQuestionario();
         temp.setIdDomandaQuestionario(res.getInt("domanda_questionario"));
-        temp.setIdRispostaQuestionario(res.getInt("risposta_questionario"));
         temp.setTipo(res.getString("tipo"));
         temp.setDescrizione(res.getString("descrizione"));
         temp.setValore(res.getString("valore"));
@@ -117,7 +116,6 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
             CampoDomandaQuestionario c=new CampoDomandaQuestionario();
             
             c.setIdDomandaQuestionario(res.getInt("domanda_questionario"));
-            c.setIdRispostaQuestionario(res.getInt("risposta_questionario"));
             c.setTipo(res.getString("tipo"));
             c.setDescrizione(res.getString("descrizione"));
             c.setValore(res.getString("valore"));   
@@ -144,10 +142,8 @@ public class DBCampoDomandaQuestionario extends DBBeans<CampoDomandaQuestionario
      */
     protected Assegnazione[] creaAssegnazioni(CampoDomandaQuestionario bean) {
         Assegnazione DBDomandaQuestionario_assegnazione = new Assegnazione("domanda_questionario",bean.getIdDomandaQuestionario());
-        Assegnazione DBDomandaQuestionario_assegnazione1 = new Assegnazione("risposta_questionario",bean.getIdRispostaQuestionario());
         Assegnazione[] DBAssign = new Assegnazione[2];
         DBAssign[0]=DBDomandaQuestionario_assegnazione;
-        DBAssign[1]=DBDomandaQuestionario_assegnazione1;
         
         return DBAssign;
     }
