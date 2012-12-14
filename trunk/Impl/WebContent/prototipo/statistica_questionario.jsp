@@ -47,7 +47,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	}
 	
 	Questionario quest = q.caricaQuestionarioDaCompilare(id, "DFZNDR91L14A909D");
-	/*
+	stat = q.getStatistische(id);
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
 	}
@@ -63,14 +63,14 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<table><tr><th style='text-align: left'>Opzione<th>Grafico<th>Percentuale</tr>");
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
-				out.println("<tr><td colspan=2>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+				Integer p = stat.getPercentualiFromCampo(quest.getDomande().get(i).getId(), quest.getDomande().get(i).getCampi().get(j).getId());
+				out.println("<tr><td>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td><td><div style='background-color: red; width: "+(p*100)+"%; height: 20px'></div><td align=center>"+(p*100)+"%</tr>");
 			}
 			out.println("</table><br><br>");
 			out.println("</fieldset><br><br>");
 		}
 	
 	}
-	*/	
 %>
 <p><strong><br />
 </strong></p>
