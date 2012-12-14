@@ -42,11 +42,11 @@ public class DBServizio extends DBBeans {
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
         res.put("id", "id");
-        res.put("orario_fine","orarioFine");
-        res.put("orario_inizio","orarioInizio");
-        res.put("piano_pasto","pianoPasto");
+        res.put("orarioFine","orario_fine");
+        res.put("orarioInizio","orario_inizio");
+        res.put("pianoPasto","piano_pasto");
         res.put("bambino","bambino");
-        res.put("orario_utente", "orarioUtente");
+        res.put("orarioUtente","orario_utente");
         return Collections.unmodifiableMap(res);
     }
 
