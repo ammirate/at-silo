@@ -14,13 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import atsilo.application.ControlDatiPersonali;
+import atsilo.application.ControlIscritti;
 import atsilo.entity.Account;
 import atsilo.entity.Beans;
 import atsilo.entity.Genitore;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
-import atsilo.stub.application.StubControlDatiPersonali;
 
 /*
  *-----------------------------------------------------------------
@@ -42,14 +43,16 @@ import atsilo.stub.application.StubControlDatiPersonali;
 @WebServlet("/ServletCompilazioneDatiBando")
 public class ServletCompilazioneDatiBando extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private StubControlDatiPersonali controlDatiPersonali ;
+    private ControlDatiPersonali controlDatiPersonali ;
+    private ControlIscritti controlIscritti;
     private static final Logger LOG = Logger.getLogger("global");
     
     /**
      * @see HttpServlet#HttpServlet()
      */
     public ServletCompilazioneDatiBando() {
-        controlDatiPersonali=StubControlDatiPersonali.getIstance();
+        controlDatiPersonali=ControlDatiPersonali.getIstance();
+        controlIscritti=ControlIscritti.getIstance();
     }
     
     /**
@@ -265,7 +268,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         if ( request.getParameter("chiamante").equals("genitore")){//se chiamante è una pagina genitore richiedente    
             try {
-                if (controlDatiPersonali.setDatiGenitore(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
+                if (controlDatiPersonali.inserisciGenitore(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 
                 else 
@@ -281,10 +284,10 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         }//fine update dati genitore
         
         if ( request.getParameter("chiamante").equals("bambino")){//se chiamante è una pagina bambino  
-            String cf_genitore=(controlDatiPersonali.getUtenteFromUsername(username_utente)).getCodiceFiscale();
+            String cf_genitore=(controlDatiPersonali.getValoriUtente(username_utente)).getCodiceFiscale();
             Genitore genitore_richiedente=new Genitore();
             try {
-                genitore_richiedente = controlDatiPersonali.getDatiGenitoreFromCF(cf_genitore);
+                genitore_richiedente = controlDatiPersonali.getDatiGenitore(cf_genitore);
             } catch (GenitoreException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
@@ -296,13 +299,11 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
                     
-            if (controlDatiPersonali.setDatiBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null))
+            if (controlDatiPersonali.inserisciBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null))
                 pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
             
             else 
                 pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
-            
-            
             
         }//fine update dati bambino
         
@@ -318,10 +319,11 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         if ( request.getParameter("chiamante").equals("situazione_reddituale")){//se chiamante è la pagina della sitauzione reddituale  
             
-            String codiceFiscaleGenitore = controlDatiPersonali.getUtenteFromUsername("username").getCodiceFiscale();
+            String codiceFiscaleGenitore = controlDatiPersonali.getValoriUtente("username").getCodiceFiscale();
             
             try {
-                if (controlDatiPersonali.inserisciDatiDomandaIscrizione(null, codiceFiscaleGenitore, false, false, false, false, false, false, false, false, false, null, isee)){
+                
+                if (controlIscritti.inserisciDatiDomandaIscrizione(null, codiceFiscaleGenitore, false, false, false, false, false, false, false, false, false, null, isee)){
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");
                     
                 } else  {

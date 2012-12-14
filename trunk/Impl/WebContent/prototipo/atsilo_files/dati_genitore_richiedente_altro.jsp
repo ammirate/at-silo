@@ -25,7 +25,7 @@
 	
 	String dipendentePresso=genitore.getDipendentePresso();
  	String rapportiAteneoSalerno=genitore.getRapportiAteneoSalerno();
- 	String rapportiComuneFisciano=genitore.getRapportiComuenFisciano();
+ 	String rapportiComuneFisciano=genitore.getRapportiComuneFisciano();
 
 
  %>
@@ -34,7 +34,7 @@
 <table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
-    <td><select id="rapportoParentela" name="rapportoParentela">
+    <td><select id="rapportoParentela" name="rapportoParentela"  readonly="readonly">
     <option value="Seleziona">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>

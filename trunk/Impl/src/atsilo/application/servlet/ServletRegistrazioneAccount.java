@@ -103,13 +103,13 @@ public class ServletRegistrazioneAccount extends HttpServlet {
             try {
                 newAccount = controlDatiPersonali.getAccount(cf);
             } catch (SQLException e) {
-                // TODO Blocco di catch autogenerato
+               
                 LOG.log(Level.SEVERE, "ServletRegistrazioneAccount: Errore sql", e);
             }//account appena creato
             
             //Setto le variabili di sessione
             HttpSession sessione = request.getSession();
-            if (newAccount!=null){
+            if (newAccount!=null){// controllo se account creato non è nullo
                 sessione.setAttribute("username", newAccount.getUserName());
                 String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
                 sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
@@ -119,9 +119,9 @@ public class ServletRegistrazioneAccount extends HttpServlet {
                 
             }
         }//fine if creo account    
-           
-            String login_error = new String("prototipo/registrazione_account.jsp?successo=failed");
-            response.setHeader("Location", login_error);   
+        
+        String login_error = new String("prototipo/registrazione_account.jsp?successo=failed");
+        response.setHeader("Location", login_error);   
         
         
     }
