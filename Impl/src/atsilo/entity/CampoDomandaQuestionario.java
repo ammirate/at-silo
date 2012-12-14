@@ -25,8 +25,8 @@ public class CampoDomandaQuestionario {
         super();
     }
     
-    public CampoDomandaQuestionario(int id,String tipo, String desc, String valore, int idDomanda){
-        this.id = id;
+    public CampoDomandaQuestionario(String tipo, String desc, String valore, int idDomanda){
+        
         this.tipo = tipo;
         this.descrizione = desc;
         this.valore = valore;
