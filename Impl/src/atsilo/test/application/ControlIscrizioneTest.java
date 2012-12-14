@@ -124,7 +124,7 @@ public class ControlIscrizioneTest {
     @Test
     //cancellazione iscritto normale
     public void eliminaIscrittoTest() throws BambinoException, DBConnectionException, SQLException, InserimentoDatiException  {
-        assertNotNull(control.eliminaIscritto("AMSCG75H43H654LK"));             
+        assertNotNull(control.eliminaBambino("AMSCG75H43H654LK"));             
     }
     
     @Test
