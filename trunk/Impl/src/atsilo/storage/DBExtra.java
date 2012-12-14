@@ -2,6 +2,8 @@ package atsilo.storage;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -59,5 +61,15 @@ public class DBExtra extends DBBeans {
         return null;
     }
 
-
+    private static Map<String,String> creaMapping()
+    {
+        Map<String,String> res= new HashMap<String,String>();
+        res.put("id","descrizione");
+        res.put("importo","importo");
+        res.put("dataInizio","data_inizio");
+        res.put("dataFine","data_fine");
+        res.put("descrizione","descrizione");
+        
+        return Collections.unmodifiableMap(res);
+    }
 }
