@@ -233,29 +233,29 @@ CREATE TABLE IF NOT EXISTS `campo_domanda_questionario` (
   `tipo` varchar(50) DEFAULT NULL,
   `descrizione` varchar(100) DEFAULT NULL,
   `valore` varchar(50) DEFAULT NULL,
-  `risposta_questionario` int(11) DEFAULT NULL,
-  KEY `domanda_questionario` (`domanda_questionario`),
-  KEY `risposta_questionario` (`risposta_questionario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`),
+  KEY `domanda_questionario` (`domanda_questionario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dump dei dati per la tabella `campo_domanda_questionario`
 --
 
-INSERT INTO `campo_domanda_questionario` (`domanda_questionario`, `tipo`, `descrizione`, `valore`, `risposta_questionario`) VALUES
-(1, 'radio', 'Lattante', 'Lattante', NULL),
-(1, 'radio', 'Semi-divezzi', 'Semi-divezzi', NULL),
-(1, 'radio', 'Divezzi', 'Divezzi', NULL),
-(2, 'radio', 'Part-time senza pranzo', 'Part-time senza pranzo', NULL),
-(2, 'radio', 'Part-time con pranzo', 'Part-time con pranzo', NULL),
-(2, 'radio', 'Full-time', 'Full-time', NULL),
-(4, 'int', 'Anno di nascita della madre', NULL, NULL),
-(4, 'int', 'Anno di nascita del padre', NULL, NULL),
-(5, 'int', 'Numero dei componenti della famiglia', NULL, NULL),
-(6, 'tipo X', 'Domanda X', NULL, NULL),
-(7, 'tipo Y', 'Domanda Y', NULL, NULL),
-(8, 'tipo Z', 'Domanda Z', NULL, NULL),
-(9, 'tipo ABC', 'Domanda ABC', NULL, NULL);
+INSERT INTO `campo_domanda_questionario` (`domanda_questionario`, `tipo`, `descrizione`, `valore`, `id`) VALUES
+(1, 'radio', 'Lattante', 'Lattante', 1),
+(1, 'radio', 'Semi-divezzi', 'Semi-divezzi', 2),
+(1, 'radio', 'Divezzi', 'Divezzi', 3),
+(2, 'radio', 'Part-time senza pranzo', 'Part-time senza pranzo', 4),
+(2, 'radio', 'Part-time con pranzo', 'Part-time con pranzo', 5),
+(2, 'radio', 'Full-time', 'Full-time', 6),
+(4, 'int', 'Anno di nascita della madre', NULL, 7),
+(4, 'int', 'Anno di nascita del padre', NULL, 8),
+(5, 'int', 'Numero dei componenti della famiglia', NULL, 9),
+(6, 'tipo X', 'Domanda X', NULL, 10),
+(7, 'tipo Y', 'Domanda Y', NULL, 11),
+(8, 'tipo Z', 'Domanda Z', NULL, 12),
+(9, 'tipo ABC', 'Domanda ABC', NULL, 13);
 
 -- --------------------------------------------------------
 
