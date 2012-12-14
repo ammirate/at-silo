@@ -8,7 +8,7 @@
 -- Versione PHP: 5.4.7
 DROP DATABASE IF EXISTS `progetto-kids`;
 CREATE DATABASE `progetto-kids`;
-USE `progetto-kids`;
+USE `progetto-kids`
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
