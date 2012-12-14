@@ -80,7 +80,15 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	                    listR.add(resp);
 	                }
 	            }
-	            catch (Exception e) {}
+	            catch (Exception e) {
+	                   PrintWriter pw = response.getWriter();
+	                    pw.println("");
+	                    pw.println("");
+	                    pw.println("");
+	                    pw.println("<h1>C'è stato un errore</h1>.");
+	                    pw.println("");
+
+	            }
 	            
 	        }
 	        /*
@@ -105,17 +113,17 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	            
 	        }
 	        */
-//	        try {
-//                q.compilaQuestionario(quest.getId(), listR, codfis);
-////                for(int f = 0; f<listR.size(); f++) {
-////                  System.out.println(listR.get(f).getValore());
-////                }
-//            } catch (DBConnectionException e) {
-//                // TODO Blocco di catch autogenerato
-////                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-//            } catch (QuestionarioException e) {
-//                // TODO Blocco di catch autogenerato
-////                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-//            }
+	        try {
+            q.compilaQuestionario(quest.getId(), listR, codfis);
+//                for(int f = 0; f<listR.size(); f++) {
+//                  System.out.println(listR.get(f).getValore());
+//                }
+            } catch (DBConnectionException e) {
+                // TODO Blocco di catch autogenerato
+//                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (QuestionarioException e) {
+                // TODO Blocco di catch autogenerato
+//                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }
 	   }
 }
