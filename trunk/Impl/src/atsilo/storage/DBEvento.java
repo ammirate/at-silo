@@ -7,6 +7,8 @@ import atsilo.entity.PersonaleAsilo;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -118,4 +120,15 @@ public class DBEvento extends DBBeans {
         return null;
     }
     
+    private static Map<String,String> creaMapping()
+    {
+        Map<String,String> res= new HashMap<String,String>();
+        res.put("Descrizione","descrizione");
+        res.put("Nome","nome");
+        res.put("data","data");
+        res.put("path","path");
+        res.put("Tipo","tipo");
+        
+        return Collections.unmodifiableMap(res);
+    }
 }
