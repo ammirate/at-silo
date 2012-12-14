@@ -51,8 +51,8 @@ public class DBRichiesta extends DBBeans {
         Map<String,String> res= new HashMap<String,String>();
         res.put("id","id");// la classe Assenza del package entity ha come attributi (data e bambino)????
         res.put("tipo","tipo");
-        res.put("menu_richiesto","menuRichiesto");
-        res.put("orario_richiesto","orarioRichiesto");
+        res.put("menuRichiesto","menu_richiesto");
+        res.put("orarioRichiesto","orario_richiesto");
         res.put("allegato","allegato");
         res.put("servizio","servizio");
         res.put("genitore","genitore");
