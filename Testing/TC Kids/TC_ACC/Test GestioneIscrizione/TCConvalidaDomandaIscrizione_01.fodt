@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-13T17:28:09.09</dc:date><meta:editing-duration>PT28M41S</meta:editing-duration><meta:editing-cycles>22</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="57" meta:word-count="169" meta:character-count="1227" meta:non-whitespace-character-count="1098"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-14T09:27:15.65</dc:date><meta:editing-duration>PT28M41S</meta:editing-duration><meta:editing-cycles>23</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="57" meta:word-count="179" meta:character-count="1299" meta:non-whitespace-character-count="1161"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">178</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">19226</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="int">27182</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="int">13134</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">9853</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">22745</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">14108</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">23232</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">178</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">19226</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="int">27180</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">13310</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">32359</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2631712</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2741679</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -483,6 +483,9 @@
   <style:style style:name="T40" style:family="text">
    <style:text-properties officeooo:rsid="00282820"/>
   </style:style>
+  <style:style style:name="T41" style:family="text">
+   <style:text-properties officeooo:rsid="0029d5af"/>
+  </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" style:num-suffix="." style:num-format="1">
     <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
@@ -616,25 +619,25 @@
    </text:sequence-decls>
    <text:p text:style-name="P20"><text:span text:style-name="T1">TC_</text:span><text:span text:style-name="T39">Convalida</text:span><text:span text:style-name="T37">DomandaIscrizione</text:span><text:span text:style-name="T31">_0</text:span><text:span text:style-name="T32">1</text:span></text:p>
    <text:p text:style-name="P21"/>
-   <text:list xml:id="list37218730" text:style-name="L1">
+   <text:list xml:id="list29387496" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P28">Nome del Test Case</text:p>
     </text:list-item>
    </text:list>
-   <text:list xml:id="list37200351" text:style-name="L2">
+   <text:list xml:id="list29390685" text:style-name="L2">
     <text:list-header>
      <text:p text:style-name="P49">Test Case TC_<text:span text:style-name="T39">Convalida</text:span><text:span text:style-name="T37">DomandaIscrizione</text:span><text:span text:style-name="T20">_01</text:span></text:p>
     </text:list-header>
    </text:list>
    <text:p text:style-name="P3"/>
-   <text:list xml:id="list37427706" text:continue-list="list37218730" text:style-name="L1">
+   <text:list xml:id="list29394976" text:continue-list="list29387496" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P29">Test Case <text:span text:style-name="T16">Specification Identifier</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P2"><text:span text:style-name="T16"><text:tab/></text:span><text:span text:style-name="T17">Caso d&apos;uso da testare</text:span></text:p>
    <text:p text:style-name="P2"><text:span text:style-name="T27"><text:tab/></text:span><text:span text:style-name="T2">U</text:span><text:span text:style-name="T8">c</text:span><text:span text:style-name="T2">_</text:span><text:span text:style-name="T8">Acc_</text:span><text:span text:style-name="T11">2</text:span><text:span text:style-name="T8">.</text:span><text:span text:style-name="T14">11</text:span><text:span text:style-name="T2"> –</text:span><text:span text:style-name="T3"> </text:span><text:span text:style-name="T15">Convalida </text:span><text:span text:style-name="T11">domanda iscrizione</text:span></text:p>
-   <text:list xml:id="list37410309" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list29397632" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
      <text:p text:style-name="P33">Version date</text:p>
      <text:p text:style-name="P34">1<text:span text:style-name="T37">3</text:span>/12/12 </text:p>
@@ -644,7 +647,7 @@
    <text:p text:style-name="P1"><text:span text:style-name="T16"><text:tab/></text:span>v. 1.0 </text:p>
    <text:p text:style-name="P8"><text:tab/>Version author</text:p>
    <text:p text:style-name="P9"><text:span text:style-name="T26"><text:tab/></text:span><text:span text:style-name="T25">Antonio Barba</text:span></text:p>
-   <text:list xml:id="list37418202" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list29397868" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
      <text:p text:style-name="P34"/>
     </text:list-header>
@@ -656,7 +659,7 @@
    </text:list>
    <text:p text:style-name="P10"><text:tab/><text:span text:style-name="T16">Specifica dei requisiti</text:span></text:p>
    <text:p text:style-name="P10"/>
-   <text:list xml:id="list37404145" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list29396214" text:continue-numbering="true" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P41"><text:span text:style-name="T29">Input</text:span> </text:p>
      <text:p text:style-name="P42"><text:span text:style-name="T17">Data </text:span><text:span text:style-name="T18">-</text:span></text:p>
@@ -691,7 +694,7 @@
     <text:list-item>
      <text:p text:style-name="P31">Output</text:p>
      <text:p text:style-name="P43"><text:span text:style-name="T17">Tables</text:span><text:span text:style-name="T16"> -</text:span></text:p>
-     <text:p text:style-name="P36">Il sistem<text:span text:style-name="T38">a </text:span><text:span text:style-name="T40">convalida </text:span><text:span text:style-name="T38"><text:s/>la</text:span><text:span text:style-name="T37"> domanda di iscrizione</text:span><text:span text:style-name="T33"> </text:span><text:span text:style-name="T37">fatta </text:span><text:span text:style-name="T35">d</text:span><text:span text:style-name="T37">a</text:span><text:span text:style-name="T35">l genitore</text:span><text:span text:style-name="T33">.</text:span></text:p>
+     <text:p text:style-name="P36">Il sistem<text:span text:style-name="T38">a </text:span><text:span text:style-name="T40">convalida</text:span><text:span text:style-name="T38"> la</text:span><text:span text:style-name="T37"> domanda di iscrizione</text:span><text:span text:style-name="T33"> </text:span><text:span text:style-name="T37">fatta </text:span><text:span text:style-name="T35">d</text:span><text:span text:style-name="T37">a</text:span><text:span text:style-name="T35">l genitore </text:span><text:span text:style-name="T41">e confermata dalla segreteria mediante un messaggio di avvenuta conferma</text:span><text:span text:style-name="T33">.</text:span></text:p>
      <text:p text:style-name="P44"><text:span text:style-name="T17">Human</text:span><text:span text:style-name="T16"> </text:span><text:span text:style-name="T17">Action</text:span></text:p>
      <text:p text:style-name="P43"><text:span text:style-name="T17">Condition</text:span><text:span text:style-name="T16"> </text:span></text:p>
      <text:list>
@@ -709,12 +712,12 @@
         <text:list-header>
          <text:p text:style-name="P46"><text:span text:style-name="T30">Database</text:span><text:span text:style-name="T16">: </text:span></text:p>
          <text:p text:style-name="P46"><text:span text:style-name="T30">Control files</text:span><text:span text:style-name="T16">: </text:span><text:span text:style-name="T4"><text:s/></text:span></text:p>
-         <text:p text:style-name="P46"><text:span text:style-name="T30">Transaction files</text:span><text:span text:style-name="T16">: </text:span></text:p>
+         <text:p text:style-name="P46"><text:soft-page-break/><text:span text:style-name="T30">Transaction files</text:span><text:span text:style-name="T16">: </text:span></text:p>
         </text:list-header>
        </text:list>
       </text:list-header>
      </text:list>
-     <text:p text:style-name="P33"><text:soft-page-break/>Relationship</text:p>
+     <text:p text:style-name="P33">Relationship</text:p>
      <text:p text:style-name="P33">Timing</text:p>
      <text:p text:style-name="P33">Response Time</text:p>
      <text:p text:style-name="P33">Duration</text:p>
@@ -726,7 +729,7 @@
    </text:list>
    <text:p text:style-name="P7"><text:tab/><text:span text:style-name="T6">Tabella: dati </text:span><text:span text:style-name="T7">esatti</text:span></text:p>
    <text:p text:style-name="P14"/>
-   <text:list xml:id="list37410475" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list29414954" text:continue-numbering="true" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P32">Vincoli ambientali</text:p>
      <text:p text:style-name="P38">Connessione <text:span text:style-name="T31">con il database</text:span></text:p>
