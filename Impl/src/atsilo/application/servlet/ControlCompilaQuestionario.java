@@ -81,12 +81,8 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	                }
 	            }
 	            catch (Exception e) {
-	                   PrintWriter pw = response.getWriter();
-	                    pw.println("");
-	                    pw.println("");
-	                    pw.println("");
-	                    pw.println("<h1>C'è stato un errore</h1>.");
-	                    pw.println("");
+	                 
+	                    
 
 	            }
 	            
