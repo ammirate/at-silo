@@ -341,27 +341,24 @@ public class ControlQuestionario {
     public List<Questionario> getQuestionariDaCompilare(String CFgenitore) throws DBConnectionException, QuestionarioException {
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
-        
+        DBCompilaQuestionario compila =new DBCompilaQuestionario(db);
         List<Questionario> toReturn = new ArrayList<Questionario>();
+        List<Questionario> allQuestComp= new ArrayList<Questionario>();
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
        try{
-            List<Questionario> daRimuovere = new ArrayList<Questionario>();
-            toReturn = storage.visualizzaQuestionariCompilabili();
-            
-            if(!toReturn.isEmpty())
-              for(Questionario q: toReturn){
-                if(q.isCompilatoDa(CFgenitore))
-                    daRimuovere.add(q);
-              }
-            
-            //uso quest'altro ciclo perchè modificando toReturn in quello precedente 
-            //viene lanciata una ConcurrentModificationException
-            for(Questionario q : daRimuovere)
-                toReturn.remove(q);
-           
-            return toReturn;
+           allQuestComp = storage.visualizzaQuestionariCompilabili();
+            for(Questionario q : allQuestComp)
+            {
+                //controllo se quel questionario non è gia stato compilato in precedenza
+                //dal genitore
+                if(!(compila.isCompilatoDa(q.getId(), CFgenitore)))
+                {
+                    System.out.println("id questionario"+q.getId());
+                    toReturn.add(q);
+                }
+            }
         } 
         catch (SQLException e){
             throw new QuestionarioException("Errore caricamento questionari");
@@ -369,6 +366,7 @@ public class ControlQuestionario {
         finally{
             db.chiudiConnessione();
         }
+       return toReturn;
     }
     
     
