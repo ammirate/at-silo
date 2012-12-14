@@ -579,7 +579,7 @@ public class ControlQuestionario {
             statq.setRisposte(statistiche);
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
-            throw new QuestionarioException("Impossibile rimuovere la domanda");
+            throw new QuestionarioException("Errore statistiche");
         }
         db.chiudiConnessione();
         return statq;
