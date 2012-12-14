@@ -1,3 +1,4 @@
+<%@page import="atsilo.exception.QuestionarioException"%>
 <%@page import="java.sql.Date"%>
 <%@page import="atsilo.entity.*"%>
 <%@page import="java.util.*"%>
@@ -35,54 +36,18 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 
 <%
 	int id;
+	Questionario quest = null;
+	StatisticheQuestionario stat = null;
+	ControlQuestionario q = ControlQuestionario.getIstance();
 	try {
 		id = Integer.parseInt(request.getParameter("id"));
 	}
 	catch (Exception e) {
 		id = -1;
 	}
-	/*
-	Questionario quest = null;
-	 ControlQuestionario q = null;
-	q=q.getIstance();
-	List<Questionario> list = q.getAllQuestionari();
-	List<Questionario> list = new ArrayList<Questionario>();*/
-	//list.get(0).getDomande().get(0); 
-	Questionario quest = null;
-	Questionario quest1 = new Questionario("questa è una prova", "no", "linda è antipatica?", null, null);
-	Calendar c = Calendar.getInstance();
-	c.set(2012, 10, 14);
-	quest1.setPeriodo_inizio(new Date(c.getTimeInMillis()));
-	c.set(2012, 10, 20);
-	quest1.setPeriodo_fine(new Date(c.getTimeInMillis()));
-	Questionario quest2 = new Questionario("questa è una prova2", "no", "giulio è antipatico?",  null, null);
-	c.set(2012, 12, 14);
-	quest2.setPeriodo_inizio(new Date(c.getTimeInMillis()));
-	c.set(2012, 12, 18);
-	quest2.setPeriodo_fine(new Date(c.getTimeInMillis()));
-	List<Questionario> list = new ArrayList<Questionario>();
-	List<DomandaQuestionario> d1 = new ArrayList<DomandaQuestionario>();
-	List<CampoDomandaQuestionario> c1 = new ArrayList<CampoDomandaQuestionario>();
-	c1.add(new CampoDomandaQuestionario("checkbox","bene","bene", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","male","male", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","malissimo","malissimo", 1));
-	c1.add(new CampoDomandaQuestionario("checkbox","non so","non so", 1));
-	List<CampoDomandaQuestionario> c2 = new ArrayList<CampoDomandaQuestionario>();
-	c2.add(new CampoDomandaQuestionario("radio","bene","bene", 2));
-	c2.add(new CampoDomandaQuestionario("radio","male","male", 2));
-	c2.add(new CampoDomandaQuestionario("radio","malissimo","malissimo", 2));
-	c2.add(new CampoDomandaQuestionario("radio","non so","non so", 2));
-	d1.add(new DomandaQuestionario (1,12,"Come ti trovi con i pm?", c1 ));
-	d1.add(new DomandaQuestionario (2,12,"Come li valuti i pm?", c2 ));
-	quest2.setDomande(d1);
-	list.add(quest1);
-	list.add(quest2);
-	for (int i = 0; i < list.size(); i++) {
-		if (list.get(i).getId() == id) {
-		quest = list.get(i);
-		break;
-		}
-	}
+	stat = q.getStatistische(id);
+/*
+	quest = q.getQuestionario(id);
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
 	}
@@ -105,6 +70,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		}
 
 	}
+	*/
 %>
 <p><strong><br />
 </strong></p>
