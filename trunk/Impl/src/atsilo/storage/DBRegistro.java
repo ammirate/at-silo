@@ -56,8 +56,8 @@ public class DBRegistro extends DBBeans
         res.put("id","id");
         res.put("anno","anno");
         res.put("classe","classe");
-        res.put("educatore_didattico","educatoreDidattico");
-        res.put("lista_attività","listaAttivita");
+        res.put("educatoreDidattico","educatore_didattico");
+        res.put("listaAttivita","lista_attività");
         
         
         return Collections.unmodifiableMap(res);
