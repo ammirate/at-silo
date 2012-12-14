@@ -18,6 +18,13 @@ function ControllaForm(){
 	}
 
 </script>
+<%
+	if ((request.getParameter("successo")) != null) {
+		if (request.getParameter("successo").equals("failed")) {
+			out.print("<script type=text/javascript>alert('Errore creazione nuovo account')</script>");
+		}
+	}
+%>	
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Contents -->

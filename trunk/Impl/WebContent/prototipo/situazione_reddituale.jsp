@@ -18,9 +18,9 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
  %>
  <%
  	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
-  	DomandaIscrizione domandaIscrizione= cdt.getDatiIscrizione(username, null);
-  	Float isee_temp=domandaIscrizione.getIsee();
-  	String isee=isee_temp.toString();
+   	DomandaIscrizione domandaIscrizione= cdt.getDomandaIscrizione(username, null);
+   	Float isee_temp=domandaIscrizione.getIsee();
+   	String isee=isee_temp.toString();
  %>
   <!--Script per gestire i form -->
  <script type="text/javascript">

@@ -129,13 +129,13 @@ public class ControlDatiPersonaliTest {
     @Test
     // prendi cf bambini da account
     public void getDatiIscrizioneTest() throws DBConnectionException, DomandaIscrizioneException, InserimentoDatiException    {
-         assertNotNull(control.getDatiIscrizione("MarioB","MSCGNN75H43H654K"));
+         assertNotNull(control.getDomandaIscrizione("MarioB","MSCGNN75H43H654K"));
     }
     
     @Test (expected=InserimentoDatiException.class)
     // prendi cf bambini da account (con cf non valido)
     public void getDatiIscrizioneTest2() throws DBConnectionException, DomandaIscrizioneException, InserimentoDatiException    {
-         control.getDatiIscrizione("MarioB","MSCGNN43H654K");
+         control.getDomandaIscrizione("MarioB","MSCGNN43H654K");
     }
    
 

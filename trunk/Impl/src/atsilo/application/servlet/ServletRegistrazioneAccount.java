@@ -2,6 +2,7 @@ package atsilo.application.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,41 +84,45 @@ public class ServletRegistrazioneAccount extends HttpServlet {
         java.sql.Date data_nascita = null;
         
         //creazione account utente ed entità genitore associata
-      
-
         
         
-            if (controlDatiPersonali.createAccount(cf, nome_richiedente, cognome_richiedente, email_richidente, tel_richiedente, tipologia_genitore_richiedente)){
+        if (controlDatiPersonali.createAccount(cf, nome_richiedente, cognome_richiedente, email_richidente, tel_richiedente, tipologia_genitore_richiedente)){
+            
+            
+            //creazione account ed entità genitore andata a buon fine
+            //autologin nel sistema
+            
+            
+            // Set response content type
+            response.setContentType("text/html");
+            // New location to be redirected
+            String login_ok = new String("prototipo/dati_account_genitore.jsp");
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            
+            Account newAccount = null;
+            try {
+                newAccount = controlDatiPersonali.getAccount(cf);
+            } catch (SQLException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "ServletRegistrazioneAccount: Errore sql", e);
+            }//account appena creato
+            
+            //Setto le variabili di sessione
+            HttpSession sessione = request.getSession();
+            if (newAccount!=null){
+                sessione.setAttribute("username", newAccount.getUserName());
+                String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
+                sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
                 
+                //reindirizzo verso index della tipologia di utente
+                response.setHeader("Location", login_ok);    
                 
-                    //creazione account ed entità genitore andata a buon fine
-                    //autologin nel sistema
-                    
-                    
-                    // Set response content type
-                    response.setContentType("text/html");
-                    // New location to be redirected
-                    String login_ok = new String("prototipo/dati_account_genitore.jsp");
-                    response.setStatus(response.SC_MOVED_TEMPORARILY);
-                    
-                    Account newAccount=controlDatiPersonali.getAccount(cf);//account appena creato
-                   
-                   
-                    
-                    //Setto le variabili di sessione
-                    HttpSession sessione = request.getSession();
-                    sessione.setAttribute("username", newAccount.getUserName());
-                    String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
-                    sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
-                    
-                    //reindirizzo verso index della tipologia di utente
-                    response.setHeader("Location", login_ok);    
-                  
-            }//fine if creo account    
-            else {  
-                String login_error = new String("prototipo/registrazione_account.jsp");
-                response.setHeader("Location", login_error);   
             }
-
+        }//fine if creo account    
+           
+            String login_error = new String("prototipo/registrazione_account.jsp?successo=failed");
+            response.setHeader("Location", login_error);   
+        
+        
     }
 }
