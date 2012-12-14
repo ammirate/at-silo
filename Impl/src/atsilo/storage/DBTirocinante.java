@@ -57,33 +57,33 @@ public class DBTirocinante extends DBBeans {
      */
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("ore_lavoro","oreLavoro");
-        res.put("ore_totali","oreTotali");
-        res.put("personale_asilo","personaleAsilo");
+        res.put("oreLavoro","ore_lavoro");
+        res.put("oreTotali","ore_totali");
+        res.put("personaleAsilo","personale_asilo");
         res.put("nome","nome");
-        res.put("data_di_nascita","dataNascita");
+        res.put("dataNascita","data_di_nascita");
         res.put("cognome","cognome");
-        res.put("codice_fiscale","codiceFiscale");
+        res.put("codiceFiscale","codice_fiscale");
         res.put("email", "email");
-        res.put("comune_di_nascita", "comuneNascita");
+        res.put( "comuneNascita","comune_di_nascita");
         res.put("telefono", "telefono");
         res.put("cittadinanza", "cittadinanza");
-        res.put("indirizzo_residenza", "indirizzoResidenza");
-        res.put("numero_civico_residenza", "numeroCivicoResidenza");
-        res.put("cap_residenza", "capResidenza");
-        res.put("comune_residenza", "comuneResidenza");
-        res.put("provincia_residenza", "provinciaResidenza");
-        res.put("indirizzo_domicilio", "indirizzoDomicilio");
-        res.put("numero_civico_domicilio", "numCivicoDomicilio");
-        res.put("cap_domicilio", "capDomicilio");
-        res.put("comune_domicilio", "comuneDomicilio");
-        res.put("provincia_domicilio", "provinciaDomicilio");
+        res.put("indirizzoResidenza","indirizzo_residenza" );
+        res.put( "numeroCivicoResidenza","numero_civico_residenza");
+        res.put("capResidenza","cap_residenza" );
+        res.put("comuneResidenza","comune_residenza" );
+        res.put("provinciaResidenza","provincia_residenza" );
+        res.put( "indirizzoDomicilio","indirizzo_domicilio");
+        res.put("numCivicoDomicilio","numero_civico_domicilio");
+        res.put( "capDomicilio","cap_domicilio");
+        res.put( "comuneDomicilio","comune_domicilio");
+        res.put( "provinciaDomicilio","provincia_domicilio");
         res.put("stato", "stato");
         res.put("matricola","matricola");
-        res.put("giudizio_finale","giudizioFinale");
+        res.put("giudizioFinale","giudizio_finale");
         res.put("disponibilita", "disponibilita");
-        res.put("titolo_di_studi", "titoloDiStudio");
-        res.put("tutor_esterno", "tutorEsterno");
+        res.put( "titoloDiStudio","titolo_di_studi");
+        res.put( "tutorEsterno","tutor_esterno");
 
 
         return res;
