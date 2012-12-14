@@ -45,9 +45,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	catch (Exception e) {
 		id = -1;
 	}
-	stat = q.getStatistische(id);
-/*
-	quest = q.getQuestionario(id);
+	
+	quest = q.caricaQuestionarioDaCompilare(1, "DFZNDR91L14A909D");
+	/*
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
 	}
@@ -68,9 +68,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("</table><br><br>");
 			out.println("</fieldset><br><br>");
 		}
-
+	
 	}
-	*/
+	*/	
 %>
 <p><strong><br />
 </strong></p>
