@@ -53,7 +53,7 @@ public class ControlDatiPersonali {
      * @throws GenitoreException
      * @throws InserimentoDatiException 
      */
-    public boolean inserisciGenitore(Date dataNascita, String nome, String cognome,
+    public boolean inserisciGenitore(String username,Date dataNascita, String nome, String cognome,
             String codiceFiscale, String email, String comuneNascita,
             String telefono, String cittadinanza, String indirizzoResidenza,
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
@@ -63,7 +63,7 @@ public class ControlDatiPersonali {
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
             String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
-            String rapportoParentela, String condizioneLavorativa, String tipoContratto) throws GenitoreException, DBConnectionException, InserimentoDatiException{
+            String rapportoParentela,String condizioneLavorativa, String tipoContratto) throws GenitoreException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
         StubGenitore stub = new StubGenitore(db);
@@ -218,13 +218,13 @@ public class ControlDatiPersonali {
      * @throws BambinoException
      * @throws InserimentoDatiException 
      */
-    public boolean inserisciBambino(Date dataNascita, String nome, String cognome,
+    public boolean inserisciBambino(String username,Date dataNascita, String nome, String cognome,
             String codiceFiscale,  String comuneNascita,
             String cittadinanza, String indirizzoResidenza,
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore, Genitore genitoreNonRichiedente,List<Assenza> assenze, String iscrizioneClasse) throws BambinoException, DBConnectionException, InserimentoDatiException{
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, List<Assenza> assenze) throws BambinoException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
         StubBambino stub = new StubBambino(db); 
@@ -408,7 +408,7 @@ public class ControlDatiPersonali {
      */
     public boolean createAccount(String cf,String nome,String cognome,String mail, String telefono,String profilo_appartenenza) {
         // TODO Scheletro generato automaticamente
-        return true;
+        return false;
     }
     
     /**@todo Questo metodo dovrebbe già funzionare e quindi non dovrebbe essere modificato
