@@ -36,7 +36,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 
 <%
 	int id;
-	Questionario quest = null;
+
 	StatisticheQuestionario stat = new StatisticheQuestionario();
 	ControlQuestionario q = ControlQuestionario.getIstance();
 	try {
@@ -46,7 +46,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		id = -1;
 	}
 	
-	quest = q.caricaQuestionarioDaCompilare(1, "DFZNDR91L14A909D");
+	Questionario quest = q.caricaQuestionarioDaCompilare(id, "DFZNDR91L14A909D");
 	/*
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
