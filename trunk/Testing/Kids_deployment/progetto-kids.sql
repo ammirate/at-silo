@@ -6,8 +6,7 @@
 -- Generato il: Dic 11, 2012 alle 18:04
 -- Versione del server: 5.5.27
 -- Versione PHP: 5.4.7
-CREATE DATABASE `progetto-kids`;
-USE `progetto-kids`
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
