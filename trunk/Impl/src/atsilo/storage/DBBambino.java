@@ -65,21 +65,21 @@ public class DBBambino extends DBBeans<Bambino> {
         Map<String,String> res= new HashMap<String,String>();
         
         res.put("nome","nome");
-        res.put("data_di_nascita","dataNascita");
-        res.put("categoria_appartenenza","categoriaAppartenenza");
+        res.put("dataNascita","data_di_nascita");
+        res.put("categoriaAppartenenza","categoria_appartenenza");
         res.put("cognome","cognome");
-        res.put("codice_fiscale","codiceFiscale");
-        res.put("comune_di_nascita", "comuneNascita");
+        res.put("codiceFiscale","codice_fiscale");
+        res.put( "comuneNascita","comune_di_nascita");
         res.put("cittadinanza", "cittadinanza");
-        res.put("indirizzo_residenza", "indirizzoResidenza");
-        res.put("numero_civico_residenza", "numeroCivicoResidenza");
-        res.put("provincia_residenza", "provinciaResidenza");
-        res.put("indirizzo_domicilio", "indirizzoDomicilio");
-        res.put("numero_civico_domicilio", "numeroCivicoDomicilio");
-        res.put("cap_domicilio", "capDomicilio");
-        res.put("cap_residenza", "capResidenza");
-        res.put("comune_domicilio", "comuneDomicilio");
-        res.put("provincia_domicilio", "provinciaDomicilio");
+        res.put( "indirizzoResidenza","indirizzo_residenza");
+        res.put( "numeroCivicoResidenza","numero_civico_residenza");
+        res.put( "provinciaResidenza","provincia_residenza");
+        res.put("indirizzoDomicilio","indirizzo_domicilio" );
+        res.put( "numeroCivicoDomicilio","numero_civico_domicilio");
+        res.put("capDomicilio","cap_domicilio" );
+        res.put( "capResidenza","cap_residenza");
+        res.put( "comuneDomicilio","comune_domicilio");
+        res.put( "provinciaDomicilio","provincia_domicilio");
         
         
         return Collections.unmodifiableMap(res);
