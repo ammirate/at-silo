@@ -37,7 +37,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <%
 	int id;
 	Questionario quest = null;
-	StatisticheQuestionario stat = null;
+	StatisticheQuestionario stat = new StatisticheQuestionario();
 	ControlQuestionario q = ControlQuestionario.getIstance();
 	try {
 		id = Integer.parseInt(request.getParameter("id"));
