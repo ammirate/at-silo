@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -603,8 +604,9 @@ public class ControlQuestionario {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             iter = storage.getAll();
-            while(iter.iterator().hasNext())
-                toReturn.add(iter.iterator().next());
+            Iterator<Questionario>itq =iter.iterator();
+            while(itq.hasNext())
+                toReturn.add(itq.next());
             return toReturn;
         } 
         finally{
