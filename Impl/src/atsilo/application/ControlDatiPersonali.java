@@ -319,7 +319,7 @@ public class ControlDatiPersonali {
             {
                 //Aggiorna il precedente
                 if(!dbgen.replace(lettoDalDb, genitore))
-                    throw new GenitoreException("Aggiornamento bambino fallito");
+                    throw new GenitoreException("Aggiornamento genitore fallito");
             }
         } 
         finally{
