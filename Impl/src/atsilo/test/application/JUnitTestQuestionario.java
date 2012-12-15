@@ -47,7 +47,7 @@ public class JUnitTestQuestionario {
         Date dataI = new Date(2012,1,1);
         Date dataF = new Date(2012,3,31);
         
-        questionario = new Questionario("Controllo qualita", null, "Qualita", 1, dataI, dataF);
+        questionario = new Questionario("Controllo qualita", null, "Qualita",  dataI, dataF);
         
     }
     
