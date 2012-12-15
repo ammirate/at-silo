@@ -141,6 +141,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             provinciaDomicilio=request.getParameter("provinciaDomicilio");
         
         //variabili genitore -genitore richiedente
+        
         String tipologia_genitore=null;
         if (request.getParameter("tipologia_genitore") != null)
             tipologia_genitore=request.getParameter("tipologia_genitore");
@@ -174,7 +175,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         String nome_genitore_non_richiedente=null;
         if ( request.getParameter("nome_genitore_non_richiedente")!=null)
             nome_genitore_non_richiedente=request.getParameter("nome_genitore_non_richiedente");
-        String cognome_genitore_non_richiedente;
+        String cognome_genitore_non_richiedente=null;
         if ( request.getParameter("cognome_genitore_non_richiedente")!=null)
             cognome_genitore_non_richiedente=request.getParameter("cognome_genitore_non_richiedente");
         String codice_fiscale_genitore_non_richiedente=null;
@@ -218,8 +219,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             provincia_domicilio_genitore_non_richiedente=request.getParameter("provincia_domicilio_genitore_non_richiedente");
         
         //variabili genitore -genitore non richiedente
-        
-        
+     
         String condizione_lavorativa_genitore_non_richiedente=null;
         if ( request.getParameter("condizione_lavorativa_genitore_non_richiedente")!=null)
             condizione_lavorativa_genitore_non_richiedente=request.getParameter("condizione_lavorativa_genitore_non_richiedente");
@@ -257,6 +257,11 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         if ( request.getParameter("classe")!=null)
             classe=Integer.parseInt(request.getParameter("classe"));
         
+        //variabile bambino selezionato
+        String select_bambini=null;
+        if ( request.getParameter("select_bambini")!=null)
+        select_bambini=request.getParameter("select_bambini");
+        
         //situazione reddituale
         float isee=-1;
         if ( request.getParameter("isee")!=null)
@@ -276,10 +281,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         String figlio_non_riconosciuto="";
         String affido_esclusivo="";
         
-        
-        
-        
-        
+
         //gestione richieste
         
         String pagina_destinazione = "";
@@ -335,11 +337,11 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         }//fine update dati bambino
         
         if ( request.getParameter("chiamante").equals("genitore_non_richiedente")){//se chiamante è una pagina genitore non richiedente    
-            //qui ci andrà l if del metodo setDatiGenitori non richiedente
-            //chiamo metodo per settare genitore non richiedente       
+            if (controlDatiPersonali.inserisciGenitoreNonRichiedentePerBambino(username_utente, dataNascita_genitore_non_richiedente, nome_genitore_non_richiedente, cognome_genitore_non_richiedente, codice_fiscale_genitore_non_richiedente, null, comune_nascita_genitore_non_richiedente, null, cittadinanza_genitore_non_richiedente, indirizzo_residenza_genitore_non_richiedente, numero_civico_residenza_genitore_non_richiedente, cap_residenza_genitore_non_richiedente, comune_residenza_genitore_non_richiedente, provincia_residenza_genitore_non_richiedente, indirizzo_domicilio_genitore_non_richiedente, numero_civico_domicilio_genitore_non_richiedente, cap_domicilio_genitore_non_richiedente, comune_domicilio_genitore_non_richiedente, provincia_domicilio_genitore_non_richiedente, null, null, null, dipendente_presso, null, null, null, null, null, rapportoParentela, condizione_lavorativa_genitore_non_richiedente, tipo_contratto_genitore_non_richiedente, select_bambini)){
+                  
             pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
-            
-            //  else  
+
+            } else  
             pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed"); 
             
         }//fine update dati genitore non richiedente

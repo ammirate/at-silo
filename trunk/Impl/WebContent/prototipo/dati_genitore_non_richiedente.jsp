@@ -51,7 +51,7 @@ include
 	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
 
 			%>
-    <!--Popola la select con i nomi fri bambini del genitore richiedente-->
+    <!--Popola la select con i nomi dei bambini del genitore richiedente-->
 	<script type=text/javascript>
 			function popolaSelect(){
   	   		   objSelect = document.getElementById("select_bambini");
