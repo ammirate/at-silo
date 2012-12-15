@@ -80,6 +80,7 @@ public class DBBambino extends DBBeans<Bambino> {
         res.put( "capResidenza","cap_residenza");
         res.put( "comuneDomicilio","comune_domicilio");
         res.put( "provinciaDomicilio","provincia_domicilio");
+        res.put("iscrizioneClasse", "iscrizione_classe");
         
         
         return Collections.unmodifiableMap(res);
@@ -129,7 +130,7 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setComuneDomicilio(r.getString("comune_domicilio"));
             b.setCapResidenza(r.getString("cap_residenza"));
             b.setCapDomicilio(r.getString("cap_domicilio"));
-            
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
             
              
         return b;
@@ -178,7 +179,8 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setComuneDomicilio(r.getString("comune_domicilio"));
             b.setCapResidenza(r.getString("cap_residenza"));
             b.setCapDomicilio(r.getString("cap_domicilio"));
-            
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
+
         }
         else
         {
@@ -380,7 +382,8 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setComuneDomicilio(r.getString("comune_domicilio"));
             b.setCapResidenza(r.getString("cap_residenza"));
             b.setCapDomicilio(r.getString("cap_domicilio"));
-            
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
+
             l.add(b);
             } 
             r.close();
@@ -435,7 +438,8 @@ public class DBBambino extends DBBeans<Bambino> {
             b.setComuneDomicilio(r.getString("comune_domicilio"));
             b.setCapResidenza(r.getString("cap_residenza"));
             b.setCapDomicilio(r.getString("cap_domicilio"));
-            
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
+
             l.add(b);
             } 
             r.close();
