@@ -220,9 +220,10 @@ public class DBQuestionario extends DBBeans<Questionario>{
             q.setNome(res.getString("nome"));
             q.setPeriodo_fine(res.getDate("periodo_fine"));
             q.setPeriodo_inizio(res.getDate("periodo_inizio"));   
+            res.close();
+            return q;
         }
-        res.close();
-        return q;
+        else return null;
         
     }
     
