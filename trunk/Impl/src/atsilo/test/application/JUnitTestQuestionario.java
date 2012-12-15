@@ -35,7 +35,7 @@ import atsilo.entity.RispostaQuestionario;
  * 
  * Test di unità dell'entity Questionario
  * 
- * @author Antonio
+ * @author Antonio Cesarano
  * 
  */
 public class JUnitTestQuestionario {
