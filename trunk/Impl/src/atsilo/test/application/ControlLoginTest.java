@@ -70,9 +70,9 @@ public class ControlLoginTest {
         
         assertEquals("DFZNDR91L14A909D",account5.getOwner().getCodiceFiscale());
 
-        //Account account6 = control.getValoreLogin("----", "----", "educatore_didattico");
+        Account account6 = control.getValoreLogin("l.sessa", "lorellas","educatore_didattico");
         
-       // assertEquals("-----",account6.getOwner().getCodiceFiscale());
+        assertEquals("SSSLRL78B19B908X",account6.getOwner().getCodiceFiscale());
 
         Account account7 = control.getValoreLogin("c.mezzano", "cristinam", "tirocinante");
         
@@ -86,9 +86,9 @@ public class ControlLoginTest {
         
         assertEquals("DMLLFN71L12A333B",account9.getOwner().getCodiceFiscale());
         
-        //Account account10 = control.getValoreLogin("------", "-------",AtsiloConstants.CAT_RESP_SCIENTIFICO );
+        Account account10 = control.getValoreLogin("d.crisi", "domenicoc",AtsiloConstants.CAT_RESP_SCIENTIFICO );
         
-        //assertEquals("------",account10.getOwner().getCodiceFiscale());
+        assertEquals("CRSDMN64L12T019Y",account10.getOwner().getCodiceFiscale());
         
     }
 }
