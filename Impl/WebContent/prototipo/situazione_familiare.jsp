@@ -35,22 +35,26 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   <tr>
     <td colspan="2">
     <input name="bambino_disabile" id="bambino_disabile" value="false" checked="checked" type="radio"> No
-     <input name="bambino_disabile" id="bambino_disabile" value="true" type="radio"> Si   </td>
+     <span id="bambino_disabile">
+     <input name="bambino_disabile" id="bambino_disabile" value="true" type="radio"> 
+     Si   </span></td>
     
   </tr>
     <tr>
     <td colspan="4">Il padre/la madre &agrave; in situazione di invalidit&agrave; riconosciuta (con invalidit&agrave; pari o superiore a 2/3 ai sensi dell'art. 3 Legge 104/92 o malattia permanente con grave riduzione delle funzioni psico/fisiche allegare in busta chiusa certificazione dell'Asl</td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td colspan="2" id="genitore_invalido">
     <input name="genitore_invalido" id="genitore_invalido" value="false" checked="checked" type="radio"> No
      <input name="genitore_invalido" id="genitore_invalido" value="true" type="radio"> Si   </td>
   </tr>
       <tr>
     <td colspan="2">Il padre/la madre &egrave; genitore solo</td>
      <td colspan="2">
-    <input name="genitore_solo" id="genitore_solo" value="false" checked="checked" type="radio"> No
-     <input name="genitore_solo" id="genitore_solo" value="true" type="radio"> Si   </td>
+    <span id="genitore_solo">
+    <input name="genitore_solo" id="genitore_solo" value="false" checked="checked" type="radio"> 
+    No</span>
+    <input name="genitore_solo" id="genitore_solo" value="true" type="radio"> Si   </td>
   </tr>
   <tr>
     <td colspan="4" ><p>vedova/o 
@@ -62,7 +66,7 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
       </p>
       <p>
         separato/divorziato con affido del minore
-        <input id="separato" name="vedseparatoovo" type="checkbox">
+        <input id="separato" name="separato" type="checkbox">
       </p>
       <p>
         genitore solo con figlio non riconosciuto dall'altro genitore

@@ -263,8 +263,24 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             isee=Float.parseFloat(request.getParameter("isee"));
         
         //situazione familiare
+        String bambino_disabile="";
+        if ( request.getParameter("bambino_disabile")!=null)
+            bambino_disabile=request.getParameter("bambino_disabile");
+        String genitore_invalido="";
+        if ( request.getParameter("genitore_invalido")!=null)
+             genitore_invalido=request.getParameter("genitore_invalido");
+        String genitore_solo="";
+        String vedovo="";
+        String nubile="";
+        String separato="";
+        String figlio_non_riconosciuto="";
+        String affido_esclusivo="";
         
         
+      
+        
+        
+        //gestione richieste
         
         String pagina_destinazione = "";
         
