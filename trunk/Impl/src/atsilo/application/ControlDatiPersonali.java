@@ -73,7 +73,7 @@ public class ControlDatiPersonali {
             String rapportoParentela,String condizioneLavorativa, String tipoContratto) throws GenitoreException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
-        StubGenitore stub = new StubGenitore(db);
+       DBGenitore dbgen = new DBGenitore(db);
         
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale.length() != 16)
@@ -103,7 +103,7 @@ public class ControlDatiPersonali {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             
-            if(!stub.inserisciGenitore(genitore))
+            if(!dbgen.inserisci(genitore))
                 throw new GenitoreException("Inserimento fallito");
         }
         finally{
@@ -234,28 +234,137 @@ public class ControlDatiPersonali {
             String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, Genitore genitore_non_richiedente, List<Assenza> assenze, String iscrizioneClasse) throws BambinoException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
-        StubBambino stub = new StubBambino(db); 
-        
+        DBBambino dbbamb = new DBBambino(db); 
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
         //controllo sul codice fiscale che deve essere a 16 cifre
-        if(codiceFiscale.length() != 16)
+        if(codiceFiscale == null || codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
-        if(capDomicilio.length() != 5)
+        /*if(capDomicilio.length() != 5)
             throw new InserimentoDatiException("Il cap del domicilio non è valido");
         if(capResidenza.length() != 5)
             throw new InserimentoDatiException("Il cap della residenza non è valido");
-        
-        Bambino bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
+        */ Bambino bambino;
+        Bambino lettoDalDb=null; //Questa inizializzazione è pericolosa ma volontaria
+        try {
+            lettoDalDb=dbbamb.ricercaBambinoPerCodFiscale(codiceFiscale);
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile connettersi alla base dati. Causato da:"+e.getMessage(), e);
+        }
+        if(lettoDalDb!=null)
+        {
+            //Bambino trovato nel db e caricato
+            bambino=lettoDalDb;
+            if(cognome!=null)
+            {
+                bambino.setCognome(cognome);
+            }
+            if(nome!=null)
+            {
+                bambino.setNome(nome);
+            }
+            if(dataNascita!=null)
+            {
+                bambino.setDataNascita(dataNascita);
+            }
+            if(comuneNascita!=null)
+            {
+                bambino.setComuneNascita(comuneNascita);
+            }
+            if(cittadinanza!=null)
+            {
+                bambino.setCittadinanza(cittadinanza);
+            }
+            if(indirizzoResidenza!=null)
+            {
+                bambino.setIndirizzoResidenza(indirizzoResidenza);
+            }
+            if(numeroCivicoResidenza!=null)
+            {
+                bambino.setNumeroCivicoResidenza(numeroCivicoResidenza);
+            }
+            if(capResidenza!=null)
+            {
+                bambino.setCapResidenza(capResidenza);
+            }
+            if(comuneResidenza!=null)
+            {
+                bambino.setComuneResidenza(comuneResidenza);
+            }
+            if(provinciaResidenza!=null)
+            {
+                bambino.setProvinciaResidenza(provinciaResidenza);
+            }
+            if(indirizzoDomicilio!=null)
+            {
+                bambino.setIndirizzoDomicilio(indirizzoDomicilio);
+            }
+            if(numeroCivicoDomicilio!=null)
+            {
+                bambino.setNumeroCivicoDomicilio(numeroCivicoDomicilio);
+            }
+            if(capDomicilio!=null)
+            {
+                bambino.setCapDomicilio(capDomicilio);
+            }
+            if(comuneDomicilio!=null)
+            {
+                bambino.setComuneDomicilio(comuneDomicilio);
+            }
+            if(provinciaDomicilio!=null)
+            {
+                bambino.setProvinciaDomicilio(provinciaDomicilio);
+            }
+            if(categoriaAppartenenza!=null)
+            {
+                bambino.setCategoriaAppartenenza(categoriaAppartenenza);
+            }
+            if(classe!=-1)
+            {
+                bambino.setClasse(classe);
+            }
+            if(genitore_non_richiedente!=null)
+            {
+                
+                bambino.setGenitoreNonRichiedente(genitore_non_richiedente);
+            }
+            if(genitore_richiedente!=null)
+            {
+                bambino.setGenitore(genitore_richiedente);
+            }
+            if(assenze!=null)
+            {
+                ;//Registro non implementato
+            }
+            if(iscrizioneClasse!=null)
+            {
+                bambino.setIscrizioneClasse(iscrizioneClasse);
+            }
+        }
+        else
+        {
+            bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
                 cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza,
                 provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
                 provinciaDomicilio, categoriaAppartenenza, classe, genitore_richiedente, genitore_non_richiedente, assenze, iscrizioneClasse);
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
+        }
+       
         try{
-            
-            if(!stub.inserisci(bambino))
-                throw new BambinoException("Inserimento fallito");
+            if(lettoDalDb==null)
+            {
+                //Inserisci nuovo bambino
+                if(!dbbamb.inserisci(bambino))
+                    throw new BambinoException("Inserimento fallito");
+            }
+            else
+            {
+                //Aggiorna il precedente
+                if(!dbbamb.replace(lettoDalDb, bambino))
+                    throw new BambinoException("Aggiornamento bambino fallito");
+            }
         }
         finally{
             db.chiudiConnessione();
