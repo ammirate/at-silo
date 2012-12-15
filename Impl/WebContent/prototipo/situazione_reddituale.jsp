@@ -17,8 +17,8 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
 <%@ page import="atsilo.application.*,atsilo.entity.*"
  %>
  <%
- 	ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
-   	DomandaIscrizione domandaIscrizione= cdt.getDomandaIscrizione(username, null);
+ 	ControlIscrizione cisc= ControlIscrizione.getIstance();
+   	DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(username, null);
    	Float isee_temp=domandaIscrizione.getIsee();
    	String isee=isee_temp.toString();
  %>
