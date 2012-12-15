@@ -433,6 +433,7 @@ public class ControlDatiPersonali {
         int usernameIndex=0;
         String selectedUsername=nome.charAt(0)+"."+cognome;
         try {
+            //TODO Make it efficient, because right now it isnt
             while(dbacc.ricercaPerUsername(selectedUsername)!=null)
             {
                 selectedUsername=nome.charAt(0)+"."+cognome;
@@ -446,10 +447,10 @@ public class ControlDatiPersonali {
        newAcc.setUserName(selectedUsername);
        Random r = new Random();
        newAcc.setPassWord(nome+r.nextInt());
-       boolean result=dbacc.inserisci(newAcc);
+       boolean result=dbgen.inserisci(newGen);
        if(result)
        {
-           result=result&&dbgen.inserisci(newGen);
+           result=result&&dbacc.inserisci(newAcc);
        }
        if(result)
        {
