@@ -268,7 +268,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             bambino_disabile=request.getParameter("bambino_disabile");
         String genitore_invalido="";
         if ( request.getParameter("genitore_invalido")!=null)
-             genitore_invalido=request.getParameter("genitore_invalido");
+            genitore_invalido=request.getParameter("genitore_invalido");
         String genitore_solo="";
         String vedovo="";
         String nubile="";
@@ -277,7 +277,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         String affido_esclusivo="";
         
         
-      
+        
         
         
         //gestione richieste
@@ -314,11 +314,11 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             }
             Genitore genitore_richiedente=new Genitore();
             genitore_richiedente = controlDatiPersonali.getDatiGenitore(cf_genitore);
-                 System.out.println(codice_fiscale_bambino);   
+            
             try {
                 if (controlDatiPersonali.inserisciBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codice_fiscale_bambino, comune_nascita_bambino, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null, null, null)){
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
-                
+                    
                 } else 
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
             } catch (BambinoException e) {
@@ -335,7 +335,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         }//fine update dati bambino
         
         if ( request.getParameter("chiamante").equals("genitore_non_richiedente")){//se chiamante è una pagina genitore non richiedente    
-            System.out.println(); //qui ci andrà l if del metodo setDatiGenitori non richiedente
+            //qui ci andrà l if del metodo setDatiGenitori non richiedente
             //chiamo metodo per settare genitore non richiedente       
             pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
             
