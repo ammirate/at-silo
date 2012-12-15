@@ -107,8 +107,9 @@ public class TestControlQuestionarioConStorage {
     /**
      * @throws DBConnectionException
      * @throws SQLException
+     * @throws QuestionarioException 
      */
-    public void stampaQuestionario() throws DBConnectionException,SQLException {
+    public void stampaQuestionario() throws DBConnectionException,SQLException, QuestionarioException {
         Questionario q = caricaTest();
         
          System.out.println(q.toString());
@@ -203,8 +204,9 @@ public class TestControlQuestionarioConStorage {
      * @return
      * @throws DBConnectionException
      * @throws SQLException
+     * @throws QuestionarioException 
      */
-    public Questionario caricaTest() throws DBConnectionException, SQLException{
+    public Questionario caricaTest() throws DBConnectionException, SQLException, QuestionarioException{
         ControlQuestionario control = ControlQuestionario.getIstance();
         Questionario q = control.caricaQuestionarioDaCompilare(21, "DBNGPP69A23B222C");
         return q;
