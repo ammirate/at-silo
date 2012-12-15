@@ -66,8 +66,14 @@ public class StubEvento {
         EventPlanner ep = new EducatoreDidattico();
         return ep;
     }
-    
-    public List<Evento> ricercaEventoPerPersonale(PersonaleAsilo p){
+ 
+    /**
+     * @param organizzatore
+     * @return
+     */
+    public List<Evento> ricercaEventoOrganizzatore(EventPlanner organizzatore)
+    {
+        
         return null;
     }
 }
