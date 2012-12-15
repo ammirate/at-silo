@@ -77,17 +77,16 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    @Test 
+    //@Test  //OK
     public void testInserisciQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
+      
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
         Calendar dataFin = Calendar.getInstance();
         dataFin.set(2012, 11, 11);
         Date dataInI= new Date(dataIn.getTimeInMillis());
         Date dataFini= new Date(dataFin.getTimeInMillis());
-        System.out.println("data inizio: "+dataInI+" data fine: "+dataFini);
-        
-        
+
         Questionario questionario = new Questionario("Controllo qualita", null, "Qualita",25,  dataInI, dataFini);
         
         control.inserisciQuestionario(questionario);
@@ -112,8 +111,13 @@ public class JUnitTestControlQuestionario {
      */
     // @Test // OK 
     public void testEliminaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
-        Date dataI = new Date(2012,1,1);
-        Date dataF = new Date(2012,3,31);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
         Questionario questionario = new Questionario("questionario 51", null, "Numero51",51,  dataI, dataF);
         control.inserisciQuestionario(questionario);
         
@@ -138,8 +142,13 @@ public class JUnitTestControlQuestionario {
      */
     //@Test // OK
     public void testIsEditableTrue() {
-        Date dataI = new Date(2012,1,1);
-        Date dataF = new Date(2014,12,31);
+        
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2013, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
         Questionario questionario = new Questionario("questionario 51", null, "Numero51",51,  dataI, dataF);
         
        assertTrue( control.isEditable(questionario));
@@ -156,8 +165,12 @@ public class JUnitTestControlQuestionario {
      */
     //@Test  // NO
     public void testIsEditableFalse() {
-        Date dataI = new Date(2009,1,1);
-        Date dataF = new Date(2010,3,31);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2011, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 5, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
         Questionario questionario = new Questionario("questionario 51", null, "Numero51",51,  dataI, dataF);
         
        assertFalse( control.isEditable(questionario));
@@ -175,10 +188,14 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test  OK
+   // @Test // OK
     public void testModificaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
-        Date dataI = new Date(2009,1,1);
-        Date dataF = new Date(2010,3,31);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
         Questionario questionario = new Questionario("questionario 84", null, "Numero84",84,  dataI, dataF);
         
         control.inserisciQuestionario(questionario);
@@ -208,12 +225,14 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-   // @Test  OK
+    //@Test  //OK
     public void testSpostaDataInizio() throws DBConnectionException, QuestionarioException, SQLException {
-        Date dataI = new Date(2009,1,1);
-        Date dataNuova = new Date(2010,3,31);
-        Date daConf = dataNuova;
-        
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataNuova= new Date(dataFin.getTimeInMillis());        
         
         Questionario questionario = new Questionario("questionario 91", null, "Numero91",91,  dataI, null);
         
@@ -221,8 +240,7 @@ public class JUnitTestControlQuestionario {
         control.spostaDataInizio(91, dataNuova);
         Questionario q = control.getQuestionario(91);
         
-        assertEquals(daConf, q.getPeriodo_inizio());
-        
+        assertEquals(dataNuova.toString(), q.getPeriodo_inizio().toString());
     }
     
     
@@ -235,12 +253,15 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test  OK
+    //@Test // OK
     public void testSpostaDataFine() throws DBConnectionException, QuestionarioException, SQLException {
 
-        Date dataF = new Date(2009,1,1);
-        Date dataNuova = new Date(2010,3,31);
-        Date daConf = dataNuova;
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataNuova= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
         
         
         Questionario questionario = new Questionario("questionario 97", null, "Numero97",97,  null, dataF);
@@ -249,7 +270,7 @@ public class JUnitTestControlQuestionario {
         control.spostaDataFine(97, dataNuova);
         Questionario q = control.getQuestionario(97);
         
-        assertEquals(daConf, q.getPeriodo_fine());
+        assertEquals(dataNuova.toString(), q.getPeriodo_fine().toString());
         
     }
     
@@ -263,10 +284,15 @@ public class JUnitTestControlQuestionario {
      * @throws QuestionarioException 
      * @throws DBConnectionException 
      */
-   // @Test  OK
+    //@Test  //OK
     public void testRicercaQuestionario() throws DBConnectionException, QuestionarioException {
-        Date dataI = new Date(2012,1,1);
-        Date dataF = new Date(2012,3,31);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
         Questionario questionario = new Questionario("Controllo qualita 2012", null, "Qualita",26,  dataI, dataF);
         Questionario questionario1 = new Questionario("Controllo qualita20122", null, "Qualita",24,  dataI, dataF);
         
@@ -289,11 +315,16 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-   // @Test //OK
+    @Test //OK
     public void testCompilaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
         
-        Date dataI = new Date(2012,1,1);
-        Date dataF = new Date(2012,3,31);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
         Questionario questionario = new Questionario("Controllo compilazione", null, "Compilazione",103,  dataI, dataF);
        
         DomandaQuestionario d = new DomandaQuestionario(51,103,"anni?",null);
@@ -346,10 +377,15 @@ public class JUnitTestControlQuestionario {
      * @throws QuestionarioException 
      * @throws DBConnectionException 
      */
-    @Test //NO
+   // @Test //NO
     public void testGetQuestionariDaCompilare() throws DBConnectionException, QuestionarioException {
-        Date dataI = new Date(2012,3,31);
-        Date dataF = new Date(2012,3,31);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
         Questionario q1 = new Questionario("Controllo compilazione!!", null, "Compilazione",110,  dataI, dataF);
         Questionario q2 = new Questionario("Controllo compilazione??", null, "Compilazione",111,  dataI, dataF);
 
