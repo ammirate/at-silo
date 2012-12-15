@@ -165,7 +165,7 @@ public class Genitore extends Utente {
      * Metodo che setta il campo statusLavorativo
      * @param statusLavorativo è settato dopo la lettura
      */
-    public void setStasuLavorativo(String statusLavorativo) {
+    public void setStatusLavorativo(String statusLavorativo) {
         this.statusLavorativo = statusLavorativo;
     }
 
