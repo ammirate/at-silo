@@ -141,7 +141,12 @@ public class TestDBAccessi {
 
        }
        */
+       List<String> l=dbb.getGenitoriBambino("MSCLGU12A24T928s");
       Bambino b=new Bambino();
+      
+      for(int i=0;i<l.size();i++){
+          System.out.println(l.get(i));
+      }
      /*  b=dbb.ricercaBambinoPerCodFiscale("DBNLCU11A23B222C");
        System.out.println("Bambino Nome := "+b.getNome());
        System.out.println("Bambino CogNome := "+b.getCognome());
