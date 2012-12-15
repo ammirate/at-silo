@@ -154,12 +154,7 @@ public class ControlDatiPersonali {
         if(codiceFiscale==null || codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
         
-        //controllo sulla mail
-        Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
-        Matcher m = p.matcher(email);
-        boolean matchFound = m.matches();
-        if (!matchFound)
-            throw new InserimentoDatiException("La mail inserita non è valida");
+       
         
         //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
         
@@ -189,6 +184,19 @@ public class ControlDatiPersonali {
             if(dataNascita!=null)
             {
                 genitore.setDataNascita(dataNascita);
+            }
+            if(codiceFiscale!=null)
+            {
+                genitore.setCodiceFiscale(codiceFiscale);
+            }
+            if(email!=null)
+            {
+                //controllo sulla mail
+                Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
+                Matcher m = p.matcher(email);
+                boolean matchFound = m.matches();
+                if (!matchFound)
+                    throw new InserimentoDatiException("La mail inserita non è valida");
             }
             if(comuneNascita!=null)
             {
