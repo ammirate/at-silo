@@ -442,7 +442,29 @@ public class DBBambino extends DBBeans<Bambino> {
         return l;
         
     }
-    
+    /**
+     * Preso in input il codice fiscale di un Bambino , restituisce
+     * una lista di stringhe con il codice fiscale del genitore e del
+     * genitore non richiedente del bambino 
+     * @param codiceFiscale codice fiscale del bambino di cui ricercare i genitori
+     * @return lista di string o null
+     * @throws SQLException
+     */
+    public List<String> getGenitoriBambino(String codiceFiscale) 
+            throws SQLException {
+        List<String> l=new ArrayList<String>();
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+                + tabella.getNomeTabella() + " WHERE codice_fiscale= ?");
+        tabella.setParam(stmt, 1, "codice_fiscale", codiceFiscale);
+        ResultSet r = stmt.executeQuery();    
+        
+        if(r.next()){
+         l.add(r.getString("genitore"));
+         l.add(r.getString("cf_genitore_nonrichiedente"));
+        return l;
+        }
+        else return null;
+    }
     
     protected Assegnazione[] creaAssegnazioni(Bambino bean) {
        
@@ -458,9 +480,6 @@ public class DBBambino extends DBBeans<Bambino> {
 
         return DBAssign;
     }
-
-
-
 
 
 
