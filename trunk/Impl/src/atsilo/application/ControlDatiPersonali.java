@@ -461,9 +461,9 @@ public class ControlDatiPersonali {
            String oggetto = "Registrazione al sistema @silo";
            String testoEmail = "Benvenuto "+newGen.getNome()+" nel sistema @silo.\n" +
                    "Il tuo username è: "+newAcc.getUserName()+"\n"+
-                   "La tua passowrd è: "+newAcc.getPassWord()+"\n"+
+                   "La tua password è: "+newAcc.getPassWord()+"\n"+
                    "Ti auguriamo una buona permanenza nel nostro asilo!\n\n"+
-                   "La redazione";
+                   "La gestione";
            Messaggio m = new NotificaMailRegistrazione(destinatari,oggetto,testoEmail,newAcc,newGen);
            try {
             cnm.inviaMail(m);
