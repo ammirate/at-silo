@@ -1,6 +1,7 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+<script type="text/javascript" src="atsilo_files/questionari.js"></script>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -35,17 +36,17 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	<div>
 	<fieldset>
 		<table id="parah0">
-			<tr><td><h3>Domanda: </h3><td><input type=text name=domanda  size=80>
-			<tr><td> Opzione  <td> <input type=text name=opzione1[] >
+			<tr><td><h3>Domanda: </h3><td><input type=text name=domanda0  size=80>
+			<tr><td> Opzione  <td> <input type=text name=opzione0[] >
 		</table>
 		<br><br>
-		<Select name=tipo>
+		<Select name=tipo0>
 		<option>Seleziona</option>
 		<option value=1>Selezione Multipla</option>
 		<option value=2>Selezione Unica</option>
 		<option value=3>Risposta Aperta</option>
 		</Select>
-	<input type=button value="Aggiungi Campo" onclick="display('parah0');">
+	<input type=button value="Aggiungi Campo" onclick="display('parah0', 0);">
 	</fieldset>
 	
 	</div>

@@ -118,6 +118,7 @@ public class StatisticheQuestionario {
      */
     
     public Integer getPercentualiFromCampo(Integer id_domanda, Integer id_campo){
+        System.out.println("*" + id_domanda + "*" + id_campo + "*");
       Map<Integer, Integer> m=risposte.get(id_domanda);
       return m.get(id_campo);
     }

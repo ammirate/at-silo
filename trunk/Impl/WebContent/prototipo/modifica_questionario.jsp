@@ -7,6 +7,8 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+<script type="text/javascript" src="atsilo_files/questionari.js"></script>
+
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -44,7 +46,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	Questionario quest = null;
 	ControlQuestionario q = ControlQuestionario.getIstance();
 	try {
-		quest = q.getQuestionario(id);
+		quest = q.caricaQuestionarioDaCompilare(id, "DFZNDR91L14A909D");
 	}
 	catch (SQLException s) {	
 			response.sendRedirect("lista_questionari.jsp?error=1");
@@ -84,8 +86,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo()=="text")
 				 type = "<Select name=tipo><option>Seleziona</option><option value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option selected=selected value=3>Risposta Aperta</option></Select>";
 
-			 out.println("blablabla" + i);
-			out.println("<input type=button value='Aggiungi Campo " + i + " ' onclick=\"display('parah"+i+"', " + i +");\">");
+			out.println("<input type=button value='Aggiungi Campo ' onclick=\"display('parah"+i+"', " + i +");\">");
 			out.println("</fieldset><br><br>");
 		}
 		out.println("<script type=\"text/javascript\">setv("+quest.getDomande().size()+")</script>");

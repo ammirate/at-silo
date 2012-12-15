@@ -51,7 +51,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	Questionario quest = null;
 	ControlQuestionario q = ControlQuestionario.getIstance();
 	quest = q.caricaQuestionarioDaCompilare(id, cf);
-	
+	List<RispostaQuestionario> l = quest.getRispostePrecaricate();
 	
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
@@ -65,6 +65,13 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		out.println("Descrizione del questionario: \t<br><br><p style=\"border: 1px solid black; height: 100px\">"
 				+ quest.getDescrizione() + "</p><br><br>");
 		for (int i = 0; i < quest.getDomande().size(); i++) {
+			String resp = "";
+			for (int j = 0; j<l.size(); j++) {
+				if(l.get(j).getIdDomanda() == quest.getDomande().get(i).getId() ) {
+					resp = l.get(j).getValore();
+					break;
+				}
+			}
 			out.println("<br><br><fieldset>");
 			out.println("<table id='parah"+i+"'>");
 			out.println("<tr><td><h3>Domanda </h3><td><h3>"
@@ -73,10 +80,17 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			quest.getDomande().get(i).getCampi().size();
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
-				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("radio") || quest.getDomande().get(i).getCampi().get(j).getTipo().equals("checkbox"))
-					out.println("<tr><td colspan=2><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+				
+				
+				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("radio") || quest.getDomande().get(i).getCampi().get(j).getTipo().equals("checkbox")) {
+					if(quest.getDomande().get(i).getCampi().get(j).getDescrizione().equals(resp)) 
+						out.println("<tr><td colspan=2><input  checked=checked type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+					else
+						out.println("<tr><td colspan=2><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+
+				}
 				else
-					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + quest.getDomande().get(i).getCampi().get(j).getValore() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + resp + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
 
 			}
 			out.println("</table><br><br>");
