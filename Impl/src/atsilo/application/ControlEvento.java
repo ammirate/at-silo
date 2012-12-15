@@ -1,7 +1,8 @@
 package atsilo.application;
 
+import atsilo.entity.Classe;
+import atsilo.entity.EventPlanner;
 import atsilo.entity.Evento;
-import atsilo.entity.PersonaleAsilo;
 
 import atsilo.entity.Registro;
 import atsilo.exception.DBConnectionException;
@@ -13,6 +14,7 @@ import atsilo.test.storage.StubRegistro;
 
 import java.sql.Date;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -41,6 +43,7 @@ import java.util.List;
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Cesarano, 27/11/2012 (non responsabile)
+ * 
  *-----------------------------------------------------------------
  */
 
@@ -80,45 +83,19 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void inserisciEvento(Evento evento) throws DBConnectionException, EventoException{
+    public void inserisciEvento(String descrizione, String nome, List<String> cC, Date data,
+            String tipo, Date data2, List<Classe> classi,
+            EventPlanner organizzatore, String path) throws EventoException{
         Database db = new Database();
-        StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
+        {throw new EventoException("Connessione al DataBase fallita");}
         try{
-            if(!stub.inserisciEventoNelDatabase(evento))
-                throw new EventoException("Inserimento evento nel database fallito");
             
         }
         finally{
             db.chiudiConnessione();
         }    
-    }
-    
-    /**
-     * Adds an invited list to the event
-     * @param registro is the register in which get the event
-     * @param evento is the event to manage
-     * @param CC is the invited list to the event
-     * @return true if the list was added correctly, else false
-     * @throws DBConnectionException 
-     * @throws EventoException 
-     */
-    public void inserisciCCEvento(Evento evento, List<String> CC) throws DBConnectionException, EventoException{
-        Database db = new Database();
-        StubEvento stub = new StubEvento(db);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            if(!stub.inserisciCCEvento(evento, CC))
-                throw new EventoException("Inserimento partecipanti nel database fallito");
-            
-        }
-        finally{
-            db.chiudiConnessione();
-        }     
     }
     
     /**
@@ -130,18 +107,15 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void modificaEvento(Evento vecchioEvento, Evento nuovoEvento) throws DBConnectionException, EventoException{
+    public void modificaEvento(Evento evento,String descrizione, String nome, List<String> cC, Date data,
+            String tipo, Date data2, List<Classe> classi,
+            EventPlanner organizzatore, String path) throws DBConnectionException, EventoException{
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            
-            if(stub.rimuoviEvento(vecchioEvento)==null)
-                throw new EventoException("Evento da modificare non esistente");
-            if(!stub.inserisciEventoNelDatabase(nuovoEvento))
-                throw new EventoException("Errore modifica evento");
             
         }
         finally{
@@ -177,45 +151,20 @@ public class ControlEvento {
     
     
     /**
-     * Moves an event from a date to another one
-     * @param registro is the register in which get the event
-     * @param evento is the event to move
-     * @param newData is the new event date
-     * @return true if the event was moved correctly, else true
-     * @throws DBConnectionException 
-     * @throws EventoException 
-     */
-    public void spostaEvento(Evento evento, Date newData) throws DBConnectionException, EventoException{
-        Database db = new Database();
-        StubEvento stub = new StubEvento(db);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            if(!stub.setData(evento, newData))
-                throw new EventoException("Spostamento evento fallito");
-        }
-        finally{
-            db.chiudiConnessione();
-        } 
-    }
-    
-    
-    /**
      * Gets all the events about a teacher
      * @param pers is the event owner teacher
      * @return an event list about teacher
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public List<Evento> getEventiPerPersonale(PersonaleAsilo pers) throws DBConnectionException, EventoException{
+    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) throws DBConnectionException, EventoException{
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            List<Evento> toReturn = stub.ricercaEventoPerPersonale(pers);
+            List<Evento> toReturn = stub.ricercaEventoOrganizzatore(organizzatore);
             if(toReturn==null || toReturn.isEmpty())
                 throw new EventoException("Nessun evento disponibile per questo utente");
             return toReturn;
@@ -242,15 +191,46 @@ public class ControlEvento {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Evento> toReturn = stub.ricercaEventoData(data);
-                    if(toReturn==null || toReturn.isEmpty())
-                        throw new EventoException("Nessun evento disponibile in questa data");
+            if(toReturn==null || toReturn.isEmpty())
+                throw new EventoException("Nessun evento disponibile in questa data");
             return toReturn;
         }
         finally{
             db.chiudiConnessione();
         }    
     }
-    
+    public List<Evento> getEventiPerNome(String nome) throws DBConnectionException, EventoException{
+        Database db = new Database();
+        StubEvento stub = new StubEvento(db);
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            List<Evento> toReturn = (List<Evento>) stub.ricercaEventoNome(nome);
+            if(toReturn==null || toReturn.isEmpty())
+                throw new EventoException("Nessun evento disponibile in questa data");
+            return toReturn;
+        }
+        finally{
+            db.chiudiConnessione();
+        }    
+    }
+
+    private List<String> convertiCC(String cc)
+    {
+        List<String> s=new ArrayList<String>(); 
+        return s;
+    }
+
+
+    private String convertiCC(List<String> cc)
+    {
+        String s="";
+        return s;
+        
+    }
+
+
     /**
      * Gets the single istance of this class
      * @return a new ControlEvento
