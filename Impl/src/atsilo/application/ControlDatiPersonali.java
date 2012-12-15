@@ -49,7 +49,82 @@ public class ControlDatiPersonali {
     public ControlDatiPersonali() {
     }
     
-    
+    public boolean inserisciGenitoreNonRichiedentePerBambino(String username,Date dataNascita, String nome, String cognome,
+            String codiceFiscale, String email, String comuneNascita,
+            String telefono, String cittadinanza, String indirizzoResidenza,
+            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
+            String provinciaResidenza, String indirizzoDomicilio,
+            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
+            String provinciaDomicilio, List<Bambino> figli,
+            List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
+            String rapportiAteneoSalerno, String rapportiComuneFisciano,
+            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            String rapportoParentela,String condizioneLavorativa, String tipoContratto,String cfBambino)
+    {
+        try {
+            boolean firstResult = inserisciGenitore(username,dataNascita, nome, cognome,
+                codiceFiscale, email, comuneNascita,
+                telefono, cittadinanza, indirizzoResidenza,
+               numeroCivicoResidenza, capResidenza, comuneResidenza,
+                provinciaResidenza, indirizzoDomicilio,
+                numeroCivicoDomicilio, capDomicilio, comuneDomicilio,
+                provinciaDomicilio, null,
+                questionariCompilati, tipo, dipendentePresso,
+                rapportiAteneoSalerno, rapportiComuneFisciano,
+                statusLavorativo, scadenzaContratto, categoriaAppartenenza,
+                rapportoParentela,condizioneLavorativa, tipoContratto);
+            if(!firstResult)
+            {
+                throw new GenitoreException("Genitore non richiedente non inserito.");
+            }
+                Database db = new Database();
+                db.apriConnessione();
+                DBBambino dbbamb = new DBBambino(db);
+                DBGenitore dbgen = new DBGenitore(db);
+                Bambino b=null;//Non sicuro ma volontario
+                try {
+                    b = dbbamb.ricercaBambinoPerCodFiscale(cfBambino);
+                } catch (SQLException e) {
+                    // TODO Blocco di catch autogenerato
+                    LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(), e);
+                }
+                
+                if(b==null)
+                {
+                    throw new InserimentoDatiException("CF Bambino non corretto");
+                }
+                else
+                {
+                    //Funziona per forza, l'ho inserito quì sopra.
+                    Genitore g=null;//volontariamente così
+                    try {
+                        g = dbgen.getGenitorePerCF(codiceFiscale);
+                    } catch (SQLException e) {
+                        // TODO Blocco di catch autogenerato
+                        LOG.log(Level.SEVERE, "Impossibile recuperare genitore non richiedente. Causato da: "+e.getMessage(), e);
+                    }
+                    if(g!=null)
+                    {
+                        b.setGenitoreNonRichiedente(g);
+                        dbbamb.replace(b, b);
+                        return true;
+                    }
+                    
+                }
+            
+        } catch (GenitoreException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Errore di inserimento del genitore. Causato da:"+e.getMessage(), e);
+        } catch (DBConnectionException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Errore di connessione al DB. Causato da: "+e.getMessage(), e);
+        } catch (InserimentoDatiException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Errore di insermento dei dati. Causato da:"+e.getMessage(), e);
+        }
+        
+        return false;
+    }
     
     /**
      * @todo da implementare e modificare
@@ -76,7 +151,7 @@ public class ControlDatiPersonali {
        DBGenitore dbgen = new DBGenitore(db);
         
         //controllo sul codice fiscale che deve essere a 16 cifre
-        if(codiceFiscale.length() != 16)
+        if(codiceFiscale==null || codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         //controllo sulla mail
@@ -87,29 +162,164 @@ public class ControlDatiPersonali {
             throw new InserimentoDatiException("La mail inserita non è valida");
         
         //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
-        if(capDomicilio.length() != 5)
-            throw new InserimentoDatiException("Il cap del domicilio non è valido");
-        if(capResidenza.length() != 5)
-            throw new InserimentoDatiException("Il cap della residenza non è valido");
         
-        Genitore genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, 
-                comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, 
-                capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio,
-                capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, 
-                dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano,
-                statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela, condizioneLavorativa, tipoContratto);
         
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            
-            if(!dbgen.inserisci(genitore))
-                throw new GenitoreException("Inserimento fallito");
+        
+        
+        Genitore genitore;
+        Genitore lettoDalDb=null; //Questa inizializzazione è pericolosa ma volontaria
+        try {
+            lettoDalDb=dbgen.getGenitorePerCF(codiceFiscale);
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile connettersi alla base dati. Causato da:"+e.getMessage(), e);
         }
+        if(lettoDalDb!=null)
+        {
+            //Genitore trovato nel db e caricato
+            genitore=lettoDalDb;
+            if(cognome!=null)
+            {
+                genitore.setCognome(cognome);
+            }
+            if(nome!=null)
+            {
+                genitore.setNome(nome);
+            }
+            if(dataNascita!=null)
+            {
+                genitore.setDataNascita(dataNascita);
+            }
+            if(comuneNascita!=null)
+            {
+                genitore.setComuneNascita(comuneNascita);
+            }
+            if(cittadinanza!=null)
+            {
+                genitore.setCittadinanza(cittadinanza);
+            }
+            if(indirizzoResidenza!=null)
+            {
+                genitore.setIndirizzoResidenza(indirizzoResidenza);
+            }
+            if(numeroCivicoResidenza!=null)
+            {
+                genitore.setNumeroCivicoResidenza(numeroCivicoResidenza);
+            }
+            if(capResidenza!=null)
+            {
+                if(capResidenza.length() != 5)
+                    throw new InserimentoDatiException("Il cap della residenza non è valido");
+                genitore.setCapResidenza(capResidenza);
+            }
+            if(comuneResidenza!=null)
+            {
+                genitore.setComuneResidenza(comuneResidenza);
+            }
+            if(provinciaResidenza!=null)
+            {
+                genitore.setProvinciaResidenza(provinciaResidenza);
+            }
+            if(indirizzoDomicilio!=null)
+            {
+                genitore.setIndirizzoDomicilio(indirizzoDomicilio);
+            }
+            if(numeroCivicoDomicilio!=null)
+            {
+                genitore.setNumeroCivicoDomicilio(numeroCivicoDomicilio);
+            }
+            if(capDomicilio!=null)
+            {
+                if(capDomicilio.length() != 5)
+                    throw new InserimentoDatiException("Il cap del domicilio non è valido");
+                genitore.setCapDomicilio(capDomicilio);
+            }
+            if(comuneDomicilio!=null)
+            {
+                genitore.setComuneDomicilio(comuneDomicilio);
+            }
+            if(provinciaDomicilio!=null)
+            {
+                genitore.setProvinciaDomicilio(provinciaDomicilio);
+            }
+            if(categoriaAppartenenza!=null)
+            {
+                genitore.setCategoriaAppartenenza(categoriaAppartenenza);
+            }
+            if(figli!=null)
+            {
+                genitore.setFigli(figli);
+            }
+            if(questionariCompilati!=null)
+            {
+                genitore.setQuestionariCompilati(questionariCompilati);
+            }
+            if(tipo!=null)
+            {
+                genitore.setTipo(tipo);
+            }
+            if(dipendentePresso!=null)
+            {
+                genitore.setDipendentePresso(dipendentePresso);
+            }
+            if(rapportiAteneoSalerno!=null)
+            {
+                genitore.setRapportiAteneoSalerno(rapportiAteneoSalerno);
+            }
+            if(rapportiComuneFisciano!=null)
+            {
+                genitore.setRapportiComuneFisciano(rapportiComuneFisciano);
+            }
+            if(statusLavorativo!=null)
+            {
+                genitore.setStatusLavorativo(statusLavorativo);
+            }
+            if(scadenzaContratto!=null)
+            {
+                genitore.setScadenzaContratto(scadenzaContratto);
+            }
+            if(rapportoParentela!=null)
+            {
+                genitore.setRapportoParentela(rapportoParentela);
+            }
+            if(condizioneLavorativa!=null)
+            {
+                genitore.setCondizioneLavorativa(condizioneLavorativa);
+            }
+            if(tipoContratto!=null)
+            {
+                genitore.setTipoContratto(tipoContratto);
+            }
+        }
+        else
+        {
+            genitore = new Genitore(dataNascita, nome, cognome, codiceFiscale, email, 
+                    comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, 
+                    capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio,
+                    capDomicilio, comuneDomicilio, provinciaDomicilio, figli, questionariCompilati, tipo, 
+                    dipendentePresso, rapportiAteneoSalerno, rapportiComuneFisciano,
+                    statusLavorativo, scadenzaContratto, categoriaAppartenenza, rapportoParentela, condizioneLavorativa, tipoContratto);
+        }
+       
+        try{
+            if(lettoDalDb==null)
+            {
+                //Inserisci nuovo genitore
+                if(!dbgen.inserisci(genitore))
+                    throw new GenitoreException("Inserimento fallito");
+            }
+            else
+            {
+                //Aggiorna il precedente
+                if(!dbgen.replace(lettoDalDb, genitore))
+                    throw new GenitoreException("Aggiornamento bambino fallito");
+            }
+        } 
         finally{
             db.chiudiConnessione();
         }
         return true;
+
     }
     
     /**
@@ -240,13 +450,8 @@ public class ControlDatiPersonali {
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale == null || codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
-        
-        //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
-        /*if(capDomicilio.length() != 5)
-            throw new InserimentoDatiException("Il cap del domicilio non è valido");
-        if(capResidenza.length() != 5)
-            throw new InserimentoDatiException("Il cap della residenza non è valido");
-        */ Bambino bambino;
+
+         Bambino bambino;
         Bambino lettoDalDb=null; //Questa inizializzazione è pericolosa ma volontaria
         try {
             lettoDalDb=dbbamb.ricercaBambinoPerCodFiscale(codiceFiscale);
@@ -288,6 +493,8 @@ public class ControlDatiPersonali {
             }
             if(capResidenza!=null)
             {
+                if(capResidenza.length() != 5)
+                    throw new InserimentoDatiException("Il cap della residenza non è valido");
                 bambino.setCapResidenza(capResidenza);
             }
             if(comuneResidenza!=null)
@@ -308,6 +515,8 @@ public class ControlDatiPersonali {
             }
             if(capDomicilio!=null)
             {
+                if(capDomicilio.length() != 5)
+                    throw new InserimentoDatiException("Il cap del domicilio non è valido");
                 bambino.setCapDomicilio(capDomicilio);
             }
             if(comuneDomicilio!=null)
