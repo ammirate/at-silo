@@ -18,10 +18,10 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 <td class="content" valign="top" bgcolor="#ffffff"><%@
 include
 		file="atsilo_files/sidebar_top_genitore.jsp"%>
-	<!--Dati genitore non richiedente--> 
-	<%@ page
+	<!--Dati genitore non richiedente--> <%@ page
 		import="java.util.*,atsilo.application.*,atsilo.entity.*"%>
-		<%//istanzio variabili
+
+	<%//istanzio variabili
 		String cognome="";
 		String nome="";
 		String codiceFiscale="";
@@ -31,7 +31,7 @@ include
  	 	String indirizzoResidenza="";
 		String numeroCivicoResidenza="";
 		String capResidenza="";
-		String 	comuneResidenza="";
+		String comuneResidenza="";
 		String provinciaResidenza="";
 		String indirizzoDomicilio="";
 		String numeroCivicoDomicilio="";
@@ -43,8 +43,7 @@ include
 		String tipoContratto="";
 		String sedeDiLavoro="";
 		
-		%>
-	<% // setto select bambino
+		%> <% // setto select bambino
 		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
 	   	Utente utente=cdt.getValoriUtente(username);
 	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
@@ -52,58 +51,57 @@ include
 	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
 
 			%>
-            <!--Popola la select con i nomi fri bambini del genitore richiedente-->
-            <script type=text/javascript>
+    <!--Popola la select con i nomi fri bambini del genitore richiedente-->
+	<script type=text/javascript>
 			function popolaSelect(){
   	   		   objSelect = document.getElementById("select_bambini");
 			   <% for (int i=0;i<figli.size();i++){%>
   	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
 		<%} %>	
 			}
-	</script> 
-	
+	</script>
+    <%
+	 //setta campi form una volta selezionato il nome del bambino
+	  String cfb=null;
+	 if (request.getParameter("select_bambini")!=null)
+	  cfb=(String)request.getParameter("select_bambini");
 	 
-	 <%!
-	 //setta campi form una volta selezionato il nome del bambino 
-    void settaCampiForm(){
-		// String cf_bambino=cf//cf passato da paramentro funzione
-		 String cf="DFZGNN12L14A909D";//trovare il modo di prendere il cf
-	 ControlDatiPersonali cdt=ControlDatiPersonali.getIstance();
+	  cdt=ControlDatiPersonali.getIstance();
 	 Genitore genitore=new Genitore();
-	if (cf!=null){ 
+	 if (cfb!=null){ 
 		Bambino bambino_selezionato=new Bambino();
-		
-   		bambino_selezionato=cdt.getDatiBambino(cf);
+   		bambino_selezionato=cdt.getDatiBambino(cfb);
    	    genitore=cdt.getDatiGenitore(bambino_selezionato.getGenitoreNonRichiedente().getCodiceFiscale());
-		        
-	}
-   		
-		String cognome=genitore.getCognome(); 
-		//java.lang.System.out.println("Il cognome è"+cognome);//cancellare eliminare delete
-		String nome=genitore.getNome();
-		String codiceFiscale=genitore.getCodiceFiscale(); String
+		cognome=genitore.getCognome(); 
+		nome=genitore.getNome();
+		codiceFiscale=genitore.getCodiceFiscale(); 
 		dataNascita="dataNascita" ;
- 	 	String comuneNascita=genitore.getComuneNascita(); String
-		cittadinanza=genitore.getcittadinanza(); String
-		indirizzoResidenza=genitore.getIndirizzoResidenza(); String
-		numeroCivicoResidenza=genitore.getNumeroCivicoResidenza(); String
-		capResidenza=genitore.getCapResidenza(); String
-		comuneResidenza=genitore.getComuneResidenza(); String
-		provinciaResidenza=genitore.getProvinciaResidenza(); String
-		indirizzoDomicilio=genitore.getIndirizzoDomicilio(); String
-		numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio(); String
-		capDomicilio=genitore.getCapDomicilio(); String
-		comuneDomicilio=genitore.getComuneDomicilio(); String
-		provinciaDomicilio=genitore.getProvinciaDomicilio(); String
-		rapportoParentela=genitore.getRapportoParentela(); String
-		condizioneLavorativa=genitore.getCondizioneLavorativa(); String
-		tipoContratto=genitore.getTipoContratto(); String
+ 	    comuneNascita=genitore.getComuneNascita(); 
+		cittadinanza=genitore.getcittadinanza(); 
+		indirizzoResidenza=genitore.getIndirizzoResidenza(); 
+		numeroCivicoResidenza=genitore.getNumeroCivicoResidenza(); 
+		capResidenza=genitore.getCapResidenza(); 
+		comuneResidenza=genitore.getComuneResidenza(); 
+		provinciaResidenza=genitore.getProvinciaResidenza();  
+		indirizzoDomicilio=genitore.getIndirizzoDomicilio();  
+		numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();  
+		capDomicilio=genitore.getCapDomicilio();  
+		comuneDomicilio=genitore.getComuneDomicilio();  
+		provinciaDomicilio=genitore.getProvinciaDomicilio();  
+		rapportoParentela=genitore.getRapportoParentela();  
+		condizioneLavorativa=genitore.getCondizioneLavorativa();  
+		tipoContratto=genitore.getTipoContratto();  
 		sedeDiLavoro=genitore.getDipendentePresso();
- 	
- }
- %>
-	<!--Script per gestire i form -->
-     <script type="text/javascript">
+	 }
+ %> 
+  <!--Script sottomette  form select bambino--> 
+  <script>
+  function submitForm(){
+  document.forms[0].submit();
+  }
+  </script>
+ <!--Script per gestire i form --> 
+ <script type="text/javascript">
 		function settaAttributi(slf) {
 			document
 					.getElementById("dati_bando")
@@ -115,9 +113,9 @@ include
 			var n = f.elements.length;
 			for ( var i = 1; i < n; i++)
 				document.forms[0].elements[i].removeAttribute("readonly");
+				document.getElementById("select_bambini").removeAttribute("onChange","");
 			slf.onclick = null;
 			return false;
-
 		}
 	</script> <%
  	if ((request.getParameter("successo")) != null) {
@@ -134,18 +132,19 @@ include
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 				<td colspan="4"><label for="altrifisglinido_1">Per
-						inserire i dati del genitore non richiedente &egrave; necessario che
-						siano stati inseriti i dati del bambino. Selezionare dal menu il
-						bambino per il quale si vogliono inserire le informazioni del
+						inserire i dati del genitore non richiedente &egrave; necessario
+						che siano stati inseriti i dati del bambino. Selezionare dal menu
+						il bambino per il quale si vogliono inserire le informazioni del
 						genitore non richiedente.</label> <br></td>
 			</tr>
 			<tr>
-				<td colspan="2"><p>
-						<select name="select_bambini" id="select_bambini" onfocus="popolaSelect(this)" onchange="<% settaCampiForm();%>">
-						  <option value="null" selected>Selezionare Bambino</option>
-                </select>
-					</p>
-					<p>&nbsp;</p></td>
+				<td colspan="1"><p>
+						<select name="select_bambini" id="select_bambini"
+							onfocus="popolaSelect(this)"
+							onchange="submitForm()">
+							<option value="null" selected>Selezionare Bambino</option>
+					  </select>
+					</p></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
