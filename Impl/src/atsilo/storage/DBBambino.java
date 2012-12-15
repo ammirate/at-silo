@@ -92,7 +92,7 @@ public class DBBambino extends DBBeans<Bambino> {
      * @return
      */
     private static List<String> creaChiave(){
-        List<String> res=  Arrays.asList("codice_fiscale");
+        List<String> res=  Arrays.asList("codiceFiscale");
         
         return Collections.unmodifiableList(res);
     }
@@ -482,8 +482,17 @@ public class DBBambino extends DBBeans<Bambino> {
      * @return Array di assegnazioni
      */
     protected Assegnazione[] creaAssegnazioni(Bambino bean) {
-       
-        Assegnazione DBBambino_assegnazione = new Assegnazione("cf_genitore_non_richiedente",bean.getGenitoreNonRichiedente().getCodiceFiscale());
+        String gen_non_rich="";
+        if(bean.getGenitoreNonRichiedente()!=null)
+        {
+            gen_non_rich=bean.getGenitoreNonRichiedente().getCodiceFiscale();
+        }
+        else
+        {
+            gen_non_rich=null;
+        }
+        
+        Assegnazione DBBambino_assegnazione = new Assegnazione("cf_genitore_nonrichiedente",gen_non_rich);
         Assegnazione DBBambino_assegnazione1 = new Assegnazione("genitore",bean.getGenitore().getCodiceFiscale());
         Assegnazione DBBambino_assegnazione2 = new Assegnazione("classe",bean.getClasse());
 
