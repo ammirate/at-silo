@@ -580,7 +580,8 @@ public class JUnitTestControlQuestionario {
         questionario.aggiungiDomanda(domanda2);
         questionario.aggiungiDomanda(domanda3);
         
-     //   control.inserisciQuestionario(questionario);
+        //se già hai eseguito questo metodo, commenta la riga successiva
+        control.inserisciQuestionario(questionario);
         
         
         RispostaQuestionario r1 = new RispostaQuestionario("molto", 201, "csrntn91l26c129j");
@@ -611,11 +612,14 @@ public class JUnitTestControlQuestionario {
         terzo.add(r6);
         terzo.add(r9);
         
-        /*
+        
+        //se già hai eseguito questo metodo, commenta le 3 riga successiva
+
+        
         control.compilaQuestionario(200, primo, "csrntn91l26c129j");
         control.compilaQuestionario(200, secondo, "abcdefghilmnopqr");
         control.compilaQuestionario(200, terzo, "qualcuno");
-        */
+        
         
         StatisticheQuestionario S = control.getStatistische(200);
         
