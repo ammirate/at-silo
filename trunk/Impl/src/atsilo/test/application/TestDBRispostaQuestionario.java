@@ -20,6 +20,7 @@ import java.sql.SQLException;
 
 import atsilo.application.ControlQuestionario;
 import atsilo.entity.StatisticheQuestionario;
+import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
 import atsilo.storage.DBRispostaQuestionario;
 import atsilo.storage.Database;
@@ -37,8 +38,9 @@ public class TestDBRispostaQuestionario {
      * @param args
      * @throws SQLException 
      * @throws QuestionarioException 
+     * @throws DBConnectionException 
      */
-    public static void main(String[] args) throws SQLException, QuestionarioException {
+    public static void main(String[] args) throws SQLException, QuestionarioException, DBConnectionException {
         // TODO Scheletro generato automaticamente
         Database db =new Database();
         db.apriConnessione();
@@ -54,7 +56,12 @@ public class TestDBRispostaQuestionario {
         System.out.println("numero compilazioni campo 1: "+statistiche.getPercentualiFromCampo(1, 1));
         System.out.println("numero compilazioni campo 2: "+statistiche.getPercentualiFromCampo(1, 2));
         System.out.println("numero compilazioni campo 3: "+statistiche.getPercentualiFromCampo(1, 3));
+        cq.getQuestionariDaCompilare("aa");
+        
+        
         db.chiudiConnessione();
+        
+        
     }
    
 }
