@@ -348,9 +348,10 @@ public class ControlQuestionario {
             {
                 //controllo se quel questionario non è gia stato compilato in precedenza
                 //dal genitore
+              
                 if(!(compila.isCompilatoDa(q.getId(), CFgenitore)))
                 {
-                    System.out.println("id questionario"+q.getId());
+                  
                     toReturn.add(q);
                 }
             }

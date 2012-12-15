@@ -24,6 +24,7 @@ import static org.junit.Assert.fail;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -76,11 +77,18 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-  // @Test // OK 
+    @Test 
     public void testInserisciQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
-        Date dataI = new Date(2012,1,1);
-        Date dataF = new Date(2012,3,31);
-        Questionario questionario = new Questionario("Controllo qualita", null, "Qualita",25,  dataI, dataF);
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2012, 11, 11);
+        Date dataInI= new Date(dataIn.getTimeInMillis());
+        Date dataFini= new Date(dataFin.getTimeInMillis());
+        System.out.println("data inizio: "+dataInI+" data fine: "+dataFini);
+        
+        
+        Questionario questionario = new Questionario("Controllo qualita", null, "Qualita",25,  dataInI, dataFini);
         
         control.inserisciQuestionario(questionario);
         Questionario temp = control.getQuestionario(25);
