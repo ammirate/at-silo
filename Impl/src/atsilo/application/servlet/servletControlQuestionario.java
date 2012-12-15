@@ -5,6 +5,7 @@ import java.awt.List;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -90,16 +91,26 @@ public class servletControlQuestionario extends HttpServlet {
                 quest.aggiungiDomanda(d);
                 x++;
             }
+           
             try {
             if(request.getParameter("action").equals("modify"))
             {
-//                q.modificaQuestionario(quest.getId(), quest);
+                q.modificaQuestionario(quest.getId(), quest);
             }   
             else {
-//                q.inserisciQuestionario(quest);
+                q.inserisciQuestionario(quest);
             }}
             catch (Exception e) {
-//              q.inserisciQuestionario(quest);
+                try {
+                    q.inserisciQuestionario(quest);
+                } catch (DBConnectionException e1) {
+                    // TODO Blocco di catch autogenerato
+//                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+                } catch (QuestionarioException e1) {
+                    // TODO Blocco di catch autogenerato
+//                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+
+                }
                 
             }
 	}
