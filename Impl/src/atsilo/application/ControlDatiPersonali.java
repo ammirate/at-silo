@@ -81,6 +81,9 @@ public class ControlDatiPersonali {
                 db.apriConnessione();
                 DBBambino dbbamb = new DBBambino(db);
                 DBGenitore dbgen = new DBGenitore(db);
+                
+                if(cfBambino==null || cfBambino.length() != 16)
+                    throw new InserimentoDatiException("Il codice fiscale del bambino non è valido");
                 Bambino b=null;//Non sicuro ma volontario
                 try {
                     b = dbbamb.ricercaBambinoPerCodFiscale(cfBambino);
@@ -149,7 +152,7 @@ public class ControlDatiPersonali {
         
         Database db = new Database();
        DBGenitore dbgen = new DBGenitore(db);
-        
+        db.apriConnessione();
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale==null || codiceFiscale.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
@@ -173,11 +176,11 @@ public class ControlDatiPersonali {
         {
             //Genitore trovato nel db e caricato
             genitore=lettoDalDb;
-            if(cognome!=null)
+            if(cognome!=null && cognome.length()!=0)
             {
                 genitore.setCognome(cognome);
             }
-            if(nome!=null)
+            if(nome!=null && nome.length()!=0)
             {
                 genitore.setNome(nome);
             }
@@ -185,11 +188,7 @@ public class ControlDatiPersonali {
             {
                 genitore.setDataNascita(dataNascita);
             }
-            if(codiceFiscale!=null)
-            {
-                genitore.setCodiceFiscale(codiceFiscale);
-            }
-            if(email!=null)
+            if(email!=null && email.length()!=0)
             {
                 //controllo sulla mail
                 Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
@@ -198,59 +197,59 @@ public class ControlDatiPersonali {
                 if (!matchFound)
                     throw new InserimentoDatiException("La mail inserita non è valida");
             }
-            if(comuneNascita!=null)
+            if(comuneNascita!=null && comuneNascita.length()!=0)
             {
                 genitore.setComuneNascita(comuneNascita);
             }
-            if(cittadinanza!=null)
+            if(cittadinanza!=null && cittadinanza.length()!=0)
             {
                 genitore.setCittadinanza(cittadinanza);
             }
-            if(indirizzoResidenza!=null)
+            if(indirizzoResidenza!=null && indirizzoResidenza.length()!=0)
             {
                 genitore.setIndirizzoResidenza(indirizzoResidenza);
             }
-            if(numeroCivicoResidenza!=null)
+            if(numeroCivicoResidenza!=null && numeroCivicoResidenza.length()!=0)
             {
                 genitore.setNumeroCivicoResidenza(numeroCivicoResidenza);
             }
-            if(capResidenza!=null)
+            if(capResidenza!=null && capResidenza.length()!=0)
             {
                 if(capResidenza.length() != 5)
                     throw new InserimentoDatiException("Il cap della residenza non è valido");
                 genitore.setCapResidenza(capResidenza);
             }
-            if(comuneResidenza!=null)
+            if(comuneResidenza!=null && comuneResidenza.length()!=0)
             {
                 genitore.setComuneResidenza(comuneResidenza);
             }
-            if(provinciaResidenza!=null)
+            if(provinciaResidenza!=null && provinciaResidenza.length()!=0)
             {
                 genitore.setProvinciaResidenza(provinciaResidenza);
             }
-            if(indirizzoDomicilio!=null)
+            if(indirizzoDomicilio!=null && indirizzoDomicilio.length()!=0)
             {
                 genitore.setIndirizzoDomicilio(indirizzoDomicilio);
             }
-            if(numeroCivicoDomicilio!=null)
+            if(numeroCivicoDomicilio!=null && numeroCivicoDomicilio.length()!=0)
             {
                 genitore.setNumeroCivicoDomicilio(numeroCivicoDomicilio);
             }
-            if(capDomicilio!=null)
+            if(capDomicilio!=null && capDomicilio.length()!=0)
             {
                 if(capDomicilio.length() != 5)
                     throw new InserimentoDatiException("Il cap del domicilio non è valido");
                 genitore.setCapDomicilio(capDomicilio);
             }
-            if(comuneDomicilio!=null)
+            if(comuneDomicilio!=null && comuneDomicilio.length()!=0)
             {
                 genitore.setComuneDomicilio(comuneDomicilio);
             }
-            if(provinciaDomicilio!=null)
+            if(provinciaDomicilio!=null && provinciaDomicilio.length()!=0)
             {
                 genitore.setProvinciaDomicilio(provinciaDomicilio);
             }
-            if(categoriaAppartenenza!=null)
+            if(categoriaAppartenenza!=null && categoriaAppartenenza.length()!=0)
             {
                 genitore.setCategoriaAppartenenza(categoriaAppartenenza);
             }
@@ -262,23 +261,23 @@ public class ControlDatiPersonali {
             {
                 genitore.setQuestionariCompilati(questionariCompilati);
             }
-            if(tipo!=null)
+            if(tipo!=null && tipo.length()!=0)
             {
                 genitore.setTipo(tipo);
             }
-            if(dipendentePresso!=null)
+            if(dipendentePresso!=null && dipendentePresso.length()!=0)
             {
                 genitore.setDipendentePresso(dipendentePresso);
             }
-            if(rapportiAteneoSalerno!=null)
+            if(rapportiAteneoSalerno!=null && rapportiAteneoSalerno.length()!=0)
             {
                 genitore.setRapportiAteneoSalerno(rapportiAteneoSalerno);
             }
-            if(rapportiComuneFisciano!=null)
+            if(rapportiComuneFisciano!=null && rapportiComuneFisciano.length()!=0)
             {
                 genitore.setRapportiComuneFisciano(rapportiComuneFisciano);
             }
-            if(statusLavorativo!=null)
+            if(statusLavorativo!=null && statusLavorativo.length()!=0)
             {
                 genitore.setStatusLavorativo(statusLavorativo);
             }
@@ -286,15 +285,15 @@ public class ControlDatiPersonali {
             {
                 genitore.setScadenzaContratto(scadenzaContratto);
             }
-            if(rapportoParentela!=null)
+            if(rapportoParentela!=null && rapportoParentela.length()!=0)
             {
                 genitore.setRapportoParentela(rapportoParentela);
             }
-            if(condizioneLavorativa!=null)
+            if(condizioneLavorativa!=null && condizioneLavorativa.length()!=0)
             {
                 genitore.setCondizioneLavorativa(condizioneLavorativa);
             }
-            if(tipoContratto!=null)
+            if(tipoContratto!=null && tipoContratto.length()!=0)
             {
                 genitore.setTipoContratto(tipoContratto);
             }
