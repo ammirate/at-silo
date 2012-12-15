@@ -76,16 +76,11 @@ public class ControlQuestionario {
                 throw new QuestionarioException("Inserimento fallito");
             
             for(DomandaQuestionario d : domande){
-                if(storageD.getDomanda(d.getId()) == null){
-                  if(!storageD.inserisci(d))
-                    throw new QuestionarioException("inserimento domanda fallito");
-                    
-                    campi = d.getCampi();
-                    for(CampoDomandaQuestionario c : campi)
-                        storageC.inserisci(c);   
-                }
+                  storageD.inserisci(d);
+                  campi = d.getCampi();
+                  for(CampoDomandaQuestionario c : campi)
+                        storageC.inserisci(c);       
             }
-        } catch (SQLException e) {
         }
         finally{
             db.chiudiConnessione();
