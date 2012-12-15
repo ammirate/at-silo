@@ -555,16 +555,22 @@ public class JUnitTestControlQuestionario {
         
         DomandaQuestionario domanda1 = new DomandaQuestionario(201,200,"E' soddisfatto della mensa?",null);
         CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("radio","molto","molto",201);
+        c1.setId(21);
         CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("radio","abbastanza","abbastanza",201);
+        c2.setId(22);
         CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("radio","poco","poco",201);
+        c3.setId(23);
         domanda1.aggiungiCampo(c1);
         domanda1.aggiungiCampo(c2);
         domanda1.aggiungiCampo(c3);
         
         DomandaQuestionario domanda2 = new DomandaQuestionario(202,200,"Quanto usa la mensa suo figlio?",null);
         CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("radio","2 volte/sett","poco",202);
+        c4.setId(24);
         CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("radio","4 volte/sett","abbastanza",202);
+        c5.setId(25);
         CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("radio","6 volte/sett","molto",202);
+        c6.setId(26);
         domanda2.aggiungiCampo(c4);
         domanda2.aggiungiCampo(c5);
         domanda2.aggiungiCampo(c6);
@@ -572,7 +578,9 @@ public class JUnitTestControlQuestionario {
         
         DomandaQuestionario domanda3 = new DomandaQuestionario(203, 200, "Suo figlio le sembra contento?", null);
         CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("radio","si","si",203);
+        c7.setId(27);
         CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("radio","no","no",203);
+        c8.setId(28);
         domanda3.aggiungiCampo(c7);
         domanda3.aggiungiCampo(c8);
         
@@ -581,13 +589,12 @@ public class JUnitTestControlQuestionario {
         questionario.aggiungiDomanda(domanda3);
         
         //se già hai eseguito questo metodo, commenta la riga successiva
-        control.inserisciQuestionario(questionario);
+       // control.inserisciQuestionario(questionario);
         
         
         RispostaQuestionario r1 = new RispostaQuestionario("molto", 201, "csrntn91l26c129j");
         RispostaQuestionario r2 = new RispostaQuestionario("poco", 201,"abcdefghilmnopqr");
         RispostaQuestionario r3 = new RispostaQuestionario("molto", 201, "qualcuno");
-        List<RispostaQuestionario> riposte1 = new ArrayList<RispostaQuestionario>();
               
         RispostaQuestionario r4 = new RispostaQuestionario("molto", 202, "csrntn91l26c129j");
         RispostaQuestionario r5 = new RispostaQuestionario("poco", 202,"abcdefghilmnopqr");
@@ -615,31 +622,31 @@ public class JUnitTestControlQuestionario {
         
         //se già hai eseguito questo metodo, commenta le 3 riga successiva
 
-        
+        /*
         control.compilaQuestionario(200, primo, "csrntn91l26c129j");
         control.compilaQuestionario(200, secondo, "abcdefghilmnopqr");
         control.compilaQuestionario(200, terzo, "qualcuno");
-        
+        */
         
         StatisticheQuestionario S = control.getStatistische(200);
         
         System.out.println("Hanno compilato il questionario "+S.getNumber_comp()+" persone");
 
         System.out.println(domanda1.getDescrizione());
-        System.out.println( S.getPercentualiFromCampo(201, c1.getId()) );
-        System.out.println( S.getPercentualiFromCampo(201, c2.getId()) );
-        System.out.println( S.getPercentualiFromCampo(201, c3.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, 21 ));
+        System.out.println( S.getPercentualiFromCampo(201, 22 ));
+        System.out.println( S.getPercentualiFromCampo(201, 23 ));
         
         
         System.out.println(domanda2.getDescrizione());  
-        System.out.println( S.getPercentualiFromCampo(201, c4.getId()) );
-        System.out.println( S.getPercentualiFromCampo(201, c5.getId()) );
-        System.out.println( S.getPercentualiFromCampo(201, c6.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, 24));
+        System.out.println( S.getPercentualiFromCampo(201, 25));
+        System.out.println( S.getPercentualiFromCampo(201, 26));
         
         
         System.out.println(domanda3.getDescrizione());    
-        System.out.println( S.getPercentualiFromCampo(201, c7.getId()) );
-        System.out.println( S.getPercentualiFromCampo(201, c8.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, 27) );
+        System.out.println( S.getPercentualiFromCampo(201, 28) );
         
     }
     
