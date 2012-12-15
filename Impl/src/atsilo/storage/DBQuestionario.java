@@ -223,7 +223,10 @@ public class DBQuestionario extends DBBeans<Questionario>{
             res.close();
             return q;
         }
-        else return null;
+        else {
+            res.close();
+            return null;
+        }
         
     }
     
