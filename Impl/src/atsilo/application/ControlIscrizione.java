@@ -30,6 +30,7 @@ import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
 import atsilo.exception.InserimentoDatiException;
 import atsilo.exception.UtenteException;
+import atsilo.storage.DBBambino;
 import atsilo.storage.DBDomandaIscrizione;
 import atsilo.storage.Database;
 import atsilo.stub.application.StubAccount;
@@ -60,12 +61,13 @@ public class ControlIscrizione {
     private static final Logger LOG = Logger.getLogger("global");
     
     
-    /**@todo questo lo chiamo in fase di compilazione della domanda per aggiornare i dati
-     * Inserisce una Domanda di Iscrizione
+    /**
+     * Inserisce una Domanda di Iscrizione se non esiste e la modifica se esiste già
      * @param parametri necessaria alla creazione della domanda di iscrizione 
      * @return valore booleano
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
+     * @throws SQLException 
      */
     public boolean updateDatiDomandaIscrizionePrimoStep(Date dataPresentazione, int iD, int punteggio,
             int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
@@ -73,33 +75,95 @@ public class ControlIscrizione {
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-            String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) throws DomandaIscrizioneException, DBConnectionException{
+            String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db); 
+        DBDomandaIscrizione stub = new DBDomandaIscrizione(db); 
         
-        DomandaIscrizione domandaIscrizione = new DomandaIscrizione(dataPresentazione, iD, punteggio,
-                posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
-                certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
-                genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
-                condizioniCalcoloPunteggio, isee, servizio, stato_convalidazione);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            
-            if(!stub.inserisci(domandaIscrizione))
-                throw new DomandaIscrizioneException("Inserimento fallito");
+        DomandaIscrizione domanda = stub.ricercaDomandaDaId(iD);
+        if(domanda == null)
+        {
+            domanda = new DomandaIscrizione(dataPresentazione, punteggio,
+                    posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
+                    certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
+                    genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
+                    condizioniCalcoloPunteggio, isee, servizio, stato_convalidazione);
+            if(!db.apriConnessione())
+                throw new DBConnectionException("Connessione al DB fallita");
+            try{
+                
+                if(!stub.inserisci(domanda))
+                    throw new DomandaIscrizioneException("Inserimento fallito");
+            }
+            finally{
+                db.chiudiConnessione();
+            }
         }
-        finally{
-            db.chiudiConnessione();
+        else
+        {
+            DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
+            if(dataPresentazione != null)
+                domandaModificata.setDataPresentazione(dataPresentazione);
+            if(punteggio != -1)
+                domandaModificata.setPunteggio(punteggio);
+            if(posizione != -1)
+                domandaModificata.setPosizione(posizione);
+            if(genitore != null)
+                domandaModificata.setGenitore(genitore);
+            if(bambino != null)
+                domandaModificata.setBambino(bambino);
+            if(statoDomanda != null)
+                domandaModificata.setStatoDomanda(statoDomanda);
+            if(certificatoMalattie != null)
+                domandaModificata.setCertificatoMalattie(certificatoMalattie);
+            if(certificatoVaccinazioni != null)
+                domandaModificata.setCertificatoVaccinazioni(certificatoVaccinazioni);
+            if(certificatoPrivacy != null)
+                domandaModificata.setCertificatoPrivacy(certificatoPrivacy);
+            if(bambinoDisabile == true)
+                domandaModificata.setBambinoDisabile(bambinoDisabile);
+            if(genitoreInvalido == true)
+                domandaModificata.setGenitoreInvalido(genitoreInvalido);
+            if(genitoreSolo == true)
+                domandaModificata.setGenitoreSolo(genitoreSolo);
+            if(genitoreVedovo == true)
+                domandaModificata.setGenitoreVedovo(genitoreVedovo);
+            if(genitoreNubile == true)
+                domandaModificata.setGenitoreNubile(genitoreNubile);
+            if(genitoreSeparato == true)
+                domandaModificata.setGenitoreSeparato(genitoreSeparato);
+            if(figlioNonRiconosciuto == true)
+                domandaModificata.setFiglioNonRiconosciuto(figlioNonRiconosciuto);
+            if(affidoEsclusivo == true)
+                domandaModificata.setAffidoEsclusivo(affidoEsclusivo);
+            if(altriComponentiDisabili == true)
+                domandaModificata.setAltriComponentiDisabili(altriComponentiDisabili); 
+            if(condizioniCalcoloPunteggio != null)
+                domandaModificata.setCondizioniCalcoloPunteggio(condizioniCalcoloPunteggio);
+            if(isee != -1)
+                domandaModificata.setIsee(isee);
+            if(servizio != null)
+                domandaModificata.setServizio(servizio);
+            if(stato_convalidazione != null)
+                domandaModificata.setStato_convalidazione(stato_convalidazione);
+            
+            if(!db.apriConnessione())
+                throw new DBConnectionException("Connessione al DB fallita");
+            try{
+                
+                if(!stub.replace(domanda, domandaModificata))
+                    throw new DomandaIscrizioneException("Modifica fallita");
+            }
+            finally{
+                db.chiudiConnessione();
+            }
         }
         return true;
     }
     
     
-    /**@todo questo presenta la domanda per quello account e quel bambino
-     * Presenta domanda di iscrizione (PrimoStep) 
+    /**
+     * Presenta domanda di iscrizione (PrimoStep), verifica quindi che tutti i campi siano stati inseriti
      * @param cf_bambino
      * @param username_account
      * @return
@@ -108,8 +172,22 @@ public class ControlIscrizione {
      * @throws InserimentoDatiException 
      * @throws UtenteException 
      */
-    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino,String username_account) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException{
+    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException{
         Database db = new Database();
+        
+        DBBambino stub = new DBBambino(db);
+        Bambino bambino = stub.ricercaBambinoPerCodFiscale(codiceFiscaleBambino);
+        if(bambino == null)
+            throw new BambinoException("Bambino non trovato");
+        
+        
+        
+        
+        
+        
+        
+        
+        
         StubAccount stub = new StubAccount(db); 
         StubUtente stub2 = new StubUtente(db);
         
