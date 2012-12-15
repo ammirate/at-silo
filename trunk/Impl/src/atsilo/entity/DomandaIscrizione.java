@@ -16,10 +16,11 @@ import java.sql.Date;
  * REVISION
  * Andrea Micco, 6/12/2012
  * Mariella Ferrara, 7/12/2012
+ * D'Eugenio Elisa, 15/12/2012
  *-----------------------------------------------------------------
  */
 
-public class DomandaIscrizione {
+public class DomandaIscrizione implements Cloneable{
     
     private Date dataPresentazione;
     private int id;
@@ -99,6 +100,60 @@ public class DomandaIscrizione {
         super();
         this.dataPresentazione = dataPresentazione;
         this.id = iD;
+        this.punteggio = punteggio;
+        this.posizione = posizione;
+        this.genitore = genitore;
+        this.bambino = bambino;
+        this.statoDomanda = statoDomanda;
+        this.certificatoMalattie = certificatoMalattie;
+        this.certificatoVaccinazioni = certificatoVaccinazioni;
+        this.certificatoPrivacy = certificatoPrivacy;
+        this.bambinoDisabile = bambinoDisabile;
+        this.genitoreInvalido = genitoreInvalido;
+        this.genitoreSolo = genitoreSolo;
+        this.genitoreVedovo = genitoreVedovo;
+        this.genitoreNubile = genitoreNubile;
+        this.genitoreSeparato = genitoreSeparato;
+        this.figlioNonRiconosciuto = figlioNonRiconosciuto;
+        this.affidoEsclusivo = affidoEsclusivo;
+        this.altriComponentiDisabili = altriComponentiDisabili;
+        this.condizioniCalcoloPunteggio = condizioniCalcoloPunteggio;
+        this.isee = isee;
+        this.servizio = servizio;
+        this.stato_convalidazione=stato_convalidazione;
+    }
+    
+    /**
+     * @param dataPresentazione il parametro è fissato
+     * @param punteggio il parametro è fissato
+     * @param posizione il parametro è fissato
+     * @param genitore è settato dopo la lettura
+     * @param bambino è settato dopo la lettura
+     * @param statoDomanda è fissato
+     * @param certificatoMalattie è fissato
+     * @param certificatoVaccinazioni è fissato
+     * @param bambinoDisabile è fissato
+     * @param genitoreInvalido è fissato
+     * @param genitoreSolo è fissato
+     * @param genitoreVedovo è fissato
+     * @param genitoreNubile è fissato
+     * @param genitoreSeparato è fissato
+     * @param figlioNonRiconosciuto è fissato
+     * @param affidoEsclusivo è fissato
+     * @param altriComponentiDisabili è fissato
+     * @param isee è fissato
+     * @param servizio è fissato dopo la lettura
+     * @param stato_convalidazione è fissato
+     */
+    public DomandaIscrizione(Date dataPresentazione, int punteggio,
+           int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
+            String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
+            boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
+            boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
+            boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
+            String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) {
+        super();
+        this.dataPresentazione = dataPresentazione;
         this.punteggio = punteggio;
         this.posizione = posizione;
         this.genitore = genitore;
@@ -490,10 +545,37 @@ public class DomandaIscrizione {
         this.stato_convalidazione = stato_convalidazione;
     }
     
-    
-    
-    
-    
-    
+    /**
+     * Metodo di sovrascrizione del metodo clone della classe Object
+     * @return DomandaIscrizione clonata
+     */
+    public DomandaIscrizione clone()
+    {
+        DomandaIscrizione domanda = new DomandaIscrizione();
+        domanda.dataPresentazione = this.dataPresentazione;
+        domanda.id = this.id;
+        domanda.punteggio = this.punteggio;
+        domanda.posizione = this.posizione;
+        domanda.genitore = this.genitore;
+        domanda.bambino = this.bambino;
+        domanda.statoDomanda = this.statoDomanda;
+        domanda.certificatoMalattie = this.certificatoMalattie;
+        domanda.certificatoVaccinazioni = this.certificatoVaccinazioni;
+        domanda.certificatoPrivacy = this.certificatoPrivacy;
+        domanda.bambinoDisabile = this.bambinoDisabile;
+        domanda.genitoreInvalido = this.genitoreInvalido;
+        domanda.genitoreSolo = this.genitoreSolo;
+        domanda.genitoreVedovo = this.genitoreVedovo;
+        domanda.genitoreNubile = this.genitoreNubile;
+        domanda.genitoreSeparato = this.genitoreSeparato;
+        domanda.figlioNonRiconosciuto = this.figlioNonRiconosciuto;
+        domanda.affidoEsclusivo = this.affidoEsclusivo;
+        domanda.altriComponentiDisabili = this.altriComponentiDisabili;
+        domanda.condizioniCalcoloPunteggio = this.condizioniCalcoloPunteggio;
+        domanda.isee = this.isee;
+        domanda.servizio = this.servizio;
+        domanda.stato_convalidazione= this.stato_convalidazione;
+        return domanda;
+    }
     
 }
