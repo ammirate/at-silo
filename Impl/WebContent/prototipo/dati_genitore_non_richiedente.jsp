@@ -43,36 +43,27 @@ include
 		String sedeDiLavoro="";
 		
 		%>
-	<%
+	<% // setto select bambino
 		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
 	   	Utente utente=cdt.getValoriUtente(username);
 	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 	  	List<Bambino> figli= new ArrayList<Bambino>();
-	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale());
+	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
 	  	
-	  	
-	  	
-	  	
-	    	for (int i=0;i<figli.size();i++){
-	%> <script type=text/javascript>
-
-  	   		  objSelect = document.getElementById("select_bambini");
-  	   		//prove  
-  	   		with ( objSelect.elements["select_bambini"] )
-            {
-              options.length          = 0;
-              options[options.length] = new Option( "Testo #1", "Valore_1", false, false );
-              options[options.length] = new Option( "Testo #2", "Valore_2", false, false );
-              options[options.length] = new Option( "Testo #3", "Valore_3", false, false );
-            }
-  	   		  
-  	   	     objSelect.option[<%=i%>]=new Option("Selezionare il bambino", "", true)
-  	  		 objSelect.optionsg[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
-							
+	   
+			%> <script type=text/javascript>
+			function popolaSelect(){
+  	   		   objSelect = document.getElementById("select_bambini");
+			   <% for (int i=0;i<figli.size();i++){%>
+  	
+  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
+		<%} %>	
+			}
 	</script> 
-	<%} %>
+	
+	 
 	 <%!
-    void SettaCampiForm(String cf){
+    void settaCampiForm(String cf){
 	 ControlDatiPersonali cdt=ControlDatiPersonali.getIstance();
 	 Genitore genitore=new Genitore();
 	if (cf!=null){ 
@@ -106,7 +97,8 @@ include
  	
  }
  %>
-	<!--Script per gestire i form --> <script type="text/javascript">
+	<!--Script per gestire i form -->
+     <script type="text/javascript">
 		function settaAttributi(slf) {
 			document
 					.getElementById("dati_bando")
@@ -118,8 +110,6 @@ include
 			var n = f.elements.length;
 			for ( var i = 1; i < n; i++)
 				document.forms[0].elements[i].removeAttribute("readonly");
-			document.getElementById("codiceFiscale").setAttribute("readonly",
-					"readonly");
 			slf.onclick = null;
 			return false;
 
@@ -146,9 +136,9 @@ include
 			</tr>
 			<tr>
 				<td colspan="2"><p>
-						<select name="select_bambini" id="select_bambini" onChange="SettaCampiForm(this)">
-
-				    </select>
+						<select name="select_bambini" id="select_bambini" onfocus="popolaSelect(this)" onchange="return settaCampiForm(this.value)">
+						  <option value="null" selected>Selezionare Bambino</option>
+                </select>
 					</p>
 					<p>&nbsp;</p></td>
 				<td>&nbsp;</td>

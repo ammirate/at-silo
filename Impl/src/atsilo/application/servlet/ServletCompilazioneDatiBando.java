@@ -318,7 +318,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         }//fine update dati genitore non richiedente
         
         if ( request.getParameter("chiamante").equals("situazione_reddituale")){//se chiamante è la pagina della sitauzione reddituale  
-            
+            /*
             String codiceFiscaleGenitore = controlDatiPersonali.getValoriUtente("username").getCodiceFiscale();
             
             try {
@@ -336,7 +336,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE,getServletName()+ "Erroree connessioen al database", e.getMessage());
-            } 
+            } */
             
         }//fine update sitauzione reddituale
         

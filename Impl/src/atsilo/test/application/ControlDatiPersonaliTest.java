@@ -111,13 +111,13 @@ public class ControlDatiPersonaliTest {
     @Test
     // completa Iscrizione
     public void getValoriIscrizioniNonConvalidateTest() throws DomandaIscrizioneException, DBConnectionException   {
-         assertNotNull(control.getValoriIscrizioniNonConvalidate());
+         assertNotNull(control.getDomandeIscrizioneNonConvalidate());
     }
     
     @Test
     // completa Iscrizione
     public void escludiIscrizioneTest() throws DomandaIscrizioneException, DBConnectionException   {
-         assertTrue(control.escludiIscrizione(10));
+         assertTrue(control.rinunciaIscrizione(10));
     }
     
     @Test
