@@ -27,15 +27,15 @@ include
 		  	List<Bambino> figli= new ArrayList<Bambino>();
 		  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli
 	%> <!--Popola la select con i nomi dei bambini del genitore richiedente-->
-	<script type=text/javascript>
+<script type=text/javascript>
 			function popolaSelect(){
   	   		   objSelect = document.getElementById("select_bambini");
-			   <%for (int i=0;i<figli.size();i++){%>
-  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>
-		');
-	<%}%>
-		}
-	</script> <script>
+			   <% for (int i=0;i<figli.size();i++){%>
+  	  		       objSelect.options[<%=i+2%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
+		<%} %>	
+			}
+	</script>
+     <script>
 		function submitForm() {
 			document.forms[0].submit();
 		}
@@ -105,11 +105,11 @@ include
 
 			</tr>
 			<tr>
-				<td colspan="2"><select name="select_bambini"
-					id="select_bambini" onfocus="popolaSelect(this)">
-						<option value="null" selected>Selezionare Bambino</option>
-						<option value="aggiungi_bambino">Aggiungere Bambino</option>
-				</select></td>
+				<td colspan="2"><select name="select_bambini" id="select_bambini"
+							onfocus="popolaSelect(this)"
+							onchange="submitForm()">
+				  <option value="null">Aggiungere Bambino</option>
+              </select></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
@@ -125,17 +125,17 @@ include
 			<tr>
 				<td>Nato/a a</td>
 				<td><input name="comune_nascita_bambino" type="text"
-					id="comune_nascita_bambino" value="<%=comune_nascita%>" size="25" maxlength="25"
+					id="comune_nascita_bambino" value="<%=comuneNascita%>" size="25" maxlength="25"
 					readonly="readonly"></td>
 				<td>Nato il</td>
 				<td><input name="data_nascita_bambino" type="text"
-					id="data_nascita_bambino" value="<%=data_nascita%>" size="25" maxlength="10"
+					id="data_nascita_bambino" value="<%=dataNascita%>" size="25" maxlength="10"
 					readonly="readonly"></td>
 			</tr>
 			<tr>
 				<td>Codice Fiscale</td>
 				<td><input name="codice_fiscale_bambino" type="text"
-					id="codice_fiscale_bambino" value="<%=codice_fiscale%>" size="25" maxlength="16"
+					id="codice_fiscale_bambino" value="<%=codiceFiscale%>" size="25" maxlength="16"
 					readonly="readonly" /></td>
 				<td>Cittadinanza</td>
 				<td><input name="cittadinanza_bambino" type="text"
