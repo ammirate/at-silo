@@ -37,6 +37,7 @@ import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.Questionario;
 import atsilo.entity.RispostaQuestionario;
+import atsilo.entity.StatisticheQuestionario;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.QuestionarioException;
 import atsilo.storage.Database;
@@ -144,9 +145,9 @@ public class JUnitTestControlQuestionario {
     public void testIsEditableTrue() {
         
         Calendar dataIn = Calendar.getInstance();
-        dataIn.set(2012, 11, 1);
+        dataIn.set(2011, 1, 1);
         Calendar dataFin = Calendar.getInstance();
-        dataFin.set(2013, 11, 11);
+        dataFin.set(2011, 11, 30);
         Date dataI= new Date(dataIn.getTimeInMillis());
         Date dataF= new Date(dataFin.getTimeInMillis());
         Questionario questionario = new Questionario("questionario 51", null, "Numero51",51,  dataI, dataF);
@@ -163,12 +164,12 @@ public class JUnitTestControlQuestionario {
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#isEditable(atsilo.entity.Questionario)}.
      */
-    //@Test  // NO
+    //@Test  // OK
     public void testIsEditableFalse() {
         Calendar dataIn = Calendar.getInstance();
-        dataIn.set(2011, 11, 1);
+        dataIn.set(2012, 11, 1);
         Calendar dataFin = Calendar.getInstance();
-        dataFin.set(2012, 5, 11);
+        dataFin.set(2013, 5, 11);
         Date dataI= new Date(dataIn.getTimeInMillis());
         Date dataF= new Date(dataFin.getTimeInMillis());
         Questionario questionario = new Questionario("questionario 51", null, "Numero51",51,  dataI, dataF);
@@ -315,7 +316,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    @Test //OK
+    //@Test //OK
     public void testCompilaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
         
         Calendar dataIn = Calendar.getInstance();
@@ -377,12 +378,12 @@ public class JUnitTestControlQuestionario {
      * @throws QuestionarioException 
      * @throws DBConnectionException 
      */
-   // @Test //NO
+    //@Test   //OK
     public void testGetQuestionariDaCompilare() throws DBConnectionException, QuestionarioException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
         Calendar dataFin = Calendar.getInstance();
-        dataFin.set(2012, 11, 11);
+        dataFin.set(2013, 11, 11);
         Date dataI= new Date(dataIn.getTimeInMillis());
         Date dataF= new Date(dataFin.getTimeInMillis());
         
@@ -407,68 +408,279 @@ public class JUnitTestControlQuestionario {
         
     }
     
-    /**
-     * Test method for {@link atsilo.application.ControlQuestionario#caricaQuestionarioDaCompilare(int, java.lang.String)}.
-     */
-   // @Test
-    public void testCaricaQuestionarioDaCompilare() {
-        fail("Not yet implemented");
-    }
+
+    
+    
+    
     
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#inserisciDomanda(int, atsilo.entity.DomandaQuestionario)}.
+     * @throws QuestionarioException 
+     * @throws DBConnectionException 
+     * @throws SQLException 
      */
-   // @Test
-    public void testInserisciDomanda() {
-        fail("Not yet implemented");
+    //@Test //OK
+    public void testInserisciDomanda() throws DBConnectionException, QuestionarioException, SQLException {
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2013, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
+        Questionario q = new Questionario("Controllo inserimento domanda", null, "ControlloDomanda",127,  dataI, dataF);
+      
+        DomandaQuestionario d = new DomandaQuestionario(87,127,"che ore sono?", null);
+        CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("radio", "è presto", "17.00", 87);
+        CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("radio", "non tanto presto", "20.00", 87);
+        CampoDomandaQuestionario c3= new CampoDomandaQuestionario("radio", "è tardi", "23.00", 87);
+        d.aggiungiCampo(c1);
+        d.aggiungiCampo(c2);
+        d.aggiungiCampo(c3);
+        
+        control.inserisciQuestionario(q);
+        control.inserisciDomanda(127, d);
+        
+        List<DomandaQuestionario> domande = control.caricaQuestionarioDaCompilare(127, "CVLMRA69A23B333C").getDomande();
+        
+        DomandaQuestionario test = domande.get(0);
+        assertEquals(d.toString(), test.toString());
+        assertEquals(c1.toString(), test.getCampi().get(0).toString());
+        assertEquals(c2.toString(), test.getCampi().get(1).toString());
+        assertEquals(c3.toString(), test.getCampi().get(2).toString());
+        
     }
+    
+    
+    
+    
+    
+    
     
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#eliminaDomanda(int)}.
+     * @throws QuestionarioException 
+     * @throws DBConnectionException 
+     * @throws SQLException 
      */
-   // @Test
-    public void testEliminaDomanda() {
-        fail("Not yet implemented");
+   // @Test  //OK
+    public void testEliminaDomanda() throws DBConnectionException, QuestionarioException, SQLException {
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2013, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
+        Questionario q = new Questionario("Controllo eliminazione domanda", null, "ControlloElDomanda",132,  dataI, dataF);
+      
+        DomandaQuestionario dom1 = new DomandaQuestionario(200,132,"funziona??", null);
+        dom1.aggiungiCampo(new CampoDomandaQuestionario("radio", "si", "si", 200));
+        dom1.aggiungiCampo(new CampoDomandaQuestionario("radio", "no", "no", 200));
+        
+        DomandaQuestionario dom2 = new DomandaQuestionario(201,132,"funzionerà??", null);
+        dom1.aggiungiCampo(new CampoDomandaQuestionario("radio", "si", "si", 201));
+        dom1.aggiungiCampo(new CampoDomandaQuestionario("radio", "no", "no", 201));
+        q.aggiungiDomanda(dom1);
+        q.aggiungiDomanda(dom2);
+        
+        control.inserisciQuestionario(q);
+        
+        control.eliminaDomanda(201);
+        
+        List<DomandaQuestionario> D = control.caricaQuestionarioDaCompilare(132, "CVLMRA69A23B333C").getDomande();
+        assertEquals(1, D.size() );
     }
+    
+    
+    
+    
     
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#modificaDomanda(int, atsilo.entity.DomandaQuestionario)}.
+     * @throws QuestionarioException 
+     * @throws DBConnectionException 
+     * @throws SQLException 
      */
-    //@Test
-    public void testModificaDomanda() {
-        fail("Not yet implemented");
+    //@Test  //OK
+    public void testModificaDomanda() throws DBConnectionException, QuestionarioException, SQLException {
+
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2013, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
+        Questionario q = new Questionario("Controllo modifica domanda", null, "ControlloMoDomanda",153,  dataI, dataF);
+        
+        DomandaQuestionario d1 = new DomandaQuestionario(61,153,"domanda sabato sera",null);
+        d1.aggiungiCampo(new CampoDomandaQuestionario("radio","non lo so", "boh",61));
+        d1.aggiungiCampo(new CampoDomandaQuestionario("radio","forse", "forse",61));
+        
+        DomandaQuestionario d222 = new DomandaQuestionario(62,153,"domanda domenica sera",null);
+        d222.aggiungiCampo(new CampoDomandaQuestionario("radio","non lo so", "boh",62));
+        d222.aggiungiCampo(new CampoDomandaQuestionario("radio","forse", "forse",62));
+   
+        q.aggiungiDomanda(d1);
+        
+        control.inserisciQuestionario(q);
+        control.modificaDomanda(61, d222);
+        
+        List<DomandaQuestionario> D = control.caricaQuestionarioDaCompilare(153, "CVLMRA69A23B333C").getDomande();    
+        DomandaQuestionario test = D.get(0);
+        
+        assertEquals(62, test.getId());
     }
+    
+    
+    
+    
     
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#getStatistische(int)}.
+     * @throws QuestionarioException 
+     * @throws DBConnectionException 
      */
-    //@Test
-    public void testGetStatistische() {
-        fail("Not yet implemented");
+    @Test
+    public void testGetStatistische() throws DBConnectionException, QuestionarioException {
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2013, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
+        Questionario questionario = new Questionario("Questionario Qualita Mensa", null, "Mensa",200,  dataI, dataF);
+        
+        DomandaQuestionario domanda1 = new DomandaQuestionario(201,200,"E' soddisfatto della mensa?",null);
+        CampoDomandaQuestionario c1 = new CampoDomandaQuestionario("radio","molto","molto",201);
+        CampoDomandaQuestionario c2 = new CampoDomandaQuestionario("radio","abbastanza","abbastanza",201);
+        CampoDomandaQuestionario c3 = new CampoDomandaQuestionario("radio","poco","poco",201);
+        domanda1.aggiungiCampo(c1);
+        domanda1.aggiungiCampo(c2);
+        domanda1.aggiungiCampo(c3);
+        
+        DomandaQuestionario domanda2 = new DomandaQuestionario(202,200,"Quanto usa la mensa suo figlio?",null);
+        CampoDomandaQuestionario c4 = new CampoDomandaQuestionario("radio","2 volte/sett","poco",202);
+        CampoDomandaQuestionario c5 = new CampoDomandaQuestionario("radio","4 volte/sett","abbastanza",202);
+        CampoDomandaQuestionario c6 = new CampoDomandaQuestionario("radio","6 volte/sett","molto",202);
+        domanda2.aggiungiCampo(c4);
+        domanda2.aggiungiCampo(c5);
+        domanda2.aggiungiCampo(c6);
+        
+        
+        DomandaQuestionario domanda3 = new DomandaQuestionario(203, 200, "Suo figlio le sembra contento?", null);
+        CampoDomandaQuestionario c7 = new CampoDomandaQuestionario("radio","si","si",203);
+        CampoDomandaQuestionario c8 = new CampoDomandaQuestionario("radio","no","no",203);
+        domanda3.aggiungiCampo(c7);
+        domanda3.aggiungiCampo(c8);
+        
+        questionario.aggiungiDomanda(domanda1);
+        questionario.aggiungiDomanda(domanda2);
+        questionario.aggiungiDomanda(domanda3);
+        
+     //   control.inserisciQuestionario(questionario);
+        
+        
+        RispostaQuestionario r1 = new RispostaQuestionario("molto", 201, "csrntn91l26c129j");
+        RispostaQuestionario r2 = new RispostaQuestionario("poco", 201,"abcdefghilmnopqr");
+        RispostaQuestionario r3 = new RispostaQuestionario("molto", 201, "qualcuno");
+        List<RispostaQuestionario> riposte1 = new ArrayList<RispostaQuestionario>();
+              
+        RispostaQuestionario r4 = new RispostaQuestionario("molto", 202, "csrntn91l26c129j");
+        RispostaQuestionario r5 = new RispostaQuestionario("poco", 202,"abcdefghilmnopqr");
+        RispostaQuestionario r6 = new RispostaQuestionario("poco", 202, "qualcuno");
+        
+        RispostaQuestionario r7 = new RispostaQuestionario("si", 203, "csrntn91l26c129j");
+        RispostaQuestionario r8 = new RispostaQuestionario("si", 203,"abcdefghilmnopqr");
+        RispostaQuestionario r9 = new RispostaQuestionario("no", 203, "qualcuno");
+        
+        List<RispostaQuestionario> primo = new ArrayList<RispostaQuestionario>();
+        primo.add(r1);
+        primo.add(r4);
+        primo.add(r7);
+        
+        List<RispostaQuestionario> secondo = new ArrayList<RispostaQuestionario>();
+        secondo.add(r2);
+        secondo.add(r5);
+        secondo.add(r8);
+        
+        List<RispostaQuestionario> terzo = new ArrayList<RispostaQuestionario>();
+        terzo.add(r3);
+        terzo.add(r6);
+        terzo.add(r9);
+        
+        /*
+        control.compilaQuestionario(200, primo, "csrntn91l26c129j");
+        control.compilaQuestionario(200, secondo, "abcdefghilmnopqr");
+        control.compilaQuestionario(200, terzo, "qualcuno");
+        */
+        
+        StatisticheQuestionario S = control.getStatistische(200);
+        
+        System.out.println("Hanno compilato il questionario "+S.getNumber_comp()+" persone");
+
+        System.out.println(domanda1.getDescrizione());
+        System.out.println( S.getPercentualiFromCampo(201, c1.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, c2.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, c3.getId()) );
+        
+        
+        System.out.println(domanda2.getDescrizione());  
+        System.out.println( S.getPercentualiFromCampo(201, c4.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, c5.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, c6.getId()) );
+        
+        
+        System.out.println(domanda3.getDescrizione());    
+        System.out.println( S.getPercentualiFromCampo(201, c7.getId()) );
+        System.out.println( S.getPercentualiFromCampo(201, c8.getId()) );
+        
     }
+    
+    
+    
+    
     
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#getAllQuestionari()}.
+     * @throws DBConnectionException 
      */
-   // @Test
-    public void testGetAllQuestionari() {
-        fail("Not yet implemented");
+    //@Test //OK
+    public void testGetAllQuestionari() throws DBConnectionException {
+        List<Questionario> Q = new ArrayList<Questionario>();
+        Q = control.getAllQuestionari();
+        
+        assertTrue(!Q.isEmpty());
     }
     
-    /**
-     * Test method for {@link atsilo.application.ControlQuestionario#getIstance()}.
-     */
-    //@Test
-    public void testGetIstance() {
-        fail("Not yet implemented");
-    }
+    
     
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#getQuestionario(int)}.
+     * @throws QuestionarioException 
+     * @throws DBConnectionException 
+     * @throws SQLException 
      */
-   // @Test
-    public void testGetQuestionario() {
-        fail("Not yet implemented");
+   //@Test  //OK
+    public void testGetQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
+
+        Calendar dataIn = Calendar.getInstance();
+        dataIn.set(2012, 11, 1);
+        Calendar dataFin = Calendar.getInstance();
+        dataFin.set(2013, 11, 11);
+        Date dataI= new Date(dataIn.getTimeInMillis());
+        Date dataF= new Date(dataFin.getTimeInMillis());
+        
+        Questionario questionario = new Questionario("QuestionarioAmbarapaccicciccoccò", null, "Mensa",598,  dataI, dataF);
+        
+        control.inserisciQuestionario(questionario);
+        
+        Questionario Q = control.getQuestionario(598);
+        
+        assertEquals(questionario.getNome(), Q.getNome());
+        
     }
     
     Database db = new Database();   //Logger
