@@ -371,7 +371,7 @@ public class ControlIscrizione {
         Database db = new Database();
         DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
         DomandaIscrizione domandaIscrizione = null;
-        
+        ControlDatiPersonali cdp= ControlDatiPersonali.getIstance();
         db.apriConnessione();
         
         if (cfBambino == null) {
@@ -379,7 +379,7 @@ public class ControlIscrizione {
             try {
                 //metodo getGenitoreFromUsername presente in ControlDatiPersonali
                 a = dbDomandaIscrizione
-                        .ricercaDomandaDaGenitore(getGenitoreFromUsername(
+                        .ricercaDomandaDaGenitore(cdp.getGenitoreFromUsername(
                                 username).getCodiceFiscale());
                 if (a.size() > 0)
                     domandaIscrizione = a.get(1);
