@@ -88,7 +88,7 @@ public class ServletRegistrazioneAccount extends HttpServlet {
         
         if (controlDatiPersonali.createAccount(cf, nome_richiedente, cognome_richiedente, email_richidente, tel_richiedente, tipologia_genitore_richiedente)){
             
-            
+           
             //creazione account ed entità genitore andata a buon fine
             //autologin nel sistema
             
@@ -106,25 +106,25 @@ public class ServletRegistrazioneAccount extends HttpServlet {
                
                 LOG.log(Level.SEVERE, "ServletRegistrazioneAccount: Errore sql", e);
             }//account appena creato
-            
+      
             //Setto le variabili di sessione
             HttpSession sessione = request.getSession();
             if (newAccount!=null){// controllo se account creato non è nullo
                 sessione.setAttribute("username", newAccount.getUserName());
                 String tipologia="genitore";//tipologia utente che accede al sistema,nel caso della registrazione nuovo utente è sempre un genitore
                 sessione.setAttribute("tipologia_utente", tipologia);//setto variabile di sessione che indica la tipologia di utente connesso
-                
+               
                 //reindirizzo verso index della tipologia di utente
                 response.setHeader("Location", login_ok);    
-                
+           
             }
         }//fine if creo account    
-        
+        else{
         response.setContentType("text/html");
         String login_error = new String("prototipo/registrazione_account.jsp?successo=failed");
         response.setHeader("Location", login_error);   
         response.setStatus(response.SC_MOVED_TEMPORARILY); 
-        
+        }
         
         
     }
