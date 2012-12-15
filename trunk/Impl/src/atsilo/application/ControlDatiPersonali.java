@@ -194,10 +194,10 @@ public class ControlDatiPersonali {
         DBBambino dbBambino = new DBBambino(db);
         
         db.apriConnessione();
-        List<Bambino> cf = null;
+        List<Bambino> lista = null;
         
         try {
-            cf = dbBambino.ricercaFigliGenitore(cf_genitore);
+            lista = dbBambino.ricercaFigliGenitore(cf_genitore);
             
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
@@ -205,7 +205,7 @@ public class ControlDatiPersonali {
         } finally {
             db.chiudiConnessione();
         }
-        return cf;
+        return lista;
     }
     
     

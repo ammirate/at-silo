@@ -80,7 +80,7 @@ public class ControlIscrizioneTest {
     @Test
     //visualizzazione domanda iscrizione
     public void getDomandaTest() throws DomandaIscrizioneException, DBConnectionException {
-        assertNotNull(control.getDomanda(12));  
+        assertNotNull(control.getDomandaIscrizione(12));  
     }
     
     @Test
@@ -110,7 +110,7 @@ public class ControlIscrizioneTest {
     @Test
     //inserimento domanda di iscrizione normale
     public void inserisciDomandaIscrizioneTest() throws DomandaIscrizioneException, DBConnectionException  {
-        assertTrue(control.inserisciDomandaIscrizione(new Date(2012, 8, 8), 2, 50, 10, g, b, "convalidata", "consegnato",
+        assertTrue(control.updateDatiDomandaIscrizionePrimoStep(new Date(2012, 8, 8), 2, 50, 10, g, b, "convalidata", "consegnato",
                 "mancante", "consegnato", false, false, false, false, false, false, false, false, false, "condizioni", 
                 24500F, null,"DomandaInviataInAttesaDiGraduatoria"));             
     }
