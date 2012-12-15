@@ -18,9 +18,10 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 <td class="content" valign="top" bgcolor="#ffffff"><%@
 include
 		file="atsilo_files/sidebar_top_genitore.jsp"%>
-	<!--Dati genitore non richiedente--> <%@ page
+	<!--Dati genitore non richiedente--> 
+	<%@ page
 		import="java.util.*,atsilo.application.*,atsilo.entity.*"%>
-		<%//instanzion variabili
+		<%//istanzio variabili
 		String cognome="";
 		String nome="";
 		String codiceFiscale="";
@@ -49,13 +50,13 @@ include
 	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 	  	List<Bambino> figli= new ArrayList<Bambino>();
 	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
-	  	
-	   
-			%> <script type=text/javascript>
+
+			%>
+            <!--Popola la select con i nomi fri bambini del genitore richiedente-->
+            <script type=text/javascript>
 			function popolaSelect(){
   	   		   objSelect = document.getElementById("select_bambini");
 			   <% for (int i=0;i<figli.size();i++){%>
-  	
   	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
 		<%} %>	
 			}
@@ -63,7 +64,10 @@ include
 	
 	 
 	 <%!
-    void settaCampiForm(String cf){
+	 //setta campi form una volta selezionato il nome del bambino 
+    void settaCampiForm(){
+		// String cf_bambino=cf//cf passato da paramentro funzione
+		 String cf="DFZGNN12L14A909D";//trovare il modo di prendere il cf
 	 ControlDatiPersonali cdt=ControlDatiPersonali.getIstance();
 	 Genitore genitore=new Genitore();
 	if (cf!=null){ 
@@ -75,6 +79,7 @@ include
 	}
    		
 		String cognome=genitore.getCognome(); 
+		//java.lang.System.out.println("Il cognome è"+cognome);//cancellare eliminare delete
 		String nome=genitore.getNome();
 		String codiceFiscale=genitore.getCodiceFiscale(); String
 		dataNascita="dataNascita" ;
@@ -136,7 +141,7 @@ include
 			</tr>
 			<tr>
 				<td colspan="2"><p>
-						<select name="select_bambini" id="select_bambini" onfocus="popolaSelect(this)" onchange="return settaCampiForm(this.value)">
+						<select name="select_bambini" id="select_bambini" onfocus="popolaSelect(this)" onchange="<% settaCampiForm();%>">
 						  <option value="null" selected>Selezionare Bambino</option>
                 </select>
 					</p>
