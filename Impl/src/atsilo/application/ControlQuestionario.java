@@ -348,10 +348,9 @@ public class ControlQuestionario {
             {
                 //controllo se quel questionario non è gia stato compilato in precedenza
                 //dal genitore
-              
                 if(!(compila.isCompilatoDa(q.getId(), CFgenitore)))
                 {
-                  
+                    //System.out.println("id questionario"+q.getId());
                     toReturn.add(q);
                 }
             }
@@ -374,8 +373,9 @@ public class ControlQuestionario {
      * @return a full questionnaire with all questions and all question fields
      * @throws DBConnectionException
      * @throws SQLException 
+     * @throws QuestionarioException 
      */
-    public Questionario caricaQuestionarioDaCompilare(int idQuestionario, String CFgenitore) throws DBConnectionException, SQLException{
+    public Questionario caricaQuestionarioDaCompilare(int idQuestionario, String CFgenitore) throws DBConnectionException, SQLException, QuestionarioException{
         Database db = new Database();
         DBQuestionario storage = new DBQuestionario(db);
         DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
@@ -390,10 +390,15 @@ public class ControlQuestionario {
             Questionario toReturn = storage.getQuestionario(idQuestionario);
             //setto le domande del questionario
             domande = storageDomande.getDomandeQuestionario(idQuestionario);
-            toReturn.setDomande(domande);
+            if(domande == null || domande.isEmpty()){
+                throw new QuestionarioException("Nessuna domanda presente nel questionario");
+            }
+            else{
+                toReturn.setDomande(domande);
+            }
             
             //setto i campi per ogni domanda
-            for(DomandaQuestionario d : domande){
+            for(DomandaQuestionario d : toReturn.getDomande()){
                 List<CampoDomandaQuestionario> campi = storageCampi.getCampiDomandaQuestionario(d.getId());
                 d.setCampi(campi);
             }
@@ -502,8 +507,6 @@ public class ControlQuestionario {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             try {
-                if(idVecchiaDomanda != newDomanda.getId() )
-                    throw new SQLException();
                 storageDomanda.replace(storageDomanda.getDomanda(idVecchiaDomanda), newDomanda);
                 
             } catch (SQLException e) {
@@ -556,8 +559,8 @@ public class ControlQuestionario {
                  //a quella domanda diviso il numero di persone totale che hanno compilato il questionario
                    
                    int perc_num_risp=num_risp / statq.getNumeroComp(); 
-                   System.out.println("campo id: "+c.getId());
-                   System.out.println("perc: "+perc_num_risp);
+                 //  System.out.println("campo id: "+c.getId());
+                 //  System.out.println("perc: "+perc_num_risp);
                    statistiche_risposte.put(c.getId(), perc_num_risp);
                    }
                    else
