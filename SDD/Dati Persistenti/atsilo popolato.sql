@@ -559,7 +559,7 @@ CREATE TABLE IF NOT EXISTS `genitore` (
   `rapporti_ateneo_salerno` text,
   `rapporti_comune_fisciano` text,
   `rapporto_parentela` varchar(50) DEFAULT NULL,
-  `status_lavorativo` varchar(100) DEFAULT NULL,
+  `status_lavorativo` varchar(300) DEFAULT NULL,
   `scadenza_contratto` date DEFAULT NULL,
   `condizione_lavorativa` varchar(50) DEFAULT NULL,
   `tipo_contratto` varchar(50) DEFAULT NULL,
@@ -572,13 +572,13 @@ CREATE TABLE IF NOT EXISTS `genitore` (
 
 INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`, `condizione_lavorativa`, `tipo_contratto`) VALUES
 ('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma', 'residenti_fisciano', 'ISCRITTO', 'Italiana', 'Fisciano', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Agenzia X', 'Nessun rapporto precedente', 'Residente del comune di Fisciano', 'Padre', 'Impiegato', '2013-12-21', 'X', 'Tempo indeterminato'),
-('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'personale_studenti', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'altro', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'personale_studenti', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'personale', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento, 1 - Napoli', 'personale_studenti', 'ISCRITTO', '', '', '0', '0', '', '', '', '0', '0', '', '', '', '', '', '', '2013-12-11', NULL, NULL);
+('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'altro', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento, 1 - Napoli', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-11', NULL, NULL);
 
 -- --------------------------------------------------------
 
