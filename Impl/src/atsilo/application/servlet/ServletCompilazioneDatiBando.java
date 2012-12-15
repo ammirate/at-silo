@@ -19,9 +19,11 @@ import atsilo.application.ControlIscritti;
 import atsilo.entity.Account;
 import atsilo.entity.Beans;
 import atsilo.entity.Genitore;
+import atsilo.exception.BambinoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
+import atsilo.exception.InserimentoDatiException;
 
 /*
  *-----------------------------------------------------------------
@@ -280,30 +282,39 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE,getServletName()+ " Errore connessione database", e);
+            } catch (InserimentoDatiException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
         }//fine update dati genitore
         
         if ( request.getParameter("chiamante").equals("bambino")){//se chiamante è una pagina bambino  
-            String cf_genitore=(controlDatiPersonali.getValoriUtente(username_utente)).getCodiceFiscale();
-            Genitore genitore_richiedente=new Genitore();
+            String cf_genitore = null;
             try {
-                genitore_richiedente = controlDatiPersonali.getDatiGenitore(cf_genitore);
-            } catch (GenitoreException e) {
+                cf_genitore = (controlDatiPersonali.getValoriUtente(username_utente)).getCodiceFiscale();
+            } catch (DBConnectionException e1) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
+            }
+            Genitore genitore_richiedente=new Genitore();
+            genitore_richiedente = controlDatiPersonali.getDatiGenitore(cf_genitore);
+                    
+            try {
+                if (controlDatiPersonali.inserisciBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null))
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
+                
+                else 
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+            } catch (BambinoException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (SQLException e) {
+            } catch (InserimentoDatiException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
-                    
-            if (controlDatiPersonali.inserisciBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null))
-                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
-            
-            else 
-                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
             
         }//fine update dati bambino
         

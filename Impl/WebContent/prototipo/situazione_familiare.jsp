@@ -34,8 +34,8 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   </tr>
   <tr>
     <td colspan="2">
-    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
-     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+    <input name="bambino_disabile" id="bambino_disabile" value="false" checked="checked" type="radio"> No
+     <input name="bambino_disabile" id="bambino_disabile" value="true" type="radio"> Si   </td>
     
   </tr>
     <tr>
@@ -43,14 +43,14 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   </tr>
   <tr>
     <td colspan="2">
-    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
-     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+    <input name="genitore_invalido" id="genitore_invalido" value="false" checked="checked" type="radio"> No
+     <input name="genitore_invalido" id="genitore_invalido" value="true" type="radio"> Si   </td>
   </tr>
       <tr>
     <td colspan="2">Il padre/la madre &egrave; genitore solo</td>
      <td colspan="2">
-    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
-     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+    <input name="genitore_solo" id="genitore_solo" value="false" checked="checked" type="radio"> No
+     <input name="genitore_solo" id="genitore_solo" value="true" type="radio"> Si   </td>
   </tr>
   <tr>
     <td colspan="4" ><p>vedova/o 
@@ -58,18 +58,18 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
     </p>
       <p>
         nubile
-        <input id="vedovo" name="vedovo" type="checkbox">
+        <input id="nubile" name="nubile" type="checkbox">
       </p>
       <p>
         separato/divorziato con affido del minore
-        <input id="vedovo" name="vedovo" type="checkbox">
+        <input id="separato" name="vedseparatoovo" type="checkbox">
       </p>
       <p>
         genitore solo con figlio non riconosciuto dall'altro genitore
-        <input id="vedovo" name="vedovo" type="checkbox">
+        <input id="figlio_non_riconosciuto" name="figlio_non_riconosciuto" type="checkbox">
       </p>
       <p>genitore solo con figlio riconosciuto dall'altro genitore che non contribuisce n&egrave; all'educazione, n&egrave; al mantenimento, in possesso di dichiarazione di "affido esclusivo"
-        <input id="vedovo" name="vedovo" type="checkbox">
+        <input id="affido_esclusivo" name="affido_esclusivo" type="checkbox">
       </p></td>
    
   </tr>
@@ -85,12 +85,12 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   </tr>
   <tr>
     <td colspan="2">
-    <input name="disabile" id="disabile_1" value="No" checked="checked" type="radio"> No
-     <input name="disabile" id="disabile_2" value="Si" type="radio"> Si   </td>
+    <input name="altri_figli_disabili" id="altri_figli_disabili" value="false" checked="checked" type="radio"> No
+     <input name="altri_figli_disabili" id="altri_figli_disabili" value="true" type="radio"> Si   </td>
   </tr>
   <tr>
     <td colspan="2">ALTRE CONDIZIONI RILEVANTI AI FINI DEL PUNTEGGIO</td>
-    <td colspan="1"><textarea name="altre_condizioni" cols="50" rows="5" readonly="readonly"></textarea></td>
+    <td colspan="1"><textarea name="altre_condizioni_calcolo_punteggio" cols="50" rows="5" readonly="readonly"></textarea></td>
   </tr>
     <tr>
     <td colspan="2">&nbsp;</td>

@@ -72,6 +72,7 @@ function settaAttributi(slf){
   <tr>
   <td colspan="2"><select name="select_bambini">
     <option selected>Selezionare il nome del bambino</option>
+    <option value="nuovo">Aggiungere bambino</option>
   </select></td>
      <td>&nbsp;</td>
   </tr>

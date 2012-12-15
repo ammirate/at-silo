@@ -17,10 +17,13 @@ include file="atsilo_files/sidebar_top_genitore.jsp"
 <%@ page import="atsilo.application.*,atsilo.entity.*"
  %>
  <%
+	String isee="";
  	ControlIscrizione cisc= ControlIscrizione.getIstance();
    	DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(username, null);
+   	if (domandaIscrizione!=null){
    	Float isee_temp=domandaIscrizione.getIsee();
-   	String isee=isee_temp.toString();
+   	isee=isee_temp.toString();
+   	}
  %>
   <!--Script per gestire i form -->
  <script type="text/javascript">
