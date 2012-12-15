@@ -465,7 +465,18 @@ public class DBBambino extends DBBeans<Bambino> {
         }
         else return null;
     }
-    
+    /**
+     * Metodo utilizzato dagli altri metodi di DBBeans per ricavare le
+     * assegnazioni predefinite relativamente a un bean.<br/>
+     * Nella sua implementazione predefinita, questo metodo restituisce sempre
+     * {@link #NESSUNA_ASSEGNAZIONE}. Le classi estendenti possono sovrascrivere
+     * questo metodo per indicare in modo comodo delle assegnazioni predefinite
+     * per tutti i metodi di modifica della base di dati.
+     * 
+     * @param bean
+     *            Bean per cui valutare le assegnazioni
+     * @return Array di assegnazioni
+     */
     protected Assegnazione[] creaAssegnazioni(Bambino bean) {
        
         Assegnazione DBBambino_assegnazione = new Assegnazione("cf_genitore_non_richiedente",bean.getGenitoreNonRichiedente().getCodiceFiscale());
