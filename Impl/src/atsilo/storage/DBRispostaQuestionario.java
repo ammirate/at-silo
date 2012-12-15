@@ -181,7 +181,7 @@ public class DBRispostaQuestionario extends DBBeans<RispostaQuestionario> {
                 "SELECT COUNT(*) FROM " + tabella.getNomeTabella() + " WHERE domanda = ? AND valore=?");
         tabella.setParam(stmt, 1, "domanda", idDomanda);
         tabella.setParam(stmt, 2, "valore", valore);
-        System.out.println("query: "+stmt);
+        //System.out.println("query: "+stmt);
         ResultSet res = stmt.executeQuery();
         
         
