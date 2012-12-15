@@ -16,25 +16,23 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
 <%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"
  %>
-<%
+	<% // setto select bambino
 		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
 	   	Utente utente=cdt.getValoriUtente(username);
 	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 	  	List<Bambino> figli= new ArrayList<Bambino>();
-	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale());
-	  	
-	  	
-	  	
-	  	
-	    	for (int i=0;i<figli.size();i++){
-	%> <script type=text/javascript>
+	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
 
-  	   		  objSelect = document.getElementById("select_bambini"); 
-  	   	     objSelect.option[<%=i%>]=new Option("Selezionare il bambino", "", true)
-  	  		 objSelect.optionsg[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
-							
+			%>
+            <!--Popola la select con i nomi fri bambini del genitore richiedente-->
+            <script type=text/javascript>
+			function popolaSelect(){
+  	   		   objSelect = document.getElementById("select_bambini");
+			   <% for (int i=0;i<figli.size();i++){%>
+  	  		       objSelect.options[<%=i+2%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
+		<%} %>	
+			}
 	</script> 
-	<%} %>
   <!--Script per gestire i form -->
  <script type="text/javascript">
 function settaAttributi(slf){
@@ -70,30 +68,30 @@ function settaAttributi(slf){
       
   </tr>
   <tr>
-  <td colspan="2"><select name="select_bambini">
-    <option selected>Selezionare il nome del bambino</option>
-    <option value="nuovo">Aggiungere bambino</option>
-  </select></td>
+  <td colspan="2"><select name="select_bambini" id="select_bambini" onfocus="popolaSelect(this)">
+						  <option value="null" selected>Selezionare Bambino</option>
+						  <option value="aggiungi_bambino">Aggiungere Bambino</option>
+            </select></td>
      <td>&nbsp;</td>
   </tr>
   <tr>
   <tr>
     <td>Cognome</td>
-    <td> <input id="cognome_bambino" value="" name="cognome_bambino" size="25" maxlength="25" type="text"></td>
+    <td> <input name="cognome_bambino" type="text" id="cognome_bambino" value="" size="25" maxlength="25" readonly="readonly"></td>
     <td>Nome</td>
-    <td> <input id="nome_bambino" value="" name="nome_bambino" size="25" maxlength="50" type="text"></td>
+    <td> <input name="nome_bambino" type="text" id="nome_bambino" value="" size="25" maxlength="50" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Nato/a a</td>
-    <td><input id="comune_nascita_bambino" value="" name="comune_nascita_bambino"  size="25" maxlength="25" type="text"></td>
+    <td><input name="comune_nascita_bambino" type="text" id="comune_nascita_bambino" value=""  size="25" maxlength="25" readonly="readonly"></td>
     <td>Nato il</td>
-    <td><input id="data_nascita_bambino" value="" name="data_nascita_bambino"  size="25" maxlength="10" type="text"></td>
+    <td><input name="data_nascita_bambino" type="text" id="data_nascita_bambino" value=""  size="25" maxlength="10" readonly="readonly"></td>
   </tr>
   <tr>
     <td>Codice Fiscale</td>
-    <td><input id="codice_fiscale_bambino" value="" name="codice_fiscale_bambino"  size="25" maxlength="16" type="text" /></td>
+    <td><input name="codice_fiscale_bambino" type="text" id="codice_fiscale_bambino" value=""  size="25" maxlength="16" readonly="readonly" /></td>
     <td>Cittadinanza</td>
-    <td><input id="cittadinanza_bambino" value="" name="cittadinanza_bambino"  size="25" maxlength="25" type="text" /></td>
+    <td><input name="cittadinanza_bambino" type="text" id="cittadinanza_bambino" value=""  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>&nbsp; </td></tr>
