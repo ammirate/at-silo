@@ -23,9 +23,10 @@ package atsilo.exception;
  * @author Frank
  * 
  */
-public class DatiPersonaliEception {
+public class DatiPersonaliException extends Exception{
 
-   public DatiPersonaliEception(String stringa){
+   public DatiPersonaliException(String stringa)
+   {
         super(stringa);
     }
 }
