@@ -3,12 +3,19 @@ package atsilo.application;
 
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.mail.MessagingException;
+
+import atsilo.application.notificheMail.ControlNotificaMail;
+import atsilo.application.notificheMail.Messaggio;
+import atsilo.application.notificheMail.NotificaMailRegistrazione;
 import atsilo.entity.*;
 import atsilo.exception.*;
 import atsilo.storage.*;
@@ -224,7 +231,7 @@ public class ControlDatiPersonali {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, List<Assenza> assenze) throws BambinoException, DBConnectionException, InserimentoDatiException{
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, Genitore genitore_non_richiedente, List<Assenza> assenze, String iscrizioneClasse) throws BambinoException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
         StubBambino stub = new StubBambino(db); 
@@ -242,7 +249,7 @@ public class ControlDatiPersonali {
         Bambino bambino = new Bambino(dataNascita, nome, cognome, codiceFiscale, comuneNascita,
                 cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza,
                 provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
-                provinciaDomicilio, categoriaAppartenenza, classe, genitore, genitoreNonRichiedente, assenze, iscrizioneClasse);
+                provinciaDomicilio, categoriaAppartenenza, classe, genitore_richiedente, genitore_non_richiedente, assenze, iscrizioneClasse);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -408,7 +415,68 @@ public class ControlDatiPersonali {
      */
     public boolean createAccount(String cf,String nome,String cognome,String mail, String telefono,String profilo_appartenenza) {
         // TODO Scheletro generato automaticamente
-        return false;
+        Database db = new Database();
+        db.apriConnessione();
+        DBAccount dbacc = new DBAccount(db);
+        DBGenitore dbgen = new DBGenitore(db);
+        Account newAcc = new Account();
+        Genitore newGen = new Genitore();
+        newGen.setCodiceFiscale(cf);
+        newGen.setNome(nome);
+        newGen.setCognome(cognome);
+        newGen.setEmail(mail);
+        newGen.setTelefono(telefono);
+        newGen.setCategoriaAppartenenza(profilo_appartenenza);
+        newAcc.setOwner(newGen);
+        
+        //E' ora di cercare un username libero
+        int usernameIndex=0;
+        String selectedUsername=nome.charAt(0)+"."+cognome;
+        try {
+            while(dbacc.ricercaPerUsername(selectedUsername)!=null)
+            {
+                selectedUsername=nome.charAt(0)+"."+cognome;
+                selectedUsername+=usernameIndex;
+                usernameIndex++;
+            }
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(), e);
+        }
+       newAcc.setUserName(selectedUsername);
+       Random r = new Random();
+       newAcc.setPassWord(nome+r.nextInt());
+       boolean result=dbacc.inserisci(newAcc);
+       if(result)
+       {
+           result=result&&dbgen.inserisci(newGen);
+       }
+       if(result)
+       {
+           //Se inserimento di account e genitore hanno successo
+           //invia la mail al genitore
+           ControlNotificaMail cnm = ControlNotificaMail.getInstance();
+           ArrayList<Utente> destinatari = new ArrayList<Utente>();
+           destinatari.add(newGen);
+           String oggetto = "Registrazione al sistema @silo";
+           String testoEmail = "Benvenuto "+newGen.getNome()+" nel sistema @silo.\n" +
+                   "Il tuo username è: "+newAcc.getUserName()+"\n"+
+                   "La tua passowrd è: "+newAcc.getPassWord()+"\n"+
+                   "Ti auguriamo una buona permanenza nel nostro asilo!\n\n"+
+                   "La redazione";
+           Messaggio m = new NotificaMailRegistrazione(destinatari,oggetto,testoEmail,newAcc,newGen);
+           try {
+            cnm.inviaMail(m);
+        } catch (MessagingException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile inviare l'email. Causato da: "+e.getMessage(), e);
+        } catch (Throwable e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Eccezione generica. Causata da:"+ e.getMessage(), e);
+        }
+       }
+       db.chiudiConnessione();
+       return result;
     }
     
     /**@todo Questo metodo dovrebbe già funzionare e quindi non dovrebbe essere modificato

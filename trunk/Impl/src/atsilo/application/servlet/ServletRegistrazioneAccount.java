@@ -51,7 +51,7 @@ public class ServletRegistrazioneAccount extends HttpServlet {
      */
     public ServletRegistrazioneAccount() {
         
-        controlDatiPersonali=controlDatiPersonali.getIstance();
+        controlDatiPersonali=ControlDatiPersonali.getIstance();
     }
     
     /**
