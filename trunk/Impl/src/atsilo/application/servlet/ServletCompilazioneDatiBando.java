@@ -314,12 +314,12 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             }
             Genitore genitore_richiedente=new Genitore();
             genitore_richiedente = controlDatiPersonali.getDatiGenitore(cf_genitore);
-                    
+                 System.out.println(codice_fiscale_bambino);   
             try {
-                if (controlDatiPersonali.inserisciBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, comuneNascita, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null))
+                if (controlDatiPersonali.inserisciBambino(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codice_fiscale_bambino, comune_nascita_bambino, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, -1, genitore_richiedente, null, null, null)){
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 
-                else 
+                } else 
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
             } catch (BambinoException e) {
                 // TODO Blocco di catch autogenerato
