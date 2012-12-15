@@ -290,6 +290,7 @@ public class DBAccount extends DBBeans<Account>
         DBAssign[3]=DBAccount_assegnazione3;
         DBAssign[4]=DBAccount_assegnazione4;
         DBAssign[5]=DBAccount_assegnazione5;
+        DBAssign[6]=DBAccount_assegnazione6;
         
         if(bean.getOwner() instanceof ResponsabileQuestionario){
             DBAccount_assegnazione = new Assegnazione("responsabile_questionario",bean.getOwner().getCodiceFiscale());
@@ -316,7 +317,7 @@ public class DBAccount extends DBBeans<Account>
             DBAssign[5]=DBAccount_assegnazione5;
         }
         if(bean.getOwner() instanceof EducatoreDidattico){
-            DBAccount_assegnazione5 = new Assegnazione("educatore_didattico",bean.getOwner().getCodiceFiscale());
+            DBAccount_assegnazione6 = new Assegnazione("educatore_didattico",bean.getOwner().getCodiceFiscale());
             DBAssign[6]=DBAccount_assegnazione6;
         }
         
