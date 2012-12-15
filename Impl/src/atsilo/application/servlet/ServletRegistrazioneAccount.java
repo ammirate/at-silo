@@ -120,8 +120,11 @@ public class ServletRegistrazioneAccount extends HttpServlet {
             }
         }//fine if creo account    
         
+        response.setContentType("text/html");
         String login_error = new String("prototipo/registrazione_account.jsp?successo=failed");
         response.setHeader("Location", login_error);   
+        response.setStatus(response.SC_MOVED_TEMPORARILY); 
+        
         
         
     }
