@@ -108,8 +108,8 @@ public class ControlClassi {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Bambino> b = stub.ricercaBambiniSenzaClasse();
-            if(b.isEmpty())
-                throw new BambinoException("Lista vuota");
+            /*if(b.isEmpty())
+                throw new BambinoException("Lista vuota");*/
             return b;
         }
         finally{
@@ -274,8 +274,8 @@ public class ControlClassi {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             List<Classe> c = stub.RicercaClassi();
-            if(c.isEmpty())
-                throw new ClasseException("Lista vuota");
+            /*if(c.isEmpty())
+                throw new ClasseException("Lista vuota");*/
             return c;
         }
         finally{
