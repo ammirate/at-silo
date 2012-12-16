@@ -81,6 +81,6 @@ public class ServletAggiungiPunteggio extends HttpServlet {
         }
        
         response.setStatus(response.SC_MOVED_TEMPORARILY);
-        response.setHeader("Location", "prototipo/lista_punteggio?"+"successo=y"); 
+        response.setHeader("Location", "prototipo/lista_punteggio.jsp?"+"successo=y"); 
     }
 }
