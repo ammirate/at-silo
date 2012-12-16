@@ -175,8 +175,9 @@ public class ControlIscrizione {
      * @throws GenitoreException 
      * @throws SQLException 
      * @throws DomandaIscrizioneException 
+     * @throws BambinoException 
      */
-    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException{
+    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException, BambinoException{
         Database db = new Database();        
         DBDomandaIscrizione stub = new DBDomandaIscrizione(db);
         
@@ -265,6 +266,32 @@ public class ControlIscrizione {
                 throw new GenitoreException("Mancano alcune informazioni del genitore non richiedente");
         }
         
+        Bambino bambino = d.getBambino();
+        if(bambino == null)
+            throw new BambinoException("Bambino non trovato");
+        
+        if( (bambino.getDataNascita() == null) ||
+            (bambino.getNome() == null) ||
+            (bambino.getCognome() == null) ||
+            (bambino.getCodiceFiscale() == null) ||
+            (bambino.getComuneNascita() == null) ||
+            (bambino.getcittadinanza() == null) ||
+            (bambino.getIndirizzoResidenza() == null) ||
+            (bambino.getNumeroCivicoResidenza() == null) ||
+            (bambino.getCapResidenza() == null) ||
+            (bambino.getComuneResidenza() == null) ||
+            (bambino.getProvinciaResidenza() == null) ||        
+            (bambino.getIndirizzoDomicilio() == null) ||
+            (bambino.getNumeroCivicoDomicilio() == null) ||
+            (bambino.getCapDomicilio() == null) ||
+            (bambino.getComuneDomicilio() == null) ||
+            (bambino.getProvinciaDomicilio() == null) ||
+            (bambino.getCategoriaAppartenenza() == null) ||
+            (bambino.getGenitore() == null) ||
+            (bambino.getGenitoreNonRichiedente() == null) 
+        )
+            throw new GenitoreException("Mancano alcune informazioni del bambino");  
+   
         if(d.getIsee() == -1)
             throw new DomandaIscrizioneException("Mancano i dati relativi al documento isee");
             
@@ -285,22 +312,31 @@ public class ControlIscrizione {
     }
     
     /**
-     * @todo copiato dall altro control, da implementare e vede a che stato sta la domanda
-     * Prende lo stato di un'iscrizione: idoneo/non idoneo/domanda/?primoStepEffettuato/?domandaCompletaPresentata/Iscritto
-     * 
-     * @param id
-     *            della domanda di iscrizione da verificare
+     * Prende lo stato di un'iscrizione
+     * @param id della domanda di iscrizione da verificare
      * @return stringa che riporti lo stato dell'iscrizione
      * @throws DBConnectionException
      * @throws DomandaIscrizioneException
+     * @throws SQLException 
      */
-    public String getValoreStatoIscrizione(int id)
-            throws DomandaIscrizioneException, DBConnectionException {
-        /*
-         * TODO questo metodo è collegato ad un control di bassa priorità, per
-         * cui verrà implementato in seguito
-         */
-        return "";
+    public String getValoreStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException, SQLException {
+        Database db = new Database();        
+        DBDomandaIscrizione stub = new DBDomandaIscrizione(db);
+        String stato = null;
+
+        DomandaIscrizione d = stub.ricercaDomandaDaId(id);
+        if(d == null)
+            throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            stato = d.getStatoDomanda();         
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+        return stato;
     }
     
     
