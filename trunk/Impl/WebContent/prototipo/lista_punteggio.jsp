@@ -14,7 +14,7 @@
 	</tbody>
 </table>
 <%@
-include file="atsilo_files/sidebar_impiegato.jsp"%>
+include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 <img width="209" border="0" alt="" height="1"
 	src="atsilo_images/clearpixel.gif">
 </td>
@@ -28,31 +28,35 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 								<td class="tplTitolo">
 <form action="http://localhost:8080/Atsilo/prototipo/invia_punteggio.jsp" method="post">
 <table class="tabella_form">
-<tr>
-<td>#</td><td>Nome</td><td>Cognome</td><td>Data Nascita</td>
-</tr>
+
 <%
 ControlGestioneBando crt = ControlGestioneBando.getIstance();
 int n = crt.getDomandeInAttesaDiPunteggio().size();
 if(n==0){
 	out.print("<h1>Non sono presenti domande in attesa di valutazione</h1>");
 }
-for(int i=0;i<n;i++){
+else
+{
+	out.print("<tr><td>#</td><td>Nome</td><td>Cognome</td><td>Data Nascita</td></tr>");
+	for(int i=0;i<n;i++){
 
-	out.append("<tr><td><input type='radio' name='domanda' value='")
-		.append(""+crt.getDomandeInAttesaDiPunteggio().get(i).getId())
-		.append("' />")
-		.append("</td><td>")
-		.append(crt.getDomandeInAttesaDiPunteggio().get(i).getBambino().getNome())
-		.append("</td><td>")
-		.append(crt.getDomandeInAttesaDiPunteggio().get(i).getBambino().getCognome())
-		.append("</td><td>")
-		.append(crt.getDomandeInAttesaDiPunteggio().get(i).getBambino().getDataNascita().toString())
-		.append("</td><td></tr>");
-}
+		out.append("<tr><td><input type='radio' name='domanda' value='")
+			.append(""+crt.getDomandeInAttesaDiPunteggio().get(i).getId())
+			.append("' />")
+			.append("</td><td>")
+			.append(crt.getDomandeInAttesaDiPunteggio().get(i).getBambino().getNome())
+			.append("</td><td>")
+			.append(crt.getDomandeInAttesaDiPunteggio().get(i).getBambino().getCognome())
+			.append("</td><td>")
+			.append(crt.getDomandeInAttesaDiPunteggio().get(i).getBambino().getDataNascita().toString())
+			.append("</td><td></tr>");
+	}
+
+
 %>
 </table>
 <input type="submit" value="Invia" id="inv" name="invia" /><input type="reset" value="Cancella" />
+<% } %>
 </form>
 								</td>
 							</tr>
