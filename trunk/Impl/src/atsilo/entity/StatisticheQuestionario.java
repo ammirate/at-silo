@@ -111,7 +111,8 @@ public class StatisticheQuestionario {
         return number_comp;
     }
     /**
-     * 
+     * return the the number of people that response id_campo for the id_domanda
+     * null if the id_domanda or id_campo does not exist
      * @param domanda
      * @param campo_risposte
      * @return
@@ -120,7 +121,15 @@ public class StatisticheQuestionario {
     public Integer getPercentualiFromCampo(Integer id_domanda, Integer id_campo){
         //System.out.println("*" + id_domanda + "*" + id_campo + "*");
       Map<Integer, Integer> m=risposte.get(id_domanda);
-      return m.get(id_campo);
+      if(m!=null)
+          {
+              if(m.get(id_campo)!=null)
+              {return m.get(id_campo);}
+              else
+              {return null;}
+          }
+      else
+          {return null;}
     }
     
     private Questionario questionario;

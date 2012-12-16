@@ -551,26 +551,34 @@ public class ControlQuestionario {
                List<CampoDomandaQuestionario> campi = dbcmp.getCampiDomandaQuestionario(d.getId());
                HashMap<Integer, Integer> statistiche_risposte =new HashMap<Integer, Integer>();
               //data un campo prelevo le risposte che sono associate a quel campo
+               int sentinella=0;
+               
                for(CampoDomandaQuestionario c: campi)
                {
-                   if(statq.getNumeroComp()!=0)
-                   {int num_risp = dbrq.getNumberOfCompiler(d.getId(), c.getValore());
-                  //calcolo percentuale: numero di persone che hanno risposto in un determinato modo
-                 //a quella domanda diviso il numero di persone totale che hanno compilato il questionario
-                   
-                   int perc_num_risp= num_risp;
-                 //  System.out.println("campo id: "+c.getId());
-                 //  System.out.println("perc: "+perc_num_risp);
-                   statistiche_risposte.put(c.getId(), perc_num_risp);
+                   if((c.getTipo().equals("text")))
+                       {
+                           sentinella=1;
+                           break;
+                       }
+                   if((statq.getNumeroComp()!=0))
+                   {
+                       int num_risp = dbrq.getNumberOfCompiler(d.getId(), c.getValore());
+                       int perc_num_risp= num_risp;
+                     //  System.out.println("campo id: "+c.getId());
+                     //  System.out.println("perc: "+perc_num_risp);
+                       statistiche_risposte.put(c.getId(), perc_num_risp);
                    }
                    else
                    {
-                      statistiche_risposte.put(c.getId(),0);
+                       statistiche_risposte.put(c.getId(),0);
                    }
                  
                    
                }
-               statistiche.put(d.getId(), statistiche_risposte);
+               if(sentinella!=1)
+                   {statistiche.put(d.getId(), statistiche_risposte);}
+               else
+                   {sentinella=0;}
               
             }
            
