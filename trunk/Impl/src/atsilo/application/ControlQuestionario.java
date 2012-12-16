@@ -558,7 +558,7 @@ public class ControlQuestionario {
                   //calcolo percentuale: numero di persone che hanno risposto in un determinato modo
                  //a quella domanda diviso il numero di persone totale che hanno compilato il questionario
                    
-                   int perc_num_risp=num_risp / statq.getNumeroComp(); 
+                   int perc_num_risp= num_risp;
                  //  System.out.println("campo id: "+c.getId());
                  //  System.out.println("perc: "+perc_num_risp);
                    statistiche_risposte.put(c.getId(), perc_num_risp);
