@@ -96,7 +96,9 @@ else if (temp_nome_chiamante.equals("inserisci_classe.jsp"))
 else if (temp_nome_chiamante.equals("cancella_classe.jsp"))
 	out.println("<title>Cancella Classe</title>");	
 else if (temp_nome_chiamante.equals("assegna_classe.jsp"))
-	out.println("<title>Assegna Classe</title>");	
+	out.println("<title>Assegna Classe</title>");
+else if (temp_nome_chiamante.equals("lista_punteggio.jsp"))
+	out.println("<title>Lista Punteggi</title>");	
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
