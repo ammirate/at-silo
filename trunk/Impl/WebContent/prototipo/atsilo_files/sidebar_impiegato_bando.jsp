@@ -44,3 +44,12 @@ sessione.setAttribute("homepage", "index_impiegato_bando.jsp");
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="specifiche_bando.jsp">Modifica Specifiche</a></td>
 </tr>
 </tbody></table>
+<table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Domande Iscrizione</b></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_punteggio.jsp">Visualizza Domande</a></td>
+</tr>
+
+</tbody></table>
