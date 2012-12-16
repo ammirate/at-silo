@@ -107,6 +107,20 @@ if (!tipologia.equals("impiegato_asilo") )
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Classi</b></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_classe.jsp">Inserisci Classe</a></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="#">Assegna Classe</a></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="#">Cancella Classe</a></td>
+</tr>
+</tbody></table>
+<table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Tirocinanti</b></td>
 </tr>
 
