@@ -206,7 +206,8 @@ public class ControlGestioneBando {
     }
     
     /**
-     * Metodo che esclude una domanda dalla graduatoria
+     * Metodo che esclude una domanda dalla graduatoria.
+     * Setta il punteggio a -1 e lo stato della domanda a rifiutata.
      * @param iscrizione L'iscrizione da modificare.
      * @param notaEsclusione Stringa contenente il motivo dell'esclusione
      * @return
@@ -227,6 +228,7 @@ public class ControlGestioneBando {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_RIFIUTATA);
                 domandaDaModificare.setNotaEsclusione(notaEsclusione);
+                domandaDaModificare.setPunteggio(-1);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
