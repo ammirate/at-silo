@@ -93,8 +93,10 @@ else if (temp_nome_chiamante.equals("cancella_fascia_oraria.jsp"))
 	out.println("<title>Cancella Fascia Oraria</title>");	
 else if (temp_nome_chiamante.equals("inserisci_classe.jsp"))
 	out.println("<title>Inserisci Classe</title>");	
-
-	
+else if (temp_nome_chiamante.equals("cancella_classe.jsp"))
+	out.println("<title>Cancella Classe</title>");	
+else if (temp_nome_chiamante.equals("assegna_classe.jsp"))
+	out.println("<title>Assegna Classe</title>");	
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
