@@ -2,6 +2,16 @@
 	include file="atsilo_files/header.jsp"%>
 <%@ page import="atsilo.application.*,atsilo.entity.*"%>
 
+<%
+	if ((request.getParameter("successo")) != null) {
+		if (request.getParameter("successo").equals("y")) {
+			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
+		}
+		else {
+			out.print("<script type=text/javascript>alert('Modifica fallita')</script>");
+		}
+	}
+%>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 	<tbody>
