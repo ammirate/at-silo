@@ -268,7 +268,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
             temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
             temp.setIsee(r.getFloat("isee"));
-            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            //temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
             lista.add(temp);
@@ -328,7 +328,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
             temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
             temp.setIsee(r.getFloat("isee"));
-            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            //temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
         }
@@ -420,8 +420,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
 
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE punteggio = ? AND escluso=0");
-        tabella.setParam(stmt, 1, "punteggio", null);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE punteggio IS NULL AND escluso=0");
         ResultSet r= stmt.executeQuery();
         
        while (r.next()){
@@ -456,7 +455,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
             temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
             temp.setIsee(r.getFloat("isee"));
-            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            //temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
             toReturn.add(temp);
