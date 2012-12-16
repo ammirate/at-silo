@@ -16,11 +16,13 @@ import atsilo.entity.Bambino;
 import atsilo.exception.BambinoException;
 import atsilo.exception.ClasseException;
 import atsilo.exception.DBConnectionException;
+import atsilo.storage.DBBambino;
+import atsilo.storage.Database;
 
 /**
  * Servlet implementation class ServletControlBandoIM
  */
-@WebServlet("/ServletControlClasseCanc")
+@WebServlet("/ServletControlClasseAss")
 public class ServletControlClasseAss extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private ControlClassi crt;
@@ -50,14 +52,16 @@ public class ServletControlClasseAss extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         String lun =request.getParameter("lunghezzaLista");
-        int lista = Integer.parseInt("lun");
+        int lista = Integer.parseInt(lun);
         for(int i=0;i<lista;i++){
             String cf= request.getParameter(""+i);
             if(Integer.parseInt(request.getParameter(cf+"_"+i)) > 0){
                 String classe = request.getParameter(cf+"_"+i);
-                Bambino b = new Bambino();
-                b.setCodiceFiscale(cf);
+                Database db = new Database();
+                DBBambino dbbamb = new DBBambino(db);
+                db.apriConnessione();
                 try {
+                    Bambino b = dbbamb.ricercaBambinoPerCodFiscale(cf);
                     crt.inserisciBambinoNellaClasse(Integer.parseInt(classe), b);
                 } catch (NumberFormatException e) {
                     response.setStatus(response.SC_MOVED_TEMPORARILY);
