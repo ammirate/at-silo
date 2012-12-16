@@ -144,6 +144,31 @@ public class ControlClassi {
         
     }
     
+    /**
+     * inserisce una nuova classe senza passare l'id
+     * @param lista di insegnanti
+     * @return valore booleano
+     * @throws DBConnectionException 
+     * @throws ClasseException
+     */
+    public boolean inserisciClasse(String sezione, List<EducatoreDidattico> insegnanti) throws ClasseException, DBConnectionException{
+        Database db = new Database();
+        DBClasse stub = new DBClasse(db); 
+        Classe classe = new Classe(sezione, insegnanti);
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            
+            if(!stub.inserisci(classe))
+                throw new ClasseException("Inserimento fallito, la classe esiste già");
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+        return true;
+        
+    }
+    
     
     /**
      * cancella una classe 
