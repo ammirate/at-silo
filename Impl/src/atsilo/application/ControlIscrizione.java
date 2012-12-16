@@ -69,7 +69,7 @@ public class ControlIscrizione {
      * @throws DomandaIscrizioneException
      * @throws SQLException 
      */
-    public boolean updateDatiDomandaIscrizionePrimoStep(Date dataPresentazione, int iD, int punteggio,
+    public boolean updateDatiDomandaIscrizionePrimoStep(int iD, int punteggio,
             int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
             String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
@@ -78,12 +78,15 @@ public class ControlIscrizione {
             String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         
         Database db = new Database();
-        DBDomandaIscrizione stub = new DBDomandaIscrizione(db); 
+        DBDomandaIscrizione stub = new DBDomandaIscrizione(db);       
         
         DomandaIscrizione domanda = stub.ricercaDomandaDaId(iD);
         if(domanda == null)
         {
-            domanda = new DomandaIscrizione(dataPresentazione, punteggio,
+            java.util.Date d = new java.util.Date();
+            java.sql.Date oggi = new java.sql.Date(d.getTime());
+            
+            domanda = new DomandaIscrizione(oggi, punteggio,
                     posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
                     certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
                     genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
@@ -102,8 +105,6 @@ public class ControlIscrizione {
         else
         {
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
-            if(dataPresentazione != null)
-                domandaModificata.setDataPresentazione(dataPresentazione);
             if(punteggio != -1)
                 domandaModificata.setPunteggio(punteggio);
             if(posizione != -1)
@@ -149,8 +150,7 @@ public class ControlIscrizione {
             
             if(!db.apriConnessione())
                 throw new DBConnectionException("Connessione al DB fallita");
-            try{
-                
+            try{                
                 if(!stub.replace(domanda, domandaModificata))
                     throw new DomandaIscrizioneException("Modifica fallita");
             }
@@ -173,27 +173,97 @@ public class ControlIscrizione {
      * @throws UtenteException 
      */
     public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException{
-        Database db = new Database();
+        Database db = new Database();        
+        DBDomandaIscrizione stub = new DBDomandaIscrizione(db);
         
-        DBBambino stub = new DBBambino(db);
-        Bambino bambino = stub.ricercaBambinoPerCodFiscale(codiceFiscaleBambino);
-        if(bambino == null)
-            throw new BambinoException("Bambino non trovato");
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        StubAccount stub = new StubAccount(db); 
-        StubUtente stub2 = new StubUtente(db);
-        
-        //controllo sul codice fiscale che deve essere a 16 cifre
+      //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscaleBambino.length() != 16)
-            throw new InserimentoDatiException("Il codice fiscale non è valido");     
+            throw new InserimentoDatiException("Il codice fiscale non è valido");    
+        
+        DomandaIscrizione d = stub.ricercaDomandaDaBambino(codiceFiscaleBambino);
+        if(d == null)
+            throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
+        
+        //il metodo valuta che tutti i campi dell'iscrizione siano stati inseriti
+        Genitore richiedente = d.getGenitore();
+        if(richiedente == null)
+            throw new GenitoreException("Genitore richiedente non trovato");
+        
+        if( (richiedente.getDataNascita() == null) ||
+            (richiedente.getNome() == null) ||
+            (richiedente.getCognome() == null) ||
+            (richiedente.getCodiceFiscale() == null) ||
+            (richiedente.getEmail() == null) ||
+            (richiedente.getComuneNascita() == null) ||
+            (richiedente.getTelefono() == null) || 
+            (richiedente.getcittadinanza() == null) ||
+            (richiedente.getIndirizzoResidenza() == null) ||
+            (richiedente.getNumeroCivicoResidenza() == null) ||
+            (richiedente.getCapResidenza() == null) ||
+            (richiedente.getComuneResidenza() == null) ||
+            (richiedente.getProvinciaResidenza() == null) ||
+            (richiedente.getIndirizzoDomicilio() == null) ||
+            (richiedente.getNumeroCivicoDomicilio() == null) ||
+            (richiedente.getCapDomicilio() == null) ||
+            (richiedente.getComuneDomicilio() == null) ||
+            (richiedente.getProvinciaDomicilio() == null) ||
+            (richiedente.getTipo() == null) ||
+            (richiedente.getDipendentePresso() == null) ||
+            (richiedente.getRapportiAteneoSalerno() == null) ||
+            (richiedente.getRapportiComuneFisciano() == null) ||
+            (richiedente.getStatusLavorativo() == null) ||
+            (richiedente.getScadenzaContratto() == null) ||
+            (richiedente.getCategoriaAppartenenza() == null) ||
+            (richiedente.getRapportoParentela() == null) ||
+            (richiedente.getCondizioneLavorativa() == null) ||
+            (richiedente.getTipoContratto() == null) ||
+            (richiedente.getFigli().isEmpty())
+        )
+            throw new GenitoreException("Mancano alcune informazioni del genitore richiedente");
+        
+        if( (d.getFiglioNonRiconosciuto() == false) && (d.getGenitoreSolo() == false) && (d.getGenitoreNubile() == false)
+          && (d.getGenitoreVedovo() == false) && (d.getGenitoreSeparato() == false) && (d.getAffidoEsclusivo() == false) )
+        {
+            Genitore nonRichiedente = d.getGenitoreNonRichiedente();
+            if(richiedente == null)
+                throw new GenitoreException("Genitore richiedente non trovato");
+            
+            if( (richiedente.getDataNascita() == null) ||
+                (richiedente.getNome() == null) ||
+                (richiedente.getCognome() == null) ||
+                (richiedente.getCodiceFiscale() == null) ||
+                (richiedente.getEmail() == null) ||
+                (richiedente.getComuneNascita() == null) ||
+                (richiedente.getTelefono() == null) || 
+                (richiedente.getcittadinanza() == null) ||
+                (richiedente.getIndirizzoResidenza() == null) ||
+                (richiedente.getNumeroCivicoResidenza() == null) ||
+                (richiedente.getCapResidenza() == null) ||
+                (richiedente.getComuneResidenza() == null) ||
+                (richiedente.getProvinciaResidenza() == null) ||
+                (richiedente.getIndirizzoDomicilio() == null) ||
+                (richiedente.getNumeroCivicoDomicilio() == null) ||
+                (richiedente.getCapDomicilio() == null) ||
+                (richiedente.getComuneDomicilio() == null) ||
+                (richiedente.getProvinciaDomicilio() == null) ||
+                (richiedente.getTipo() == null) ||
+                (richiedente.getDipendentePresso() == null) ||
+                (richiedente.getRapportiAteneoSalerno() == null) ||
+                (richiedente.getRapportiComuneFisciano() == null) ||
+                (richiedente.getStatusLavorativo() == null) ||
+                (richiedente.getScadenzaContratto() == null) ||
+                (richiedente.getCategoriaAppartenenza() == null) ||
+                (richiedente.getRapportoParentela() == null) ||
+                (richiedente.getCondizioneLavorativa() == null) ||
+                (richiedente.getTipoContratto() == null) ||
+                (richiedente.getFigli().isEmpty())
+            )
+                throw new GenitoreException("Mancano alcune informazioni del genitore richiedente");
+        }
+            
+        
+
+        
         
         if(stub2.ricercaUtente(codiceFiscaleBambino) != null)
             throw new AccountException("L'utente esite già");
@@ -358,7 +428,7 @@ public class ControlIscrizione {
         StubBambino stub2 = new StubBambino(db);
         
         // controllo sul codice fiscale che deve essere a 16 cifre
-        if (cf.length() != 16)
+        if (cf_bambino.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         if (!db.apriConnessione())
