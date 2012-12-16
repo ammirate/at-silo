@@ -32,6 +32,7 @@ import atsilo.storage.DBResponsabileQuestionario;
 import atsilo.storage.DBTirocinante;
 import atsilo.storage.Database;
 import atsilo.stub.storage.*;
+import atsilo.util.AtsiloConstants;
 
 
 /**
@@ -96,14 +97,14 @@ public class ControlLogin {
                         /*       
                          * 
                          * */
-                        if ((tipo.compareTo("genitore") == 0)) 
+                        if ((tipo.compareTo(AtsiloConstants.CAT_GENITORE) == 0)) 
                         {
                             if((dbGenitore.getGenitorePerCF(codiceFiscale) != null))
                                 return account;
                             else throw new LoginException("Username o Password o Tipologia Errata");
                         }
                         else 
-                            if ((tipo.compareTo("educatore_didattico") == 0)) 
+                            if ((tipo.compareTo(AtsiloConstants.CAT_EDUCATORE) == 0)) 
                             {
                                 if ((dbEducatoreDidattico.getEducatoreDidatticoPerCF(codiceFiscale) != null))
                                     return account;
@@ -118,14 +119,14 @@ public class ControlLogin {
                                     
                                 }
                                 else 
-                                    if ((tipo.compareTo("responsabile_questionario") == 0)) 
+                                    if ((tipo.compareTo(AtsiloConstants.CAT_RESP_QUEST) == 0)) 
                                     {
                                         if ((dbResponsabileQuestionario.getResponsabileQuestionarioPerCF(codiceFiscale) != null))
                                             return account;
                                         else throw new LoginException("Username o Password o Tipologia Errata");
                                     } 
                                     else 
-                                        if ((tipo.compareTo("psicopedagogo") == 0)) 
+                                        if ((tipo.compareTo(AtsiloConstants.CAT_PSICOPEDAGOGO) == 0)) 
                                         {
                                             if ((dbPsicopedagogo.getPsicopedagogoPerCF(codiceFiscale) != null))
                                                 return account;
@@ -137,7 +138,11 @@ public class ControlLogin {
                                                 if ((utente == null)) {throw new LoginException("Username o Password o Tipologia Errata");} 
                                                 else if (tipo.compareTo(utente.getCategoriaAppartenenza()) == 0)
                                                     return account;
-                                                    else throw new LoginException("Username o Password o Tipologia Errata");
+                                                    else 
+                                                        {
+                                                            System.out.println(tipo+"!="+utente.getCategoriaAppartenenza());
+                                                            throw new LoginException("Username o Password o Tipologia Errata");
+                                                        }
                                             }                   
                     } else throw new LoginException("Username o Password o Tipologia Errata");
                 
