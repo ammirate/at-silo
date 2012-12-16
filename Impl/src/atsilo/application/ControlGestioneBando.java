@@ -15,10 +15,14 @@
  **/
 package atsilo.application;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
+import atsilo.entity.Genitore;
 import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
+import atsilo.storage.DBBambino;
+import atsilo.storage.DBGenitore;
 import atsilo.storage.Database;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
@@ -54,13 +58,29 @@ public class ControlGestioneBando {
     {
         Database db = new Database();
         DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
+        DBGenitore dbg = new DBGenitore(db);
+        DBBambino dbb = new DBBambino(db);
         db.apriConnessione();
         
         try {
-            return dbdi.ricercaDomandeNonEscluseSenzaPunteggio();
+            List<DomandaIscrizione> ldi = dbdi.ricercaDomandeNonEscluseSenzaPunteggio();
+            for(DomandaIscrizione dom : ldi)
+            {
+                //Riempio i bean semivuoti (hanno solo i CF)
+                Bambino b = dom.getBambino();
+                dom.setBambino(dbb.ricercaBambinoPerCodFiscale(b.getCodiceFiscale()));
+                
+                Genitore gr = dom.getGenitore();
+                dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
+            }
+            
+            return ldi;
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "Impossibile ricercare domande. Causato da: "+e.getMessage(), e);
+        }
+        finally {
+            db.chiudiConnessione();
         }
         return null;
     }
