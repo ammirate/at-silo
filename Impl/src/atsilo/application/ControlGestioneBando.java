@@ -23,6 +23,9 @@ import atsilo.storage.Database;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /*
@@ -41,11 +44,26 @@ import java.sql.SQLException;
 
 public class ControlGestioneBando {
     private static final ControlGestioneBando INSTANCE = new ControlGestioneBando();
-    
+    private static final Logger LOG = Logger.getLogger("global");
     
     private ControlGestioneBando() {
     }
     
+    
+    public List<DomandaIscrizione> getDomandeInAttesaDiPunteggio()
+    {
+        Database db = new Database();
+        DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
+        db.apriConnessione();
+        
+        try {
+            return dbdi.ricercaDomandeNonEscluseSenzaPunteggio();
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile ricercare domande. Causato da: "+e.getMessage(), e);
+        }
+        return null;
+    }
     /**
      * 
      * inserisce il punteggio nella domanda passata in input
@@ -74,6 +92,39 @@ public class ControlGestioneBando {
             try {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setPunteggio(punteggio);
+                dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
+            } catch (SQLException e) 
+            {
+                throw new BandoException("Connessione Fallita");
+            }
+            return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    
+    /**
+     * Metodo che esclude una domanda dalla graduatoria
+     * @param iscrizione L'iscrizione da modificare.
+     * @param notaEsclusione Stringa contenente il motivo dell'esclusione
+     * @return
+     * @throws BandoException
+     */
+    public boolean escludiDomanda(DomandaIscrizione iscrizione,String notaEsclusione) throws BandoException
+            {
+        Database db = new Database();
+        if (!db.apriConnessione()) {
+            throw new BandoException("Connessione Fallita");
+        }
+        try {
+            
+            DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
+            DomandaIscrizione domandaDaModificare;
+            
+            try {
+                domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
+                domandaDaModificare.setEscluso(true);
+                domandaDaModificare.setNotaEsclusione(notaEsclusione);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {

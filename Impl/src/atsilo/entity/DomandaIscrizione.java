@@ -24,6 +24,8 @@ public class DomandaIscrizione implements Cloneable{
     
     private Date dataPresentazione;
     private int id;
+    private boolean escluso;
+    private String notaEsclusione;
     private int punteggio;
     private int posizione;
     private String statoDomanda;
@@ -545,6 +547,24 @@ public class DomandaIscrizione implements Cloneable{
         this.stato_convalidazione = stato_convalidazione;
     }
     
+    
+    
+    public boolean isEscluso() {
+        return escluso;
+    }
+
+    public void setEscluso(boolean escluso) {
+        this.escluso = escluso;
+    }
+
+    public String getNotaEsclusione() {
+        return notaEsclusione;
+    }
+
+    public void setNotaEsclusione(String notaEsclusione) {
+        this.notaEsclusione = notaEsclusione;
+    }
+
     /**
      * Metodo di sovrascrizione del metodo clone della classe Object
      * @return DomandaIscrizione clonata
@@ -554,6 +574,8 @@ public class DomandaIscrizione implements Cloneable{
         DomandaIscrizione domanda = new DomandaIscrizione();
         domanda.dataPresentazione = this.dataPresentazione;
         domanda.id = this.id;
+        domanda.escluso=this.escluso;
+        domanda.notaEsclusione=this.notaEsclusione;
         domanda.punteggio = this.punteggio;
         domanda.posizione = this.posizione;
         domanda.genitore = this.genitore;
