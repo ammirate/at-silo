@@ -22,6 +22,7 @@ import atsilo.entity.Genitore;
 import atsilo.entity.RispostaQuestionario;
 import atsilo.entity.Servizio;
 import atsilo.storage.DBBeans.Assegnazione;
+import atsilo.util.AtsiloConstants;
 
 /*
  *-----------------------------------------------------------------
@@ -130,7 +131,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         temp.setId(r.getInt("id"));
         temp.setNotaEsclusione(r.getString("nota_esclusione"));
-        temp.setEscluso(r.getBoolean("escluso"));
         temp.setPosizione(r.getInt("posizione"));
         temp.setPunteggio(r.getInt("punteggio"));
         temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -195,7 +195,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         temp.setId(r.getInt("id"));
         temp.setNotaEsclusione(r.getString("nota_esclusione"));
-        temp.setEscluso(r.getBoolean("escluso"));
+
         temp.setPosizione(r.getInt("posizione"));
         temp.setPunteggio(r.getInt("punteggio"));
         temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -259,7 +259,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             
             temp.setId(r.getInt("id"));
             temp.setNotaEsclusione(r.getString("nota_esclusione"));
-            temp.setEscluso(r.getBoolean("escluso"));
             temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
             temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -280,7 +279,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
             temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
             temp.setIsee(r.getFloat("isee"));
-            //temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
             lista.add(temp);
@@ -322,7 +321,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             
             temp.setId(r.getInt("id"));
             temp.setNotaEsclusione(r.getString("nota_esclusione"));
-            temp.setEscluso(r.getBoolean("escluso"));
             temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
             temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -343,7 +341,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
             temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
             temp.setIsee(r.getFloat("isee"));
-            //temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
         }
@@ -435,7 +433,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
 
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE punteggio IS NULL AND escluso=0");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE punteggio IS NULL AND stato_convalidazione=?");
+        tabella.setParam(stmt, 1, "stato_convalidazione", AtsiloConstants.STATO_DOMANDA_INVIATA);
         ResultSet r= stmt.executeQuery();
         
        while (r.next()){
@@ -452,7 +451,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             
             temp.setId(r.getInt("id"));
             temp.setNotaEsclusione(r.getString("nota_esclusione"));
-            temp.setEscluso(r.getBoolean("escluso"));
             temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
             temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -473,7 +471,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
             temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
             temp.setIsee(r.getFloat("isee"));
-            //temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
             toReturn.add(temp);

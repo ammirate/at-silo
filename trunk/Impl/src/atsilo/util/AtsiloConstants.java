@@ -44,6 +44,7 @@ public class AtsiloConstants {
     public static final String STATO_DOMANDA_NONCOMPILATA = "DomandaNonCompilata";
     public static final String STATO_DOMANDA_INVIATA="DomandaInviataInAttesaDiGraduatoria";
     public static final String STATO_DOMANDA_RIFIUTATA="DomandaRifiutata";
+    public static final String STATO_DOMANDA_ACCETTATA="DomandaAccettata";
     public static final String STATO_DOMANDA_NONCONFERMATA="IscrizioneConfermataInAttesaDiAltriDati";
     public static final String STATO_DOMANDA_NONINVIATA="DomandaNonInviata";
     public static final String ISCRIZIONE_CLASSE_CONFERMATA="Conferma";
