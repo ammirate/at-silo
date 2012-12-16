@@ -14,7 +14,92 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
+ <%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"%>
+	<%
+		// setto select bambino
+			ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+		   	Utente utente=cdt.getValoriUtente(username);
+		  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
+		  	List<Bambino> figli= new ArrayList<Bambino>();
+		  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli
+	%> <!--Popola la select con i nomi dei bambini del genitore richiedente-->
+<script type=text/javascript>
+			function popolaSelect(){
+  	   		   objSelect = document.getElementById("select_bambini");
+			   <% for (int i=0;i<figli.size();i++){%>
+  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
+		<%} %>	
+			}
+	</script>
+     <script>
+		function submitForm() {
+			document.forms[0].submit();
+		}
+	</script> <%
+ 	//setta campi form una volta selezionato il nome del bambino
+ 	  String cfb=null;
+ 		  String bambino_disabile="false";
+       
+        String genitore_invalido="false";
+       
+        String genitore_solo="false";
+        
+        String vedovo="false";
+       
+        String nubile="false";
+        
+        String separato="false";
+       
+        String figlio_non_riconosciuto="false";
+        
+        String affido_esclusivo="false";
+       
+        String altri_figli_disabili="false";
+       
+        String altre_condizioni_calcolo_punteggio="";
+ 		
+ 	 if (request.getParameter("select_bambini")!=null)
+ 	  cfb=(String)request.getParameter("select_bambini");
+ 	  cdt=ControlDatiPersonali.getIstance();
+ 	 Genitore genitore=new Genitore();
+ 	 
+ 	 if (cfb!=null){ 
+ 		Bambino bambino_selezionato=new Bambino();
+    	bambino_selezionato=cdt.getDatiBambino(cfb);
+ 		
+
+ 	 }
+ %> <!--Script per gestire i form --> <!--Script per gestire i form -->
+	<script type="text/javascript">
+		function settaAttributi(slf) {
+			document
+					.getElementById("dati_bando")
+					.setAttribute("action",
+							"http://localhost:8080/Atsilo/ServletCompilazioneDatiBando");
+			document.getElementById("bottone_submit").setAttribute("value",
+					"Salva");
+			var f = document.forms[0];
+			var n = f.elements.length;
+			for ( var i = 1; i < n; i++)
+				document.forms[0].elements[i].removeAttribute("readonly");
+			document.getElementById("select_bambini").removeAttribute(
+					"onChange", "");
+			slf.onclick = null;
+			return false;
+		}
+	</script> <%
+ 	if ((request.getParameter("successo")) != null) {
+ 		if (request.getParameter("successo").equals("ok")) {
+ 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+ 		} else {
+ 			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+ 		}
+ 	}
+ %>
+
  <form id="dati_bando" name="dati_bando" action="" method="post" >
+ <input name="chiamante" type="hidden" id="chiamante"
+			value="situazione_familiare">
   <table width="100%" border="0" cellspacing="0">
     <tr>
     <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vogliono inserire le informazioni</label>
@@ -22,9 +107,12 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
       
   </tr>
   <tr>
-  <td colspan="2"><select name="select">
-    <option>Selezionare il nome del bambino</option>
-  </select></td>
+  <td colspan="2"><select name="select_bambini" id="select_bambini"
+							onfocus="popolaSelect(this)"
+							onchange="submitForm()">
+				  <option value="null" selected>Selezionare Bambino</option>
+				  <option value="aggiungi">Aggiungere Bambino</option>
+              </select></td>
      <td>&nbsp;</td>
   </tr>
   <tr>
