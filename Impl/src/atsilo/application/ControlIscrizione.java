@@ -38,6 +38,7 @@ import atsilo.stub.application.StubBambino;
 import atsilo.stub.application.StubDomandaIscrizione;
 import atsilo.stub.application.StubGenitore;
 import atsilo.stub.application.StubUtente;
+import atsilo.util.AtsiloConstants;
 
 
 /*
@@ -225,75 +226,53 @@ public class ControlIscrizione {
           && (d.getGenitoreVedovo() == false) && (d.getGenitoreSeparato() == false) && (d.getAffidoEsclusivo() == false) )
         {
             Genitore nonRichiedente = d.getGenitoreNonRichiedente();
-            if(richiedente == null)
-                throw new GenitoreException("Genitore richiedente non trovato");
+            if(nonRichiedente == null)
+                throw new GenitoreException("Genitore non richiedente non trovato");
             
-            if( (richiedente.getDataNascita() == null) ||
-                (richiedente.getNome() == null) ||
-                (richiedente.getCognome() == null) ||
-                (richiedente.getCodiceFiscale() == null) ||
-                (richiedente.getEmail() == null) ||
-                (richiedente.getComuneNascita() == null) ||
-                (richiedente.getTelefono() == null) || 
-                (richiedente.getcittadinanza() == null) ||
-                (richiedente.getIndirizzoResidenza() == null) ||
-                (richiedente.getNumeroCivicoResidenza() == null) ||
-                (richiedente.getCapResidenza() == null) ||
-                (richiedente.getComuneResidenza() == null) ||
-                (richiedente.getProvinciaResidenza() == null) ||
-                (richiedente.getIndirizzoDomicilio() == null) ||
-                (richiedente.getNumeroCivicoDomicilio() == null) ||
-                (richiedente.getCapDomicilio() == null) ||
-                (richiedente.getComuneDomicilio() == null) ||
-                (richiedente.getProvinciaDomicilio() == null) ||
-                (richiedente.getTipo() == null) ||
-                (richiedente.getDipendentePresso() == null) ||
-                (richiedente.getRapportiAteneoSalerno() == null) ||
-                (richiedente.getRapportiComuneFisciano() == null) ||
-                (richiedente.getStatusLavorativo() == null) ||
-                (richiedente.getScadenzaContratto() == null) ||
-                (richiedente.getCategoriaAppartenenza() == null) ||
-                (richiedente.getRapportoParentela() == null) ||
-                (richiedente.getCondizioneLavorativa() == null) ||
-                (richiedente.getTipoContratto() == null) ||
-                (richiedente.getFigli().isEmpty())
+            if( (nonRichiedente.getDataNascita() == null) ||
+                (nonRichiedente.getNome() == null) ||
+                (nonRichiedente.getCognome() == null) ||
+                (nonRichiedente.getCodiceFiscale() == null) ||
+                (nonRichiedente.getEmail() == null) ||
+                (nonRichiedente.getComuneNascita() == null) ||
+                (nonRichiedente.getTelefono() == null) || 
+                (nonRichiedente.getcittadinanza() == null) ||
+                (nonRichiedente.getIndirizzoResidenza() == null) ||
+                (nonRichiedente.getNumeroCivicoResidenza() == null) ||
+                (nonRichiedente.getCapResidenza() == null) ||
+                (nonRichiedente.getComuneResidenza() == null) ||
+                (nonRichiedente.getProvinciaResidenza() == null) ||
+                (nonRichiedente.getIndirizzoDomicilio() == null) ||
+                (nonRichiedente.getNumeroCivicoDomicilio() == null) ||
+                (nonRichiedente.getCapDomicilio() == null) ||
+                (nonRichiedente.getComuneDomicilio() == null) ||
+                (nonRichiedente.getProvinciaDomicilio() == null) ||
+                (nonRichiedente.getTipo() == null) ||
+                (nonRichiedente.getDipendentePresso() == null) ||
+                (nonRichiedente.getRapportiAteneoSalerno() == null) ||
+                (nonRichiedente.getRapportiComuneFisciano() == null) ||
+                (nonRichiedente.getStatusLavorativo() == null) ||
+                (nonRichiedente.getScadenzaContratto() == null) ||
+                (nonRichiedente.getCategoriaAppartenenza() == null) ||
+                (nonRichiedente.getRapportoParentela() == null) ||
+                (nonRichiedente.getCondizioneLavorativa() == null) ||
+                (nonRichiedente.getTipoContratto() == null) ||
+                (nonRichiedente.getFigli().isEmpty())
             )
-                throw new GenitoreException("Mancano alcune informazioni del genitore richiedente");
+                throw new GenitoreException("Mancano alcune informazioni del genitore non richiedente");
         }
+        
+        if(d.getIsee() == -1)
+            throw new DomandaIscrizioneException("Mancano i dati relativi al documento isee");
             
-        
+        DomandaIscrizione domandaModificata = (DomandaIscrizione) d.clone();
+        domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_INVIATA);
 
-        
-        
-        if(stub2.ricercaUtente(codiceFiscaleBambino) != null)
-            throw new AccountException("L'utente esite già");
-        //Generazione della password
-        Random generatore = new Random(8);
-        int password = generatore.nextInt(10000001) + 99999999;
-        //Converesione in stringa della password
-        String psw = "" + password;
-        
-        //Credo che in questa prima fase vengano messi tutti i dati relativi all'entità utente 
-        Utente utente = new Utente(null,null, null, codiceFiscaleBambino, null,
-                null, null, null, null, null, null, 
-                null, null, null, null, null,
-                null, null);
-        
-        Account account = new Account(username_account, psw, utente);
-        
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            if(!stub2.inserisci(utente))
-                throw new UtenteException("Inserimento fallito");
-            if(!stub.inserisci(account))
-                throw new AccountException("Inserimento fallito");
-            //Decidere un messaggio di notifica
-            List<Utente> ut = new ArrayList<Utente>();
-            ut.add(utente);
-            //Messaggio m = new NotificaMail(ut, "iscrizione", "Registrazione andata a buon fine");
-            //if(!inviaMail(mess))
-            //  throw new AccountException("Invio mail fallito");
+            if(!stub.replace(d, domandaModificata))
+                throw new DomandaIscrizioneException("Modifica fallita");         
         }
         finally{
             db.chiudiConnessione();
