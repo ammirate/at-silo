@@ -579,7 +579,7 @@ public class DomandaIscrizione implements Cloneable{
      * Metodo di sovrascrizione del metodo clone della classe Object
      * @return DomandaIscrizione clonata
      */
-    public DomandaIscrizione clone()
+    public Object clone()
     {
         DomandaIscrizione domanda = new DomandaIscrizione();
         domanda.dataPresentazione = this.dataPresentazione;

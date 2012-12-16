@@ -172,8 +172,11 @@ public class ControlIscrizione {
      * @throws AccountException 
      * @throws InserimentoDatiException 
      * @throws UtenteException 
+     * @throws GenitoreException 
+     * @throws SQLException 
+     * @throws DomandaIscrizioneException 
      */
-    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException{
+    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException{
         Database db = new Database();        
         DBDomandaIscrizione stub = new DBDomandaIscrizione(db);
         
