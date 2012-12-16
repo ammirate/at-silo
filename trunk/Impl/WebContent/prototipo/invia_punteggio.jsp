@@ -15,6 +15,14 @@ function escludiIscrizione(){
 	document.getElementById("inpe").setAttribute("disabled","disabled");
 	document.getElementById("inpv").removeAttribute("disabled");
 }
+function isNumberKey(evt)
+{
+   var charCode = (evt.which) ? evt.which : event.keyCode
+   if (charCode > 31 && (charCode < 48 || charCode > 57))
+      return false;
+
+   return true;
+}
 </script>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -58,7 +66,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 <input id="inpe" type="button" value="Escludi" name="escludi" onclick="escludiIscrizione()" />
 </div>
 <div id="val" style="display: none;">
-Valutazione : <input type="text" name="punteggio" />
+Valutazione : <input type="text" name="punteggio" onkeypress="return isNumberKey(event)"/>
 <br /><input type="submit" value="Invia Punteggio" name="invia" />
 </div>
 <div id="esc" style="display: none;">
