@@ -40,7 +40,7 @@ include
 			document.forms[0].submit();
 		}
 	</script>
-   <!--Script per resettare campi --> 
+       <!--Script per resettare campi --> 
   <script>
   function resetForm(){
  
@@ -81,16 +81,28 @@ include
 							"http://localhost:8080/Atsilo/ServletCompilazioneDatiBando");
 			document.getElementById("bottone_submit").setAttribute("value",
 					"Salva");
+			document.getElementById("bottone_submit").setAttribute("onClick",
+					"return  controlloAndSubmit(this)");		
 			var f = document.forms[0];
 			var n = f.elements.length;
 			for ( var i = 1; i < n; i++)
 				document.forms[0].elements[i].removeAttribute("readonly");
 			document.getElementById("select_bambini").removeAttribute(
 					"onChange", "");
-			slf.onclick = null;
+			//slf.onclick = null;
 			return false;
 		}
-	</script> <%
+	</script>
+    <script>
+	function controlloAndSubmit(slf){
+		if ( (document.getElementById("codice_fiscale_bambino").value).length!=16)
+			alert("Controllare la correttezza dei campi");
+		else
+		document.forms[0].submit();
+	}
+		
+	</script>
+     <%
  	if ((request.getParameter("successo")) != null) {
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
@@ -153,7 +165,7 @@ include
 			</tr>
 			<tr>
 				<td></td>
-				<td><input type="submit" name="bottone_submit"
+				<td><input type="button" name="bottone_submit"
 					id="bottone_submit" value="Modifica"
 					onClick="return settaAttributi(this)" /> <input type="reset"
 					name="reset" value="Annulla" /></td>
