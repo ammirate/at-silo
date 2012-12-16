@@ -403,8 +403,8 @@ public class DBBambino extends DBBeans<Bambino> {
         List<Bambino>l=new ArrayList<Bambino>();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe = ?");
-            tabella.setParam(stmt, 1, "classe", null);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL");
+            
             ResultSet r = stmt.executeQuery();
             
             
