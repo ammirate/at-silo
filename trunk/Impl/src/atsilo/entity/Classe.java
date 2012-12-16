@@ -54,6 +54,18 @@ public class Classe {
         this.sezione=sezione;
     }
     
+    
+    /**
+     * Costruttore senza Id
+     * @param educatori è settato dopo la lettura 
+     * @param eventi è settato dopo la lettura
+     * @param statoClasse è settato dopo la lettura
+     */
+    public Classe(String sezione, List<EducatoreDidattico> educatori) {
+        this.educatori = educatori;
+        this.sezione=sezione;
+    }
+    
     /**
      * Metodo che setta il campo Id
      * @param id il parametro fissato
