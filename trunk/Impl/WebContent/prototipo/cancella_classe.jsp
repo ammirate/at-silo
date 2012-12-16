@@ -39,12 +39,17 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 								<td class="tplTitolo">
 								
 <form action="http://localhost:8080/Atsilo/ServletControlClasseCanc" method="post">
+<% 
+%>
 <table class="tabella_form">
 
 <%
 ControlClassi crt = ControlClassi.getIstance();
 int i=0;
 int n= crt.getClassi().size();
+if(n == 0){
+	out.print("<h1> Non è presente nessuna classe da cancellare</h1>");
+}
 String input = "<input type='checkbox' name='classi' value='";
 String endInput = "' />";
 for(i=0;i<n;i++){
