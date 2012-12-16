@@ -113,10 +113,10 @@ if (!tipologia.equals("impiegato_asilo") )
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_classe.jsp">Inserisci Classe</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_classe.jsp">Assegna Classe</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="assegna_classe.jsp">Assegna Classe</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="assegna_classe.jsp">Cancella Classe</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_classe.jsp">Cancella Classe</a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">

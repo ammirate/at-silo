@@ -67,7 +67,7 @@ public class ServletControlClasseCanc extends HttpServlet {
                 }
             }
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=y");   
+            response.setHeader("Location", "prototipo/cancella_classe.jsp?"+"successo=y");   
         }    
     }
 }

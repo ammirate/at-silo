@@ -37,6 +37,7 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
+								
 <form action="http://localhost:8080/Atsilo/ServletControlClasseCanc" method="post">
 <table class="tabella_form">
 
@@ -44,7 +45,7 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 ControlClassi crt = ControlClassi.getIstance();
 int i=0;
 int n= crt.getClassi().size();
-String input = "<input type='checkbox' name='classi' value=' ";
+String input = "<input type='checkbox' name='classi' value='";
 String endInput = "' />";
 for(i=0;i<n;i++){
 	String id = ""+crt.getClassi().get(i).getId();
