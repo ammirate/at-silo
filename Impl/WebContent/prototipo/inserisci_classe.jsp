@@ -1,5 +1,6 @@
 <%@
 	include file="atsilo_files/header.jsp"%>
+<%@ page import="atsilo.application.*,atsilo.entity.*"%>
 
 
 <%
@@ -50,9 +51,19 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 							<tr>
 								<td class="tplTitolo">
 <form action="http://localhost:8080/Atsilo/ServletControlClasseIns" method="post">
+
+Le seguenti classi sono già presenti : <br />
+<%
+	ControlClassi crt = ControlClassi.getIstance();
+	int n=  crt.getClassi().size();
+	for(int i=0; i<n;i++){
+	out.print(crt.getClassi().get(i).getSezione()+", ");
+	}
+%>
+
 <table class="tabella_form">
 <tr>
-<td>Sezione :</td><td><input type="text" name="classe" id="classe"></td>
+<td>Sezione :</td><td><input type="text" name="classe" id="classe" /></td>
 </tr>
 </table>
 <input type="submit" value="Salva" id="salva" name="salva" onclick= "return checkForm()"/> <input type="reset" value="cancella" />
