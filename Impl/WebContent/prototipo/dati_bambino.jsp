@@ -39,7 +39,14 @@ include
 		function submitForm() {
 			document.forms[0].submit();
 		}
-	</script> <%
+	</script>
+   <!--Script per resettare campi --> 
+  <script>
+  function resetForm(){
+ 
+  }
+  </script>
+     <%
  	//setta campi form una volta selezionato il nome del bambino
  	  String cfb=null;
  		String cognome="";
