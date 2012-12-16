@@ -649,6 +649,50 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
+    /**
+     * restituisce le risposte aperte di una determinata domanda di un determinato questionario
+     * l'arraylist sarà vuoto nel caso in cui quella domanda o quel questionario non esistano,
+     * o nel caso in cui la domanda non sia di tipo text (cioè aperta)
+     * @param idQuestionario
+     * @param idDomanda
+     * @return
+     * @throws DBConnectionException 
+     * @throws SQLException 
+     */
+    public ArrayList<String> getRisposteAperte(int idDomanda) throws DBConnectionException, SQLException
+    {  Database db = new Database();
+        ArrayList<String> toReturn = new ArrayList<String>();
+        if(!db.apriConnessione())
+            {throw new DBConnectionException("Connessione al DB fallita");}
+        
+        
+        try {
+           
+            DBCampoDomandaQuestionario dbcd= new DBCampoDomandaQuestionario(db);
+            List<CampoDomandaQuestionario> campo= dbcd.getCampiDomandaQuestionario(idDomanda);
+            
+            for(CampoDomandaQuestionario n : campo)
+            {
+                if(n.getTipo().equals("text"))
+                {
+                    DBRispostaQuestionario dbrisposta= new DBRispostaQuestionario(db);
+                    List<RispostaQuestionario> risp= dbrisposta.getRisposteDomandaSpecifica(idDomanda);
+                    
+                    for(RispostaQuestionario r : risp)
+                    {
+                        toReturn.add(r.getValore());
+                    }
+                }
+            }
+            
+            return toReturn;
+            
+        } finally{
+            db.chiudiConnessione();
+            
+        }
+        
+    }
     
     
     
