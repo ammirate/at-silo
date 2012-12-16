@@ -91,6 +91,8 @@ else if (temp_nome_chiamante.equals("modifica_fascia_oraria.jsp"))
 	out.println("<title>Modifica Fascia Oraria</title>");	
 else if (temp_nome_chiamante.equals("cancella_fascia_oraria.jsp"))
 	out.println("<title>Cancella Fascia Oraria</title>");	
+else if (temp_nome_chiamante.equals("inserisci_classe.jsp"))
+	out.println("<title>Inserisci Classe</title>");	
 
 	
 %>
