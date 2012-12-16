@@ -116,11 +116,16 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     protected DomandaIscrizione creaBean(ResultSet r) throws SQLException {
         Bambino b=new Bambino();
         Genitore g=new Genitore();
+        Genitore gnr=new Genitore();
         Servizio s=new Servizio();
-        String ge=r.getString("genitore");g.setCodiceFiscale(ge);
-        String ba=r.getString("bambino");b.setCodiceFiscale(ba);
-        int se=r.getInt("servizio");s.setId(se);
-        
+        String ge=r.getString("genitore");
+        g.setCodiceFiscale(ge);
+        String ba=r.getString("bambino");
+        b.setCodiceFiscale(ba);
+        int se=r.getInt("servizio");
+        s.setId(se);
+        String genonric=r.getString("cf_genitore_non_richiedente");
+        gnr.setCodiceFiscale(genonric);
         DomandaIscrizione temp = new DomandaIscrizione();
         
         temp.setId(r.getInt("id"));
@@ -131,6 +136,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setDataPresentazione(r.getDate("data_presentazione"));
         temp.setBambino(b);
         temp.setGenitore(g);
+        temp.setGenitoreNonRichiedente(gnr);
         temp.setServizio(s);
         temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
         temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
@@ -176,6 +182,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         if(r.next()){
         Bambino b=new Bambino();
         Genitore g=new Genitore();
+        Genitore gnr=new Genitore();
         Servizio s=new Servizio();
         String ge=r.getString("genitore");
         g.setCodiceFiscale(ge);
@@ -183,7 +190,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         b.setCodiceFiscale(ba);
         int se=r.getInt("servizio");
         s.setId(se);
-        
+        String genonric=r.getString("cf_genitore_non_richiedente");
+        gnr.setCodiceFiscale(genonric);
         
         temp.setId(r.getInt("id"));
         temp.setNotaEsclusione(r.getString("nota_esclusione"));
@@ -193,6 +201,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setDataPresentazione(r.getDate("data_presentazione"));
         temp.setBambino(b);
         temp.setGenitore(g);
+        temp.setGenitoreNonRichiedente(gnr);
         temp.setServizio(s);
         temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
         temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
@@ -240,11 +249,13 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             
             Bambino b=new Bambino();
             Genitore g=new Genitore();
+            Genitore gnr = new Genitore();
             Servizio s=new Servizio();
             String ge=r.getString("genitore");g.setCodiceFiscale(ge);
             String ba=r.getString("bambino");b.setCodiceFiscale(ba);
             int se=r.getInt("servizio");s.setId(se);
-            
+            String genonric=r.getString("cf_genitore_non_richiedente");
+            gnr.setCodiceFiscale(genonric);
             
             temp.setId(r.getInt("id"));
             temp.setNotaEsclusione(r.getString("nota_esclusione"));
@@ -254,6 +265,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setDataPresentazione(r.getDate("data_presentazione"));
             temp.setBambino(b);
             temp.setGenitore(g);
+            temp.setGenitoreNonRichiedente(gnr);
             temp.setServizio(s);
             temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
             temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
@@ -300,11 +312,13 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
             Bambino b=new Bambino();
             Genitore g=new Genitore();
+            Genitore gnr = new Genitore();
             Servizio s=new Servizio();
             String ge=r.getString("genitore");g.setCodiceFiscale(ge);
             String ba=r.getString("bambino");b.setCodiceFiscale(ba);
             int se=r.getInt("servizio");s.setId(se);
-            
+            String genonric=r.getString("cf_genitore_non_richiedente");
+            gnr.setCodiceFiscale(genonric);
             
             temp.setId(r.getInt("id"));
             temp.setNotaEsclusione(r.getString("nota_esclusione"));
@@ -314,6 +328,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setDataPresentazione(r.getDate("data_presentazione"));
             temp.setBambino(b);
             temp.setGenitore(g);
+            temp.setGenitoreNonRichiedente(gnr);
             temp.setServizio(s);
             temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
             temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
@@ -427,11 +442,13 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             DomandaIscrizione temp=new DomandaIscrizione();
             Bambino b=new Bambino();
             Genitore g=new Genitore();
+            Genitore gnr = new Genitore(); 
             Servizio s=new Servizio();
             String ge=r.getString("genitore");g.setCodiceFiscale(ge);
             String ba=r.getString("bambino");b.setCodiceFiscale(ba);
             int se=r.getInt("servizio");s.setId(se);
-            
+            String genonric=r.getString("cf_genitore_non_richiedente");
+            gnr.setCodiceFiscale(genonric);
             
             temp.setId(r.getInt("id"));
             temp.setNotaEsclusione(r.getString("nota_esclusione"));
@@ -441,6 +458,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setDataPresentazione(r.getDate("data_presentazione"));
             temp.setBambino(b);
             temp.setGenitore(g);
+            temp.setGenitoreNonRichiedente(gnr);
             temp.setServizio(s);
             temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
             temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
@@ -469,12 +487,13 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         Assegnazione DBDomandaIscrizione_assegnazione = new Assegnazione("servizio",bean.getServizio().getId());
         Assegnazione DBDomandaIscrizione_assegnazione1 = new Assegnazione("genitore",bean.getGenitore().getCodiceFiscale());
         Assegnazione DBDomandaIscrizione_assegnazione2 = new Assegnazione("bambino",bean.getBambino().getCodiceFiscale());
-
-        Assegnazione[] DBAssign = new Assegnazione[3];
+        Assegnazione DBDomandaIscrizione_assegnazione3 = new Assegnazione("cf_genitore_non_richiedente",bean.getGenitoreNonRichiedente().getCodiceFiscale());
+        
+        Assegnazione[] DBAssign = new Assegnazione[4];
         DBAssign[0]=DBDomandaIscrizione_assegnazione;
         DBAssign[1]=DBDomandaIscrizione_assegnazione1;
         DBAssign[2]=DBDomandaIscrizione_assegnazione2;
-
+        DBAssign[3]=DBDomandaIscrizione_assegnazione3;
         return DBAssign;
     }
     
