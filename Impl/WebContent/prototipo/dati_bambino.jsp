@@ -42,7 +42,6 @@ include
 	</script> <%
  	//setta campi form una volta selezionato il nome del bambino
  	  String cfb=null;
-    		
  		String cognome="";
  		String nome="";
  		String codiceFiscale="";
@@ -52,12 +51,12 @@ include
  		
  	 if (request.getParameter("select_bambini")!=null)
  	  cfb=(String)request.getParameter("select_bambini");
- 	 
  	  cdt=ControlDatiPersonali.getIstance();
  	 Genitore genitore=new Genitore();
+ 	 
  	 if (cfb!=null){ 
  		Bambino bambino_selezionato=new Bambino();
-    		bambino_selezionato=cdt.getDatiBambino(cfb);
+    	bambino_selezionato=cdt.getDatiBambino(cfb);
  		cognome=bambino_selezionato.getCognome(); 
  		nome=bambino_selezionato.getNome();
  		codiceFiscale=bambino_selezionato.getCodiceFiscale(); 
@@ -108,8 +107,8 @@ include
 				<td colspan="2"><select name="select_bambini" id="select_bambini"
 							onfocus="popolaSelect(this)"
 							onchange="submitForm()">
-				  <option value="null">Aggiungere Bambino</option>
-              </select></td>
+				  <option value="null" selected>Selezionare Bambino</option>
+</select></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>

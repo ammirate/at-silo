@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
 
 import atsilo.application.ControlDatiPersonali;
 import atsilo.application.ControlIscritti;
+import atsilo.application.ControlIscrizione;
 import atsilo.entity.Account;
 import atsilo.entity.Beans;
 import atsilo.entity.Genitore;
@@ -46,7 +47,7 @@ import atsilo.exception.InserimentoDatiException;
 public class ServletCompilazioneDatiBando extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private ControlDatiPersonali controlDatiPersonali ;
-    private ControlIscritti controlIscritti;
+    private ControlIscrizione controlIscrizione;
     private static final Logger LOG = Logger.getLogger("global");
     
     /**
@@ -54,7 +55,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
      */
     public ServletCompilazioneDatiBando() {
         controlDatiPersonali=ControlDatiPersonali.getIstance();
-        controlIscritti=ControlIscritti.getIstance();
+        controlIscrizione=ControlIscrizione.getIstance();
     }
     
     /**
@@ -268,18 +269,36 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             isee=Float.parseFloat(request.getParameter("isee"));
         
         //situazione familiare
-        String bambino_disabile="";
+        String bambino_disabile="false";
         if ( request.getParameter("bambino_disabile")!=null)
             bambino_disabile=request.getParameter("bambino_disabile");
-        String genitore_invalido="";
+        String genitore_invalido="false";
         if ( request.getParameter("genitore_invalido")!=null)
             genitore_invalido=request.getParameter("genitore_invalido");
-        String genitore_solo="";
-        String vedovo="";
-        String nubile="";
-        String separato="";
-        String figlio_non_riconosciuto="";
-        String affido_esclusivo="";
+        String genitore_solo="false";
+        if ( request.getParameter("genitore_solo")!=null)
+            genitore_solo=request.getParameter("genitore_solo");
+        String vedovo="false";
+        if ( request.getParameter("vedovo")!=null)
+            vedovo= request.getParameter("vedovo");
+        String nubile="false";
+        if ( request.getParameter("nubile")!=null)
+            nubile= request.getParameter("nubile");
+        String separato="false";
+        if ( request.getParameter("separato")!=null)
+            separato=request.getParameter("separato");
+        String figlio_non_riconosciuto="false";
+        if ( request.getParameter("figlio_non_riconosciuto")!=null)
+            figlio_non_riconosciuto=request.getParameter("figlio_non_riconosciuto");
+        String affido_esclusivo="false";
+        if ( request.getParameter("affido_esclusivo")!=null)
+            affido_esclusivo=request.getParameter("affido_esclusivo");
+        String altri_figli_disabili="false";
+        if ( request.getParameter("altri_figli_disabili")!=null)
+            altri_figli_disabili= request.getParameter("altri_figli_disabili");
+        String altre_condizioni_calcolo_punteggio="";
+        if ( request.getParameter("altre_condizioni_calcolo_punteggio")!=null)
+            altre_condizioni_calcolo_punteggio=request.getParameter("altre_condizioni_calcolo_punteggio");
         
 
         //gestione richieste
@@ -346,13 +365,13 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             
         }//fine update dati genitore non richiedente
         
-        if ( request.getParameter("chiamante").equals("situazione_reddituale")){//se chiamante è la pagina della sitauzione reddituale  
-            /*
+        if ( request.getParameter("chiamante").equals("situazione_reddituale") || request.getParameter("chiamante").equals("situazione_familiare")){//se chiamante è la pagina della sitauzione reddituale e familiare
+            
             String codiceFiscaleGenitore = controlDatiPersonali.getValoriUtente("username").getCodiceFiscale();
             
             try {
                 
-                if (controlIscritti.inserisciDatiDomandaIscrizione(null, codiceFiscaleGenitore, false, false, false, false, false, false, false, false, false, null, isee)){
+                if (controlIscrizione.updateDatiDomandaIscrizionePrimoStep(dataPresentazione, iD, punteggio, posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni, certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, genitoreNubile, genitoreSeparato, figlioNonRiconosciuto, affidoEsclusivo, altriComponentiDisabili, condizioniCalcoloPunteggio, isee, servizio, stato_convalidazione)(){
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");
                     
                 } else  {
@@ -365,9 +384,10 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE,getServletName()+ "Erroree connessioen al database", e.getMessage());
-            } */
+            } 
             
-        }//fine update sitauzione reddituale
+        }//fine update sitauzione reddituale e familiare
+        
         
         // Set response content type
         response.setContentType("text/html");
