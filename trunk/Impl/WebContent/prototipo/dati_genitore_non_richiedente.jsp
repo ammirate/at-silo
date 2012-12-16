@@ -100,9 +100,12 @@ include
   document.forms[0].submit();
   }
   </script>
+
  <!--Script per gestire i form --> 
  <script type="text/javascript">
 		function settaAttributi(slf) {
+			if (document.getElementById("codice_fiscale_genitore_non_richiedente").value=="")
+				return false;
 			document
 					.getElementById("dati_bando")
 					.setAttribute("action",
@@ -143,19 +146,19 @@ include
 							onfocus="popolaSelect(this)"
 							onchange="submitForm()">
 							<option value="null" selected>Selezionare Bambino</option>
-					  </select>
+			      </select>
 					</p></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
 				<td>In qualita' di</td>
 				<td><select id="qualita" name="qualita">
-						<option value="Seleziona">Seleziona</option>
+				  <option value="null" selected>Seleziona</option>
 						<option value="Padre">Padre</option>
 						<option value="Madre">Madre</option>
-						<option value="Tutore" selected>Tutore</option>
+						<option value="Tutore">Tutore</option>
 						<option value="Affidatario">Affidatario</option>
-				</select></td>
+			  </select></td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 			</tr>
@@ -283,10 +286,10 @@ include
 				<td>Tipo contratto</td>
 				<td><select id="tipo_contratto_genitore_non_richiedente"
 					name="tipo_contratto_genitore_non_richiedente">
-						<option value="Seleziona">Seleziona</option>
+				  <option value="null" selected>Seleziona</option>
 						<option value="A tempo pieno">A tempo pieno</option>
 						<option value="Part time">Part time</option>
-				</select></td>
+			  </select></td>
 			</tr>
 			<tr>
 				<td>Sede di lavoro</td>

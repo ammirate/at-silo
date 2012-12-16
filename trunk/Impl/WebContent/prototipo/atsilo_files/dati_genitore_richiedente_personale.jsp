@@ -33,7 +33,7 @@
   <tr>
     <td>In qualita' di</td>
     <td><select id="rapportoParentela" name="rapportoParentela"  readonly="readonly">
-    <option value="Seleziona">Seleziona</option>
+      <option value="null" selected="selected">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>
     <option value="Tutore">Tutore</option>
@@ -114,6 +114,7 @@
   </tr>
   <tr>
   <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  readonly="readonly" >
+    <option value="null">Selezionare</option>
 <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
       <option value="di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; ">di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno; </option>

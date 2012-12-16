@@ -26,7 +26,7 @@
   <tr>
     <td>In qualita' di</td>
     <td><select id="rapportoParentela" name="rapportoParentela"  readonly="readonly">
-    <option value="Seleziona">Seleziona</option>
+      <option value="null" selected="selected">Seleziona</option>
     <option value="Padre">Padre</option>
     <option value="Madre">Madre</option>
     <option value="Tutore">Tutore</option>
