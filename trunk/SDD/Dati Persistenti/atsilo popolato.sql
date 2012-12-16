@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generato il: 13 dic, 2012 at 03:46 PM
--- Versione MySQL: 5.1.44
--- Versione PHP: 5.3.1
+-- Host: 127.0.0.1
+-- Generato il: Dic 16, 2012 alle 19:39
+-- Versione del server: 5.5.20
+-- Versione PHP: 5.3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -292,11 +293,6 @@ CREATE TABLE IF NOT EXISTS `compila` (
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dump dei dati per la tabella `compila`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -310,11 +306,6 @@ CREATE TABLE IF NOT EXISTS `contestazione` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dump dei dati per la tabella `contestazione`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -323,6 +314,8 @@ CREATE TABLE IF NOT EXISTS `contestazione` (
 
 CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `id` int(11) NOT NULL,
+  `escluso` tinyint(1) DEFAULT '0',
+  `nota_esclusione` varchar(200) DEFAULT NULL,
   `data_presentazione` date DEFAULT NULL,
   `punteggio` int(50) DEFAULT NULL,
   `posizione` int(50) DEFAULT NULL,
@@ -354,16 +347,16 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
 -- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
-INSERT INTO `domanda_iscrizione` (`id`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`) VALUES
-(1, '2012-07-19', 94, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220),
-(2, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122),
-(3, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122),
-(4, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323),
-(5, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892),
-(6, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523),
-(7, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423),
-(8, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353),
-(9, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353);
+INSERT INTO `domanda_iscrizione` (`id`, `escluso`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`) VALUES
+(1, 0, NULL, '2012-07-19', 94, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220),
+(2, 0, NULL, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122),
+(3, 0, NULL, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122),
+(4, 0, NULL, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323),
+(5, 0, NULL, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892),
+(6, 0, NULL, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523),
+(7, 0, NULL, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423),
+(8, 0, NULL, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353),
+(9, 0, NULL, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353);
 
 -- --------------------------------------------------------
 
@@ -576,9 +569,9 @@ INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`
 ('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
 ('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
 ('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'altro', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
+('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento, 1 - Napoli', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-11', NULL, NULL),
 ('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento, 1 - Napoli', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-11', NULL, NULL);
+('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -901,11 +894,6 @@ CREATE TABLE IF NOT EXISTS `registro` (
   KEY `educatore_didattico` (`educatore_didattico`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dump dei dati per la tabella `registro`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -923,11 +911,6 @@ CREATE TABLE IF NOT EXISTS `registro_tirocinante` (
   KEY `attivita_tirocinante` (`attivita_tirocinante`),
   KEY `tirocinante` (`tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `registro_tirocinante`
---
-
 
 -- --------------------------------------------------------
 
@@ -1270,3 +1253,7 @@ ALTER TABLE `schedulazione`
 --
 ALTER TABLE `tirocinante`
   ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
