@@ -44,6 +44,7 @@ public class DomandaIscrizione implements Cloneable{
     private String condizioniCalcoloPunteggio;
     private float isee;
     private String stato_convalidazione;
+    private Genitore genitoreNonRichiedente;
     
     /**
      * La variabile genitore avrà il valore della variabile di Genitore
@@ -564,6 +565,15 @@ public class DomandaIscrizione implements Cloneable{
     public void setNotaEsclusione(String notaEsclusione) {
         this.notaEsclusione = notaEsclusione;
     }
+    
+
+    public Genitore getGenitoreNonRichiedente() {
+        return genitoreNonRichiedente;
+    }
+
+    public void setGenitoreNonRichiedente(Genitore genitoreNonRichiedente) {
+        this.genitoreNonRichiedente = genitoreNonRichiedente;
+    }
 
     /**
      * Metodo di sovrascrizione del metodo clone della classe Object
@@ -597,6 +607,7 @@ public class DomandaIscrizione implements Cloneable{
         domanda.isee = this.isee;
         domanda.servizio = this.servizio;
         domanda.stato_convalidazione= this.stato_convalidazione;
+        domanda.genitoreNonRichiedente=this.genitoreNonRichiedente;
         return domanda;
     }
     
