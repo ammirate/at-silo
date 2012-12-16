@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 16, 2012 alle 23:23
+-- Generato il: Dic 16, 2012 alle 23:45
 -- Versione del server: 5.5.20
 -- Versione PHP: 5.3.9
 
@@ -304,7 +304,6 @@ CREATE TABLE IF NOT EXISTS `contestazione` (
 
 CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `id` int(11) NOT NULL,
-  `escluso` tinyint(1) DEFAULT '0',
   `nota_esclusione` varchar(200) DEFAULT NULL,
   `data_presentazione` date DEFAULT NULL,
   `punteggio` int(50) DEFAULT NULL,
@@ -327,7 +326,7 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `altri_componenti_disabili` tinyint(1) DEFAULT NULL,
   `condizioni_calcolo_punteggio` text,
   `isee` float DEFAULT NULL,
-  `stato_convalidazione` varchar(100) DEFAULT NULL,
+  `stato_convalidazione` enum('DomandaNonCompilata','DomandaInviataInAttesaDiGraduatoria','DomandaRifiutata','IscrizioneConfermataInAttesaDiAltriDati','DomandaNonInviata','DomandaAccettata') DEFAULT 'DomandaNonCompilata',
   `cf_genitore_non_richiedente` varchar(16) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
@@ -339,16 +338,16 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
 -- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
-INSERT INTO `domanda_iscrizione` (`id`, `escluso`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`) VALUES
-(1, 0, NULL, '2012-07-19', NULL, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220, NULL, NULL),
-(2, 0, NULL, '2012-08-13', 93, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, NULL, NULL),
-(3, 0, NULL, '2012-08-13', 94, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, NULL, NULL),
-(4, 0, NULL, '2012-11-01', 91, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323, NULL, NULL),
-(5, 0, NULL, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892, NULL, NULL),
-(6, 0, NULL, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523, NULL, NULL),
-(7, 0, NULL, '2012-08-01', 85, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423, NULL, NULL),
-(8, 0, NULL, '2012-08-28', 79, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, NULL, NULL),
-(9, 0, NULL, '2012-08-28', 79, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, NULL, NULL);
+INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`) VALUES
+(1, NULL, '2012-07-19', NULL, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220, 'DomandaNonCompilata', NULL),
+(2, NULL, '2012-08-13', NULL, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, 'DomandaNonCompilata', NULL),
+(3, NULL, '2012-08-13', NULL, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, NULL, NULL),
+(4, NULL, '2012-11-01', NULL, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323, 'DomandaNonCompilata', NULL),
+(5, NULL, '2012-06-12', NULL, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892, 'DomandaNonCompilata', NULL),
+(6, NULL, '2012-09-25', NULL, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523, 'DomandaNonCompilata', NULL),
+(7, NULL, '2012-08-01', NULL, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423, 'DomandaNonCompilata', NULL),
+(8, NULL, '2012-08-28', NULL, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaNonCompilata', NULL),
+(9, NULL, '2012-08-28', NULL, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaInviataInAttesaDiGraduatoria', NULL);
 
 -- --------------------------------------------------------
 
