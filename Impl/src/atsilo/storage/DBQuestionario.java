@@ -170,8 +170,8 @@ public class DBQuestionario extends DBBeans<Questionario>{
             PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM " + tabella.getNomeTabella() + 
                     " WHERE id = ? AND NOW() BETWEEN ? AND ? " );
             tabella.setParam(stmt, 1,"id", q.getId());
-            tabella.setParam(stmt, 2, "periodo_inizio", q.getPeriodo_inizioString());
-            tabella.setParam(stmt, 3, "periodo_fine", q.getPeriodo_fineString());
+            tabella.setParam(stmt, 2, "periodo_inizio", q.getPeriodo_inizio());
+            tabella.setParam(stmt, 3, "periodo_fine", q.getPeriodo_fine());
             ResultSet res = stmt.executeQuery();
            
               while(res.next())  
