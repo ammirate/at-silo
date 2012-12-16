@@ -26,6 +26,7 @@ import atsilo.storage.DBGenitore;
 import atsilo.storage.Database;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
+import atsilo.util.AtsiloConstants;
 
 import java.sql.Date;
 import java.sql.SQLException;
@@ -192,6 +193,7 @@ public class ControlGestioneBando {
             try {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setPunteggio(punteggio);
+                domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
@@ -223,7 +225,7 @@ public class ControlGestioneBando {
             
             try {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
-                domandaDaModificare.setEscluso(true);
+                domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_RIFIUTATA);
                 domandaDaModificare.setNotaEsclusione(notaEsclusione);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
