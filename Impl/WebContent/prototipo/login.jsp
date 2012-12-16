@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
+<%@page import="atsilo.util.AtsiloConstants"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -114,15 +115,15 @@
   <p>
     Tipologia utente
     <select name="tipologiaUtente">
-      <option value="genitore" selected="selected">Genitore</option>
-      <option value="ImpiegatoAsilo">Impiegato Asilo</option>
-      <option value="ImpiegatoDirittoStudio">Impiegato Diritto allo studio</option>
-      <option value="educatore">Educatore</option>
-      <option value="psicopedagogo">Psicopedagogo</option>
-      <option value="ResponsabileScientifico">Resp. Scienze Formazione</option>
-      <option value="responsabile_questionario">Responsabile del Questionario</option>
-       <option value="Direttore">Direttore</option>
-       <option value="DelegatoRettore">Delegato Rettore</option>
+      <option value="<% out.print(AtsiloConstants.CAT_GENITORE); %>" selected="selected">Genitore</option>
+      <option value="<% out.print(AtsiloConstants.CAT_IMP_ASILO); %>">Impiegato Asilo</option>
+      <option value="<% out.print(AtsiloConstants.CAT_IMP_DIR_STUDIO); %>">Impiegato Diritto allo studio</option>
+      <option value="<% out.print(AtsiloConstants.CAT_EDUCATORE); %>">Educatore</option>
+      <option value="<% out.print(AtsiloConstants.CAT_PSICOPEDAGOGO); %>">Psicopedagogo</option>
+      <option value="<% out.print(AtsiloConstants.CAT_RESP_SCIENTIFICO); %>">Resp. Scienze Formazione</option>
+      <option value="<% out.print(AtsiloConstants.CAT_RESP_QUEST); %>">Responsabile del Questionario</option>
+       <option value="<% out.print(AtsiloConstants.CAT_DIRETTORE); %>">Direttore</option>
+       <option value="<% out.print(AtsiloConstants.CAT_DELEGATO_RETTORE); %>">Delegato Rettore</option>
     </select>
   </p>
   <p>

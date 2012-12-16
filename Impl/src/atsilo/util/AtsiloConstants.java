@@ -33,10 +33,14 @@ public class AtsiloConstants {
      * 
      */
     public static final String CAT_DIRETTORE="Direttore";
-    public static final String CAT_IMP_ASILO="ImpiegatoAsilo";
-    public static final String CAT_IMP_DIR_STUDIO="ImpiegatoDirittoStudio";
-    public static final String CAT_DELEGATO_RETTORE="DelegatoRettore";
-    public static final String CAT_RESP_SCIENTIFICO="ResponsabileScientifico";
+    public static final String CAT_GENITORE="genitore";
+    public static final String CAT_EDUCATORE="educatore";
+    public static final String CAT_PSICOPEDAGOGO="psicopedagogo";
+    public static final String CAT_RESP_QUEST="responsabile_questionario";
+    public static final String CAT_IMP_ASILO="impiegato_asilo";
+    public static final String CAT_IMP_DIR_STUDIO="impiegato_bando";
+    public static final String CAT_DELEGATO_RETTORE="delegato_rettore";
+    public static final String CAT_RESP_SCIENTIFICO="responsabile_scientifico";
     public static final String STATO_DOMANDA_NONCOMPILATA = "DomandaNonCompilata";
     public static final String STATO_DOMANDA_INVIATA="DomandaInviataInAttesaDiGraduatoria";
     public static final String STATO_DOMANDA_RIFIUTATA="DomandaRifiutata";
