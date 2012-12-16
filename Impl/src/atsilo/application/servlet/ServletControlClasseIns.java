@@ -48,7 +48,6 @@ public class ServletControlClasseIns extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         String sezione = (String) request.getParameter("classe");
-        int id;
         try {
             
            if((crt.inserisciClasse(sezione, null)) != false){
