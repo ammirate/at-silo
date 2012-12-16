@@ -26,7 +26,11 @@ import atsilo.storage.DBGenitore;
 import atsilo.storage.Database;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
+
+import java.sql.Date;
 import java.sql.SQLException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -53,7 +57,80 @@ public class ControlGestioneBando {
     private ControlGestioneBando() {
     }
     
+    /**
+     * Restituisce una domanda dato un suo id con tutti i bean contenuti settati.
+     * @param id L'id della domanda da ricercare.
+     * @return
+     */
+    public DomandaIscrizione getDomandaIscrizioneById(int id)
+    {
+        Database db = new Database();
+        DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
+        DBGenitore dbg = new DBGenitore(db);
+        DBBambino dbb = new DBBambino(db);
+        db.apriConnessione();
+        
+        try {
+            DomandaIscrizione di = dbdi.ricercaDomandaDaId(id);
+            
+            //Riempio i bean semivuoti (hanno solo i CF)
+            Bambino b = di.getBambino();
+            di.setBambino(dbb.ricercaBambinoPerCodFiscale(b.getCodiceFiscale()));
+            
+            Genitore gr = di.getGenitore();
+            di.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
+            
+            
+            return di;
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile ricercare domande. Causato da: "+e.getMessage(), e);
+        }
+        finally {
+            db.chiudiConnessione();
+        }
+        return null;
+    }
     
+    /**
+     * Classe DomandaEtaComparator
+     * Comparator per ordinare domande di iscrizione per età.
+     * 
+     * @author Alfonso
+     *
+     */
+    private class DomandaEtaComparator implements Comparator<DomandaIscrizione>
+    {
+
+        /**
+         * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
+         */
+        @Override
+        public int compare(DomandaIscrizione o1, DomandaIscrizione o2) {
+            // TODO Scheletro generato automaticamente
+            Date d0 = o1.getBambino().getDataNascita();
+            Date d1 = o2.getBambino().getDataNascita();
+            
+            if(d0.before(d1))
+            {
+                return -1;
+            }
+            else if(d0.compareTo(d1)==0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        
+    }
+    
+    /**
+     * Ricerca tutte le domande in attesa di assegnazione punteggio.
+     * @return
+     */
     public List<DomandaIscrizione> getDomandeInAttesaDiPunteggio()
     {
         Database db = new Database();
@@ -64,6 +141,9 @@ public class ControlGestioneBando {
         
         try {
             List<DomandaIscrizione> ldi = dbdi.ricercaDomandeNonEscluseSenzaPunteggio();
+            DomandaEtaComparator comp = new DomandaEtaComparator();
+            //Riordina per età dei bambini
+            Collections.sort(ldi, comp);
             for(DomandaIscrizione dom : ldi)
             {
                 //Riempio i bean semivuoti (hanno solo i CF)
