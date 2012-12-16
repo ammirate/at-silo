@@ -64,6 +64,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     {
         Map<String,String> res= new HashMap<String,String>();
         res.put("id","id");
+        res.put("escluso","escluso");
+        res.put("notaEsclusione","nota_esclusione");
         res.put("punteggio","punteggio");
         res.put("posizione","posizione");
         res.put("dataPresentazione","data_presentazione");
@@ -122,6 +124,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         DomandaIscrizione temp = new DomandaIscrizione();
         
         temp.setId(r.getInt("id"));
+        temp.setNotaEsclusione(r.getString("nota_esclusione"));
+        temp.setEscluso(r.getBoolean("escluso"));
         temp.setPosizione(r.getInt("posizione"));
         temp.setPunteggio(r.getInt("punteggio"));
         temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -182,6 +186,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         
         temp.setId(r.getInt("id"));
+        temp.setNotaEsclusione(r.getString("nota_esclusione"));
+        temp.setEscluso(r.getBoolean("escluso"));
         temp.setPosizione(r.getInt("posizione"));
         temp.setPunteggio(r.getInt("punteggio"));
         temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -241,6 +247,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             
             
             temp.setId(r.getInt("id"));
+            temp.setNotaEsclusione(r.getString("nota_esclusione"));
+            temp.setEscluso(r.getBoolean("escluso"));
             temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
             temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -299,6 +307,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             
             
             temp.setId(r.getInt("id"));
+            temp.setNotaEsclusione(r.getString("nota_esclusione"));
+            temp.setEscluso(r.getBoolean("escluso"));
             temp.setPosizione(r.getInt("posizione"));
             temp.setPunteggio(r.getInt("punteggio"));
             temp.setDataPresentazione(r.getDate("data_presentazione"));
@@ -400,6 +410,60 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         
         
     }*/
+    
+    /**
+     * Metodo che restituisce le domande senza punteggio assegnato
+     * @return
+     * @throws SQLException
+     */
+    public List<DomandaIscrizione> ricercaDomandeNonEscluseSenzaPunteggio() throws SQLException {
+        ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
+
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE punteggio = ? AND escluso=0");
+        tabella.setParam(stmt, 1, "punteggio", null);
+        ResultSet r= stmt.executeQuery();
+        
+       while (r.next()){
+            DomandaIscrizione temp=new DomandaIscrizione();
+            Bambino b=new Bambino();
+            Genitore g=new Genitore();
+            Servizio s=new Servizio();
+            String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+            String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+            int se=r.getInt("servizio");s.setId(se);
+            
+            
+            temp.setId(r.getInt("id"));
+            temp.setNotaEsclusione(r.getString("nota_esclusione"));
+            temp.setEscluso(r.getBoolean("escluso"));
+            temp.setPosizione(r.getInt("posizione"));
+            temp.setPunteggio(r.getInt("punteggio"));
+            temp.setDataPresentazione(r.getDate("data_presentazione"));
+            temp.setBambino(b);
+            temp.setGenitore(g);
+            temp.setServizio(s);
+            temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+            temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+            temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+            temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+            temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+            temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+            temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+            temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+            temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+            temp.setGenitoreSeparato(r.getBoolean("genitore_separato"));
+            temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
+            temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
+            temp.setIsee(r.getFloat("isee"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStatoDomanda(r.getString("stato_domanda"));
+            temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            toReturn.add(temp);
+        } 
+        r.close();
+        return toReturn;
+    }
     
     protected Assegnazione[] creaAssegnazioni(DomandaIscrizione bean) {
        
