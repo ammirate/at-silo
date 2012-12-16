@@ -78,7 +78,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test  //OK
+    @Test  //OK
     public void testInserisciQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
       
         Calendar dataIn = Calendar.getInstance();
@@ -110,7 +110,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    // @Test // OK 
+     @Test // OK 
     public void testEliminaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -141,7 +141,7 @@ public class JUnitTestControlQuestionario {
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#isEditable(atsilo.entity.Questionario)}.
      */
-    //@Test // OK
+    @Test // OK
     public void testIsEditableTrue() {
         
         Calendar dataIn = Calendar.getInstance();
@@ -164,7 +164,7 @@ public class JUnitTestControlQuestionario {
     /**
      * Test method for {@link atsilo.application.ControlQuestionario#isEditable(atsilo.entity.Questionario)}.
      */
-    //@Test  // OK
+    @Test  // OK
     public void testIsEditableFalse() {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -189,7 +189,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-   // @Test // OK
+   @Test // OK
     public void testModificaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -226,7 +226,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test  //OK
+    @Test  //OK
     public void testSpostaDataInizio() throws DBConnectionException, QuestionarioException, SQLException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -254,7 +254,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test // OK
+    @Test // OK
     public void testSpostaDataFine() throws DBConnectionException, QuestionarioException, SQLException {
 
         Calendar dataIn = Calendar.getInstance();
@@ -285,7 +285,7 @@ public class JUnitTestControlQuestionario {
      * @throws QuestionarioException 
      * @throws DBConnectionException 
      */
-    //@Test  //OK
+    @Test  //OK
     public void testRicercaQuestionario() throws DBConnectionException, QuestionarioException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -294,16 +294,19 @@ public class JUnitTestControlQuestionario {
         Date dataI= new Date(dataIn.getTimeInMillis());
         Date dataF= new Date(dataFin.getTimeInMillis());
         
-        Questionario questionario = new Questionario("Controllo qualita 2012", null, "Qualita",26,  dataI, dataF);
-        Questionario questionario1 = new Questionario("Controllo qualita20122", null, "Qualita",24,  dataI, dataF);
+        Questionario questionario = new Questionario("Controllo per nome strano 2011", null, "asdrubale",26,  dataI, dataF);
         
         control.inserisciQuestionario(questionario);
-        control.inserisciQuestionario(questionario1);
         
-        List<Questionario> Q = control.ricercaQuestionario("Qualita");
+        List<Questionario> Q = control.ricercaQuestionario("asdrubale");
         
-        assertEquals(24, Q.get(0).getId());
-        assertEquals(26, Q.get(1).getId());
+        boolean trovato = false;
+        for(Questionario q : Q)
+            if(q.getNome().equalsIgnoreCase("asdrubale"))
+                trovato = true;
+        
+        assertTrue(trovato);
+        
     }
     
     
@@ -316,7 +319,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test //OK
+    @Test //OK
     public void testCompilaQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
         
         Calendar dataIn = Calendar.getInstance();
@@ -378,7 +381,7 @@ public class JUnitTestControlQuestionario {
      * @throws QuestionarioException 
      * @throws DBConnectionException 
      */
-    //@Test   //OK
+    @Test   //OK
     public void testGetQuestionariDaCompilare() throws DBConnectionException, QuestionarioException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -396,15 +399,20 @@ public class JUnitTestControlQuestionario {
         List<RispostaQuestionario> R = new ArrayList<RispostaQuestionario>();
         R.add(new RispostaQuestionario());
         
-        control.compilaQuestionario(110, R, "CVLMRA69A23B333C");
+        control.compilaQuestionario(110, R, "VLLLRU83A24T928B");
         
         //il genitore ha compilato uno dei due questionari inseriti
         //il test va bene se getQuestionari da compilare mi restituisce l'altro questionario
         
-        List<Questionario> Q = control.getQuestionariDaCompilare("CVLMRA69A23B333C");
+        List<Questionario> Q = control.getQuestionariDaCompilare("VLLLRU83A24T928B");
         
-        Questionario test = Q.get(0);
-        assertEquals(111,test.getId());
+        boolean trovato = false;
+        
+        for(Questionario q : Q)
+            if(q.getId()==111)
+                trovato = true;
+        
+        assertTrue(trovato);
         
     }
     
@@ -419,7 +427,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test //OK
+    @Test //OK
     public void testInserisciDomanda() throws DBConnectionException, QuestionarioException, SQLException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -463,7 +471,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-   // @Test  //OK
+    @Test  //OK
     public void testEliminaDomanda() throws DBConnectionException, QuestionarioException, SQLException {
         Calendar dataIn = Calendar.getInstance();
         dataIn.set(2012, 11, 1);
@@ -502,7 +510,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    //@Test  //OK
+    @Test  //OK
     public void testModificaDomanda() throws DBConnectionException, QuestionarioException, SQLException {
 
         Calendar dataIn = Calendar.getInstance();
@@ -545,14 +553,6 @@ public class JUnitTestControlQuestionario {
      */
     @Test
     public void testGetStatistische() throws DBConnectionException, QuestionarioException, SQLException {
-        Calendar dataIn = Calendar.getInstance();
-        dataIn.set(2012, 11, 1);
-        Calendar dataFin = Calendar.getInstance();
-        dataFin.set(2013, 11, 11);
-        Date dataI= new Date(dataIn.getTimeInMillis());
-        Date dataF= new Date(dataFin.getTimeInMillis());
-        
-        Questionario questionario = new Questionario("Questionario Qualita Mensa", null, "Mensa",200,  dataI, dataF);
         
         RispostaQuestionario r1 = new RispostaQuestionario("lattante",1,"CVLMRA69A23B333C");
         RispostaQuestionario r2 = new RispostaQuestionario("full-time",2,"CVLMRA69A23B333C");
@@ -572,17 +572,17 @@ public class JUnitTestControlQuestionario {
         terzo.add(r5);
         terzo.add(r6);
         
-       /*         
+                
         control.compilaQuestionario(1, primo, "CVLMRA69A23B333C");
         control.compilaQuestionario(1, secondo, "DBNGPP69A23B222C");
         control.compilaQuestionario(1, terzo, "DCSGVN74A23B224X");
-        */
+        
         StatisticheQuestionario S = control.getStatistische(1);
         
         Questionario q1 = control.caricaQuestionarioDaCompilare(1, "CVLMRA69A23B333C");
-        List<DomandaQuestionario> domande1 = q1.getDomande();
+        List<DomandaQuestionario> domande = q1.getDomande();
         
-        
+        /*  stampa le statistiche
         for(DomandaQuestionario d : domande1){
             System.out.println("\n-- "+d.getDescrizione());
             List<CampoDomandaQuestionario> campi = d.getCampi();
@@ -591,7 +591,17 @@ public class JUnitTestControlQuestionario {
                 System.out.println(c.getDescrizione()+": "+perc+"%");
             }//end for 
         }//end for esterno
+        */
         
+        DomandaQuestionario d = domande.get(0);
+        CampoDomandaQuestionario c = d.getCampi().get(0);
+        float perc =( S.getPercentualiFromCampo(d.getId(), c.getId()) *100)/S.getNumeroComp();
+        
+        //assertEquals su due double è deprecato...
+        boolean ok = false;
+        if(perc == 66.0)
+            ok = true;
+        assertTrue(ok);
     }
     
     
@@ -602,7 +612,7 @@ public class JUnitTestControlQuestionario {
      * Test method for {@link atsilo.application.ControlQuestionario#getAllQuestionari()}.
      * @throws DBConnectionException 
      */
-    //@Test //OK
+    @Test //OK
     public void testGetAllQuestionari() throws DBConnectionException {
         List<Questionario> Q = new ArrayList<Questionario>();
         Q = control.getAllQuestionari();
@@ -618,7 +628,7 @@ public class JUnitTestControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-   //@Test  //OK
+   @Test  //OK
     public void testGetQuestionario() throws DBConnectionException, QuestionarioException, SQLException {
 
         Calendar dataIn = Calendar.getInstance();
@@ -638,7 +648,7 @@ public class JUnitTestControlQuestionario {
         
     }
     
-    Database db = new Database();   //Logger
+    Database db = new Database();   
     private static final Logger LOG = Logger.getLogger(JUnitTestControlQuestionario.class.getName());
     ControlQuestionario control = ControlQuestionario.getIstance();
 
