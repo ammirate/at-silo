@@ -60,7 +60,7 @@ bg=blue</panel_attributes>
       <h>56</h>
     </coordinates>
     <panel_attributes>Visualizza
-questionarii
+questionari
 bg=blue</panel_attributes>
     <additional_attributes/>
   </element>
@@ -191,14 +191,14 @@ questionari</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>448</x>
-      <y>288</y>
-      <w>106</w>
-      <h>184</h>
+      <x>480</x>
+      <y>416</y>
+      <w>112</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>56;24;56;168</additional_attributes>
+    <additional_attributes>96;40;24;40</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -250,14 +250,14 @@ bg=blue</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>448</x>
+      <x>480</x>
       <y>88</y>
-      <w>106</w>
-      <h>184</h>
+      <w>224</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 &lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>64;168;56;24</additional_attributes>
+    <additional_attributes>208;344;24;24</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
@@ -269,18 +269,6 @@ bg=blue</panel_attributes>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>24;160;432;24</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>512</x>
-      <y>456</y>
-      <w>170</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.
-&lt;&lt;include&gt;&gt;</panel_attributes>
-    <additional_attributes>128;24;120;104;24;104</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
