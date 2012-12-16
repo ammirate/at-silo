@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 16, 2012 alle 19:39
+-- Generato il: Dic 16, 2012 alle 21:23
 -- Versione del server: 5.5.20
 -- Versione PHP: 5.3.9
 
@@ -187,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `bambino` (
 --
 
 INSERT INTO `bambino` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cf_genitore_nonrichiedente`, `iscrizione_classe`) VALUES
-('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 1, 'Italiana', 'Salerno', '2', '84084', 'Fisciano', 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', NULL, NULL),
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 4, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', NULL, NULL),
 ('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, NULL),
 ('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, NULL),
 ('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', NULL),
@@ -265,20 +265,10 @@ INSERT INTO `campo_domanda_questionario` (`domanda_questionario`, `tipo`, `descr
 --
 
 CREATE TABLE IF NOT EXISTS `classe` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `sezione` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `classe`
---
-
-INSERT INTO `classe` (`id`, `sezione`) VALUES
-(1, 'A'),
-(2, 'B'),
-(3, 'C'),
-(4, 'D');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
 
