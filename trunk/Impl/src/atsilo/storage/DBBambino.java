@@ -4,6 +4,7 @@ import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
 import atsilo.storage.DBBeans.Assegnazione;
+import atsilo.util.AtsiloConstants;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -403,7 +404,7 @@ public class DBBambino extends DBBeans<Bambino> {
         List<Bambino>l=new ArrayList<Bambino>();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe="+AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
             
             ResultSet r = stmt.executeQuery();
             

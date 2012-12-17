@@ -49,8 +49,8 @@ public class AtsiloConstants {
     public static final String STATO_DOMANDA_SECONDO_STEP="IscrizioneConfermataInAttesaDiAltriDati";
     public static final String STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI="AttesaPresentazioneDocumenti";
     public static final String STATO_DOMANDA_NONINVIATA="DomandaNonInviata";
-    public static final String ISCRIZIONE_CLASSE_CONFERMATA="Conferma";
-    public static final String ISCRIZIONE_CLASSE_RIFIUTATA="Rifiuta";
+    public static final String ISCRIZIONE_CLASSE_CONFERMATA="Assegnato";
+    public static final String ISCRIZIONE_CLASSE_RIFIUTATA="NonAssegnato";
     public static final String CERTIFICATO_CONSEGNATO="Consegnato";
     public static final String CERTIFICATO_NON_CONSEGNATO="NonConsegnato";
     public static final String CERTIFICATO_IN_ATTESA="InAttesa";
