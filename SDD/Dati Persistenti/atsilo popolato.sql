@@ -681,7 +681,7 @@ CREATE TABLE IF NOT EXISTS `orario_utente` (
   `ora_inizio` varchar(20) DEFAULT NULL,
   `ora_fine` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dump dei dati per la tabella `orario_utente`
@@ -689,7 +689,9 @@ CREATE TABLE IF NOT EXISTS `orario_utente` (
 
 INSERT INTO `orario_utente` (`id`, `data_inizio`, `data_fine`, `descrizione`, `nome`, `prezzo`, `ora_inizio`, `ora_fine`) VALUES
 (1, '2012-11-01', '2012-11-30', NULL, 'FULL-TIME', 300, '08:00', '16:00'),
-(2, '2012-09-17', '2012-09-30', NULL, 'PART-TIME mattutino', NULL, NULL, NULL);
+(2, '2012-09-17', '2012-09-30', NULL, 'PART-TIME mattutino', 150, '8.00', '13.00'),
+(3, '2012-12-04', '2013-12-24', NULL, 'Part time pomeridiano', 150, '13.00', '16.00'),
+(4, '2012-12-04', '2013-12-31', NULL, 'Part-time Mattina (con pranzo)', 170, '8.00', '14.00');
 
 -- --------------------------------------------------------
 
