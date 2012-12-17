@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generato il: Dic 17, 2012 alle 21:43
--- Versione del server: 5.5.27-log
--- Versione PHP: 5.4.6
+-- Host: localhost
+-- Generato il: 17 dic, 2012 at 10:27 PM
+-- Versione MySQL: 5.1.44
+-- Versione PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -289,6 +288,11 @@ CREATE TABLE IF NOT EXISTS `compila` (
   KEY `questionario` (`questionario`),
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `compila`
+--
+
 
 -- --------------------------------------------------------
 
@@ -718,24 +722,22 @@ INSERT INTO `orario_utente` (`id`, `data_inizio`, `data_fine`, `descrizione`, `n
 --
 
 CREATE TABLE IF NOT EXISTS `partecipa` (
-  `evento_data` date DEFAULT NULL,
-  `evento_nome` varchar(50) DEFAULT NULL,
   `classe` int(11) DEFAULT NULL,
-  KEY `evento_data` (`evento_data`),
-  KEY `evento_nome` (`evento_nome`),
-  KEY `classe` (`classe`)
+  `evento` int(11) NOT NULL,
+  KEY `classe` (`classe`),
+  KEY `evento` (`evento`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `partecipa`
 --
 
-INSERT INTO `partecipa` (`evento_data`, `evento_nome`, `classe`) VALUES
-('2012-11-21', 'Gita X', 2),
-('2012-11-30', 'Recita Y', 3),
-('2012-11-21', 'Gita X', 1),
-('2012-11-30', 'Recita Y', 2),
-('2012-11-21', 'Gita X', 3);
+INSERT INTO `partecipa` (`classe`, `evento`) VALUES
+(2, 1),
+(3, 1),
+(1, 1),
+(2, 2),
+(3, 2);
 
 -- --------------------------------------------------------
 
@@ -1251,6 +1253,12 @@ ALTER TABLE `massimo`
   ADD CONSTRAINT `massimo_ibfk_1` FOREIGN KEY (`personale_asilo`) REFERENCES `personale_asilo` (`codice_fiscale`);
 
 --
+-- Limiti per la tabella `partecipa`
+--
+ALTER TABLE `partecipa`
+  ADD CONSTRAINT `partecipa_ibfk_1` FOREIGN KEY (`evento`) REFERENCES `evento` (`id`);
+
+--
 -- Limiti per la tabella `personale_asilo`
 --
 ALTER TABLE `personale_asilo`
@@ -1283,7 +1291,3 @@ ALTER TABLE `schedulazione`
 --
 ALTER TABLE `tirocinante`
   ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
