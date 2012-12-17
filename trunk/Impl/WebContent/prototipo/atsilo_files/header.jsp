@@ -99,6 +99,8 @@ else if (temp_nome_chiamante.equals("assegna_classe.jsp"))
 	out.println("<title>Assegna Classe</title>");
 else if (temp_nome_chiamante.equals("lista_punteggio.jsp"))
 	out.println("<title>Lista Punteggi</title>");	
+else if (temp_nome_chiamante.equals("index_delegato.jsp"))
+	out.println("<title>Area Delegato Rettore</title>");	
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
