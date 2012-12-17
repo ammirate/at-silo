@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generato il: 17 dic, 2012 at 07:35 PM
--- Versione MySQL: 5.1.44
--- Versione PHP: 5.3.1
+-- Host: 127.0.0.1
+-- Generato il: Dic 17, 2012 alle 21:31
+-- Versione del server: 5.5.27-log
+-- Versione PHP: 5.4.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -186,15 +187,15 @@ CREATE TABLE IF NOT EXISTS `bambino` (
 --
 
 INSERT INTO `bambino` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cf_genitore_nonrichiedente`, `iscrizione_classe`) VALUES
-('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 4, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', 'DCSGVN74A23B224X', 'Consegnato'),
-('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', 'VCCMRU84T19A222B', 'InAttesa'),
-('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', 'VCCMRU84T19A222B', 'InAttesa'),
-('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', 'Consegnato'),
-('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', 'CLLFDR88X11C999X', 'Consegnato'),
-('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL, 'Consegnato'),
-('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL, 'Consegnato'),
-('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'Consegnato'),
-('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'Consegnato');
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 1, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', 'DCSGVN74A23B224X', 'ClasseDaConvalidare'),
+('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', 'VCCMRU84T19A222B', ''),
+('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', 'VCCMRU84T19A222B', ''),
+('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', ''),
+('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', 'CLLFDR88X11C999X', ''),
+('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL, ''),
+('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL, ''),
+('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, ''),
+('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -267,12 +268,14 @@ CREATE TABLE IF NOT EXISTS `classe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sezione` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Dump dei dati per la tabella `classe`
 --
 
+INSERT INTO `classe` (`id`, `sezione`) VALUES
+(1, '1A');
 
 -- --------------------------------------------------------
 
@@ -286,11 +289,6 @@ CREATE TABLE IF NOT EXISTS `compila` (
   KEY `questionario` (`questionario`),
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `compila`
---
-
 
 -- --------------------------------------------------------
 
@@ -1152,11 +1150,11 @@ CREATE TABLE IF NOT EXISTS `servizio` (
   `piano_pasto` varchar(50) DEFAULT NULL,
   `bambino` varchar(50) DEFAULT NULL,
   `orario_utente` int(11) DEFAULT NULL,
-  `id` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
   KEY `bambino` (`bambino`),
   KEY `orario_utente` (`orario_utente`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dump dei dati per la tabella `servizio`
@@ -1284,3 +1282,7 @@ ALTER TABLE `schedulazione`
 --
 ALTER TABLE `tirocinante`
   ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
