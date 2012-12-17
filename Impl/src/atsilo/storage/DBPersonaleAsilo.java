@@ -13,6 +13,7 @@ import atsilo.entity.Bambino;
 import atsilo.entity.Genitore;
 import atsilo.entity.PersonaleAsilo;
 import atsilo.entity.Utente;
+import atsilo.util.AtsiloConstants;
 
 /*
  *-----------------------------------------------------------------
@@ -191,6 +192,48 @@ public class DBPersonaleAsilo extends DBBeans {
         }
         return s;
         
+    }
+    
+    /**
+     * Legge dal database il delegato del rettore
+     * @return PersonaleAsilo o null
+     * @throws SQLException 
+     */
+    public PersonaleAsilo getDelegatoDelRettore() 
+            throws SQLException {
+        PersonaleAsilo p = new PersonaleAsilo();
+        PreparedStatement stmt = tabella.prepareStatement("SELECT * FROM "
+                + tabella.getNomeTabella() + " WHERE categoria_appartenenza= ?");
+        tabella.setParam(stmt, 1, "categoria_appartenenza", AtsiloConstants.CAT_DELEGATO_RETTORE);
+        ResultSet r = stmt.executeQuery();
+        
+        if(r.next()){
+            p.setDataNascita(r.getDate("data_di_nascita"));
+            p.setNome(r.getString("nome"));
+            p.setCognome(r.getString("cognome"));
+            p.setCodiceFiscale(r.getString("codice_fiscale"));
+            p.setEmail(r.getString("email"));
+            p.setComuneNascita(r.getString("comune_di_nascita"));
+            p.setTelefono(r.getString("telefono"));
+            p.setCittadinanza(r.getString("cittadinanza"));
+            p.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            p.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            p.setCapResidenza(r.getString("cap_residenza"));
+            p.setComuneResidenza(r.getString("comune_residenza"));
+            p.setProvinciaResidenza(r.getString("provincia_residenza"));
+            p.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            p.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            p.setCapDomicilio(r.getString("cap_domicilio"));
+            p.setComuneDomicilio(r.getString("comune_domicilio"));
+            p.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
+        }
+        else
+        {
+            p=null;
+        }
+        r.close();
+        return p;
     }
     
     

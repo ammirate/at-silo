@@ -458,7 +458,7 @@ public class DBBambino extends DBBeans<Bambino> {
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe= ?");
-        stmt.setString(1, AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
+        stmt.setString(1, AtsiloConstants.ISCRIZIONE_CLASSE_DA_CONVALIDARE);
             ResultSet r = stmt.executeQuery();
             
             
