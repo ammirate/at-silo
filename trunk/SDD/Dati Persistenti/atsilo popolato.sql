@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.9
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generato il: Dic 17, 2012 alle 17:26
--- Versione del server: 5.5.20
--- Versione PHP: 5.3.9
+-- Host: localhost
+-- Generato il: Dic 17, 2012 alle 19:05
+-- Versione del server: 5.5.16
+-- Versione PHP: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `atsilo`
+-- Database: `new atsilo`
 --
 
 -- --------------------------------------------------------
@@ -431,6 +431,7 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `educatore_didattico` varchar(50) DEFAULT NULL,
   `path` varchar(256) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
+  `cc` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`nome`,`data`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
@@ -441,9 +442,9 @@ CREATE TABLE IF NOT EXISTS `evento` (
 -- Dump dei dati per la tabella `evento`
 --
 
-INSERT INTO `evento` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`) VALUES
-('Gita X', '2012-11-21', 'Gita a X', NULL, 'SSSLRL78B19B908X', NULL, '.../Programma Gita X', 'Viaggio d''istruzione'),
-('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, '.../Programma Recita Y', 'Rappresentazione teatrale');
+INSERT INTO `evento` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`, `cc`) VALUES
+('Gita X', '2012-11-21', 'Gita a X', NULL, 'SSSLRL78B19B908X', NULL, '.../Programma Gita X', 'Viaggio d''istruzione', NULL),
+('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, '.../Programma Recita Y', 'Rappresentazione teatrale', NULL);
 
 -- --------------------------------------------------------
 
