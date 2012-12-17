@@ -31,7 +31,7 @@ include
 			function popolaSelect(){
   	   		   objSelect = document.getElementById("select_bambini");
 			   <% for (int i=0;i<figli.size();i++){%>
-  	  		       objSelect.options[<%=i+2%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
+  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
 		<%} %>	
 			}
 	</script>
