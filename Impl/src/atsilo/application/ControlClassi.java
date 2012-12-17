@@ -10,6 +10,7 @@ import atsilo.storage.*;
 import atsilo.stub.application.StubBambino;
 import atsilo.stub.application.StubClasse;
 import atsilo.stub.application.StubDomandaIscrizione;
+import atsilo.util.AtsiloConstants;
 
 /*
  *-----------------------------------------------------------------
@@ -216,6 +217,34 @@ public class ControlClassi {
             if (bambinoModificato == null)
                 throw new BambinoException("Bambino non trovato");
             bambinoModificato.setClasse(id);
+            bambinoModificato.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_DA_CONVALIDARE);
+            if (!stub.replace(bambino, bambinoModificato))
+                throw new BambinoException("Modifica fallita");
+            return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    
+    /**
+     * Inserisce un bambino alla classe, confermando la sua presenza nella classe
+     * @param id della classe e bambino da aggiungere
+     * @return valore booleano
+     * @throws DBConnectionException 
+     * @throws BambinoException
+     * @throws SQLException 
+     */
+    public boolean confermaBambinoNellaClasse(int id, Bambino bambino) throws BambinoException, DBConnectionException, SQLException{
+        Database db = new Database();
+        DBBambino stub = new DBBambino(db);
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            Bambino bambinoModificato = stub.ricercaBambinoPerCodFiscale(bambino.getCodiceFiscale());
+            if (bambinoModificato == null)
+                throw new BambinoException("Bambino non trovato");
+            bambinoModificato.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_CONFERMATA);
             if (!stub.replace(bambino, bambinoModificato))
                 throw new BambinoException("Modifica fallita");
             return true;
