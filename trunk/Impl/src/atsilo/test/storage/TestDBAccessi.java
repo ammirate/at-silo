@@ -212,7 +212,7 @@ public class TestDBAccessi {
       
       for(int i=0;i<ev.size();i++){
           System.out.println(" Evento "+i + " = " +ev.get(i).getDescrizione());
-      } 
+      }  
       
       DBPartecipa p= new DBPartecipa(db);
       
