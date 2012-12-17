@@ -427,8 +427,10 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `personale_asilo` varchar(50) DEFAULT NULL,
   `psico_pedagogo` varchar(50) DEFAULT NULL,
   `educatore_didattico` varchar(50) DEFAULT NULL,
+  `cc` varchar(1000) DEFAULT NULL,
   `path` varchar(256) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
+  
   PRIMARY KEY (`nome`,`data`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
