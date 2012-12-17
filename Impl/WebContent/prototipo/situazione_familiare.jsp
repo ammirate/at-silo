@@ -14,7 +14,17 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_bambino.jsp"
  %>
- <%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"%>
+ <%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"
+ %>
+ <%
+	String isee="";
+ 	ControlIscrizione cisc= ControlIscrizione.getIstance();
+   	DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(username, null);
+   	if (domandaIscrizione!=null){
+   	Float isee_temp=domandaIscrizione.getIsee();
+   	isee=isee_temp.toString();
+   	}
+ %>
 	<%
 		// setto select bambino
 			ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
@@ -117,6 +127,11 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
   </tr>
   <tr>
     <td>&nbsp; </td></tr>
+     <tr>
+    <td colspan="3">  ISEE &egrave; pari a Euro </td>
+    <td>
+      <input name="isee" type="text" id="isee" value="<%=isee%>" maxlength="10" readonly="readonly" /></td>
+  </tr>
   <tr>
     <td colspan="4">Il/la bambino/a per la/il quale si chiede l'iscrizione &egrave; in situazione di disabilit&agrave; (allegare, in busta chiusa, diagnosi funzionale del servizio di Neuro Psichiatria Infantile, ovvero certificazione ex L. 104/92 di presa in carico dell'Asl)</td>
   </tr>
@@ -128,6 +143,7 @@ include file="atsilo_files/sidebar_top_bambino.jsp"
      Si   </span></td>
     
   </tr>
+  
     <tr>
     <td colspan="4">Il padre/la madre &agrave; in situazione di invalidit&agrave; riconosciuta (con invalidit&agrave; pari o superiore a 2/3 ai sensi dell'art. 3 Legge 104/92 o malattia permanente con grave riduzione delle funzioni psico/fisiche allegare in busta chiusa certificazione dell'Asl</td>
   </tr>
