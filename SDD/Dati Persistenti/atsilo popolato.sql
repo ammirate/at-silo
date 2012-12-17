@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 17, 2012 alle 20:24
+-- Generato il: Dic 17, 2012 alle 20:27
 -- Versione del server: 5.5.27-log
 -- Versione PHP: 5.4.6
 
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `bambino` (
   `comune_domicilio` varchar(100) DEFAULT NULL,
   `provincia_domicilio` varchar(50) DEFAULT NULL,
   `cf_genitore_nonrichiedente` varchar(50) DEFAULT NULL,
-  `iscrizione_classe` enum('Assegnato','NonAssegnato') DEFAULT 'NonAssegnato',
+  `iscrizione_classe` enum('Assegnato','NonAssegnato','ClasseDaConvalidare') DEFAULT 'NonAssegnato',
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`),
