@@ -39,26 +39,26 @@ String domanda = request.getParameter("domanda");
 DomandaIscrizione dom = crt.getDomandaIscrizione(Integer.parseInt(domanda));
 
 out.append("<tr colspan=3><td>")
-	.append(dom.getCertificatoMalattie())
+	.append("Certificato malattie virali conseguite")
 	.append("</td></tr>")
 	.append("<tr><td>")
 	.append("<input type='radio' value='Consegnato' name='cMalattie' />Consegnato</td>")
-	.append("<td><input type='radio' value='NonConsegnato' name='cMalattie' />Non Consegnato</td>")
-	.append("<td><input type='radio' value='InAttesa' name='cMalattie' />In Attesa</td></tr>")
+	.append("<td><input type='radio' value='NonConsegnato' name='cMalattie' />Rifiuta la consegna</td>")
+	.append("<td><input type='radio' value='InAttesa' name='cMalattie' />In attesa di consegna</td></tr>")
     .append("<tr colspan=3><td>")
-	.append(dom.getCertificatoPrivacy())
+	.append("Liberatoria per il trattamento dei dati personali")
 	.append("</td></tr>")
 	.append("<tr><td>")
 	.append("<input type='radio' value='Consegnato' name='cPrivacy' />Consegnato</td>")
-	.append("<td><input type='radio' value='NonConsegnato' name='cPrivacy' />Non Consegnato</td>")
-	.append("<td><input type='radio' value='InAttesa' name='cPrivacy' />In Attesa</td></tr>")
+	.append("<td><input type='radio' value='NonConsegnato' name='cPrivacy' />Rifiuta la consegna</td>")
+	.append("<td><input type='radio' value='InAttesa' name='cPrivacy' />In attesa di consegna</td></tr>")
 	.append("<tr colspan=3><td>")
-	.append(dom.getCertificatoVaccinazioni())
+	.append("Certificati delle vaccinazioni conseguite")
 	.append("</td></tr>")
 	.append("<tr><td>")
 	.append("<input type='radio' value='Consegnato' name='cVaccino' />Consegnato</td>")
-	.append("<td><input type='radio' value='NonConsegnato' name='cVaccino' />Non Consegnato</td>")
-	.append("<td><input type='radio' value='InAttesa' name='cVaccino' />In Attesa</td></tr>");
+	.append("<td><input type='radio' value='NonConsegnato' name='cVaccino' />Rifiuta la consegna</td>")
+	.append("<td><input type='radio' value='InAttesa' name='cVaccino' />In attesa di consegna</td></tr>");
 out.print("<input type='hidden' value='"+dom.getBambino().getCodiceFiscale()+"_"+dom.getId()+"' name='cf_id' />");
 
 
