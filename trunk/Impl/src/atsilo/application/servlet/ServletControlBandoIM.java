@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import atsilo.application.*;
+import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 
 /**
@@ -61,11 +62,7 @@ public class ServletControlBandoIM extends HttpServlet {
                 response.setStatus(response.SC_MOVED_TEMPORARILY);
                 response.setHeader("Location", "prototipo/specifiche_bando.jsp?"+"successo=n"); 
             }
-        } catch (SQLException e) {
-            response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html");
-            
-        } catch (DBConnectionException e) {
+        } catch (BandoException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/errore.html");
         }
