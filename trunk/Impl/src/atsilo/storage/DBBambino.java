@@ -448,6 +448,59 @@ public class DBBambino extends DBBeans<Bambino> {
         
     }
     /**
+     * 
+     * @return lista dei bambini con classi da convalidare da parte del delegato del rettore
+     * @throws SQLException
+     */
+    public List<Bambino> ricercaBambiniConClasseDaConvalidare() throws SQLException {
+        
+        List<Bambino>l=new ArrayList<Bambino>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe="+AtsiloConstants.ISCRIZIONE_CLASSE_DA_CONVALIDARE);
+            
+            ResultSet r = stmt.executeQuery();
+            
+            
+            while (r.next()){
+            
+            Bambino b=new Bambino();
+            
+            b.setNome(r.getString("nome"));
+            b.setCognome(r.getString("cognome"));
+            b.setCodiceFiscale(r.getString("codice_fiscale"));
+            b.setDataNascita(r.getDate("data_di_nascita"));
+            b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
+            b.setClasse(r.getInt("classe"));
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
+            Genitore gen=new Genitore();
+           String g=r.getString("genitore");
+           gen.setCodiceFiscale(g);
+            b.setGenitore(gen);
+            Genitore gg=new Genitore();
+            String s=r.getString("cf_genitore_nonrichiedente");
+            gg.setCodiceFiscale(s);
+            b.setGenitoreNonRichiedente(gg);
+            b.setComuneNascita(r.getString("comune_di_nascita"));
+            b.setCittadinanza(r.getString("cittadinanza"));
+            b.setIndirizzoResidenza(r.getString("indirizzo_residenza"));
+            b.setIndirizzoDomicilio(r.getString("indirizzo_domicilio"));
+            b.setNumeroCivicoResidenza(r.getString("numero_civico_residenza"));
+            b.setNumeroCivicoDomicilio(r.getString("numero_civico_domicilio"));
+            b.setProvinciaDomicilio(r.getString("provincia_domicilio"));
+            b.setProvinciaResidenza(r.getString("provincia_residenza"));
+            b.setComuneDomicilio(r.getString("comune_domicilio"));
+            b.setCapResidenza(r.getString("cap_residenza"));
+            b.setCapDomicilio(r.getString("cap_domicilio"));
+            b.setIscrizioneClasse(r.getString("iscrizione_classe"));
+
+            l.add(b);
+            } 
+            r.close();
+        return l;
+        
+    }
+    /**
      * Preso in input il codice fiscale di un Bambino , restituisce
      * una lista di stringhe con il codice fiscale del genitore e del
      * genitore non richiedente del bambino 
