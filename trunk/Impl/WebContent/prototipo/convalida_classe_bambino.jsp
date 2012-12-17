@@ -1,5 +1,5 @@
 <%@
-	include file="atsilo_files/header.jsp" %>
+ include file="atsilo_files/header.jsp" %>
 <%@ page import="atsilo.application.*,atsilo.entity.*"%>
 
 <%
@@ -50,6 +50,7 @@ int n= crt.bambiniConClasseDaConvalidare().size();
 if(n == 0){
 	out.print("<h1> Non è presente nessuna classe da convalidare</h1>");
 }
+else{
 String input = "<input type='checkbox' name='classi' value='";
 String endInput = "' />";
 for(i=0;i<n;i++){
@@ -65,7 +66,7 @@ for(i=0;i<n;i++){
 %>
 </table>
 <input type="submit" value="Convalida" id="conv" name="convalida" />
-
+<%} %>
 
 </form>
 								</td>

@@ -40,14 +40,20 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 								<td class="tplTitolo">
 <form action="http://localhost:8080/Atsilo/ServletControlClasseAss" method="post">
 <table class="tabella_form">
-<tr>
-<td>Nome</td><td>Cognome</td><td>Codice Fiscale</td><td>Classe</td>
-</tr>
 
 <%
 ControlClassi crt = ControlClassi.getIstance();
 int i=0;
 int n= crt.bambiniSenzaClasse().size();
+if(n==0){
+	out.print("<h1>Non ci sono bambini sprovvisti di classe</h1>");
+}
+else{
+%>
+<tr>
+<td>Nome</td><td>Cognome</td><td>Codice Fiscale</td><td>Classe</td>
+</tr>
+<%	
 String id = "";
 for(i=0;i<n;i++){
 	out.append("<tr><td>")
@@ -77,7 +83,7 @@ for(i=0;i<n;i++){
 </table>
 <input type="hidden" name="lunghezzaLista" value="<%= n %>" />
 <input type="submit" value="Invia" id="invia" name="invia" /><input type="reset" value="Cancella" id="cancella" name="cancella" />
-
+<%} %>
 </form>
 								</td>
 							</tr>
