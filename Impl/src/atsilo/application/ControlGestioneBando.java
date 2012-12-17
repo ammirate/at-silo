@@ -193,7 +193,7 @@ public class ControlGestioneBando {
             try {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setPunteggio(punteggio);
-                domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
+                domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
