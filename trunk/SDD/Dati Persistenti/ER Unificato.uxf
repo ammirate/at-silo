@@ -146,10 +146,11 @@ fg=red
       <x>726</x>
       <y>846</y>
       <w>90</w>
-      <h>78</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>Evento
 --
+-Id
 -Nome
 -Descrizione
 -Data
@@ -165,12 +166,12 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>720</x>
-      <y>906</y>
+      <y>918</y>
       <w>144</w>
-      <h>174</h>
+      <h>162</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>18;18;18;162;132;162</additional_attributes>
+    <additional_attributes>18;18;18;150;132;150</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
@@ -615,7 +616,7 @@ fg=red</panel_attributes>
     <coordinates>
       <x>798</x>
       <y>0</y>
-      <w>114</w>
+      <w>108</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>N</panel_attributes>
@@ -1811,12 +1812,12 @@ fg=red
     <type>com.umlet.element.Relation</type>
     <coordinates>
       <x>750</x>
-      <y>906</y>
+      <y>918</y>
       <w>390</w>
-      <h>138</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>m1=  N</panel_attributes>
-    <additional_attributes>18;18;18;126;378;126</additional_attributes>
+    <additional_attributes>18;18;18;114;378;114</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.EER_Rel_Diamond</type>
