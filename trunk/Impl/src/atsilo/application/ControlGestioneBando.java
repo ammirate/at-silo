@@ -129,6 +129,110 @@ public class ControlGestioneBando {
     }
     
     /**
+     * Restituisce la graduatoria degli idonei dell'ultimo bando.
+     * @return
+     */
+    public List<DomandaIscrizione> getGraduatoriaIdonei()
+    {
+        Database db = new Database();
+        DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
+        DBGenitore dbg = new DBGenitore(db);
+        DBBambino dbb = new DBBambino(db);
+        DBBando dbbando = new DBBando(db);
+        db.apriConnessione();
+        
+        try {
+            Bando bando = dbbando.getBando();
+            String inizio = bando.getDataInizioBando();
+            Date now = new Date(System.currentTimeMillis());
+            String fine = bando.getDataFineBando();
+            String[] ggmmaa_fine = fine.split("-");
+            Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+            if(now.after(data_fine))
+            {
+                List<DomandaIscrizione> ldi = dbdi.ricercaDomandeConPunteggioInIntervalloDiConsegna(inizio, fine);
+                DomandaEtaComparator comp = new DomandaEtaComparator();
+                //Riordina per età dei bambini
+                Collections.sort(ldi, comp);
+                for(DomandaIscrizione dom : ldi)
+                {
+                    //Riempio i bean semivuoti (hanno solo i CF)
+                    Bambino b = dom.getBambino();
+                    dom.setBambino(dbb.ricercaBambinoPerCodFiscale(b.getCodiceFiscale()));
+                    
+                    Genitore gr = dom.getGenitore();
+                    dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
+                }
+                
+                return ldi;
+            }
+            else
+            {
+                return null;
+            }
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile ricercare domande. Causato da: "+e.getMessage(), e);
+        }
+        finally {
+            db.chiudiConnessione();
+        }
+        return null;
+    }
+    
+    /**
+     * Restituisce la graduatoria degli esclusi dell'ultimo bando.
+     * @return la lista se il bando è concluso, altrimenti null.
+     */
+    public List<DomandaIscrizione> getGraduatoriaEsclusi()
+    {
+        Database db = new Database();
+        DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
+        DBGenitore dbg = new DBGenitore(db);
+        DBBambino dbb = new DBBambino(db);
+        DBBando dbbando = new DBBando(db);
+        db.apriConnessione();
+        
+        try {
+            Bando bando = dbbando.getBando();
+            String inizio = bando.getDataInizioBando();
+            Date now = new Date(System.currentTimeMillis());
+            String fine = bando.getDataFineBando();
+            String[] ggmmaa_fine = fine.split("-");
+            Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+            if(now.after(data_fine))
+            {
+                List<DomandaIscrizione> ldi = dbdi.ricercaDomandeEscluseInIntervalloDiConsegna(inizio, fine);
+                DomandaEtaComparator comp = new DomandaEtaComparator();
+                //Riordina per età dei bambini
+                Collections.sort(ldi, comp);
+                for(DomandaIscrizione dom : ldi)
+                {
+                    //Riempio i bean semivuoti (hanno solo i CF)
+                    Bambino b = dom.getBambino();
+                    dom.setBambino(dbb.ricercaBambinoPerCodFiscale(b.getCodiceFiscale()));
+                    
+                    Genitore gr = dom.getGenitore();
+                    dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
+                }
+                
+                return ldi;
+            }
+            else
+            {
+                return null;
+            }
+        } catch (SQLException e) {
+            // TODO Blocco di catch autogenerato
+            LOG.log(Level.SEVERE, "Impossibile ricercare domande. Causato da: "+e.getMessage(), e);
+        }
+        finally {
+            db.chiudiConnessione();
+        }
+        return null;
+    }
+    
+    /**
      * Ricerca tutte le domande in attesa di assegnazione punteggio.
      * @return
      */
