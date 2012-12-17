@@ -275,6 +275,25 @@ public class ControlClassi {
         }
     }
     
+    public boolean escludiBambinoNellaClasse(int id, Bambino bambino) throws BambinoException, DBConnectionException, SQLException{
+        Database db = new Database();
+        DBBambino stub = new DBBambino(db);
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            Bambino bambinoModificato = stub.ricercaBambinoPerCodFiscale(bambino.getCodiceFiscale());
+            if (bambinoModificato == null)
+                throw new BambinoException("Bambino non trovato");
+            bambinoModificato.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
+            if (!stub.replace(bambino, bambinoModificato))
+                throw new BambinoException("Modifica fallita");
+            return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    
     
     /**
      * Inserisce una lista di bambini nella classe
