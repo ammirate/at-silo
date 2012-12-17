@@ -33,12 +33,12 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <form action="http://localhost:8080/Atsilo/servletControlQuestionario" method="POST">
 <div id=formdomande>
 	<H2>Titolo Questionario:</H2> <input type=text name="titolo" size=100 style="height: 25px; font-size: 22px; font-family: Times; font-weight: bold;"><br><br><BR><BR>
-	<div id=datachooser2 onclick="allargaDiv('datachooser1')" onmouseover="stringiDiv('datachooser1')" >
+	<div id=datachooser2 >
 		<table>
-		<tr>
-		<td><b>Data Inizio: </b>	<td><input type=text name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
-		<tr>
-		<td><b>Data Fine: </b> <td><input type=text name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />	
+			<tr>
+				<td><b>Data Inizio: </b>	<td><input type=text name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+			<tr>
+				<td><b>Data Fine: </b> <td><input type=text name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />	
 		</table>
 		</div>
 	<br><br><br><br>
@@ -70,7 +70,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	<br><br>
 </div>
 	<input type=button value="Aggiungi Domanda" onclick="addDomanda()">
-	<center><input type=submit value="Crea Questionario"></center>
+	<center><input type=submit value="Crea Questionario" onclick="return controlData();"></center>
 </form>
 <p><strong><br />
 </strong></p>
