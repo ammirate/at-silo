@@ -64,7 +64,15 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
 				Integer p = stat.getPercentualiFromCampo(quest.getDomande().get(i).getId(), quest.getDomande().get(i).getCampi().get(j).getId());
-				out.println("<tr><td width=500>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td><td width=200><div style='background-color: red; width: "+(p*100)+"%; height: 20px'></div><td width=100 align=center>"+(p*100)+"%</tr>");
+				out.println("<tr><td width=500>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td>");
+				if(p==null ) {
+					out.println("<td colspan = 2> Statistiche non disponibili per questa domanda</td></tr>");
+				}
+				else
+				{
+					out.println("<td width=200><div style='background-color: red; width: "+(p*100)+"%; height: 20px'></div><td width=100 align=center>"+(p*100)+"%</tr>");
+
+				}
 			}
 			out.println("</table><br><br>");
 			out.println("</fieldset><br><br>");
