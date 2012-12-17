@@ -275,7 +275,7 @@ public class ControlClassi {
         }
     }
     
-    public boolean escludiBambinoNellaClasse(int id, Bambino bambino) throws BambinoException, DBConnectionException, SQLException{
+    public boolean rigettaBambinoNellaClasse(int id, Bambino bambino) throws BambinoException, DBConnectionException, SQLException{
         Database db = new Database();
         DBBambino stub = new DBBambino(db);
         
