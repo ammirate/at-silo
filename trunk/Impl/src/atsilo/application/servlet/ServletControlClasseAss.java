@@ -101,9 +101,9 @@ public class ServletControlClasseAss extends HttpServlet {
         {
             ArrayList<Utente> listaDestinatari = new ArrayList<Utente>();
             listaDestinatari.add(u);
-            Messaggio m = new NotificaMailComposizioneClasse(listaDestinatari,"Assegnazione classi aggiornata",
-                    "Caro delegato del rettore\n, l'assegnazione delle classi è stata aggiornata.\n" +
-                    "La invitiamo ad accedere alla sua area utente per convalidare o rigettare.","");
+            Messaggio m = new NotificaMailComposizioneClasse(listaDestinatari,": Assegnazione classi aggiornata",
+                    "Caro delegato del rettore,\n l'assegnazione delle classi è stata aggiornata.\n" +
+                    "La invitiamo ad accedere alla sua area utente per convalidare o rigettare l'assegnazione.","");
             try {
                 ControlNotificaMail.getInstance().inviaMail(m);
             } catch (MessagingException e) {

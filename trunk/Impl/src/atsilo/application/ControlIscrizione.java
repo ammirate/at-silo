@@ -34,6 +34,7 @@ import atsilo.exception.ServizioException;
 import atsilo.exception.UtenteException;
 import atsilo.storage.DBBambino;
 import atsilo.storage.DBDomandaIscrizione;
+import atsilo.storage.DBGenitore;
 import atsilo.storage.DBOrarioUtente;
 import atsilo.storage.DBServizio;
 import atsilo.storage.Database;
@@ -351,6 +352,7 @@ public class ControlIscrizione {
               throw new DomandaIscrizioneException("Domanda non trovata");
           DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
           
+          domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP);
           // vengono modificati i campi passati come parametri
           if (malattieInfettive != null)
               domandaModificata.setMalattieInfettive(malattieInfettive);
@@ -399,6 +401,9 @@ public class ControlIscrizione {
             DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cfBambino);
             if (domanda == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
+             if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
+                 throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
+             
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
             
             // vengono modificati i campi interessati ai certificati
@@ -415,6 +420,40 @@ public class ControlIscrizione {
         } finally {
             db.chiudiConnessione();
         }
+    }
+    
+    /**
+     * Metodo che restituisce la lista delle domande confermate da convalidare poi con i certificati. 
+     * @return
+     * @throws DBConnectionException
+     * @throws SQLException
+     */
+    public List<DomandaIscrizione> ricercaDomandeConfermateDaConvalidare() throws DBConnectionException, SQLException
+    {
+        Database db = new Database();
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            
+           List<DomandaIscrizione> domande = bdDomandaIscrizione.ricercaDomandeCompletateDaConvalidare();
+           for(DomandaIscrizione d : domande)
+           {
+               DBBambino dbb = new DBBambino(db);
+               DBGenitore dbg = new DBGenitore(db);
+               Bambino b = dbb.ricercaBambinoPerCodFiscale(d.getBambino().getCodiceFiscale());
+               d.setBambino(b);
+               Genitore g = dbg.getGenitorePerCF(d.getGenitore().getCodiceFiscale());
+               Genitore gnr = dbg.getGenitorePerCF(d.getGenitoreNonRichiedente().getCodiceFiscale());
+               d.setGenitore(g);
+               d.setGenitoreNonRichiedente(gnr);
+           }
+            return domande;
+        } finally {
+            db.chiudiConnessione();
+        }
+        
     }
     
     /**
@@ -437,11 +476,13 @@ public class ControlIscrizione {
         try {
             DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaId(id);
             if (domanda == null)
-                throw new DomandaIscrizioneException("Domanda non trovata");           
+                throw new DomandaIscrizioneException("Domanda non trovata");
+            if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
+                throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
             
-            if( (domanda.getCertificatoMalattie() != AtsiloConstants.CERTIFICATO_IN_ATTESA) &&
-            (domanda.getCertificatoVaccinazioni() != AtsiloConstants.CERTIFICATO_IN_ATTESA) &&
-            (domanda.getCertificatoPrivacy() != AtsiloConstants.CERTIFICATO_IN_ATTESA) )
+            if( (domanda.getCertificatoMalattie().equals(AtsiloConstants.CERTIFICATO_CONSEGNATO)) &&
+            (domanda.getCertificatoVaccinazioni().equals(AtsiloConstants.CERTIFICATO_CONSEGNATO)) &&
+            (domanda.getCertificatoPrivacy().equals(AtsiloConstants.CERTIFICATO_CONSEGNATO)))
             {
                 DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
                 domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
