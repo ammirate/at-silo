@@ -45,10 +45,10 @@ if (!tipologia.equals("delegato_rettore") )
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="left" class="menuprimosel">&nbsp;<b>Gestione Classi</b></td>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Bambini</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="#">Suddivisione</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="convalida_classe_bambino.jsp">Convalida Classe</a></td>
 </tr>
 
 </tbody></table>
