@@ -58,27 +58,47 @@ public class ServletConvalidaClasseBambino extends HttpServlet {
             String[] classiSelezionate;
             classiSelezionate = request.getParameterValues("classi");
             String res[];
+            String submit = request.getParameter("submit");
             for(int i=0;i<classiSelezionate.length;i++){
                 res = classiSelezionate[i].split("_");
                 String cf = res[0];
                 int id = Integer.parseInt(res[1]);
-               try {
-                Bambino bamb = dbbamb.ricercaBambinoPerCodFiscale(cf);
-                crt.confermaBambinoNellaClasse(id, bamb);
-            } catch (SQLException e) {
-                response.setStatus(response.SC_MOVED_TEMPORARILY);
-                response.setHeader("Location", "prototipo/errore.html"); 
-            } catch (BambinoException e) {
-                response.setStatus(response.SC_MOVED_TEMPORARILY);
-                response.setHeader("Location", "prototipo/errore.html"); 
-            } catch (DBConnectionException e) {
-                response.setStatus(response.SC_MOVED_TEMPORARILY);
-                response.setHeader("Location", "prototipo/errore.html"); 
+                if(submit.compareTo("Convalida") == 0){
+                    try {
+                        Bambino bamb = dbbamb.ricercaBambinoPerCodFiscale(cf);
+                        crt.confermaBambinoNellaClasse(id, bamb);
+                    } catch (SQLException e) {
+                        response.setStatus(response.SC_MOVED_TEMPORARILY);
+                        response.setHeader("Location", "prototipo/errore.html"); 
+                    } catch (BambinoException e) {
+                        response.setStatus(response.SC_MOVED_TEMPORARILY);
+                        response.setHeader("Location", "prototipo/errore.html"); 
+                    } catch (DBConnectionException e) {
+                        response.setStatus(response.SC_MOVED_TEMPORARILY);
+                        response.setHeader("Location", "prototipo/errore.html"); 
+                    }
+                }else if(submit.compareTo("Riggetta") == 0){
+                    try {
+                        Bambino bamb = dbbamb.ricercaBambinoPerCodFiscale(cf);
+                        crt.rigettaBambinoNellaClasse(id, bamb);
+                    } catch (SQLException e) {
+                        response.setStatus(response.SC_MOVED_TEMPORARILY);
+                        response.setHeader("Location", "prototipo/errore.html"); 
+                    } catch (BambinoException e) {
+                        response.setStatus(response.SC_MOVED_TEMPORARILY);
+                        response.setHeader("Location", "prototipo/errore.html"); 
+                    } catch (DBConnectionException e) {
+                        response.setStatus(response.SC_MOVED_TEMPORARILY);
+                        response.setHeader("Location", "prototipo/errore.html"); 
+                    }
+                }
+                else{
+                    response.setStatus(response.SC_MOVED_TEMPORARILY);
+                    response.setHeader("Location", "prototipo/errore.html"); 
+                }
             }
-                
-            }
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/convalida_classe_bambino.jsp?"+"successo=y"); 
         }
-        response.setStatus(response.SC_MOVED_TEMPORARILY);
-        response.setHeader("Location", "prototipo/convalida_classe_bambino.jsp?"+"successo=y"); 
     }
 }

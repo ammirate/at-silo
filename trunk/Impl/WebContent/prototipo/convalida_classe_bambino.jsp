@@ -65,7 +65,7 @@ for(i=0;i<n;i++){
 }
 %>
 </table>
-<input type="submit" value="Convalida" id="conv" name="convalida" />
+<input type="submit" value="Convalida" id="conv" name="submit" /> <input type="submit" value="Riggetta" id="conv" name="submit" />
 <%} %>
 
 </form>
