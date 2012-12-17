@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generato il: Dic 17, 2012 alle 19:05
--- Versione del server: 5.5.16
--- Versione PHP: 5.3.8
+-- Host: 127.0.0.1
+-- Generato il: Dic 17, 2012 alle 20:24
+-- Versione del server: 5.5.27-log
+-- Versione PHP: 5.4.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `new atsilo`
+-- Database: `atsilo`
 --
 
 -- --------------------------------------------------------
@@ -175,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `bambino` (
   `comune_domicilio` varchar(100) DEFAULT NULL,
   `provincia_domicilio` varchar(50) DEFAULT NULL,
   `cf_genitore_nonrichiedente` varchar(50) DEFAULT NULL,
-  `iscrizione_classe` varchar(50) DEFAULT NULL,
+  `iscrizione_classe` enum('Assegnato','NonAssegnato') DEFAULT 'NonAssegnato',
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`),
@@ -187,15 +187,15 @@ CREATE TABLE IF NOT EXISTS `bambino` (
 --
 
 INSERT INTO `bambino` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cf_genitore_nonrichiedente`, `iscrizione_classe`) VALUES
-('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 4, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', NULL, NULL),
-('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, NULL),
-('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, NULL),
-('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', NULL),
-('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', NULL, NULL),
-('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL, NULL),
-('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL, NULL),
-('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, NULL),
-('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, NULL);
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 4, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', NULL, 'NonAssegnato'),
+('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, 'NonAssegnato'),
+('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, 'NonAssegnato'),
+('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', 'NonAssegnato'),
+('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', NULL, 'NonAssegnato'),
+('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL, 'NonAssegnato'),
+('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL, 'NonAssegnato'),
+('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'NonAssegnato'),
+('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'NonAssegnato');
 
 -- --------------------------------------------------------
 
