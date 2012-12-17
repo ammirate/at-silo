@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 16, 2012 alle 23:45
+-- Generato il: Dic 17, 2012 alle 17:26
 -- Versione del server: 5.5.20
 -- Versione PHP: 5.3.9
 
@@ -268,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `classe` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sezione` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -312,9 +312,9 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `servizio` int(11) DEFAULT NULL,
   `bambino` varchar(50) DEFAULT NULL,
   `stato_domanda` varchar(50) DEFAULT 'DomandaNonCompilata',
-  `certificato_malattie` varchar(20) DEFAULT NULL,
-  `certificato_vaccinazioni` varchar(20) DEFAULT NULL,
-  `certificato_privacy` varchar(20) DEFAULT NULL,
+  `certificato_malattie` enum('Consegnato','NonConsegnato','InAttesa') DEFAULT NULL,
+  `certificato_vaccinazioni` enum('Consegnato','NonConsegnato','InAttesa') DEFAULT NULL,
+  `certificato_privacy` enum('Consegnato','NonConsegnato','InAttesa') DEFAULT NULL,
   `bambino_disabile` tinyint(1) DEFAULT NULL,
   `genitore_invalido` tinyint(1) DEFAULT NULL,
   `genitore_solo` tinyint(1) DEFAULT NULL,
@@ -328,6 +328,8 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `isee` float DEFAULT NULL,
   `stato_convalidazione` enum('DomandaNonCompilata','DomandaInviataInAttesaDiGraduatoria','DomandaRifiutata','IscrizioneConfermataInAttesaDiAltriDati','DomandaNonInviata','DomandaAccettata') DEFAULT 'DomandaNonCompilata',
   `cf_genitore_non_richiedente` varchar(16) DEFAULT NULL,
+  `vaccinazioni` varchar(300) DEFAULT NULL,
+  `malattie_infettive` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
@@ -338,16 +340,16 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
 -- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
-INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`) VALUES
-(1, NULL, '2012-07-19', NULL, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220, 'DomandaNonCompilata', NULL),
-(2, NULL, '2012-08-13', NULL, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, 'DomandaNonCompilata', NULL),
-(3, NULL, '2012-08-13', NULL, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, NULL, NULL),
-(4, NULL, '2012-11-01', NULL, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323, 'DomandaNonCompilata', NULL),
-(5, NULL, '2012-06-12', NULL, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892, 'DomandaNonCompilata', NULL),
-(6, NULL, '2012-09-25', NULL, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523, 'DomandaNonCompilata', NULL),
-(7, NULL, '2012-08-01', NULL, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423, 'DomandaNonCompilata', NULL),
-(8, NULL, '2012-08-28', NULL, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaNonCompilata', NULL),
-(9, NULL, '2012-08-28', NULL, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaInviataInAttesaDiGraduatoria', NULL);
+INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`, `vaccinazioni`, `malattie_infettive`) VALUES
+(1, NULL, '2012-07-19', NULL, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220, 'DomandaNonCompilata', NULL, NULL, NULL),
+(2, NULL, '2012-08-13', NULL, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, 'DomandaNonCompilata', NULL, NULL, NULL),
+(3, NULL, '2012-08-13', NULL, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, NULL, NULL, NULL, NULL),
+(4, NULL, '2012-11-01', NULL, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323, 'DomandaNonCompilata', NULL, NULL, NULL),
+(5, NULL, '2012-06-12', NULL, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892, 'DomandaNonCompilata', NULL, NULL, NULL),
+(6, NULL, '2012-09-25', NULL, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523, 'DomandaNonCompilata', NULL, NULL, NULL),
+(7, NULL, '2012-08-01', NULL, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423, 'DomandaNonCompilata', NULL, NULL, NULL),
+(8, NULL, '2012-08-28', NULL, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaNonCompilata', NULL, NULL, NULL),
+(9, 'asd', '2012-08-28', 10, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaAccettata', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -427,10 +429,8 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `personale_asilo` varchar(50) DEFAULT NULL,
   `psico_pedagogo` varchar(50) DEFAULT NULL,
   `educatore_didattico` varchar(50) DEFAULT NULL,
-  `cc` varchar(1000) DEFAULT NULL,
   `path` varchar(256) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
-  
   PRIMARY KEY (`nome`,`data`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
@@ -1114,11 +1114,9 @@ CREATE TABLE IF NOT EXISTS `servizio` (
   `orario_inizio` varchar(50) DEFAULT NULL,
   `orario_fine` varchar(50) DEFAULT NULL,
   `piano_pasto` varchar(50) DEFAULT NULL,
-  `bambino` varchar(50) DEFAULT NULL,
   `orario_utente` int(11) DEFAULT NULL,
   `id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `bambino` (`bambino`),
   KEY `orario_utente` (`orario_utente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1126,16 +1124,16 @@ CREATE TABLE IF NOT EXISTS `servizio` (
 -- Dump dei dati per la tabella `servizio`
 --
 
-INSERT INTO `servizio` (`orario_inizio`, `orario_fine`, `piano_pasto`, `bambino`, `orario_utente`, `id`) VALUES
-('9.00', '18.00', 'Sì', 'CVLRRA12A23B333C', 1, 1),
-('9.00', '13.00', 'No', 'DFZGNN12L14A909D', 1, 2),
-('9.00', '18.00', 'No', 'SCLNNA11L98A980I', 1, 3),
-('9.00', '18.00', 'No', 'SCLMTT12L98A980I', 1, 4),
-('9.00', '12.00', 'No', 'DRGCND10A26B045C', 2, 5),
-('9.00', '15.00', 'Sì', 'MSCLGU12A24T928B', 2, 6),
-('12.00', '18.00', 'Sì', 'DBNLCU11A23B222C', 1, 7),
-('12.00', '18.00', 'Sì', 'DBNMRA11A23B222C', 1, 8),
-('11.00', '16.00', 'Sì', 'PLTMRC11A23B224X ', 1, 9);
+INSERT INTO `servizio` (`orario_inizio`, `orario_fine`, `piano_pasto`, `orario_utente`, `id`) VALUES
+('9.00', '18.00', 'Sì', 1, 1),
+('9.00', '13.00', 'No', 1, 2),
+('9.00', '18.00', 'No', 1, 3),
+('9.00', '18.00', 'No', 1, 4),
+('9.00', '12.00', 'No', 2, 5),
+('9.00', '15.00', 'Sì', 2, 6),
+('12.00', '18.00', 'Sì', 1, 7),
+('12.00', '18.00', 'Sì', 1, 8),
+('11.00', '16.00', 'Sì', 1, 9);
 
 -- --------------------------------------------------------
 
@@ -1193,9 +1191,9 @@ INSERT INTO `tirocinante` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `ema
 -- Limiti per la tabella `account`
 --
 ALTER TABLE `account`
-  ADD CONSTRAINT `account_ibfk_3` FOREIGN KEY (`educatore_didattico`) REFERENCES `educatore_didattico` (`codice_fiscale`),
   ADD CONSTRAINT `account_ibfk_1` FOREIGN KEY (`responsabile_tirocini`) REFERENCES `responsabile_tirocini` (`codice_fiscale`),
-  ADD CONSTRAINT `account_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`);
+  ADD CONSTRAINT `account_ibfk_2` FOREIGN KEY (`tirocinante`) REFERENCES `tirocinante` (`codice_fiscale`),
+  ADD CONSTRAINT `account_ibfk_3` FOREIGN KEY (`educatore_didattico`) REFERENCES `educatore_didattico` (`codice_fiscale`);
 
 --
 -- Limiti per la tabella `attivita`
