@@ -35,63 +35,18 @@ public class DBEvento extends DBBeans {
      */
     public DBEvento(Database db){
         super("evento",db);
-    }
-    
-    
-    
-    
-    /**
-     * inserisce una lista di CC ad un evento
-     * @param e è l'evento in cui inserire CC
-     * @param cc è la lista di invitati all'evento
-     * @return true se l'operazione è avvenuta correttemente, false altrimenti
-     */
-    public boolean inserisciCCEvento(Evento e, List<String> cc){
-        return false;
-    }
-    
+    }   
 
     
-    /**
-     * ricerca un evento per nome
-     * @param nome è il nome dell'evento
-     * @return l'evento trovato, se esiste
-     */
-    public Evento ricercaEventoNome(String nome){
-        return null;
-    }
+   
+   
     
+    //TODO  public Evento ricercaEventoPerChiave(String nome){gianfranco
     
-    /**
-     * ricerca tutti gli eventi in una data
-     * @param data è la data interessata
-     * @return una lista di eventi che si svolgeranno nella data inserita
-     */
-    public List<Evento> ricercaEventoData(Date data){
-        return null;
-    }
+   //TODO public EventPlanner ricercaEventPlannerEvento(Evento e){
+     
     
-    
-    
-    /**
-     * ricerca l'organizzatore dell'evento
-     * @param e è l'evento per cui ricercare l'organizzatore
-     * @return l'EventPlanner che ha creato l'evento
-     */
-    public EventPlanner ricercaEventPlannerEvento(Evento e){
-        return null;
-    }
-    
-    
-    
-    /**
-     * ricerca tutti gli eventi creati da un EventPlanner
-     * @param p è l'organizzatore dell'evento
-     * @return una lista di eventi organizzati da EventPlanner
-     */
-    public List<Evento> ricercaEventoPerPersonale(PersonaleAsilo p){
-        return null;
-    }
+   
 
     /**
      * @see atsilo.storage.DBBeans#getMappingFields()
@@ -123,11 +78,12 @@ public class DBEvento extends DBBeans {
     private static Map<String,String> creaMapping()
     {
         Map<String,String> res= new HashMap<String,String>();
-        res.put("Descrizione","descrizione");
-        res.put("Nome","nome");
+        res.put("descrizione","descrizione");
+        res.put("nome","nome");
         res.put("data","data");
         res.put("path","path");
-        res.put("Tipo","tipo");
+        res.put("tipo","tipo");
+        
         
         return Collections.unmodifiableMap(res);
     }
