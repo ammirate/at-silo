@@ -23,6 +23,7 @@ package atsilo.util;
  * il prefisso CAT_ identifica il tipo di utente della categoria Personale Asilo.
  * il prefisso STATO_DOMANDA identifica i possibili stati di una domanda.
  * il prefisso ISCRIZIONE_CLASSE identifica i possibili stati della richiesta di appartenenza ad una classe.
+ * il prefisso CERTIFICATO identifica i possibili stati della consegna dei vari certificati
  * 
  * @author Alfonso
  * 
@@ -42,12 +43,16 @@ public class AtsiloConstants {
     public static final String CAT_DELEGATO_RETTORE="delegato_rettore";
     public static final String CAT_RESP_SCIENTIFICO="responsabile_scientifico";
     public static final String STATO_DOMANDA_NONCOMPILATA = "DomandaNonCompilata";
-    public static final String STATO_DOMANDA_INVIATA="DomandaInviataInAttesaDiGraduatoria";
+    public static final String STATO_DOMANDA_PRIMO_STEP="DomandaInviataInAttesaDiGraduatoria";
     public static final String STATO_DOMANDA_RIFIUTATA="DomandaRifiutata";
     public static final String STATO_DOMANDA_ACCETTATA="DomandaAccettata";
-    public static final String STATO_DOMANDA_NONCONFERMATA="IscrizioneConfermataInAttesaDiAltriDati";
+    public static final String STATO_DOMANDA_SECONDO_STEP="IscrizioneConfermataInAttesaDiAltriDati";
+    public static final String STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI="AttesaPresentazioneDocumenti";
     public static final String STATO_DOMANDA_NONINVIATA="DomandaNonInviata";
     public static final String ISCRIZIONE_CLASSE_CONFERMATA="Conferma";
     public static final String ISCRIZIONE_CLASSE_RIFIUTATA="Rifiuta";
+    public static final String CERTIFICATO_CONSEGNATO="Consegnato";
+    public static final String CERTIFICATO_NON_CONSEGNATO="NonConsegnato";
+    public static final String CERTIFICATO_IN_ATTESA="InAttesa";
     
 }

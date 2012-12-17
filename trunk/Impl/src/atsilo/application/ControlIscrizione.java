@@ -70,13 +70,12 @@ public class ControlIscrizione {
      * @throws DomandaIscrizioneException
      * @throws SQLException 
      */
-    public boolean updateDatiDomandaIscrizionePrimoStep(int iD, int punteggio,
-            int posizione, Genitore genitore, Bambino bambino, String statoDomanda,
-            String certificatoMalattie, String certificatoVaccinazioni, String certificatoPrivacy,
+    public boolean updateDatiDomandaIscrizionePrimoStep(
+            String cf_bambino, 
             boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
             boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-            String condizioniCalcoloPunteggio, float isee, Servizio servizio, String stato_convalidazione) throws DomandaIscrizioneException, DBConnectionException, SQLException{
+             String altre condizioni punteggio, float isee) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         
         Database db = new Database();
         DBDomandaIscrizione stub = new DBDomandaIscrizione(db);       
@@ -296,7 +295,7 @@ public class ControlIscrizione {
             throw new DomandaIscrizioneException("Mancano i dati relativi al documento isee");
             
         DomandaIscrizione domandaModificata = (DomandaIscrizione) d.clone();
-        domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_INVIATA);
+        domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -422,9 +421,9 @@ public class ControlIscrizione {
      * @throws DomandaIscrizioneException
      */
     //ATTENDO di sapere queli parametri mi verranno passati
-    public boolean inserisciDatiDomandaIscrizioneFinale(String codice_fiscale_bambino, String statoDomanda,String certificatoMalattie, String certificatoVaccinazioni,String certificatoPrivacy, boolean bambinoDisabile,boolean genitoreInvalido, boolean genitoreSolo,boolean genitoreVedovo,boolean genitoreNubile,boolean genitoreSeparato,boolean figlioNonRiconosciuto,boolean affidoEsclusivo,boolean altriComponentiDisabili,String condizioniCalcoloPunteggio,float isee) throws DomandaIscrizioneException, DBConnectionException{
+    public boolean inserisciDatiDomandaIscrizioneFinale(String codice_fiscale_bambino, String statoDomanda,String certificatoMalattie, String certificatoVaccinazioni, String idOrario) throws DomandaIscrizioneException, DBConnectionException{
         //controlli che i dati siano corretti
-        //TODO
+        //TODO no certificati ma proprio i campi
         return true;
     }
     
@@ -479,8 +478,7 @@ public class ControlIscrizione {
     }
     
     /**
-     * @todo da modificare, copiato da controlDatiPersonali, non ho ancora capito di preciso a cosa serve
-     * Convalida una domanda di iscrizione
+     * @todo prende i tre certificati e li inserisce
      * 
      * @param id
      *            della domanda di iscrizione
@@ -533,7 +531,7 @@ public class ControlIscrizione {
      * @throws DBConnectionException
      * @throws InserimentoDatiException
      */
-    public DomandaIscrizione getDomandaIscrizione(String username, String cfBambino) {
+    public DomandaIscrizione getDomandaIscrizione(String cfBambino) {
         Database db = new Database();
         DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
         DomandaIscrizione domandaIscrizione = null;
@@ -552,6 +550,7 @@ public class ControlIscrizione {
             } catch (SQLException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                return null;
             } catch (GenitoreException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
@@ -586,7 +585,7 @@ public class ControlIscrizione {
      * @return Domanda di iscrizione da visualizzare
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
-     */
+     
     public DomandaIscrizione getDomandaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
         Database db = new Database();
         StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
@@ -602,7 +601,7 @@ public class ControlIscrizione {
         finally{
             db.chiudiConnessione();
         }
-    }
+    }*/
     
   
     
@@ -615,7 +614,7 @@ public class ControlIscrizione {
      * @return domande in attesa di convalide
      * @throws DBConnectionException
      * @throws DomandaIscrizioneException
-     */
+     
     public List<DomandaIscrizione> getDomandeIscrizioneNonConvalidate()
             throws DomandaIscrizioneException, DBConnectionException {
         Database db = new Database();
@@ -631,7 +630,7 @@ public class ControlIscrizione {
         } finally {
             db.chiudiConnessione();
         }
-    }
+    }*/
     
     
     /**
@@ -645,7 +644,7 @@ public class ControlIscrizione {
      * @return valore booleano
      * @throws DBConnectionException
      * @throws DomandaIscrizioneException
-     */
+     
     public Boolean rinunciaIscrizione(int id) throws DomandaIscrizioneException,
     DBConnectionException {
         Database db = new Database();
@@ -666,7 +665,7 @@ public class ControlIscrizione {
         } finally {
             db.chiudiConnessione();
         }
-    }
+    }*/
     
     /**@todo dovrebbe essere la stessa cosa di rinuncia? cred che vada eliminato
      * Elimina una domanda di iscrizione
@@ -698,29 +697,6 @@ public class ControlIscrizione {
     }
     
     
-    /**@todo stessa cosa ti getValoreStatoIScrizone credo che vada eliminato
-     * Prende lo stato di un'iscrizione: idoneo/non idoneo
-     * @param id della domanda di iscrizione da verificare
-     * @return stringa che riporti lo stato dell'iscrizione
-     * @throws DBConnectionException 
-     * @throws DomandaIscrizioneException
-     */
-    public String visualizzaStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
-        Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            String stato = stub.verificaStato(id);
-            if(stato.equals(""))
-                throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
-            return stato;
-        }
-        finally{
-            db.chiudiConnessione();
-        }
-    }
     /**
      * Metodo costruttore
      */

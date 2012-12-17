@@ -444,7 +444,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
 
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE punteggio IS NULL AND stato_convalidazione=?");
-        tabella.setParam(stmt, 1, "stato_convalidazione", AtsiloConstants.STATO_DOMANDA_INVIATA);
+        tabella.setParam(stmt, 1, "stato_convalidazione", AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
         ResultSet r= stmt.executeQuery();
         
        while (r.next()){
