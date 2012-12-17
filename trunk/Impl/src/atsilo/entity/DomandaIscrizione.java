@@ -180,6 +180,39 @@ public class DomandaIscrizione implements Cloneable{
         this.servizio = servizio;
         this.stato_convalidazione=stato_convalidazione;
     }
+ 
+    
+    /**
+     * @param dataPresentazione il parametro è fissato
+     * @param bambinoDisabile è fissato
+     * @param genitoreInvalido è fissato
+     * @param genitoreSolo è fissato
+     * @param genitoreVedovo è fissato
+     * @param genitoreNubile è fissato
+     * @param genitoreSeparato è fissato
+     * @param figlioNonRiconosciuto è fissato
+     * @param affidoEsclusivo è fissato
+     * @param altriComponentiDisabili è fissato
+     * @param isee è fissato
+     */
+    public DomandaIscrizione(Date dataPresentazione, boolean bambinoDisabile, boolean genitoreInvalido,
+            boolean genitoreSolo, boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato, 
+            boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
+            String condizioniCalcoloPunteggio, float isee){
+        super();
+        this.dataPresentazione = dataPresentazione;
+        this.bambinoDisabile = bambinoDisabile;
+        this.genitoreInvalido = genitoreInvalido;
+        this.genitoreSolo = genitoreSolo;
+        this.genitoreVedovo = genitoreVedovo;
+        this.genitoreNubile = genitoreNubile;
+        this.genitoreSeparato = genitoreSeparato;
+        this.figlioNonRiconosciuto = figlioNonRiconosciuto;
+        this.affidoEsclusivo = affidoEsclusivo;
+        this.altriComponentiDisabili = altriComponentiDisabili;
+        this.condizioniCalcoloPunteggio = condizioniCalcoloPunteggio;
+        this.isee = isee;
+    }
     
     /**
      * Metodo che prende il campo DataPresentazione

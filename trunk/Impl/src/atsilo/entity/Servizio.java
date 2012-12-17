@@ -56,6 +56,20 @@ public class Servizio {
     }
     
     /**
+     * @param id il paramentro è fissato 
+     * @param orarioInizio il paramentro è fissato
+     * @param orarioFine il paramentro è fissato
+     * @param pianoPasto il paramentro è fissato
+     * @param bambino è settato dopo la lettura
+     * @param orarioUtente è settato dopo la lettura
+     */
+    public Servizio(String bambino, OrarioUtente orarioUtente) {
+        super();
+        this.bambino = bambino;
+        this.orarioUtente = orarioUtente;
+    }
+    
+    /**
      * Metodo che prende il campo Id
      * @param id il parametro inserito
      */
