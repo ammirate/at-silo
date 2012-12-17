@@ -352,7 +352,7 @@ public class ControlIscrizione {
               throw new DomandaIscrizioneException("Domanda non trovata");
           DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
           
-          domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP);
+          domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI);
           // vengono modificati i campi passati come parametri
           if (malattieInfettive != null)
               domandaModificata.setMalattieInfettive(malattieInfettive);
@@ -401,7 +401,7 @@ public class ControlIscrizione {
             DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cfBambino);
             if (domanda == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-             if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
+             if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI))
                  throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
              
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
@@ -477,15 +477,16 @@ public class ControlIscrizione {
             DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaId(id);
             if (domanda == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-            if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
+            if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI))
                 throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
             
-            if( (domanda.getCertificatoMalattie().equals(AtsiloConstants.CERTIFICATO_CONSEGNATO)) &&
-            (domanda.getCertificatoVaccinazioni().equals(AtsiloConstants.CERTIFICATO_CONSEGNATO)) &&
-            (domanda.getCertificatoPrivacy().equals(AtsiloConstants.CERTIFICATO_CONSEGNATO)))
+            if( (!domanda.getCertificatoMalattie().equals(AtsiloConstants.CERTIFICATO_IN_ATTESA)) &&
+            (!domanda.getCertificatoVaccinazioni().equals(AtsiloConstants.CERTIFICATO_IN_ATTESA)) &&
+            (!domanda.getCertificatoPrivacy().equals(AtsiloConstants.CERTIFICATO_IN_ATTESA)))
             {
                 DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
-                domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
+                domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
+                bdDomandaIscrizione.replace(domanda,domandaModificata);
                 return true;
             }
             else return false;
