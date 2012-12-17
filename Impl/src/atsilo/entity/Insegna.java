@@ -32,9 +32,12 @@ public class Insegna {
      * 
      */
     public Insegna() {
-        // TODO Scheletro di costruttore autogenerato
     }
-    
+    /**
+     * Costruttore
+     * @param educatoreDidattico educatore didattico
+     * @param classe classe
+     */
     public Insegna(EducatoreDidattico educatoreDidattico, Classe classe) {
         super();
         this.educatoreDidattico = educatoreDidattico;

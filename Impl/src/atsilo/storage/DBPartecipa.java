@@ -1,3 +1,18 @@
+/*
+ *-----------------------------------------------------------------
+ * This file is licensed under GPL 3.0:
+ * http://www.gnu.org/licenses/gpl-3.0.html
+ *-----------------------------------------------------------------
+ * FILE: DBPartecipa.java
+ *-----------------------------------------------------------------
+ * PROGETTO: Atsilo
+ *-----------------------------------------------------------------
+ * OWNER
+ * fabio Napoli, 15/dic/2012
+ * REVISION
+ * <nome revisore>, <data revisione>
+ *-----------------------------------------------------------------
+ */
 package atsilo.storage;
 
 import java.sql.Date;
@@ -17,21 +32,7 @@ import atsilo.entity.Insegna;
 import atsilo.entity.Partecipa;
 import atsilo.storage.DBBeans.Assegnazione;
 
-/*
- *-----------------------------------------------------------------
- * This file is licensed under GPL 3.0:
- * http://www.gnu.org/licenses/gpl-3.0.html
- *-----------------------------------------------------------------
- * FILE: DBPartecipa.java
- *-----------------------------------------------------------------
- * PROGETTO: Atsilo
- *-----------------------------------------------------------------
- * OWNER
- * fabio, 15/dic/2012
- * REVISION
- * <nome revisore>, <data revisione>
- *-----------------------------------------------------------------
- */
+
 
 public class DBPartecipa extends DBBeans<Partecipa> {
     
@@ -49,7 +50,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
      * @return lista string
      */
     private static List<String> creaChiave() {
-        List<String> res=  Arrays.asList("-evento_nome","-evento_data");
+        List<String> res=  Arrays.asList("-evento_nome","-evento_data","-classe");
         
         return Collections.unmodifiableList(res);
     }
@@ -121,22 +122,30 @@ public class DBPartecipa extends DBBeans<Partecipa> {
         return DBAssign;
     }
     
-
-public List<Classe> getClassiPerEvento (String nome,Date d) throws SQLException{
-    
-    List <Classe> l=new ArrayList<Classe> ();
-    PreparedStatement stmt = tabella.prepareStatement(
-            "SELECT * FROM " + tabella.getNomeTabella() + " WHERE educatore_didattico = ?");
-    tabella.setParam(stmt, 1, "educatore_didattico", cf);
-    ResultSet res = stmt.executeQuery();
-    while(res.next()){
-        Classe toAdd = new Classe();
-        toAdd.setId(res.getInt("classe"));
-        l.add(toAdd);//add idQuestionario del questionario alla lista
+/**
+ * Dato il nome di un evento da in output la lista degli id
+ * delle classi partecipanti all'evento
+ * @param nome nome dell'evento 
+ * @return lista di integer
+ * @throws SQLException
+ */
+    public List<Integer> getClassiPerEvento (String nome) throws SQLException{
+        List<Integer> l = new ArrayList<Integer>();
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE evento_nome = ?");
+        tabella.setParam(stmt, 1, "evento_nome", nome);
+        ResultSet res = stmt.executeQuery();
+        while(res.next())
+            l.add(res.getInt("classe"));
+        if(l.size()==0){
+            res.close();
+            return null;
+        }else{
+            res.close();
+            return l;    
+        }
+      
     }
-    res.close();
-    return l;
-}
     
     
     
