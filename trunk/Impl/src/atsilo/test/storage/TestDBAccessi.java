@@ -16,6 +16,7 @@
 
 package atsilo.test.storage;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,17 +26,21 @@ import atsilo.entity.Bambino;
 import atsilo.entity.Bando;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.EducatoreDidattico;
+import atsilo.entity.Evento;
 import atsilo.entity.Genitore;
 import atsilo.entity.PersonaleAsilo;
 import atsilo.entity.Psicopedagogo;
 import atsilo.entity.ResponsabileQuestionario;
 import atsilo.entity.Tirocinante;
+import atsilo.entity.Utente;
 import atsilo.storage.DBAccount;
 import atsilo.storage.DBBambino;
 import atsilo.storage.DBBando;
 import atsilo.storage.DBDomandaIscrizione;
 import atsilo.storage.DBEducatoreDidattico;
+import atsilo.storage.DBEvento;
 import atsilo.storage.DBGenitore;
+import atsilo.storage.DBPartecipa;
 import atsilo.storage.DBPersonaleAsilo;
 import atsilo.storage.DBPsicopedagogo;
 import atsilo.storage.DBQuestionario;
@@ -141,7 +146,7 @@ public class TestDBAccessi {
 
        }
        */
-       List<String> l=dbb.getGenitoriBambino("MSCLGU12A24T928s");
+     /* List<String> l=dbb.getGenitoriBambino("MSCLGU12A24T928s");
       Bambino b=new Bambino();
       
       for(int i=0;i<l.size();i++){
@@ -186,7 +191,7 @@ public class TestDBAccessi {
       System.out.println("Ciao "+a.getUserName());
       System.out.println("Ciao "+a.getPassWord());}*/
       
-      Account a=dba.ricercaPerCodiceFiscale("VRRMDD64T32A048N");
+    /*  Account a=dba.ricercaPerCodiceFiscale("VRRMDD64T32A048N");
       if(a==null){
           System.out.println("Account inesistente");
       }
@@ -194,8 +199,29 @@ public class TestDBAccessi {
       System.out.println("Ciao "+a.getOwner().getCodiceFiscale());
       System.out.println("Ciao "+a.getUserName());
       System.out.println("Ciao "+a.getPassWord());}
-
+*/
+      DBEvento dbE = new DBEvento(db);
+      Evento e = dbE.ricercaEventoPerChiave("Recita Y");
+      System.out.println(" Evento preso : = "+e.getDescrizione());
       
+      Utente u= dbE.ricercaEventPlannerEvento(e);
+      
+      System.out.println("EventPlannerEvento "+u.getCodiceFiscale());
+      
+      List<Evento> ev = dbE.ricercaAllEventi();
+      
+      for(int i=0;i<ev.size();i++){
+          System.out.println(" Evento "+i + " = " +ev.get(i).getDescrizione());
+      } 
+      
+      DBPartecipa p= new DBPartecipa(db);
+      
+      List<Integer> l1 = p.getClassiPerEvento("Recita Y");
+      
+      for(int i=0;i<l1.size();i++){
+          System.out.println(" Classe =  "+i + " = " +l1.get(i));
+      }
+           
         db.chiudiConnessione();
 
     }

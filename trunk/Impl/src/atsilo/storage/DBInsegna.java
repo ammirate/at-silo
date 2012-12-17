@@ -3,7 +3,7 @@
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
  *-----------------------------------------------------------------
- * FILE: DBCompilaQuestionario.java
+ * FILE: DBInsegna.java
  *-----------------------------------------------------------------
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
@@ -34,19 +34,6 @@ import atsilo.entity.Questionario;
 import atsilo.entity.RispostaQuestionario;
 import atsilo.storage.DBBeans.Assegnazione;
 
-/*
- *-----------------------------------------------------------------
- * This file is licensed under GPL 3.0:
- * http://www.gnu.org/licenses/gpl-3.0.html
- *-----------------------------------------------------------------
- * FILE: DBCompilaQuestionario.java
- *-----------------------------------------------------------------
- * PROGETTO: Atsilo
- *-----------------------------------------------------------------
- * OWNER
- * Fabio Napoli, 17/11/2012 (non responsabili)
- *-----------------------------------------------------------------
- */
 
 public class DBInsegna extends DBBeans<Insegna> {
     
@@ -133,7 +120,12 @@ public class DBInsegna extends DBBeans<Insegna> {
         
         return DBAssign;
     }
-    
+    /**
+     * Dato l'id di una classe restituisce gli educatori per quella classe
+     * @param idClasse id della classe di cui ricercare gli educatori
+     * @return lista di oggetti EducatoreDidattico
+     * @throws SQLException
+     */
 public List<EducatoreDidattico> getEducatoriPerClasse (int idClasse) throws SQLException{
         
         List <EducatoreDidattico> l=new ArrayList<EducatoreDidattico> ();
@@ -149,7 +141,13 @@ public List<EducatoreDidattico> getEducatoriPerClasse (int idClasse) throws SQLE
         res.close();
         return l;
     }
-
+/**
+ * Prende in input il codice fiscale di un educatore didattico e restituisce
+ * le classi dove insegna
+ * @param cf codice fiscale educatore da ricercare
+ * @return lista di oggetti Classe
+ * @throws SQLException
+ */
 public List<Classe> getClassiPerEducatore (String cf) throws SQLException{
     
     List <Classe> l=new ArrayList<Classe> ();

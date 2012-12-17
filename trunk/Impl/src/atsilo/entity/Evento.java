@@ -1,7 +1,3 @@
-package atsilo.entity;
-import java.sql.Date;
-import java.util.List;
-
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
@@ -17,6 +13,11 @@ import java.util.List;
  * Andrea Micco, 6/12/2012
  *-----------------------------------------------------------------
  */
+
+package atsilo.entity;
+import java.sql.Date;
+import java.util.List;
+
 
 public class Evento {
 
@@ -36,7 +37,7 @@ public class Evento {
     /**
      * La variabile organizzatore è nulla c'è bisogno di una lettura della classe EventPlanner
      */
-    private EventPlanner organizzatore;
+    private Utente organizzatore;
 
     /**
      * Costruttore vuoto
@@ -55,7 +56,7 @@ public class Evento {
      */
     public Evento(String descrizione, String nome, String cC, Date data,
             String tipo,
-            EventPlanner organizzatore, String path) {
+            Utente organizzatore, String path) {
         super();
         this.descrizione = descrizione;
         this.nome = nome;
@@ -68,7 +69,7 @@ public class Evento {
 
     /**
      * Metodo che setta il campo descrizione
-     * @param Descrizione il parametro fissato
+     * @param descrizione il parametro fissato
      */   
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
@@ -84,7 +85,7 @@ public class Evento {
 
     /**
      * Metodo che setta il campo nome
-     * @param Nome il parametro fissato
+     * @param nome il parametro fissato
      */   
     public void setNome(String nome) {
         this.nome = nome;
@@ -117,17 +118,17 @@ public class Evento {
    
     /**
      * Metodo che setta il parametro letto dalla classe EventPlanner
-     * @param organizzatore è settato dopo la lettura
+     * @param u è settato dopo la lettura
      */
-    public void setOrganizzatore(EventPlanner organizzatore) {
-        this.organizzatore = organizzatore;
+    public void setOrganizzatore(Utente u) {
+        this.organizzatore = u;
     }
 
     /**
      * Metodo che prende il parametro letto dalla classe EventPlanner
      * @return organizzatore preso dalla lettura
      */
-    public EventPlanner getOrganizzatore() {
+    public Utente getOrganizzatore() {
         return organizzatore;
     }
 

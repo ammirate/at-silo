@@ -20,10 +20,8 @@ import java.sql.Date;
 
 
 /**
- * Classe Insegna entity per la tabella "Insegna"
- * <Descrizione classe>
+ * Classe Partecipa entity per la tabella "Partecipa"
  * 
- * @author Alfonso
  * 
  */
 public class Partecipa {
@@ -36,9 +34,13 @@ public class Partecipa {
      * 
      */
     public Partecipa() {
-        // TODO Scheletro di costruttore autogenerato
     }
-    
+    /**
+     * Costruttore
+     * @param eventoData evento in cui si terrà l evento
+     * @param classe classe interessata all'evento
+     * @param eventoNome nome dell' evento
+     */
     public Partecipa(Date eventoData, Classe classe,String eventoNome) {
         super();
         this.eventoData=eventoData;
@@ -66,7 +68,7 @@ public class Partecipa {
     }
 
     public void setEventoNome(String nome) {
-        this.eventoNome = eventoNome;
+        this.eventoNome = nome;
     }
     
     

@@ -1,7 +1,3 @@
-package atsilo.entity;
-
-import java.sql.Date;
-
 /*
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
@@ -17,6 +13,10 @@ import java.sql.Date;
  * Andrea Micco, 5/12/2012
  *-----------------------------------------------------------------
  */
+package atsilo.entity;
+
+import java.sql.Date;
+
 
 public class Utente implements Beans {
     private Date dataNascita;
