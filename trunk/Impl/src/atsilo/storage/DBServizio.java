@@ -11,6 +11,7 @@ import java.util.Map;
 import atsilo.entity.Bambino;
 import atsilo.entity.OrarioUtente;
 import atsilo.entity.Servizio;
+import atsilo.storage.DBBeans.Assegnazione;
 
 /*
  *-----------------------------------------------------------------
@@ -27,7 +28,7 @@ import atsilo.entity.Servizio;
  */
 //TODO da implementare
 
-public class DBServizio extends DBBeans {
+public class DBServizio extends DBBeans<Servizio> {
     
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
@@ -46,7 +47,6 @@ public class DBServizio extends DBBeans {
         res.put("orarioInizio","orario_inizio");
         res.put("pianoPasto","piano_pasto");
         res.put("bambino","bambino");
-        res.put("orarioUtente","orario_utente");
         return Collections.unmodifiableMap(res);
     }
 
@@ -68,7 +68,8 @@ public class DBServizio extends DBBeans {
             s.setPianoPasto(r.getString("piano_pasto"));
             s.setBambino(r.getString("bambino"));
             OrarioUtente o= new OrarioUtente();
-            s.setOrarioUtente(r.getInt("orario_utente"));
+            o.setId(r.getInt("orario_utente"));
+            s.setOrarioUtente(o);
         }
         r.close();
         return s;
@@ -103,10 +104,22 @@ public class DBServizio extends DBBeans {
             s.setOrarioInizio(r.getString("orario_inizio"));
             s.setPianoPasto(r.getString("piano_pasto"));
             s.setBambino( r.getString("bambino"));
-            s.setOrarioUtente( r.getInt("orario_utente"));
-    }
+            OrarioUtente o= new OrarioUtente();
+            o.setId(r.getInt("orario_utente"));
+            s.setOrarioUtente(o);
+        }
         return s;
+    }
+    
+    protected Assegnazione[] creaAssegnazioni(Servizio bean) {
+        
+        
+        Assegnazione DBServizio_assegnazione = new Assegnazione("orario_utente",bean.getOrarioUtente().getId());
 
+        Assegnazione[] DBAssign = new Assegnazione[1];
+       
+        DBAssign[0]=DBServizio_assegnazione;
 
+        return DBAssign;
     }
 }

@@ -28,7 +28,7 @@ public class Servizio {
     /**
      * La variabile orarioUtente è nulla c'è bisogno di una lettura della classe OrarioUtente
      */
-    private int orarioUtente;
+    private OrarioUtente orarioUtente;
 
     /**
      * Costruttore vuoto
@@ -45,7 +45,7 @@ public class Servizio {
      * @param orarioUtente è settato dopo la lettura
      */
     public Servizio(int id, String orarioInizio, String orarioFine,
-            String pianoPasto, String bambino, int orarioUtente) {
+            String pianoPasto, String bambino, OrarioUtente orarioUtente) {
         super();
         this.id = id;
         this.orarioInizio = orarioInizio;
@@ -138,7 +138,7 @@ public class Servizio {
      * Metodo che prende il parametro letto dalla classe OrarioUtente
      * @return orarioUtente preso dalla lettura
      */
-    public int getOrarioUtente() {
+    public OrarioUtente getOrarioUtente() {
         return orarioUtente;
     }
 
@@ -146,7 +146,7 @@ public class Servizio {
      * Metodo che setta il parametro letto dalla classe orarioUtente
      * @param orarioUtente è settato dopo la lettura
      */
-    public void setOrarioUtente(int orarioUtente) {
+    public void setOrarioUtente(OrarioUtente orarioUtente) {
         this.orarioUtente = orarioUtente;
     }
 }
