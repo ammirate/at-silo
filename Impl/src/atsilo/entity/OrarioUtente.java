@@ -14,6 +14,7 @@ package atsilo.entity;
  * REVISION
  * Andrea Micco, 6/12/2012
  * Mariella Ferrara, 7/12/2012
+ * Andrea Micco, 17/12/2012
  *-----------------------------------------------------------------
  */
 
@@ -167,10 +168,25 @@ public class OrarioUtente {
    * Metodo che prende il parametro dataFine
    * @return dataFine il parametro inserito
    */
-  public String getdataFine() {
+  public String getDataFine() {
       return dataFine;
   }
   
+  /**
+   *  Metodo che setta il parametro dataFine
+   * @param dataFine il parametro fissato
+   */
+  public void setDataFine(String dataFine) {
+      this.dataFine = dataFine;
+  }
+  
+  /**
+   * Metodo che prende il parametro dataInizio
+   * @return dataInizio il parametro inserito
+   */
+  public String getDataInizio() {
+      return dataInizio;
+  }
   
   
   

@@ -41,7 +41,7 @@ public class RispostaQuestionario {
     }
     public RispostaQuestionario( String valore,int idDomanda, String CodFiscGenitore) {
         super();
-        this.id = id;
+
         this.valore = valore;
         this.idDomanda = idDomanda;
         this.CFgenitore = CodFiscGenitore;
