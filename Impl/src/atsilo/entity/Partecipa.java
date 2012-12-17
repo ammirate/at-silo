@@ -26,9 +26,8 @@ import java.sql.Date;
  */
 public class Partecipa {
     
-    private Date eventoData;
+    private int id;
     private Classe classe;
-    private String eventoNome;
     
     /**
      * 
@@ -37,25 +36,22 @@ public class Partecipa {
     }
     /**
      * Costruttore
-     * @param eventoData evento in cui si terrà l evento
+     * @param id id evento
      * @param classe classe interessata all'evento
-     * @param eventoNome nome dell' evento
      */
-    public Partecipa(Date eventoData, Classe classe,String eventoNome) {
+    public Partecipa(Classe classe,int id) {
         super();
-        this.eventoData=eventoData;
+        this.id=id;
         this.classe = classe;
-        this.eventoNome=eventoNome;
     }
 
-    public Date getEventoData() {
-        return eventoData;
+   
+    public int getId(){
+        return id;
     }
-
-    public void setEventoData(Date date) {
-        this.eventoData = date;
+    public void setId(int i){
+        this.id=i;
     }
-
     public Classe getClasse() {
         return classe;
     }
@@ -63,13 +59,7 @@ public class Partecipa {
     public void setClasse(Classe classe) {
         this.classe = classe;
     }
-    public String getEventoNome() {
-        return eventoNome;
-    }
-
-    public void setEventoNome(String nome) {
-        this.eventoNome = nome;
-    }
+   
     
     
     //Logger
