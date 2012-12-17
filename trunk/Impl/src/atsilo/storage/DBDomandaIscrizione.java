@@ -86,6 +86,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         res.put("condizioniCalcoloPunteggio", "condizioni_calcolo_punteggio");
         res.put("isee", "isee");
         res.put("stato_convalidazione", "stato_convalidazione");
+        res.put("vaccinazioni", "vaccinazioni");
+        res.put("malattieInfettive","malattie_infettive");
         
         
         
@@ -154,6 +156,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setStato_convalidazione(r.getString("stato_convalidazione"));
         temp.setStatoDomanda(r.getString("stato_domanda"));
         temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+        temp.setVaccinazioni(r.getString("vaccinazioni"));
+        temp.setMalattieInfettive(r.getString("malattie_infettive"));
         
         
         return temp;
@@ -219,6 +223,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setStato_convalidazione(r.getString("stato_convalidazione"));
         temp.setStatoDomanda(r.getString("stato_domanda"));
         temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+        temp.setVaccinazioni(r.getString("vaccinazioni"));
+        temp.setMalattieInfettive(r.getString("malattie_infettive"));
         }
         r.close();
         return temp;
@@ -282,6 +288,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            temp.setVaccinazioni(r.getString("vaccinazioni"));
+            temp.setMalattieInfettive(r.getString("malattie_infettive"));
             lista.add(temp);
             
         }
@@ -344,6 +352,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            temp.setVaccinazioni(r.getString("vaccinazioni"));
+            temp.setMalattieInfettive(r.getString("malattie_infettive"));
         }
         else{
             r.close();
@@ -474,6 +484,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setStato_convalidazione(r.getString("stato_convalidazione"));
             temp.setStatoDomanda(r.getString("stato_domanda"));
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            temp.setVaccinazioni(r.getString("vaccinazioni"));
+            temp.setMalattieInfettive(r.getString("malattie_infettive"));
             toReturn.add(temp);
         } 
         r.close();

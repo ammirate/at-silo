@@ -44,6 +44,8 @@ public class DomandaIscrizione implements Cloneable{
     private float isee;
     private String stato_convalidazione;
     private Genitore genitoreNonRichiedente;
+    private String vaccinazioni;
+    private String malattieInfettive;
     
     /**
      * La variabile genitore avrà il valore della variabile di Genitore
@@ -556,6 +558,22 @@ public class DomandaIscrizione implements Cloneable{
     }
     
 
+    public String getVaccinazioni() {
+        return vaccinazioni;
+    }
+
+    public void setVaccinazioni(String vaccinazioni) {
+        this.vaccinazioni = vaccinazioni;
+    }
+
+    public String getMalattieInfettive() {
+        return malattieInfettive;
+    }
+
+    public void setMalattieInfettive(String malattieInfettive) {
+        this.malattieInfettive = malattieInfettive;
+    }
+
     public Genitore getGenitoreNonRichiedente() {
         return genitoreNonRichiedente;
     }
@@ -596,6 +614,8 @@ public class DomandaIscrizione implements Cloneable{
         domanda.servizio = this.servizio;
         domanda.stato_convalidazione= this.stato_convalidazione;
         domanda.genitoreNonRichiedente=this.genitoreNonRichiedente;
+        domanda.vaccinazioni=this.vaccinazioni;
+        domanda.malattieInfettive=this.malattieInfettive;
         return domanda;
     }
     
