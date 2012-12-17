@@ -20,17 +20,13 @@ import java.util.List;
 
 public class Evento {
 
-    private String Descrizione;
-    private String Nome;
-    private List<String> CC;
+    private String descrizione;
+    private String nome;
+    private String CC;
     private Date data;
-    private String Tipo;
+    private String tipo;
     private String path;
     
-    /**
-     * @attribute Data di tipo DATE
-     */
-    private Date Data;
     
     /**
      * La variabile classi è nulla c'è bisogno di una lettura della classe "Classe"
@@ -54,22 +50,18 @@ public class Evento {
      * @param cC  il paramentro è fissato
      * @param data  il paramentro è fissato
      * @param tipo  il paramentro è fissato
-     * @param data2  il paramentro è fissato
-     * @param classi è settato dopo la lettura
      * @param organizzatore è settato dopo la lettura
      * @param path il parametro è fissato
      */
-    public Evento(String descrizione, String nome, List<String> cC, Date data,
-            String tipo, Date data2, List<Classe> classi,
+    public Evento(String descrizione, String nome, String cC, Date data,
+            String tipo,
             EventPlanner organizzatore, String path) {
         super();
-        Descrizione = descrizione;
-        Nome = nome;
-        CC = cC;
+        this.descrizione = descrizione;
+        this.nome = nome;
+        this.CC = cC;
         this.data = data;
-        Tipo = tipo;
-        Data = data2;
-        this.classi = classi;
+        this.tipo = tipo;
         this.organizzatore = organizzatore;
         this.path = path;
     }
@@ -78,8 +70,8 @@ public class Evento {
      * Metodo che setta il campo descrizione
      * @param Descrizione il parametro fissato
      */   
-    public void setDescrizione(String Descrizione) {
-        this.Descrizione = Descrizione;
+    public void setDescrizione(String descrizione) {
+        this.descrizione = descrizione;
     }
 
     /**
@@ -87,15 +79,15 @@ public class Evento {
      * @return Descrizione il parametro inserito
      */
     public String getDescrizione() {
-        return Descrizione;
+        return descrizione;
     }
 
     /**
      * Metodo che setta il campo nome
      * @param Nome il parametro fissato
      */   
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     /**
@@ -103,7 +95,7 @@ public class Evento {
      * @return Nome il parametro inserito
      */
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
     /**
@@ -119,25 +111,10 @@ public class Evento {
      * @return data il parametro inserito
      */
     public Date getData() {
-        return Data;
+        return data;
     }
 
-    /**
-     * Metodo che setta il parametro letto dalla classe Classe
-     * @param classi è settato dopo la lettura
-     */
-    public void setClassi(List<Classe> classi) {
-        this.classi = classi;
-    }
-
-    /**
-     * Metodo che prende il parametro letto dalla classe Classe
-     * @return classi preso dalla lettura
-     */
-    public List<Classe> getClassi() {
-        return classi;
-    }
-
+   
     /**
      * Metodo che setta il parametro letto dalla classe EventPlanner
      * @param organizzatore è settato dopo la lettura
@@ -154,28 +131,17 @@ public class Evento {
         return organizzatore;
     }
 
-    public void setCC(List<String> CC) {
+    public void setCC(String CC) {
         this.CC = CC;
     }
 
-    public List<String> getCC() {
-        return CC;
-    }
 
-    public void setData1(Date data) {
-        this.data = data;
-    }
-
-    public Date getData1() {
-        return data;
-    }
-
-    public void setTipo(String Tipo) {
-        this.Tipo = Tipo;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     public String getTipo() {
-        return Tipo;
+        return tipo;
     }
     
     public void setPath(String path) {

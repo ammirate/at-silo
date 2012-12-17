@@ -99,13 +99,13 @@ public class DBInsegna extends DBBeans<Insegna> {
      */    
     protected Insegna creaBean(ResultSet r) throws SQLException {
         Insegna i=new Insegna();
-        if (r.next()){
             EducatoreDidattico ed = new EducatoreDidattico();
             ed.setCodiceFiscale(r.getString("educatore_didattico"));
             Classe c = new Classe();
+            c.setId(r.getInt("classe"));
             i.setEducatoreDidattico(ed);
             i.setClasse(c);
-        }
+        
         return i;
     }
     
