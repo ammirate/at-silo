@@ -123,6 +123,7 @@
     <panel_attributes>Classe
 --
 -Id
+-Sezione
 bg=gray
 fg=red
 </panel_attributes>
@@ -925,7 +926,7 @@ puo ritirare</panel_attributes>
     <coordinates>
       <x>354</x>
       <y>582</y>
-      <w>40</w>
+      <w>36</w>
       <h>216</h>
     </coordinates>
     <panel_attributes>1</panel_attributes>
