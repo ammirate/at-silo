@@ -404,8 +404,8 @@ public class DBBambino extends DBBeans<Bambino> {
         List<Bambino>l=new ArrayList<Bambino>();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe="+AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
-            
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe= ?");
+            stmt.setString(1, AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
             ResultSet r = stmt.executeQuery();
             
             
@@ -457,8 +457,8 @@ public class DBBambino extends DBBeans<Bambino> {
         List<Bambino>l=new ArrayList<Bambino>();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe="+AtsiloConstants.ISCRIZIONE_CLASSE_DA_CONVALIDARE);
-            
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE classe IS NULL OR iscrizione_classe= ?");
+        stmt.setString(1, AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
             ResultSet r = stmt.executeQuery();
             
             
