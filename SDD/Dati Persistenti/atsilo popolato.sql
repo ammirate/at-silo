@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.2.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generato il: Dic 17, 2012 alle 20:27
--- Versione del server: 5.5.27-log
--- Versione PHP: 5.4.6
+-- Host: localhost
+-- Generato il: 17 dic, 2012 at 07:35 PM
+-- Versione MySQL: 5.1.44
+-- Versione PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -175,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `bambino` (
   `comune_domicilio` varchar(100) DEFAULT NULL,
   `provincia_domicilio` varchar(50) DEFAULT NULL,
   `cf_genitore_nonrichiedente` varchar(50) DEFAULT NULL,
-  `iscrizione_classe` enum('Assegnato','NonAssegnato','ClasseDaConvalidare') DEFAULT 'NonAssegnato',
+  `iscrizione_classe` enum('Consegnato','NonConsegnato','InAttesa') DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`),
@@ -187,15 +186,15 @@ CREATE TABLE IF NOT EXISTS `bambino` (
 --
 
 INSERT INTO `bambino` (`nome`, `cognome`, `codice_fiscale`, `data_di_nascita`, `indirizzo_residenza`, `categoria_appartenenza`, `genitore`, `classe`, `cittadinanza`, `comune_di_nascita`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cf_genitore_nonrichiedente`, `iscrizione_classe`) VALUES
-('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 4, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', NULL, 'NonAssegnato'),
-('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, 'NonAssegnato'),
-('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', NULL, 'NonAssegnato'),
-('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X, 69 - Vallo della Lucania (SA)', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', 'NonAssegnato'),
-('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', NULL, 'NonAssegnato'),
-('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL, 'NonAssegnato'),
-('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL, 'NonAssegnato'),
-('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'NonAssegnato'),
-('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'NonAssegnato');
+('Aurora', 'Chiavelli', 'CVLRRA12A23B333C', '2012-09-07', 'via Roma', 'Lattanti', 'CVLMRA69A23B333C', 4, 'Italiana', 'Salerno', '2', '84084', NULL, 'SA', 'via Roma', '2', '84084', 'Fisciano', 'SA', 'DCSGVN74A23B224X', 'Consegnato'),
+('Luca', 'Del Buono', 'DBNLCU11A23B222C', '2011-12-30', 'via degli Ulivi', 'Semisvezzati', 'DBNGPP69A23B222C', 1, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', 'VCCMRU84T19A222B', 'InAttesa'),
+('Maria', 'Del Buono', 'DBNMRA11A23B222C', '2010-11-17', 'via degli Ulivi, 16 - 00100 Roma', 'Svezzati', 'DBNGPP69A23B222C', 2, 'Italiana', 'Roma', '16', '00100', 'Roma', 'RM', 'via degli Ulivi', '16', '00100', 'Roma', 'RM', 'VCCMRU84T19A222B', 'InAttesa'),
+('Gennaro', 'De Fazio', 'DFZGNN12L14A909D', '2012-09-11', 'via delle X', 'Lattanti', 'DFZNDR91L14A909D', 2, 'Italiana', 'Salerno', '69', '84078', 'Vallo della Lucania', 'SA', 'via delle X', '69', '84084', 'Vallo della Lucania', 'SA', 'MRTLRU83A24T928B', 'Consegnato'),
+('Candida', 'Del Regno', 'DRGCND10A26B045C', '2010-11-01', 'via delle Y', 'Svezzati', 'DRGSNT81A26B045C', 3, 'Italiana', 'Avellino', '10', '83100', 'Avellino', 'AV', 'via delle Y', '10', '83100', 'Avellino', 'AV', 'CLLFDR88X11C999X', 'Consegnato'),
+('Luigi', 'Mascia', 'MSCLGU12A24T928B', '2012-10-16', 'piazza Risorgimento', 'Lattanti', 'VLLLRU83A24T928B', 2, 'Italiana', 'Benevento', '1', '82100', 'Benevento', 'BN', 'piazza Risorgimento', '1', '82100', 'Benevento', 'BN', NULL, 'Consegnato'),
+('Marco', 'Pilato', 'PLTMRC11A23B224X	', '2011-11-08', 'via Ferreria', 'Semisvezzati', 'DCSGVN74A23B224X', 3, 'Italiana', 'Salerno', '12', '84081', 'Baronissi', 'SA', 'via Ferreria', '12', '84081', 'Baronissi', 'SA', NULL, 'Consegnato'),
+('Matteo', 'Scalo', 'SCLMTT12L98A980I', '2012-01-31', 'piazza Malta', 'Semisvezzati', 'PSSSNN85L98A980I', 1, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'Consegnato'),
+('Annalisa', 'Scalo', 'SCLNNA11L98A980I', '2011-11-22', 'piazza Malta', 'Svezzati', 'PSSSNN85L98A980I', 3, 'Italiana', 'Salerno', '23', '84100', 'Salerno', 'SA', 'piazza Malta', '23', '84100', 'Salerno', 'SA', NULL, 'Consegnato');
 
 -- --------------------------------------------------------
 
@@ -270,6 +269,11 @@ CREATE TABLE IF NOT EXISTS `classe` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dump dei dati per la tabella `classe`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -282,6 +286,11 @@ CREATE TABLE IF NOT EXISTS `compila` (
   KEY `questionario` (`questionario`),
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `compila`
+--
+
 
 -- --------------------------------------------------------
 
@@ -296,6 +305,13 @@ CREATE TABLE IF NOT EXISTS `contestazione` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dump dei dati per la tabella `contestazione`
+--
+
+INSERT INTO `contestazione` (`id`, `data`, `descrizione`) VALUES
+(1, '2012-10-08', 'Contestazione X');
+
 -- --------------------------------------------------------
 
 --
@@ -303,7 +319,7 @@ CREATE TABLE IF NOT EXISTS `contestazione` (
 --
 
 CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nota_esclusione` varchar(200) DEFAULT NULL,
   `data_presentazione` date DEFAULT NULL,
   `punteggio` int(50) DEFAULT NULL,
@@ -334,22 +350,22 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
   KEY `servizio` (`servizio`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
 INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`, `vaccinazioni`, `malattie_infettive`) VALUES
-(1, NULL, '2012-07-19', NULL, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 5220, 'DomandaNonCompilata', NULL, NULL, NULL),
-(2, NULL, '2012-08-13', NULL, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, 'DomandaNonCompilata', NULL, NULL, NULL),
-(3, NULL, '2012-08-13', NULL, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 17122, NULL, NULL, NULL, NULL),
-(4, NULL, '2012-11-01', NULL, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 35323, 'DomandaNonCompilata', NULL, NULL, NULL),
-(5, NULL, '2012-06-12', NULL, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 43892, 'DomandaNonCompilata', NULL, NULL, NULL),
-(6, NULL, '2012-09-25', NULL, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 34523, 'DomandaNonCompilata', NULL, NULL, NULL),
-(7, NULL, '2012-08-01', NULL, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 23423, 'DomandaNonCompilata', NULL, NULL, NULL),
-(8, NULL, '2012-08-28', NULL, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaNonCompilata', NULL, NULL, NULL),
-(9, 'asd', '2012-08-28', 10, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, '', 72353, 'DomandaAccettata', NULL, NULL, NULL);
+(1, NULL, '2012-07-19', 99, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sdfdsds', 5220, 'DomandaNonCompilata', NULL, 'asfdasfads', 'sdCDFas'),
+(2, NULL, '2012-08-13', 97, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sTARS TRE', 17122, 'DomandaNonCompilata', NULL, 'sdafdsa', 'dsafwertew '),
+(3, NULL, '2012-08-13', 95, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'fae EWVF92', 17122, NULL, NULL, 'afv asdf', 'ewrewrew'),
+(4, NULL, '2012-11-01', 92, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, ' Seve ESSE sa', 35323, 'DomandaNonCompilata', NULL, 'asDSGHF', 'WERTYU'),
+(5, NULL, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'dfghjk', 43892, 'DomandaNonCompilata', NULL, 'sddfasfd', 'erewrnerte'),
+(6, NULL, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, 'aevmovejpivejmpi', 34523, 'DomandaNonCompilata', NULL, 'earveasb', 'tvosijf p'),
+(7, NULL, '2012-08-01', 84, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, 'facfeaafcse', 23423, 'DomandaNonCompilata', NULL, 'dsfa uiopas', 'dofiha '),
+(8, NULL, '2012-08-28', 73, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, 'eaEV', 72353, 'DomandaNonCompilata', NULL, 'dfap disj ', 'repij ar'),
+(9, 'asd', '2012-08-28', 10, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, '', 72353, 'DomandaAccettata', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -558,14 +574,16 @@ CREATE TABLE IF NOT EXISTS `genitore` (
 --
 
 INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`, `condizione_lavorativa`, `tipo_contratto`) VALUES
-('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano (SA)', 'via Roma', 'residenti_fisciano', 'ISCRITTO', 'Italiana', 'Fisciano', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Agenzia X', 'Nessun rapporto precedente', 'Residente del comune di Fisciano', 'Padre', 'Impiegato', '2013-12-21', 'X', 'Tempo indeterminato'),
-('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi, 16 - 00100 Roma', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0828123456', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia (NA)', 'via Ferreria, 12 - Baronissi (SA)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania (SA)', 'via delle X, 69 - Vallo della Lucania (SA)', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino (AV)', 'via delle Y, 10 - Avellino (AV)', 'altro', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento, 1 - Napoli', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-11', NULL, NULL),
-('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta, 23 - Salerno (SA)', 'personale_studenti', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL),
-('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento, 1 - Benevento (BN)', 'personale', 'ISCRITTO', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2013-12-21', NULL, NULL);
+('Federica', 'Cella', 'CLLFDR88X11C999X', '0823120345', 'fcella@y.it', '1988-12-28', 'Verona', 'via delle Y', NULL, NULL, 'Italiana', 'Avellino', '10', '83100', 'AV', 'Avellino', 'via delle Y', '10', '83100', 'AV', 'fsfsf', 'weè08u9arep', '4w3''985n043p ', 'Madre', 'sjoifd', '2012-12-13', 'ertyui', '30984n2'),
+('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano', 'via Roma', 'residenti_fisciano', 'ISCRITTO', 'Italiana', 'Fisciano', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Agenzia X', 'Nessun rapporto precedente', 'Residente del comune di Fisciano', 'Padre', 'Impiegato', '2013-12-21', 'X', 'Tempo indeterminato'),
+('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi', 'personale', 'ISCRITTO', 'Italiana', 'Roma', '16', '00100', 'RM', 'Roma', 'via degli Ulivi', '16', '00100', 'RM', 'asd', 'Gne gne gne', 'Bla bla bla.', 'Padre', 'EEEH!', '2013-12-21', ':3', 'X'),
+('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0899601239	', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia', 'via Roma', '', '', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'X', 'XYZ', 'ABCDE', 'Madre', 'BLABLABLA', '2013-12-26', 'Non lo so ', 'BUH!'),
+('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania', 'via delle X', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Vallo della Lucania', '69', '84084', 'SA', 'Vallo della Lucania', 'via delle X', '69', '84084', 'SA', 'A X', 'sojf dsiluhfd l', 'eouia LORHE TWPOIW ', 'Padre', 'sfdpio ', '2013-12-28', 'Mamama', 'LReoiuw'),
+('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino', 'via delle Y', 'altro', 'ISCRITTO', 'Italiana', 'Avellino', '10', '83100', 'AV', 'Avellino', 'via delle Y', '10', '83100', 'AV', 'P X A B', 'sepoifjsp', 'oiurabp ouhs òa', 'Padre', 'gu', '2013-12-21', 'asd', 'rotfl'),
+('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Napoli', '1', '07082', 'NA', 'Napoli', 'piazza Risorgimento', '1', '07802', 'NA', 'asi p', 'asd wpif yew', 'WTF?', 'Madre', 'bla bla', '2013-04-03', 'guuuu', 'XY'),
+('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Salerno', '23', '84100', 'SA', 'Salerno', 'piazza Malta', '23', '84100', 'SA', 'aepr im0', 'gne gne gne', 'asd bla X', 'Madre', 'safd', '2013-12-26', 'qp08wr7 ', 'soòigdjf lera'),
+('Maria', 'Vacca', 'VCCMRU84T19A222B', '0612345678', 'mvacca@X.it', '1984-12-12', 'Roma', 'via degli Ulivi', NULL, NULL, 'Italiana', 'Roma', '16', '00100', 'RM', 'Roma', 'via degli Ulivi', '16', '00100', 'RM', 'wi', 'sfis dfds', 'wpip enwsòf', 'Madre', 'soifnup', '2012-12-13', 'dsfadfs', 'qwe'),
+('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento', 'personale', 'ISCRITTO', 'Italiana', 'Benevento', '1', '82100', 'BN', 'Benevento', 'piazza Risorgimento', '1', '82100', 'BN', 'sdf', 'weèitu0narepw', 'esp0itua òoij', 'Madre', 'EAR0PT8UB', '2013-12-21', 'seròaijo ', 'FEDLOL');
 
 -- --------------------------------------------------------
 
@@ -639,8 +657,8 @@ CREATE TABLE IF NOT EXISTS `menu_mensa` (
 --
 
 INSERT INTO `menu_mensa` (`categoria_bambino`, `tipologia`, `primo_piatto`, `secondo_piatto`, `frutta`, `data`, `id`, `contorno`) VALUES
-('Svezzati', 'Carne', 'Pasta al ragù', 'Cotoletta di pollo', 'Banana', '2012-11-08', 1, NULL),
-('Svezzati', 'Pesce', 'Pasta al pomodoro', 'Bastoncini di merluzzo', 'Pera', '2012-11-22', 2, NULL);
+('Svezzati', 'Carne', 'Pasta al ragù', 'Cotoletta di pollo', 'Banana', '2012-11-08', 1, 'Patate'),
+('Svezzati', 'Pesce', 'Pasta al pomodoro', 'Bastoncini di merluzzo', 'Pera', '2012-11-22', 2, 'Pesci');
 
 -- --------------------------------------------------------
 
@@ -689,10 +707,10 @@ CREATE TABLE IF NOT EXISTS `orario_utente` (
 --
 
 INSERT INTO `orario_utente` (`id`, `data_inizio`, `data_fine`, `descrizione`, `nome`, `prezzo`, `ora_inizio`, `ora_fine`) VALUES
-(1, '2012-11-01', '2012-11-30', NULL, 'FULL-TIME', 300, '08:00', '16:00'),
-(2, '2012-09-17', '2012-09-30', NULL, 'PART-TIME mattutino', 150, '8.00', '13.00'),
-(3, '2012-12-04', '2013-12-24', NULL, 'Part time pomeridiano', 150, '13.00', '16.00'),
-(4, '2012-12-04', '2013-12-31', NULL, 'Part-time Mattina (con pranzo)', 170, '8.00', '14.00');
+(1, '2012-11-01', '2012-11-30', 'bla bla bla', 'FULL-TIME', 300, '08:00', '16:00'),
+(2, '2012-09-17', '2012-09-30', 'gne gne gne', 'PART-TIME mattutino', 150, '8.00', '13.00'),
+(3, '2012-12-04', '2013-12-24', 'lol lol lol', 'Part time pomeridiano', 150, '13.00', '16.00'),
+(4, '2012-12-04', '2013-12-31', 'X Y', 'Part-time Mattina (con pranzo)', 170, '8.00', '14.00');
 
 -- --------------------------------------------------------
 
@@ -758,11 +776,11 @@ CREATE TABLE IF NOT EXISTS `personale_asilo` (
 --
 
 INSERT INTO `personale_asilo` (`nome`, `cognome`, `codice_fiscale`, `categoria_appartenenza`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `richiesta_tirocinante`, `registro_tirocinante`) VALUES
-('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'impiegato_asilo', 'sbuselli@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Domenico', 'Crisi', 'CRSDMN64L12T019Y', 'responsabile_scientifico', 'dcrisi@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Veronica', 'Mars', 'MRSVRN90A32B235B', 'impiegato_bando', 'vmars@libero.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'Direttore', 'asenatore@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'delegato_rettore', 'dtranfa@yahoo.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'impiegato_asilo', 'sbuselli@yahoo.it', '1975-12-23', 'Caserta', '1234567678', 'via XY', '69', '56789', 'Caserta', 'CE', 'via XY', '69', '56789', 'Caserta', 'CE', 'Italiana', NULL, NULL),
+('Domenico', 'Crisi', 'CRSDMN64L12T019Y', 'responsabile_scientifico', 'dcrisi@yahoo.it', '1990-05-14', 'Salerno', '3456789012', 'via Lol', '1', '84100', 'Salerno', 'SA', 'via Lol', '1', '84100', 'Salerno', 'SA', 'Italiana', NULL, NULL),
+('Veronica', 'Mars', 'MRSVRN90A32B235B', 'impiegato_bando', 'vmars@libero.it', '1991-04-25', 'Benevento', '2345678901', 'via Via', '8', '82100', 'Benevento', 'BN', 'via Via', '8', '82100', 'Benevento', 'BN', 'Italiana', NULL, NULL),
+('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'Direttore', 'asenatore@yahoo.it', '1972-11-06', 'Avellino', '5678901234', 'via No', '29', '83100', 'Avellino', 'AV', 'via No', '29', '83100', 'Avellino', 'AV', 'Italiana', NULL, NULL),
+('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'delegato_rettore', 'dtranfa@yahoo.it', '1971-11-04', 'Napoli', '7890123456', 'piazza Garibaldi', '123', '07082', 'Napoli', 'NA', 'piazza Garibaldi', '123', '07082', 'Napoli', 'NA', 'Italiana', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -846,8 +864,8 @@ CREATE TABLE IF NOT EXISTS `psico_pedagogo` (
 --
 
 INSERT INTO `psico_pedagogo` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `numero_classi`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
-('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo, 3 - Fisciano (SA)', 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z, 3 - Salerno (SA)', 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Alfonso', 'D''Amelia', 'DMLLFN71L12A333B', '0899611333', 'adam@hotmail.it', '1971-11-13', 'Avellino (AV)', 'via Faraldo', 1, '3', '84084', 'Fisciano', 'SA', 'via Faraldo', '1', '84084', 'Fisciano', 'SA', 'Italiana'),
+('Maddalena', 'Verrone', 'VRRMDD64T32A048N', '0895818293', 'mverrone@alice.it', '1964-11-15', 'Salerno (SA)', 'via Z', 2, '3', '84100', 'Salerno', 'SA', 'via Z', '2', '84100', 'Salerno', 'SA', 'Italiana');
 
 -- --------------------------------------------------------
 
@@ -871,8 +889,8 @@ CREATE TABLE IF NOT EXISTS `questionario` (
 --
 
 INSERT INTO `questionario` (`id`, `flag_rinuncia`, `pathname`, `periodo_inizio`, `periodo_fine`, `nome`, `descrizione`) VALUES
-(1, NULL, NULL, '2012-12-06', '2012-12-20', 'Controllo qualità', 'QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI'),
-(2, NULL, NULL, '2012-11-01', '2012-12-18', 'Questionario X', 'Questionario relativo a X');
+(1, 'X', '.../Controllo qualità', '2012-12-06', '2012-12-20', 'Controllo qualità', 'QUESTIONARIO CONTROLLO QUALITA’ ASILO NIDO - GRADIMENTO DEI GENITORI'),
+(2, 'X', '.../Questionario X', '2012-11-01', '2012-12-18', 'Questionario X', 'Questionario relativo a X');
 
 -- --------------------------------------------------------
 
@@ -889,6 +907,15 @@ CREATE TABLE IF NOT EXISTS `registro` (
   KEY `classe` (`classe`),
   KEY `educatore_didattico` (`educatore_didattico`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `registro`
+--
+
+INSERT INTO `registro` (`id`, `anno`, `classe`, `educatore_didattico`) VALUES
+(1, '2012/2013', 1, 'SLLMRA90A29N830P	'),
+(2, '2012/2013', 2, 'SSSLRL78B19B908X	'),
+(3, '2012/2013', 3, 'TRSLNE99S30X203Y');
 
 -- --------------------------------------------------------
 
@@ -907,6 +934,14 @@ CREATE TABLE IF NOT EXISTS `registro_tirocinante` (
   KEY `attivita_tirocinante` (`attivita_tirocinante`),
   KEY `tirocinante` (`tirocinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `registro_tirocinante`
+--
+
+INSERT INTO `registro_tirocinante` (`id`, `descrizione`, `ore_totali`, `valutazione`, `attivita_tirocinante`, `tirocinante`) VALUES
+(1, 'Registro Tirocinante Davide Ciarmoli', '69', 'XY', 978786, 'CRMDVD90L12C888B'),
+(2, 'Registro Tirocinante Cristina Mezzano', '6543', 'AXY', 978786, 'MZZCRS91L44X098Y');
 
 -- --------------------------------------------------------
 
@@ -941,7 +976,7 @@ CREATE TABLE IF NOT EXISTS `responsabile_questionario` (
 --
 
 INSERT INTO `responsabile_questionario` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
-('Arturo', 'De Santis', 'DSTRTR58L32A333B', 'ads@live.it', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Arturo', 'De Santis', 'DSTRTR58L32A333B', 'ads@live.it', '1987-06-29', 'Salerno', '6789012345', 'via X', '69', '84100', 'Salerno', 'SA', 'Via X', '69 ', '84100', 'Salerno', 'SA', 'Italiana');
 
 -- --------------------------------------------------------
 
@@ -976,7 +1011,7 @@ CREATE TABLE IF NOT EXISTS `responsabile_tirocini` (
 --
 
 INSERT INTO `responsabile_tirocini` (`nome`, `cognome`, `codice_fiscale`, `email`, `data_di_nascita`, `comune_di_nascita`, `telefono`, `indirizzo_residenza`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`) VALUES
-('Giovanni', 'De Blasi', 'DBSGVN66B12C761W', 'deblasi@unisa.it', '1966-02-12', 'Caserta', '0823445590', 'via De Gasperi', '12', '81100', 'Caserta', 'CE', NULL, NULL, NULL, NULL, NULL, 'i');
+('Giovanni', 'De Blasi', 'DBSGVN66B12C761W', 'deblasi@unisa.it', '1966-02-12', 'Caserta', '0823445590', 'via De Gasperi', '12', '81100', 'Caserta', 'CE', 'via De Gasperi', '12', '81100', 'Caserta', 'CE', 'Italiana');
 
 -- --------------------------------------------------------
 
@@ -1003,12 +1038,12 @@ CREATE TABLE IF NOT EXISTS `retta` (
 
 INSERT INTO `retta` (`importoDovuto`, `id`, `genitore`, `descrizioneTassa`, `descrizioneRata`, `data`, `importoPagato`, `nome`) VALUES
 (150, 1, 'CVLMRA69A23B333C', 'Ottobre2012', 'MENSILE', '2012-10-10', 300, 'Fiorenzo Assi'),
-(630, 2, 'DBNGPP69A23B222C', '', '', '2013-12-21', 0, ''),
-(325, 3, 'DCSGVN74A23B224X', '', '', '2013-12-21', 0, ''),
-(250, 4, 'DFZNDR91L14A909D', '', '', '2013-12-21', 0, ''),
-(130, 5, 'DRGSNT81A26B045C', '', '', '2013-12-21', 0, ''),
-(469, 6, 'PSSSNN85L98A980I', '', '', '2013-12-21', 0, ''),
-(790, 7, 'VLLLRU83A24T928B', '', '', '2013-12-21', 0, '');
+(630, 2, 'DBNGPP69A23B222C', 'Ottobre2012', 'MENSILE', '2013-12-21', 888, 'A B'),
+(325, 3, 'DCSGVN74A23B224X', 'Ottobre2012', 'MENSILE', '2013-12-21', 346, 'C D'),
+(250, 4, 'DFZNDR91L14A909D', 'Ottobre2012', 'MENSILE', '2013-12-21', 222, 'E F'),
+(130, 5, 'DRGSNT81A26B045C', 'Ottobre2012', 'MENSILE', '2013-12-21', 253, 'G H'),
+(469, 6, 'PSSSNN85L98A980I', 'Ottobre2012', 'MENSILE', '2013-12-21', 330, 'I J'),
+(790, 7, 'VLLLRU83A24T928B', 'Ottobre2012', 'MENSILE', '2013-12-21', 120, 'K L');
 
 -- --------------------------------------------------------
 
@@ -1181,8 +1216,8 @@ CREATE TABLE IF NOT EXISTS `tirocinante` (
 --
 
 INSERT INTO `tirocinante` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `titolo_di_studi`, `ore_totali`, `ore_lavoro`, `personale_asilo`, `stato`, `matricola`, `giudizio_finale`, `numero_civico_residenza`, `cap_residenza`, `comune_residenza`, `provincia_residenza`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `comune_domicilio`, `provincia_domicilio`, `cittadinanza`, `tutor_esterno`, `disponibilita`, `contestazione`) VALUES
-('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio, Benevento', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno (NA)', 'Via XYZ, Ischia (NA)', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+('Davide', 'Ciarmoli', 'CRMDVD90L12C888B', '0283039103', 'dciarmoli@yahoo.it', '1990-01-02', 'Benevento', 'Via XXIV Maggio', 'Laureanda in Scienze della Formazione Primaria', 300, 125, 'SNTNTN53N69B309D', 'Boh', '0512111111', 'fpiosp fs', '13', '82100', 'Benevento', 'BN', 'via XXIV Maggio', '13', '82100', 'Benevento', 'BN', 'Italiana', 'Roberta De Vita', 'XY', 1),
+('Cristina', 'Mezzano', 'MZZCRS91L44X098Y', '0123456789', 'cmezz@live.it', '1991-12-11', 'Lacco Ameno', 'Via XYZ', 'Laureanda in Scienze della Formazione Primaria', 300, 150, 'BSLSVN62L12B099E', 'Boh', '6301818118', 'sdoifpnasfòhs ', '12', '84184', 'Lacco Ameno', 'NA', 'Via XYZ', '12', '84184', 'Lacco Ameno', 'NA', 'Italiana', 'Vacca Augusta', 'NO!', NULL);
 
 --
 -- Limiti per le tabelle scaricate
@@ -1247,7 +1282,3 @@ ALTER TABLE `schedulazione`
 --
 ALTER TABLE `tirocinante`
   ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
