@@ -1,12 +1,12 @@
 <%
 //sessione gia' dichiarata nell'header
 //la variabile homepage sarà il riferimento al tasto home dell'header
-sessione.setAttribute("homepage", "index_delegato.jsp");
+sessione.setAttribute("homepage", "index_delegato_rettore.jsp");
 %>
 <%
 //controllo se questa tipologia utente ha accesso alle pagine in cui e' inclusa questa sidebar
 if (!tipologia.equals("delegato_rettore") )
-		response.sendRedirect("index_delegato.jsp");
+		response.sendRedirect("index_delegato_rettore.jsp");
 %>
 
 <table class="colonnasx" width="100%" cellspacing="0" cellpadding="0" border="0">
