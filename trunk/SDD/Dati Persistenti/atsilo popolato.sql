@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `bambino` (
   `comune_domicilio` varchar(100) DEFAULT NULL,
   `provincia_domicilio` varchar(50) DEFAULT NULL,
   `cf_genitore_nonrichiedente` varchar(50) DEFAULT NULL,
-  `iscrizione_classe` enum('Consegnato','NonConsegnato','InAttesa') DEFAULT NULL,
+  `iscrizione_classe` enum('Assegnato','NonAssegnato','ClasseDaConvalidare') DEFAULT 'NonAssegnato',
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`),
@@ -1150,9 +1150,11 @@ CREATE TABLE IF NOT EXISTS `servizio` (
   `orario_inizio` varchar(50) DEFAULT NULL,
   `orario_fine` varchar(50) DEFAULT NULL,
   `piano_pasto` varchar(50) DEFAULT NULL,
+  `bambino` varchar(50) DEFAULT NULL,
   `orario_utente` int(11) DEFAULT NULL,
   `id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
+  KEY `bambino` (`bambino`),
   KEY `orario_utente` (`orario_utente`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1160,16 +1162,16 @@ CREATE TABLE IF NOT EXISTS `servizio` (
 -- Dump dei dati per la tabella `servizio`
 --
 
-INSERT INTO `servizio` (`orario_inizio`, `orario_fine`, `piano_pasto`, `orario_utente`, `id`) VALUES
-('9.00', '18.00', 'Sì', 1, 1),
-('9.00', '13.00', 'No', 1, 2),
-('9.00', '18.00', 'No', 1, 3),
-('9.00', '18.00', 'No', 1, 4),
-('9.00', '12.00', 'No', 2, 5),
-('9.00', '15.00', 'Sì', 2, 6),
-('12.00', '18.00', 'Sì', 1, 7),
-('12.00', '18.00', 'Sì', 1, 8),
-('11.00', '16.00', 'Sì', 1, 9);
+INSERT INTO `servizio` (`orario_inizio`, `orario_fine`, `piano_pasto`, `bambino`, `orario_utente`, `id`) VALUES
+('9.00', '18.00', 'Sì', 'CVLRRA12A23B333C', 1, 1),
+('9.00', '13.00', 'No', 'DFZGNN12L14A909D', 1, 2),
+('9.00', '18.00', 'No', 'SCLNNA11L98A980I', 1, 3),
+('9.00', '18.00', 'No', 'SCLMTT12L98A980I', 1, 4),
+('9.00', '12.00', 'No', 'DRGCND10A26B045C', 2, 5),
+('9.00', '15.00', 'Sì', 'MSCLGU12A24T928B', 2, 6),
+('12.00', '18.00', 'Sì', 'DBNLCU11A23B222C', 1, 7),
+('12.00', '18.00', 'Sì', 'DBNMRA11A23B222C', 1, 8),
+('11.00', '16.00', 'Sì', 'PLTMRC11A23B224X ', 1, 9);
 
 -- --------------------------------------------------------
 
