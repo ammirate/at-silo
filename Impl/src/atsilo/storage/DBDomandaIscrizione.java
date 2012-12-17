@@ -550,6 +550,128 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         return toReturn;
     }
     
+    public List<DomandaIscrizione> ricercaDomandeConPunteggioInIntervalloDiConsegna(String inizio, String fine) throws SQLException {
+        ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
+
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE stato_convalidazione=?");
+        stmt.setString(1, AtsiloConstants.STATO_DOMANDA_SECONDO_STEP);
+        ResultSet r= stmt.executeQuery();
+        String[] ggmmaa_inizio = inizio.split("-");
+        String[] ggmmaa_fine = fine.split("-");
+        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0]),
+                Integer.parseInt(ggmmaa_inizio[1]),
+                Integer.parseInt( ggmmaa_inizio[2]));
+        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+       while (r.next()){
+            DomandaIscrizione temp=new DomandaIscrizione();
+            Bambino b=new Bambino();
+            Genitore g=new Genitore();
+            Genitore gnr = new Genitore(); 
+            Servizio s=new Servizio();
+            String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+            String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+            int se=r.getInt("servizio");s.setId(se);
+            String genonric=r.getString("cf_genitore_non_richiedente");
+            gnr.setCodiceFiscale(genonric);
+            
+            temp.setId(r.getInt("id"));
+            temp.setNotaEsclusione(r.getString("nota_esclusione"));
+            temp.setPosizione(r.getInt("posizione"));
+            temp.setPunteggio(r.getInt("punteggio"));
+            temp.setDataPresentazione(r.getDate("data_presentazione"));
+            temp.setBambino(b);
+            temp.setGenitore(g);
+            temp.setGenitoreNonRichiedente(gnr);
+            temp.setServizio(s);
+            temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+            temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+            temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+            temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+            temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+            temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+            temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+            temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+            temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+            temp.setGenitoreSeparato(r.getBoolean("genitore_separato"));
+            temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
+            temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
+            temp.setIsee(r.getFloat("isee"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStatoDomanda(r.getString("stato_domanda"));
+            temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            temp.setVaccinazioni(r.getString("vaccinazioni"));
+            temp.setMalattieInfettive(r.getString("malattie_infettive"));
+            if(temp.getDataPresentazione().after(data_inizio) && temp.getDataPresentazione().before(data_fine))
+            {
+                toReturn.add(temp);
+            }
+        } 
+        r.close();
+        return toReturn;
+    }
+    
+    public List<DomandaIscrizione> ricercaDomandeEscluseInIntervalloDiConsegna(String inizio, String fine) throws SQLException {
+        ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
+
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE stato_convalidazione=?");
+        stmt.setString(1, AtsiloConstants.STATO_DOMANDA_RIFIUTATA);
+        ResultSet r= stmt.executeQuery();
+        String[] ggmmaa_inizio = inizio.split("-");
+        String[] ggmmaa_fine = fine.split("-");
+        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0]),
+                Integer.parseInt(ggmmaa_inizio[1]),
+                Integer.parseInt( ggmmaa_inizio[2]));
+        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+       while (r.next()){
+            DomandaIscrizione temp=new DomandaIscrizione();
+            Bambino b=new Bambino();
+            Genitore g=new Genitore();
+            Genitore gnr = new Genitore(); 
+            Servizio s=new Servizio();
+            String ge=r.getString("genitore");g.setCodiceFiscale(ge);
+            String ba=r.getString("bambino");b.setCodiceFiscale(ba);
+            int se=r.getInt("servizio");s.setId(se);
+            String genonric=r.getString("cf_genitore_non_richiedente");
+            gnr.setCodiceFiscale(genonric);
+            
+            temp.setId(r.getInt("id"));
+            temp.setNotaEsclusione(r.getString("nota_esclusione"));
+            temp.setPosizione(r.getInt("posizione"));
+            temp.setPunteggio(r.getInt("punteggio"));
+            temp.setDataPresentazione(r.getDate("data_presentazione"));
+            temp.setBambino(b);
+            temp.setGenitore(g);
+            temp.setGenitoreNonRichiedente(gnr);
+            temp.setServizio(s);
+            temp.setAffidoEsclusivo(r.getBoolean("affido_esclusivo"));
+            temp.setAltriComponentiDisabili(r.getBoolean("altri_componenti_disabili"));
+            temp.setBambinoDisabile(r.getBoolean("bambino_disabile"));
+            temp.setCertificatoMalattie(r.getString("certificato_malattie"));
+            temp.setCertificatoPrivacy(r.getString("certificato_privacy"));
+            temp.setCondizioniCalcoloPunteggio(r.getString("condizioni_calcolo_punteggio"));
+            temp.setFiglioNonRiconosciuto(r.getBoolean("figlio_non_riconosciuto"));
+            temp.setGenitoreInvalido(r.getBoolean("genitore_invalido"));
+            temp.setGenitoreNubile(r.getBoolean("genitore_nubile"));
+            temp.setGenitoreSeparato(r.getBoolean("genitore_separato"));
+            temp.setGenitoreSolo(r.getBoolean("genitore_solo"));
+            temp.setGenitoreVedovo(r.getBoolean("genitore_vedovo"));
+            temp.setIsee(r.getFloat("isee"));
+            temp.setStato_convalidazione(r.getString("stato_convalidazione"));
+            temp.setStatoDomanda(r.getString("stato_domanda"));
+            temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
+            temp.setVaccinazioni(r.getString("vaccinazioni"));
+            temp.setMalattieInfettive(r.getString("malattie_infettive"));
+            if(temp.getDataPresentazione().after(data_inizio) && temp.getDataPresentazione().before(data_fine))
+            {
+                toReturn.add(temp);
+            }
+        } 
+        r.close();
+        return toReturn;
+    }
+    
     protected Assegnazione[] creaAssegnazioni(DomandaIscrizione bean) {
        
         Assegnazione DBDomandaIscrizione_assegnazione = new Assegnazione("servizio",bean.getServizio().getId());
