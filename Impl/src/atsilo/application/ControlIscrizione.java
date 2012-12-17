@@ -20,6 +20,7 @@ import atsilo.entity.Assenza;
 import atsilo.entity.Bambino;
 import atsilo.entity.DomandaIscrizione;
 import atsilo.entity.Genitore;
+import atsilo.entity.OrarioUtente;
 import atsilo.entity.Questionario;
 import atsilo.entity.Servizio;
 import atsilo.entity.Utente;
@@ -29,9 +30,12 @@ import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
 import atsilo.exception.InserimentoDatiException;
+import atsilo.exception.ServizioException;
 import atsilo.exception.UtenteException;
 import atsilo.storage.DBBambino;
 import atsilo.storage.DBDomandaIscrizione;
+import atsilo.storage.DBOrarioUtente;
+import atsilo.storage.DBServizio;
 import atsilo.storage.Database;
 import atsilo.stub.application.StubAccount;
 import atsilo.stub.application.StubBambino;
@@ -59,7 +63,6 @@ import atsilo.util.AtsiloConstants;
 public class ControlIscrizione {
     
     private static final ControlIscrizione ISTANCE = new ControlIscrizione();
-    private static final Logger LOG = Logger.getLogger("global");
     
     
     /**
@@ -70,32 +73,28 @@ public class ControlIscrizione {
      * @throws DomandaIscrizioneException
      * @throws SQLException 
      */
-    public boolean updateDatiDomandaIscrizionePrimoStep(
-            String cf_bambino, 
-            boolean bambinoDisabile, boolean genitoreInvalido, boolean genitoreSolo,
-            boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato,
+    public boolean updateDatiDomandaIscrizionePrimoStep(String cf_bambino, boolean bambinoDisabile, boolean genitoreInvalido,
+            boolean genitoreSolo, boolean genitoreVedovo, boolean genitoreNubile, boolean genitoreSeparato, 
             boolean figlioNonRiconosciuto, boolean affidoEsclusivo, boolean altriComponentiDisabili,
-             String altre condizioni punteggio, float isee) throws DomandaIscrizioneException, DBConnectionException, SQLException{
+            String condizioniCalcoloPunteggio, float isee) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         
         Database db = new Database();
-        DBDomandaIscrizione stub = new DBDomandaIscrizione(db);       
-        
-        DomandaIscrizione domanda = stub.ricercaDomandaDaId(iD);
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db); 
+
+        DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cf_bambino);
         if(domanda == null)
         {
             java.util.Date d = new java.util.Date();
             java.sql.Date oggi = new java.sql.Date(d.getTime());
             
-            domanda = new DomandaIscrizione(oggi, punteggio,
-                    posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni,
-                    certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
+            domanda = new DomandaIscrizione(oggi, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, 
                     genitoreNubile, genitoreSeparato, figlioNonRiconosciuto,affidoEsclusivo, altriComponentiDisabili,
-                    condizioniCalcoloPunteggio, isee, servizio, stato_convalidazione);
+                    condizioniCalcoloPunteggio, isee);
             if(!db.apriConnessione())
                 throw new DBConnectionException("Connessione al DB fallita");
             try{
                 
-                if(!stub.inserisci(domanda))
+                if(!bdDomandaIscrizione.inserisci(domanda))
                     throw new DomandaIscrizioneException("Inserimento fallito");
             }
             finally{
@@ -105,22 +104,6 @@ public class ControlIscrizione {
         else
         {
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
-            if(punteggio != -1)
-                domandaModificata.setPunteggio(punteggio);
-            if(posizione != -1)
-                domandaModificata.setPosizione(posizione);
-            if(genitore != null)
-                domandaModificata.setGenitore(genitore);
-            if(bambino != null)
-                domandaModificata.setBambino(bambino);
-            if(statoDomanda != null)
-                domandaModificata.setStatoDomanda(statoDomanda);
-            if(certificatoMalattie != null)
-                domandaModificata.setCertificatoMalattie(certificatoMalattie);
-            if(certificatoVaccinazioni != null)
-                domandaModificata.setCertificatoVaccinazioni(certificatoVaccinazioni);
-            if(certificatoPrivacy != null)
-                domandaModificata.setCertificatoPrivacy(certificatoPrivacy);
             if(bambinoDisabile == true)
                 domandaModificata.setBambinoDisabile(bambinoDisabile);
             if(genitoreInvalido == true)
@@ -143,15 +126,12 @@ public class ControlIscrizione {
                 domandaModificata.setCondizioniCalcoloPunteggio(condizioniCalcoloPunteggio);
             if(isee != -1)
                 domandaModificata.setIsee(isee);
-            if(servizio != null)
-                domandaModificata.setServizio(servizio);
-            if(stato_convalidazione != null)
-                domandaModificata.setStato_convalidazione(stato_convalidazione);
+
             
             if(!db.apriConnessione())
                 throw new DBConnectionException("Connessione al DB fallita");
             try{                
-                if(!stub.replace(domanda, domandaModificata))
+                if(!bdDomandaIscrizione.replace(domanda, domandaModificata))
                     throw new DomandaIscrizioneException("Modifica fallita");
             }
             finally{
@@ -178,13 +158,13 @@ public class ControlIscrizione {
      */
     public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException, BambinoException{
         Database db = new Database();        
-        DBDomandaIscrizione stub = new DBDomandaIscrizione(db);
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         
-      //controllo sul codice fiscale che deve essere a 16 cifre
+        //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscaleBambino.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");    
         
-        DomandaIscrizione d = stub.ricercaDomandaDaBambino(codiceFiscaleBambino);
+        DomandaIscrizione d = bdDomandaIscrizione.ricercaDomandaDaBambino(codiceFiscaleBambino);
         if(d == null)
             throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
         
@@ -300,7 +280,7 @@ public class ControlIscrizione {
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            if(!stub.replace(d, domandaModificata))
+            if(bdDomandaIscrizione.replace(d, domandaModificata))
                 throw new DomandaIscrizioneException("Modifica fallita");         
         }
         finally{
@@ -320,10 +300,10 @@ public class ControlIscrizione {
      */
     public String getValoreStatoIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException, SQLException {
         Database db = new Database();        
-        DBDomandaIscrizione stub = new DBDomandaIscrizione(db);
+        DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
         String stato = null;
 
-        DomandaIscrizione d = stub.ricercaDomandaDaId(id);
+        DomandaIscrizione d = dbDomandaIscrizione.ricercaDomandaDaId(id);
         if(d == null)
             throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
         
@@ -339,79 +319,6 @@ public class ControlIscrizione {
     }
     
     
-    /**
-     * crea un account, verificando che non ce ne sia giù uno esistente con il codice fiscale inserito
-     * @param codice fiscale, username, dati generici dell'utente
-     * @return valore booleano
-     * @throws DBConnectionException 
-     * @throws UtenteException
-     * @throws AccountException
-     * @throws InserimentoDatiException 
-     
-    public Boolean Inserisci(String username, Date dataNascita, String nome, String cognome,
-            String codiceFiscale, String email, String comuneNascita,
-            String telefono, String cittadinanza, String indirizzoResidenza,
-            String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
-            String provinciaResidenza, String indirizzoDomicilio,
-            String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio) throws AccountException, DBConnectionException, UtenteException, InserimentoDatiException{
-        Database db = new Database();
-        StubAccount stub = new StubAccount(db); 
-        StubUtente stub2 = new StubUtente(db);
-        
-        //controllo sul codice fiscale che deve essere a 16 cifre
-        if(codiceFiscale.length() != 16)
-            throw new InserimentoDatiException("Il codice fiscale non è valido");
-        
-        //controllo sulla mail
-        Pattern p = Pattern.compile(".+@.+\\.[a-z]+");
-        Matcher m = p.matcher(email);
-        boolean matchFound = m.matches();
-        if (!matchFound)
-            throw new InserimentoDatiException("La mail inserita non è valida");
-        
-        //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
-        if(capDomicilio.length() != 5)
-            throw new InserimentoDatiException("Il cap del domicilio non è valido");
-        if(capResidenza.length() != 5)
-            throw new InserimentoDatiException("Il cap della residenza non è valido");
-        
- 
-        if(stub2.ricercaUtente(codiceFiscale) != null)
-            throw new AccountException("L'utente esite già");
-        //Generazione della password
-        Random generatore = new Random(8);
-        int password = generatore.nextInt(10000001) + 99999999;
-        //Converesione in stringa della password
-        String psw = "" + password;
-        
-        //Credo che in questa prima fase vengano messi tutti i dati relativi all'entità utente 
-        Utente utente = new Utente(dataNascita, nome, cognome, codiceFiscale, email,
-                comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, 
-                comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio,
-                comuneDomicilio, provinciaDomicilio);
-        
-        Account account = new Account(username, psw, utente);
-        
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            if(!stub2.inserisci(utente))
-                throw new UtenteException("Inserimento fallito");
-            if(!stub.inserisci(account))
-                throw new AccountException("Inserimento fallito");
-            //Decidere un messaggio di notifica
-            //Messaggio mess = NotificaMail(Utente, "iscrizione", "Registrazione andata a buon fine")
-            //if(!inviaMail(mess))
-              //  throw new AccountException("Invio mail fallito");
-        }
-        finally{
-            db.chiudiConnessione();
-        }
-        return true;
-    }*/
-    
-    
     
     /**@todo questo sarebbe il secondo step della domanda di iscrizione
      * Il metodo non serve per inviare la domanda di iscriizone ma per inserire i dati della domanda
@@ -419,12 +326,47 @@ public class ControlIscrizione {
      * @return 
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
+     * @throws InserimentoDatiException 
+     * @throws SQLException 
+     * @throws ServizioException 
      */
-    //ATTENDO di sapere queli parametri mi verranno passati
-    public boolean inserisciDatiDomandaIscrizioneFinale(String codice_fiscale_bambino, String statoDomanda,String certificatoMalattie, String certificatoVaccinazioni, String idOrario) throws DomandaIscrizioneException, DBConnectionException{
-        //controlli che i dati siano corretti
-        //TODO no certificati ma proprio i campi
-        return true;
+    public boolean inserisciDatiDomandaIscrizioneFinale(String cf_bambino, String statoDomanda,
+            String malattieInfettive, String vaccinazioni, String idOrario) throws DomandaIscrizioneException, DBConnectionException, InserimentoDatiException, SQLException, ServizioException{
+
+      Database db = new Database();
+      DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
+      DBOrarioUtente dbOrarioUtente = new DBOrarioUtente(db);
+      DBServizio dbServizio = new DBServizio(db);
+      
+      // controllo sul codice fiscale che deve essere a 16 cifre
+      if (cf_bambino.length() != 16)
+          throw new InserimentoDatiException("Il codice fiscale non è valido");
+      
+      if (!db.apriConnessione())
+          throw new DBConnectionException("Connessione al DB fallita");
+      try {
+          
+          DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cf_bambino);
+          if (domanda == null)
+              throw new DomandaIscrizioneException("Domanda non trovata");
+          DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
+          
+          // vengono modificati i campi passati come parametri
+          if (malattieInfettive != null)
+              domandaModificata.setMalattieInfettive(malattieInfettive);
+          if (vaccinazioni != null)
+              domandaModificata.setVaccinazioni(vaccinazioni);
+          
+          int idorario = Integer.parseInt(idOrario);
+          OrarioUtente orario = dbOrarioUtente.ricercaOrarioUtenteDaId(idorario);
+          Servizio servizio = new Servizio(cf_bambino, orario);      
+          
+          if (!dbServizio.inserisci(servizio))
+              throw new ServizioException("Modifica fallita");
+          return true;
+      } finally {
+          db.chiudiConnessione();
+      }
     }
     
     /**@todo completa iscrizione finale
@@ -434,42 +376,40 @@ public class ControlIscrizione {
      *            del certificato di iscrizione e valori booleani dei
      *            certificati da inserire
      * @return valore booleano
+     * @throws DomandaIscrizioneException 
      * @throws DBConnectionException
      * @throws BambinoException
      * @throws InserimentoDatiException
+     * @throws SQLException 
      * @throws DomandaIScrizioneException
      */
-    public boolean completaIscrizione(String cf_bambino, String username_account){
+    public boolean aggiornaCertificati(String cfBambino, String certificato_privacy, String certificato_vaccinazioni, 
+            String certificato_malattie) throws DomandaIscrizioneException, InserimentoDatiException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
-        StubBambino stub2 = new StubBambino(db);
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         
         // controllo sul codice fiscale che deve essere a 16 cifre
-        if (cf_bambino.length() != 16)
+        if (cfBambino.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");
         
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try {
-            Bambino b = stub2.ricercaBambino(cf);
-            if (b == null)
-                throw new BambinoException("Bambino non trovato");
-            int id = stub.ricercaDomandaDaBambino(b);
-            DomandaIscrizione domandaIscrizioneDaModificare = stub
-                    .ricercaDomandaPerId(id);
-            if (domandaIscrizioneDaModificare == null)
+            
+            DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cfBambino);
+            if (domanda == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
+            DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
             
             // vengono modificati i campi interessati ai certificati
-            if (vaccinazioni != null)
-                domandaIscrizione.setCertificatoVaccinazioni(vaccinazioni);
-            if (malattie != null)
-                domandaIscrizione.setCertificatoMalattie(malattie);
-            if (privacy != null)
-                domandaIscrizione.setCertificatoPrivacy(privacy);
+            if (certificato_vaccinazioni != null)
+                domandaModificata.setCertificatoVaccinazioni(certificato_vaccinazioni);
+            if (certificato_malattie != null)
+                domandaModificata.setCertificatoMalattie(certificato_malattie);
+            if (certificato_privacy != null)
+                domandaModificata.setCertificatoPrivacy(certificato_privacy);
             
-            if (!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
+            if (!bdDomandaIscrizione.replace(domanda, domandaModificata))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
         } finally {
@@ -478,36 +418,43 @@ public class ControlIscrizione {
     }
     
     /**
-     * @todo prende i tre certificati e li inserisce
+     * @todo prende i tre certificati e li inserisce 
      * 
      * @param id
      *            della domanda di iscrizione
      * @return valore booleano
      * @throws DBConnectionException
      * @throws DomandaIscrizioneException
+     * @throws SQLException 
      */
     public boolean convalidaIscrizione(int id)
-            throws DomandaIscrizioneException, DBConnectionException {
+            throws DomandaIscrizioneException, DBConnectionException, SQLException {
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try {
-            DomandaIscrizione domandaIscrizioneDaModificare = stub
-                    .ricercaDomandaPerId(id);
-            if (domandaIscrizioneDaModificare == null)
-                throw new DomandaIscrizioneException("Domanda non trovata");
-            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
-            // Supponendo che ci sia un campo convalida in domanda iscrizione
-            // domanaIsczizione.setConvalida(true);
-            if (!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
-                throw new DomandaIscrizioneException("Modifica fallita");
-            return true;
+            DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaId(id);
+            if (domanda == null)
+                throw new DomandaIscrizioneException("Domanda non trovata");           
+            
+            if( (domanda.getCertificatoMalattie() != AtsiloConstants.CERTIFICATO_IN_ATTESA) &&
+            (domanda.getCertificatoVaccinazioni() != AtsiloConstants.CERTIFICATO_IN_ATTESA) &&
+            (domanda.getCertificatoPrivacy() != AtsiloConstants.CERTIFICATO_IN_ATTESA) )
+            {
+                DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
+                domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
+                return true;
+            }
+            else return false;
         } finally {
             db.chiudiConnessione();
         }
     }
+    
+    
+    
     /**
      * @todo copiato dal controlDatiPersonali, modificare
      * Restituisce domanda iscrizione fatta da genitore con username=username
@@ -530,51 +477,27 @@ public class ControlIscrizione {
      * @throws DomandaIscrizioneException
      * @throws DBConnectionException
      * @throws InserimentoDatiException
+     * @throws SQLException 
      */
-    public DomandaIscrizione getDomandaIscrizione(String cfBambino) {
+    public DomandaIscrizione getDomandaIscrizione(String cfBambino) throws InserimentoDatiException, DBConnectionException, DomandaIscrizioneException, SQLException {
         Database db = new Database();
         DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
-        DomandaIscrizione domandaIscrizione = null;
-        ControlDatiPersonali cdp= ControlDatiPersonali.getIstance();
-        db.apriConnessione();
         
-        if (cfBambino == null) {
-            List<DomandaIscrizione> a;
-            try {
-                //metodo getGenitoreFromUsername presente in ControlDatiPersonali
-                a = dbDomandaIscrizione
-                        .ricercaDomandaDaGenitore(cdp.getGenitoreFromUsername(
-                                username).getCodiceFiscale());
-                if (a.size() > 0)
-                    domandaIscrizione = a.get(1);
-            } catch (SQLException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-                return null;
-            } catch (GenitoreException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (DBConnectionException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (InserimentoDatiException e) {
-                // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            }
+        //controllo sul codice fiscale che deve essere a 16 cifre
+        if(cfBambino.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido"); 
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            DomandaIscrizione domanda = dbDomandaIscrizione.ricercaDomandaDaBambino(cfBambino);
+            if (domanda == null)
+                throw new DomandaIscrizioneException("Domanda non trovata");           
             
+            return domanda;
+        } finally {
+            db.chiudiConnessione();
         }
-        /*
-         * else{ List<DomandaIscrizione> a =
-         * dbDomandaIscrizione.ricercaDomandaDaBambino
-         * (getDatiBambino(cfBambino)); if (a.size()>0) domandaIscrizione=
-         * a.get(1);//restituisce la domanda fatta dal genitore
-         * 
-         * }
-         */
-        
-        
-        db.chiudiConnessione();
-        return domandaIscrizione;
     }
     
   
@@ -585,15 +508,16 @@ public class ControlIscrizione {
      * @return Domanda di iscrizione da visualizzare
      * @throws DBConnectionException 
      * @throws DomandaIscrizioneException
-     
-    public DomandaIscrizione getDomandaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException{
+     * @throws SQLException 
+     */
+    public DomandaIscrizione getDomandaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{            
-            DomandaIscrizione di = stub.ricercaDomandaPerId(id);
+            DomandaIscrizione di = bdDomandaIscrizione.ricercaDomandaDaId(id);
             if(di == null)
                 throw new DomandaIscrizioneException("Domanda di iscrizione non trovato");
             return di;
@@ -601,12 +525,12 @@ public class ControlIscrizione {
         finally{
             db.chiudiConnessione();
         }
-    }*/
+    }
     
   
     
     
-    
+    //Dato che ora la vonvalida è una stringa, devo sapere se questo metodo serve ancora
     /**
      * @todo da modificare, copiato da controlDatiPersonali, manco questo ho capito a cosa serve 
      * Ricerca le domande in attesa di convalida
@@ -618,12 +542,12 @@ public class ControlIscrizione {
     public List<DomandaIscrizione> getDomandeIscrizioneNonConvalidate()
             throws DomandaIscrizioneException, DBConnectionException {
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
         
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try {
-            List<DomandaIscrizione> b = stub.ricercaDomandeInAttesa();
+            List<DomandaIscrizione> b = dbDomandaIscrizione.ricercaDomandeInAttesa();
             if (b.isEmpty())
                 throw new DomandaIscrizioneException("Lista vuota");
             return b;
@@ -648,18 +572,17 @@ public class ControlIscrizione {
     public Boolean rinunciaIscrizione(int id) throws DomandaIscrizioneException,
     DBConnectionException {
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
+        DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
         
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try {
-            DomandaIscrizione domandaIscrizioneDaModificare = stub
-                    .ricercaDomandaPerId(id);
-            if (domandaIscrizioneDaModificare == null)
+            DomandaIscrizione domanda = dbDomandaIscrizione.ricercaDomandaDaId(id);
+            if (domanda == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
+            DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
             // domanaIsczizione.setConvalida(false);
-            if (!stub.replace(domandaIscrizioneDaModificare, domandaIscrizione))
+            if (!stub.replace(domanda, domandaModificata))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
         } finally {
@@ -677,16 +600,15 @@ public class ControlIscrizione {
      */
     public DomandaIscrizione eliminaDomandaIscrizione(int id) throws DomandaIscrizioneException, DBConnectionException, SQLException{
         Database db = new Database();
-        StubDomandaIscrizione stub = new StubDomandaIscrizione(db);
-        //DBDomandaIscrizione di = new DBDomandaIscrizione(db);
+        DBDomandaIscrizione dbDomandaIscrizione = new DBDomandaIscrizione(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            DomandaIscrizione domandaIscrizione = stub.ricercaDomandaPerId(id);
+            DomandaIscrizione domandaIscrizione = dbDomandaIscrizione.ricercaDomandaDaId(id);
             if(domandaIscrizione == null)
                 throw new DomandaIscrizioneException("Domanda di iscrizione inesistente");
-            Boolean toReturn = stub.delete(domandaIscrizione);
+            Boolean toReturn = dbDomandaIscrizione.delete(domandaIscrizione);
             if(!toReturn)
                 throw new DomandaIscrizioneException("Cancellazione domanda di iscrizione fallita");
             return domandaIscrizione;
@@ -695,6 +617,7 @@ public class ControlIscrizione {
             db.chiudiConnessione();
         } 
     }
+    
     
     
     /**
