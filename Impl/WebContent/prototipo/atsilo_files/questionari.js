@@ -2,22 +2,20 @@ var arrInput = new Array(0);
   var arrInputValue = new Array(0);
 v=1;
 n=0;
+c=0;
 function addInput(id) {
   //arrInput.push(createInput(arrInput.length));
   //arrInput.push(arrInput.length);
   arrInputValue.push(arrInputValue.length);
   display(id);
+  c++;
 }
 
 function display(id , n) {
-//  document.getElementById('parah').innerHTML="";
- // for (intI=0;intI<arrInput.length;intI++) {
-	
-//	document.getElementById(id).innerHTML+="<tr><td> Opzione <td> <input type=text name=opzione"+v+"[]>";
+	frm = document.forms[0]
 	tbl = document.getElementById(id);
 	row = tbl.insertRow(-1);
 	row.innerHTML = "<td> Opzione <td> <input type=text name=opzione"+n+"[]>";
-  //}
 }
 function addDomanda() {
 	  //arrInput.push(createInput(arrInput.length));
@@ -32,7 +30,7 @@ function addDomanda() {
 	  		"		<option value=1>Selezione Multipla</option>" +
 	  		"		<option value=2>Selezione Unica</option>" +
 	  		"		<option value=3>Risposta Aperta</option>" +
-	  		"		</Select><input type=button value='Aggiungi Campo' onclick=\"display('"+nome+"', "+v+" );\"></fieldset><br><br>";
+	  		"		</Select><input type=button disabled = disabled value='Aggiungi Campo' onclick=\"display('"+nome+"', "+v+" );\"></fieldset><br><br>";
 	  frm.appendChild(div);
 	  document.getElementById("domanda_header" + v).innerHTML=str;
 	  v++;
@@ -42,6 +40,27 @@ function setv(i) {
 	v=i;
 }
 
+function abilitaAdd(value, name, b) {
+	frm = document.forms[0];
+	for(var i = 0; i<frm.length; i++) {
+		d = frm[i].id;
+		s = "addCampo" + b;
+		if(d == s && value!=3)
+		{
+			document.getElementById(d).removeAttribute("disabled");
+			break;
+		}
+		if(value==3 && d==s) {
+			if((tbl.rows.length-1)>1){
+				for(j = 0; j<tbl.rows.length; j++) {
+					tbl.deleteRow(-1);
+				}
+				document.getElementById(d).setAttribute("disabled", "disabled");
+			}
+			else document.getElementById(d).setAttribute("disabled", "disabled");
+		}
+	}
+}
 	
 
 
