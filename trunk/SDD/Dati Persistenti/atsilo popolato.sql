@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generato il: 17 dic, 2012 at 10:27 PM
--- Versione MySQL: 5.1.44
--- Versione PHP: 5.3.1
+-- Host: 127.0.0.1
+-- Generato il: Dic 17, 2012 alle 23:40
+-- Versione del server: 5.5.27-log
+-- Versione PHP: 5.4.6
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -289,11 +290,6 @@ CREATE TABLE IF NOT EXISTS `compila` (
   KEY `genitore` (`genitore`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dump dei dati per la tabella `compila`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -344,7 +340,7 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `altri_componenti_disabili` tinyint(1) DEFAULT NULL,
   `condizioni_calcolo_punteggio` text,
   `isee` float DEFAULT NULL,
-  `stato_convalidazione` enum('DomandaNonCompilata','DomandaInviataInAttesaDiGraduatoria','DomandaRifiutata','IscrizioneConfermataInAttesaDiAltriDati','DomandaNonInviata','DomandaAccettata') DEFAULT 'DomandaNonCompilata',
+  `stato_convalidazione` enum('DomandaNonCompilata','DomandaInviataInAttesaDiGraduatoria','DomandaRifiutata','IscrizioneConfermataInAttesaDiAltriDati','DomandaNonInviata','DomandaAccettata','AttesaPresentazioneDocumenti') DEFAULT 'DomandaNonCompilata',
   `cf_genitore_non_richiedente` varchar(16) DEFAULT NULL,
   `vaccinazioni` varchar(300) DEFAULT NULL,
   `malattie_infettive` varchar(300) DEFAULT NULL,
@@ -360,7 +356,7 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
 
 INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`, `vaccinazioni`, `malattie_infettive`) VALUES
 (1, NULL, '2012-07-19', 99, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sdfdsds', 5220, 'DomandaNonCompilata', NULL, 'asfdasfads', 'sdCDFas'),
-(2, NULL, '2012-08-13', 97, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sTARS TRE', 17122, 'DomandaNonCompilata', NULL, 'sdafdsa', 'dsafwertew '),
+(2, NULL, '2012-08-13', 97, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'DomandaAccettata', 'Consegnato', 'NonConsegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sTARS TRE', 17122, 'AttesaPresentazioneDocumenti', NULL, 'sdafdsa', 'dsafwertew '),
 (3, NULL, '2012-08-13', 95, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'fae EWVF92', 17122, NULL, NULL, 'afv asdf', 'ewrewrew'),
 (4, NULL, '2012-11-01', 92, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, ' Seve ESSE sa', 35323, 'DomandaNonCompilata', NULL, 'asDSGHF', 'WERTYU'),
 (5, NULL, '2012-06-12', 90, 5, 'DRGSNT81A26B045C', 5, 'DRGCND10A26B045C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'dfghjk', 43892, 'DomandaNonCompilata', NULL, 'sddfasfd', 'erewrnerte'),
@@ -1291,3 +1287,7 @@ ALTER TABLE `schedulazione`
 --
 ALTER TABLE `tirocinante`
   ADD CONSTRAINT `tirocinante_ibfk_1` FOREIGN KEY (`contestazione`) REFERENCES `contestazione` (`id`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
