@@ -15,7 +15,7 @@
 	</tbody>
 </table>
 <%@
-include file="atsilo_files/sidebar_delegato.jsp"%>
+include file="atsilo_files/sidebar_impiegato.jsp"%>
 <img width="209" border="0" alt="" height="1"
 	src="atsilo_images/clearpixel.gif">
 </td>
