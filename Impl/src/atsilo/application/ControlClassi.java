@@ -118,7 +118,29 @@ public class ControlClassi {
         }
     }
     
-    
+    /**
+     * Seleziona dal database tutti i bambini che hanno la classe da convalidare da parte del delegato del rettore
+     * @return lista di bambini da convalidare
+     * @throws DBConnectionException 
+     * @throws BambinoException
+     * @throws SQLException
+     */
+    public List<Bambino> bambiniConClasseDaConvalidare() throws DBConnectionException, SQLException, BambinoException{
+        Database db = new Database();
+        DBBambino stub = new DBBambino(db);
+        
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            List<Bambino> b = stub.ricercaBambiniConClasseDaConvalidare();
+            /*if(b.isEmpty())
+                throw new BambinoException("Lista vuota");*/
+            return b;
+        }
+        finally{
+            db.chiudiConnessione();
+        }
+    }
     
     /**
      * inserisce una nuova classe 
