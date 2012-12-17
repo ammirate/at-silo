@@ -57,7 +57,7 @@ public class DBEvento extends DBBeans <Evento> {
      * @return lista string
      */
     private static List<String> creaChiave() {
-        List<String> res=  Arrays.asList("evento_nome","evento_data");
+        List<String> res=  Arrays.asList("id");
         
         return Collections.unmodifiableList(res);
     }
@@ -85,7 +85,8 @@ public class DBEvento extends DBBeans <Evento> {
         res.put("path","path");
         res.put("tipo","tipo");
         res.put("CC","cc");
-        
+        res.put("id","id");
+
         return Collections.unmodifiableMap(res);
     }
     
@@ -102,6 +103,7 @@ public class DBEvento extends DBBeans <Evento> {
         a.setNome(r.getString("nome"));
         a.setPath(r.getString("path"));
         a.setTipo(r.getString("tipo"));
+        a.setId(r.getInt("id"));
         
         
         Utente u=new Utente();
@@ -127,16 +129,16 @@ public class DBEvento extends DBBeans <Evento> {
     }
     /**
      * Dato un evento restituisce il suo organizzatore
-     * @param e evento di cui ricercare l eventPlanner
+     * @param e id dell'evento di cui ricercare l eventPlanner
      * @return Utente o null
      * @throws SQLException Potrebbe lanciarla nell'esecuzione della query
      */
-    public Utente ricercaEventPlannerEvento(Evento e) throws SQLException{
+    public Utente ricercaEventPlannerEvento(int e) throws SQLException{
         Utente u = new Utente();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nome = ? ");
-        tabella.setParam(stmt, 1, "nome", e.getNome());
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ? ");
+        tabella.setParam(stmt, 1, "id", e);
         
         ResultSet r = stmt.executeQuery();
         
@@ -162,20 +164,19 @@ public class DBEvento extends DBBeans <Evento> {
         return u;
     }
     /**
-     * Dato la chiave di un evento restituisce un evento
-     * @param nome nome dell'evento
+     * Dato l'id di un evento restituisce un evento
+     * @param id id dell'evento
      * @return Evento o null
      * @throws SQLException Potrebbe verificarsi nell'esecuzione della query
      */
-    public Evento ricercaEventoPerChiave(String nome) throws SQLException{
+    public Evento ricercaEventoPerChiave(int id) throws SQLException{
         Evento a = new Evento();
         
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nome = ? ");
-        tabella.setParam(stmt, 1, "nome", nome);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ? ");
+        tabella.setParam(stmt, 1, "id", id);
         
-        System.out.println("Query : = "+stmt.toString());
         
         ResultSet r = stmt.executeQuery();
         
@@ -186,6 +187,7 @@ public class DBEvento extends DBBeans <Evento> {
             a.setNome(r.getString("nome"));
             a.setPath(r.getString("path"));
             a.setTipo(r.getString("tipo"));
+            a.setId(r.getInt("id"));
             
             
             Utente u=new Utente();
@@ -240,7 +242,7 @@ public class DBEvento extends DBBeans <Evento> {
             a.setNome(r.getString("nome"));
             a.setPath(r.getString("path"));
             a.setTipo(r.getString("tipo"));
-            
+            a.setId(r.getInt("id"));
             
             Utente u=new Utente();
             

@@ -50,7 +50,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
      * @return lista string
      */
     private static List<String> creaChiave() {
-        List<String> res=  Arrays.asList("-evento_nome","-evento_data","-classe");
+        List<String> res=  Arrays.asList("-id","-classe");
         
         return Collections.unmodifiableList(res);
     }
@@ -63,9 +63,9 @@ public class DBPartecipa extends DBBeans<Partecipa> {
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
         
-        res.put("-eventoNome", "evento_nome");
-        res.put("classe", "classe");
-        res.put("-eventoData","evento_data");
+        res.put("-id", "id");
+        res.put("-classe", "classe");
+      
         
         return Collections.unmodifiableMap(res);
     }
@@ -88,9 +88,9 @@ public class DBPartecipa extends DBBeans<Partecipa> {
         Partecipa p=new Partecipa();
             Classe c = new Classe();
             c.setId(r.getInt("classe"));
-            p.setEventoNome(r.getString("evento_nome"));
-            p.setEventoData(r.getDate("evento_data"));
             p.setClasse(c);
+
+            p.setId(r.getInt("id"));
         return p;
     }
     
@@ -109,31 +109,29 @@ public class DBPartecipa extends DBBeans<Partecipa> {
      * @return Array di assegnazioni
      */
     protected Assegnazione[] creaAssegnazioni(Partecipa bean) {
-        Assegnazione DBPartecipa_assegnazione = new Assegnazione("evento_nome",bean.getEventoNome());
-        Assegnazione DBPartecipa_assegnazione1 = new Assegnazione("evento_data",bean.getEventoData());
+        Assegnazione DBPartecipa_assegnazione = new Assegnazione("id",bean.getId());
         Assegnazione DBPartecipa_assegnazione2 = new Assegnazione("classe",bean.getClasse().getId());
 
         
-        Assegnazione[] DBAssign = new Assegnazione[3];
+        Assegnazione[] DBAssign = new Assegnazione[2];
         DBAssign[0] = DBPartecipa_assegnazione;
-        DBAssign[1] = DBPartecipa_assegnazione1;
         DBAssign[2] = DBPartecipa_assegnazione2; 
         
         return DBAssign;
     }
     
 /**
- * Dato il nome di un evento da in output la lista degli id
+ * Dato l'id di un evento da in output la lista degli id
  * delle classi partecipanti all'evento
- * @param nome nome dell'evento 
+ * @param id id dell'evento 
  * @return lista di integer
  * @throws SQLException
  */
-    public List<Integer> getClassiPerEvento (String nome) throws SQLException{
+    public List<Integer> getClassiPerEvento (int id) throws SQLException{
         List<Integer> l = new ArrayList<Integer>();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE evento_nome = ?");
-        tabella.setParam(stmt, 1, "evento_nome", nome);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
+        tabella.setParam(stmt, 1, "id", id);
         ResultSet res = stmt.executeQuery();
         while(res.next())
             l.add(res.getInt("classe"));

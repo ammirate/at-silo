@@ -20,7 +20,9 @@ import java.util.List;
 
 
 public class Evento {
-
+    
+    private int id;
+    
     private String descrizione;
     private String nome;
     private String CC;
@@ -54,7 +56,7 @@ public class Evento {
      * @param organizzatore è settato dopo la lettura
      * @param path il parametro è fissato
      */
-    public Evento(String descrizione, String nome, String cC, Date data,
+    public Evento(int id,String descrizione, String nome, String cC, Date data,
             String tipo,
             Utente organizzatore, String path) {
         super();
@@ -65,6 +67,20 @@ public class Evento {
         this.tipo = tipo;
         this.organizzatore = organizzatore;
         this.path = path;
+        this.id=id;
+    }
+    /**
+     * @return id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id nuovo id
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
