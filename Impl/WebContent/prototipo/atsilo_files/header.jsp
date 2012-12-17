@@ -103,6 +103,10 @@ else if (temp_nome_chiamante.equals("index_delegato.jsp"))
 	out.println("<title>Area Delegato Rettore</title>");
 else if (temp_nome_chiamante.equals("convalida_classe_bambino.jsp"))
 	out.println("<title>Convalida Classe</title>");	
+else if (temp_nome_chiamante.equals("invia_domanda_confermata.jsp"))
+	out.println("<title>Invia Conferma</title>");	
+else if (temp_nome_chiamante.equals("lista_domanda_confermata.jsp"))
+	out.println("<title>Lista Domande</title>");	
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />

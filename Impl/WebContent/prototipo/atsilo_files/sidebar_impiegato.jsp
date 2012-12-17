@@ -52,6 +52,9 @@ if (!tipologia.equals("impiegato_asilo") )
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_iscritto.jsp">Cancella </a></td>
 </tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_domanda_confermata.jsp">Convalida Iscrizione </a></td>
+</tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
