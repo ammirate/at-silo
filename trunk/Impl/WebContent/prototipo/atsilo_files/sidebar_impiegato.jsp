@@ -108,6 +108,14 @@ if (!tipologia.equals("impiegato_asilo") )
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="approva_richieste.jsp">Approva Richieste</a></td>
 </tr>
 </tbody></table>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Gradutorie</b></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="graduatoria_ammessi.jsp">Graduatoria Amessi</a></td>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="graduatoria_rifiutati.jsp">Graduatoria Rifiutati</a></td>
+</tr>
+</tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Classi</b></td>

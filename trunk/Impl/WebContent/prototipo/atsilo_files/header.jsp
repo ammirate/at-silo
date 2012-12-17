@@ -106,7 +106,11 @@ else if (temp_nome_chiamante.equals("convalida_classe_bambino.jsp"))
 else if (temp_nome_chiamante.equals("invia_domanda_confermata.jsp"))
 	out.println("<title>Invia Conferma</title>");	
 else if (temp_nome_chiamante.equals("lista_domanda_confermata.jsp"))
-	out.println("<title>Lista Domande</title>");	
+	out.println("<title>Lista Domande</title>");
+else if (temp_nome_chiamante.equals("graduatoria_ammessi.jsp"))
+	out.println("<title>Graduatoria Ammessi</title>");	
+else if (temp_nome_chiamante.equals("graduatoria_rifiutati.jsp"))
+	out.println("<title>Graduatoria Rifiutati</title>");	
 %>
 <!-- Contents -->
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
