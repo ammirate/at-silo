@@ -134,6 +134,10 @@ public class Evento {
     public void setCC(String CC) {
         this.CC = CC;
     }
+    
+    public String getCC() {
+        return CC;
+    }
 
 
     public void setTipo(String tipo) {
