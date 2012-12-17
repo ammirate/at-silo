@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 17, 2012 alle 21:31
+-- Generato il: Dic 17, 2012 alle 21:43
 -- Versione del server: 5.5.27-log
 -- Versione PHP: 5.4.6
 
@@ -437,6 +437,7 @@ INSERT INTO `educatore_didattico` (`nome`, `cognome`, `codice_fiscale`, `titolo_
 --
 
 CREATE TABLE IF NOT EXISTS `evento` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL DEFAULT '',
   `data` date NOT NULL DEFAULT '2013-12-21',
   `descrizione` varchar(100) DEFAULT NULL,
@@ -446,19 +447,19 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `path` varchar(256) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
   `cc` varchar(1000) DEFAULT NULL,
-  PRIMARY KEY (`nome`,`data`),
+  PRIMARY KEY (`id`),
   KEY `personale_asilo` (`personale_asilo`),
   KEY `psico_pedagogo` (`psico_pedagogo`),
   KEY `educatore_didattico` (`educatore_didattico`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dump dei dati per la tabella `evento`
 --
 
-INSERT INTO `evento` (`nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`, `cc`) VALUES
-('Gita X', '2012-11-21', 'Gita a X', NULL, 'SSSLRL78B19B908X', NULL, '.../Programma Gita X', 'Viaggio d''istruzione', NULL),
-('Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, '.../Programma Recita Y', 'Rappresentazione teatrale', NULL);
+INSERT INTO `evento` (`id`, `nome`, `data`, `descrizione`, `personale_asilo`, `psico_pedagogo`, `educatore_didattico`, `path`, `tipo`, `cc`) VALUES
+(1, 'Gita X', '2012-11-21', 'Gita a X', NULL, 'SSSLRL78B19B908X', NULL, '.../Programma Gita X', 'Viaggio d''istruzione', NULL),
+(2, 'Recita Y', '2012-11-30', 'Recita su Y', NULL, 'VRRMDD64T32A048N', NULL, '.../Programma Recita Y', 'Rappresentazione teatrale', NULL);
 
 -- --------------------------------------------------------
 
