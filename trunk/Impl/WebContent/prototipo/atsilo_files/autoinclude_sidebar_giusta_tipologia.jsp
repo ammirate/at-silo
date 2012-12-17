@@ -24,4 +24,6 @@
 
 <% } else if ( tipologia.equals("genitore")) { %>
    <%@include file="sidebar_genitore.jsp"%>
+<% } else if ( tipologia.equals("delegato_rettore")) { %>
+   <%@include file="sidebar_delegato.jsp"%>
    <% } %>
