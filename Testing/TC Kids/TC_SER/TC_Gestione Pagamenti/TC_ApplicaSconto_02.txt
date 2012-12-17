@@ -1,0 +1,81 @@
+﻿TC_ApplicaSconto_02
+
+1. Nome del Test Case
+Test Case TCApplicaSConto_02
+
+2. Test Case Specification Identifier
+	Caso d'uso da testare
+	UC_SER_3.7 – Applica sconto
+Version date
+12/12/12 
+Version number
+	v. 1.0 
+	Version author
+	Francesco Durante
+
+3. Elementi testati
+4. Il test riguarderà la componente Pagamenti, in particolare la funzionalità di applicare lo sconto per un bambino.
+Riferimenti
+	Specifica dei requisiti
+
+5. Input 
+Data
+Campo
+Valore
+Categoria
+Descrizione sconto
+“”
+Non Corretta
+Percentuale sconto
+“5%”
+Corretta
+Da applicare fino al
+“21/12/2012” 
+Corretta
+Tables - 
+Human Action
+L'utente visita la pagina di applica sconto e seleziona il bambino
+Condition 
+States
+Initial: Connessione dati attiva
+Intermediate: Connessione dati attiva
+Final: Connessione dati attiva
+Files
+Database: 
+Control files:  
+Transaction files: 
+Relationship
+Timing
+
+6. Output
+Tables - 
+Human Action
+7. I parametri inseriti non rispettano la specifica degli input quindi l'operazione non va a buon fine ed il sistema risponde con un messaggio di errore.
+Condition 
+States
+Initial: 
+Intermediate: 
+Final: 
+Files
+Database: 
+Control files:  
+Transaction files: 
+Relationship
+Timing
+Response Time
+Duration
+
+8. Test frame 
+	Descrizione sconto: stringa non corretta
+	Percentuale di sconto: stringa corretta
+	Da applicare fino al: stringa corretta
+	
+9. Vincoli ambientali
+Connessione dati attiva
+
+10. Requisiti procedurali speciali
+Non ci sono particolari procedure speciali.
+
+11. Dipendenze da altri Test Case
+Non ci sono particolari dipendenze con altri casi di test.
+
