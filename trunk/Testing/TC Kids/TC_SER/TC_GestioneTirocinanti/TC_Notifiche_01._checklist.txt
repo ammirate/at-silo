@@ -1,2 +1,4 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+
+Il sistema consente di inviare più volte la stessa richiesta di convocazione agli stessi tirocinanti

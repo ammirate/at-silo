@@ -5,6 +5,5 @@ CITTA' DI NASCITA
 TITOLO DI STUDIO
 non sono presenti nell'UC
 
-Il sistema , sebbene i dati inseriti siano corretti, lancia l'eccezione:
-	java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+Il sistema salva il tirocinante nonostante il parametro sia errato (data odierna)
 

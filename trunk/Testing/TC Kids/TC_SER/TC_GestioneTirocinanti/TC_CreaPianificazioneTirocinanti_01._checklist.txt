@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+La pianificazione Tirocinante non è altro che la visualizzazione delle attività del tirocinante, funzionalità già testate

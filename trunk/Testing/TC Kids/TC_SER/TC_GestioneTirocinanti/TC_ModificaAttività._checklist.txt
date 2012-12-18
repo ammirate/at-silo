@@ -1,0 +1,6 @@
+TC_ModificaAttività (UC_1.14)
+
+Fatto [x]
+Eventuali anomalie rilevate:
+Errore: http://192.168.56.101:8080/kids/ModifyTraineeActivity su modifica di orario e modifica data
+il nome dell'attività può essere salvata senza nome, dovrebbe dare errore
