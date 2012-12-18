@@ -34,13 +34,28 @@
 <table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
-    <td><select id="rapportoParentela" name="rapportoParentela"  readonly="readonly">
-      <option value="null" selected="selected">Seleziona</option>
-    <option value="Padre">Padre</option>
-    <option value="Madre">Madre</option>
-    <option value="Tutore">Tutore</option>
-    <option value="Affidatario">Affidatario</option>
-  </select></td>
+    <td><select id="rapportoParentela" name="rapportoParentela">
+				   <%
+				     out.append("<option value='null' selected>Seleziona</option>");
+							  if (rapportoParentela.equals("Padre"))
+						        out.append("<option value='Padre' selected>Padre</option>");
+							  else
+								  out.append("<option value='Padre' >Padre</option>");
+							  if (rapportoParentela.equals("Madre"))
+							        out.print("<option value='Madre' selected>Madre</option>");
+							  else
+								  out.append("<option value='Madre' >Madre</option>");
+							  if (rapportoParentela.equals("Tutore"))
+								  out.append("<option value='Tutore' selected>Tutore</option>");
+							  else
+								  out.append("<option value='Tutore' >Tutore</option>");
+							  if (rapportoParentela.equals("Affidatario"))
+								  out.append("<option value='Affidatario' selected>Affidatario</option>");
+							  else
+								  out.append("<option value='Affidatario' >Affidatario</option>");
+		
+				   %>
+				</select></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
