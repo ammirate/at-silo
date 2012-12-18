@@ -85,7 +85,18 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                 <!-- Se tutti i dati sono stati compilati correttamente e non &egrave; scaduto il bando, il tasto PRESENTA DOMANDA ISCRIZIONE sarà abilitato, altrimenti sarà disabled-->
              <tr>
             <td >
-            	<input type="submit" value="Invio Domanda Iscrizione"  >
+            <%
+            	if(ControlGestioneBando.getIstance().bandoAperto())
+            	{
+            		out.print("<input type='submit' value='Invio Domanda Iscrizione'>");
+            	}
+            	else
+            	{
+            		out.print("<em>Bando non aperto</em>");
+
+            	}
+            %>
+            	
            </td>
             
             </tr>

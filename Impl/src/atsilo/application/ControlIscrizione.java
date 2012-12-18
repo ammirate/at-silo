@@ -26,6 +26,7 @@ import atsilo.entity.Servizio;
 import atsilo.entity.Utente;
 import atsilo.exception.AccountException;
 import atsilo.exception.BambinoException;
+import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
@@ -158,13 +159,18 @@ public class ControlIscrizione {
      * @throws SQLException 
      * @throws DomandaIscrizioneException 
      * @throws BambinoException 
+     * @throws BandoException 
      */
-    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException, BambinoException{
+    public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException, BambinoException, BandoException{
         Database db = new Database();
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         
+        if(!ControlGestioneBando.getIstance().bandoAperto())
+        {
+            throw new BandoException("Bando non aperto");
+        }
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscaleBambino.length() != 16)
             throw new InserimentoDatiException("Il codice fiscale non è valido");    
@@ -197,16 +203,16 @@ public class ControlIscrizione {
             (richiedente.getComuneDomicilio() == null) ||
             (richiedente.getProvinciaDomicilio() == null) ||*/
             (richiedente.getTipo() == null) ||
-            (richiedente.getDipendentePresso() == null) ||
+            /*(richiedente.getDipendentePresso() == null) ||
             (richiedente.getRapportiAteneoSalerno() == null) ||
-            (richiedente.getRapportiComuneFisciano() == null) ||
+            (richiedente.getRapportiComuneFisciano() == null) ||*/
             (richiedente.getStatusLavorativo() == null) ||
             //(richiedente.getScadenzaContratto() == null) ||
-            (richiedente.getCategoriaAppartenenza() == null) ||
-            (richiedente.getRapportoParentela() == null) ||
+            //(richiedente.getCategoriaAppartenenza() == null) ||
+            (richiedente.getRapportoParentela() == null) /*||
             (richiedente.getCondizioneLavorativa() == null) ||
-            (richiedente.getTipoContratto() == null) ||
-            (richiedente.getFigli().isEmpty())
+            (richiedente.getTipoContratto() == null)||
+            (richiedente.getFigli().isEmpty())*/
         )
             throw new GenitoreException("Mancano alcune informazioni del genitore richiedente");
         

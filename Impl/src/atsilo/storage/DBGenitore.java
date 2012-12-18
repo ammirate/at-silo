@@ -70,7 +70,7 @@ public class DBGenitore extends DBBeans<Genitore> {
         res.put("cognome", "cognome");
         res.put("codiceFiscale", "codice_fiscale");
         res.put("email", "email");
-        res.put("comuneNascita", "comune_nascita");
+        res.put("comuneNascita", "comune_di_nascita");
         res.put("telefono", "telefono");
         res.put("cittadinanza", "cittadinanza");
         res.put("indirizzoResidenza", "indirizzo_residenza");
