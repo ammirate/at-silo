@@ -54,3 +54,8 @@ La visualizzazione funziona.
 Elimina funziona bene. 
 Non esiste più la possibilità di scegliere più account come si poteva vedere dai mockups infatti tutta la procedura di eliminazione è cambiata rispetto a quanto descritto nel rad.
 
+
+
+ALTRE ANNOTAZIONI
+- La modifica Account sulle altre Gestioni (per qualsiasi attore) non funziona. Non permette di inserire del testo
+
