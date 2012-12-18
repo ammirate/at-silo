@@ -1,2 +1,6 @@
 ANNOTAZIONI GENERALI DELLA GESTIONE
 
+
+- Attività:
+si possono inserire ore tipo: "12:12asdasd"
+se inserisci "asd" e poi si clicca su un orario qualsiasi del calendario escono date del tipo: "12:-1" 
