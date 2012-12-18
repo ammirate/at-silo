@@ -119,11 +119,14 @@ include
 							onfocus="popolaSelect(this)" onchange="submitForm()">
 							<% out.print("<option value='null' >Selezionare Bambino</option>");
 						String selected="";
+						if(figli!=null)
+						{
 							  for (int i=0;i<figli.size();i++){
 								  if (figli.get(i).getCodiceFiscale().equals(cfb))
 									  selected="selected";
 							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
 							  }
+						}
 						%>
 						</select></td>
 				<td>&nbsp;</td>

@@ -137,12 +137,14 @@ include
 						<select name="select_bambini" id="select_bambini"
 							onfocus="popolaSelect(this)" onchange="submitForm()">
 							<% out.print("<option value='null' >Selezionare Bambino</option>");
-						String selected="";
+						if(figli!=null)
+						{	String selected="";
 							  for (int i=0;i<figli.size();i++){
 								  if (figli.get(i).getCodiceFiscale().equals(cfb))
 									  selected="selected";
 							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
 							  }
+						}
 						%>
 						</select>
 					</p></td>
@@ -153,19 +155,19 @@ include
 				<td><select id="rapportoParentela" name="rapportoParentela">
 				   <%
 				     out.append("<option value='null' selected>Seleziona</option>");
-							  if (rapportoParentela.equals("Padre"))
+							  if (rapportoParentela != null && rapportoParentela.equals("Padre"))
 						        out.append("<option value='Padre' selected>Padre</option>");
 							  else
 								  out.append("<option value='Padre' >Padre</option>");
-							  if (rapportoParentela.equals("Madre"))
+							  if (rapportoParentela != null && rapportoParentela.equals("Madre"))
 							        out.print("<option value='Madre' selected>Madre</option>");
 							  else
 								  out.append("<option value='Madre' >Madre</option>");
-							  if (rapportoParentela.equals("Tutore"))
+							  if (rapportoParentela != null && rapportoParentela.equals("Tutore"))
 								  out.append("<option value='Tutore' selected>Tutore</option>");
 							  else
 								  out.append("<option value='Tutore' >Tutore</option>");
-							  if (rapportoParentela.equals("Affidatario"))
+							  if (rapportoParentela != null && rapportoParentela.equals("Affidatario"))
 								  out.append("<option value='Affidatario' selected>Affidatario</option>");
 							  else
 								  out.append("<option value='Affidatario' >Affidatario</option>");

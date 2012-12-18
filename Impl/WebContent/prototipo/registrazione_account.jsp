@@ -118,7 +118,7 @@ include file="atsilo_files/sidebar_index.jsp"
           <tr> 
         	<td>Selezionare profilo di appartenenza</td>
        	 	<td><select name="tipologia">
-       	 	  <option value="personale" selected="selected">Personale e studenti dell'Ateneo</option>
+       	 	  <option value="personale_studenti" selected="selected">Personale e studenti dell'Ateneo</option>
        	 	  <option value="residenti_fisciano">Residenti nel Comune di Fisciano</option>
        	 	  <option value="altro">Altre tipologie di utenze</option>
             </select></td>
