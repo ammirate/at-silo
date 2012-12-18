@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Nessun controllo sull'inserimento, posso mettere date future, quando apro la finestra per la modifica dopo essere uscito il mese scende di un unità cosi senza un motivo

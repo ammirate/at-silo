@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Cambiamento del rad, il sistema è stato modificato quindi il test non è più valido 

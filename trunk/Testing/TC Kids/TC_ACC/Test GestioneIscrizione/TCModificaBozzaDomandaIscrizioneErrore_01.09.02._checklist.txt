@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Non si può effettuare il test per cambiamenti effettuati sul sistema che non rispecchiano il rad
