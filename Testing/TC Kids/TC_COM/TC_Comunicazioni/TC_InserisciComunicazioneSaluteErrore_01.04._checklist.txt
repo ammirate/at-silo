@@ -1,2 +1,4 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+La comunicazione Salute non presenta campi segnalati nel RAD (come Pranzo, quantità, ore sonno, malori), ma presenta un altro campo DATA non segnalato
+

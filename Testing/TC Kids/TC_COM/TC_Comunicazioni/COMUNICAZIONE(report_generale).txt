@@ -1,4 +1,6 @@
 ANNOTAZIONI GENERALI DELLA GESTIONE
 
-non è stato possibile effettuare nessun test, in quanto non è possibile creare l'account educatore
+Il sistema non effettua controlli di alcuni tipo sulle date per le comuncazioni bambino
+
+
 

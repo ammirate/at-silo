@@ -1,2 +1,5 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+La comunicazione Bisogni presenta un campo non segnalato nel RAD: Data
+
+Il sistema non da errore come previsto, sebbeno manchi un campo obbligatorio
