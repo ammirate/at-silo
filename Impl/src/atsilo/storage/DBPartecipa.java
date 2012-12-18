@@ -50,7 +50,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
      * @return lista string
      */
     private static List<String> creaChiave() {
-        List<String> res=  Arrays.asList("-id","-classe");
+        List<String> res=  Arrays.asList("-evento","-classe");
         
         return Collections.unmodifiableList(res);
     }
@@ -63,7 +63,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
     private static Map<String, String> creaMapping() {
         Map<String,String> res= new HashMap<String,String>();
         
-        res.put("-id", "id");
+        res.put("-evento", "evento");
         res.put("-classe", "classe");
       
         
@@ -89,8 +89,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
             Classe c = new Classe();
             c.setId(r.getInt("classe"));
             p.setClasse(c);
-
-            p.setId(r.getInt("id"));
+            p.setEventoId(r.getInt("evento"));
         return p;
     }
     
@@ -109,7 +108,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
      * @return Array di assegnazioni
      */
     protected Assegnazione[] creaAssegnazioni(Partecipa bean) {
-        Assegnazione DBPartecipa_assegnazione = new Assegnazione("id",bean.getId());
+        Assegnazione DBPartecipa_assegnazione = new Assegnazione("evento",bean.getEventoId());
         Assegnazione DBPartecipa_assegnazione2 = new Assegnazione("classe",bean.getClasse().getId());
 
         
@@ -130,8 +129,8 @@ public class DBPartecipa extends DBBeans<Partecipa> {
     public List<Integer> getClassiPerEvento (int id) throws SQLException{
         List<Integer> l = new ArrayList<Integer>();
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
-        tabella.setParam(stmt, 1, "id", id);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE evento = ?");
+        tabella.setParam(stmt, 1, "evento", id);
         ResultSet res = stmt.executeQuery();
         while(res.next())
             l.add(res.getInt("classe"));

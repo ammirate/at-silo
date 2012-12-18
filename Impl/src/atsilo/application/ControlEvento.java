@@ -155,7 +155,7 @@ public class ControlEvento {
             while(classiDelete.hasNext())
             {
                 Partecipa partecipa= classiDelete.next();
-                if(partecipa.getId()==eventoOrigine.getId())
+                if(partecipa.getEventoId()==eventoOrigine.getId())
                     dbPartecipa.delete(partecipa);
             }
             for (Classe classe : eventoOrigine.getClassi()) 
@@ -222,7 +222,7 @@ public class ControlEvento {
             while(classiDelete.hasNext())
             {
                 Partecipa partecipa= classiDelete.next();
-                if(partecipa.getId()==evento.getId())
+                if(partecipa.getEventoId()==evento.getId())
                     dbPartecipa.delete(partecipa);
             }
 
