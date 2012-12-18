@@ -1,2 +1,2 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
