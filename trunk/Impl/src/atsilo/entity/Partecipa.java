@@ -26,7 +26,7 @@ import java.sql.Date;
  */
 public class Partecipa {
     
-    private int id;
+    private int evento;
     private Classe classe;
     
     /**
@@ -41,16 +41,16 @@ public class Partecipa {
      */
     public Partecipa(Classe classe,int id) {
         super();
-        this.id=id;
+        this.evento=id;
         this.classe = classe;
     }
 
    
-    public int getId(){
-        return id;
+    public int getEventoId(){
+        return evento;
     }
-    public void setId(int i){
-        this.id=i;
+    public void setEventoId(int i){
+        this.evento=i;
     }
     public Classe getClasse() {
         return classe;

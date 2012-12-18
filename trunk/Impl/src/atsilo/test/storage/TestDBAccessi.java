@@ -201,11 +201,14 @@ public class TestDBAccessi {
       System.out.println("Ciao "+a.getPassWord());}
 */
       DBEvento dbE = new DBEvento(db);
-      Evento e = dbE.ricercaEventoPerChiave("Recita Y");
+      Evento e = dbE.ricercaEventoPerChiave(2);
+      System.out.println(" Test metodo ricercaPerChiave()");
+
       System.out.println(" Evento preso : = "+e.getDescrizione());
       
-      Utente u= dbE.ricercaEventPlannerEvento(e);
-      
+      Utente u= dbE.ricercaEventPlannerEvento(2);
+      System.out.println(" Test metodo ricercaPerChiave()");
+
       System.out.println("EventPlannerEvento "+u.getCodiceFiscale());
       
       List<Evento> ev = dbE.ricercaAllEventi();
@@ -216,9 +219,11 @@ public class TestDBAccessi {
       
       DBPartecipa p= new DBPartecipa(db);
       
-      List<Integer> l1 = p.getClassiPerEvento("Recita Y");
-      
+      List<Integer> l1 = p.getClassiPerEvento(2);
+      System.out.println(" Test metodo classiperevento");
+
       for(int i=0;i<l1.size();i++){
+         
           System.out.println(" Classe =  "+i + " = " +l1.get(i));
       }
            

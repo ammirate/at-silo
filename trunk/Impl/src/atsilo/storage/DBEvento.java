@@ -282,27 +282,177 @@ public class DBEvento extends DBBeans <Evento> {
     }
 
 
-  //TODO gianfranco fammi sto metodo
-    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) {
-        // TODO Scheletro generato automaticamente
-        return null;
-    }
-
-
-  //TODO gianfranco fammi sto metodo
-    public List<Evento> getEventiPerData(Date data) {
-        // TODO Scheletro generato automaticamente
-        return null;
-    }
-
-
     //TODO gianfranco fammi sto metodo
-    public List<Evento> getEventiPerNome(String nome) {
-        // TODO Scheletro generato automaticamente
-        return null;
+    public List<Evento> getEventiPerOrganizzatore(String organizzatore) throws SQLException {
+        List<Evento> l = new ArrayList<Evento>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE psico_pedagogo = ? OR personale_asilo = ? " +
+                		"OR educatore_didattico = ?  ");
+        
+        tabella.setParam(stmt, 1, "psico_pedagogo",organizzatore);
+        tabella.setParam(stmt, 2, "personale_asilo", organizzatore);
+        tabella.setParam(stmt, 3, "educatore_didattico", organizzatore);
+
+        
+        ResultSet r = stmt.executeQuery();
+        
+        while(r.next()){
+            Evento a = new Evento();
+            
+            a.setCC(r.getString("cc"));
+            a.setData(r.getDate("data"));
+            a.setDescrizione(r.getString("descrizione"));
+            a.setNome(r.getString("nome"));
+            a.setPath(r.getString("path"));
+            a.setTipo(r.getString("tipo"));
+            a.setId(r.getInt("id"));
+            
+            
+            //controlla da qua
+            EventPlanner u=null;
+            
+            
+            if(r.getString("psico_pedagogo")!=null){
+                u=new Psicopedagogo();
+                ((Utente) u).setCodiceFiscale(r.getString("psico_pedagogo"));
+            }
+            
+            if(r.getString("personale_asilo")!=null){
+                u=new PersonaleAsilo();
+                ((Utente) u).setCodiceFiscale(r.getString("personale_asilo"));
+            }
+            if(r.getString("educatore_didattico")!=null){
+                u=new EducatoreDidattico();
+                ((Utente) u).setCodiceFiscale(r.getString("educatore_didattico"));
+            }
+            a.setOrganizzatore(u);          
+            l.add(a);
+            // a qua
+        }
+        if(l.size()==0){
+            r.close();
+            return null;
+        }else{
+            
+            r.close();
+            return l;
+        }
     }
     
- 
     
-   
+    //TODO gianfranco fammi sto metodo
+    public List<Evento> getEventiPerData(Date data) throws SQLException {
+List<Evento> l = new ArrayList<Evento>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " data = ? ");
+        
+        tabella.setParam(stmt, 1, "data",data);
+     
+        
+        ResultSet r = stmt.executeQuery();
+        
+        while(r.next()){
+            Evento a = new Evento();
+            
+            a.setCC(r.getString("cc"));
+            a.setData(r.getDate("data"));
+            a.setDescrizione(r.getString("descrizione"));
+            a.setNome(r.getString("nome"));
+            a.setPath(r.getString("path"));
+            a.setTipo(r.getString("tipo"));
+            a.setId(r.getInt("id"));
+            
+            
+            //controlla da qua
+            EventPlanner u=null;
+            
+            
+            if(r.getString("psico_pedagogo")!=null){
+                u=new Psicopedagogo();
+                ((Utente) u).setCodiceFiscale(r.getString("psico_pedagogo"));
+            }
+            
+            if(r.getString("personale_asilo")!=null){
+                u=new PersonaleAsilo();
+                ((Utente) u).setCodiceFiscale(r.getString("personale_asilo"));
+            }
+            if(r.getString("educatore_didattico")!=null){
+                u=new EducatoreDidattico();
+                ((Utente) u).setCodiceFiscale(r.getString("educatore_didattico"));
+            }
+            a.setOrganizzatore(u);          
+            l.add(a);
+            // a qua
+        }
+        if(l.size()==0){
+            r.close();
+            return null;
+        }else{
+            
+            r.close();
+            return l;
+        }
+    }
+    
+    
+    //TODO gianfranco fammi sto metodo
+    public List<Evento> getEventiPerNome(String nome) throws SQLException {
+List<Evento> l = new ArrayList<Evento>();
+        
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " nome = ? ");
+        
+        tabella.setParam(stmt, 1, "nome",nome);
+     
+        
+        ResultSet r = stmt.executeQuery();
+        
+        while(r.next()){
+            Evento a = new Evento();
+            
+            a.setCC(r.getString("cc"));
+            a.setData(r.getDate("data"));
+            a.setDescrizione(r.getString("descrizione"));
+            a.setNome(r.getString("nome"));
+            a.setPath(r.getString("path"));
+            a.setTipo(r.getString("tipo"));
+            a.setId(r.getInt("id"));
+            
+            
+            //controlla da qua
+            EventPlanner u=null;
+            
+            
+            if(r.getString("psico_pedagogo")!=null){
+                u=new Psicopedagogo();
+                ((Utente) u).setCodiceFiscale(r.getString("psico_pedagogo"));
+            }
+            
+            if(r.getString("personale_asilo")!=null){
+                u=new PersonaleAsilo();
+                ((Utente) u).setCodiceFiscale(r.getString("personale_asilo"));
+            }
+            if(r.getString("educatore_didattico")!=null){
+                u=new EducatoreDidattico();
+                ((Utente) u).setCodiceFiscale(r.getString("educatore_didattico"));
+            }
+            a.setOrganizzatore(u);          
+            l.add(a);
+            // a qua
+        }
+        if(l.size()==0){
+            r.close();
+            return null;
+        }else{
+            
+            r.close();
+            return l;
+        }
+    }
+    
+    
+    
+    
 }
