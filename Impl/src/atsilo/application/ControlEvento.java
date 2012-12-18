@@ -120,7 +120,7 @@ public class ControlEvento {
      * @throws EventoException 
      */
     public boolean modificaEvento(Evento evento,Evento eventoModificato)
-            {
+    {
         Database db = new Database();
         
         if(!db.apriConnessione())
@@ -133,28 +133,28 @@ public class ControlEvento {
             DBPartecipa dbPartecipa=new DBPartecipa(db);
             try 
             {   Evento eventoOrigine=dbEvento.ricercaEventoPerChiave(evento.getId());
-             
-                dbEvento.replace(eventoOrigine, eventoModificato);
-                Iterable<Partecipa> classiDaCancellare =dbPartecipa.getAll();
-                Iterator<Partecipa> classiDelete=classiDaCancellare.iterator();
-                while(classiDelete.hasNext())
-                {
-                   Partecipa partecipa= classiDelete.next();
-                   if(partecipa.getId()==eventoOrigine.getId())
-                         dbPartecipa.delete(partecipa);
-                }
-                for (Classe classe : eventoOrigine.getClassi()) 
-                {
-                    Partecipa partecipa=new Partecipa(classe,evento.getId());
-                    dbPartecipa.inserisci(partecipa);
-                }
-                return true;
-                                
-                
+            
+            dbEvento.replace(eventoOrigine, eventoModificato);
+            Iterable<Partecipa> classiDaCancellare =dbPartecipa.getAll();
+            Iterator<Partecipa> classiDelete=classiDaCancellare.iterator();
+            while(classiDelete.hasNext())
+            {
+                Partecipa partecipa= classiDelete.next();
+                if(partecipa.getId()==eventoOrigine.getId())
+                    dbPartecipa.delete(partecipa);
+            }
+            for (Classe classe : eventoOrigine.getClassi()) 
+            {
+                Partecipa partecipa=new Partecipa(classe,evento.getId());
+                dbPartecipa.inserisci(partecipa);
+            }
+            return true;
+            
+            
             } catch (SQLException e) 
             {   
                 LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(),e);
-            return false;
+                return false;
             }
             
         }
@@ -183,7 +183,7 @@ public class ControlEvento {
         }
         try{
             DBEvento dbEvento=new DBEvento(db);
-           
+            
             try {
                 if(dbEvento.ricercaEventoPerChiave(evento.getId())!=null);
             } catch (SQLException e)
@@ -191,8 +191,8 @@ public class ControlEvento {
                 LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: "+e.getMessage(),e);    
                 return null;
             }
-                dbEvento.delete(evento);
-                return evento;
+            dbEvento.delete(evento);
+            return evento;
         }
         finally{
             db.chiudiConnessione();
@@ -248,10 +248,10 @@ public class ControlEvento {
         finally{
             db.chiudiConnessione();
         } 
-        }
+    }
     
     public List<Evento> getEventiPerNome(String nome) throws DBConnectionException, EventoException{
- Database db = new Database();
+        Database db = new Database();
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -264,22 +264,39 @@ public class ControlEvento {
             db.chiudiConnessione();
         } 
     }
-
-    private List<String> convertiCC(String cc)
+    
+    private static List<String> convertiCC(String cc)
     {
         List<String> s=new ArrayList<String>(); 
+        String mail[];
+        mail = cc.split(",");
+        for(int i=0; i<mail.length;i++){
+            s.add(mail[i]);
+        }
+        
         return s;
     }
-
-
-    private String convertiCC(List<String> cc)
+    
+    
+    private static String convertiCC(List<String> cc)
     {
-        String s="";
+        
+        Iterator<String>iteratore=cc.iterator();
+        String s;
+        if(iteratore.hasNext())
+                s=iteratore.next();
+        else s="";
+        while (iteratore.hasNext())
+        {
+            s=s+","+iteratore.next();
+        };
         return s;
         
     }
-
-
+    
+    
+    
+    
     /**
      * Gets the single istance of this class
      * @return a new ControlEvento
