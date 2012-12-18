@@ -664,27 +664,7 @@ public class ControlIscrizione {
         } 
     }
     
-    public List<OrarioUtente> listaOrariUtente() throws DomandaIscrizioneException, DBConnectionException, SQLException{
-        Database db = new Database();
-        DBOrarioUtente dbou = new DBOrarioUtente(db);
-        if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
-        try{
-            List<OrarioUtente> toReturn = new ArrayList<OrarioUtente>();
-            
-            Iterable<OrarioUtente> it = dbou.getAll();
-            
-            for(OrarioUtente ou : it)
-            {
-                toReturn.add(ou);
-            }
-            return toReturn;
-        }
-        finally{
-            db.chiudiConnessione();
-        } 
-    }
-    
+
     
     /**
      * Metodo costruttore
