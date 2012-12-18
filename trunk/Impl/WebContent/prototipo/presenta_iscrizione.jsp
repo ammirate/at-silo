@@ -101,7 +101,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
 							  for (int i=0;i<orari.size();i++)
 								  
 									  
-							  out.print("<option value='"+orari.get(i).getId()+"' >"+orari.get(i).getNome()()+"</option>");
+							  out.print("<option value='"+orari.get(i).getId()+"' >"+orari.get(i).getNome()+"</option>");
 							  
 						}
 						else
