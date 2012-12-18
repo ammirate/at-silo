@@ -23,10 +23,12 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -311,9 +313,11 @@ public abstract class DBBeans<B> implements Iterable<B> {
                 : fieldName + " non e' un nome di proprieta' valido."
                 + " Probabilmente, getMappingFields e' stata implementata male.";
         
-        assert !res.toLowerCase().equals(res)
-                : fieldName + " non e' un nome di colonna valido."
-                + " Probabilmente, getMappingFields e' stata implementata male.";
+        if (res != null) {
+            assert res.toLowerCase().equals(res) : res
+                    + " non e' un nome di colonna valido."
+                    + " Probabilmente, getMappingFields e' stata implementata male.";
+        }
         return res;
     }
     
@@ -403,7 +407,9 @@ public abstract class DBBeans<B> implements Iterable<B> {
             
             for (Map.Entry<String, Integer> ent : meta.entrySet()) {
                 String col = ent.getKey();
-                tabella.setParam(stmt, ent.getValue(), col, values.get(col));
+                Object val = values.get(col);
+
+                tabella.setParam(stmt, ent.getValue(), col, val);
             }
             
             /*
@@ -424,14 +430,18 @@ public abstract class DBBeans<B> implements Iterable<B> {
             if (res == 1) {
                 ResultSet rs = stmt.getGeneratedKeys();
                 if (rs.next()) {
-                    Map<String, String> mapping = getMappingFields();
                     //Sono state generate delle chiavi automatiche
-                    for (String field : getKeyFields()) {
-                        if (!field.startsWith(SPECIAL_FIELD_PREFIX)
-                                && getFieldFromBean(realBean, field) == null) {
-                            setFieldIntoBean(realBean, field,
-                                    rs.getObject(mapping.get(field)));
-                        }
+                    /*
+                     * XXX istruzioni pericolose
+                     * MySQL restituisce un'unica colonna GENERATED_KEY
+                     * quindi, assumo che quella corrisponda al campo 'id',
+                     * a patto che questo valga 0 o null.
+                     */
+                    Object o = getFieldFromBean(realBean, "id");
+                    if (o == null || (o instanceof Integer && ((Integer)o) == 0)) {
+                        setFieldIntoBean(realBean, "id", ((Number)rs.getObject(1)).intValue());
+                    } else {
+                        LOG.warning("Impossibile individuare il campo autogenerato");
                     }
                 }
                 rs.close();
