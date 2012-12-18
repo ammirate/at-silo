@@ -11,7 +11,7 @@ Sistuazione familiare (che ne sistema è scritto come situazione familiaria)
 Reddito
 
 Per quanto riguarda l'usabilità, l'inserimento della data è fatto in modo pessimo non si capisce come fare l'inserimento e se uno vorrebbe farlo seguento il loro metodo perderebbe mezza giornata.
-Non coerente con quanto scritto nel rad, infatti nel rad il formato era GG/MM/AAAA mentre nel sistema il formato è AAAA/MM/GG.
+Non coerente con quanto scritto nel rad, infatti nel rad il formato era GG/MM/AAAA mentre nel sistema il formato è AAAA/MM/GG. La data può essere anche futura e il sistema non controlla l'inserimento.
 Se un genitore vuole registrarsi deve complilare tre pagine e non ha la possibilità di tornare alla pagina precedente perchè non c'è un pulsante indietro ma solo avanti.
 Nel campo situazione familiare io non saprei cosa scrivere.
 Nel campo redditono non è specificato come scrivere l'importo.
