@@ -17,6 +17,7 @@ import atsilo.application.ControlDatiPersonali;
 import atsilo.application.ControlIscrizione;
 import atsilo.exception.AccountException;
 import atsilo.exception.BambinoException;
+import atsilo.exception.BandoException;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.DomandaIscrizioneException;
 import atsilo.exception.GenitoreException;
@@ -138,6 +139,10 @@ public class ServletIscrizioneBambino extends HttpServlet {
             } catch (BambinoException e) {
                 pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (BandoException e) {
+                // TODO Blocco di catch autogenerato
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }  
         }
