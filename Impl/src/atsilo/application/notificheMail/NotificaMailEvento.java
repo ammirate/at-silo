@@ -17,6 +17,7 @@ package atsilo.application.notificheMail;
 
 import java.util.ArrayList;
 
+import atsilo.entity.Classe;
 import atsilo.entity.Evento;
 import atsilo.entity.Utente;
 
@@ -74,7 +75,12 @@ public class NotificaMailEvento extends NotificaMail {
      */
     public String getTestoMail() 
     {
-        String testo= this.getTesto()+"L'evento si chimera"+evento.getNome();
+        String classi="le seguenti classi: ";
+        for (Classe classe : evento.getClassi()) 
+        {
+            classi=classi+classe.getId()+"sez. "+classe.getSezione()+",";
+        }
+        String testo="L'evento si chiamera "+evento.getNome()+"e si terra il giorno"+evento.getData()+"e vi parteciperanno "+classi+ this.getTesto();
         return testo;
     }
 
@@ -83,7 +89,7 @@ public class NotificaMailEvento extends NotificaMail {
      */
     public String getOggettoMail() {
         
-        String oggetto="Notifica di Creazione Evento"+this.getOggetto();
+        String oggetto="Notifica Evento di "+this.getOggetto();
         return oggetto;
     }
 

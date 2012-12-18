@@ -1,9 +1,13 @@
 package atsilo.application;
 
+import atsilo.application.notificheMail.ControlNotificaMail;
+import atsilo.application.notificheMail.Messaggio;
+import atsilo.application.notificheMail.NotificaMailEvento;
 import atsilo.entity.Classe;
 import atsilo.entity.EventPlanner;
 import atsilo.entity.Evento;
 import atsilo.entity.Partecipa;
+import atsilo.entity.Utente;
 
 import atsilo.entity.Registro;
 import atsilo.exception.DBConnectionException;
@@ -19,6 +23,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import javax.mail.MessagingException;
 
 
 /*
@@ -103,6 +109,15 @@ public class ControlEvento {
                 Partecipa partecipa=new Partecipa(classe,evento.getId());
                 dbPartecipa.inserisci(partecipa);
             }
+            ControlNotificaMail control=ControlNotificaMail.getInstance();
+            Messaggio messaggio=new NotificaMailEvento(convertiCC(evento.getCC()), "Creazione ", " ", evento);
+            try {
+                control.inviaMail(messaggio);
+            } catch (MessagingException e) {
+                LOG.log(Level.SEVERE, "<Errore nel invio del messaggio cauasato da: >", e);
+            } catch (Throwable e) {
+                LOG.log(Level.SEVERE, "<Errore nel invio del messaggio cauasato da: >", e);
+            }
             
         }
         finally{
@@ -148,6 +163,15 @@ public class ControlEvento {
                 Partecipa partecipa=new Partecipa(classe,evento.getId());
                 dbPartecipa.inserisci(partecipa);
             }
+            ControlNotificaMail control=ControlNotificaMail.getInstance();
+            Messaggio messaggio=new NotificaMailEvento(convertiCC(evento.getCC()), "Modifica", "", evento);
+            try {
+                control.inviaMail(messaggio);
+            } catch (MessagingException e) {
+                LOG.log(Level.SEVERE, "<Errore nel invio del messaggio cauasato da: >", e);
+            } catch (Throwable e) {
+                LOG.log(Level.SEVERE, "<Errore nel invio del messaggio cauasato da: >", e);
+            }
             return true;
             
             
@@ -156,6 +180,7 @@ public class ControlEvento {
                 LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(),e);
                 return false;
             }
+            
             
         }
         finally{
@@ -183,7 +208,7 @@ public class ControlEvento {
         }
         try{
             DBEvento dbEvento=new DBEvento(db);
-            
+            DBPartecipa dbPartecipa=new DBPartecipa(db);
             try {
                 if(dbEvento.ricercaEventoPerChiave(evento.getId())!=null);
             } catch (SQLException e)
@@ -191,7 +216,27 @@ public class ControlEvento {
                 LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: "+e.getMessage(),e);    
                 return null;
             }
+            Iterable<Partecipa> classiDaCancellare =dbPartecipa.getAll();
+            Iterator<Partecipa> classiDelete=classiDaCancellare.iterator();
+            
+            while(classiDelete.hasNext())
+            {
+                Partecipa partecipa= classiDelete.next();
+                if(partecipa.getId()==evento.getId())
+                    dbPartecipa.delete(partecipa);
+            }
+
             dbEvento.delete(evento);
+            ControlNotificaMail control=ControlNotificaMail.getInstance();
+            Messaggio messaggio=new NotificaMailEvento(convertiCC(evento.getCC()), "Cancellazione ", "\n l'evento sopra descritto è stato cancellato", evento);
+            try {
+                control.inviaMail(messaggio);
+            } catch (MessagingException e) {
+                LOG.log(Level.SEVERE, "<Errore nel invio del messaggio cauasato da: >", e);
+            } catch (Throwable e) {
+                LOG.log(Level.SEVERE, "<Errore nel invio del messaggio cauasato da: >", e);
+            }
+            
             return evento;
         }
         finally{
@@ -265,34 +310,22 @@ public class ControlEvento {
         } 
     }
     
-    private static List<String> convertiCC(String cc)
+    private static ArrayList<Utente> convertiCC(String cc)
     {
-        List<String> s=new ArrayList<String>(); 
+        ArrayList<Utente> s=new ArrayList<Utente>(); 
         String mail[];
         mail = cc.split(",");
-        for(int i=0; i<mail.length;i++){
-            s.add(mail[i]);
+        for(int i=0; i<mail.length;i++)
+        {
+            Utente utente=new Utente();
+            utente.setEmail(mail[i]);
+            s.add(utente);
         }
         
         return s;
     }
     
     
-    private static String convertiCC(List<String> cc)
-    {
-        
-        Iterator<String>iteratore=cc.iterator();
-        String s;
-        if(iteratore.hasNext())
-                s=iteratore.next();
-        else s="";
-        while (iteratore.hasNext())
-        {
-            s=s+","+iteratore.next();
-        };
-        return s;
-        
-    }
     
     
     
