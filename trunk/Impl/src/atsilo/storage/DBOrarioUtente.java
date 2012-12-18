@@ -1,5 +1,6 @@
 package atsilo.storage;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
@@ -8,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import atsilo.entity.Bambino;
+import atsilo.entity.Genitore;
 import atsilo.entity.OrarioUtente;
 import atsilo.entity.Servizio;
 /*
@@ -32,8 +35,31 @@ public class DBOrarioUtente extends DBBeans<OrarioUtente> {
     private static final Map<String,String> MAPPINGS=creaMapping();
     private static final List<String> CHIAVE=creaChiave(); 
 
-    public OrarioUtente ricercaOrarioUtenteDaId(int ID) {
-        return null;
+    public OrarioUtente ricercaOrarioUtenteDaId(int ID) throws SQLException {
+        OrarioUtente b=new OrarioUtente();
+        PreparedStatement stmt = tabella.prepareStatement(
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE id = ?");
+            tabella.setParam(stmt, 1, "id", ID);
+            ResultSet r = stmt.executeQuery();
+        if(r.next())
+        {
+            
+            b.setId(r.getInt("id"));
+            b.setOraInizio(r.getString("ora_inizio"));
+            b.setOraFine(r.getString("ora_fine"));
+            b.setPrezzo(r.getInt("prezzo"));
+            b.setDataInizio(r.getString("data_inizio"));
+            b.setDataFine(r.getString("data_fine"));
+            b.setNome(r.getString("nome"));
+            b.setDescrizione(r.getString("descrizione"));
+
+        }
+        else
+        {
+            b=null;
+        }
+        r.close();
+        return b;
     }
 
     /**
