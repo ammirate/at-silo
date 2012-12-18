@@ -1,2 +1,4 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+In descrizione se inserisco valori numerici l'operazione va a buon fine.
+In descrizione se non inserisco nulla e rimango il campo vuoto l'operazione va a buon fine.
