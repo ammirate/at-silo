@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-12T15:10:46.78</dc:date><meta:editing-duration>PT28M22S</meta:editing-duration><meta:editing-cycles>17</meta:editing-cycles><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="72" meta:word-count="212" meta:character-count="1482" meta:non-whitespace-character-count="1322"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-18T11:51:55.11</dc:date><meta:editing-duration>PT28M22S</meta:editing-duration><meta:editing-cycles>18</meta:editing-cycles><meta:document-statistic meta:table-count="2" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="81" meta:word-count="229" meta:character-count="1590" meta:non-whitespace-character-count="1421"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">15575</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">31799</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">12148</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">11735</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="int">1924</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">14986</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">11354</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">16669</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">17648</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">15575</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">31798</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">27721</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">3219</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">16773</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="int">1924</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">11735</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">16909</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">23088</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2664311</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2668703</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -241,6 +241,30 @@
   <style:style style:name="Tabella1.C2" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
+  <style:style style:name="Tabella2" style:family="table">
+   <style:table-properties style:width="15.683cm" fo:margin-left="0.621cm" table:align="left"/>
+  </style:style>
+  <style:style style:name="Tabella2.A" style:family="table-column">
+   <style:table-column-properties style:column-width="5.147cm"/>
+  </style:style>
+  <style:style style:name="Tabella2.B" style:family="table-column">
+   <style:table-column-properties style:column-width="5.581cm"/>
+  </style:style>
+  <style:style style:name="Tabella2.C" style:family="table-column">
+   <style:table-column-properties style:column-width="4.955cm"/>
+  </style:style>
+  <style:style style:name="Tabella2.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="0.05pt solid #000000" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella2.C1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella2.A2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabella2.C2" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties style:font-name="Times New Roman"/>
   </style:style>
@@ -269,95 +293,99 @@
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017a764" officeooo:paragraph-rsid="001955bf" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="14pt" fo:font-weight="normal" officeooo:rsid="00147e77" officeooo:paragraph-rsid="00147e77" style:font-size-asian="14pt" style:font-weight-asian="normal" style:font-size-complex="14pt" style:font-weight-complex="normal"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="001955bf" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P11" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="14pt" fo:font-weight="normal" officeooo:rsid="00147e77" officeooo:paragraph-rsid="00147e77" style:font-size-asian="14pt" style:font-weight-asian="normal" style:font-size-complex="14pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false" style:text-autospace="none"/>
    <style:text-properties style:font-name="Times New Roman" fo:font-size="14pt" fo:font-style="italic" fo:font-weight="bold" style:font-name-asian="Arial-BoldItalicMT" style:font-size-asian="14pt" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-name-complex="Arial-BoldItalicMT" style:font-size-complex="14pt" style:font-style-complex="italic" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="italic" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-size-complex="12pt" style:font-style-complex="italic"/>
   </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="00162300" officeooo:paragraph-rsid="001b5540" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="00162300" officeooo:paragraph-rsid="001bcdb7" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="001d6d02" officeooo:paragraph-rsid="001d6d02" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="001d6d02" officeooo:paragraph-rsid="001ea5da" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:paragraph-rsid="00205c6c" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="0027784f" officeooo:paragraph-rsid="0027784f" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1"/>
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="13pt" fo:font-weight="bold" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="00147e77" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-size-complex="13pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="13pt" fo:font-weight="bold" officeooo:rsid="00147e77" officeooo:paragraph-rsid="00147e77" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-size-complex="13pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="13pt" fo:font-weight="bold" officeooo:rsid="00147e77" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-size-complex="13pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="13pt" fo:font-weight="bold" officeooo:rsid="00162300" officeooo:paragraph-rsid="00162300" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-size-complex="13pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="13pt" fo:font-weight="bold" officeooo:rsid="0017a764" officeooo:paragraph-rsid="0017a764" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="13pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
+  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L2">
    <style:text-properties style:font-name="Times New Roman" officeooo:paragraph-rsid="0017b1d4"/>
   </style:style>
-  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="italic" fo:font-weight="bold" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-style-complex="italic" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="00147e77" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017b1d4" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017a764" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017a764" officeooo:paragraph-rsid="0017a764" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="001955bf" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="0017b1d4" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="001955bf" officeooo:paragraph-rsid="001955bf" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="00147e77" officeooo:paragraph-rsid="00147e77" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
-  </style:style>
   <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="normal" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="0017b1d4" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="normal" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="00162300" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="00147e77" officeooo:paragraph-rsid="00147e77" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0017a764" officeooo:paragraph-rsid="0017a764" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" fo:font-weight="bold" officeooo:rsid="00147e77" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="00162300" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" fo:font-weight="bold" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-weight="bold" officeooo:rsid="0017a764" officeooo:paragraph-rsid="0017a764" style:font-name-asian="TimesNewRomanPSMT" style:font-size-asian="12pt" style:font-weight-asian="bold" style:font-name-complex="TimesNewRomanPSMT" style:font-size-complex="12pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" fo:font-weight="bold" officeooo:rsid="00147e77" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" fo:font-weight="bold" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="0017b1d4" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="00162300" officeooo:paragraph-rsid="00162300" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="0027784f" officeooo:paragraph-rsid="0027784f" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="002a135a" officeooo:paragraph-rsid="002a135a" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="00147e77"/>
@@ -445,6 +473,9 @@
   </style:style>
   <style:style style:name="T29" style:family="text">
    <style:text-properties officeooo:rsid="002783d5"/>
+  </style:style>
+  <style:style style:name="T30" style:family="text">
+   <style:text-properties officeooo:rsid="002a135a"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" style:num-suffix="." style:num-format="1">
@@ -550,58 +581,6 @@
     </style:list-level-properties>
    </text:list-level-style-number>
   </text:list-style>
-  <text:list-style style:name="L3">
-   <text:list-level-style-number text:level="1" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.27cm" fo:text-indent="-0.635cm" fo:margin-left="1.27cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="2" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="1.905cm" fo:text-indent="-0.635cm" fo:margin-left="1.905cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="3" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="2.54cm" fo:text-indent="-0.635cm" fo:margin-left="2.54cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="4" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.175cm" fo:text-indent="-0.635cm" fo:margin-left="3.175cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="5" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="3.81cm" fo:text-indent="-0.635cm" fo:margin-left="3.81cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="6" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="4.445cm" fo:text-indent="-0.635cm" fo:margin-left="4.445cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="7" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.08cm" fo:text-indent="-0.635cm" fo:margin-left="5.08cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="8" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="5.715cm" fo:text-indent="-0.635cm" fo:margin-left="5.715cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="9" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.35cm" fo:text-indent="-0.635cm" fo:margin-left="6.35cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-   <text:list-level-style-number text:level="10" style:num-suffix="." style:num-format="1">
-    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
-     <style:list-level-label-alignment text:label-followed-by="listtab" text:list-tab-stop-position="6.985cm" fo:text-indent="-0.635cm" fo:margin-left="6.985cm"/>
-    </style:list-level-properties>
-   </text:list-level-style-number>
-  </text:list-style>
   <style:page-layout style:name="pm1">
    <style:page-layout-properties fo:page-width="21.001cm" fo:page-height="29.7cm" style:num-format="1" style:print-orientation="portrait" fo:margin="2cm" fo:margin-top="2cm" fo:margin-bottom="2cm" fo:margin-left="2cm" fo:margin-right="2cm" style:writing-mode="lr-tb" style:footnote-max-height="0cm">
     <style:footnote-sep style:width="0.018cm" style:distance-before-sep="0.101cm" style:distance-after-sep="0.101cm" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
@@ -630,53 +609,53 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
    <text:p text:style-name="P2"><text:span text:style-name="T1">TC_</text:span><text:span text:style-name="T27">AddebitaPagamento_</text:span><text:span text:style-name="T1">0</text:span><text:span text:style-name="T27">2</text:span></text:p>
-   <text:p text:style-name="P10"/>
-   <text:list xml:id="list35233832" text:style-name="L1">
+   <text:p text:style-name="P11"/>
+   <text:list xml:id="list31663440" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P18">Nome del Test Case</text:p>
+     <text:p text:style-name="P21">Nome del Test Case</text:p>
     </text:list-item>
    </text:list>
-   <text:list xml:id="list35210081" text:style-name="L2">
+   <text:list xml:id="list31665858" text:style-name="L2">
     <text:list-header>
-     <text:p text:style-name="P23"><text:span text:style-name="T12">Test Case TC</text:span><text:span text:style-name="T14">Addebita Pagemento</text:span><text:span text:style-name="T13">_0</text:span><text:span text:style-name="T14">2</text:span></text:p>
+     <text:p text:style-name="P26"><text:span text:style-name="T12">Test Case TC</text:span><text:span text:style-name="T14">Addebita Pagemento</text:span><text:span text:style-name="T13">_0</text:span><text:span text:style-name="T14">2</text:span></text:p>
     </text:list-header>
    </text:list>
    <text:p text:style-name="P4"/>
-   <text:list xml:id="list35242877" text:continue-list="list35233832" text:style-name="L1">
+   <text:list xml:id="list31641033" text:continue-list="list31663440" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P19">Test Case <text:span text:style-name="T10">Specification Identifier</text:span></text:p>
+     <text:p text:style-name="P22">Test Case <text:span text:style-name="T10">Specification Identifier</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P3"><text:span text:style-name="T10"><text:tab/></text:span><text:span text:style-name="T11">Caso d&apos;uso da testare</text:span></text:p>
    <text:p text:style-name="P3"><text:span text:style-name="T17"><text:tab/></text:span><text:span text:style-name="T2">UC_SER_</text:span><text:span text:style-name="T7">3.5</text:span><text:span text:style-name="T6"> – </text:span><text:span text:style-name="T7">Addebita pagamento</text:span></text:p>
-   <text:list xml:id="list35257944" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list31659000" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
-     <text:p text:style-name="P24">Version date</text:p>
-     <text:p text:style-name="P25">1<text:span text:style-name="T27">2</text:span>/12/12 </text:p>
-     <text:p text:style-name="P24">Version number</text:p>
+     <text:p text:style-name="P27">Version date</text:p>
+     <text:p text:style-name="P28">1<text:span text:style-name="T27">2</text:span>/12/12 </text:p>
+     <text:p text:style-name="P27">Version number</text:p>
     </text:list-header>
    </text:list>
    <text:p text:style-name="P1"><text:span text:style-name="T10"><text:tab/></text:span>v. 1.0 </text:p>
    <text:p text:style-name="P6"><text:tab/>Version author</text:p>
    <text:p text:style-name="P7"><text:span text:style-name="T16"><text:tab/></text:span><text:span text:style-name="T27">Francesco Durante</text:span></text:p>
-   <text:list xml:id="list35238625" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list31661319" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
-     <text:p text:style-name="P25"/>
+     <text:p text:style-name="P28"/>
     </text:list-header>
     <text:list-item>
-     <text:p text:style-name="P20">Elementi testati</text:p>
+     <text:p text:style-name="P23">Elementi testati</text:p>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P26">Il test riguarderà la componente <text:span text:style-name="T27">Pagamento</text:span>, in particolare la funzionalità <text:span text:style-name="T27">addebita pagamento</text:span><text:span text:style-name="T26"> differenziato per un bambino.</text:span></text:p>
-     <text:p text:style-name="P24">Riferimenti</text:p>
+     <text:p text:style-name="P29">Il test riguarderà la componente <text:span text:style-name="T27">Pagamento</text:span>, in particolare la funzionalità <text:span text:style-name="T27">addebita pagamento</text:span><text:span text:style-name="T26"> differenziato per un bambino.</text:span></text:p>
+     <text:p text:style-name="P27">Riferimenti</text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P8"><text:tab/><text:span text:style-name="T10">Specifica dei requisiti</text:span></text:p>
    <text:p text:style-name="P8"/>
-   <text:list xml:id="list35255596" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list31642050" text:continue-numbering="true" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P32"><text:span text:style-name="T19">Input</text:span> </text:p>
-     <text:p text:style-name="P24">Data</text:p>
+     <text:p text:style-name="P34"><text:span text:style-name="T19">Input</text:span> </text:p>
+     <text:p text:style-name="P27">Data</text:p>
     </text:list-item>
    </text:list>
    <table:table table:name="Tabella1" table:style-name="Tabella1">
@@ -685,138 +664,177 @@
     <table:table-column table:style-name="Tabella1.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P12">Campo</text:p>
+      <text:p text:style-name="P13">Campo</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A1" office:value-type="string">
-      <text:p text:style-name="P12">Valore</text:p>
+      <text:p text:style-name="P13">Valore</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C1" office:value-type="string">
-      <text:p text:style-name="P12">Categoria</text:p>
+      <text:p text:style-name="P13">Categoria</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P39">Descrizione addebito</text:p>
+      <text:p text:style-name="P19">Descrizione addebito</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P13">“<text:span text:style-name="T28">FFFF</text:span><text:span text:style-name="T23">”</text:span></text:p>
+      <text:p text:style-name="P14">“<text:span text:style-name="T28">FFFF</text:span><text:span text:style-name="T23">”</text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P15"><text:span text:style-name="T27">Non</text:span><text:span text:style-name="T25"> C</text:span>orretta</text:p>
+      <text:p text:style-name="P16"><text:span text:style-name="T27">Non</text:span><text:span text:style-name="T25"> C</text:span>orretta</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P39">Data di scadenza</text:p>
+      <text:p text:style-name="P19">Data di scadenza</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P14">“<text:span text:style-name="T27">20/12/2012</text:span>”</text:p>
+      <text:p text:style-name="P15">“<text:span text:style-name="T27">20/12/2012</text:span>”</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P16"><text:span text:style-name="T25">C</text:span>orretta</text:p>
+      <text:p text:style-name="P17"><text:span text:style-name="T25">C</text:span>orretta</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P39">Importo addebito</text:p>
+      <text:p text:style-name="P19">Importo addebito</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
-      <text:p text:style-name="P17">“<text:span text:style-name="T27">85€</text:span><text:span text:style-name="T9">”</text:span> </text:p>
+      <text:p text:style-name="P18">“<text:span text:style-name="T27">85€</text:span><text:span text:style-name="T9">”</text:span> </text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
-      <text:p text:style-name="P16"><text:span text:style-name="T26">C</text:span>orretta</text:p>
+      <text:p text:style-name="P17"><text:span text:style-name="T26">C</text:span>orretta</text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:list xml:id="list35234069" text:continue-numbering="true" text:style-name="L1">
-    <text:list-header>
-     <text:p text:style-name="P33"><text:span text:style-name="T11">Tables</text:span><text:span text:style-name="T10"> - </text:span></text:p>
-     <text:p text:style-name="P33"><text:span text:style-name="T11">Human</text:span><text:span text:style-name="T10"> </text:span><text:span text:style-name="T11">Action</text:span></text:p>
-     <text:p text:style-name="P36"><text:span text:style-name="T3">L&apos;utente visita l</text:span><text:span text:style-name="T4">a pagina</text:span><text:span text:style-name="T3"> di </text:span><text:span text:style-name="T8">addebito pagamento</text:span><text:span text:style-name="T6"> e seleziona il bambino</text:span></text:p>
-     <text:p text:style-name="P33"><text:span text:style-name="T11">Condition</text:span><text:span text:style-name="T10"> </text:span></text:p>
+   <table:table table:name="Tabella2" table:style-name="Tabella2">
+    <table:table-column table:style-name="Tabella2.A"/>
+    <table:table-column table:style-name="Tabella2.B"/>
+    <table:table-column table:style-name="Tabella2.C"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="P41">+ Beneficiario </text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.A1" office:value-type="string">
+      <text:p text:style-name="P18">“<text:span text:style-name="T30">Unisa - Kids</text:span>”</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.C1" office:value-type="string">
+      <text:p text:style-name="P41">Corretto</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P41">+ Percentuale di sconto</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P41">“10%”</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
+      <text:p text:style-name="P41">Corretto</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P41">+ Descrizione sconto</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.A2" office:value-type="string">
+      <text:p text:style-name="P18">“<text:span text:style-name="T30">Menu</text:span>”</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella2.C2" office:value-type="string">
+      <text:p text:style-name="P41">Corretto</text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
+   <text:list xml:id="list31644627" text:continue-numbering="true" text:style-name="L1">
+    <text:list-item>
+     <text:p text:style-name="P20"><text:span text:style-name="T11"/></text:p>
+     <text:p text:style-name="P35"><text:span text:style-name="T11">Tables</text:span><text:span text:style-name="T10"> - </text:span></text:p>
+     <text:p text:style-name="P35"><text:span text:style-name="T11">Human</text:span><text:span text:style-name="T10"> </text:span><text:span text:style-name="T11">Action</text:span></text:p>
+     <text:p text:style-name="P38"><text:span text:style-name="T3">L&apos;utente visita l</text:span><text:span text:style-name="T4">a pagina</text:span><text:span text:style-name="T3"> di </text:span><text:span text:style-name="T8">addebito pagamento</text:span><text:span text:style-name="T6"> e seleziona il bambino</text:span></text:p>
+     <text:p text:style-name="P35"><text:span text:style-name="T11">Condition</text:span><text:span text:style-name="T10"> </text:span></text:p>
      <text:list>
       <text:list-header>
-       <text:p text:style-name="P37">States</text:p>
+       <text:p text:style-name="P39">States</text:p>
        <text:list>
         <text:list-header>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Initial</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3">Connessione dati attiva</text:span></text:p>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Intermediate</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3">Connessione dati attiva</text:span></text:p>
-         <text:p text:style-name="P33"><text:span text:style-name="T18">Final</text:span><text:span text:style-name="T15">: </text:span><text:span text:style-name="T17">Connessione dati attiva</text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Initial</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3">Connessione dati attiva</text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Intermediate</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3">Connessione dati attiva</text:span></text:p>
+         <text:p text:style-name="P35"><text:span text:style-name="T18">Final</text:span><text:span text:style-name="T15">: </text:span><text:span text:style-name="T17">Connessione dati attiva</text:span></text:p>
         </text:list-header>
        </text:list>
-       <text:p text:style-name="P37">Files</text:p>
+       <text:p text:style-name="P39">Files</text:p>
        <text:list>
         <text:list-header>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Database</text:span><text:span text:style-name="T10">: </text:span></text:p>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Control files</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3"><text:s/></text:span></text:p>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Transaction files</text:span><text:span text:style-name="T10">: </text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Database</text:span><text:span text:style-name="T10">: </text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Control files</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3"><text:s/></text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Transaction files</text:span><text:span text:style-name="T10">: </text:span></text:p>
         </text:list-header>
        </text:list>
       </text:list-header>
      </text:list>
-     <text:p text:style-name="P24">Relationship</text:p>
-     <text:p text:style-name="P24">Timing</text:p>
-     <text:p text:style-name="P38"/>
-    </text:list-header>
-    <text:list-item>
-     <text:p text:style-name="P21">Output</text:p>
-     <text:p text:style-name="P33"><text:span text:style-name="T11">Tables</text:span><text:span text:style-name="T10"> - </text:span></text:p>
-     <text:p text:style-name="P34"><text:span text:style-name="T11">Human</text:span><text:span text:style-name="T10"> </text:span><text:span text:style-name="T11">Action</text:span></text:p>
+     <text:p text:style-name="P27">Relationship</text:p>
+     <text:p text:style-name="P27">Timing</text:p>
+     <text:p text:style-name="P40"/>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P27"><text:span text:style-name="T22">I parametr</text:span><text:span text:style-name="T24">i</text:span><text:span text:style-name="T22"> </text:span><text:span text:style-name="T26">inseriti </text:span><text:span text:style-name="T29">non</text:span><text:span text:style-name="T26"> </text:span><text:span text:style-name="T22">rispetta</text:span><text:span text:style-name="T24">no</text:span><text:span text:style-name="T22"> la specifica degli input quindi l&apos;operazione </text:span><text:span text:style-name="T29">non</text:span><text:span text:style-name="T22"> va a buon fine ed il sistema </text:span><text:span text:style-name="T29">risponde con un messaggio di errore</text:span><text:span text:style-name="T26">.</text:span></text:p>
-     <text:p text:style-name="P33"><text:span text:style-name="T11">Condition</text:span><text:span text:style-name="T10"> </text:span></text:p>
+     <text:p text:style-name="P24">Output</text:p>
+     <text:p text:style-name="P35"><text:span text:style-name="T11">Tables</text:span><text:span text:style-name="T10"> - </text:span></text:p>
+     <text:p text:style-name="P36"><text:span text:style-name="T11">Human</text:span><text:span text:style-name="T10"> </text:span><text:span text:style-name="T11">Action</text:span></text:p>
+    </text:list-item>
+    <text:list-item>
+     <text:p text:style-name="P30"><text:soft-page-break/><text:span text:style-name="T22">I parametr</text:span><text:span text:style-name="T24">i</text:span><text:span text:style-name="T22"> </text:span><text:span text:style-name="T26">inseriti </text:span><text:span text:style-name="T29">non</text:span><text:span text:style-name="T26"> </text:span><text:span text:style-name="T22">rispetta</text:span><text:span text:style-name="T24">no</text:span><text:span text:style-name="T22"> la specifica degli input quindi l&apos;operazione </text:span><text:span text:style-name="T29">non</text:span><text:span text:style-name="T22"> va a buon fine ed il sistema </text:span><text:span text:style-name="T29">risponde con un messaggio di errore</text:span><text:span text:style-name="T26">.</text:span></text:p>
+     <text:p text:style-name="P35"><text:span text:style-name="T11">Condition</text:span><text:span text:style-name="T10"> </text:span></text:p>
      <text:list>
       <text:list-header>
-       <text:p text:style-name="P37">States</text:p>
+       <text:p text:style-name="P39">States</text:p>
        <text:list>
         <text:list-header>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Initial</text:span><text:span text:style-name="T10">: </text:span></text:p>
-         <text:p text:style-name="P36"><text:soft-page-break/><text:span text:style-name="T20">Intermediate</text:span><text:span text:style-name="T10">: </text:span></text:p>
-         <text:p text:style-name="P33"><text:span text:style-name="T18">Final</text:span><text:span text:style-name="T15">: </text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Initial</text:span><text:span text:style-name="T10">: </text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Intermediate</text:span><text:span text:style-name="T10">: </text:span></text:p>
+         <text:p text:style-name="P35"><text:span text:style-name="T18">Final</text:span><text:span text:style-name="T15">: </text:span></text:p>
         </text:list-header>
        </text:list>
-       <text:p text:style-name="P37">Files</text:p>
+       <text:p text:style-name="P39">Files</text:p>
        <text:list>
         <text:list-header>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Database</text:span><text:span text:style-name="T10">: </text:span></text:p>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Control files</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3"><text:s/></text:span></text:p>
-         <text:p text:style-name="P36"><text:span text:style-name="T20">Transaction files</text:span><text:span text:style-name="T10">: </text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Database</text:span><text:span text:style-name="T10">: </text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Control files</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T3"><text:s/></text:span></text:p>
+         <text:p text:style-name="P38"><text:span text:style-name="T20">Transaction files</text:span><text:span text:style-name="T10">: </text:span></text:p>
         </text:list-header>
        </text:list>
       </text:list-header>
      </text:list>
-     <text:p text:style-name="P24">Relationship</text:p>
-     <text:p text:style-name="P24">Timing</text:p>
-     <text:p text:style-name="P24">Response Time</text:p>
-     <text:p text:style-name="P24">Duration</text:p>
-     <text:p text:style-name="P28"/>
+     <text:p text:style-name="P27">Relationship</text:p>
+     <text:p text:style-name="P27">Timing</text:p>
+     <text:p text:style-name="P27">Response Time</text:p>
+     <text:p text:style-name="P27">Duration</text:p>
+     <text:p text:style-name="P31"/>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P35"><text:span text:style-name="T19">Test frame</text:span> </text:p>
+     <text:p text:style-name="P37"><text:span text:style-name="T19">Test frame</text:span> </text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P5"><text:tab/><text:span text:style-name="T7">Descrizione addebito</text:span><text:span text:style-name="T3">: </text:span><text:span text:style-name="T4">stringa </text:span><text:span text:style-name="T7">non</text:span><text:span text:style-name="T4"> </text:span><text:span text:style-name="T5">corretta</text:span></text:p>
    <text:p text:style-name="P9"><text:span text:style-name="T10"><text:tab/></text:span><text:span text:style-name="T27">Data di scadenza</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T21">stringa </text:span><text:span text:style-name="T10">corrett</text:span><text:span text:style-name="T21">a</text:span></text:p>
    <text:p text:style-name="P9"><text:span text:style-name="T10"><text:tab/></text:span><text:span text:style-name="T27">Importo addebito</text:span><text:span text:style-name="T10">: </text:span><text:span text:style-name="T21">stringa </text:span><text:span text:style-name="T10">corrett</text:span><text:span text:style-name="T21">a</text:span></text:p>
-   <text:p text:style-name="P29"><text:tab/></text:p>
-   <text:list xml:id="list35245491" text:continue-numbering="true" text:style-name="L1">
+   <text:p text:style-name="P10"><text:tab/></text:p>
+   <text:list xml:id="list31636766" text:continue-numbering="true" text:style-name="L1">
     <text:list-item>
-     <text:p text:style-name="P22">Vincoli ambientali</text:p>
-     <text:p text:style-name="P31">Connessione dati attiva</text:p>
-     <text:p text:style-name="P30"/>
+     <text:p text:style-name="P25">Vincoli ambientali</text:p>
+     <text:p text:style-name="P32">Connessione dati attiva</text:p>
+     <text:p text:style-name="P33"/>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Requisiti procedurali speciali</text:p>
-     <text:p text:style-name="P30">Non ci sono particolari procedure speciali.</text:p>
-     <text:p text:style-name="P30"/>
+     <text:p text:style-name="P25">Requisiti procedurali speciali</text:p>
+     <text:p text:style-name="P33">Non ci sono particolari procedure speciali.</text:p>
+     <text:p text:style-name="P33"/>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P22">Dipendenze da altri Test Case</text:p>
-     <text:p text:style-name="P30">Non ci sono particolari dipendenze con altri casi di test.</text:p>
+     <text:p text:style-name="P25">Dipendenze da altri Test Case</text:p>
+     <text:p text:style-name="P33">Non ci sono particolari dipendenze con altri casi di test.</text:p>
     </text:list-item>
    </text:list>
-   <text:p text:style-name="P11"/>
+   <text:p text:style-name="P12"/>
   </office:text>
  </office:body>
 </office:document>
