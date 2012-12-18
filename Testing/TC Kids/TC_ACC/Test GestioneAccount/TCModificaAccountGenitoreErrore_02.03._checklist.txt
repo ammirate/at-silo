@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Nessun controllo sull'inserimento se i dati sono inseriti in modo corretto o meno, solo un controllo sulla lunghezza della stringa

@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Non selezionando niente dalla lista il sitema mostra la schermata di avvenuto inserimento ma senza mostrsre però nome utente e password

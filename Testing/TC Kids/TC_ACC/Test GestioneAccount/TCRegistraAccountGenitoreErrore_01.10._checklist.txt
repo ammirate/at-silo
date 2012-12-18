@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Tutto come il test case, da un messaggio che dice di inserire il valore

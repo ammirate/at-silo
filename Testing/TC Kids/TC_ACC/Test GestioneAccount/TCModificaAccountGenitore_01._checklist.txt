@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+La modifica avviene ma non essendoci il refresh automatico per vedere le modifiche apportate di deve rientrare nella pagina di visualizzazione

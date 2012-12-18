@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Il sistema non salva la modifica se non si sceglie niente dal campo tipo
