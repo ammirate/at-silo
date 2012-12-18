@@ -280,7 +280,7 @@ public class ControlIscrizione {
             throw new DomandaIscrizioneException("Mancano i dati relativi al documento isee");
             
         DomandaIscrizione domandaModificata = (DomandaIscrizione) d.clone();
-        domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
+        domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -354,9 +354,13 @@ public class ControlIscrizione {
           DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cf_bambino);
           if (domanda == null)
               throw new DomandaIscrizioneException("Domanda non trovata");
+          if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
+          {
+              throw new DomandaIscrizioneException("La domanda non è risultata accettata in graduatoria");
+          }
           DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
           
-          domandaModificata.setStatoDomanda(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI);
+          domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI);
           // vengono modificati i campi passati come parametri
           if (malattieInfettive != null)
               domandaModificata.setMalattieInfettive(malattieInfettive);
@@ -369,6 +373,10 @@ public class ControlIscrizione {
           
           if (!dbServizio.inserisci(servizio))
               throw new ServizioException("Modifica fallita");
+          if(!bdDomandaIscrizione.replace(domanda, domandaModificata))
+          {
+              throw new DomandaIscrizioneException("Domanda non correttamente inoltrata");
+          }
           return true;
       } finally {
           db.chiudiConnessione();
