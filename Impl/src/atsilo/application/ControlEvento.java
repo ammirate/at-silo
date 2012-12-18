@@ -309,7 +309,12 @@ public class ControlEvento {
             db.chiudiConnessione();
         } 
     }
-    
+    /**
+     * 
+     * @param cc è una stringa che contiene le email separate da virgola 
+     * @return 
+     * una lista di utenti in cui è settato solo il campo per l'email
+     */
     private static ArrayList<Utente> convertiCC(String cc)
     {
         ArrayList<Utente> s=new ArrayList<Utente>(); 
