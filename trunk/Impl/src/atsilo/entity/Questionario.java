@@ -48,7 +48,6 @@ public class Questionario {
      * @param descrizione il paramentro è fissato
      * @param flag_rinuncia il paramentro è fissato
      * @param nome il paramentro è fissato
-     * @param id il paramentro è fissato
      * @param periodo_inizio il paramentro è fissato
      * @param pathname il paramentro è fissato
      */
