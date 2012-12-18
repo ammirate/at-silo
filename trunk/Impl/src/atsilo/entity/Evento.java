@@ -40,13 +40,13 @@ public class Evento {
      * La variabile organizzatore è nulla c'è bisogno di una lettura della classe EventPlanner
      */
     private Utente organizzatore;
-
+    
     /**
      * Costruttore vuoto
      */
     public Evento() {
     }
-  
+    
     /**
      * @param descrizione il paramentro è fissato
      * @param nome il paramentro è fissato
@@ -56,8 +56,7 @@ public class Evento {
      * @param organizzatore è settato dopo la lettura
      * @param path il parametro è fissato
      */
-    public Evento(int id,String descrizione, String nome, String cC, Date data,
-            String tipo,
+    public Evento(String descrizione, String nome, String cC, Date data, String tipo,
             Utente organizzatore, String path) {
         super();
         this.descrizione = descrizione;
@@ -67,7 +66,7 @@ public class Evento {
         this.tipo = tipo;
         this.organizzatore = organizzatore;
         this.path = path;
-        this.id=id;
+        // l'id viene settato nel layer storage, perchè è Autoincrement
     }
     /**
      * @return id
@@ -75,14 +74,14 @@ public class Evento {
     public int getId() {
         return id;
     }
-
+    
     /**
      * @param id nuovo id
      */
     public void setId(int id) {
         this.id = id;
     }
-
+    
     /**
      * Metodo che setta il campo descrizione
      * @param descrizione il parametro fissato
@@ -90,7 +89,7 @@ public class Evento {
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
-
+    
     /**
      * Metodo che prende il campo Descrizione
      * @return Descrizione il parametro inserito
@@ -98,7 +97,7 @@ public class Evento {
     public String getDescrizione() {
         return descrizione;
     }
-
+    
     /**
      * Metodo che setta il campo nome
      * @param nome il parametro fissato
@@ -106,7 +105,7 @@ public class Evento {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+    
     /**
      * Metodo che prende il campo Nome
      * @return Nome il parametro inserito
@@ -114,7 +113,7 @@ public class Evento {
     public String getNome() {
         return nome;
     }
-
+    
     /**
      * Metodo che setta il campo data
      * @param data il parametro fissato
@@ -122,7 +121,7 @@ public class Evento {
     public void setData(Date data) {
         this.data = data;
     }
-
+    
     /**
      * Metodo che prende il campo Data
      * @return data il parametro inserito
@@ -130,8 +129,8 @@ public class Evento {
     public Date getData() {
         return data;
     }
-
-   
+    
+    
     /**
      * Metodo che setta il parametro letto dalla classe EventPlanner
      * @param u è settato dopo la lettura
@@ -139,7 +138,7 @@ public class Evento {
     public void setOrganizzatore(Utente u) {
         this.organizzatore = u;
     }
-
+    
     /**
      * Metodo che prende il parametro letto dalla classe EventPlanner
      * @return organizzatore preso dalla lettura
@@ -147,7 +146,7 @@ public class Evento {
     public Utente getOrganizzatore() {
         return organizzatore;
     }
-
+    
     public void setCC(String CC) {
         this.CC = CC;
     }
@@ -155,12 +154,12 @@ public class Evento {
     public String getCC() {
         return CC;
     }
-
-
+    
+    
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
+    
     public String getTipo() {
         return tipo;
     }
@@ -168,7 +167,7 @@ public class Evento {
     public void setPath(String path) {
         this.path = path;
     }
-
+    
     public String getPath() {
         return path;
     }
