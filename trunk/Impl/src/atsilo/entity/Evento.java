@@ -9,8 +9,7 @@
  *-----------------------------------------------------------------
  * OWNER
  * Antonio Cesarano, 13/11/2012 (non responsabile)
- * REVISION
- * Andrea Micco, 6/12/2012
+ *
  *-----------------------------------------------------------------
  */
 
@@ -39,13 +38,15 @@ public class Evento {
     /**
      * La variabile organizzatore è nulla c'è bisogno di una lettura della classe EventPlanner
      */
-    private Utente organizzatore;
+    private EventPlanner organizzatore;
     
     /**
      * Costruttore vuoto
      */
     public Evento() {
     }
+    
+    
     
     /**
      * @param descrizione il paramentro è fissato
@@ -57,7 +58,7 @@ public class Evento {
      * @param path il parametro è fissato
      */
     public Evento(String descrizione, String nome, String cC, Date data, String tipo,
-            Utente organizzatore, String path) {
+            EventPlanner organizzatore, String path) {
         super();
         this.descrizione = descrizione;
         this.nome = nome;
@@ -68,51 +69,68 @@ public class Evento {
         this.path = path;
         // l'id viene settato nel layer storage, perchè è Autoincrement
     }
+    
+    
+    
+    
     /**
+     * Restituisce il valore dell'id dell'evento
+     * settato nel database in maniera autoincrementante
      * @return id
      */
     public int getId() {
         return id;
     }
     
+    
+    
     /**
-     * @param id nuovo id
+     * Setta l'id dell'evento
+     * @param nuovo id da assegnare all'evento
      */
     public void setId(int id) {
         this.id = id;
     }
     
+    
+    
     /**
      * Metodo che setta il campo descrizione
-     * @param descrizione il parametro fissato
+     * @param nuova descrizione da settare all'evento
      */   
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
     }
     
+    
+    
     /**
-     * Metodo che prende il campo Descrizione
-     * @return Descrizione il parametro inserito
+     * Metodo che restituisce il campo Descrizione
+     * @return descrizione dell'evento
      */
     public String getDescrizione() {
         return descrizione;
     }
     
+    
+    
     /**
      * Metodo che setta il campo nome
-     * @param nome il parametro fissato
+     * @param vuovo nome da settare all'evento
      */   
     public void setNome(String nome) {
         this.nome = nome;
     }
     
     /**
-     * Metodo che prende il campo Nome
-     * @return Nome il parametro inserito
+     * Metodo che restituisce il campo Nome
+     * @return nome dell'evento
      */
     public String getNome() {
         return nome;
     }
+    
+    
     
     /**
      * Metodo che setta il campo data
@@ -135,7 +153,7 @@ public class Evento {
      * Metodo che setta il parametro letto dalla classe EventPlanner
      * @param u è settato dopo la lettura
      */
-    public void setOrganizzatore(Utente u) {
+    public void setOrganizzatore(EventPlanner u) {
         this.organizzatore = u;
     }
     
@@ -143,32 +161,90 @@ public class Evento {
      * Metodo che prende il parametro letto dalla classe EventPlanner
      * @return organizzatore preso dalla lettura
      */
-    public Utente getOrganizzatore() {
+    public EventPlanner getOrganizzatore() {
         return organizzatore;
     }
     
+    
+    
+    /**
+     * 
+     * @param CC
+     */
     public void setCC(String CC) {
         this.CC = CC;
     }
     
+    
+    /**
+     * 
+     * @return
+     */
     public String getCC() {
         return CC;
     }
     
-    
+    /**
+     * 
+     * @param tipo
+     */
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
     
+    
+    /**
+     * 
+     * @return
+     */
     public String getTipo() {
         return tipo;
     }
     
+    
+    /**
+     * 
+     * @param path
+     */
     public void setPath(String path) {
         this.path = path;
     }
     
+    
+    
+    /**
+     * 
+     * @return
+     */
     public String getPath() {
         return path;
     }
+    
+    
+    
+    /**
+     * 
+     * @param classe
+     */
+    public void aggiungiClasse(Classe classe){
+        classi.add(classe);
+    }
+
+    
+    
+    /**
+     * @return classi
+     */
+    public List<Classe> getClassi() {
+        return classi;
+    }
+
+    /**
+     * @param classi nuovo classi
+     */
+    public void setClassi(List<Classe> classi) {
+        this.classi = classi;
+    }
+    
+    
 }
