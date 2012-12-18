@@ -81,7 +81,8 @@ public class ControlIscrizione {
         
         Database db = new Database();
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db); 
-        db.apriConnessione();
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
 
         DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cf_bambino);
         if(domanda == null)
@@ -159,7 +160,9 @@ public class ControlIscrizione {
      * @throws BambinoException 
      */
     public boolean presentaDomandaIscrizionePrimoStep(String codiceFiscaleBambino) throws DBConnectionException, AccountException, InserimentoDatiException, UtenteException, GenitoreException, SQLException, DomandaIscrizioneException, BambinoException{
-        Database db = new Database();        
+        Database db = new Database();
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         
         //controllo sul codice fiscale che deve essere a 16 cifre
@@ -661,6 +664,26 @@ public class ControlIscrizione {
         } 
     }
     
+    public List<OrarioUtente> listaOrariUtente() throws DomandaIscrizioneException, DBConnectionException, SQLException{
+        Database db = new Database();
+        DBOrarioUtente dbou = new DBOrarioUtente(db);
+        if(!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try{
+            List<OrarioUtente> toReturn = new ArrayList<OrarioUtente>();
+            
+            Iterable<OrarioUtente> it = dbou.getAll();
+            
+            for(OrarioUtente ou : it)
+            {
+                toReturn.add(ou);
+            }
+            return toReturn;
+        }
+        finally{
+            db.chiudiConnessione();
+        } 
+    }
     
     
     /**
