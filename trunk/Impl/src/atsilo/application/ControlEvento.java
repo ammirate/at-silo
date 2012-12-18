@@ -8,9 +8,7 @@ import atsilo.entity.Registro;
 import atsilo.exception.DBConnectionException;
 import atsilo.exception.EventoException;
 import atsilo.exception.RegistroException;
-import atsilo.storage.Database;
-import atsilo.test.storage.StubEvento;
-import atsilo.test.storage.StubRegistro;
+import atsilo.storage.*;
 
 import java.sql.Date;
 
@@ -32,7 +30,7 @@ import java.util.List;
  *-----------------------------------------------------------------
  */
 
-/*
+/**
  *-----------------------------------------------------------------
  * This file is licensed under GPL 3.0:
  * http://www.gnu.org/licenses/gpl-3.0.html
@@ -45,7 +43,7 @@ import java.util.List;
  * Antonio Cesarano, 27/11/2012 (non responsabile)
  * 
  *-----------------------------------------------------------------
- */
+ **/
 
 /*
  * ====EVENTO===
@@ -83,14 +81,23 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void inserisciEvento(String descrizione, String nome, List<String> cC, Date data,
-            String tipo, Date data2, List<Classe> classi,
-            EventPlanner organizzatore, String path) throws EventoException{
+    public void inserisciEvento(String descrizione, String nome, String cc, Date data,
+            String tipo,List<Classe> classi,EventPlanner organizzatore, String path) throws EventoException{
         Database db = new Database();
         
         if(!db.apriConnessione())
         {throw new EventoException("Connessione al DataBase fallita");}
-        try{
+        try
+        {
+            DBPartecipa dbPartecipa= new DBPartecipa(db);
+            DBEvento dbEvento= new DBEvento(db);
+            for (Classe classe : classi) 
+            {
+                Partecipa partecipa=new Partecipa(nome,data,classe);
+                dbPartecipa.inserisci(partecipa);
+            }
+            Evento evento =new Evento(descrizione, nome, cc, data, tipo,organizzatore, path);
+            dbEvento.inserisci(evento);
             
         }
         finally{
@@ -107,9 +114,8 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void modificaEvento(Evento evento,String descrizione, String nome, List<String> cC, Date data,
-            String tipo, Date data2, List<Classe> classi,
-            EventPlanner organizzatore, String path) throws DBConnectionException, EventoException{
+    public void modificaEvento(Evento evento,String descrizione, String nome, String cc, Date data,
+            String tipo,List<Classe> classi,EventPlanner organizzatore, String path) throws DBConnectionException, EventoException{
         Database db = new Database();
         StubEvento stub = new StubEvento(db);
         
@@ -134,15 +140,14 @@ public class ControlEvento {
      */
     public Evento eliminaEvento(Evento evento) throws DBConnectionException, EventoException{
         Database db = new Database();
-        StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            Evento toReturn = stub.rimuoviEvento(evento);
-            if(toReturn==null)
-                throw new EventoException("Evento inesistente");
-            return toReturn;
+            DBEvento dbEvento=new DBEvento(db);
+           
+            if(dbEvento.ricercaPerChiave(evento.getNome(),evento.getData())!=null);
+                dbEvento.delete(evento);
         }
         finally{
             db.chiudiConnessione();
@@ -159,15 +164,13 @@ public class ControlEvento {
      */
     public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) throws DBConnectionException, EventoException{
         Database db = new Database();
-        StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            List<Evento> toReturn = stub.ricercaEventoOrganizzatore(organizzatore);
-            if(toReturn==null || toReturn.isEmpty())
-                throw new EventoException("Nessun evento disponibile per questo utente");
-            return toReturn;
+            DBEvento dbEvento=new DBEvento(db);
+            return dbEvento.getEventiPerOrganizzatore(organizzatore);
+            
         }
         finally{
             db.chiudiConnessione();
@@ -185,35 +188,32 @@ public class ControlEvento {
      */
     public List<Evento> getEventiInData(Date data) throws DBConnectionException, EventoException{
         Database db = new Database();
-        StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            List<Evento> toReturn = stub.ricercaEventoData(data);
-            if(toReturn==null || toReturn.isEmpty())
-                throw new EventoException("Nessun evento disponibile in questa data");
-            return toReturn;
+            DBEvento dbEvento=new DBEvento(db);
+            return dbEvento.getEventiPerData(data);
+            
         }
         finally{
             db.chiudiConnessione();
-        }    
-    }
+        } 
+        }
+    
     public List<Evento> getEventiPerNome(String nome) throws DBConnectionException, EventoException{
-        Database db = new Database();
-        StubEvento stub = new StubEvento(db);
+ Database db = new Database();
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            List<Evento> toReturn = (List<Evento>) stub.ricercaEventoNome(nome);
-            if(toReturn==null || toReturn.isEmpty())
-                throw new EventoException("Nessun evento disponibile in questa data");
-            return toReturn;
+            DBEvento dbEvento=new DBEvento(db);
+            return dbEvento.getEventiPer(nome);
+            
         }
         finally{
             db.chiudiConnessione();
-        }    
+        } 
     }
 
     private List<String> convertiCC(String cc)
