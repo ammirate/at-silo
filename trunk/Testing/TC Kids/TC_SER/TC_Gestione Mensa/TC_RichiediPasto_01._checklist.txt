@@ -1,2 +1,5 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+La funzionalità implementata non è coerente con il RAD:
+non è presente il calendario per visualizzare i giorni, non vi è la tabella per visualizzare i bambini, non è possibile selezionare il bambino per la richiesta pasto che viene automaticamente richiesto per tutti i bambini del genitore loggato.
+Il sistema non addebita il supplemento pasto ai pagamenti

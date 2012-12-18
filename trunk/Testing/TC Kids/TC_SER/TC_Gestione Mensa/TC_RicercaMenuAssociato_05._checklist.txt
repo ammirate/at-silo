@@ -1,2 +1,3 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+Il campo ricerca permette di selezionare solo la Data, non di ricerca stringhe come nome, cognome del bambino, quindi non è possibile effettuare la ricerca indicata dal TC 

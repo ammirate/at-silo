@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Il sistema salva il menù modificato nonostante i parametri siano errati, senza lanciare un messaggio di errore come dovrebbe

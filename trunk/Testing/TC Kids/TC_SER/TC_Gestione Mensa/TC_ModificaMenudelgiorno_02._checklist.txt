@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Il sistema non lancia un messaggio di errore come dovrebbe, salvando il parametro Primo come intero

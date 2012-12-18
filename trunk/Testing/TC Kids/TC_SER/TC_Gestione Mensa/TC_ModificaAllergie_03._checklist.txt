@@ -1,2 +1,5 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+Il test nel sistema è diventato Modifica Malattie/Inserisci note con l'aggiunta del campo NOTE
+
+Il test non lancia un messaggio di errore all'aggiunta dell'allergia nel formato numerico, che viene regolarmente salvata nel sistema
