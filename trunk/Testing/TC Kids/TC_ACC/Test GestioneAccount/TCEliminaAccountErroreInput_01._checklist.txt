@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Non posso eseguire il test per un cambio radicale delle specifiche del rad

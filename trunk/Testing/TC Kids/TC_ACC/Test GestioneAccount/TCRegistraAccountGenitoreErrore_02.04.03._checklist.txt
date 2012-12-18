@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Come detto la data non rispetta il formato G/M/A, però ha tutti i controlli necessari

@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Nessuna anomalia a parte il fatto che nel rad la stringa e max 30 mentre nel sistema non ha limite

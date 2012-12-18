@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Il telefono non è obbligatorio

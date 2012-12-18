@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Controllo sull'inserimento dell'indirizzo email per il formato XXX@XXX.XXX

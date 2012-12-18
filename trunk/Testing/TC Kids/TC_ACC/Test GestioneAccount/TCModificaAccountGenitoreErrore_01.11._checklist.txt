@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Se non si seleziona nulla la modifica non viene fatta e quindi tutto resta invariato
