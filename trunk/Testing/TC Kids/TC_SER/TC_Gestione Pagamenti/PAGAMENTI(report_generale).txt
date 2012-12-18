@@ -1,0 +1,8 @@
+ALTRE ANNOTAZIONI DELLA GESTIONE:
+
+
+Manca la funzionalità applica sconto.
+Manca la funzionalità modifica pagamento.
+Il campo stato rimborso è presente solo nel RAD.
+In addebito pagamento mancavano i campi: beneficiario, percentuale di sconto, descrizione sconto 
+In visualizza estratto conto mancavano i campi: conto d'origine e codice ricevuta
