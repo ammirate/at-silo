@@ -225,9 +225,11 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
         temp.setVaccinazioni(r.getString("vaccinazioni"));
         temp.setMalattieInfettive(r.getString("malattie_infettive"));
-        }
         r.close();
         return temp;
+        }
+        else return null;
+        
     }
     
     /**
