@@ -277,4 +277,11 @@ public class DBEvento extends DBBeans <Evento> {
     }
     
     
+
+
+
+
+  //TODO public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) {gianfranco}   
+   //TODO public boolean ricercaPerChiave(String nome, Date data) {gianfranco}
+     
 }
