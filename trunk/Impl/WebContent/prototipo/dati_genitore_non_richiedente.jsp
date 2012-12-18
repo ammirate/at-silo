@@ -49,26 +49,20 @@ include
 	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 	  	List<Bambino> figli= new ArrayList<Bambino>();
 	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
+	  	
+	
+	  	
 
-			%>
-    <!--Popola la select con i nomi dei bambini del genitore richiedente-->
-	<script type=text/javascript>
-			function popolaSelect(){
-  	   		   objSelect = document.getElementById("select_bambini");
-			   <% for (int i=0;i<figli.size();i++){%>
-  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
-		<%} %>	
-			}
-	</script>
-    <%
+			%> <%
 	 //setta campi form una volta selezionato il nome del bambino
 	  String cfb=null;
-	 if (request.getParameter("select_bambini")!=null)
+	 if (request.getParameter("select_bambini")!=null )
 	  cfb=(String)request.getParameter("select_bambini");
 	 
 	  cdt=ControlDatiPersonali.getIstance();
-	 Genitore genitore=new Genitore();
-	 if (cfb!=null){ 
+	  Genitore genitore=new Genitore();
+	  
+	 if (cfb!=null && !cfb.equals("null")){ 
 		Bambino bambino_selezionato=new Bambino();
    		bambino_selezionato=cdt.getDatiBambino(cfb);
    	    genitore=cdt.getDatiGenitore(bambino_selezionato.getGenitoreNonRichiedente().getCodiceFiscale());
@@ -93,16 +87,11 @@ include
 		tipoContratto=genitore.getTipoContratto();  
 		sedeDiLavoro=genitore.getDipendentePresso();
 	 }
- %> 
-  <!--Script sottomette  form select bambino--> 
-  <script>
+ %> <!--Script sottomette  form select bambino--> <script>
   function submitForm(){
   document.forms[0].submit();
   }
-  </script>
-
- <!--Script per gestire i form --> 
- <script type="text/javascript">
+  </script> <!--Script per gestire i form --> <script type="text/javascript">
 		function settaAttributi(slf) {
 			if (document.getElementById("codice_fiscale_genitore_non_richiedente").value=="")
 				return false;
@@ -143,22 +132,43 @@ include
 			<tr>
 				<td colspan="1"><p>
 						<select name="select_bambini" id="select_bambini"
-							onfocus="popolaSelect(this)"
-							onchange="submitForm()">
-							<option value="null" selected>Selezionare Bambino</option>
-			      </select>
+							onfocus="popolaSelect(this)" onchange="submitForm()">
+							<% out.print("<option value='null' >Selezionare Bambino</option>");
+						String selected="";
+							  for (int i=0;i<figli.size();i++){
+								  if (figli.get(i).getCodiceFiscale().equals(cfb))
+									  selected="selected";
+							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
+							  }
+						%>
+						</select>
 					</p></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>
 				<td>In qualita' di</td>
-				<td><select id="qualita" name="qualita">
-				  <option value="null" selected>Seleziona</option>
-						<option value="Padre">Padre</option>
-						<option value="Madre">Madre</option>
-						<option value="Tutore">Tutore</option>
-						<option value="Affidatario">Affidatario</option>
-			  </select></td>
+				<td><select id="rapportoParentela" name="rapportoParentela">
+				   <%
+				     out.append("<option value='null' selected>Seleziona</option>");
+							  if (rapportoParentela.equals("Padre"))
+						        out.append("<option value='Padre' selected>Padre</option>");
+							  else
+								  out.append("<option value='Padre' >Padre</option>");
+							  if (rapportoParentela.equals("Madre"))
+							        out.print("<option value='Madre' selected>Madre</option>");
+							  else
+								  out.append("<option value='Madre' >Madre</option>");
+							  if (rapportoParentela.equals("Tutore"))
+								  out.append("<option value='Tutore' selected>Tutore</option>");
+							  else
+								  out.append("<option value='Tutore' >Tutore</option>");
+							  if (rapportoParentela.equals("Affidatario"))
+								  out.append("<option value='Affidatario' selected>Affidatario</option>");
+							  else
+								  out.append("<option value='Affidatario' >Affidatario</option>");
+		
+				   %>
+				</select></td>
 				<td>&nbsp;</td>
 				<td>&nbsp;</td>
 			</tr>
@@ -286,10 +296,10 @@ include
 				<td>Tipo contratto</td>
 				<td><select id="tipo_contratto_genitore_non_richiedente"
 					name="tipo_contratto_genitore_non_richiedente">
-				  <option value="null" selected>Seleziona</option>
+						<option value="null" selected>Seleziona</option>
 						<option value="A tempo pieno">A tempo pieno</option>
 						<option value="Part time">Part time</option>
-			  </select></td>
+				</select></td>
 			</tr>
 			<tr>
 				<td>Sede di lavoro</td>

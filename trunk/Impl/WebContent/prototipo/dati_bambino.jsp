@@ -26,15 +26,7 @@ include
 		  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 		  	List<Bambino> figli= new ArrayList<Bambino>();
 		  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli
-	%> <!--Popola la select con i nomi dei bambini del genitore richiedente-->
-<script type=text/javascript>
-			function popolaSelect(){
-  	   		   objSelect = document.getElementById("select_bambini");
-			   <% for (int i=0;i<figli.size();i++){%>
-  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
-		<%} %>	
-			}
-	</script>
+	%> 
      <script>
 		function submitForm() {
 			document.forms[0].submit();
@@ -61,7 +53,7 @@ include
  	  cdt=ControlDatiPersonali.getIstance();
  	 Genitore genitore=new Genitore();
  	 
- 	 if (cfb!=null){ 
+ 	 if (cfb!=null && ! cfb.equals("null")){ 
  		Bambino bambino_selezionato=new Bambino();
     	bambino_selezionato=cdt.getDatiBambino(cfb);
  		cognome=bambino_selezionato.getCognome(); 
@@ -124,10 +116,16 @@ include
 			</tr>
 			<tr>
 				<td colspan="2"><select name="select_bambini" id="select_bambini"
-							onfocus="popolaSelect(this)"
-							onchange="submitForm()">
-				  <option value="null" selected>Selezionare Bambino</option>
-</select></td>
+							onfocus="popolaSelect(this)" onchange="submitForm()">
+							<% out.print("<option value='null' >Selezionare Bambino</option>");
+						String selected="";
+							  for (int i=0;i<figli.size();i++){
+								  if (figli.get(i).getCodiceFiscale().equals(cfb))
+									  selected="selected";
+							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
+							  }
+						%>
+						</select></td>
 				<td>&nbsp;</td>
 			</tr>
 			<tr>

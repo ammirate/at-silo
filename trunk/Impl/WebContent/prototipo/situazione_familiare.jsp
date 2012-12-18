@@ -15,33 +15,23 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 <img width="209" border="0" alt="" height="1"
 	src="atsilo_images/clearpixel.gif">
 </td>
-<td class="content" valign="top" bgcolor="#ffffff">
-<%@include file="atsilo_files/sidebar_top_bambino.jsp"%>
+<td class="content" valign="top" bgcolor="#ffffff"><%@include
+		file="atsilo_files/sidebar_top_bambino.jsp"%>
 	<%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"%>
-	
+
 	<%
-		// setto select bambino
+		// istanzio variabili per select bambini
 			ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
-	 		//ControlIscrizione cisc= ControlIscrizione.getIstance();
+	 		ControlIscrizione cisc= ControlIscrizione.getIstance();
 		   	Utente utente=cdt.getValoriUtente(username);
 		  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 		  	List<Bambino> figli= new ArrayList<Bambino>();
 		  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli
-	%> 
-	<!--Popola la select con i nomi dei bambini del genitore richiedente-->
-	<script type=text/javascript>
-			function popolaSelect(){
-  	   		   objSelect = document.getElementById("select_bambini");
-			   <% for (int i=0;i<figli.size();i++){%>
-  	  		       objSelect.options[<%=i+1%>] = new Option('<%=figli.get(i).getNome()%>','<%=figli.get(i).getCodiceFiscale()%>');
-	<%} %>
-		}
-	</script> <script>
+	%> <script>
 		function submitForm() {
 			document.forms[0].submit();
 		}
-	</script> 
-	<%
+	</script> <%
  	//setta campi form una volta selezionato il nome del bambino
  	
  	    String cfb=null;
@@ -63,15 +53,14 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
  	 cdt=ControlDatiPersonali.getIstance();
  	 Genitore genitore=new Genitore();
  	
- 	 
- 	 if (cfb!=null){ 
+ 	if (cfb!=null && !cfb.equals("null")){ 
  		Bambino bambino_selezionato=new Bambino();
     	bambino_selezionato=cdt.getDatiBambino(cfb);
-    	//DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(cfb);
-       	//if (domandaIscrizione!=null){
-       	  // Float isee_temp=domandaIscrizione.getIsee();
-       	//isee=isee_temp.toString();
- 	 	//}
+    	DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(cfb);
+       	if (domandaIscrizione!=null){
+       	   Float isee_temp=domandaIscrizione.getIsee();
+       	isee=isee_temp.toString();
+ 	 	}
  	 }
  %> <!--Script per gestire i form --> <!--Script per gestire i form -->
 	<script type="text/javascript">
@@ -111,10 +100,15 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 			</tr>
 			<tr>
 				<td colspan="2"><select name="select_bambini"
-					id="select_bambini" onfocus="popolaSelect(this)"
-					onchange="submitForm()">
-						<option value="null" selected>Selezionare Bambino</option>
-						<option value="aggiungi">Aggiungere Bambino</option>
+					id="select_bambini" onchange="submitForm()">
+						<% out.print("<option value='null' >Selezionare Bambino</option>");
+						String selected="";
+							  for (int i=0;i<figli.size();i++){
+								  if (figli.get(i).getCodiceFiscale().equals(cfb))
+									  selected="selected";
+							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
+							  }
+						%>
 				</select></td>
 				<td>&nbsp;</td>
 			</tr>
