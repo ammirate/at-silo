@@ -105,25 +105,27 @@ public class DBEvento extends DBBeans <Evento> {
         a.setTipo(r.getString("tipo"));
         a.setId(r.getInt("id"));
         
-        
-        Utente u=new Utente();
+        //controlla da qua
+
+        EventPlanner u=null;
         
         
         if(r.getString("psico_pedagogo")!=null){
             u=new Psicopedagogo();
-            u.setCodiceFiscale(r.getString("psico_pedagogo"));
+            ((Utente) u).setCodiceFiscale(r.getString("psico_pedagogo"));
         }
         
         if(r.getString("personale_asilo")!=null){
             u=new PersonaleAsilo();
-            u.setCodiceFiscale(r.getString("personale_asilo"));
+            ((Utente) u).setCodiceFiscale(r.getString("personale_asilo"));
         }
         if(r.getString("educatore_didattico")!=null){
             u=new EducatoreDidattico();
-            u.setCodiceFiscale(r.getString("educatore_didattico"));
+            ((Utente) u).setCodiceFiscale(r.getString("educatore_didattico"));
         }
         a.setOrganizzatore(u);
-        
+        //a qua
+
         return a;
         
     }
@@ -190,25 +192,25 @@ public class DBEvento extends DBBeans <Evento> {
             a.setTipo(r.getString("tipo"));
             a.setId(r.getInt("id"));
             
-            
-            Utente u=new Utente();
+            //controlla da qua
+            EventPlanner u=null;
             
             
             if(r.getString("psico_pedagogo")!=null){
                 u=new Psicopedagogo();
-                u.setCodiceFiscale(r.getString("psico_pedagogo"));
+                ((Utente) u).setCodiceFiscale(r.getString("psico_pedagogo"));
             }
             
             if(r.getString("personale_asilo")!=null){
                 u=new PersonaleAsilo();
-                u.setCodiceFiscale(r.getString("personale_asilo"));
+                ((Utente) u).setCodiceFiscale(r.getString("personale_asilo"));
             }
             if(r.getString("educatore_didattico")!=null){
                 u=new EducatoreDidattico();
-                u.setCodiceFiscale(r.getString("educatore_didattico"));
+                ((Utente) u).setCodiceFiscale(r.getString("educatore_didattico"));
             }
             a.setOrganizzatore(u);          
-            
+            //a qua
             
         }else{
             r.close();
@@ -245,25 +247,27 @@ public class DBEvento extends DBBeans <Evento> {
             a.setTipo(r.getString("tipo"));
             a.setId(r.getInt("id"));
             
-            Utente u=new Utente();
             
+            //controlla da qua
+            EventPlanner u=null;
+                        
             
             if(r.getString("psico_pedagogo")!=null){
                 u=new Psicopedagogo();
-                u.setCodiceFiscale(r.getString("psico_pedagogo"));
+                ((Utente) u).setCodiceFiscale(r.getString("psico_pedagogo"));
             }
             
             if(r.getString("personale_asilo")!=null){
                 u=new PersonaleAsilo();
-                u.setCodiceFiscale(r.getString("personale_asilo"));
+                ((Utente) u).setCodiceFiscale(r.getString("personale_asilo"));
             }
             if(r.getString("educatore_didattico")!=null){
                 u=new EducatoreDidattico();
-                u.setCodiceFiscale(r.getString("educatore_didattico"));
+                ((Utente) u).setCodiceFiscale(r.getString("educatore_didattico"));
             }
             a.setOrganizzatore(u);          
             l.add(a);
-            
+            // a qua
         }
         if(l.size()==0){
             r.close();
