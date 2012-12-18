@@ -115,7 +115,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
         
         Assegnazione[] DBAssign = new Assegnazione[2];
         DBAssign[0] = DBPartecipa_assegnazione;
-        DBAssign[2] = DBPartecipa_assegnazione2; 
+        DBAssign[1] = DBPartecipa_assegnazione2; 
         
         return DBAssign;
     }
