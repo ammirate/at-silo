@@ -37,9 +37,9 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  <%
  	if ((request.getParameter("successo")) != null) {
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+ 			out.print("<script type=text/javascript>alert('Presentazione domanda effettuata con successo')</script>");
  		} else {
- 			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+ 			out.print("<script type=text/javascript>alert('Presentazione domanda fallita. Compila correttamente i campi')</script>");
  		}
  	}
  %>
