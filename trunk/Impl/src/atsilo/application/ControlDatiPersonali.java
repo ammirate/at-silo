@@ -418,7 +418,7 @@ public class ControlDatiPersonali {
         DBBambino dbBambino = new DBBambino(db);
         
         db.apriConnessione();
-        List<Bambino> lista = null;
+        List<Bambino> lista = new ArrayList<Bambino>();
         
         try {
             lista = dbBambino.ricercaFigliGenitore(cf_genitore);

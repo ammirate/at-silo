@@ -264,7 +264,7 @@ public class DBBambino extends DBBeans<Bambino> {
             } 
             if(l.size()==0){
                 r.close();
-                return null;
+                return l;
             }else{
             r.close();
             

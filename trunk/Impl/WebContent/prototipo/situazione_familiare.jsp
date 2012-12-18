@@ -99,15 +99,24 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 
 			</tr>
 			<tr>
-				<td colspan="2"><select name="select_bambini"
-					id="select_bambini" onchange="submitForm()">
-						<% out.print("<option value='null' >Selezionare Bambino</option>");
-						String selected="";
+				<td colspan="2">
+						
+						<% 
+						if(figli.size()>0)
+						{
+							out.print("<select name='select_bambini' id='select_bambini' onchange='submitForm()'><option value='null' >Selezionare Bambino</option>");
+							String selected="";
 							  for (int i=0;i<figli.size();i++){
 								  if (figli.get(i).getCodiceFiscale().equals(cfb))
 									  selected="selected";
 							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
 							  }
+						}
+						else
+						{
+							out.print("<em><b>E' necessario inserire un bambino</b></em>");
+							return;
+						}
 						%>
 				</select></td>
 				<td>&nbsp;</td>
