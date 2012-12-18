@@ -14,6 +14,17 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_iscrizione.jsp"
  %>
+ <%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"%>
+
+	<%
+		// istanzio variabili per stato iscriizone
+			ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+	 		ControlIscrizione cisc= ControlIscrizione.getIstance();
+		   	Utente utente=cdt.getValoriUtente(username);
+		  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
+		  	List<Bambino> figli= new ArrayList<Bambino>();
+		  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli
+	%> 
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
     <tr>
