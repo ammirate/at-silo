@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Nessuna, il sistema mostra di verificare nome utente e password come previsto nel tc
