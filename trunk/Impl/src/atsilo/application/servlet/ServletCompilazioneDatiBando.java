@@ -342,10 +342,15 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
                     
                 } else 
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
-            } catch (BambinoException e) {
+            } catch (DomandaIscrizioneException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-            } catch (DBConnectionException e) {
+            } 
+            catch (BambinoException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }
+            catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (InserimentoDatiException e) {

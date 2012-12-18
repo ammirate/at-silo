@@ -441,6 +441,7 @@ public class ControlDatiPersonali {
      * @throws DBConnectionException 
      * @throws BambinoException
      * @throws InserimentoDatiException 
+     * @throws DomandaIscrizioneException 
      */
     public boolean inserisciBambino(String username,Date dataNascita, String nome, String cognome,
             String codiceFiscale,  String comuneNascita,
@@ -448,10 +449,11 @@ public class ControlDatiPersonali {
             String numeroCivicoResidenza, String capResidenza, String comuneResidenza,
             String provinciaResidenza, String indirizzoDomicilio,
             String numeroCivicoDomicilio, String capDomicilio, String comuneDomicilio,
-            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, Genitore genitore_non_richiedente, List<Assenza> assenze, String iscrizioneClasse) throws BambinoException, DBConnectionException, InserimentoDatiException{
+            String provinciaDomicilio, String categoriaAppartenenza, int classe, Genitore genitore_richiedente, Genitore genitore_non_richiedente, List<Assenza> assenze, String iscrizioneClasse) throws BambinoException, DBConnectionException, InserimentoDatiException, DomandaIscrizioneException{
         
         Database db = new Database();
         DBBambino dbbamb = new DBBambino(db); 
+        DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         //controllo sul codice fiscale che deve essere a 16 cifre
@@ -459,6 +461,8 @@ public class ControlDatiPersonali {
             throw new InserimentoDatiException("Il codice fiscale non è valido");
 
          Bambino bambino;
+         DomandaIscrizione di = new DomandaIscrizione();
+         DomandaIscrizione nuovaDomanda = new DomandaIscrizione();
         Bambino lettoDalDb=null; //Questa inizializzazione è pericolosa ma volontaria
         try {
             lettoDalDb=dbbamb.ricercaBambinoPerCodFiscale(codiceFiscale);
@@ -567,13 +571,18 @@ public class ControlDatiPersonali {
                 provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, 
                 provinciaDomicilio, categoriaAppartenenza, classe, genitore_richiedente, genitore_non_richiedente, assenze, iscrizioneClasse);
         }
-       
+        di.setBambino(bambino);
+        di.setGenitore(bambino.getGenitore());
         try{
             if(lettoDalDb==null)
             {
                 //Inserisci nuovo bambino
                 if(!dbbamb.inserisci(bambino))
                     throw new BambinoException("Inserimento fallito");
+                if(!dbdi.inserisci(di))
+                {
+                    throw new DomandaIscrizioneException("Impossibile inserire domanda iscrizione");
+                }
             }
             else
             {
@@ -819,6 +828,7 @@ public class ControlDatiPersonali {
         db.apriConnessione();
         DBAccount dbAccount = new DBAccount(db);
         DBGenitore dbGenitore = new DBGenitore(db);
+        
         DBEducatoreDidattico dbEducatoreDidattico = new DBEducatoreDidattico(db);
         DBPersonaleAsilo dbPersonaleAsilo = new DBPersonaleAsilo(db);
         DBPsicopedagogo dpPsicopedagogo = new DBPsicopedagogo(db);
