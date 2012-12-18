@@ -1,0 +1,47 @@
+Inserimento bozza
+Codice Fiscale: nessun controllo
+Nome: nessun controllo
+Cognome: nessun controllo
+Data di nascita: nessun controllo
+Comune di nascita: nessun controllo
+Cittadinanza: nessun controllo
++ Fascia utenza: nessun controllo
+- Indirizzo: non previsto nel sistema ma presente nel rad
+- Comune: non previsto nel sistema ma presente nel rad
+- Residenza: non previsto nel sistema ma presente nel rad
+- Cap: non previsto nel sistema ma presente nel rad
+- Numero telefono: non previsto nel sistema ma presente nel rad
+- Fax: non previsto nel sistema ma presente nel rad
+- Email: non previsto nel sistema ma presente nel rad
+
+
+
+modifica bozza di iscrizione
+Codice Fiscale: solo controllo sui 16 caratteri ma non su quello scritto
+Nome: nessun controllo
+Cognome: nessun controllo
+Data di nascita: nessun controllo, posso mettere date future, e nella modifica il numero dei mesi 
+Comune di nascita: nessun controllo
+Cittadinanza: nessun controllo
++ Fascia utenza: menù a tendina da cui scegliere
+- Indirizzo: non previsto nel sistema ma presente nel rad
+- Comune: non previsto nel sistema ma presente nel rad
+- Residenza: non previsto nel sistema ma presente nel rad
+- Cap: non previsto nel sistema ma presente nel rad
+- Numero telefono: non previsto nel sistema ma presente nel rad
+- Fax: non previsto nel sistema ma presente nel rad
+- Email: non previsto nel sistema ma presente nel rad
+
+La domanda accettata non puo essere modificata, nel rad questa modifica era prevista
+
+Sottomissione Bozza: se i campi sono vuoti il sistema ti dice che ci sono campi errati. La sottomissione avviene nei modi giusti
+
+Convalida domanda iscrizione: avviene secondo le aspettative.
+
+Completamento domanda iscrizione: è un test che non può avvenire quindi che però è presente nel rad.
+
+Eliminazione bozza e domanda: vengono messe nella categoria eliminate ma restano presenti nel sistema e sono ancora visibili all'utente.
+
+La ricerca delle bozze non si può fare perchè non è presente nel sistema anche se nel rad era prevista
+
+
