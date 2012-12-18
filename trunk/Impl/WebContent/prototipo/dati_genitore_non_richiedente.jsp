@@ -66,26 +66,29 @@ include
 		Bambino bambino_selezionato=new Bambino();
    		bambino_selezionato=cdt.getDatiBambino(cfb);
    	    genitore=cdt.getDatiGenitore(bambino_selezionato.getGenitoreNonRichiedente().getCodiceFiscale());
-		cognome=genitore.getCognome(); 
-		nome=genitore.getNome();
-		codiceFiscale=genitore.getCodiceFiscale(); 
-		dataNascita="dataNascita" ;
- 	    comuneNascita=genitore.getComuneNascita(); 
-		cittadinanza=genitore.getcittadinanza(); 
-		indirizzoResidenza=genitore.getIndirizzoResidenza(); 
-		numeroCivicoResidenza=genitore.getNumeroCivicoResidenza(); 
-		capResidenza=genitore.getCapResidenza(); 
-		comuneResidenza=genitore.getComuneResidenza(); 
-		provinciaResidenza=genitore.getProvinciaResidenza();  
-		indirizzoDomicilio=genitore.getIndirizzoDomicilio();  
-		numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();  
-		capDomicilio=genitore.getCapDomicilio();  
-		comuneDomicilio=genitore.getComuneDomicilio();  
-		provinciaDomicilio=genitore.getProvinciaDomicilio();  
-		rapportoParentela=genitore.getRapportoParentela();  
-		condizioneLavorativa=genitore.getCondizioneLavorativa();  
-		tipoContratto=genitore.getTipoContratto();  
-		sedeDiLavoro=genitore.getDipendentePresso();
+   	    if(genitore!=null)
+   	    {
+	   	    cognome=genitore.getCognome(); 
+			nome=genitore.getNome();
+			codiceFiscale=genitore.getCodiceFiscale(); 
+			dataNascita="dataNascita" ;
+	 	    comuneNascita=genitore.getComuneNascita(); 
+			cittadinanza=genitore.getcittadinanza(); 
+			indirizzoResidenza=genitore.getIndirizzoResidenza(); 
+			numeroCivicoResidenza=genitore.getNumeroCivicoResidenza(); 
+			capResidenza=genitore.getCapResidenza(); 
+			comuneResidenza=genitore.getComuneResidenza(); 
+			provinciaResidenza=genitore.getProvinciaResidenza();  
+			indirizzoDomicilio=genitore.getIndirizzoDomicilio();  
+			numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();  
+			capDomicilio=genitore.getCapDomicilio();  
+			comuneDomicilio=genitore.getComuneDomicilio();  
+			provinciaDomicilio=genitore.getProvinciaDomicilio();  
+			rapportoParentela=genitore.getRapportoParentela();  
+			condizioneLavorativa=genitore.getCondizioneLavorativa();  
+			tipoContratto=genitore.getTipoContratto();  
+			sedeDiLavoro=genitore.getDipendentePresso();
+   	    }
 	 }
  %> <!--Script sottomette  form select bambino--> <script>
   function submitForm(){
@@ -93,8 +96,8 @@ include
   }
   </script> <!--Script per gestire i form --> <script type="text/javascript">
 		function settaAttributi(slf) {
-			if (document.getElementById("codice_fiscale_genitore_non_richiedente").value=="")
-				return false;
+			/*if (document.getElementById("codice_fiscale_genitore_non_richiedente").value=="")
+				return false;*/
 			document
 					.getElementById("dati_bando")
 					.setAttribute("action",
