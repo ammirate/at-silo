@@ -554,15 +554,14 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
 
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE stato_convalidazione=?");
-        stmt.setString(1, AtsiloConstants.STATO_DOMANDA_SECONDO_STEP);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nota_esclusione IS NULL ORDER BY punteggio DESC");
         ResultSet r= stmt.executeQuery();
         String[] ggmmaa_inizio = inizio.split("-");
         String[] ggmmaa_fine = fine.split("-");
-        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0]),
-                Integer.parseInt(ggmmaa_inizio[1]),
+        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0])-1900,
+                Integer.parseInt(ggmmaa_inizio[1])-1,
                 Integer.parseInt( ggmmaa_inizio[2]));
-        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
        while (r.next()){
             DomandaIscrizione temp=new DomandaIscrizione();
             Bambino b=new Bambino();
@@ -602,6 +601,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
             temp.setVaccinazioni(r.getString("vaccinazioni"));
             temp.setMalattieInfettive(r.getString("malattie_infettive"));
+            System.out.println(data_inizio +"<"+temp.getDataPresentazione()+"<"+data_fine);
             if(temp.getDataPresentazione().after(data_inizio) && temp.getDataPresentazione().before(data_fine))
             {
                 toReturn.add(temp);
@@ -615,15 +615,14 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
 
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE stato_convalidazione=?");
-        stmt.setString(1, AtsiloConstants.STATO_DOMANDA_RIFIUTATA);
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nota_esclusione IS NOT NULL");
         ResultSet r= stmt.executeQuery();
         String[] ggmmaa_inizio = inizio.split("-");
         String[] ggmmaa_fine = fine.split("-");
-        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0]),
-                Integer.parseInt(ggmmaa_inizio[1]),
+        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0])-1900,
+                Integer.parseInt(ggmmaa_inizio[1])-1,
                 Integer.parseInt( ggmmaa_inizio[2]));
-        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
        while (r.next()){
             DomandaIscrizione temp=new DomandaIscrizione();
             Bambino b=new Bambino();

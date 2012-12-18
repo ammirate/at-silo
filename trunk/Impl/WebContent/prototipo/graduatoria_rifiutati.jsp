@@ -18,7 +18,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <img width="209" border="0" alt="" height="1"
 	src="atsilo_images/clearpixel.gif">
 </td>
-<td class="content" valign="top" bgcolor="#ffffff"><table
+<td class="content" valign="top" bgcolor="#ffffff"><h2><em>Graduatoria Esclusi</em></h2><table
 		cellspacing="10" cellpadding="0" border="0" width="100%">
 		<tbody>
 			<tr>
@@ -26,6 +26,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
+								
 <table class="tabella_form">
 <%
 	ControlGestioneBando crt = ControlGestioneBando.getIstance();
@@ -40,7 +41,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 		int k=1;
 		for(int i=0;i<n;i++){
 			out.append("<tr><td>")
-			.append(""+k)
+			.append("Escluso "+k)
 			.append("</td><td>")
 			.append(crt.getGraduatoriaEsclusi().get(i).getBambino().getNome())
 			.append("</td><td>")

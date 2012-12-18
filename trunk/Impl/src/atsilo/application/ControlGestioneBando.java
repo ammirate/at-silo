@@ -129,8 +129,8 @@ public class ControlGestioneBando {
     }
     
     /**
-     * Restituisce la graduatoria degli idonei dell'ultimo bando.
-     * @return
+     * Restituisce la graduatoria degliidonei dell'ultimo bando.
+     * @return la lista se il bando è concluso, altrimenti null.
      */
     public List<DomandaIscrizione> getGraduatoriaIdonei()
     {
@@ -147,13 +147,10 @@ public class ControlGestioneBando {
             Date now = new Date(System.currentTimeMillis());
             String fine = bando.getDataFineBando();
             String[] ggmmaa_fine = fine.split("-");
-            Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+            Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
             if(now.after(data_fine))
             {
                 List<DomandaIscrizione> ldi = dbdi.ricercaDomandeConPunteggioInIntervalloDiConsegna(inizio, fine);
-                DomandaEtaComparator comp = new DomandaEtaComparator();
-                //Riordina per età dei bambini
-                Collections.sort(ldi, comp);
                 for(DomandaIscrizione dom : ldi)
                 {
                     //Riempio i bean semivuoti (hanno solo i CF)
@@ -199,13 +196,10 @@ public class ControlGestioneBando {
             Date now = new Date(System.currentTimeMillis());
             String fine = bando.getDataFineBando();
             String[] ggmmaa_fine = fine.split("-");
-            Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0]),Integer.parseInt(ggmmaa_fine[1]),Integer.parseInt(ggmmaa_fine[2]));
+            Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
             if(now.after(data_fine))
             {
                 List<DomandaIscrizione> ldi = dbdi.ricercaDomandeEscluseInIntervalloDiConsegna(inizio, fine);
-                DomandaEtaComparator comp = new DomandaEtaComparator();
-                //Riordina per età dei bambini
-                Collections.sort(ldi, comp);
                 for(DomandaIscrizione dom : ldi)
                 {
                     //Riempio i bean semivuoti (hanno solo i CF)
