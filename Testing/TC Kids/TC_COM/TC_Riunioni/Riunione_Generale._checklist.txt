@@ -1,0 +1,6 @@
+Fatto [x]
+Eventuali anomalie rilevate:
+inserito titolo di 4 caratteri, mostra errore inserire minimo 4 caratteri.
+descrizione è possibile scrivere nel mezzo della text area.
+la data 12-12-201 viene inserita, dovrebbe dare errore.
+inserisco stringhe invece dell'ora e non mi da errore ma salva la modifica.
