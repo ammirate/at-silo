@@ -227,7 +227,8 @@ public class DBGenitore extends DBBeans<Genitore> {
         String s=null;
         if(r.next()){
             s = r.getString("categoria_appartenenza");
-        }
+        }            
+        r.close();
         return s;
         
     }
@@ -281,6 +282,10 @@ public class DBGenitore extends DBBeans<Genitore> {
             l.add(p);
 
         }
+       if(l.size()==0){
+           r.close();
+           return null;
+       }
         r.close();
         
         return l;
