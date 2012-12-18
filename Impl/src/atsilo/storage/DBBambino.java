@@ -192,132 +192,7 @@ public class DBBambino extends DBBeans<Bambino> {
     } 
     
     
-    /**
-     * ricerca un bambino per data di nascita
-     * @param d è la data di nascita da ricercare
-     * @return lista di bambini nati il giorno d. La lista può contenere anche un solo bambino o può essere vuota se nel database non ci sono bambinin nati in quel giorno
-     *
-     * @throws SQLException
-     */
-  /*  public List<Bambino> ricercaBambinoPerDataNascita(Date d) throws SQLException{
-        Bambino b=new Bambino();
-        List<Bambino> lb=new ArrayList<Bambino>();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE data = ?");
-            tabella.setParam(stmt, 1, "data", d);
-            ResultSet r = stmt.executeQuery();
-        
-        while(r.next())
-        {
-            b.setNome(r.getString("nome"));
-            b.setCognome(r.getString("cognome"));
-            b.setCodiceFiscale(r.getString("codice_fiscale"));
-            b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzoDomicilio(r.getString("indirizzo"));
-            b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
-            b.setClasse(r.getInt("classe"));
-            Genitore gen=new Genitore();
-            String g=r.getString("genitore");
-            gen.setCodiceFiscale(g);
-            b.setGenitore(gen);
-            
-            lb.add(b);
-            
-        }
-        r.close();
-        return lb;
-    } 
-    
-    
-    /**
-     * ricerca per nome
-     * @param nome
-     * @return lista di bambini
-     * @throws SQLException
-     */
-  /*  public List<Bambino> ricercaBambinoPerNome(String nome) throws SQLException{
-        Bambino b=new Bambino();
-        List<Bambino> lb=new ArrayList<Bambino>();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nome = ?");
-            tabella.setParam(stmt, 1, "nome", nome);
-            ResultSet r = stmt.executeQuery();        
-        while(r.next())
-        {
-            b.setNome(r.getString("nome"));
-            b.setCognome(r.getString("cognome"));
-            b.setCodiceFiscale(r.getString("codice_fiscale"));
-            b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzoDomicilio(r.getString("indirizzo"));
-            b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
-            b.setClasse(r.getInt("classe"));
-            Genitore gen=new Genitore();
-            String g=r.getString("genitore");
-            gen.setCodiceFiscale(g);
-            b.setGenitore(gen);
-            
-            lb.add(b);
-           
-        }
-        r.close();
-        return lb;
-    }
-    
-    
-    /**
-     * ricerca per cognome
-     * @param cognome
-     * @return lista di bambini
-     * @throws SQLException
-     */
- /*   public List<Bambino> ricercaBambinoPerCognome(String cognome) throws SQLException{
-        Bambino b=new Bambino();
-        List<Bambino> lb=new ArrayList<Bambino>();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE cognome = ?");
-            tabella.setParam(stmt, 1, "cognome", cognome);
-            ResultSet r = stmt.executeQuery();       
-        while(r.next())
-        {
-            b.setNome(r.getString("nome"));
-            b.setCognome(r.getString("cognome"));
-            b.setCodiceFiscale(r.getString("codice_fiscale"));
-            b.setDataNascita(r.getDate("data_nascita"));
-            b.setIndirizzoDomicilio(r.getString("indirizzo"));
-            b.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
-            b.setClasse(r.getInt("classe"));
-            Genitore gen=new Genitore();
-            String g=r.getString("genitore");
-            gen.setCodiceFiscale(g);
-            b.setGenitore(gen);
-            
-            lb.add(b);
-            
-        }
-        r.close();
-        return lb;
-    }
-    
-    /**
-     * ricerca l'indirizzo di un bambino
-     * @param b
-     * @return l'indirizzo di un bambino
-     * @throws SQLException
-     */
-  /*  public String ricercaIndirizzoBambino(Bambino b) throws SQLException{
-        
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE codice_fiscale = ?");
-            tabella.setParam(stmt, 1, "codice_fiscale", b.getCodiceFiscale());
-            ResultSet r = stmt.executeQuery();
-        String ind="";
-        if(r.next())
-            ind=r.getString("indirizzo");
-        
-        r.close();
-        return ind;
-    }
-    */
+  
     /**
      * ricerca classe di un bambino
      * @param b codice fiscale del bambino di cui ricercare la classe
@@ -387,9 +262,14 @@ public class DBBambino extends DBBeans<Bambino> {
 
             l.add(b);
             } 
+            if(l.size()==0){
+                r.close();
+                return null;
+            }else{
             r.close();
+            
         return l;
-        
+            }
     }
     
     
@@ -443,9 +323,14 @@ public class DBBambino extends DBBeans<Bambino> {
 
             l.add(b);
             } 
+            if(l.size()==0){
+                r.close();
+                return null;
+            }else{
             r.close();
+            
         return l;
-        
+            }
     }
     /**
      * 
@@ -496,9 +381,14 @@ public class DBBambino extends DBBeans<Bambino> {
 
             l.add(b);
             } 
+            if(l.size()==0){
+                r.close();
+                return null;
+            }else{
             r.close();
+            
         return l;
-        
+            }
     }
     /**
      * Preso in input il codice fiscale di un Bambino , restituisce

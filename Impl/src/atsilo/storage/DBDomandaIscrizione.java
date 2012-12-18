@@ -174,7 +174,6 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     
     public DomandaIscrizione ricercaDomandaDaBambino(String codiceFiscaleB) throws SQLException {
         
-        DomandaIscrizione d=new DomandaIscrizione();
         
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " + tabella.getNomeTabella() + " WHERE bambino = ?");
@@ -225,6 +224,9 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         temp.setCertificatoVaccinazioni(r.getString("certificato_vaccinazioni"));
         temp.setVaccinazioni(r.getString("vaccinazioni"));
         temp.setMalattieInfettive(r.getString("malattie_infettive"));
+        }
+        else{
+            temp=null;
         }
         r.close();
         return temp;
@@ -293,7 +295,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             lista.add(temp);
             
         }
-     
+     if(lista.size()==0)
+         lista=null;
         r.close();
         return lista;
     }
@@ -364,76 +367,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     }
     
     
-    /**
-     * ricerca una domanda iscrizione per data
-     * @param da la data da ricercare nel database per trovare le domande d'iscrizione. deve avere un valore definito e non successivo alla data nella quale si effettua la richiesta, altrimenti la ricerca non ha risultato
-     * @return una lista di domande aventi la stessa data oppure una lista vuota se la ricerca non produce risultato
-     * @throws SQLException se c'è errore di connessione con il database
-     */
-   /* public List<DomandaIscrizione> ricercaDomandaPerData(Date da) throws SQLException{
-        List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
-        DomandaIscrizione d=new DomandaIscrizione();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE data = ?");
-        tabella.setParam(stmt, 1, "data", da);
-        ResultSet res= stmt.executeQuery();
-        for(DomandaIscrizione t : iteraResultSet(res))
-            lista.add(t);
-        
-        res.close();
-        return lista;
-    }
-    
-    /**
-     * ricerca una domanda iscrizione per punteggio
-     * @param p il punteggio da ricercare nel database per trovare le domande d'iscrizione. deve avere un valore maggiore o uguale a 0 ovviamente perchè non esiste un punteggio negativo(la ricerca avviene ugualmente ma non produce risultati.)
-     * @return una lista di domande aventi lo stesso punteggio  oppure una lista vuota se la ricerca non produce risultato
-     * @throws SQLException se c'è errore di connessione con il database
-     */
-  /*  public List<DomandaIscrizione> ricercaDomandaPerPunteggio(int p) throws SQLException{
-        List<DomandaIscrizione> lista=new ArrayList<DomandaIscrizione>();
-        DomandaIscrizione d=new DomandaIscrizione();
-        PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + "WHERE punteggio = ?");
-        tabella.setParam(stmt, 1, "punteggio", p);
-        ResultSet res= stmt.executeQuery();
-        for(DomandaIscrizione t : iteraResultSet(res))
-            lista.add(t);
-        
-        res.close();
-        return lista;
-    }*/
-    
-    
-    /**
-     * riceve l'id di una domanda d'iscrizione e vede se la sua posizione rientra nella graduatoria
-     * @param id è l'identificativo della domanda d'iscrizione
-     * @return
-     * @throws SQLException
-     */
-  /*  public String getValoreStatoIscrizione(int id) throws SQLException{
-        
-        
-        DomandaIscrizione d=new DomandaIscrizione();
-        d=ricercaDomandaDaId(id);
-        
-        DBBando b=new DBBando(db);
-        Bando bando= new Bando();
-        bando=b.cercaBandoAttivoPerData(d.getDataPresentazione());
-        
-        if(bando.getPostiDisponibili() > d.getPosizione())
-            return "idoneo";
-        else
-            return "non idoneo";
-    }
-    // da implementare
-    public boolean modificaCertificatiIscrizione(int id, boolean vaccinazioni, boolean malattie, boolean privacy) throws SQLException 
-    {
-        return true;
-        
-        
-    }*/
-    
+   
     /**
      * Metodo che restituisce le domande senza punteggio assegnato
      * @return
@@ -488,6 +422,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setMalattieInfettive(r.getString("malattie_infettive"));
             toReturn.add(temp);
         } 
+       if(toReturn.size()==0)
+           toReturn=null;
         r.close();
         return toReturn;
     }
@@ -545,7 +481,9 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setVaccinazioni(r.getString("vaccinazioni"));
             temp.setMalattieInfettive(r.getString("malattie_infettive"));
             toReturn.add(temp);
-        } 
+        }
+       if(toReturn.size()==0)
+           toReturn=null;
         r.close();
         return toReturn;
     }
@@ -606,6 +544,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
                 toReturn.add(temp);
             }
         } 
+       if(toReturn.size()==0)
+           toReturn=null;
         r.close();
         return toReturn;
     }
@@ -666,6 +606,8 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
                 toReturn.add(temp);
             }
         } 
+       if(toReturn.size()==0)
+           toReturn=null;
         r.close();
         return toReturn;
     }
