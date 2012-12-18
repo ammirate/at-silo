@@ -219,6 +219,43 @@ public class TestDBBeans {
         assertContent(man, Arrays.asList(new MyWeakEntity[0]));
     }
     
+    @Test
+    public void testInsertAInc() {
+        AutoIncrementingEntity aie = new AutoIncrementingEntity(
+                "'mmocc 'a chi t'e' mmuort");
+        
+        DBAutoIncrementingEntity dba = new DBAutoIncrementingEntity(db);
+        
+        assertTrue(dba.inserisci(aie));
+        
+        assertFalse(aie.getId() == 0);
+    }
+    
+    @Test
+    public void testInsertRemoveAInc() {
+        testInsertAInc();
+        DBAutoIncrementingEntity dba = new DBAutoIncrementingEntity(db);
+
+        AutoIncrementingEntity aie = dba.getAll().iterator().next();
+        
+        assertTrue(dba.delete(aie));
+        
+        assertFalse(dba.getAll().iterator().hasNext());
+    }
+    
+    @Test
+    public void testInsertEditAInc() {
+        testInsertAInc();
+        DBAutoIncrementingEntity dba = new DBAutoIncrementingEntity(db);
+
+        AutoIncrementingEntity aie = dba.getAll().iterator().next();
+        
+        AutoIncrementingEntity naie = new AutoIncrementingEntity(120, "mammt");
+        assertTrue(dba.replace(aie, naie));
+        
+        assertContent(dba, Arrays.asList(naie));
+    }
+    
     /**
      * Verifica che il contenuto del database coincida con quello indicato
      * @param man       Manager della tabella
@@ -497,9 +534,9 @@ public class TestDBBeans {
         protected Map<String, String> getMappingFields() {
             if (MAPPING == null) {
                 Map<String, String> res = new HashMap<String, String>();
-                res.put("nome", "Nome");
-                res.put("cognome", "Cognome");
-                res.put("cf", "CF");
+                res.put("nome", "nome");
+                res.put("cognome", "cognome");
+                res.put("cf", "cf");
                 
                 MAPPING = Collections.unmodifiableMap(res);
             }
@@ -525,9 +562,9 @@ public class TestDBBeans {
         @Override
         protected MyUtente creaBean(ResultSet r) throws SQLException {
             MyUtente res = new MyUtente();
-            res.setCf(r.getString("CF"));
-            res.setNome(r.getString("Nome"));
-            res.setCognome(r.getString("Cognome"));
+            res.setCf(r.getString("cf"));
+            res.setNome(r.getString("nome"));
+            res.setCognome(r.getString("cognome"));
             return res;
         }
         
@@ -597,7 +634,7 @@ public class TestDBBeans {
         protected Map<String, String> getMappingFields() {
             if (MAPPING == null) {
                 Map<String, String> res = new HashMap<String, String>();
-                res.put("nome", "Nome");
+                res.put("nome", "nome");
                 
                 MAPPING = Collections.unmodifiableMap(res);
             }
@@ -623,9 +660,9 @@ public class TestDBBeans {
         @Override
         protected MyTrasmissione creaBean(ResultSet r) throws SQLException {
             MyTrasmissione res = new MyTrasmissione();
-            res.setNome(r.getString("Nome"));
+            res.setNome(r.getString("nome"));
             res.setUtente(new MyUtente());
-            res.getUtente().setCf(r.getString("Utente"));
+            res.getUtente().setCf(r.getString("utente"));
             return res;
         }
         
@@ -636,7 +673,7 @@ public class TestDBBeans {
         protected atsilo.storage.DBBeans.Assegnazione[] creaAssegnazioni(
                 MyTrasmissione bean) {
             return Assegnazione.catena(
-                    "Utente", bean.getUtente().getCf());
+                    "utente", bean.getUtente().getCf());
         }
     }
     
@@ -782,5 +819,151 @@ public class TestDBBeans {
                 MyWeakEntity bean) {
             return Assegnazione.catena("utente", bean.getUtente().getCf());
         }
+    }
+
+    public static class AutoIncrementingEntity {
+        private int id;
+        private String bestemmie;
+        
+        /**
+         * @param id
+         * @param bestemmie
+         */
+        AutoIncrementingEntity(int id, String bestemmie) {
+            super();
+            this.id = id;
+            this.bestemmie = bestemmie;
+        }
+        
+        /**
+         * @param id
+         * @param bestemmie
+         */
+        public AutoIncrementingEntity(String bestemmie) {
+            this(0, bestemmie);
+        }
+        
+        /**
+         * @return id
+         */
+        public int getId() {
+            return id;
+        }
+        /**
+         * @param id nuovo id
+         */
+        public void setId(int id) {
+            this.id = id;
+        }
+        /**
+         * @return bestemmie
+         */
+        public String getBestemmie() {
+            return bestemmie;
+        }
+        /**
+         * @param bestemmie nuovo bestemmie
+         */
+        public void setBestemmie(String bestemmie) {
+            this.bestemmie = bestemmie;
+        }
+        /**
+         * @see java.lang.Object#hashCode()
+         */
+        @Override
+        public int hashCode() {
+            final int prime = 31;
+            int result = 1;
+            result = prime * result
+                    + ((bestemmie == null) ? 0 : bestemmie.hashCode());
+            result = prime * result + id;
+            return result;
+        }
+        /**
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj)
+                return true;
+            if (obj == null)
+                return false;
+            if (getClass() != obj.getClass())
+                return false;
+            AutoIncrementingEntity other = (AutoIncrementingEntity) obj;
+            if (bestemmie == null) {
+                if (other.bestemmie != null)
+                    return false;
+            } else if (!bestemmie.equals(other.bestemmie))
+                return false;
+            if (id != other.id)
+                return false;
+            return true;
+        }
+        /**
+         * @see java.lang.Object#toString()
+         */
+        @Override
+        public String toString() {
+            return "AutoIncrementingEntity [id=" + id + ", bestemmie="
+                    + bestemmie + "]";
+        }
+    }
+
+    private static class DBAutoIncrementingEntity extends DBBeans<AutoIncrementingEntity>{
+        private static Map<String, String> MAPPING = null;
+        private static List<String> KEY = null;
+        
+        /**
+         * @param nomeTabella
+         * @param database
+         */
+        public DBAutoIncrementingEntity(Database database) {
+            super("AutoIncrementing", database);
+        }
+
+        private static Map<String, String> creaMapping() {
+            if (MAPPING == null) {
+                Map<String, String> t = new HashMap<String, String>();
+                t.put("id", "id");
+                t.put("bestemmie", "bestemmie");
+                MAPPING = Collections.unmodifiableMap(t);
+            }
+            return MAPPING;
+        }
+        
+        private static List<String> creaChiave() {
+            if (KEY == null) {
+                List<String> l = Arrays.asList("id");
+                KEY = Collections.unmodifiableList(l);
+            }
+            return KEY;
+        }
+        
+        /**
+         * @see atsilo.storage.DBBeans#getMappingFields()
+         */
+        @Override
+        protected Map<String, String> getMappingFields() {
+            return creaMapping();
+        }
+
+        /**
+         * @see atsilo.storage.DBBeans#getKeyFields()
+         */
+        @Override
+        protected List<String> getKeyFields() {
+            return creaChiave();
+        }
+
+        /**
+         * @see atsilo.storage.DBBeans#creaBean(java.sql.ResultSet)
+         */
+        @Override
+        protected AutoIncrementingEntity creaBean(ResultSet r)
+                throws SQLException {
+            return new AutoIncrementingEntity(r.getInt("id"), r.getString("bestemmie"));
+        }
+        
     }
 }
