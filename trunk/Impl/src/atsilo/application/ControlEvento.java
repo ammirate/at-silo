@@ -3,6 +3,7 @@ package atsilo.application;
 import atsilo.entity.Classe;
 import atsilo.entity.EventPlanner;
 import atsilo.entity.Evento;
+import atsilo.entity.Partecipa;
 
 import atsilo.entity.Registro;
 import atsilo.exception.DBConnectionException;
@@ -93,10 +94,10 @@ public class ControlEvento {
             DBEvento dbEvento= new DBEvento(db);
             for (Classe classe : classi) 
             {
-                Partecipa partecipa=new Partecipa(nome,data,classe);
+                Partecipa partecipa=new Partecipa(id,classe);
                 dbPartecipa.inserisci(partecipa);
             }
-            Evento evento =new Evento(descrizione, nome, cc, data, tipo,organizzatore, path);
+            Evento evento =new Evento();
             dbEvento.inserisci(evento);
             
         }
