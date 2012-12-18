@@ -14,6 +14,26 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_iscrizione.jsp"
  %>
+ <%@ page
+		import="java.util.*,atsilo.application.*,atsilo.entity.*"%>
+ <% // setto select bambino
+		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+	   	Utente utente=cdt.getValoriUtente(username);
+	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
+	  	List<Bambino> figli= new ArrayList<Bambino>();
+	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
+	  	
+	 //setto select orari
+	  ControlOrario co= ControlOrario.getInstance();
+	  List<OrarioUtente> orari= new ArrayList<OrarioUtente>();
+	  orari=co.getElencoOrarioUtente();
+			%>
+			 <%
+	 //setta campi form una volta selezionato il nome del bambino
+	  String cfb=null;
+	 if (request.getParameter("select_bambini")!=null )
+	  cfb=(String)request.getParameter("select_bambini");
+	 %>
  <%
  	if ((request.getParameter("successo")) != null) {
  		if (request.getParameter("successo").equals("ok")) {
@@ -51,17 +71,46 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
   					</tr>
  					 <tr>
  				 <td colspan="2">
-                 <select name="select_bambini" id="select_bambini">
-  				  <option selected>Selezionare il nome del bambino</option>
- 					</select></td>
+                 <% if(figli.size()>0)
+						{
+							out.print("<select name='select_bambini' id='select_bambini' onchange='submitForm()'><option value='null' >Selezionare Bambino</option>");
+							String selected="";
+							  for (int i=0;i<figli.size();i++){
+								  if (figli.get(i).getCodiceFiscale().equals(cfb))
+									  selected="selected";
+							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
+							  }
+						}
+						else
+						{
+							out.print("<em><b>E' necessario inserire un bambino</b></em>");
+							return;
+						}
+						
+						%>
+						</select></td>
   				   <td>&nbsp;</td>
   					</tr>
               	<tr>
                 	<td>Selezionare tipo di servizio desiderato</td>
                     <td>
-                    <select id="servizio_selezionato" name="servizio_selezionato">
-                    <option>Servizio1</option>
-                    <option>Servizio1</option>	
+                    <% if(figli.size()>0)
+						{
+							out.print("<select name='servizio_selezionato' id='servizio_selezionato' ><option value='null' >Selezionare Orario</option>");
+							
+							  for (int i=0;i<orari.size();i++)
+								  
+									  
+							  out.print("<option value='"+orari.get(i).getId()+"' >"+orari.get(i).getDescrizione()+"</option>");
+							  
+						}
+						else
+						{
+							out.print("<em><b>E' necessario inserire un bambino</b></em>");
+							return;
+						}
+						
+						%>
                     </select>
                     </td>
                 </tr>
