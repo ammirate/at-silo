@@ -1,0 +1,9 @@
+ANNOTAZIONI GENERALI DELLA GESTIONE
+
+- Manca la funzionalità INSERISCI MENU'
+
+- non è possibile testare la funzionalità di inserimento menù differenziato poichè non è possibile inserire classi nel sistema, e per modificare il menù devo selezionare la classe ed il bambino (poco funzionale)
+
+- Mancano gli UC sulla Visualizzazione Richieste Pasti, funzionalità presente nel sistema
+
+- La funzionalita Modifica Allergie del Rad è diventata MODIFICA MALATTIA /INSERISCI NOTE nel sistema, che permette di inserire o un eventuale allergia del bambino o una nota. Non sono chiari i campi da inserire, quelli errati e perchè le funzionalità sono state unite

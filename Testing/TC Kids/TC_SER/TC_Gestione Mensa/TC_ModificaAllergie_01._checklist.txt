@@ -1,2 +1,3 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+Il tc non è stato effettuato poichè la funzionalità non è presente
