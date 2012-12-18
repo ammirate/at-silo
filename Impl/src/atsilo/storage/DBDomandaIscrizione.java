@@ -614,10 +614,20 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
     
     protected Assegnazione[] creaAssegnazioni(DomandaIscrizione bean) {
        
-        Assegnazione DBDomandaIscrizione_assegnazione = new Assegnazione("servizio",bean.getServizio().getId());
+        String cf_non_rich=null;
+        Integer id_servizio=null;
+        if(bean.getGenitoreNonRichiedente()!=null)
+        {
+            cf_non_rich=bean.getGenitoreNonRichiedente().getCodiceFiscale();
+        }
+        if(bean.getServizio()!=null)
+        {
+            id_servizio=new Integer(bean.getServizio().getId());
+        }
+        Assegnazione DBDomandaIscrizione_assegnazione = new Assegnazione("servizio",id_servizio);
         Assegnazione DBDomandaIscrizione_assegnazione1 = new Assegnazione("genitore",bean.getGenitore().getCodiceFiscale());
         Assegnazione DBDomandaIscrizione_assegnazione2 = new Assegnazione("bambino",bean.getBambino().getCodiceFiscale());
-        Assegnazione DBDomandaIscrizione_assegnazione3 = new Assegnazione("cf_genitore_non_richiedente",bean.getGenitoreNonRichiedente().getCodiceFiscale());
+        Assegnazione DBDomandaIscrizione_assegnazione3 = new Assegnazione("cf_genitore_non_richiedente",cf_non_rich);
         
         Assegnazione[] DBAssign = new Assegnazione[4];
         DBAssign[0]=DBDomandaIscrizione_assegnazione;
