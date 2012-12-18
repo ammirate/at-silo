@@ -73,11 +73,15 @@ public class ControlQuestionario {
         try{
             if(!storageQ.inserisci(questionario))
                 throw new QuestionarioException("Inserimento fallito");
-            for(DomandaQuestionario d : domande){
+            for(DomandaQuestionario d : domande)
+            {
+                d.setIdQuestionario(questionario.getId());
                 storageD.inserisci(d);
                   campi = d.getCampi();
                   for(CampoDomandaQuestionario c : campi)
-                        storageC.inserisci(c);       
+                  {   c.setIdDomandaQuestionario(d.getId());  
+                      storageC.inserisci(c);
+                  }
             }
         }
         finally{
