@@ -1,0 +1,5 @@
+TC_ModificaAttività (UC_1.2)
+
+Fatto [x]
+Eventuali anomalie rilevate:
+Il sistema non permette nè al delegato di Scienze della Formazione, nè al segretario, nè al tirocinante di modificare i dati dell'iscrizione, che, se non completati, non consentono di inserire il tirocinante nel registro ma solo come bozza

@@ -1,2 +1,3 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+Le richieste sono visualizzate in un calendario, ma non vi è possibilità di ricercarle. [Funzionalità non presente]
