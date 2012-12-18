@@ -4,7 +4,9 @@ package atsilo.application.servlet;
 import java.awt.List;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
@@ -56,7 +58,19 @@ public class servletControlQuestionario extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    // TODO Auto-generated method stub
 	    //Inserisci questionario 
-	    
+	    String[] dataI=null, dataF=null;
+	    try {
+	        dataI = request.getParameter("dataIn").split("/");
+	        dataF = request.getParameter("dataOu").split("/");
+	    }
+	    catch(Exception e) {
+	        
+	    }
+	    Calendar c = Calendar.getInstance();
+	    c.set(Integer.parseInt(dataI[2]), Integer.parseInt(dataI[1])-1, Integer.parseInt(dataI[0]));
+	    Date din = new Date(c.getTimeInMillis());
+	    c.set(Integer.parseInt(dataF[2]), Integer.parseInt(dataF[1])-1, Integer.parseInt(dataF[0]));
+            Date don  = new Date(c.getTimeInMillis());
 	    ControlQuestionario q = null;
 	    q= ControlQuestionario.getIstance();
             DomandaQuestionario d = null;
@@ -66,7 +80,7 @@ public class servletControlQuestionario extends HttpServlet {
             
             String titoloQuestionario = request.getParameter("titolo");
             String descrizione = request.getParameter("descrizione");
-            Questionario quest = new Questionario(descrizione, "false", titoloQuestionario,0, null, null);
+            Questionario quest = new Questionario(descrizione, "false", titoloQuestionario,0, din, don);
             String domanda= "";
             int x = 0;
             while(true) {
@@ -83,11 +97,11 @@ public class servletControlQuestionario extends HttpServlet {
                 if (tipo.equals("1")) tipo = "checkbox";
                 else if (tipo.equals("2")) tipo = "radio";
                 else if (tipo.equals("3")) tipo = "text";
-                ArrayList<CampoDomandaQuestionario> c = new ArrayList<CampoDomandaQuestionario>();
+                ArrayList<CampoDomandaQuestionario> c1 = new ArrayList<CampoDomandaQuestionario>();
                 for(int i = 0; i<opzione.length; i++) {
-                    c.add(new CampoDomandaQuestionario(tipo, opzione[i], opzione[i], x));
+                    c1.add(new CampoDomandaQuestionario(tipo, opzione[i], opzione[i], x));
                 }
-                d.setCampi(c);
+                d.setCampi(c1);
                 quest.aggiungiDomanda(d);
                 x++;
             }

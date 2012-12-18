@@ -71,12 +71,10 @@ public class ControlQuestionario {
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            
             if(!storageQ.inserisci(questionario))
                 throw new QuestionarioException("Inserimento fallito");
-            
             for(DomandaQuestionario d : domande){
-                  storageD.inserisci(d);
+                storageD.inserisci(d);
                   campi = d.getCampi();
                   for(CampoDomandaQuestionario c : campi)
                         storageC.inserisci(c);       
