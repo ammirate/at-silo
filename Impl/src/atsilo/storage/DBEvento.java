@@ -280,10 +280,29 @@ public class DBEvento extends DBBeans <Evento> {
         
         
     }
+
+
+  //TODO gianfranco fammi sto metodo
+    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+
+
+  //TODO gianfranco fammi sto metodo
+    public List<Evento> getEventiPerData(Date data) {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
+
+
+    //TODO gianfranco fammi sto metodo
+    public List<Evento> getEventiPerNome(String nome) {
+        // TODO Scheletro generato automaticamente
+        return null;
+    }
     
-   
-  //TODO public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) {gianfranco}  
-  //TODO
+ 
     
    
 }
