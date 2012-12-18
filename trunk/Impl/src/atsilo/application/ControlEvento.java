@@ -271,7 +271,7 @@ public class ControlEvento {
      * Gets the single istance of this class
      * @return a new ControlEvento
      */
-    public ControlEvento getIstance(){
+    public static ControlEvento getIstance(){
         return INSTANCE;
     }
     
