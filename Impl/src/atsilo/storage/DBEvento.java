@@ -345,8 +345,10 @@ public class DBEvento extends DBBeans <Evento> {
     public List<Evento> getEventiPerData(Date data) throws SQLException {
 List<Evento> l = new ArrayList<Evento>();
         
+data.setYear(data.getYear()-1900);
+data.setMonth(data.getMonth()-1);
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " data = ? ");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE data  =  ? ");
         
         tabella.setParam(stmt, 1, "data",data);
      
@@ -402,7 +404,7 @@ List<Evento> l = new ArrayList<Evento>();
 List<Evento> l = new ArrayList<Evento>();
         
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " nome = ? ");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nome = ? ");
         
         tabella.setParam(stmt, 1, "nome",nome);
      

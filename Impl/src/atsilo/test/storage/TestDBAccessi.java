@@ -219,13 +219,24 @@ public class TestDBAccessi {
       
       DBPartecipa p= new DBPartecipa(db);
       
-      List<Integer> l1 = p.getClassiPerEvento(2);
+     /* List<Integer> l1 = p.getClassiPerEvento(2);
       System.out.println(" Test metodo classiperevento");
 
       for(int i=0;i<l1.size();i++){
          
-          System.out.println(" Classe =  "+i + " = " +l1.get(i));
-      }
+          System.out.println(" Classe =  "+i + " = " +l1.get(i));*/
+          
+          Date data = new Date(2012, 11,30 );
+       ev=dbE.getEventiPerData(data );
+       for(int j=0;j<ev.size();j++)
+       System.out.println("Eccolo "+ev.get(j).getId() );
+          
+         /* ev=dbE.getEventiPerOrganizzatore("VRRMDD64T32A048N");
+          for(int j=0;j<ev.size();j++)
+              
+              System.out.println(" id =  "+j + " = " +ev.get(j).getId())
+              
+      }*/
            
         db.chiudiConnessione();
 
