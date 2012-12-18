@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+La bozza viene messa in fase eliminazione ma effettivamente è ancora visibile all'utente anche se non è più modificabile

@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Test che avviene ma è diverso da quanto scritto nel rad

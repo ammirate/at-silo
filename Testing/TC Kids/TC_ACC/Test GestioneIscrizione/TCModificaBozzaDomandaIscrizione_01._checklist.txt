@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Nessuna anomalia. Il sistema è diverso dal rad

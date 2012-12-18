@@ -1,2 +1,3 @@
-Fatto []
+Fatto [X]
 Eventuali anomalie rilevate:
+Da messaggio di errore se i campi sono vuoti, quindi test ok
