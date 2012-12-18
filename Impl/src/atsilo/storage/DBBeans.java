@@ -35,8 +35,6 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.sql.rowset.RowSetWarning;
-
 import atsilo.util.IterableOnlyOnce;
 
 /**
@@ -225,8 +223,8 @@ public abstract class DBBeans<B> implements Iterable<B> {
                         "Sembra che l'oggetto passato non sia un bean", e);
             }
             PropertyDescriptor[] campi = info.getPropertyDescriptors();
-            Map<String, PropertyDescriptor> res = new HashMap<String, PropertyDescriptor>(
-                    2 * campi.length);
+            Map<String, PropertyDescriptor> res
+                    = new HashMap<String, PropertyDescriptor>(2 * campi.length);
             
             for (PropertyDescriptor campo : campi) {
                 res.put(campo.getName(), campo);
@@ -249,12 +247,12 @@ public abstract class DBBeans<B> implements Iterable<B> {
     protected final Object getFieldFromBean(B realBean, String nomeCampo) {
         PropertyDescriptor descr = getProps(realBean).get(nomeCampo);
         
-        if (descr == null) {
-            throw new RuntimeException(String.format(
-                    "Campo '%1$s' inesistente", nomeCampo));
-        } else if (nomeCampo.startsWith(SPECIAL_FIELD_PREFIX)) {
+        if (nomeCampo.startsWith(SPECIAL_FIELD_PREFIX)) {
             //Sara' settato da creaAssegnazioni
             return null;
+        } else if (descr == null) {
+            throw new RuntimeException(String.format(
+                    "Campo '%1$s' inesistente", nomeCampo));
         } else {
             try {
                 return descr.getReadMethod().invoke(realBean);
@@ -272,6 +270,54 @@ public abstract class DBBeans<B> implements Iterable<B> {
     }
     
     /**
+     * Metodo che scrive un campo di nome nomeCampo in un oggetto Java realBean
+     * 
+     * @param realBean
+     *            Oggetto in cui scrivere il campo
+     * @param nomeCampo
+     *            nome del campo
+     * @param value
+     *            valore da assegnare al campo
+     */
+    protected final void setFieldIntoBean(B realBean, String nomeCampo, Object value) {
+        PropertyDescriptor descr = getProps(realBean).get(nomeCampo);
+        
+        if (nomeCampo.startsWith(SPECIAL_FIELD_PREFIX)) {
+            //Impossibile settare chiavi esterne
+            LOG.warning("Impossibile settare chiavi esterne");
+            return;
+        } else if (descr == null) {
+            throw new RuntimeException(String.format(
+                    "Campo '%1$s' inesistente", nomeCampo));
+        } else {
+            try {
+                descr.getWriteMethod().invoke(realBean, value);
+            } catch (InvocationTargetException e) {
+                // Questo non dovrebbe mai accadere
+                throw new RuntimeException(e);
+            } catch (IllegalArgumentException e) {
+                // Questo non dovrebbe mai accadere
+                throw new RuntimeException(e);
+            } catch (IllegalAccessException e) {
+                // Questo non dovrebbe mai accadere
+                throw new RuntimeException(e);
+            }
+        }
+    }
+    
+    private String fieldToCol(Map<String, String> map, String fieldName) {
+        String res = map.get(fieldName);
+        assert !fieldName.contains("_")
+                : fieldName + " non e' un nome di proprieta' valido."
+                + " Probabilmente, getMappingFields e' stata implementata male.";
+        
+        assert !res.toLowerCase().equals(res)
+                : fieldName + " non e' un nome di colonna valido."
+                + " Probabilmente, getMappingFields e' stata implementata male.";
+        return res;
+    }
+    
+    /**
      * Metodo che legge i valori di tutti i campi di un oggetto Java realBean
      * 
      * @param realBean
@@ -286,7 +332,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
         Object propVal;
         
         for (Map.Entry<String, PropertyDescriptor> p : descr.entrySet()) {
-            colName = mapping.get(p.getKey());
+            colName = fieldToCol(mapping, p.getKey());
             
             if (colName != null) {
                 try {
@@ -373,7 +419,26 @@ public abstract class DBBeans<B> implements Iterable<B> {
                 tabella.setParam(stmt, colid, a.colonna, a.valore);
             }
             
-            return (stmt.executeUpdate() == 1);
+            int res = stmt.executeUpdate();
+            
+            if (res == 1) {
+                ResultSet rs = stmt.getGeneratedKeys();
+                if (rs.next()) {
+                    Map<String, String> mapping = getMappingFields();
+                    //Sono state generate delle chiavi automatiche
+                    for (String field : getKeyFields()) {
+                        if (!field.startsWith(SPECIAL_FIELD_PREFIX)
+                                && getFieldFromBean(realBean, field) == null) {
+                            setFieldIntoBean(realBean, field,
+                                    rs.getObject(mapping.get(field)));
+                        }
+                    }
+                }
+                rs.close();
+                return true;
+            } else {
+                return false;
+            }
         } catch (SQLException ex) {
             Database.logSQLException(LOG, Level.SEVERE, ex);
             return false;
@@ -414,7 +479,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
              * Elenca le colonne della chiave e aggiungi i parametri alla query
              */
             for (String s : key) {
-                query.append(mapping.get(s)).append(EQL).append(AND);
+                query.append(fieldToCol(mapping, s)).append(EQL).append(AND);
             }
             query.setLength(query.length() - AND.length());
             
@@ -430,7 +495,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
         Assegnazione[] oldAss = creaAssegnazioni(bean);
         for (String k : getKeyFields()) {
             if (k.startsWith(SPECIAL_FIELD_PREFIX)) {
-                String target = mapping.get(k);
+                String target = fieldToCol(mapping, k);
                 for (Assegnazione ass : oldAss) {
                     if (ass.colonna.equals(target)) {
                         tabella.setParam(stmt, startingFrom, target, ass.valore);
@@ -539,7 +604,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
              * Elenca le colonne della chiave e aggiungi i parametri alla query
              */
             for (String s : key) {
-                query.append(mapping.get(s)).append(EQL).append(AND);
+                query.append(fieldToCol(mapping, s)).append(EQL).append(AND);
             }
             query.setLength(query.length() - AND.length());
             
