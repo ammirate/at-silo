@@ -102,7 +102,7 @@ public class ControlGestioneBando {
      */
     private class DomandaEtaComparator implements Comparator<DomandaIscrizione>
     {
-
+        
         /**
          * @see java.util.Comparator#compare(java.lang.Object, java.lang.Object)
          */
@@ -341,7 +341,7 @@ public class ControlGestioneBando {
         } finally {
             db.chiudiConnessione();
         }
-    }
+            }
     
     /**
      * Metodo che esclude una domanda dalla graduatoria.
@@ -352,7 +352,7 @@ public class ControlGestioneBando {
      * @throws BandoException
      */
     public boolean escludiDomanda(DomandaIscrizione iscrizione,String notaEsclusione) throws BandoException
-            {
+    {
         Database db = new Database();
         if (!db.apriConnessione()) {
             throw new BandoException("Connessione Fallita");
@@ -389,20 +389,22 @@ public class ControlGestioneBando {
         try {
             
             DBBando dbBando = new DBBando(db);
-            Bando bando;
-            
             try {
-                if (dbBando.getBando() == null) {
-                    bando = new Bando(1, inizioBando, fineBando,
+                Bando bandoDaModificare;
+                Bando bando=dbBando.getBando();
+                
+                
+                if ( bando== null) {
+                    bandoDaModificare = new Bando(1, inizioBando, fineBando,
                             inizioPresentazione, finePresentazione, fineRinuncia,
                             posti, null);
-                    dbBando.inserisci(bando);
+                    dbBando.inserisci(bandoDaModificare);
                     return true;
                 } else {
-                    bando = new Bando(1, inizioBando, fineBando,
+                    bandoDaModificare = new Bando(1, inizioBando, fineBando,
                             inizioPresentazione, finePresentazione, fineRinuncia,
                             posti, null);
-                    dbBando.replace(dbBando.getBando(), bando);
+                    dbBando.replace(bando, bandoDaModificare);
                     
                     return true;
                 }
