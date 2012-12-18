@@ -220,7 +220,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             provincia_domicilio_genitore_non_richiedente=request.getParameter("provincia_domicilio_genitore_non_richiedente");
         
         //variabili genitore -genitore non richiedente
-     
+        
         String condizione_lavorativa_genitore_non_richiedente=null;
         if ( request.getParameter("condizione_lavorativa_genitore_non_richiedente")!=null)
             condizione_lavorativa_genitore_non_richiedente=request.getParameter("condizione_lavorativa_genitore_non_richiedente");
@@ -261,46 +261,46 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         //variabile bambino selezionato
         String select_bambini=null;
         if ( request.getParameter("select_bambini")!=null)
-        select_bambini=request.getParameter("select_bambini");
+            select_bambini=request.getParameter("select_bambini");
         
-        //situazione reddituale
+        
+        
+        //situazione familiare
         float isee=-1;
         if ( request.getParameter("isee")!=null)
             isee=Float.parseFloat(request.getParameter("isee"));
-        
-        //situazione familiare
-        String bambino_disabile="false";
+        boolean bambino_disabile=false;
         if ( request.getParameter("bambino_disabile")!=null)
-            bambino_disabile=request.getParameter("bambino_disabile");
-        String genitore_invalido="false";
+            bambino_disabile=Boolean.parseBoolean(request.getParameter("bambino_disabile"));
+        boolean genitore_invalido=false;
         if ( request.getParameter("genitore_invalido")!=null)
-            genitore_invalido=request.getParameter("genitore_invalido");
-        String genitore_solo="false";
+            genitore_invalido=Boolean.parseBoolean(request.getParameter("genitore_invalido"));
+        boolean genitore_solo=false;
         if ( request.getParameter("genitore_solo")!=null)
-            genitore_solo=request.getParameter("genitore_solo");
-        String vedovo="false";
+            genitore_solo=Boolean.parseBoolean(request.getParameter("genitore_solo"));
+        boolean vedovo=false;
         if ( request.getParameter("vedovo")!=null)
-            vedovo= request.getParameter("vedovo");
-        String nubile="false";
+            vedovo=Boolean.parseBoolean( request.getParameter("vedovo"));
+        boolean nubile=false;
         if ( request.getParameter("nubile")!=null)
-            nubile= request.getParameter("nubile");
-        String separato="false";
+            nubile=Boolean.parseBoolean( request.getParameter("nubile"));
+        boolean separato=false;
         if ( request.getParameter("separato")!=null)
-            separato=request.getParameter("separato");
-        String figlio_non_riconosciuto="false";
+            separato=Boolean.parseBoolean(request.getParameter("separato"));
+        boolean figlio_non_riconosciuto=false;
         if ( request.getParameter("figlio_non_riconosciuto")!=null)
-            figlio_non_riconosciuto=request.getParameter("figlio_non_riconosciuto");
-        String affido_esclusivo="false";
+            figlio_non_riconosciuto=Boolean.parseBoolean(request.getParameter("figlio_non_riconosciuto"));
+        boolean affido_esclusivo=false;
         if ( request.getParameter("affido_esclusivo")!=null)
-            affido_esclusivo=request.getParameter("affido_esclusivo");
-        String altri_figli_disabili="false";
+            affido_esclusivo=Boolean.parseBoolean(request.getParameter("affido_esclusivo"));
+        boolean altri_figli_disabili=false;
         if ( request.getParameter("altri_figli_disabili")!=null)
-            altri_figli_disabili= request.getParameter("altri_figli_disabili");
+            altri_figli_disabili=Boolean.parseBoolean( request.getParameter("altri_figli_disabili"));
         String altre_condizioni_calcolo_punteggio="";
         if ( request.getParameter("altre_condizioni_calcolo_punteggio")!=null)
             altre_condizioni_calcolo_punteggio=request.getParameter("altre_condizioni_calcolo_punteggio");
         
-
+        
         //gestione richieste
         
         String pagina_destinazione = "";
@@ -357,21 +357,21 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         if ( request.getParameter("chiamante").equals("genitore_non_richiedente")){//se chiamante è una pagina genitore non richiedente   
             if (controlDatiPersonali.inserisciGenitoreNonRichiedentePerBambino(username_utente, dataNascita_genitore_non_richiedente, nome_genitore_non_richiedente, cognome_genitore_non_richiedente, codice_fiscale_genitore_non_richiedente, null, comune_nascita_genitore_non_richiedente, null, cittadinanza_genitore_non_richiedente, indirizzo_residenza_genitore_non_richiedente, numero_civico_residenza_genitore_non_richiedente, cap_residenza_genitore_non_richiedente, comune_residenza_genitore_non_richiedente, provincia_residenza_genitore_non_richiedente, indirizzo_domicilio_genitore_non_richiedente, numero_civico_domicilio_genitore_non_richiedente, cap_domicilio_genitore_non_richiedente, comune_domicilio_genitore_non_richiedente, provincia_domicilio_genitore_non_richiedente, null, null, null, dipendente_presso, null, null, null, null, null, rapportoParentela, condizione_lavorativa_genitore_non_richiedente, tipo_contratto_genitore_non_richiedente, select_bambini)){
-                  
-            pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
-
+                
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
+                
             } else  
-            pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed"); 
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed"); 
             
         }//fine update dati genitore non richiedente
         
-        if ( request.getParameter("chiamante").equals("situazione_reddituale") || request.getParameter("chiamante").equals("situazione_familiare")){//se chiamante è la pagina della sitauzione reddituale e familiare
+        if ( request.getParameter("chiamante").equals("situazione_familiare")){//se chiamante è la pagina della sitauzione familiare
             
-            String codiceFiscaleGenitore = controlDatiPersonali.getValoriUtente("username").getCodiceFiscale();
+            
             
             try {
                 
-                if (controlIscrizione.updateDatiDomandaIscrizionePrimoStep(dataPresentazione, iD, punteggio, posizione, genitore, bambino, statoDomanda, certificatoMalattie, certificatoVaccinazioni, certificatoPrivacy, bambinoDisabile, genitoreInvalido, genitoreSolo, genitoreVedovo, genitoreNubile, genitoreSeparato, figlioNonRiconosciuto, affidoEsclusivo, altriComponentiDisabili, condizioniCalcoloPunteggio, isee, servizio, stato_convalidazione)(){
+                if (controlIscrizione.updateDatiDomandaIscrizionePrimoStep(select_bambini, bambino_disabile, genitore_invalido, genitore_solo, vedovo, nubile, separato, figlio_non_riconosciuto, affido_esclusivo, altri_figli_disabili, altre_condizioni_calcolo_punteggio, isee)){
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");
                     
                 } else  {
@@ -384,9 +384,12 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE,getServletName()+ "Erroree connessioen al database", e.getMessage());
+            } catch (SQLException e) {
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } 
             
-        }//fine update sitauzione reddituale e familiare
+        }//fine update sitauzione familiare
         
         
         // Set response content type
