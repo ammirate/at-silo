@@ -1,2 +1,4 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+"Contenuto" è nominato nel sistema "descrizione"
+inserito evento con data errata il sistema non mostra messaggio d'errore ma inserisce l'evento
