@@ -119,12 +119,15 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void modificaEvento(Evento evento,Evento eventoModificato) throws EventoException
+    public boolean modificaEvento(Evento evento,Evento eventoModificato)
             {
         Database db = new Database();
         
         if(!db.apriConnessione())
-            throw new EventoException("Connessione al DB fallita");
+        {
+            LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: connessione fallita");
+            return false;
+        } 
         try{
             DBEvento dbEvento=new DBEvento(db);
             DBPartecipa dbPartecipa=new DBPartecipa(db);
@@ -145,11 +148,13 @@ public class ControlEvento {
                     Partecipa partecipa=new Partecipa(classe,evento.getId());
                     dbPartecipa.inserisci(partecipa);
                 }
+                return true;
                                 
                 
             } catch (SQLException e) 
-            {
-                throw new EventoException("Connessione al DB fallita");    
+            {   
+                LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(),e);
+            return false;
             }
             
         }
@@ -160,7 +165,8 @@ public class ControlEvento {
     
     
     /**
-     * Deletes an event from a register
+     * Cancella l'evento dal registro altrimenti ritorna null
+     * 
      * @param registro is the register from which delete the event
      * @param evento is the event to delete
      * @return the event deleted
@@ -172,7 +178,7 @@ public class ControlEvento {
         
         if(!db.apriConnessione())
         {
-            LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(), e);
+            LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: connessione fallita");
             return null;
         }
         try{
@@ -180,10 +186,13 @@ public class ControlEvento {
            
             try {
                 if(dbEvento.ricercaEventoPerChiave(evento.getId())!=null);
-            } catch (SQLException e) {
+            } catch (SQLException e)
+            {
+                LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: "+e.getMessage(),e);    
                 return null;
             }
                 dbEvento.delete(evento);
+                return evento;
         }
         finally{
             db.chiudiConnessione();
@@ -198,11 +207,15 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) throws DBConnectionException, EventoException{
+    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore)
+    {
         Database db = new Database();
         
         if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
+        {
+            LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: connessione fallita");
+            return null;
+        }
         try{
             DBEvento dbEvento=new DBEvento(db);
             return dbEvento.getEventiPerOrganizzatore(organizzatore);
@@ -244,7 +257,7 @@ public class ControlEvento {
             throw new DBConnectionException("Connessione al DB fallita");
         try{
             DBEvento dbEvento=new DBEvento(db);
-            return dbEvento.getEventiPer(nome);
+            return dbEvento.getEventiPerNome(nome);
             
         }
         finally{

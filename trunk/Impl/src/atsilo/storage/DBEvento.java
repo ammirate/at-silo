@@ -127,6 +127,7 @@ public class DBEvento extends DBBeans <Evento> {
         return a;
         
     }
+  //nomi serve questo metodo ma mi serve il metodo che  {GIANFRANCO}
     /**
      * Dato un evento restituisce il suo organizzatore
      * @param e id dell'evento di cui ricercare l eventPlanner
@@ -276,12 +277,9 @@ public class DBEvento extends DBBeans <Evento> {
         
     }
     
+   
+  //TODO public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) {gianfranco}  
+  //TODO
     
-
-
-
-
-  //TODO public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) {gianfranco}   
-   //TODO public boolean ricercaPerChiave(String nome, Date data) {gianfranco}
-     
+   
 }
