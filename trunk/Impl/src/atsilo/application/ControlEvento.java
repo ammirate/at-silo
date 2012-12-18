@@ -12,9 +12,13 @@ import atsilo.exception.RegistroException;
 import atsilo.storage.*;
 
 import java.sql.Date;
+import java.sql.SQLException;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /*
@@ -65,6 +69,7 @@ l'event planner inserisce nei cc i rappresentanti).
 public class ControlEvento {
     
     private static final ControlEvento INSTANCE = new ControlEvento();
+    private static final Logger LOG = Logger.getLogger("global");
     
     
     /**
@@ -82,8 +87,7 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void inserisciEvento(String descrizione, String nome, String cc, Date data,
-            String tipo,List<Classe> classi,EventPlanner organizzatore, String path) throws EventoException{
+    public void inserisciEvento(Evento evento) throws EventoException{
         Database db = new Database();
         
         if(!db.apriConnessione())
@@ -92,13 +96,13 @@ public class ControlEvento {
         {
             DBPartecipa dbPartecipa= new DBPartecipa(db);
             DBEvento dbEvento= new DBEvento(db);
-            for (Classe classe : classi) 
+            dbEvento.inserisci(evento);
+            
+            for (Classe classe : evento.getClassi()) 
             {
-                Partecipa partecipa=new Partecipa(id,classe);
+                Partecipa partecipa=new Partecipa(classe,evento.getId());
                 dbPartecipa.inserisci(partecipa);
             }
-            Evento evento =new Evento();
-            dbEvento.inserisci(evento);
             
         }
         finally{
@@ -115,14 +119,38 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public void modificaEvento(Evento evento,String descrizione, String nome, String cc, Date data,
-            String tipo,List<Classe> classi,EventPlanner organizzatore, String path) throws DBConnectionException, EventoException{
+    public void modificaEvento(Evento evento,Evento eventoModificato) throws EventoException
+            {
         Database db = new Database();
-        StubEvento stub = new StubEvento(db);
         
         if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
+            throw new EventoException("Connessione al DB fallita");
         try{
+            DBEvento dbEvento=new DBEvento(db);
+            DBPartecipa dbPartecipa=new DBPartecipa(db);
+            try 
+            {   Evento eventoOrigine=dbEvento.ricercaEventoPerChiave(evento.getId());
+             
+                dbEvento.replace(eventoOrigine, eventoModificato);
+                Iterable<Partecipa> classiDaCancellare =dbPartecipa.getAll();
+                Iterator<Partecipa> classiDelete=classiDaCancellare.iterator();
+                while(classiDelete.hasNext())
+                {
+                   Partecipa partecipa= classiDelete.next();
+                   if(partecipa.getId()==eventoOrigine.getId())
+                         dbPartecipa.delete(partecipa);
+                }
+                for (Classe classe : eventoOrigine.getClassi()) 
+                {
+                    Partecipa partecipa=new Partecipa(classe,evento.getId());
+                    dbPartecipa.inserisci(partecipa);
+                }
+                                
+                
+            } catch (SQLException e) 
+            {
+                throw new EventoException("Connessione al DB fallita");    
+            }
             
         }
         finally{
@@ -139,15 +167,22 @@ public class ControlEvento {
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public Evento eliminaEvento(Evento evento) throws DBConnectionException, EventoException{
+    public Evento eliminaEvento(Evento evento) {
         Database db = new Database();
         
         if(!db.apriConnessione())
-            throw new DBConnectionException("Connessione al DB fallita");
+        {
+            LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(), e);
+            return null;
+        }
         try{
             DBEvento dbEvento=new DBEvento(db);
            
-            if(dbEvento.ricercaPerChiave(evento.getNome(),evento.getData())!=null);
+            try {
+                if(dbEvento.ricercaEventoPerChiave(evento.getId())!=null);
+            } catch (SQLException e) {
+                return null;
+            }
                 dbEvento.delete(evento);
         }
         finally{
