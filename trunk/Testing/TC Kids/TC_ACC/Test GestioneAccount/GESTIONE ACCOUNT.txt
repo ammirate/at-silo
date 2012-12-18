@@ -1,0 +1,56 @@
+Rispetto al rad che portava un massimo di 11 campi per creare l'account, ora con il sistema sono apparsi ben 10 inserimenti nuovi, sia per l'inserimento da parte dell'admin sia da parte di un genitore:
+Cap
+Numero cellullare
+Indirizzo Fax
+Comune domicilio
+Indirizzo domicilio
+Provincia domicilio
+Cap domicilio
+Titolo di studio
+Sistuazione familiare (che ne sistema è scritto come situazione familiaria)
+Reddito
+
+Per quanto riguarda l'usabilità, l'inserimento della data è fatto in modo pessimo non si capisce come fare l'inserimento e se uno vorrebbe farlo seguento il loro metodo perderebbe mezza giornata.
+Non coerente con quanto scritto nel rad, infatti nel rad il formato era GG/MM/AAAA mentre nel sistema il formato è AAAA/MM/GG.
+Se un genitore vuole registrarsi deve complilare tre pagine e non ha la possibilità di tornare alla pagina precedente perchè non c'è un pulsante indietro ma solo avanti.
+Nel campo situazione familiare io non saprei cosa scrivere.
+Nel campo redditono non è specificato come scrivere l'importo.
+
+I campi segnati dall'asterisco sono obbligatori ma non sta scritto da nessuna parte
+Il nuovo cap domicilio non ha l'asterisco ma è per il sistema è obbligatorio.
+
+Se da admin non scelgo nulla nella tipologia di utente il sistema non mi da errore ma mi fa continuare mostrandomi il messaggio di avvenuta creazione ma con i cmapi user e pass vuoti.
+Se lo faccio da genitore l'account viene creato come se ci fosse la tipologia selezionata. Questo è un errore.
+
+Inserimento valori (sia admin che genitore):
+Nome: nessuno coltrollo su quello che si inserisce
+Cognome: nessuno coltrollo su quello che si inserisce
+Codice Fiscale: nessuno coltrollo su quello che si inserisce solo su max 16 caratteri
+Data di nascita: posso inserire una data futura, nel rad formato GG/MM/AAAA nel sistema AAAA/MM/GG
+Comune di nascita: nessuno coltrollo su quello che si inserisce
+Indirizzo: nessuno coltrollo su quello che si inserisce, nel rad era specificato che la lunghezza della stringa doveva essere max 30 e non è rispettato
+Comune residenza: nessuno coltrollo su quello che si inserisce
+Provincia: nessuno coltrollo su quello che si inserisce, nel rad era specificato che la lunghezza della stringa doveva essere max 2 e non è rispettato
+Numero di telefono: nessuno coltrollo su quello che si inserisce
+E-mail: OK
+Tipo: se si prova a cambiare ok ma se si prova a lasciarlo vuoto il sistema lo riporta a quello precedente
++ Cap: Ok controllo su inserimento
++ Numero cellulare: Ok controllo su inserimento
++ Indirizzo fax: Ok controllo su inserimento
++ Comune domicilio: nessuno coltrollo su quello che si inserisce
++ Indirizzo domicilio: nessuno coltrollo su quello che si inserisce
++ Provincia domicilio: nessuno coltrollo su quello che si inserisce
++ Cap domicilio: Ok controllo su inserimento
++ Titolo studio: nessuno coltrollo su quello che si inserisce
++ Situazione familiare: nessuno coltrollo su quello che si inserisce
++ Reddito: Ok controllo su inserimento
+
+La modifica funziona bene, l'unico problema è che non c'è l'aggiornamento dei valori (quindi non c'è un refersh della pagina) infatti per visualizzarli bisogna ricaricare la pagina.
+
+Per la ricerca che non ho testasto perchè è di basso livello, partendo dal fatto che funziona ha deu campi in più rispetto al rad, nickname e codice fiscale.
+
+La visualizzazione funziona.
+
+Elimina funziona bene. 
+Non esiste più la possibilità di scegliere più account come si poteva vedere dai mockups infatti tutta la procedura di eliminazione è cambiata rispetto a quanto descritto nel rad.
+
