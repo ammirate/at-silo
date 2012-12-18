@@ -63,7 +63,7 @@ public class ServletRegistrazioneAccount extends HttpServlet {
         pw.println("");
         pw.println("");
         pw.println("");
-        pw.println("<h1>Control Login</h1><br>This servlet should not be accessed this way.");
+        pw.println("<h1>Registrazione Account</h1><br>This servlet should not be accessed this way.");
         pw.println("");
     }
     
