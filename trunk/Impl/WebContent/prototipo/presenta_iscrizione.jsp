@@ -14,8 +14,18 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_iscrizione.jsp"
  %>
+ <%
+ 	if ((request.getParameter("successo")) != null) {
+ 		if (request.getParameter("successo").equals("ok")) {
+ 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+ 		} else {
+ 			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+ 		}
+ 	}
+ %>
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
+  
     <tr>
       <td><table border="0">
         <tbody>
@@ -27,6 +37,11 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                 PRIMA DELL'INVIO DELLA DOMANDA SI RACCOMANDA DI CONTROLLARE L'ESATTA COMPILAZIONE DI TUTTI I CAMPI POICHE', DOPO L'INVIO, NON SARA' POSSIBILE EFFETTUARE ALCUNA MODIFICA</p>
               <p><br>
                 N.B.: Per completare l'invio della domanda &egrave; necessario compilare i seguenti campi:</p>
+               
+            <form name="presenta_domanda_iscrizione" action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&uacute; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
+            
+                <input name="chiamante" type="hidden" id="chiamante"
+			value="iscrizione_completa">
               <table>
                   <tr>
     				<td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vogliono inserire le informazioni</label>
@@ -36,7 +51,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
   					</tr>
  					 <tr>
  				 <td colspan="2">
-                 <select name="select">
+                 <select name="select_bambini" id="select_bambini">
   				  <option selected>Selezionare il nome del bambino</option>
  					</select></td>
   				   <td>&nbsp;</td>
@@ -52,41 +67,29 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                 </tr>
                 <tr>
                 	<td>Inserire le vaccinazioni obbligatorie fatte</td>
-                    <td>
-                    <input type="text">
-                    </td>
+                    <td><textarea name="vaccinazioni" id="vaccinazioni" cols="45" rows="5"></textarea></td>
                 </tr>
                 <tr>
                 	<td>Inserire le malattie infettive contratte</td>
-                    <td><form name="form1" method="post" action="">
+                    <td>
                       <label for="malattie_contratte"></label>
                       <textarea name="malattie_contratte" id="malattie_contratte" cols="45" rows="5"></textarea>
-                  </form></td>
+                 </td>
                 </tr>
                 <tr>
-                	<td height="80"></td>
+                	<td height="80"><input type="submit" value="Invio Domanda Iscrizione"  ></td>
                 </tr>
               </table>
-              <p><br>
-              </p></td>
+               </form>
+               <p><br>
+          </p></td>
             
             </tr>
-            <tr>
-              <td>&nbsp;</td></tr>
                 <!-- Se tutti i dati sono stati compilati correttamente e non è scaduto il bando, il tasto PRESENTA DOMANDA ISCRIZIONE sarà abilitato, altrimenti sarà disabled-->
-             <tr>
-            <td ><form name="presenta_domanda_iscrizione" action="" method="post" nSubmit="return confirm('Presentando la domanda ora non potrai più modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
-            	<input type="submit" value="Invio Domanda Iscrizione"  >
-            </form></td>
-            
-            </tr>
           </tbody>
         </table></td>
             </tr>
-          <tr>
-            <td><img border="0" alt="" height="20" width="1" src="atsilo_files/clearpixel.gif" /></td>
-            </tr>
-          </tbody>
+          
         </table></td>
     </tr>
 
