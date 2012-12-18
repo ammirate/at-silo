@@ -81,6 +81,7 @@ public class ControlIscrizione {
         
         Database db = new Database();
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db); 
+        db.apriConnessione();
 
         DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cf_bambino);
         if(domanda == null)
