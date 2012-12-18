@@ -191,11 +191,11 @@ public class ControlIscrizione {
             (richiedente.getCapResidenza() == null) ||
             (richiedente.getComuneResidenza() == null) ||
             (richiedente.getProvinciaResidenza() == null) ||
-            (richiedente.getIndirizzoDomicilio() == null) ||
+            /*(richiedente.getIndirizzoDomicilio() == null) ||
             (richiedente.getNumeroCivicoDomicilio() == null) ||
             (richiedente.getCapDomicilio() == null) ||
             (richiedente.getComuneDomicilio() == null) ||
-            (richiedente.getProvinciaDomicilio() == null) ||
+            (richiedente.getProvinciaDomicilio() == null) ||*/
             (richiedente.getTipo() == null) ||
             (richiedente.getDipendentePresso() == null) ||
             (richiedente.getRapportiAteneoSalerno() == null) ||
@@ -230,11 +230,11 @@ public class ControlIscrizione {
                 (nonRichiedente.getCapResidenza() == null) ||
                 (nonRichiedente.getComuneResidenza() == null) ||
                 (nonRichiedente.getProvinciaResidenza() == null) ||
-                (nonRichiedente.getIndirizzoDomicilio() == null) ||
+                /*(nonRichiedente.getIndirizzoDomicilio() == null) ||
                 (nonRichiedente.getNumeroCivicoDomicilio() == null) ||
                 (nonRichiedente.getCapDomicilio() == null) ||
                 (nonRichiedente.getComuneDomicilio() == null) ||
-                (nonRichiedente.getProvinciaDomicilio() == null) ||
+                (nonRichiedente.getProvinciaDomicilio() == null) ||*/
                 (nonRichiedente.getTipo() == null) ||
                 (nonRichiedente.getDipendentePresso() == null) ||
                 (nonRichiedente.getRapportiAteneoSalerno() == null) ||
