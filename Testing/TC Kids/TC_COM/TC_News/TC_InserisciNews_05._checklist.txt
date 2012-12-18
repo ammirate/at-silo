@@ -1,2 +1,4 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+"Contenuto" è nominato nel sistema "descrizione"
+il test case non da errore poichè l'ora non è un campo obbligatorio (non indicato nel rad)

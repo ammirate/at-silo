@@ -1,0 +1,5 @@
+Fatto [x]
+Eventuali anomalie rilevate:
+"Contenuto" è nominato nel sistema "descrizione"
+ho provato a caricare prima un mp3 poi un pdf. nel primo caso mi da un'errore 
+nel secondo caso si blocca tutto, e se lo carica da lo stesso errore del primo caso.

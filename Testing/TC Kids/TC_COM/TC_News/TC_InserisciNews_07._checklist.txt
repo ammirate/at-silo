@@ -1,2 +1,4 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+"Contenuto" è nominato nel sistema "descrizione"
+inserita la data errata 1120 il sistema non salva ne da messaggi d'errore
