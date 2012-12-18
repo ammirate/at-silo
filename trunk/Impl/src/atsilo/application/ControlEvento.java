@@ -4,9 +4,12 @@ import atsilo.application.notificheMail.ControlNotificaMail;
 import atsilo.application.notificheMail.Messaggio;
 import atsilo.application.notificheMail.NotificaMailEvento;
 import atsilo.entity.Classe;
+import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.EventPlanner;
 import atsilo.entity.Evento;
 import atsilo.entity.Partecipa;
+import atsilo.entity.PersonaleAsilo;
+import atsilo.entity.Psicopedagogo;
 import atsilo.entity.Utente;
 
 import atsilo.entity.Registro;
@@ -25,6 +28,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.mail.MessagingException;
+
+import com.sun.org.apache.xpath.internal.compiler.PsuedoNames;
 
 
 /*
@@ -249,10 +254,11 @@ public class ControlEvento {
      * Gets all the events about a teacher
      * @param pers is the event owner teacher
      * @return an event list about teacher
+     * @throws SQLException 
      * @throws DBConnectionException 
      * @throws EventoException 
      */
-    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore)
+    public List<Evento> getEventiPerOrganizzatore(EventPlanner organizzatore) throws SQLException
     {
         Database db = new Database();
         
@@ -261,11 +267,33 @@ public class ControlEvento {
             LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da: connessione fallita");
             return null;
         }
+        //GiaNFrancaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        //modificato da Fabio Napoli ma lo devi rivedere xk nn ho usato try catch... :D
+        //mi devi passare solo il COdiceFiscale non tutto lo ggetto :D cosi dovrebbe andare :D
         try{
             DBEvento dbEvento=new DBEvento(db);
-            return dbEvento.getEventiPerOrganizzatore(organizzatore);
+            if(organizzatore instanceof Psicopedagogo){
+                Psicopedagogo p=new Psicopedagogo();
+                p=(Psicopedagogo) organizzatore;
+                return dbEvento.getEventiPerOrganizzatore(p.getCodiceFiscale());
+
+            }
+            else if(organizzatore instanceof PersonaleAsilo){
+                PersonaleAsilo p=new PersonaleAsilo();
+                p=(PersonaleAsilo) organizzatore;
+                return dbEvento.getEventiPerOrganizzatore(p.getCodiceFiscale());
+
+            }
+            else if(organizzatore instanceof EducatoreDidattico){
+                EducatoreDidattico p=new EducatoreDidattico();
+                p=(EducatoreDidattico) organizzatore;
+                return dbEvento.getEventiPerOrganizzatore(p.getCodiceFiscale());
+
+            }
+            else return null;
             
         }
+        
         finally{
             db.chiudiConnessione();
         } 
@@ -279,8 +307,9 @@ public class ControlEvento {
      * @return an event list where all the events have their date equals to @param data
      * @throws DBConnectionException 
      * @throws EventoException 
+     * @throws SQLException 
      */
-    public List<Evento> getEventiInData(Date data) throws DBConnectionException, EventoException{
+    public List<Evento> getEventiInData(Date data) throws DBConnectionException, EventoException, SQLException{
         Database db = new Database();
         
         if(!db.apriConnessione())
@@ -295,7 +324,7 @@ public class ControlEvento {
         } 
     }
     
-    public List<Evento> getEventiPerNome(String nome) throws DBConnectionException, EventoException{
+    public List<Evento> getEventiPerNome(String nome) throws DBConnectionException, EventoException, SQLException{
         Database db = new Database();
         
         if(!db.apriConnessione())
