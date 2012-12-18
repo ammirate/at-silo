@@ -751,7 +751,7 @@ public class ControlDatiPersonali {
         newGen.setCognome(cognome);
         newGen.setEmail(mail);
         newGen.setTelefono(telefono);
-        newGen.setCategoriaAppartenenza(profilo_appartenenza);
+        newGen.setTipo(profilo_appartenenza);
         newAcc.setOwner(newGen);
         
         //E' ora di cercare un username libero
