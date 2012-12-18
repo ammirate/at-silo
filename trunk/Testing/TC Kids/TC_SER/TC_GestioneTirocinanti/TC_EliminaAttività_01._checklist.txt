@@ -1,2 +1,3 @@
-Fatto []
+Fatto [x]
 Eventuali anomalie rilevate:
+l'attività viene eliminata con successo

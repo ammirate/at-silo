@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><dc:date>2012-12-14T19:19:48.21</dc:date><dc:creator>Mariella </dc:creator><meta:editing-duration>PT28M45S</meta:editing-duration><meta:editing-cycles>23</meta:editing-cycles><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="79" meta:word-count="232" meta:character-count="1600" meta:non-whitespace-character-count="1426"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/58f22d5-270d05a-e2abed1-ea17a85-9b5702</meta:generator><dc:date>2012-12-18T14:05:28.85</dc:date><meta:editing-duration>PT28M45S</meta:editing-duration><meta:editing-cycles>24</meta:editing-cycles><meta:document-statistic meta:table-count="1" meta:image-count="0" meta:object-count="0" meta:page-count="2" meta:paragraph-count="82" meta:word-count="237" meta:character-count="1638" meta:non-whitespace-character-count="1462"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="int">1693</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">5080</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="int">49250</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="int">23567</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">21168</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">16970</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="int">31383</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="int">13264</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">15333</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">20096</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="int">1693</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="int">49248</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="int">25259</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">5080</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">21167</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">22049</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -31,7 +31,7 @@
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">2828484</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">2895056</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
@@ -436,6 +436,15 @@
   <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Standard" style:list-style-name="L1">
    <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="normal" fo:font-weight="normal" officeooo:rsid="00162300" officeooo:paragraph-rsid="00162300" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
+  <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="00286a33" officeooo:paragraph-rsid="002c2cd0" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:rsid="0017b1d4" officeooo:paragraph-rsid="002c2cd0" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
+  <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:text-properties style:font-name="Times New Roman" fo:font-size="12pt" officeooo:paragraph-rsid="002c2cd0" style:font-size-asian="12pt" style:font-size-complex="12pt"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="00147e77"/>
   </style:style>
@@ -564,6 +573,9 @@
   </style:style>
   <style:style style:name="T43" style:family="text">
    <style:text-properties officeooo:rsid="002b28c4"/>
+  </style:style>
+  <style:style style:name="T44" style:family="text">
+   <style:text-properties officeooo:rsid="002c2cd0"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" style:num-suffix="." style:num-format="1">
@@ -704,25 +716,25 @@
    </text:sequence-decls>
    <text:p text:style-name="P2"><text:span text:style-name="T1">TC_</text:span><text:span text:style-name="T38">Inserisci</text:span><text:span text:style-name="T40">Attivita</text:span><text:span text:style-name="T1">_0</text:span><text:span text:style-name="T43">8</text:span></text:p>
    <text:p text:style-name="P22"/>
-   <text:list xml:id="list39331940" text:style-name="L1">
+   <text:list xml:id="list34168683" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P43">Nome del Test Case</text:p>
     </text:list-item>
    </text:list>
-   <text:list xml:id="list39342328" text:style-name="L2">
+   <text:list xml:id="list34183688" text:style-name="L2">
     <text:list-header>
      <text:p text:style-name="P48"><text:span text:style-name="T14">Test Case TC</text:span><text:span text:style-name="T17">Inserisci</text:span><text:span text:style-name="T19">Attivita</text:span><text:span text:style-name="T17">_0</text:span><text:span text:style-name="T22">8</text:span></text:p>
     </text:list-header>
    </text:list>
    <text:p text:style-name="P7"/>
-   <text:list xml:id="list39333219" text:continue-list="list39331940" text:style-name="L1">
+   <text:list xml:id="list34194739" text:continue-list="list34168683" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P44">Test Case <text:span text:style-name="T12">Specification Identifier</text:span></text:p>
     </text:list-item>
    </text:list>
    <text:p text:style-name="P6"><text:span text:style-name="T12"><text:tab/></text:span><text:span text:style-name="T13">Caso d&apos;uso da testare</text:span></text:p>
    <text:p text:style-name="P6"><text:span text:style-name="T25"><text:tab/></text:span><text:span text:style-name="T2">UC_SER_</text:span><text:span text:style-name="T8">1.</text:span><text:span text:style-name="T9">12</text:span><text:span text:style-name="T7"> – Inserisci </text:span><text:span text:style-name="T9">Attivita</text:span></text:p>
-   <text:list xml:id="list39342114" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list34196652" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
      <text:p text:style-name="P49">Version date</text:p>
      <text:p text:style-name="P50">1<text:span text:style-name="T40">4</text:span>/12/12 </text:p>
@@ -731,8 +743,8 @@
    </text:list>
    <text:p text:style-name="P1"><text:span text:style-name="T12"><text:tab/></text:span>v. 1.0 </text:p>
    <text:p text:style-name="P11"><text:tab/>Version author</text:p>
-   <text:p text:style-name="P12"><text:span text:style-name="T24"><text:tab/></text:span>Mariella Ferrara</text:p>
-   <text:list xml:id="list39340223" text:continue-numbering="true" text:style-name="L1">
+   <text:p text:style-name="P12"><text:span text:style-name="T24"><text:tab/></text:span>Mariella Ferrara, <text:span text:style-name="T44">Marco Parisi</text:span></text:p>
+   <text:list xml:id="list34197299" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
      <text:p text:style-name="P50"/>
     </text:list-header>
@@ -746,7 +758,7 @@
    </text:list>
    <text:p text:style-name="P13"><text:tab/><text:span text:style-name="T12">Specifica dei requisiti</text:span></text:p>
    <text:p text:style-name="P13"/>
-   <text:list xml:id="list39332877" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list34201978" text:continue-numbering="true" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P56"><text:span text:style-name="T27">Input</text:span> </text:p>
      <text:p text:style-name="P49">Data</text:p>
@@ -822,8 +834,19 @@
       <text:p text:style-name="P36"><text:span text:style-name="T38">C</text:span>orretta</text:p>
      </table:table-cell>
     </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
+      <text:p text:style-name="P63"><text:span text:style-name="T44">Giudizio</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.A2" office:value-type="string">
+      <text:p text:style-name="P65"><text:span text:style-name="T44">Positivo</text:span></text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabella1.C2" office:value-type="string">
+      <text:p text:style-name="P64"><text:span text:style-name="T44">Corretta</text:span></text:p>
+     </table:table-cell>
+    </table:table-row>
    </table:table>
-   <text:list xml:id="list39324574" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list34205443" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
      <text:p text:style-name="P57"><text:span text:style-name="T13">Tables</text:span><text:span text:style-name="T12"> - </text:span></text:p>
      <text:p text:style-name="P57"><text:span text:style-name="T13">Human</text:span><text:span text:style-name="T12"> </text:span><text:span text:style-name="T13">Action</text:span></text:p>
@@ -854,8 +877,8 @@
      <text:p text:style-name="P62"/>
     </text:list-header>
     <text:list-item>
-     <text:p text:style-name="P46">Output</text:p>
-     <text:p text:style-name="P57"><text:soft-page-break/><text:span text:style-name="T13">Tables</text:span><text:span text:style-name="T12"> - </text:span></text:p>
+     <text:p text:style-name="P46"><text:soft-page-break/>Output</text:p>
+     <text:p text:style-name="P57"><text:span text:style-name="T13">Tables</text:span><text:span text:style-name="T12"> - </text:span></text:p>
      <text:p text:style-name="P58"><text:span text:style-name="T13">Human</text:span><text:span text:style-name="T12"> </text:span><text:span text:style-name="T13">Action</text:span></text:p>
      <text:p text:style-name="P52"><text:span text:style-name="T30">I</text:span><text:span text:style-name="T41">l</text:span><text:span text:style-name="T30"> parametr</text:span><text:span text:style-name="T41">o</text:span><text:span text:style-name="T30"> </text:span><text:span text:style-name="T42">Nome</text:span><text:span text:style-name="T41"> non</text:span><text:span text:style-name="T38"> </text:span><text:span text:style-name="T30">rispetta la specifica degli input, </text:span><text:span text:style-name="T41">poiché</text:span><text:span text:style-name="T42"> stringa</text:span><text:span text:style-name="T43"> vuota</text:span><text:span text:style-name="T41">,</text:span><text:span text:style-name="T30"> l&apos;operazione </text:span><text:span text:style-name="T41">non </text:span><text:span text:style-name="T30">va a buon fine ed il sistema </text:span><text:span text:style-name="T41">lancia un messaggio di errore</text:span></text:p>
      <text:p text:style-name="P57"><text:span text:style-name="T13">Condition</text:span><text:span text:style-name="T12"> </text:span></text:p>
@@ -895,7 +918,7 @@
    <text:p text:style-name="P17"><text:span text:style-name="T12"><text:tab/></text:span><text:span text:style-name="T40">Ora Inizio</text:span><text:span text:style-name="T12">: </text:span><text:span text:style-name="T29">stringa </text:span><text:span text:style-name="T12">corrett</text:span><text:span text:style-name="T29">a</text:span></text:p>
    <text:p text:style-name="P18"><text:span text:style-name="T39"><text:tab/></text:span><text:span text:style-name="T40">Ora Fine:</text:span><text:span text:style-name="T12"> </text:span><text:span text:style-name="T29">stringa </text:span><text:span text:style-name="T12">corrett</text:span><text:span text:style-name="T29">a</text:span></text:p>
    <text:p text:style-name="P20"/>
-   <text:list xml:id="list39337397" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list34177927" text:continue-numbering="true" text:style-name="L1">
     <text:list-item>
      <text:p text:style-name="P47">Vincoli ambientali</text:p>
      <text:p text:style-name="P54">Connessione dati attiva</text:p>
