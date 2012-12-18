@@ -100,64 +100,83 @@ public class ServletIscrizioneBambino extends HttpServlet {
         
         String pagina_destinazione = "";
         
-        if ( request.getParameter("chiamante").equals("pre_iscrizione")){//se chiamante è la pagina presenta pre iscrizone 
+        if ( request.getParameter("chiamante").equals("pre_iscrizione"))
+        {//se chiamante è la pagina presenta pre iscrizone 
             try {
                 if  (controlIscrizione.presentaDomandaIscrizionePrimoStep(select_bambini))
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 else 
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
             } catch (DBConnectionException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (AccountException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (InserimentoDatiException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (UtenteException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (GenitoreException e) {
                 // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                LOG.log(Level.SEVERE, e.getMessage(), e);
             } catch (SQLException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (DomandaIscrizioneException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (BambinoException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            }  
+        }
+        if ( request.getParameter("chiamante").equals("iscrizione_completa")){//se chiamante è la pagina iscrizione finale
+            try {
+                if  (controlIscrizione.inserisciDatiDomandaIscrizioneFinale(select_bambini, null, malattie_contratte, vaccinazioni, servizio_selezionato))
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
+                else 
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+            } catch (DomandaIscrizioneException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (DBConnectionException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (InserimentoDatiException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (SQLException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                // TODO Blocco di catch autogenerato
+                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+            } catch (ServizioException e) {
+                pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
-            if ( request.getParameter("chiamante").equals("iscrizione_completa")){//se chiamante è la pagina iscrizione finale
-                try {
-                    if  (controlIscrizione.inserisciDatiDomandaIscrizioneFinale(select_bambini, null, malattie_contratte, vaccinazioni, servizio_selezionato))
-                        pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
-                    else 
-                        pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
-                } catch (DomandaIscrizioneException e) {
-                    // TODO Blocco di catch autogenerato
-                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-                } catch (DBConnectionException e) {
-                    // TODO Blocco di catch autogenerato
-                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-                } catch (InserimentoDatiException e) {
-                    // TODO Blocco di catch autogenerato
-                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-                } catch (SQLException e) {
-                    // TODO Blocco di catch autogenerato
-                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-                } catch (ServizioException e) {
-                    // TODO Blocco di catch autogenerato
-                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
-                }
-                
-                
-            }
+            
+            
         }
-        
+     // Set response content type
+        response.setContentType("text/html");
+        // New location to be redirected
+        response.setStatus(response.SC_MOVED_TEMPORARILY);
+        //reindirizzo verso pagina_chiamante
+        response.setHeader("Location", pagina_destinazione);    
         
     }
     
