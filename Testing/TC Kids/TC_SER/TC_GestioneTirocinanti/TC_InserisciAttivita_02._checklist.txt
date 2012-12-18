@@ -1,2 +1,3 @@
-Fatto []
-Eventuali anomalie rilevate:
+Fatto [x]
+Eventuali anomalie rilevate: 
+attività con data errata viene inserita con successo
