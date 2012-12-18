@@ -15,6 +15,7 @@
 
 package atsilo.entity;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -44,6 +45,8 @@ public class Evento {
      * Costruttore vuoto
      */
     public Evento() {
+        this.id = 0;
+        classi = new ArrayList<Classe>();
     }
     
     
@@ -67,7 +70,9 @@ public class Evento {
         this.tipo = tipo;
         this.organizzatore = organizzatore;
         this.path = path;
-        // l'id viene settato nel layer storage, perchè è Autoincrement
+        this.id = 0;
+        classi = new ArrayList<Classe>();
+
     }
     
     
