@@ -31,7 +31,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <%
 	ControlGestioneBando crt = ControlGestioneBando.getIstance();
 	if (crt.getGraduatoriaIdonei() == null) {
-		out.print("<h1>Non si è ancora concluso il bando </h1>");
+		out.print("<h1>Non si è ancora concluso il bando o la graduatoria non è ancora disponibile</h1>");
 	}
 
 	else if (crt.getGraduatoriaIdonei().size() == 0) {
