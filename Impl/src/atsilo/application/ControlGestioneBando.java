@@ -144,7 +144,9 @@ public class ControlGestioneBando {
         try {
             Bando bando = dbbando.getBando();
             String inizio = bando.getDataInizioBando();
+            int posti = bando.getPostiDisponibili();
             Date now = new Date(System.currentTimeMillis());
+            int numero_posti = bando.getPostiDisponibili();
             String fine = bando.getDataFineBando();
             String[] ggmmaa_fine = fine.split("-");
             Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
@@ -161,7 +163,7 @@ public class ControlGestioneBando {
                     dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
                 }
                 
-                return ldi;
+                return ldi.subList(0, Math.min(posti, ldi.size()));
             }
             else
             {
@@ -193,12 +195,35 @@ public class ControlGestioneBando {
         try {
             Bando bando = dbbando.getBando();
             String inizio = bando.getDataInizioBando();
+            int posti = bando.getPostiDisponibili();
             Date now = new Date(System.currentTimeMillis());
             String fine = bando.getDataFineBando();
             String[] ggmmaa_fine = fine.split("-");
             Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
             if(now.after(data_fine))
             {
+                
+                List<DomandaIscrizione> buoniMaFuori = dbdi.ricercaDomandeConPunteggioInIntervalloDiConsegna(inizio, fine);
+                for(DomandaIscrizione dom : buoniMaFuori)
+                {
+                    //Riempio i bean semivuoti (hanno solo i CF)
+                    Bambino b = dom.getBambino();
+                    dom.setBambino(dbb.ricercaBambinoPerCodFiscale(b.getCodiceFiscale()));
+                    
+                    Genitore gr = dom.getGenitore();
+                    dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
+                }
+                //Prendo gli ultimi [posti] candidati che sono fuori dagli ammessi ma che hanno punteggio
+                if(buoniMaFuori.size()<=posti)
+                {
+                    //i buoni sono meno o tanti quanti i posti disponibili, nessuno è fuori
+                    buoniMaFuori.clear();
+                }
+                else
+                {
+                    //gli aventi punteggio sono più dei posti. 
+                    buoniMaFuori=buoniMaFuori.subList(posti, buoniMaFuori.size());
+                }
                 List<DomandaIscrizione> ldi = dbdi.ricercaDomandeEscluseInIntervalloDiConsegna(inizio, fine);
                 for(DomandaIscrizione dom : ldi)
                 {
@@ -209,8 +234,9 @@ public class ControlGestioneBando {
                     Genitore gr = dom.getGenitore();
                     dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
                 }
-                
-                return ldi;
+                //aggiungo gli esclusi agli ammessi che non hanno punteggio sufficiente
+                buoniMaFuori.addAll(ldi);
+                return buoniMaFuori;
             }
             else
             {
