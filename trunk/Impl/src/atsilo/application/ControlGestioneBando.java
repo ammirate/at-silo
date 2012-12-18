@@ -130,7 +130,7 @@ public class ControlGestioneBando {
     
     /**
      * Restituisce la graduatoria degliidonei dell'ultimo bando.
-     * @return la lista se il bando è concluso, altrimenti null.
+     * @return la lista se il bando è concluso e se non c'è alcuna domanda senza punteggio, altrimenti null.
      */
     public List<DomandaIscrizione> getGraduatoriaIdonei()
     {
@@ -143,6 +143,13 @@ public class ControlGestioneBando {
         
         try {
             Bando bando = dbbando.getBando();
+            List<DomandaIscrizione> daAssegnare = dbdi.ricercaDomandeNonEscluseSenzaPunteggio();
+            if(!daAssegnare.isEmpty())
+            {
+                //Non mostriamo le graduatorie.. dobbiamo ancora terminare di assegnare i punteggi a tutte
+                //le domande
+                return null;
+            }
             String inizio = bando.getDataInizioBando();
             int posti = bando.getPostiDisponibili();
             Date now = new Date(System.currentTimeMillis());
@@ -181,7 +188,7 @@ public class ControlGestioneBando {
     
     /**
      * Restituisce la graduatoria degli esclusi dell'ultimo bando.
-     * @return la lista se il bando è concluso, altrimenti null.
+     * @return la lista se il bando è concluso e se non c'è alcuna domanda senza punteggio, altrimenti null.
      */
     public List<DomandaIscrizione> getGraduatoriaEsclusi()
     {
@@ -193,6 +200,13 @@ public class ControlGestioneBando {
         db.apriConnessione();
         
         try {
+            List<DomandaIscrizione> daAssegnare = dbdi.ricercaDomandeNonEscluseSenzaPunteggio();
+            if(!daAssegnare.isEmpty())
+            {
+                //Non mostriamo le graduatorie.. dobbiamo ancora terminare di assegnare i punteggi a tutte
+                //le domande
+                return null;
+            }
             Bando bando = dbbando.getBando();
             String inizio = bando.getDataInizioBando();
             int posti = bando.getPostiDisponibili();
