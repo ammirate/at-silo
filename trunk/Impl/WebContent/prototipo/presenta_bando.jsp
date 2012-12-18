@@ -33,9 +33,10 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  <%
  	if ((request.getParameter("successo")) != null) {
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+ 			out.print("<script type=text/javascript>alert('Pre iscrizione effettuata con successo')</script>");
  		} else {
- 			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+ 			String mess=request.getParameter("errore");
+ 			out.print("<script type=text/javascript>alert('"+mess+"')</script>");
  		}
  	}
  %>
