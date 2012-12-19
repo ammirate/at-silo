@@ -298,10 +298,10 @@ public class Questionario {
      * @param d domanda vera del questionario a cui risponde la domanda
      * @param r risposta del genitore
      */
-    public void precaricaRispostaAllaDomanda(DomandaQuestionario d, RispostaQuestionario r){
+    public void precaricaRispostaAllaDomanda(RispostaQuestionario r){
         
-        r.setIdDomanda(d.getId());
-        this.rispostePrecaricate.add(r);
+        
+        rispostePrecaricate.add(r);
         
     }
     

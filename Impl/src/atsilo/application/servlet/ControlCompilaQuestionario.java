@@ -71,7 +71,7 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	        for (Entry<String, String[]> entry : request.getParameterMap().entrySet()) {
 	            try {
 	                if(entry.getKey().substring(0, 7).equals("opzione")) {
-	                    System.out.println(entry.getKey() + "=" + Arrays.toString(entry.getValue()));
+	                    //System.out.println(entry.getKey() + "=" + Arrays.toString(entry.getValue()));
 	                    int a = entry.getKey().indexOf("[");
 	                    if (a==-1) idDomanda = Integer.parseInt(entry.getKey().substring(7));
 	                    else idDomanda = Integer.parseInt(entry.getKey().substring(7, a));
@@ -81,9 +81,7 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	                }
 	            }
 	            catch (Exception e) {
-	                 
-	                    
-
+	           
 	            }
 	            
 	        }
