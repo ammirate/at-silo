@@ -18,7 +18,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <img width="209" border="0" alt="" height="1"
 	src="atsilo_images/clearpixel.gif">
 </td>
-<td class="content" valign="top" bgcolor="#ffffff"><h2><em>Graduatoria Esclusi</em></h2><table
+<td class="content" valign="top" bgcolor="#ffffff"><h2><em>Graduatoria Ammessi</em></h2><table
 		cellspacing="10" cellpadding="0" border="0" width="100%">
 		<tbody>
 			<tr>
