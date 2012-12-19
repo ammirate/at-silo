@@ -61,7 +61,7 @@ public class ControlDatiPersonali {
             String provinciaDomicilio, List<Bambino> figli,
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
-            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            int statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
             String rapportoParentela,String condizioneLavorativa, String tipoContratto,String cfBambino)
     {
         try {
@@ -154,7 +154,7 @@ public class ControlDatiPersonali {
             String provinciaDomicilio, List<Bambino> figli,
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
-            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            int statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
             String rapportoParentela,String condizioneLavorativa, String tipoContratto) throws GenitoreException, DBConnectionException, InserimentoDatiException{
         
         Database db = new Database();
@@ -288,7 +288,7 @@ public class ControlDatiPersonali {
             {
                 genitore.setRapportiComuneFisciano(rapportiComuneFisciano);
             }
-            if(statusLavorativo!=null && statusLavorativo.length()!=0)
+            if(statusLavorativo>0)
             {
                 genitore.setStatusLavorativo(statusLavorativo);
             }

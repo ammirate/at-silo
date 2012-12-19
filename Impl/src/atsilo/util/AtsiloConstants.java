@@ -55,5 +55,21 @@ public class AtsiloConstants {
     public static final String CERTIFICATO_CONSEGNATO="Consegnato";
     public static final String CERTIFICATO_NON_CONSEGNATO="NonConsegnato";
     public static final String CERTIFICATO_IN_ATTESA="InAttesa";
+    public static final String STATUS_LAVORATIVO_1="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa";
+    public static final String STATUS_LAVORATIVO_2="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa";
+    public static final String STATUS_LAVORATIVO_3="di essere docente a tempo pieno dell'Universit&agrave; degli Studi di Salerno;";
+    public static final String STATUS_LAVORATIVO_4="di essere docente a tempo definito dell'Universit&agrave; degli Studi di Salerno;";
+    public static final String STATUS_LAVORATIVO_5="di essere ricercatore a tempo pieno dell'Universit&agrave; degli Studi di Salerno";
+    public static final String STATUS_LAVORATIVO_6="di essere ricercatore a tempo definito dell'Universit&agrave; degli Studi di Salerno";
+    public static final String STATUS_LAVORATIVO_7="di essere titolare di assegni di ricerca presso l'Universit&agrave; degli Studi di Salerno";
+    public static final String STATUS_LAVORATIVO_8="di essere titolare di contratto a tempo determinato presso l'Universit&agrave; degli Studi di Salerno";
+    public static final String STATUS_LAVORATIVO_9="di essere dottorando presso l'Universit&agrave; degli Studi di Salerno";
+    public static final String STATUS_LAVORATIVO_10="di essere titolare di borsa di studio post laurea o post doc presso l'Universit&agrave; degli Studi di Salerno";
+    public static final String STATUS_LAVORATIVO_11="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa";
+    public static final String STATUS_LAVORATIVO_12="di essere studente regolarmente iscritto e frequentante Corsi di studio di I o II ciclo dell'UniSa";
+    
+    
+    
+    
     
 }

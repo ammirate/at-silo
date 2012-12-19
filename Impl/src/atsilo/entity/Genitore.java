@@ -26,7 +26,7 @@ public class Genitore extends Utente {
     private String dipendentePresso;
     private String rapportiAteneoSalerno;
     private String rapportiComuneFisciano;
-    private String statusLavorativo;
+    private int statusLavorativo;
     private Date scadenzaContratto;
     private String categoriaAppartenenza;
     private String rapportoParentela;
@@ -73,7 +73,7 @@ public class Genitore extends Utente {
             String provinciaDomicilio, List<Bambino> figli,
             List<Questionario> questionariCompilati, String tipo, String dipendentePresso,
             String rapportiAteneoSalerno, String rapportiComuneFisciano,
-            String statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
+            int statusLavorativo, Date scadenzaContratto, String categoriaAppartenenza,
             String rapportoParentela, String condizioneLavorativa, String tipoContratto) {
         super(dataNascita, nome, cognome, codiceFiscale, email, comuneNascita,
                telefono, cittadinanza, indirizzoResidenza,
@@ -165,7 +165,7 @@ public class Genitore extends Utente {
      * Metodo che setta il campo statusLavorativo
      * @param statusLavorativo è settato dopo la lettura
      */
-    public void setStatusLavorativo(String statusLavorativo) {
+    public void setStatusLavorativo(int statusLavorativo) {
         this.statusLavorativo = statusLavorativo;
     }
 
@@ -173,7 +173,7 @@ public class Genitore extends Utente {
      * Metodo che prende il parametro statusLavorativo
      * @return statusLavorativo il parametro inserito
      */
-    public String getStatusLavorativo() {
+    public int getStatusLavorativo() {
         return statusLavorativo;
     }
     

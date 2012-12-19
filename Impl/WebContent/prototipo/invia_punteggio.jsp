@@ -57,10 +57,22 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 %>
 <input type="hidden" value="<%= r %>" name="domanda" />
 <div align="left">
-<filedset><legend>Domanda Iscrizione</legend>
+<filedset><legend><h2>Valuta Domanda Iscrizione</h2></legend>
 <b>Nome: </b> <%= domanda.getBambino().getNome() %>
 <br /><b>Cognome: </b> <%= domanda.getBambino().getCognome() %>
 <br /><b>Codice Fiscale: </b> <%= domanda.getBambino().getCodiceFiscale() %>
+<br /><b>Bambino con disabilità: </b> <% if(domanda.getBambinoDisabile()) out.print("Si"); else out.print("No"); %>
+<br /><b>Genitore con disabilità: </b> <% if(domanda.getGenitoreInvalido()) out.print("Si"); else out.print("No"); %>
+<br /><b>Genitore solo: </b> <% if(domanda.getGenitoreSolo()) out.print("Si"); else out.print("No"); %>
+<br /><b>Genitore vedovo: </b> <% if(domanda.getGenitoreVedovo()) out.print("Si"); else out.print("No"); %>
+<br /><b>Genitore nubile: </b> <% if(domanda.getGenitoreNubile()) out.print("Si"); else out.print("No"); %>
+<br /><b>Genitore separato: </b> <% if(domanda.getGenitoreSeparato()) out.print("Si"); else out.print("No"); %>
+<br /><b>Figlio non riconosciuto: </b> <% if(domanda.getFiglioNonRiconosciuto()) out.print("Si"); else out.print("No"); %>
+<br /><b>Affido esclusivo: </b> <% if(domanda.getAffidoEsclusivo()) out.print("Si"); else out.print("No"); %>
+<br /><b>Altri componenti familiari soggetti a disabilità: </b> <% if(domanda.getAltriComponentiDisabili()) out.print("Si"); else out.print("No"); %>
+<br /><b>ISEE: </b> <% out.print(domanda.getIsee()); %>
+<br/><br/>
+
 </filedset>
 <input id="inpv" type="button" value="Valuta" name="valuta" onclick="valutaIscrizione()" />
 <input id="inpe" type="button" value="Escludi" name="escludi" onclick="escludiIscrizione()" />

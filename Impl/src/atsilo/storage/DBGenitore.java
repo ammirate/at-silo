@@ -143,7 +143,7 @@ public class DBGenitore extends DBBeans<Genitore> {
             p.setDipendentePresso(r.getString("dipendente_presso"));
             p.setRapportiAteneoSalerno(r.getString("rapporti_ateneo_salerno"));
             p.setRapportiComuneFisciano(r.getString("rapporti_comune_fisciano"));
-            p.setStatusLavorativo(r.getString("status_lavorativo"));
+            p.setStatusLavorativo(r.getInt("status_lavorativo"));
             p.setScadenzaContratto(r.getDate("scadenza_contratto"));
             p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             p.setRapportoParentela(r.getString("rapporto_parentela"));
@@ -193,7 +193,7 @@ public class DBGenitore extends DBBeans<Genitore> {
             p.setDipendentePresso(r.getString("dipendente_presso"));
             p.setRapportiAteneoSalerno(r.getString("rapporti_ateneo_salerno"));
             p.setRapportiComuneFisciano(r.getString("rapporti_comune_fisciano"));
-            p.setStatusLavorativo(r.getString("status_lavorativo"));
+            p.setStatusLavorativo(r.getInt("status_lavorativo"));
             p.setScadenzaContratto(r.getDate("scadenza_contratto"));
             p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             p.setRapportoParentela(r.getString("rapporto_parentela"));
@@ -272,7 +272,7 @@ public class DBGenitore extends DBBeans<Genitore> {
             p.setDipendentePresso(r.getString("dipendente_presso"));
             p.setRapportiAteneoSalerno(r.getString("rapporti_ateneo_salerno"));
             p.setRapportiComuneFisciano(r.getString("rapporti_comune_fisciano"));
-            p.setStatusLavorativo(r.getString("status_lavorativo"));
+            p.setStatusLavorativo(r.getInt("status_lavorativo"));
             p.setScadenzaContratto(r.getDate("scadenza_contratto"));
             p.setCategoriaAppartenenza(r.getString("categoria_appartenenza"));
             p.setRapportoParentela(r.getString("rapporto_parentela"));
