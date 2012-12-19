@@ -76,10 +76,7 @@ public class ControlDatiPersonali {
                 rapportiAteneoSalerno, rapportiComuneFisciano,
                 statusLavorativo, scadenzaContratto, categoriaAppartenenza,
                 rapportoParentela,condizioneLavorativa, tipoContratto);
-            if(!firstResult)
-            {
-                throw new GenitoreException("Genitore non richiedente non inserito.");
-            }
+            
                 Database db = new Database();
                 db.apriConnessione();
                 DBBambino dbbamb = new DBBambino(db);
@@ -88,8 +85,19 @@ public class ControlDatiPersonali {
                 DomandaIscrizione di = null;
                 if(cfBambino==null || cfBambino.length() != 16)
                     throw new InserimentoDatiException("Il codice fiscale del bambino non è valido");
+                
                 Bambino b=null;//Non sicuro ma volontario
                 try {
+                    if(!firstResult)
+                    {
+                        //Controllo se l'inserimento è fallito perchè il genitore era già presente
+                        Genitore giaPresente = dbgen.getGenitorePerCF(codiceFiscale);
+                        if(giaPresente==null)
+                        {
+                            throw new GenitoreException("Genitore non richiedente non inserito .");
+                        }
+                        
+                    }
                     b = dbbamb.ricercaBambinoPerCodFiscale(cfBambino);
                     di = dbdi.ricercaDomandaDaBambino(cfBambino);
                 } catch (SQLException e) {
