@@ -166,7 +166,7 @@ public class ControlIscrizione {
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
-        
+        DBGenitore dbg = new DBGenitore(db);
         if(!ControlGestioneBando.getIstance().bandoAperto())
         {
             throw new BandoException("Bando non aperto");
@@ -181,6 +181,7 @@ public class ControlIscrizione {
         
         //il metodo valuta che tutti i campi dell'iscrizione siano stati inseriti
         Genitore richiedente = d.getGenitore();
+        richiedente = dbg.getGenitorePerCF(richiedente.getCodiceFiscale());
         if(richiedente == null)
             throw new GenitoreException("Genitore richiedente non trovato");
         
@@ -220,6 +221,7 @@ public class ControlIscrizione {
           && (d.getGenitoreVedovo() == false) && (d.getGenitoreSeparato() == false) && (d.getAffidoEsclusivo() == false) )
         {
             Genitore nonRichiedente = d.getGenitoreNonRichiedente();
+            nonRichiedente=dbg.getGenitorePerCF(nonRichiedente.getCodiceFiscale());
             if(nonRichiedente == null)
                 throw new GenitoreException("Genitore non richiedente non trovato");
             
@@ -287,6 +289,7 @@ public class ControlIscrizione {
             
         DomandaIscrizione domandaModificata = (DomandaIscrizione) d.clone();
         domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
+        domandaModificata.setStatoDomanda("Inviata");
 
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
@@ -367,6 +370,7 @@ public class ControlIscrizione {
           DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
           
           domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI);
+          domandaModificata.setStatoDomanda("È necessario consegnare i documenti all'asilo: Liberatoria sulla privacy, certificati vaccinazioni, certificati malattie infettive contratte.");
           // vengono modificati i campi passati come parametri
           if (malattieInfettive != null)
               domandaModificata.setMalattieInfettive(malattieInfettive);
@@ -504,6 +508,7 @@ public class ControlIscrizione {
             {
                 DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
                 domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
+                domandaModificata.setStatoDomanda("Accettata");
                 bdDomandaIscrizione.replace(domanda,domandaModificata);
                 Bambino b = dbb.ricercaBambinoPerCodFiscale(domanda.getBambino().getCodiceFiscale());
                 b.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);

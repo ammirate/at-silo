@@ -25,6 +25,7 @@ import atsilo.stub.application.StubBambino;
 import atsilo.stub.application.StubDomandaIscrizione;
 import atsilo.stub.application.StubGenitore;
 import atsilo.stub.application.StubUtente;
+import atsilo.util.AtsiloConstants;
 
 /*
  *-----------------------------------------------------------------
@@ -83,12 +84,14 @@ public class ControlDatiPersonali {
                 db.apriConnessione();
                 DBBambino dbbamb = new DBBambino(db);
                 DBGenitore dbgen = new DBGenitore(db);
-                
+                DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
+                DomandaIscrizione di = null;
                 if(cfBambino==null || cfBambino.length() != 16)
                     throw new InserimentoDatiException("Il codice fiscale del bambino non è valido");
                 Bambino b=null;//Non sicuro ma volontario
                 try {
                     b = dbbamb.ricercaBambinoPerCodFiscale(cfBambino);
+                    di = dbdi.ricercaDomandaDaBambino(cfBambino);
                 } catch (SQLException e) {
                     // TODO Blocco di catch autogenerato
                     LOG.log(Level.SEVERE, "Errore di esecuzione della query. Causato da:"+e.getMessage(), e);
@@ -111,7 +114,9 @@ public class ControlDatiPersonali {
                     if(g!=null)
                     {
                         b.setGenitoreNonRichiedente(g);
+                        di.setGenitoreNonRichiedente(g);
                         dbbamb.replace(b, b);
+                        dbdi.replace(di, di);
                         return true;
                     }
                     
@@ -654,6 +659,8 @@ public class ControlDatiPersonali {
         }
         di.setBambino(bambino);
         di.setGenitore(bambino.getGenitore());
+        di.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA);
+        di.setStatoDomanda("Non compilata");
         try{
             if(lettoDalDb==null)
             {
