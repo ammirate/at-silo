@@ -98,8 +98,12 @@ public class ControlGestioneBando {
             di.setBambino(dbb.ricercaBambinoPerCodFiscale(b.getCodiceFiscale()));
             
             Genitore gr = di.getGenitore();
+            Genitore gnr = di.getGenitoreNonRichiedente();
             di.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
-            
+            if(gnr!=null)
+            {
+                di.setGenitoreNonRichiedente(dbg.getGenitorePerCF(gnr.getCodiceFiscale()));
+            }
             
             return di;
         } catch (SQLException e) {

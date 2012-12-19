@@ -1,3 +1,4 @@
+<%@page import="atsilo.util.AtsiloConstants"%>
 <%@
 	include file="atsilo_files/header.jsp"%>
 <%@ page import="atsilo.application.*,atsilo.entity.*"%>
@@ -54,10 +55,15 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 	int id = Integer.parseInt(r);
 	ControlGestioneBando crt = ControlGestioneBando.getIstance();
 	DomandaIscrizione domanda = crt.getDomandaIscrizioneById(id);
+	boolean genitore_richiedente_non_presente=domanda.getGenitoreSolo()|| domanda.getGenitoreVedovo()|| 
+			domanda.getGenitoreNubile()||domanda.getGenitoreSeparato()||domanda.getFiglioNonRiconosciuto();
 %>
 <input type="hidden" value="<%= r %>" name="domanda" />
 <div align="left">
 <filedset><legend><h2>Valuta Domanda Iscrizione</h2></legend>
+<table>
+<thead><td><h4>Domanda Iscrizione</h4></td><td><h4>Informazioni sui Genitori</h4></td></thead><tbody>
+<tr><td>
 <b>Nome: </b> <%= domanda.getBambino().getNome() %>
 <br /><b>Cognome: </b> <%= domanda.getBambino().getCognome() %>
 <br /><b>Codice Fiscale: </b> <%= domanda.getBambino().getCodiceFiscale() %>
@@ -72,7 +78,75 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 <br /><b>Altri componenti familiari soggetti a disabilità: </b> <% if(domanda.getAltriComponentiDisabili()) out.print("Si"); else out.print("No"); %>
 <br /><b>ISEE: </b> <% out.print(domanda.getIsee()); %>
 <br/><br/>
+</td>
+<td valign="top">
+<b>Nome Genitore richiedente: </b> <%= domanda.getGenitore().getNome() %>
+<br /><b>Cognome Genitore richiedente: </b> <%= domanda.getGenitore().getCognome() %>
+<br /><b>Categoria Genitore richiedente: </b> <%= domanda.getGenitore().getTipo() %>
+<br /><b>Status lavorativo richiedente: </b> <%
+String status="";
+int int_stat=domanda.getGenitore().getStatusLavorativo(); 
+switch(int_stat)
+{
+	case 1:
+		status=AtsiloConstants.STATUS_LAVORATIVO_1;
+		break;
+	case 2:
+		status=AtsiloConstants.STATUS_LAVORATIVO_2;
+		break;
+	case 3:
+		status=AtsiloConstants.STATUS_LAVORATIVO_3;
+		break;
+	case 4:
+		status=AtsiloConstants.STATUS_LAVORATIVO_4;
+		break;
+	case 5:
+		status=AtsiloConstants.STATUS_LAVORATIVO_5;
+		break;
+	case 6:
+		status=AtsiloConstants.STATUS_LAVORATIVO_6;
+		break;
+	case 7:
+		status=AtsiloConstants.STATUS_LAVORATIVO_7;
+		break;
+	case 8:
+		status=AtsiloConstants.STATUS_LAVORATIVO_8;
+		break;
+	case 9:
+		status=AtsiloConstants.STATUS_LAVORATIVO_9;
+		break;
+	case 10:
+		status=AtsiloConstants.STATUS_LAVORATIVO_10;
+		break;
+	case 11:
+		status=AtsiloConstants.STATUS_LAVORATIVO_11;
+		break;
+	case 12:
+		status=AtsiloConstants.STATUS_LAVORATIVO_12;
+		break;
+	default: status = "Non specificato";
+	break;
+}
+out.print(status);
+%>
+<br /><b>Anno scadenza contratto del richiedente: </b> <%= domanda.getGenitore().getScadenzaContratto() %>
+<br><br>
+<%
+if(!genitore_richiedente_non_presente && domanda.getGenitoreNonRichiedente()!=null)
+{
+%>
+<b>Nome Genitore non richiedente: </b> <%= domanda.getGenitoreNonRichiedente().getNome() %>
+<br /><b>Cognome Genitore non richiedente: </b> <%= domanda.getGenitoreNonRichiedente().getCognome() %>
+<br /><b>Condizione Lavorativa Genitore non richiedente: </b> <%= domanda.getGenitoreNonRichiedente().getCondizioneLavorativa() %>
+<br /><b>Tipo contratto Genitore non richiedente: </b> <%= domanda.getGenitoreNonRichiedente().getTipoContratto() %>
+<br /><b>Sede di lavoro Genitore non richiedente: </b> <%= domanda.getGenitoreNonRichiedente().getDipendentePresso() %>
 
+<%
+}
+%>
+</td>
+</tr>
+</tbody></table>
 </filedset>
 <input id="inpv" type="button" value="Valuta" name="valuta" onclick="valutaIscrizione()" />
 <input id="inpe" type="button" value="Escludi" name="escludi" onclick="escludiIscrizione()" />
