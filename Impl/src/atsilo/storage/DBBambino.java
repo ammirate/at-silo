@@ -323,14 +323,11 @@ public class DBBambino extends DBBeans<Bambino> {
 
             l.add(b);
             } 
-            if(l.size()==0){
-                r.close();
-                return null;
-            }else{
+            
             r.close();
             
         return l;
-            }
+            
     }
     /**
      * 
@@ -381,15 +378,12 @@ public class DBBambino extends DBBeans<Bambino> {
 
             l.add(b);
             } 
-            if(l.size()==0){
-                r.close();
-                return null;
-            }else{
+            
             r.close();
             
         return l;
-            }
     }
+    
     /**
      * Preso in input il codice fiscale di un Bambino , restituisce
      * una lista di stringhe con il codice fiscale del genitore e del

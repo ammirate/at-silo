@@ -36,9 +36,10 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 
 	else if (crt.getGraduatoriaIdonei().size() == 0) {
 		out.print("<h1>Non ci sono domande da mostrare");
-	} else {
+	} else if(crt.getGraduatoriaIdonei().size()>0) {
 		int n = crt.getGraduatoriaIdonei().size();
 		int k=1;
+		java.util.List<DomandaIscrizione> l = crt.getGraduatoriaIdonei();
 		for(int i=0;i<n;i++){
 			out.append("<tr><td>")
 			.append(""+k)

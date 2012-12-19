@@ -488,7 +488,7 @@ public class ControlIscrizione {
             throws DomandaIscrizioneException, DBConnectionException, SQLException {
         Database db = new Database();
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
-        
+        DBBambino dbb = new DBBambino(db);
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try {
@@ -505,6 +505,9 @@ public class ControlIscrizione {
                 DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
                 domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_ACCETTATA);
                 bdDomandaIscrizione.replace(domanda,domandaModificata);
+                Bambino b = dbb.ricercaBambinoPerCodFiscale(domanda.getBambino().getCodiceFiscale());
+                b.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_RIFIUTATA);
+                dbb.replace(b, b);
                 return true;
             }
             else return false;

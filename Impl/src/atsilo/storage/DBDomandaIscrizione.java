@@ -422,8 +422,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setMalattieInfettive(r.getString("malattie_infettive"));
             toReturn.add(temp);
         } 
-       if(toReturn.size()==0)
-           toReturn=null;
+       
         r.close();
         return toReturn;
     }
@@ -482,8 +481,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
             temp.setMalattieInfettive(r.getString("malattie_infettive"));
             toReturn.add(temp);
         }
-       if(toReturn.size()==0)
-           toReturn=null;
+       
         r.close();
         return toReturn;
     }
@@ -544,8 +542,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
                 toReturn.add(temp);
             }
         } 
-       if(toReturn.size()==0)
-           toReturn=null;
+       
         r.close();
         return toReturn;
     }
@@ -606,8 +603,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
                 toReturn.add(temp);
             }
         } 
-       if(toReturn.size()==0)
-           toReturn=null;
+      
         r.close();
         return toReturn;
     }
