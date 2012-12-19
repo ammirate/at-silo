@@ -115,6 +115,7 @@ include
 				document.getElementById("bott_calendario").disabled=false;
 
 				document.getElementById("select_bambini").removeAttribute("onChange","");
+				document.getElementById("rapportoParentela").disabled=false;
 			slf.onclick = null;
 			return false;
 		}
@@ -194,7 +195,7 @@ function calendarOpenerN()
 			</tr>
 			<tr>
 				<td>In qualita' di</td>
-				<td><select id="rapportoParentela" name="rapportoParentela">
+				<td><select id="rapportoParentela" name="rapportoParentela" disabled>
 				   <%
 				     out.append("<option value='null' selected>Seleziona</option>");
 							  if (rapportoParentela != null && rapportoParentela.equals("Padre"))

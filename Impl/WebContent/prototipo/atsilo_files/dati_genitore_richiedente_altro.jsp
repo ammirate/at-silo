@@ -73,7 +73,7 @@ function calendarOpenerN()
 <table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
-    <td><select id="rapportoParentela" name="rapportoParentela">
+    <td><select id="rapportoParentela" name="rapportoParentela" disabled="disabled">
 				   <%
 				     out.append("<option value='null' selected>Seleziona</option>");
 							  if (rapportoParentela != null && rapportoParentela.equals("Padre"))
