@@ -180,62 +180,62 @@ function calendarOpenerN()
   							String selected="";
 							  if (statusLavorativo >0 && statusLavorativo==1)
 								  selected="selected";
-						       out.append("<option value='1' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_1+">");
+						       out.append("<option value='1' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_1+"");
 						      
 						      selected="";
 							  if (statusLavorativo >0  && statusLavorativo==2)
 								  selected="selected";
-							  out.append("<option value='2' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_2+">");
+							  out.append("<option value='2' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_2+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==3)
 								  selected="selected";
-							  out.append("<option value='3' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_3+">");
+							  out.append("<option value='3' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_3+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==4)
 								  selected="selected";
-							  out.append("<option value='4' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_4+">");
+							  out.append("<option value='4' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_4+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==5)
 								  selected="selected";
-							  out.append("<option value='5' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_5+">");
+							  out.append("<option value='5' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_5+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==6)
 								  selected="selected";
-							  out.append("<option value='6' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_6+">");
+							  out.append("<option value='6' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_6+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==7)
 								  selected="selected";
-							  out.append("<option value='7' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_7+">");
+							  out.append("<option value='7' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_7+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==8)
 								  selected="selected";
-							  out.append("<option value='8' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_8+">");
+							  out.append("<option value='8' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_8+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==9)
 								  selected="selected";
-							  out.append("<option value='9' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_9+">");
+							  out.append("<option value='9' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_9+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==10)
 								  selected="selected";
-							  out.append("<option value='10' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_10+">");
+							  out.append("<option value='10' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_10+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==11)
 								  selected="selected";
-							  out.append("<option value='11' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_11+">");
+							  out.append("<option value='11' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_11+"");
 							  
 							  selected="";
 							  if (statusLavorativo >0  && statusLavorativo==12)
 								  selected="selected";
-							  out.append("<option value='12' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_12+">");
+							  out.append("<option value='12' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_12+"");
 							  
 							  
 							  
