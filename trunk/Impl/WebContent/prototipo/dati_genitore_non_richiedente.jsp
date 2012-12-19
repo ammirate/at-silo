@@ -25,7 +25,9 @@ include
 		String cognome="";
 		String nome="";
 		String codiceFiscale="";
-		String dataNascita="" ;
+		String gg="";
+  		String mm="";
+  		String aa="";
  	 	String comuneNascita="";
  	 	String cittadinanza="";
  	 	String indirizzoResidenza="";
@@ -49,11 +51,8 @@ include
 	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
 	  	List<Bambino> figli= new ArrayList<Bambino>();
 	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli 
-	  	
-	
-	  	
-
-			%> <%
+			%>
+            <%
 	 //setta campi form una volta selezionato il nome del bambino
 	  String cfb=null;
 	 if (request.getParameter("select_bambini")!=null )
@@ -71,7 +70,12 @@ include
 	   	    cognome=genitore.getCognome(); 
 			nome=genitore.getNome();
 			codiceFiscale=genitore.getCodiceFiscale(); 
-			dataNascita="dataNascita" ;
+			Date tempDataNascita=genitore.getDataNascita();
+	 		if (tempDataNascita != null) {
+	 			gg = tempDataNascita.toString().substring(8, 10);
+	 			mm = tempDataNascita.toString().substring(5, 7);
+	 			aa = tempDataNascita.toString().substring(0, 4);
+	 		}
 	 	    comuneNascita=genitore.getComuneNascita(); 
 			cittadinanza=genitore.getcittadinanza(); 
 			indirizzoResidenza=genitore.getIndirizzoResidenza(); 
@@ -108,11 +112,44 @@ include
 			var n = f.elements.length;
 			for ( var i = 1; i < n; i++)
 				document.forms[0].elements[i].removeAttribute("readonly");
+				document.getElementById("bott_calendario").disabled=false;
+
 				document.getElementById("select_bambini").removeAttribute("onChange","");
 			slf.onclick = null;
 			return false;
 		}
-	</script> <%
+	</script>
+    <!--gestione calendar-->
+ <script type="text/javascript" src="atsilo_files/CalendarDisplay110.js"></script>
+<script type="text/javascript">
+calendarTry = new CalendarDisplay();
+calendarTry.setNavigationOn("calendarTry");
+calendarTry.setOpenOn();
+calendarTry.setAutoCloseOn();
+calendarTry.setLinkOn("fillInFields");
+calendarTry.setDayFormat(calendarTry.TWO_LETTER);
+	
+function calendarOpenerN()
+	{
+		var m = document.getElementById("month").value;
+		var d = document.getElementById("day").value;
+		var y = document.getElementById("year").value;
+		var showMonth = true;
+		if (m == ""|| d == "" || y == "")
+			calendarTry.createMonth(0, 1, 1970);
+		else
+			calendarTry.createMonth(m - 1, d, y);
+	}
+
+	function fillInFields(month, day, year,c) {
+
+		document.getElementById("month").value = month + 1;
+		document.getElementById("day").value = day;
+		document.getElementById("year").value = year;
+	}
+
+</script>
+     <%
  	if ((request.getParameter("successo")) != null) {
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
@@ -199,10 +236,9 @@ include
 					value="<%=comuneNascita%>" size="25" maxlength="25"
 					readonly="readonly"></td>
 				<td>Nato il</td>
-				<td><input name="dataNascita_genitore_non_richiedente"
-					type="text" id="dataNascita_genitore_non_richiedente"
-					value="<%=dataNascita%>" size="25" maxlength="10"
-					readonly="readonly"></td>
+    <td>
+    <input name="day" type="text" id="day" value="<%=gg%>"  size="2" maxlength="2" readonly="readonly"><input name="month" type="text" id="month" value="<%=mm%>"  size="2" maxlength="2" readonly="readonly"><input name="year" type="text" id="year" value="<%=aa%>"  size="4" maxlength="4" readonly="readonly"><input name="bott_calendario" type="button" id="bott_calendario" onclick="calendarOpenerN(this.form);" value="..." disabled="disabled" /> 
+    </td>
 			</tr>
 			<tr>
 				<td>Codice Fiscale</td>
@@ -322,13 +358,14 @@ include
 			<tr>
 				<td>&nbsp;</td>
 			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" name="bottone_submit"
-					id="bottone_submit" value="Modifica"
-					onClick="return settaAttributi(this)" /> <input type="reset"
-					name="reset" value="Annulla" /></td>
-			</tr>
+			<%  if (cfb!=null && cfb!="null"){
+			out.append("<tr>")
+				.append("<td></td>")
+				.append("<td><input type='submit' name='bottone_submit'")
+				.append(" id='bottone_submit' value='Modifica' ") 
+				 .append(" onClick='return settaAttributi(this)' /> ")
+				.append("<input type='reset' name='reset' value='Annulla' /></td></tr>");
+			}%>
 		</table>
 	</form></td>
 <!--Chiudi content -->
