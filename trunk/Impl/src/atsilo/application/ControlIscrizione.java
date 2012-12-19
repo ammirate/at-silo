@@ -446,6 +446,47 @@ public class ControlIscrizione {
         }
     }
     
+    public boolean rinunciaIscrizione(String cfBambino) throws DomandaIscrizioneException, InserimentoDatiException, DBConnectionException, SQLException{
+        Database db = new Database();
+        DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
+        DBBambino dbb = new DBBambino(db);
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        if (cfBambino.length() != 16)
+            throw new InserimentoDatiException("Il codice fiscale non è valido");
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            
+            DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cfBambino);
+            if (domanda == null)
+                throw new DomandaIscrizioneException("Domanda non trovata");
+            //Posso rinunciare solo se ho inviato la domanda, o non sono stato già rifiutato o accettato.
+             if(domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA)
+                     || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_RIFIUTATA)
+                     || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_ACCETTATA))
+                 throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
+             
+            if(!ControlGestioneBando.getIstance().rinunceAperte())
+            {
+                throw new DomandaIscrizioneException("Impossibile rinunciare alla domanda. I termini di rinuncia sono scaduti.");
+            }
+            
+            DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
+            domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_RITIRATA);
+            domandaModificata.setStatoDomanda("Ritirata");
+            Bambino b = dbb.ricercaBambinoPerCodFiscale(domandaModificata.getBambino().getCodiceFiscale());
+            b.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_RINUNCIATARIO);
+            if (!dbb.replace(b, b))
+                throw new DomandaIscrizioneException("Modifica fallita");
+            if (!bdDomandaIscrizione.replace(domanda, domandaModificata))
+                throw new DomandaIscrizioneException("Modifica fallita");
+            return true;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    
     /**
      * Metodo che restituisce la lista delle domande confermate da convalidare poi con i certificati. 
      * @return
