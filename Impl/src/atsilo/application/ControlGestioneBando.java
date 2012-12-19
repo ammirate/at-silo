@@ -351,6 +351,7 @@ public class ControlGestioneBando {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setPunteggio(punteggio);
                 domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP);
+                domandaDaModificare.setStatoDomanda("Punteggio assegnato");
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
@@ -384,6 +385,7 @@ public class ControlGestioneBando {
             try {
                 domandaDaModificare = dbDomandaIscrizione.ricercaDomandaDaId(iscrizione.getId());
                 domandaDaModificare.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_RIFIUTATA);
+                domandaDaModificare.setStatoDomanda("Escluso");
                 domandaDaModificare.setNotaEsclusione(notaEsclusione);
                 domandaDaModificare.setPunteggio(-1);
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);

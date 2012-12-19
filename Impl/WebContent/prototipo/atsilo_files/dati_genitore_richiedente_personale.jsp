@@ -31,7 +31,12 @@
  	String provinciaDomicilio = genitore.getProvinciaDomicilio();
  	String statusLavorativo = genitore.getStatusLavorativo();
  	Date annoScadenzaContratto=genitore.getScadenzaContratto();
- 	String scadenzaContratto =annoScadenzaContratto.toString().substring(0, 4);
+ 	String scadenzaContratto="";
+ 	if(annoScadenzaContratto!=null)
+	{
+ 		scadenzaContratto=annoScadenzaContratto.toString();
+		scadenzaContratto=scadenzaContratto.substring(0, 4);
+	}
  	String rapportoParentela = genitore.getRapportoParentela();
  %>
  <!--gestione calendar-->
