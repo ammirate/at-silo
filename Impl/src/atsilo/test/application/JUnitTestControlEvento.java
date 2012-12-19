@@ -57,8 +57,8 @@ public class JUnitTestControlEvento {
         EventPlanner planner = new EducatoreDidattico();
         
         evento = new Evento("riunione dei rappresentanti di classe", "riunione",
-                "antoio@gmail.com, ", dataEvento, "riunione", planner, "/home/user/Scrivania/Riunione.pdf");
-        /*
+                "cesarano2607@gmail.com, ", dataEvento, "riunione", planner, "/home/user/Scrivania/Riunione.pdf");
+        
         Classe c1 = new Classe(2,"2A",null);
         Classe c2 = new Classe(3,"2B",null);
         List<Classe> classi = new ArrayList<Classe>();
@@ -66,7 +66,7 @@ public class JUnitTestControlEvento {
         classi.add(c2);
         
         evento.setClassi(classi);
-        */
+        
         
     }
     
@@ -76,7 +76,7 @@ public class JUnitTestControlEvento {
      */
     @After
     public void tearDown() throws Exception {
-        control.eliminaEvento(evento);
+        //control.eliminaEvento(evento);
         //evento = null;
     }
     
