@@ -10,8 +10,8 @@
 // Constants - v.1.1.0 - these were taken out of CalendarFormatter and made global.
 var NO_DAY_CALENDAR = 99; // set to something other than a valid day (1-31). For example, 99
 var NO_NAV_MONTH = -1;
-var MONTHS_CALENDAR = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-var	DAYS_1_CALENDAR = new Array("S", "M", "T", "W", "T", "F", "S");
+var MONTHS_CALENDAR = new Array("Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre");
+var	DAYS_1_CALENDAR = new Array("D", "L", "M", "M", "G", "V", "S");
 var DAYS_2_CALENDAR = new Array("Su", "Mo", "Tu", "We", "Th", "Fr", "Sa");
 var DAYS_3_CALENDAR = new Array("SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT");
 var DAYS_FULL_CALENDAR = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
