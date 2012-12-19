@@ -32,8 +32,11 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
 			 <%
 	 //setta campi form una volta selezionato il nome del bambino
 	  String cfb=null;
-	 if (request.getParameter("select_bambini")!=null )
+	  String action="";
+	  if (request.getParameter("select_bambini")!=null ){
 	  cfb=(String)request.getParameter("select_bambini");
+	  
+	  }
 	 %>
  <%
  	if ((request.getParameter("successo")) != null) {
@@ -47,6 +50,8 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  	}
  	
  %>
+
+
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
   
@@ -62,7 +67,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
               <p><br>
                 N.B.: Per completare l'invio della domanda &egrave; necessario compilare i seguenti campi:</p>
                
-            <form name="presenta_domanda_iscrizione" action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&uacute; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
+            <form name="presenta_domanda_iscrizione"  action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&uacute; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
             
                 <input name="chiamante" type="hidden" id="chiamante"
 			value="iscrizione_completa">
@@ -77,7 +82,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  				 <td colspan="2">
                  <% if(figli.size()>0)
 						{
-							out.print("<select name='select_bambini' id='select_bambini' onchange='submitForm()'><option value='null' >Selezionare Bambino</option>");
+							out.print("<select name='select_bambini' id='select_bambini' ><option value='null' >Selezionare Bambino</option>");
 							String selected="";
 							  for (int i=0;i<figli.size();i++){
 								  if (figli.get(i).getCodiceFiscale().equals(cfb))
@@ -131,22 +136,9 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                 </tr>
                 <tr>
                 	<td >
-            <%
-            if(cfb!=null)
-            {
-            	DomandaIscrizione di = ControlIscrizione.getIstance().getDomandaIscrizione(cfb);
-            	if(di.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
-            	{
-            		out.print("<input type='submit' value='Invio Domanda Iscrizione'>");
-            	}
-            	else
-            	{
-            		out.print("<em></em>");
+                     <input type='submit' value='Invio Domanda Iscrizione'>
 
-            	}
-            }
-            %>
-            	
+
            </td>
                 </tr>
               </table>
