@@ -75,7 +75,7 @@ function calendarOpenerN()
 <table border="0" cellspacing="0" >
   <tr>
     <td>In qualita' di</td>
-    <td><select id="rapportoParentela" name="rapportoParentela">
+    <td><select id="rapportoParentela" name="rapportoParentela" disabled="disabled">
 				   <%
 				     out.append("<option value='null' selected>Seleziona</option>");
 							  if (rapportoParentela != null && rapportoParentela.equals("Padre"))
@@ -173,7 +173,7 @@ function calendarOpenerN()
     <td>&nbsp;</td>
   </tr>
   <tr>
-  <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  readonly="readonly" >
+  <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  disabled >
     <option value="null">Selezionare</option>
 <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
