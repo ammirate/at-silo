@@ -40,9 +40,12 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Presentazione domanda effettuata con successo')</script>");
  		} else {
- 			out.print("<script type=text/javascript>alert('Presentazione domanda fallita. Compila correttamente i campi')</script>");
+ 			if ((request.getParameter("errore")) != null) {
+ 				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
+ 		 	}
  		}
  	}
+ 	
  %>
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
   <tbody>
@@ -138,7 +141,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
             	}
             	else
             	{
-            		out.print("<em>Il bambino non risulta idoneo per l'iscrizione</em>");
+            		out.print("<em></em>");
 
             	}
             }
