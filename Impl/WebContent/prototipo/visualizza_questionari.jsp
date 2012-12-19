@@ -68,10 +68,11 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			String resp = "";
 			for (int j = l.size()-1; j>=0; j--) {
 				System.out.println("prova jsp2 "+l.size());
-				DomandaQuestionario domanda = new DomandaQuestionario();
-				domanda.setId(l.get(j).getIdDomanda());
+				//DomandaQuestionario domanda = new DomandaQuestionario();
+			    //domanda.setId(l.get(j).getIdDomanda());
 				DomandaQuestionario domanda_corrente = quest.getDomande().get(i);
-				if(q.domandaIsEqual(domanda, domanda_corrente))
+			
+				if(q.domandaIsEqual(l.get(j).getIdDomanda(), domanda_corrente))
 				{
 					resp = l.get(j).getValore();
 					break;
