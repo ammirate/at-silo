@@ -8,6 +8,7 @@
 	include file="atsilo_files/header.jsp"
 %>
 <script type="text/javascript" src="atsilo_files/questionari.js"></script>
+<script type="text/javascript" src="atsilo_files/calendar.js"></script>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
@@ -24,7 +25,6 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <table width="100%">
 <tbody><tr>
 <td>
-<div class="titolopagina">Benvenuto XXX</div>
 </td><td class="fasciadxvariabile"></td>
 </tr>
 </tbody></table>
@@ -56,15 +56,28 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	}
 	else {
 
-		out.println("<form action=\"http://localhost:8080/Atsilo/servletControlQuestionario\" method='POST'>");
+		out.println("<form action=\"http://localhost:8080/Atsilo/servletControlQuestionario\" method='POST' >");
 		out.println("<div id=formdomande>");
 
 		out.println("<H2>Titolo Questionario:</H2><input type=text name=\"titolo\" value = '" + quest.getNome()+ "' size=100 style=\"height: 25px; font-size: 22px; font-family: Times; font-weight: bold;\"><br><br><BR><BR>");
-		out.println("Descrizione: \t<br><br><textarea rows=\"10\" cols=\"80\" name=descrizione>"
+		
+	%>
+	<div id=datachooser2 >
+		<table>
+			<tr>
+				<td><b>Data Inizio: </b>	<td><input type=text name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+			<tr>
+				<td><b>Data Fine: </b> <td><input type=text name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />	
+		</table>
+	</div>
+	<br><br><br><br>
+	<%	
+		
+		out.println("<b>Descrizione</b>: \t<br><br><textarea rows=\"10\" cols=\"80\" name=descrizione>"
 				+ quest.getDescrizione() + "</textarea><br><br>");
 		for (int i = 0; i < quest.getDomande().size(); i++) {
-			out.println("<br><br><fieldset>");
-			out.println("<table id='parah"+i+"'>");
+			out.println("<br><br><fieldset onMouseOver=\"set('parah"+i+"')\">");
+			out.println("<table id='parah"+i+"' >");
 			out.println("<tr><td><h3>Domanda</h3></td><td><input type=text size = 80 name='domanda"+i+"' value='"
 					+ quest.getDomande().get(i).getDescrizione()
 					+ "'></td></tr>");
@@ -77,16 +90,16 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 								.getDescrizione() + "'></td></tr>");
 			}
 			out.println("</table><br><br>");
-			String 	type = "<Select name=tipo><option>Seleziona</option><option value=1>Selezione Multipla</option><option value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select>";
+			String 	type = "<Select name='tipo"+i+"' onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option value=1>Selezione Multipla</option><option value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select>";
 
-			if(quest.getDomande().get(i).getCampi().get(0).getTipo()=="radio")
-				 type = "<Select name=tipo><option>Seleziona</option><option value=1>Selezione Multipla</option><option selected=selected value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select>";
-			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo()=="checkbox")
-				 type = "<Select name=tipo><option>Seleziona</option><option selected=selected value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select>";
-			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo()=="text")
-				 type = "<Select name=tipo><option>Seleziona</option><option value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option selected=selected value=3>Risposta Aperta</option></Select>";
+			if(quest.getDomande().get(i).getCampi().get(0).getTipo().equals("radio"))
+				 type = "<Select name='tipo"+i+"'	 onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option value=1>Selezione Multipla</option><option selected=selected value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select><input type=button value='Aggiungi Campo ' id='addCampo"+i+"'	onclick=\"display('parah"+i+"', " + i +");\">";
+			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo().equals("checkbox"))
+				 type = "<Select name='tipo"+i+"'	onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option selected=selected value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select><input type=button value='Aggiungi Campo ' id='addCampo"+i+"' onclick=\"display('parah"+i+"', " + i +");\">";
+			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo().equals("text"))
+				 type = "<Select name='tipo"+i+"'	onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option selected=selected value=3>Risposta Aperta</option></Select><input type=button disabled = disabled value='Aggiungi Campo ' id='addCampo"+i+"' onclick=\"display('parah"+i+"', " + i +");\">";
 
-			out.println("<input type=button value='Aggiungi Campo ' onclick=\"display('parah"+i+"', " + i +");\">");
+			out.println( type);
 			out.println("</fieldset><br><br>");
 		}
 		out.println("<script type=\"text/javascript\">setv("+quest.getDomande().size()+")</script>");
