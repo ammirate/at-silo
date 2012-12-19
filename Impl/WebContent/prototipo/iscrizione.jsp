@@ -33,7 +33,9 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
 	 if (request.getParameter("select_bambini")!=null )
 	  cfb=(String)request.getParameter("select_bambini");
 	 if (cfb!=null && ! cfb.equals("null")){ 
-		 stato=controlIscrizione.getDomandaIscrizione(cfb).getStatoDomanda();
+		 
+		 if (controlIscrizione.getDomandaIscrizione(cfb).getStatoDomanda()!=null )
+			 stato=controlIscrizione.getDomandaIscrizione(cfb).getStatoDomanda();
 	 }
 	 %>
   <!--Script sottomette  form select bambino--> 
