@@ -109,11 +109,13 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	        */
 	        try {
             q.compilaQuestionario(quest.getId(), listR, codfis);
+            response.sendRedirect("prototipo/lista_questionari.jsp?success=4&type=genitore&codfis="+codfis);   
+
 //                for(int f = 0; f<listR.size(); f++) {
 //                  System.out.println(listR.get(f).getValore());
 //                }
             } catch (DBConnectionException e) {
-                // TODO Blocco di catch autogenerato
+                // TODO Blocco di catch autogenerato 
 //                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (QuestionarioException e) {
                 // TODO Blocco di catch autogenerato

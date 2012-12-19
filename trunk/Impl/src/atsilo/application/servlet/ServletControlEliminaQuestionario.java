@@ -38,6 +38,8 @@ public class ServletControlEliminaQuestionario extends HttpServlet {
             q=ControlQuestionario.getIstance();
             try {
                 q.eliminaQuestionario(id);
+                response.sendRedirect("prototipo/lista_questionari.jsp?success=3");   
+
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
 //                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
@@ -45,6 +47,8 @@ public class ServletControlEliminaQuestionario extends HttpServlet {
                 // TODO Blocco di catch autogenerato
 //                LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
+            response.sendRedirect("prototipo/lista_questionari.jsp?success=failed");   
+
             
 	}
 
