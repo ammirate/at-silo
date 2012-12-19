@@ -1,3 +1,4 @@
+<%@page import="atsilo.util.AtsiloConstants"%>
 <%@
 	include file="atsilo_files/header.jsp"
 %>
@@ -128,15 +129,19 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                 <tr>
                 	<td >
             <%
-            	if(ControlGestioneBando.getIstance().bandoAperto())
+            if(cfb!=null)
+            {
+            	DomandaIscrizione di = ControlIscrizione.getIstance().getDomandaIscrizione(cfb);
+            	if(di.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_SECONDO_STEP))
             	{
             		out.print("<input type='submit' value='Invio Domanda Iscrizione'>");
             	}
             	else
             	{
-            		out.print("<em>Bando non aperto</em>");
+            		out.print("<em>Il bambino non risulta idoneo per l'iscrizione</em>");
 
             	}
+            }
             %>
             	
            </td>
