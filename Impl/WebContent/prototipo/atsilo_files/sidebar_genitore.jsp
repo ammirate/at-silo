@@ -1,5 +1,6 @@
 <%@page import="atsilo.application.*"%>
 <%@page import="atsilo.entity.*"%>
+<%@page import="java.util.*" %>
 
 <%
 //sessione gia' dichiarata nell'header
@@ -77,6 +78,7 @@ String cf = (String) session.getAttribute("codFis");
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="rinuncia_servizio.jsp">Rinuncia Servizio</a></td>
 </tr>
+
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="servizi_attivi.jsp">Servizi Attivi</a></td>
 </tr>
