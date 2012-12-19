@@ -126,7 +126,20 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
                  </td>
                 </tr>
                 <tr>
-                	<td height="80"><input type="submit" value="Invio Domanda Iscrizione"  ></td>
+                	<td >
+            <%
+            	if(ControlGestioneBando.getIstance().bandoAperto())
+            	{
+            		out.print("<input type='submit' value='Invio Domanda Iscrizione'>");
+            	}
+            	else
+            	{
+            		out.print("<em>Bando non aperto</em>");
+
+            	}
+            %>
+            	
+           </td>
                 </tr>
               </table>
                </form>

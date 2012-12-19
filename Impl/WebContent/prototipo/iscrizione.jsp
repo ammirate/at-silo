@@ -14,14 +14,38 @@ include file="atsilo_files/sidebar_genitore.jsp"
 <%@
 include file="atsilo_files/sidebar_top_iscrizione.jsp"
  %>
- <%@ page import="atsilo.application.*,atsilo.entity.*,java.util.*"%>
+<%@ page
+		import="java.util.*,atsilo.application.*,atsilo.entity.*"%>
+ <% // setto select bambino
+		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
+	   	Utente utente=cdt.getValoriUtente(username);
+	  	Genitore genitore_richiedente=cdt.getDatiGenitore(utente.getCodiceFiscale());//genitore richiedente
+	  	List<Bambino> figli= new ArrayList<Bambino>();
+	  	figli= cdt.getFigli(genitore_richiedente.getCodiceFiscale()); //lista dei figli idonei 
+	  	%>
 
 	
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
-  <tbody>
-    <tr>
-      <td><table border="0">
-        <tbody>
+        <tr>
+ 				 <td >
+                 <%
+                 	if (figli.size() > 0) {
+                 		out.print("<select name='select_bambini' id='select_bambini'><option value='null' >Selezionare Bambino</option>");
+
+                 		for (int i = 0; i < figli.size(); i++) {
+
+                 			out.print("<option value='"
+                 					+ figli.get(i).getCodiceFiscale() + " >"
+                 					+ figli.get(i).getNome() + "</option>");
+                 		}
+                 	} else {
+                 		out.print("<em><b>E' necessario inserire un bambino</b></em>");
+                 		return;
+                 	}
+                 %>
+						</select></td>
+  				   <td>&nbsp;</td>
+  					</tr>
           <tr>
             <td >Stato iscrizione: Domanda non inviata</td>
             
@@ -30,32 +54,13 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
             <td >Stato pagamenti: Tassa iscrizione non pagata</td>
             
             </tr>
-          </tbody>
-        </table></td>
-    </tr>
-    <tr>
-      <td><table cellspacing="0" cellpadding="0" border="0">
-        <tbody>
-          <tr>
-            <td><table width="598" cellspacing="0" cellpadding="0" border="0">
-            </table></td>
-          </tr>
-          <tr>
-            <td><img border="0" alt="" height="20" width="1" src="atsilo_files/clearpixel.gif" /></td>
-          </tr>
-        </tbody>
-      </table></td>
-    </tr>
 
-  </tbody>
 </table>
 </td><td class="fasciadxvariabile"></td>
 </tr>
 <%@
 include file="atsilo_files/footer.jsp"
  %>
-
-
 
 </body>
 </html>

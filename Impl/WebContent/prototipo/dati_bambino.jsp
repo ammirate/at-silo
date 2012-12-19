@@ -44,7 +44,9 @@ include
  		String cognome="";
  		String nome="";
  		String codiceFiscale="";
- 		String dataNascita="dataNascita" ;
+ 		String gg="" ;
+		String mm="" ;
+		String aa="" ;
   	    String comuneNascita=""; 
  		String cittadinanza=""; 
  		
@@ -59,7 +61,12 @@ include
  		cognome=bambino_selezionato.getCognome(); 
  		nome=bambino_selezionato.getNome();
  		codiceFiscale=bambino_selezionato.getCodiceFiscale(); 
- 		dataNascita="dataNascita" ;
+ 		Date tempDataNascita=bambino_selezionato.getDataNascita();
+ 		if (tempDataNascita != null) {
+ 			gg = tempDataNascita.toString().substring(8, 10);
+ 			mm = tempDataNascita.toString().substring(5, 7);
+ 			aa = tempDataNascita.toString().substring(0, 4);
+ 		}
   	    comuneNascita=bambino_selezionato.getComuneNascita(); 
  		cittadinanza=bambino_selezionato.getcittadinanza(); 
 
@@ -79,8 +86,14 @@ include
 			var n = f.elements.length;
 			for ( var i = 1; i < n; i++)
 				document.forms[0].elements[i].removeAttribute("readonly");
-			document.getElementById("select_bambini").removeAttribute(
-					"onChange", "");
+				document.getElementById("bott_calendario").disabled=false;
+				document.getElementById("select_bambini").removeAttribute(
+					"onChange", "");//evito di fare submit del form tramite onChange		
+				document.getElementById("select_bambini").setAttribute("readonly",
+					"readonly");
+				document.getElementById('select_bambini').options[0]=new Option("Aggiungi Bambino",null,true);
+					
+					
 			//slf.onclick = null;
 			return false;
 		}
@@ -94,6 +107,36 @@ include
 	}
 		
 	</script>
+     <!--gestione calendar-->
+ <script type="text/javascript" src="atsilo_files/CalendarDisplay110.js"></script>
+<script type="text/javascript">
+calendarTry = new CalendarDisplay();
+calendarTry.setNavigationOn("calendarTry");
+calendarTry.setOpenOn();
+calendarTry.setAutoCloseOn();
+calendarTry.setLinkOn("fillInFields");
+calendarTry.setDayFormat(calendarTry.TWO_LETTER);
+	
+function calendarOpenerN()
+	{
+		var m = document.getElementById("month").value;
+		var d = document.getElementById("day").value;
+		var y = document.getElementById("year").value;
+		var showMonth = true;
+		if (m == ""|| d == "" || y == "")
+			calendarTry.createMonth(0, 1, 1970);
+		else
+			calendarTry.createMonth(m - 1, d, y);
+	}
+
+	function fillInFields(month, day, year,c) {
+
+		document.getElementById("month").value = month + 1;
+		document.getElementById("day").value = day;
+		document.getElementById("year").value = year;
+	}
+
+</script>
      <%
  	if ((request.getParameter("successo")) != null) {
  		if (request.getParameter("successo").equals("ok")) {
@@ -111,7 +154,7 @@ include
 			</tr>
 			<tr>
 				<td colspan="4"><label for="altrifisglinido_1">Selezionare
-						il figlio per il quale si vogliono inserire le informazioni</label> <br></td>
+						il figlio dall'elenco se si vogliono modificare i suoi dati, altrimenti cliccare su modifica per aggiungere un nuovo bambino.</label><br></td>
 
 			</tr>
 			<tr>
@@ -147,9 +190,9 @@ include
 					id="comune_nascita_bambino" value="<%=comuneNascita%>" size="25" maxlength="25"
 					readonly="readonly"></td>
 				<td>Nato il</td>
-				<td><input name="data_nascita_bambino" type="text"
-					id="data_nascita_bambino" value="<%=dataNascita%>" size="25" maxlength="10"
-					readonly="readonly"></td>
+    <td>
+    <input name="day" type="text" id="day" value="<%=gg%>"  size="2" maxlength="2" readonly="readonly"><input name="month" type="text" id="month" value="<%=mm%>"  size="2" maxlength="2" readonly="readonly"><input name="year" type="text" id="year" value="<%=aa%>"  size="4" maxlength="4" readonly="readonly"><input name="bott_calendario" type="button" id="bott_calendario" onclick="calendarOpenerN(this.form);" value="..." disabled="disabled" /> 
+    </td>
 			</tr>
 			<tr>
 				<td>Codice Fiscale</td>
