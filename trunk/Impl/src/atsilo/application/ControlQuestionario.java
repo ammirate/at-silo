@@ -404,7 +404,7 @@ public class ControlQuestionario {
             for(DomandaQuestionario d : toReturn.getDomande()){
                  campi = storageCampi.getCampiDomandaQuestionario(d.getId());
                  this.precaricaDomande(toReturn,campi,db,CFgenitore);
-                d.setCampi(campi);
+                 d.setCampi(campi);
             }
           
             return toReturn;
@@ -464,6 +464,10 @@ public class ControlQuestionario {
        
        int numCampiDomanda = campi.size();
        int numCampiDomanda2 = campi2.size();
+       if(!(d.getDescrizione().equalsIgnoreCase(d1.getDescrizione())))
+               {
+                   return false;
+               }
        
        if(numCampiDomanda != numCampiDomanda2)
        {
