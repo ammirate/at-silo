@@ -447,11 +447,14 @@ public class ControlQuestionario {
      * @throws SQLException 
      */
 
-    public boolean domandaIsEqual(DomandaQuestionario d, DomandaQuestionario d1) throws SQLException
+    public boolean domandaIsEqual(int idDomanda, DomandaQuestionario d1) throws SQLException
     { 
        Database db = new Database();
        db.apriConnessione();
        DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+       DBDomandaQuestionario storageDomanda= new DBDomandaQuestionario(db);
+       DomandaQuestionario d = storageDomanda.getDomanda(idDomanda);
+       
        int sent=0;
        
        
@@ -464,6 +467,7 @@ public class ControlQuestionario {
        
        int numCampiDomanda = campi.size();
        int numCampiDomanda2 = campi2.size();
+       System.out.println("domanda 1: "+d.getDescrizione()+" domanda 2:"+d1.getDescrizione());
        if(!(d.getDescrizione().equalsIgnoreCase(d1.getDescrizione())))
                {
                    return false;
