@@ -259,6 +259,8 @@ public class ControlIscrizione {
         }
         
         Bambino bambino = d.getBambino();
+        DBBambino dbb = new DBBambino(db);
+        bambino=dbb.ricercaBambinoPerCodFiscale(bambino.getCodiceFiscale());
         if(bambino == null)
             throw new BambinoException("Bambino non trovato");
         
@@ -268,7 +270,7 @@ public class ControlIscrizione {
             (bambino.getCodiceFiscale() == null) ||
             (bambino.getComuneNascita() == null) ||
             (bambino.getcittadinanza() == null) ||
-            (bambino.getIndirizzoResidenza() == null) ||
+            /*(bambino.getIndirizzoResidenza() == null) ||
             (bambino.getNumeroCivicoResidenza() == null) ||
             (bambino.getCapResidenza() == null) ||
             (bambino.getComuneResidenza() == null) ||
@@ -278,23 +280,23 @@ public class ControlIscrizione {
             (bambino.getCapDomicilio() == null) ||
             (bambino.getComuneDomicilio() == null) ||
             (bambino.getProvinciaDomicilio() == null) ||
-            (bambino.getCategoriaAppartenenza() == null) ||
+            (bambino.getCategoriaAppartenenza() == null) ||*/
             (bambino.getGenitore() == null) ||
             (bambino.getGenitoreNonRichiedente() == null) 
         )
-            throw new GenitoreException("Mancano alcune informazioni del bambino");  
+            throw new BambinoException("Mancano alcune informazioni del bambino");  
    
         if(d.getIsee() == -1)
             throw new DomandaIscrizioneException("Mancano i dati relativi al documento isee");
-            
+        Date now = new Date(System.currentTimeMillis());    
         DomandaIscrizione domandaModificata = (DomandaIscrizione) d.clone();
         domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
         domandaModificata.setStatoDomanda("Inviata");
-
+        domandaModificata.setDataPresentazione(now);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
-            if(bdDomandaIscrizione.replace(d, domandaModificata))
+            if(!bdDomandaIscrizione.replace(d, domandaModificata))
                 throw new DomandaIscrizioneException("Modifica fallita");         
         }
         finally{
