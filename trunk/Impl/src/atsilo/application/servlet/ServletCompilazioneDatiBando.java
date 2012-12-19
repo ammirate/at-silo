@@ -86,8 +86,13 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         //variabili utente -genitore richiedente
         Date dataNascita=null;
-        if ( request.getParameter("dataNascita")!=null){
-            dataNascita=new Date(01, 01, 01);
+        if ( request.getParameter("day")!=null ||  request.getParameter("month")!=null ||  request.getParameter("year")!=null){
+            if ( request.getParameter("day")!="" ||  request.getParameter("month")!="" ||  request.getParameter("year")!=""){
+                int gg=Integer.parseInt(request.getParameter("day"));
+                int mm=Integer.parseInt(request.getParameter("month"));
+                int aa=Integer.parseInt(request.getParameter("year"));
+                dataNascita=new Date(aa-1900, mm-1, gg);
+            }
         }
         String nome=null;
         if ( request.getParameter("nome")!=null)
@@ -170,8 +175,13 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         //variabili utente -genitore non richiedente
         Date dataNascita_genitore_non_richiedente=null;
-        if ( request.getParameter("dataNascita_genitore_non_richiedente")!=null){
-            request.getParameter("dataNascita_genitore_non_richiedente");
+        if ( request.getParameter("day")!=null ||  request.getParameter("month")!=null ||  request.getParameter("year")!=null){
+            if ( request.getParameter("day")!="" ||  request.getParameter("month")!="" ||  request.getParameter("year")!=""){
+                int gg=Integer.parseInt(request.getParameter("day"));
+                int mm=Integer.parseInt(request.getParameter("month"));
+                int aa=Integer.parseInt(request.getParameter("year"));
+                dataNascita_genitore_non_richiedente=new Date(aa-1900, mm-1, gg);
+            }
         }
         String nome_genitore_non_richiedente=null;
         if ( request.getParameter("nome_genitore_non_richiedente")!=null)
@@ -236,8 +246,13 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         //variabili bambino
         Date data_nascita_bambino;
-        if ( request.getParameter("data_nascita_bambino")!=null){
-            request.getParameter("data_nascita_bambino");
+        if ( request.getParameter("day")!=null ||  request.getParameter("month")!=null ||  request.getParameter("year")!=null){
+            if ( request.getParameter("day")!="" ||  request.getParameter("month")!="" ||  request.getParameter("year")!=""){
+                int gg=Integer.parseInt(request.getParameter("day"));
+                int mm=Integer.parseInt(request.getParameter("month"));
+                int aa=Integer.parseInt(request.getParameter("year"));
+                data_nascita_bambino=new Date(aa-1900, mm-1, gg);
+            }
         }
         String nome_bambino=null;
         if ( request.getParameter("nome_bambino")!=null)
@@ -307,7 +322,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         if ( request.getParameter("chiamante").equals("genitore")){//se chiamante è una pagina genitore richiedente    
             try {
-                if (controlDatiPersonali.inserisciGenitore(username_utente, dataNascita_genitore_non_richiedente, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
+                if (controlDatiPersonali.inserisciGenitore(username_utente, dataNascita, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 
                 else 

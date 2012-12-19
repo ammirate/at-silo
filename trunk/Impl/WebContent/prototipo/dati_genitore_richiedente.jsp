@@ -19,6 +19,9 @@ function settaAttributi(slf){
 	 for(var i = 1; i < n; i++)
 		 document.forms[0].elements[i].removeAttribute("readonly");
 	 document.getElementById("codiceFiscale").setAttribute("readonly","readonly");
+	 document.getElementById("day").setAttribute("readonly","readonly");
+	 document.getElementById("month").setAttribute("readonly","readonly");
+	 document.getElementById("bott_calendario").disabled=false;
 	 slf.onclick=null;
 	 return false;
 	 

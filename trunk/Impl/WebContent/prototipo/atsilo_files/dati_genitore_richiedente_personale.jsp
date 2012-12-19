@@ -1,32 +1,69 @@
-<%@ page import="atsilo.application.*,atsilo.entity.*"
+<%@ page import="atsilo.application.*,atsilo.entity.*,java.sql.Date"
  %>
- <% 
-	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
- 	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
-	Genitore genitore=cdt.getDatiGenitore(utente.getCodiceFiscale());
- 	String cognome=genitore.getCognome();
- 	String nome=genitore.getNome();
- 	String codiceFiscale=genitore.getCodiceFiscale();
- 	String dataNascita="dataNascita";
- 	String comuneNascita=genitore.getComuneNascita(); 
- 	String telefono=genitore.getTelefono();
- 	String cittadinanza=genitore.getcittadinanza();
- 	String indirizzoResidenza=genitore.getIndirizzoResidenza();
- 	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
- 	String capResidenza=genitore.getCapResidenza();
- 	String comuneResidenza=genitore.getComuneResidenza();
- 	String provinciaResidenza=genitore.getProvinciaResidenza();
- 	String indirizzoDomicilio=genitore.getIndirizzoDomicilio();
- 	String numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();
- 	String capDomicilio=genitore.getCapDomicilio();
- 	String comuneDomicilio=genitore.getComuneDomicilio();
- 	String provinciaDomicilio=genitore.getProvinciaDomicilio();
- 	String statusLavorativo=genitore.getStatusLavorativo();
- 	String scadenzaContratto="scadenzaContratto";
- 	String rapportoParentela=genitore.getRapportoParentela();
-
-
+ <%
+ 	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
+  	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
+ 	Genitore genitore=cdt.getDatiGenitore(utente.getCodiceFiscale());
+  	String cognome=genitore.getCognome();
+  	String nome=genitore.getNome();
+  	String codiceFiscale=genitore.getCodiceFiscale();
+  	Date tempDataNascita=genitore.getDataNascita();
+  	String gg="";
+  	String mm="";
+  	String aa="";
+ 	if (tempDataNascita != null) {
+ 		gg = tempDataNascita.toString().substring(8, 10);
+ 		mm = tempDataNascita.toString().substring(5, 7);
+ 		aa = tempDataNascita.toString().substring(0, 4);
+ 	}
+ 	String comuneNascita = genitore.getComuneNascita();
+ 	String telefono = genitore.getTelefono();
+ 	String cittadinanza = genitore.getcittadinanza();
+ 	String indirizzoResidenza = genitore.getIndirizzoResidenza();
+ 	String numeroCivicoResidenza = genitore.getNumeroCivicoResidenza();
+ 	String capResidenza = genitore.getCapResidenza();
+ 	String comuneResidenza = genitore.getComuneResidenza();
+ 	String provinciaResidenza = genitore.getProvinciaResidenza();
+ 	String indirizzoDomicilio = genitore.getIndirizzoDomicilio();
+ 	String numeroCivicoDomicilio = genitore.getNumeroCivicoDomicilio();
+ 	String capDomicilio = genitore.getCapDomicilio();
+ 	String comuneDomicilio = genitore.getComuneDomicilio();
+ 	String provinciaDomicilio = genitore.getProvinciaDomicilio();
+ 	String statusLavorativo = genitore.getStatusLavorativo();
+ 	String scadenzaContratto = "scadenzaContratto";
+ 	String rapportoParentela = genitore.getRapportoParentela();
  %>
+ <!--gestione calendar-->
+ <script type="text/javascript" src="atsilo_files/CalendarDisplay110.js"></script>
+<script type="text/javascript">
+calendarTry = new CalendarDisplay();
+calendarTry.setNavigationOn("calendarTry");
+calendarTry.setOpenOn();
+calendarTry.setAutoCloseOn();
+calendarTry.setLinkOn("fillInFields");
+calendarTry.setDayFormat(calendarTry.TWO_LETTER);
+	
+function calendarOpenerN()
+	{
+		var m = document.getElementById("month").value;
+		var d = document.getElementById("day").value;
+		var y = document.getElementById("year").value;
+		var showMonth = true;
+		if (m == ""|| d == "" || y == "")
+			calendarTry.createMonth(0, 1, 1970);
+		else
+			calendarTry.createMonth(m - 1, d, y);
+	}
+
+	function fillInFields(month, day, year,c) {
+
+		document.getElementById("month").value = month + 1;
+		document.getElementById("day").value = day;
+		document.getElementById("year").value = year;
+	}
+
+</script>
+
 <form id="dati_bando" name="dati_bando" action="" method="post" >
 <input name="chiamante" type="hidden" id="chiamante" value="genitore">
 <table border="0" cellspacing="0" >
@@ -65,9 +102,11 @@
   </tr>
   <tr>
     <td>Nato/a a</td>
-    <td><input name="comuneNascita" type="text" id="comuneNascita" value="<%=dataNascita %>"  size="25" maxlength="25" readonly="readonly"></td>
+    <td><input name="comuneNascita" type="text" id="comuneNascita" value="<%=comuneNascita%>"  size="25" maxlength="25" readonly="readonly"></td>
     <td>Nato il</td>
-    <td><input name="dataNascita" type="text" id="dataNascita" value="<%=dataNascita%>"  size="25" maxlength="10" readonly="readonly"></td>
+    <td>
+    <input name="day" type="text" id="day" value="<%=gg%>"  size="2" maxlength="2" readonly="readonly"><input name="month" type="text" id="month" value="<%=mm%>"  size="2" maxlength="2" readonly="readonly"><input name="year" type="text" id="year" value="<%=aa%>"  size="4" maxlength="4" readonly="readonly"><input name="bott_calendario" type="button" id="bott_calendario" onclick="calendarOpenerN(this.form);" value="..." disabled="disabled" /> 
+    </td>
   </tr>
   <tr>
     <td>Codice Fiscale</td>

@@ -1,15 +1,3 @@
-/*
-		      Calendar
-
-		  Author: Pasquale Di Stasio
-		  E-Mail: info@pasqualedistasio.com
-		Web-Site: www.pasqualedistasio.com
-
-		Released: 2010-05-02
-		 Version: 2.2
-*/
-
-
 Calendar = {
 	startDay: 1, // 0 => Sunday, 1 => Monday
 	days: new Array("Domenica", "Lunedì","Martedì","Mercoledì","Giovedì","Venerdì", "Sabato"),
