@@ -30,7 +30,8 @@
  	String comuneDomicilio = genitore.getComuneDomicilio();
  	String provinciaDomicilio = genitore.getProvinciaDomicilio();
  	String statusLavorativo = genitore.getStatusLavorativo();
- 	String scadenzaContratto = "scadenzaContratto";
+ 	Date annoScadenzaContratto=genitore.getScadenzaContratto();
+ 	String scadenzaContratto =annoScadenzaContratto.toString().substring(0, 4);
  	String rapportoParentela = genitore.getRapportoParentela();
  %>
  <!--gestione calendar-->
@@ -129,8 +130,8 @@ function calendarOpenerN()
     <td>Provincia</td>
     <td><input id="provinciaResidenza" value="<%=provinciaResidenza %>" name="provinciaResidenza"  size="2" maxlength="2" type="text" /></td>
    
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+     <td>Telefono</td>
+    <td><input name="telefono" type="text" id="telefono" value="<%=telefono %>"  size="25" maxlength="15" readonly="readonly" /></td>
   </tr>
    
     <tr>
@@ -184,7 +185,7 @@ function calendarOpenerN()
 </select></td>
   </tr>
   <tr>
-    <td colspan="3">Scadenza del contratto (solo per assegnisti, borsisti, dottorandi o contrattisti)</td>
+    <td colspan="3">Anno scadenza del contratto </td>
     <td><input name="scadenza_contratto_richiedente" type="text" id="scadenza_contratto_richiedente" value="<%=scadenzaContratto%>"  size="25" maxlength="5" readonly="readonly" /></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>

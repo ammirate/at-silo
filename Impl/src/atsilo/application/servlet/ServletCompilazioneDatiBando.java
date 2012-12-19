@@ -164,8 +164,10 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         if (request.getParameter("status_lavorativo") != null)
             status_lavorativo=request.getParameter("status_lavorativo");
         Date scadenza_contratto=null;
-        if (request.getParameter("scadenza_contratto_richiedente") != null)
-            request.getParameter("scadenza_contratto_richiedente");
+        if (request.getParameter("scadenza_contratto_richiedente") != null && request.getParameter("scadenza_contratto_richiedente").length()==4 ){
+            int aa=Integer.parseInt(request.getParameter("scadenza_contratto_richiedente"));
+            scadenza_contratto=new Date(aa-1900, 11, 31);
+        }
         String categoria_appartenenza=null;
         if (request.getParameter("categoria_appartenenza_richiedente") != null)
             categoria_appartenenza=request.getParameter("categoria_appartenenza_richiedente");
@@ -322,7 +324,7 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         
         if ( request.getParameter("chiamante").equals("genitore")){//se chiamante è una pagina genitore richiedente    
             try {
-                if (controlDatiPersonali.inserisciGenitore(username_utente, dataNascita, nome_bambino, cognome_bambino, codiceFiscale, email, comuneNascita, telefono, cittadinanza_bambino, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
+                if (controlDatiPersonali.inserisciGenitore(username_utente, dataNascita, nome, cognome, codiceFiscale, email, comuneNascita, telefono, cittadinanza, indirizzoResidenza, numeroCivicoResidenza, capResidenza, comuneResidenza, provinciaResidenza, indirizzoDomicilio, numeroCivicoDomicilio, capDomicilio, comuneDomicilio, provinciaDomicilio, null, null, null, dipendente_presso, rapporti_ateneo_salerno, rapporti_comune_fisciano, status_lavorativo, scadenza_contratto, categoria_appartenenza, rapportoParentela, null, null ))
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
                 
                 else 

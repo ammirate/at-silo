@@ -235,6 +235,10 @@ public class ControlDatiPersonali {
             {
                 genitore.setNumeroCivicoDomicilio(numeroCivicoDomicilio);
             }
+            if(telefono!=null && telefono.length()!=0)
+            {
+                genitore.setTelefono(telefono);
+            }
             if(capDomicilio!=null && capDomicilio.length()!=0)
             {
                 if(capDomicilio.length() != 5)
