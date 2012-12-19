@@ -91,7 +91,7 @@ public class servletControlQuestionario extends HttpServlet {
                 catch (Exception e) {
                     break;
                 } 
-                d=new DomandaQuestionario(x,quest.getId(),domanda, null);
+                d=new DomandaQuestionario(0,0,domanda, null);
                 String[] opzione = request.getParameterValues("opzione"+x+"[]");
                 String tipo = request.getParameter("tipo"+x);
                 if (tipo.equals("1")) tipo = "checkbox";

@@ -77,8 +77,8 @@ public class ControlQuestionario {
             {
                 d.setIdQuestionario(questionario.getId());
                 storageD.inserisci(d);
-                  campi = d.getCampi();
-                  for(CampoDomandaQuestionario c : campi)
+                campi = d.getCampi();
+                 for(CampoDomandaQuestionario c : campi)
                   {   c.setIdDomandaQuestionario(d.getId());  
                       storageC.inserisci(c);
                   }
@@ -398,28 +398,15 @@ public class ControlQuestionario {
             else{
                 toReturn.setDomande(domande);
             }
+            List<CampoDomandaQuestionario> campi =new ArrayList<CampoDomandaQuestionario>();
             
             //setto i campi per ogni domanda
             for(DomandaQuestionario d : toReturn.getDomande()){
-                List<CampoDomandaQuestionario> campi = storageCampi.getCampiDomandaQuestionario(d.getId());
+                 campi = storageCampi.getCampiDomandaQuestionario(d.getId());
+                 this.precaricaDomande(toReturn,campi,db,CFgenitore);
                 d.setCampi(campi);
             }
-            
-            //controllo per il caricamento delle risposte già inserite dal genitore
-            risposte = storageRisposte.getRisposteGenitore(CFgenitore);
-            for(RispostaQuestionario r : risposte){
-              //prendo la domanda a cui fa riferimento la risposta   
-                DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());
-                //controllo se la risposta dTemp, appartenente a qualche altro questionario,
-                //corrisponde a qualche domanda all'interno del nostro questionario
-                //in tal caso la risposta a tale domanda sarà la stessa della domanda dTemp
-                List<DomandaQuestionario> tutteLeDomandeDiGenitore = getDomandeRisposteDaGenitore(CFgenitore);
-                for(DomandaQuestionario d : tutteLeDomandeDiGenitore)
-                   if( d.getDescrizione().equalsIgnoreCase(domandaRisposta.getDescrizione()))
-                       toReturn.precaricaRispostaAllaDomanda(domandaRisposta, r);
-                
-            }
-                            
+          
             return toReturn;
             
         }
@@ -427,8 +414,127 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
-    
-    
+   /**
+    *  
+    * @param q
+ * @throws SQLException 
+    */
+    private void precaricaDomande (Questionario q,List<CampoDomandaQuestionario> campi, Database db, String cf) throws SQLException
+    {
+       
+        DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
+        DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
+        DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+        List<RispostaQuestionario> risposte= storageRisposte.getRisposteGenitore(cf);
+       //per tutte le risposte mai date dal genitore
+        for(RispostaQuestionario r : risposte){
+          
+            DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());
+            domandaRisposta.setCampi(storageCampi.getCampiDomandaQuestionario(domandaRisposta.getId()));
+            
+            if(domandaIsEqual(domandaRisposta,campi,db))
+            {
+                q.precaricaRispostaAllaDomanda(r);
+            }
+        }
+        
+    }
+    /**
+     * 
+     * @param d
+     * @param d1
+     * @return
+     * @throws SQLException 
+     */
+
+    public boolean domandaIsEqual(DomandaQuestionario d, DomandaQuestionario d1) throws SQLException
+    { 
+       Database db = new Database();
+       db.apriConnessione();
+       DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+       int sent=0;
+       
+       
+       List<CampoDomandaQuestionario> campi =storageCampi.getCampiDomandaQuestionario(d.getId());
+       d.setCampi(campi);
+       List<CampoDomandaQuestionario> campi2 =storageCampi.getCampiDomandaQuestionario(d1.getId());
+       d1.setCampi(campi2);
+       
+       
+       
+       int numCampiDomanda = campi.size();
+       int numCampiDomanda2 = campi2.size();
+       
+       if(numCampiDomanda != numCampiDomanda2)
+       {
+           return false;
+       }
+       
+       for(CampoDomandaQuestionario campiGenitore : campi)
+       {
+           for(CampoDomandaQuestionario campiQuest : campi2)
+           {
+               if((campiQuest.getDescrizione().equals(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
+                  sent ++;
+               }
+               
+           }
+           
+       }
+       db.chiudiConnessione();
+       if(sent==campi.size())
+       {
+          // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
+          return true;
+       }
+       else
+       {
+           return false;
+       }
+       
+    }
+    /**
+     * 
+     * @param d domanda risposta dal genitore
+     * @param c campi del questionario da compilare
+     * @param db connessione al db
+     * @return
+     */
+    private boolean domandaIsEqual(DomandaQuestionario d, List<CampoDomandaQuestionario> c,Database db)
+    {
+       int sent=0;
+       List<CampoDomandaQuestionario> campi =d.getCampi();
+      
+       if(campi==null)
+       {return false;}
+       
+       int numCampiDomanda =campi.size();
+       
+       if(numCampiDomanda != c.size())
+       {
+           return false;
+       }
+       
+       for(CampoDomandaQuestionario campiGenitore : campi)
+       {
+           for(CampoDomandaQuestionario campiQuest : c)
+           {
+               if((campiQuest.getDescrizione().equalsIgnoreCase(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
+                  sent ++;
+               }
+               
+           }
+           
+       }
+       if(sent==campi.size())
+       {
+          // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
+           return true;
+       }
+       else
+       {return false;}
+       
+    }
     
     /**
      * Insert a new question in a questionnaire and all its fields
@@ -460,6 +566,7 @@ public class ControlQuestionario {
         }
     }
     
+
     
     
     
