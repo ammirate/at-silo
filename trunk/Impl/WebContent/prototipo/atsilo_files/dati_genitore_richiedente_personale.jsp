@@ -1,3 +1,4 @@
+<%@page import="atsilo.util.AtsiloConstants"%>
 <%@ page import="atsilo.application.*,atsilo.entity.*,java.sql.Date"
  %>
  <%
@@ -29,7 +30,7 @@
  	String capDomicilio = genitore.getCapDomicilio();
  	String comuneDomicilio = genitore.getComuneDomicilio();
  	String provinciaDomicilio = genitore.getProvinciaDomicilio();
- 	String statusLavorativo = genitore.getStatusLavorativo();
+ 	int statusLavorativo = genitore.getStatusLavorativo();
  	Date annoScadenzaContratto=genitore.getScadenzaContratto();
  	String scadenzaContratto="";
  	if(annoScadenzaContratto!=null)
@@ -174,6 +175,78 @@ function calendarOpenerN()
   </tr>
   <tr>
   <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  disabled >
+  <%
+				     out.append("<option value='-1' selected>Selezionare</option>");
+  							String selected="";
+							  if (statusLavorativo >0 && statusLavorativo==1)
+								  selected="selected";
+						       out.append("<option value='1' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_1+">");
+						      
+						      selected="";
+							  if (statusLavorativo >0  && statusLavorativo==2)
+								  selected="selected";
+							  out.append("<option value='2' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_2+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==3)
+								  selected="selected";
+							  out.append("<option value='3' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_3+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==4)
+								  selected="selected";
+							  out.append("<option value='4' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_4+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==5)
+								  selected="selected";
+							  out.append("<option value='5' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_5+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==6)
+								  selected="selected";
+							  out.append("<option value='6' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_6+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==7)
+								  selected="selected";
+							  out.append("<option value='7' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_7+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==8)
+								  selected="selected";
+							  out.append("<option value='8' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_8+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==9)
+								  selected="selected";
+							  out.append("<option value='9' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_9+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==10)
+								  selected="selected";
+							  out.append("<option value='10' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_10+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==11)
+								  selected="selected";
+							  out.append("<option value='11' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_11+">");
+							  
+							  selected="";
+							  if (statusLavorativo >0  && statusLavorativo==12)
+								  selected="selected";
+							  out.append("<option value='12' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_12+">");
+							  
+							  
+							  
+							 
+	 
+		
+				   %>
+  
+  
+  <!--  
+  
     <option value="null">Selezionare</option>
 <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo parziale dell'UniSa</option>
@@ -187,6 +260,7 @@ function calendarOpenerN()
       <option value="di essere titolare di borsa di studio post laurea o post doc presso l'Universit&agrave; degli Studi di Salerno;">di essere titolare di borsa di studio post laurea o post doc presso l'Universit&agrave; degli Studi di Salerno</option>
       <option value="di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa;">di essere dipendente di ruolo in qualit&agrave; di personale tecnico-amministrativo a tempo pieno dell'UniSa</option>
       <option value="di essere studente regolarmente iscritto e frequentante Corsi di studio di I o II ciclo dell'UniSa;">di essere studente regolarmente iscritto e frequentante Corsi di studio di I o II ciclo dell'UniSa</option>
+      -->
 </select></td>
   </tr>
   <tr>
