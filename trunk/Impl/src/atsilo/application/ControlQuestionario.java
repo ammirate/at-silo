@@ -456,8 +456,6 @@ public class ControlQuestionario {
        DomandaQuestionario d = storageDomanda.getDomanda(idDomanda);
        
        int sent=0;
-       
-       
        List<CampoDomandaQuestionario> campi =storageCampi.getCampiDomandaQuestionario(d.getId());
        d.setCampi(campi);
        List<CampoDomandaQuestionario> campi2 =storageCampi.getCampiDomandaQuestionario(d1.getId());
@@ -467,8 +465,13 @@ public class ControlQuestionario {
        
        int numCampiDomanda = campi.size();
        int numCampiDomanda2 = campi2.size();
-       System.out.println("domanda 1: "+d.getDescrizione()+" domanda 2:"+d1.getDescrizione());
-       if(!(d.getDescrizione().equalsIgnoreCase(d1.getDescrizione())))
+       String descr1= d.getDescrizione();
+       if(d.getDescrizione().contains("'"))
+       {
+           descr1  = d.getDescrizione().replace("'", "");
+       }
+       System.out.println("domanda 1: "+descr1+" domanda 2:"+d1.getDescrizione());
+       if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
                {
                    return false;
                }
