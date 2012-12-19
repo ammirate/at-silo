@@ -65,9 +65,15 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		out.println("Descrizione del questionario: \t<br><br><p style=\"border: 1px solid black; height: 100px\">"
 				+ quest.getDescrizione() + "</p><br><br>");
 		for (int i = 0; i < quest.getDomande().size(); i++) {
+			System.out.println("prova jsp"+quest.getDomande().size());
 			String resp = "";
-			for (int j = 0; j<l.size(); j++) {
-				if(l.get(j).getIdDomanda() == quest.getDomande().get(i).getId() ) {
+			for (int j = l.size()-1; j>=0; j--) {
+				System.out.println("prova jsp2 "+l.size());
+				DomandaQuestionario domanda = new DomandaQuestionario();
+				domanda.setId(l.get(j).getIdDomanda());
+				DomandaQuestionario domanda_corrente = quest.getDomande().get(i);
+				if(q.domandaIsEqual(domanda, domanda_corrente))
+				{
 					resp = l.get(j).getValore();
 					break;
 				}
@@ -98,6 +104,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		}
 
 		if(cf!=null) {
+		//	this.precaricaRisp();
 			out.println("<input type=hidden name=codfis value='"+cf+"'>");
 			out.println("<input type=hidden name=questID value='"+quest.getId()+"'>");
 
