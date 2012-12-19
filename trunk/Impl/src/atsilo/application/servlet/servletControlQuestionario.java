@@ -59,9 +59,11 @@ public class servletControlQuestionario extends HttpServlet {
 	    // TODO Auto-generated method stub
 	    //Inserisci questionario 
 	    String[] dataI=null, dataF=null;
+	    int id = 0;
 	    try {
 	        dataI = request.getParameter("dataIn").split("/");
 	        dataF = request.getParameter("dataOu").split("/");
+	        id = Integer.parseInt(request.getParameter("identificativo"));
 	    }
 	    catch(Exception e) {
 	        
@@ -80,7 +82,7 @@ public class servletControlQuestionario extends HttpServlet {
             
             String titoloQuestionario = request.getParameter("titolo");
             String descrizione = request.getParameter("descrizione");
-            Questionario quest = new Questionario(descrizione, "false", titoloQuestionario,0, din, don);
+            Questionario quest = new Questionario(descrizione, "false", titoloQuestionario,id, din, don);
             String domanda= "";
             int x = 0;
             while(true) {
@@ -109,6 +111,7 @@ public class servletControlQuestionario extends HttpServlet {
             try {
             if(request.getParameter("action").equals("modify"))
             {
+                System.out.println(quest.getId());
                 q.modificaQuestionario(quest.getId(), quest);
             }   
             else {

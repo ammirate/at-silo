@@ -84,7 +84,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			for (int j = 0; j < quest.getDomande().get(i).getCampi()
 					.size(); j++) {
 				out.println("<tr><td>Opzione</td><td><input type=text name='opzione"
-						+ (i + 1)
+						+ (i)
 						+ "[]' value='"
 						+ quest.getDomande().get(i).getCampi().get(j)
 								.getDescrizione() + "'></td></tr>");
@@ -106,6 +106,8 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		out.println("</div><input type=button value=\"Aggiungi Domanda\" onclick=\"addDomanda()\"><br><br>");
 		out.println("<center><input type=submit value=\"Modifica Questionario\"></center>");
 		out.println("<input type=hidden name=action value=modify>");
+		out.println("<input type=hidden name=identificativo value='"+quest.getId()+"'>");
+
 		out.println("</form>");
 	}
 %>
