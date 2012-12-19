@@ -76,21 +76,37 @@ include
 	 			mm = tempDataNascita.toString().substring(5, 7);
 	 			aa = tempDataNascita.toString().substring(0, 4);
 	 		}
+	 		if (genitore.getComuneNascita()!=null)
 	 	    comuneNascita=genitore.getComuneNascita(); 
+	 		if (genitore.getcittadinanza()!=null)
 			cittadinanza=genitore.getcittadinanza(); 
+	 		if (genitore.getIndirizzoResidenza()!=null)
 			indirizzoResidenza=genitore.getIndirizzoResidenza(); 
+	 		if (genitore.getNumeroCivicoResidenza()!=null)
 			numeroCivicoResidenza=genitore.getNumeroCivicoResidenza(); 
+	 		if (genitore.getCapResidenza()!=null)
 			capResidenza=genitore.getCapResidenza(); 
+	 		if (genitore.getComuneResidenza()!=null)
 			comuneResidenza=genitore.getComuneResidenza(); 
+	 		if (genitore.getProvinciaResidenza()!=null)
 			provinciaResidenza=genitore.getProvinciaResidenza();  
+	 		if (genitore.getIndirizzoDomicilio()!=null)
 			indirizzoDomicilio=genitore.getIndirizzoDomicilio();  
+	 		if (genitore.getNumeroCivicoDomicilio()!=null)
 			numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();  
+	 		if (genitore.getCapDomicilio()!=null)
 			capDomicilio=genitore.getCapDomicilio();  
+	 		if (genitore.getComuneDomicilio()!=null)
 			comuneDomicilio=genitore.getComuneDomicilio();  
+	 		if (genitore.getProvinciaDomicilio()!=null)
 			provinciaDomicilio=genitore.getProvinciaDomicilio();  
+	 		if (genitore.getRapportoParentela()!=null)
 			rapportoParentela=genitore.getRapportoParentela();  
+	 		if (genitore.getCondizioneLavorativa()!=null)
 			condizioneLavorativa=genitore.getCondizioneLavorativa();  
-			tipoContratto=genitore.getTipoContratto();  
+	 		if (genitore.getTipoContratto()!=null)
+			tipoContratto=genitore.getTipoContratto(); 
+	 		if (genitore.getDipendentePresso()!=null)
 			sedeDiLavoro=genitore.getDipendentePresso();
    	    }
 	 }
@@ -112,10 +128,13 @@ include
 			var n = f.elements.length;
 			for ( var i = 1; i < n; i++)
 				document.forms[0].elements[i].removeAttribute("readonly");
-				document.getElementById("bott_calendario").disabled=false;
-
-				document.getElementById("select_bambini").removeAttribute("onChange","");
-				document.getElementById("rapportoParentela").disabled=false;
+				
+			document.getElementById("bott_calendario").disabled=false;
+			document.getElementById("select_bambini").removeAttribute("onChange","");
+			document.getElementById("rapportoParentela").disabled=false;
+			document.getElementById("tipo_contratto_genitore_non_richiedente").disabled=false;
+				
+				
 			slf.onclick = null;
 			return false;
 		}
@@ -342,10 +361,21 @@ function calendarOpenerN()
 					readonly="readonly"></td>
 				<td>Tipo contratto</td>
 				<td><select id="tipo_contratto_genitore_non_richiedente"
-					name="tipo_contratto_genitore_non_richiedente">
+					name="tipo_contratto_genitore_non_richiedente" disabled="disabled">
 						<option value="null" selected>Seleziona</option>
-						<option value="A tempo pieno">A tempo pieno</option>
-						<option value="Part time">Part time</option>
+						 <%
+  							String selected="";
+							  if (tipoContratto !=null && tipoContratto.equals("A tempo pieno"))
+								  selected="selected";
+						       out.append("<option value='A tempo pieno' "+selected+" > A tempo pieno");
+						       
+						       selected="";
+								  if (tipoContratto !=null && tipoContratto.equals("Part time"))
+									  selected="selected";
+							       out.append("<option value='Part time' "+selected+" > Part time");
+						       
+						       
+						       %>
 				</select></td>
 			</tr>
 			<tr>

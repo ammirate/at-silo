@@ -1,41 +1,77 @@
 <%@ page import="atsilo.application.*,atsilo.entity.*,java.sql.Date"
  %>
- <% 
-	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
- 	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
-	Genitore genitore=cdt.getDatiGenitore(utente.getCodiceFiscale());
- 	String cognome=genitore.getCognome();
- 	String nome=genitore.getNome();
- 	String codiceFiscale=genitore.getCodiceFiscale();
- 	Date tempDataNascita=genitore.getDataNascita();
-  	String gg="";
-  	String mm="";
-  	String aa="";
- 	if (tempDataNascita != null) {
- 		gg = tempDataNascita.toString().substring(8, 10);
- 		mm = tempDataNascita.toString().substring(5, 7);
- 		aa = tempDataNascita.toString().substring(0, 4);
- 	}
- 	String comuneNascita=genitore.getComuneNascita(); 
- 	String telefono=genitore.getTelefono();
- 	String cittadinanza=genitore.getcittadinanza();
- 	String indirizzoResidenza=genitore.getIndirizzoResidenza();
- 	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
- 	String capResidenza=genitore.getCapResidenza();
- 	String comuneResidenza=genitore.getComuneResidenza();
- 	String provinciaResidenza=genitore.getProvinciaResidenza();
- 	String indirizzoDomicilio=genitore.getIndirizzoDomicilio();
- 	String numeroCivicoDomicilio=genitore.getNumeroCivicoDomicilio();
- 	String capDomicilio=genitore.getCapDomicilio();
- 	String comuneDomicilio=genitore.getComuneDomicilio();
- 	String provinciaDomicilio=genitore.getProvinciaDomicilio();
- 	String rapportoParentela=genitore.getRapportoParentela();
-	
-	String dipendentePresso=genitore.getDipendentePresso();
- 	String rapportiAteneoSalerno=genitore.getRapportiAteneoSalerno();
- 	String rapportiComuneFisciano=genitore.getRapportiComuneFisciano();
+ <%
+ 	//ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();//istruzioni presenti nella pagina dati_genitore_richiedente
+  	//Utente utente=cdt.getUtenteFromUsername(username);//istruzioni presenti nella pagina dati_genitore_richiedente
+ 	Genitore genitore=cdt.getDatiGenitore(utente.getCodiceFiscale());
+  	String cognome=genitore.getCognome();
+  	String nome=genitore.getNome();
+  	String codiceFiscale=genitore.getCodiceFiscale();
+  	Date tempDataNascita=genitore.getDataNascita();
+   	String gg="";
+   	String mm="";
+   	String aa="";
+  	if (tempDataNascita != null) {
+  		gg = tempDataNascita.toString().substring(8, 10);
+  		mm = tempDataNascita.toString().substring(5, 7);
+  		aa = tempDataNascita.toString().substring(0, 4);
+  	}
+  	//istanzio tutte le variabili 
+  	
+ 	 	String comuneNascita="";
+ 	 	String telefono="";
+ 	 	String cittadinanza="";
+ 	 	String indirizzoResidenza="";
+ 	 	String numeroCivicoResidenza ="";
+ 	 	String capResidenza="";
+ 	 	String comuneResidenza="";
+ 	 	String provinciaResidenza ="";
+ 	 	String indirizzoDomicilio="";
+ 	 	String numeroCivicoDomicilio ="";
+ 	 	String capDomicilio="";
+ 	 	String comuneDomicilio ="";
+ 	 	String provinciaDomicilio="";
+ 	 	String rapportoParentela="";
+ 	 	
+ 	 	String dipendentePresso="";
+ 	 	String rapportiAteneoSalerno="";
+ 	 	String rapportiComuneFisciano="";
+ 	 	
+ 	if (genitore.getComuneNascita() != null)
+ 		comuneNascita = genitore.getComuneNascita();
+ 	if (genitore.getTelefono() != null)
+ 		telefono = genitore.getTelefono();
+ 	if (genitore.getcittadinanza() != null)
+ 		cittadinanza = genitore.getcittadinanza();
+ 	if (genitore.getIndirizzoResidenza() != null)
+ 		indirizzoResidenza = genitore.getIndirizzoResidenza();
+ 	if (genitore.getNumeroCivicoResidenza() != null)
+ 		numeroCivicoResidenza = genitore.getNumeroCivicoResidenza();
+ 	if (genitore.getCapResidenza() != null)
+ 		capResidenza = genitore.getCapResidenza();
+ 	if (genitore.getComuneResidenza() != null)
+ 		comuneResidenza = genitore.getComuneResidenza();
+ 	if (genitore.getProvinciaResidenza() != null)
+ 		provinciaResidenza = genitore.getProvinciaResidenza();
+ 	if (genitore.getIndirizzoDomicilio() != null)
+ 		indirizzoDomicilio = genitore.getIndirizzoDomicilio();
+ 	if (genitore.getNumeroCivicoDomicilio() != null)
+ 		numeroCivicoDomicilio = genitore.getNumeroCivicoDomicilio();
+ 	if (genitore.getCapDomicilio() != null)
+ 		capDomicilio = genitore.getCapDomicilio();
+ 	if (genitore.getComuneDomicilio() != null)
+ 		comuneDomicilio = genitore.getComuneDomicilio();
+ 	if (genitore.getProvinciaDomicilio() != null)
+ 		provinciaDomicilio = genitore.getProvinciaDomicilio();
+ 	if (genitore.getRapportoParentela() != null)
+ 		rapportoParentela = genitore.getRapportoParentela();
 
-
+ 	if (genitore.getDipendentePresso() != null)
+ 		dipendentePresso = genitore.getDipendentePresso();
+ 	if (genitore.getRapportiAteneoSalerno() != null)
+ 		rapportiAteneoSalerno = genitore.getRapportiAteneoSalerno();
+ 	if (genitore.getRapportiComuneFisciano() != null)
+ 		rapportiComuneFisciano = genitore.getRapportiComuneFisciano();
  %>
   <!--gestione calendar-->
  <script type="text/javascript" src="atsilo_files/CalendarDisplay110.js"></script>

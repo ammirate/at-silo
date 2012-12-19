@@ -16,15 +16,50 @@
  		mm = tempDataNascita.toString().substring(5, 7);
  		aa = tempDataNascita.toString().substring(0, 4);
  	}
- 	String comuneNascita=genitore.getComuneNascita(); 
- 	String telefono=genitore.getTelefono();
- 	String cittadinanza=genitore.getcittadinanza();
- 	String indirizzoResidenza=genitore.getIndirizzoResidenza();
- 	String numeroCivicoResidenza=genitore.getNumeroCivicoResidenza();
- 	String capResidenza=genitore.getCapResidenza();
- 	String comuneResidenza=genitore.getComuneResidenza();
- 	String provinciaResidenza=genitore.getProvinciaResidenza();
- 	String rapportoParentela=genitore.getRapportoParentela();
+ 	//istanzio tutte le variabili 
+ 	
+ 	 	String comuneNascita="";
+ 	 	String telefono="";
+ 	 	String cittadinanza="";
+ 	 	String indirizzoResidenza="";
+ 	 	String numeroCivicoResidenza ="";
+ 	 	String capResidenza="";
+ 	 	String comuneResidenza="";
+ 	 	String provinciaResidenza ="";
+ 	 	String indirizzoDomicilio="";
+ 	 	String numeroCivicoDomicilio ="";
+ 	 	String capDomicilio="";
+ 	 	String comuneDomicilio ="";
+ 	 	String provinciaDomicilio="";
+ 	 	String rapportoParentela="";
+ 	if (genitore.getComuneNascita()!=null)
+ 	 	 comuneNascita = genitore.getComuneNascita();
+ 	 	if (genitore.getTelefono()!=null)
+ 	 	 telefono = genitore.getTelefono();
+ 	 	if (genitore.getcittadinanza()!=null)
+ 	 	 cittadinanza = genitore.getcittadinanza();
+ 	 	if (genitore.getIndirizzoResidenza()!=null)
+ 	 	 indirizzoResidenza = genitore.getIndirizzoResidenza();
+ 	 	if (genitore.getNumeroCivicoResidenza()!=null)
+ 	 	 numeroCivicoResidenza = genitore.getNumeroCivicoResidenza();
+ 	 	if (genitore.getCapResidenza()!=null)
+ 	 	 capResidenza = genitore.getCapResidenza();
+ 	 	if (genitore.getComuneResidenza()!=null)
+ 	 	 comuneResidenza = genitore.getComuneResidenza();
+ 	 	if (genitore.getProvinciaResidenza()!=null)
+ 	 	 provinciaResidenza = genitore.getProvinciaResidenza();
+ 	 	if (genitore.getIndirizzoDomicilio()!=null)
+ 	 	 indirizzoDomicilio = genitore.getIndirizzoDomicilio();
+ 	 	if (genitore.getNumeroCivicoDomicilio()!=null)
+ 	 	 numeroCivicoDomicilio = genitore.getNumeroCivicoDomicilio();
+ 	 	if (genitore.getCapDomicilio()!=null)
+ 	 	 capDomicilio = genitore.getCapDomicilio();
+ 	 	if (genitore.getComuneDomicilio()!=null)
+ 	 	 comuneDomicilio = genitore.getComuneDomicilio();
+ 	 	if (genitore.getProvinciaDomicilio()!=null)
+ 	 	 provinciaDomicilio = genitore.getProvinciaDomicilio();
+ 	 	if (genitore.getRapportoParentela()!=null)
+ 	 	 	 rapportoParentela = genitore.getRapportoParentela();
 
 
  %>

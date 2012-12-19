@@ -17,19 +17,51 @@
  		mm = tempDataNascita.toString().substring(5, 7);
  		aa = tempDataNascita.toString().substring(0, 4);
  	}
- 	String comuneNascita = genitore.getComuneNascita();
- 	String telefono = genitore.getTelefono();
- 	String cittadinanza = genitore.getcittadinanza();
- 	String indirizzoResidenza = genitore.getIndirizzoResidenza();
- 	String numeroCivicoResidenza = genitore.getNumeroCivicoResidenza();
- 	String capResidenza = genitore.getCapResidenza();
- 	String comuneResidenza = genitore.getComuneResidenza();
- 	String provinciaResidenza = genitore.getProvinciaResidenza();
- 	String indirizzoDomicilio = genitore.getIndirizzoDomicilio();
- 	String numeroCivicoDomicilio = genitore.getNumeroCivicoDomicilio();
- 	String capDomicilio = genitore.getCapDomicilio();
- 	String comuneDomicilio = genitore.getComuneDomicilio();
- 	String provinciaDomicilio = genitore.getProvinciaDomicilio();
+ 	//istanzio tutte le variabili 
+ 	
+ 	String comuneNascita="";
+ 	String telefono="";
+ 	String cittadinanza="";
+ 	String indirizzoResidenza="";
+ 	String numeroCivicoResidenza ="";
+ 	String capResidenza="";
+ 	String comuneResidenza="";
+ 	String provinciaResidenza ="";
+ 	String indirizzoDomicilio="";
+ 	String numeroCivicoDomicilio ="";
+ 	String capDomicilio="";
+ 	String comuneDomicilio ="";
+ 	String provinciaDomicilio="";
+ 	String rapportoParentela="";
+ 	
+ 	
+ 	if (genitore.getComuneNascita()!=null)
+ 	 comuneNascita = genitore.getComuneNascita();
+ 	if (genitore.getTelefono()!=null)
+ 	 telefono = genitore.getTelefono();
+ 	if (genitore.getcittadinanza()!=null)
+ 	 cittadinanza = genitore.getcittadinanza();
+ 	if (genitore.getIndirizzoResidenza()!=null)
+ 	 indirizzoResidenza = genitore.getIndirizzoResidenza();
+ 	if (genitore.getNumeroCivicoResidenza()!=null)
+ 	 numeroCivicoResidenza = genitore.getNumeroCivicoResidenza();
+ 	if (genitore.getCapResidenza()!=null)
+ 	 capResidenza = genitore.getCapResidenza();
+ 	if (genitore.getComuneResidenza()!=null)
+ 	 comuneResidenza = genitore.getComuneResidenza();
+ 	if (genitore.getProvinciaResidenza()!=null)
+ 	 provinciaResidenza = genitore.getProvinciaResidenza();
+ 	if (genitore.getIndirizzoDomicilio()!=null)
+ 	 indirizzoDomicilio = genitore.getIndirizzoDomicilio();
+ 	if (genitore.getNumeroCivicoDomicilio()!=null)
+ 	 numeroCivicoDomicilio = genitore.getNumeroCivicoDomicilio();
+ 	if (genitore.getCapDomicilio()!=null)
+ 	 capDomicilio = genitore.getCapDomicilio();
+ 	if (genitore.getComuneDomicilio()!=null)
+ 	 comuneDomicilio = genitore.getComuneDomicilio();
+ 	if (genitore.getProvinciaDomicilio()!=null)
+ 	 provinciaDomicilio = genitore.getProvinciaDomicilio();
+ 
  	int statusLavorativo = genitore.getStatusLavorativo();
  	Date annoScadenzaContratto=genitore.getScadenzaContratto();
  	String scadenzaContratto="";
@@ -38,7 +70,8 @@
  		scadenzaContratto=annoScadenzaContratto.toString();
 		scadenzaContratto=scadenzaContratto.substring(0, 4);
 	}
- 	String rapportoParentela = genitore.getRapportoParentela();
+ 	if (genitore.getRapportoParentela()!=null)
+ 	 rapportoParentela = genitore.getRapportoParentela();
  %>
  <!--gestione calendar-->
  <script type="text/javascript" src="atsilo_files/CalendarDisplay110.js"></script>
@@ -176,8 +209,8 @@ function calendarOpenerN()
   <tr>
   <td colspan="4"><select id="status_lavorativo" name="status_lavorativo"  disabled >
   <%
-				     out.append("<option value='-1' selected>Selezionare</option>");
-  							String selected="";
+				    		 out.append("<option value='-1' selected>Selezionare</option>");
+  							 String selected="";
 							  if (statusLavorativo >0 && statusLavorativo==1)
 								  selected="selected";
 						       out.append("<option value='1' "+selected+" >"+AtsiloConstants.STATUS_LAVORATIVO_1+"");
