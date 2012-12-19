@@ -227,7 +227,7 @@ public class ControlIscrizione {
                 (nonRichiedente.getNome() == null) ||
                 (nonRichiedente.getCognome() == null) ||
                 (nonRichiedente.getCodiceFiscale() == null) ||
-                (nonRichiedente.getEmail() == null) ||
+                //(nonRichiedente.getEmail() == null) ||
                 (nonRichiedente.getComuneNascita() == null) ||
                 (nonRichiedente.getTelefono() == null) || 
                 (nonRichiedente.getcittadinanza() == null) ||
@@ -250,8 +250,8 @@ public class ControlIscrizione {
                 (nonRichiedente.getCategoriaAppartenenza() == null) ||
                 (nonRichiedente.getRapportoParentela() == null) ||
                 (nonRichiedente.getCondizioneLavorativa() == null) ||
-                (nonRichiedente.getTipoContratto() == null) ||
-                (nonRichiedente.getFigli().isEmpty())
+                (nonRichiedente.getTipoContratto() == null) /*||
+                (nonRichiedente.getFigli().isEmpty())*/
             )
                 throw new GenitoreException("Mancano alcune informazioni del genitore non richiedente");
         }
