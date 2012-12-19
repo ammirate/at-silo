@@ -107,8 +107,8 @@ if (!tipologia.equals("impiegato_asilo") )
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="approva_richieste.jsp">Approva Richieste</a></td>
 </tr>
-</tbody></table>
-<td align="left" class="menuprimosel">&nbsp;<b>Gestione Gradutorie</b></td>
+<tr>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Graduatorie</b></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="graduatoria_ammessi.jsp">Graduatoria Amessi</a></td>

@@ -392,6 +392,81 @@ public class ControlDatiPersonali {
             db.chiudiConnessione();
         }
     }
+    
+    public Utente getPersonaleAsiloFromUsername(String username)
+            throws Exception, DBConnectionException, SQLException,
+            InserimentoDatiException {
+        Database db = new Database();
+        DBPersonaleAsilo dbPersonaleAsilo = new DBPersonaleAsilo(db);
+        DBAccount dbAccount = new DBAccount(db);
+        Account account = dbAccount.ricercaPerUsername(username);
+        
+        
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            PersonaleAsilo g = dbPersonaleAsilo.getPersonaleAsiloPerCF(account.getOwner()
+                    .getCodiceFiscale());
+            
+            if (g == null)
+                throw new Exception("Genitore non trovato");
+            return g;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    
+    public Utente getPsicoPedagogoFromUsername(String username)
+            throws Exception, DBConnectionException, SQLException,
+            InserimentoDatiException {
+        Database db = new Database();
+        DBPsicopedagogo dbpsicopedagogo = new DBPsicopedagogo(db);
+        DBAccount dbAccount = new DBAccount(db);
+        Account account = dbAccount.ricercaPerUsername(username);
+        
+        
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            Psicopedagogo g = dbpsicopedagogo.getPsicopedagogoPerCF(account.getOwner()
+                    .getCodiceFiscale());
+            
+            if (g == null)
+                throw new Exception("Psicopedagogo non trovato");
+            return g;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
+    
+    public Utente getEducatoreDidatticoFromUsername(String username)
+            throws Exception, DBConnectionException, SQLException,
+            InserimentoDatiException {
+        Database db = new Database();
+        DBEducatoreDidattico dbEducatoreDidattico = new DBEducatoreDidattico(db);
+        DBAccount dbAccount = new DBAccount(db);
+        Account account = dbAccount.ricercaPerUsername(username);
+        
+        
+        // controllo sul codice fiscale che deve essere a 16 cifre
+        
+        if (!db.apriConnessione())
+            throw new DBConnectionException("Connessione al DB fallita");
+        try {
+            EducatoreDidattico g = dbEducatoreDidattico.getEducatoreDidatticoPerCF(account.getOwner()
+                    .getCodiceFiscale());
+            
+            if (g == null)
+                throw new Exception("Educatore non trovato");
+            return g;
+        } finally {
+            db.chiudiConnessione();
+        }
+    }
     /** Restituisce il cf dei bambini associati all account con username in
      * input
      * 
