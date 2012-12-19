@@ -53,8 +53,6 @@ if (!tipologia.equals("responsabile_questionario") )
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_questionario.jsp">Nuovo Questionario</a></td>
 </tr>
-<tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="lista_questionari.jsp">Modifica Questionari</a></td>
-</tr>
+
 </tbody></table>
 

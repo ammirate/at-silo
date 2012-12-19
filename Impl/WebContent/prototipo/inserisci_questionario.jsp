@@ -19,18 +19,17 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <table width="100%">
 <tbody><tr>
 <td>
-<div class="titolopagina">Benvenuto XXX</div>
 </td><td class="fasciadxvariabile"></td>
 </tr>
 </tbody></table>
 
-<table cellspacing="10" cellpadding="0" border="0" width="100%">
+<table cellspacing="10" cellpadding="0" border="0" width="100%" onload='set()'>
 <tbody><tr>
 <td class="tplHeader">
 
 <h2 align=center >Inserisci nuovo Questionario</h2>
 <br><br>
-<form action="http://localhost:8080/Atsilo/servletControlQuestionario" method="POST">
+<form action="http://localhost:8080/Atsilo/servletControlQuestionario" method="POST" >
 <div id=formdomande>
 	<H2>Titolo Questionario:</H2> <input type=text name="titolo" size=100 style="height: 25px; font-size: 22px; font-family: Times; font-weight: bold;"><br><br><BR><BR>
 	<div id=datachooser2 >
