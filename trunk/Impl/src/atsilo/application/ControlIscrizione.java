@@ -207,7 +207,7 @@ public class ControlIscrizione {
             /*(richiedente.getDipendentePresso() == null) ||
             (richiedente.getRapportiAteneoSalerno() == null) ||
             (richiedente.getRapportiComuneFisciano() == null) ||*/
-            (richiedente.getStatusLavorativo() == null) ||
+            (richiedente.getStatusLavorativo()>0) ||
             //(richiedente.getScadenzaContratto() == null) ||
             //(richiedente.getCategoriaAppartenenza() == null) ||
             (richiedente.getRapportoParentela() == null) /*||
@@ -247,7 +247,7 @@ public class ControlIscrizione {
                 (nonRichiedente.getDipendentePresso() == null) ||
                 (nonRichiedente.getRapportiAteneoSalerno() == null) ||
                 (nonRichiedente.getRapportiComuneFisciano() == null) ||
-                (nonRichiedente.getStatusLavorativo() == null) ||
+                (nonRichiedente.getStatusLavorativo()>0) ||
                 //(nonRichiedente.getScadenzaContratto() == null) ||
                 (nonRichiedente.getCategoriaAppartenenza() == null) ||
                 (nonRichiedente.getRapportoParentela() == null) ||
