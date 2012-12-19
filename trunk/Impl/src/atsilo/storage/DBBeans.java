@@ -137,7 +137,7 @@ import atsilo.util.IterableOnlyOnce;
  * @author Angelo G. Scafuro
  * 
  */
-public abstract class DBBeans<B> implements Iterable<B> {
+public abstract class DBBeans<B> implements Iterable<B>,DBBeansInterface<B> {
 
     /**
      * Array utilizzato da {@link #creaAssegnazioni(Object) creaAssegnazioni()}
