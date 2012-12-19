@@ -108,18 +108,22 @@ public class servletControlQuestionario extends HttpServlet {
                 x++;
             }
            
-            try {
+            try { 
             if(request.getParameter("action").equals("modify"))
             {
                 System.out.println(quest.getId());
                 q.modificaQuestionario(quest.getId(), quest);
+                response.sendRedirect("prototipo/lista_questionari.jsp?success=2");   
+
             }   
             else {
                 q.inserisciQuestionario(quest);
+                response.sendRedirect("prototipo/lista_questionari.jsp?success=1");   
             }}
             catch (Exception e) {
                 try {
                     q.inserisciQuestionario(quest);
+                    response.sendRedirect("prototipo/lista_questionari.jsp?success=1");   
                 } catch (DBConnectionException e1) {
                     // TODO Blocco di catch autogenerato
 //                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
@@ -128,7 +132,6 @@ public class servletControlQuestionario extends HttpServlet {
 //                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
 
                 }
-                
             }
 	}
 }

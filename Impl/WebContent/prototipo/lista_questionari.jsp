@@ -30,6 +30,33 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 </tr>
 </tbody></table>
 
+<%
+try {
+if(request.getParameter("success").equals("1")) {
+	out.println("<div style='background: #b5f1af; width: 100%; height: 30px; text-align: center'>Questionario inserito con successo</div>");
+}
+}
+catch (Exception e) {}
+try {
+if(request.getParameter("success").equals("2")) {
+	out.println("<div style='background: #b5f1af; width: 100%; height: 30px; text-align: center'>Questionario modificato con successo</div>");
+}
+}
+catch (Exception e) {}
+try {
+if(request.getParameter("success").equals("3")) {
+	out.println("<div style='background: #b5f1af; width: 100%; height: 30px; text-align: center'>Questionario cancellato con successo</div>");
+}
+}
+catch (Exception e) {}
+try {
+if(request.getParameter("success").equals("4")) {
+	out.println("<div style='background: #b5f1af; width: 100%; height: 30px; text-align: center'>Questionario compilato con successo</div>");
+}
+}
+catch (Exception e) {}
+%>
+<br><br><br>
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
@@ -54,7 +81,6 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			int id = Integer.parseInt(request.getParameter("id"));
 			try {
 				q.eliminaQuestionario(id);
-				out.println("<script type='text/javascript'>alert('Questionario eliminato con successo')</script>");
 			} catch (DBConnectionException d) {
 				out.println("<script type='text/javascript'>alert('Impossibile connettersi al database: Riprova più tardi')</script>");
 			} catch (QuestionarioException qe) {
@@ -106,7 +132,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 						+ list.get(i).getId()
 						+ "'><img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
 						+ list.get(i).getId()
-						+ "'><img src='atsilo_images/cancella.png'></a>");
+						+ "&success=3'><img src='atsilo_images/cancella.png'></a>");
 			}
 			out.println("<a href='visualizza_questionari.jsp?id="
 					+ list.get(i).getId()
