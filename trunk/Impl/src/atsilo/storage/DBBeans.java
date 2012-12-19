@@ -408,7 +408,7 @@ public abstract class DBBeans<B> implements Iterable<B> {
             for (Map.Entry<String, Integer> ent : meta.entrySet()) {
                 String col = ent.getKey();
                 Object val = values.get(col);
-
+                System.out.println("setto la colonna "+col+ " al valore "+val);
                 tabella.setParam(stmt, ent.getValue(), col, val);
             }
             
@@ -422,9 +422,10 @@ public abstract class DBBeans<B> implements Iterable<B> {
                 if (colid == null) {
                     throw new IllegalArgumentException("No such column: " + a.colonna);
                 }
+                
                 tabella.setParam(stmt, colid, a.colonna, a.valore);
             }
-            
+            System.out.println(stmt);
             int res = stmt.executeUpdate();
             
             if (res == 1) {

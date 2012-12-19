@@ -1,5 +1,6 @@
 <%@ page language="java"  contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" session="true"%>
+<%@page import="atsilo.application.forum.*" %>
 <!--<-%@ page errorPage="errore_accesso.html" %>-->
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -147,7 +148,7 @@ else if (temp_nome_chiamante.equals("graduatoria_rifiutati.jsp"))
 <table class="percorsopagina1" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td align="center" height="0" nowrap="true" class="menuprimoselhbar"><a href="<% out.print(homepage);%>">Home</a></td>
-<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="forum/index.html">Forum</a></td>
+<td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="<% out.print(ControlForum.getInstance().getForumURL()); %>" target="_blank">Forum</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="ricerca_utente.jsp">Ricerca utente</a></td>
 <td align="center" height="0" nowrap="true" class="menuprimohbar"><a href="faq.html">FAQ</a></td>
 

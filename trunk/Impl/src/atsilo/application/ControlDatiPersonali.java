@@ -1,6 +1,8 @@
 package atsilo.application;
 
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -832,6 +834,8 @@ public class ControlDatiPersonali {
         db.apriConnessione();
         DBAccount dbacc = new DBAccount(db);
         DBGenitore dbgen = new DBGenitore(db);
+        //DBbeans della tabella users di phpbb
+        DBphpbb_users dbphp = new DBphpbb_users(db);
         Account newAcc = new Account();
         Genitore newGen = new Genitore();
         newGen.setCodiceFiscale(cf);
@@ -879,6 +883,15 @@ public class ControlDatiPersonali {
                    "Ti auguriamo una buona permanenza nel nostro asilo!\n\n"+
                    "La gestione";
            Messaggio m = new NotificaMailRegistrazione(destinatari,oggetto,testoEmail,newAcc,newGen);
+           
+           //Creo l'account sul forum
+           
+           
+           phpbb_user phpuser = new phpbb_user(newAcc.getUserName(), MD5(newAcc.getPassWord()), 
+                   newAcc.getOwner().getEmail(), System.currentTimeMillis() / 1000L);
+           
+           dbphp.inserisci(phpuser);
+           
            try {
             cnm.inviaMail(m);
         } catch (MessagingException e) {
@@ -892,6 +905,20 @@ public class ControlDatiPersonali {
        db.chiudiConnessione();
        return result;
     }
+    
+    private String MD5(String md5) {
+        try {
+             java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+             byte[] array = md.digest(md5.getBytes());
+             StringBuffer sb = new StringBuffer();
+             for (int i = 0; i < array.length; ++i) {
+               sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+            }
+             return sb.toString();
+         } catch (java.security.NoSuchAlgorithmException e) {
+         }
+         return null;
+     }
     
     /**@todo Questo metodo dovrebbe già funzionare e quindi non dovrebbe essere modificato
      * Aggiorna i dati di un account
