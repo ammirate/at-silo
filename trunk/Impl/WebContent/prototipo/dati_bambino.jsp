@@ -165,6 +165,7 @@ function calendarOpenerN()
 						if(figli!=null)
 						{
 							  for (int i=0;i<figli.size();i++){
+							  	selected="";
 								  if (figli.get(i).getCodiceFiscale().equals(cfb))
 									  selected="selected";
 							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");

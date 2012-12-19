@@ -196,9 +196,11 @@ function calendarOpenerN()
 							out.print("<select name='select_bambini' id='select_bambini' onchange='submitForm()'><option value='null' >Selezionare Bambino</option>");
 							String selected="";
 							  for (int i=0;i<figli.size();i++){
+							  	selected="";
 								  if (figli.get(i).getCodiceFiscale().equals(cfb))
 									  selected="selected";
 							  out.print("<option value='"+figli.get(i).getCodiceFiscale()+"'"+selected+" >"+figli.get(i).getNome()+"</option>");
+							  
 							  }
 						}
 						else
