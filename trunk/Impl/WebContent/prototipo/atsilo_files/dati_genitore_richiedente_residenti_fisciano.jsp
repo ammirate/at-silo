@@ -124,8 +124,8 @@ function calendarOpenerN()
     <td>Provincia</td>
     <td><input id="provinciaResidenza" value="<%=provinciaResidenza %>" name="provinciaResidenza"  size="2" maxlength="2" type="text" /></td>
    
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td>Telefono</td>
+    <td><input name="telefono" type="text" id="telefono" value="<%=telefono %>"  size="25" maxlength="15" readonly="readonly" /></td>
   </tr>
    
    
