@@ -22,9 +22,11 @@
 <script type="text/javascript">
 function modificaForm(){
 	document.getElementById("mod").setAttribute("action","http://localhost:8080/Atsilo/prototipo/modifica_evento.jsp");
+	document.getElementById("frm").submit();
 }
 function inserisciForm(){
 	document.getElementById("ins").setAttribute("action","http://localhost:8080/Atsilo/prototipo/inserisci_evento.jsp");
+	document.getElementById("frm").submit();
 }
 
 </script>
@@ -52,13 +54,13 @@ ControlDatiPersonali crtPers = ControlDatiPersonali.getIstance();
 ControlEvento crtEvn = ControlEvento.getIstance();
 %>
 <h1>Lista degli eventi del <%= giorno %>/<%= ""+m %>/<%=anno %></h1>
-<form action="http://localhost:8080/Atsilo/ServletEventoElimina" method="post" >
+<form id="frm" action="http://localhost:8080/Atsilo/ServletEventoElimina" method="post" >
 <input type="hidden" value="<%= giorno+"_"+m+"_"+anno %>" name="data" />
 <div align="center">
 <% 
 if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 %>
-<input type="submit" value="Inserisci Nuovo Evento" name="inserisci" id="ins" onclick="inserisciForm()" />
+<input type="button" value="Inserisci Nuovo Evento" name="inserisci" id="ins" onclick="inserisciForm()" />
 <%} %>
 </div>
 <table>
@@ -120,15 +122,22 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append(propriEventi.get(k).getDescrizione())
 					.append("</td></tr>");
 			}
+			if(pEvenLun == 0){
+				out.print("<h2>Non ci sono eventi</h2>");
+			}
+			else{
+				
+			
 			out.print("<input type='submit' value='Modifica' id='mod' name='modifica' onclick='modificaForm()' />");
 			out.print("<input type='submit' value='Elimina' name='elimina' id='mod' />");
+			}
 		int aEvenLun = altriEventi.size();
-			out.print("<br /><br /> Resto degli eventi per questa data");
+		out.print("<br /><br /> Resto degli eventi per questa data");
 			for(int j=0; j<aEvenLun;j++){
 				out.append("<tr><td>")
-				.append(propriEventi.get(j).getNome())
+				.append(altriEventi.get(j).getNome())
 				.append("</td><td>")
-				.append(propriEventi.get(j).getDescrizione())
+				.append(altriEventi.get(j).getDescrizione())
 				.append("</td></tr>");
 			}
 	
