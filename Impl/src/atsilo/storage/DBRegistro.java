@@ -21,7 +21,7 @@ import atsilo.entity.Registro;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Ferdinando Di Palma17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 //TODO da implementare priorità bassa

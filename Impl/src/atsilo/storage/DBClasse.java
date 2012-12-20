@@ -27,7 +27,7 @@ import atsilo.entity.RispostaQuestionario;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, Elisa D'Eugenio 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Luigi Lomasto, Elisa D'Eugenio,Ferdinando Di Palma 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  */
 
