@@ -293,30 +293,34 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
         if ( request.getParameter("genitore_invalido")!=null)
             genitore_invalido=Boolean.parseBoolean(request.getParameter("genitore_invalido"));
         boolean genitore_solo=false;
-        if ( request.getParameter("genitore_solo")!=null)
-            genitore_solo=Boolean.parseBoolean(request.getParameter("genitore_solo"));
+        
         boolean vedovo=false;
-        if ( request.getParameter("vedovo")!=null)
-            vedovo=Boolean.parseBoolean( request.getParameter("vedovo"));
         boolean nubile=false;
-        if ( request.getParameter("nubile")!=null)
-            nubile=Boolean.parseBoolean( request.getParameter("nubile"));
         boolean separato=false;
-        if ( request.getParameter("separato")!=null)
-            separato=Boolean.parseBoolean(request.getParameter("separato"));
         boolean figlio_non_riconosciuto=false;
-        if ( request.getParameter("figlio_non_riconosciuto")!=null)
-            figlio_non_riconosciuto=Boolean.parseBoolean(request.getParameter("figlio_non_riconosciuto"));
         boolean affido_esclusivo=false;
-        if ( request.getParameter("affido_esclusivo")!=null)
-            affido_esclusivo=Boolean.parseBoolean(request.getParameter("affido_esclusivo"));
+        if ( request.getParameter("select_genitore_solo")!=null){
+            genitore_solo=true;
+            if (request.getParameter("select_genitore_solo").equals("vedovo"))
+                vedovo=true;
+            if (request.getParameter("select_genitore_solo").equals("separato"))
+                separato=true;
+            if (request.getParameter("select_genitore_solo").equals("nubile"))
+                nubile=true;
+            if (request.getParameter("select_genitore_solo").equals("figlio_non_riconosciuto"))
+                figlio_non_riconosciuto=true;
+            if (request.getParameter("select_genitore_solo").equals("affido_esclusivo"))
+                affido_esclusivo=true;
+            if (request.getParameter("select_genitore_solo").equals("false"))
+                genitore_solo=false;
+        }
+      
         boolean altri_figli_disabili=false;
         if ( request.getParameter("altri_figli_disabili")!=null)
             altri_figli_disabili=Boolean.parseBoolean( request.getParameter("altri_figli_disabili"));
         String altre_condizioni_calcolo_punteggio="";
         if ( request.getParameter("altre_condizioni_calcolo_punteggio")!=null)
             altre_condizioni_calcolo_punteggio=request.getParameter("altre_condizioni_calcolo_punteggio");
-        
         
         //gestione richieste
         
