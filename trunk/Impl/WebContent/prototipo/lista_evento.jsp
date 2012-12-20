@@ -55,7 +55,7 @@ ControlEvento crtEvn = ControlEvento.getIstance();
 %>
 <h1>Lista degli eventi del <%= giorno %>/<%= ""+m %>/<%=anno %></h1>
 <form id="frm" action="http://localhost:8080/Atsilo/ServletEventoElimina" method="post" >
-<input type="hidden" value="<%= giorno+"_"+m+"_"+anno %>" name="data" />
+<input type="hidden" value="<%= giorno+"/"+m+"/"+anno %>" name="data" />
 <div align="center">
 <% 
 if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
