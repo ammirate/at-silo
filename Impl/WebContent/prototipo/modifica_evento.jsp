@@ -90,12 +90,17 @@ Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
 <br />Tipo : <input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" />
 <br />CC : <input type="text" name="cc" value="<%= oldEvn.getCC() %>" />
 <% 
+List<Integer> lidc=new ArrayList<Integer>();
+for(Classe c : oldEvn.getClassi())
+{
+	lidc.add(c.getId());
+}
 int lun = crtClass.getClassi().size();
 for(int i=0; i<lun ;i++){
-	if(crtClass.getClassi().get(i).equals(oldEvn.getClassi().get(i)) == true){
+	if(lidc.contains(crtClass.getClassi().get(i).getId())){
 		out.append("<input type='checkbox' name='classe' value='")
 		.append(""+crtClass.getClassi().get(i).getId())
-		.append("' checked />"+crtClass.getClassi().get(i).getSezione())
+		.append("' checked='checked' />"+crtClass.getClassi().get(i).getSezione())
 		.append("<br />");
 	}
 	else{
