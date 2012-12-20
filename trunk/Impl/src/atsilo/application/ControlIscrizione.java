@@ -107,6 +107,10 @@ public class ControlIscrizione {
         }
         else
         {
+            if(!domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA))
+            {
+                throw new DomandaIscrizioneException("Domanda già sottomessa, non è possibile");
+            }
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
             if(bambinoDisabile == true)
                 domandaModificata.setBambinoDisabile(bambinoDisabile);
