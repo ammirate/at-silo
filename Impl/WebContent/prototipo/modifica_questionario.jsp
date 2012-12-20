@@ -77,6 +77,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 				+ quest.getDescrizione() + "</textarea><br><br>");
 	 
 		for (int i = 0; i < quest.getDomande().size(); i++) {
+			out.println("<div id='domanda_header"+i+"'>");
 			out.println("<br><br><fieldset onMouseOver=\"set('parah"+i+"')\">");
 			out.println("<table id='parah"+i+"' >");
 			out.println("<tr><td><h3>Domanda</h3></td><td><input type=text size = 80 name='domanda"+i+"' value='"
@@ -99,9 +100,11 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 				 type = "<Select name='tipo"+i+"'	onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option selected=selected value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select><input type=button value='Aggiungi Campo ' id='addCampo"+i+"' onclick=\"display('parah"+i+"', " + i +");\">";
 			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo().equals("text"))
 				 type = "<Select name='tipo"+i+"'	onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option value=1>Selezione Multipla</option><option  value=2>Selezione Unica</option><option selected=selected value=3>Risposta Aperta</option></Select><input type=button disabled = disabled value='Aggiungi Campo ' id='addCampo"+i+"' onclick=\"display('parah"+i+"', " + i +");\">";
+			if(i!=0)
+				type+="<input type=button value='Elimina Domanda' onClick='eliminaDomanda("+ i+")'>";
 
 			out.println( type);
-			out.println("</fieldset><br><br>");
+			out.println("</fieldset></div><br><br>");
 		}
 		out.println("<script type=\"text/javascript\">setv("+quest.getDomande().size()+")</script>");
 		out.println("</div><input type=button value=\"Aggiungi Domanda\" onclick=\"addDomanda()\"><br><br>");
