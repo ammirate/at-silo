@@ -23,7 +23,7 @@ import java.util.Map;
  * PROGETTO: Atsilo
  *-----------------------------------------------------------------
  * OWNER
- * Angelo Scafuro, Fabio Napoli, 17/11/2012 (non responsabili)
+ * Angelo Scafuro, Fabio Napoli, Ferdinando Di Palma 17/11/2012 (non responsabili)
  *-----------------------------------------------------------------
  *///TODO da implementare
 public class DBRichiesta extends DBBeans {
