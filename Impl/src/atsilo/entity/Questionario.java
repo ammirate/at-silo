@@ -2,6 +2,8 @@ package atsilo.entity;
 
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 /*
@@ -142,11 +144,19 @@ public class Questionario {
     }
     
     public String getPeriodo_fineString() {
-        return periodo_fine.toString();
+        String periodo_fine="";
+        periodo_fine=this.periodo_fine.toString().replace("-", "/");
+        String [] p =periodo_fine.split("/");
+        periodo_fine=p[2]+"/"+p[1]+"/"+p[0];
+        return periodo_fine;
     }
     
     public String getPeriodo_inizioString() {
-        return periodo_inizio.toString();
+        String periodo_inizio="";
+        periodo_inizio=this.periodo_inizio.toString().replace("-", "/");
+        String [] p =periodo_inizio.split("/");
+        periodo_inizio=p[2]+"/"+p[1]+"/"+p[0];
+        return periodo_inizio;
     }
 
     /**
