@@ -418,7 +418,7 @@ public class ControlDatiPersonali {
         Database db = new Database();
         DBPersonaleAsilo dbPersonaleAsilo = new DBPersonaleAsilo(db);
         DBAccount dbAccount = new DBAccount(db);
-        Account account = dbAccount.ricercaPerUsername(username);
+       
         
         
         // controllo sul codice fiscale che deve essere a 16 cifre
@@ -426,6 +426,7 @@ public class ControlDatiPersonali {
         if (!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try {
+            Account account = dbAccount.ricercaPerUsername(username);
             PersonaleAsilo g = dbPersonaleAsilo.getPersonaleAsiloPerCF(account.getOwner()
                     .getCodiceFiscale());
             
