@@ -91,6 +91,17 @@ if (!tipologia.equals("impiegato_asilo") )
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="extra.jsp">Extra</a></td>
 </tr>
 </tbody></table>
+
+<table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
+<tbody><tr>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Eventi</b></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="eventi.jsp">Visualizza Eventi</a></td>
+</tr>
+</tbody></table>
+
+
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td align="left" class="menuprimosel">&nbsp;<b>Gestione Servizi</b></td>
