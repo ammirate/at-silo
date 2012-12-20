@@ -446,7 +446,18 @@ public class ControlIscrizione {
         }
     }
     
-    public boolean rinunciaIscrizione(String cfBambino) throws DomandaIscrizioneException, InserimentoDatiException, DBConnectionException, SQLException{
+    /**
+     * Metodo che effettua la rinuncia all'iscrizione di genitore per suo figlio
+     * @param cfBambino il codice fiscale del bambino
+     * @param gi‡Iscritto true se il metodo Ë chiamato per la funzione di rinuncia in corso di anno scolastico, false se Ë chiamato in fase di graduatoria
+     * @return
+     * @throws DomandaIscrizioneException
+     * @throws InserimentoDatiException
+     * @throws DBConnectionException
+     * @throws SQLException
+     * @throws BambinoException 
+     */
+    public boolean rinunciaIscrizione(String cfBambino, boolean giaIscritto) throws DomandaIscrizioneException, InserimentoDatiException, DBConnectionException, SQLException, BambinoException{
         Database db = new Database();
         DBDomandaIscrizione bdDomandaIscrizione = new DBDomandaIscrizione(db);
         DBBambino dbb = new DBBambino(db);
@@ -461,24 +472,40 @@ public class ControlIscrizione {
             DomandaIscrizione domanda = bdDomandaIscrizione.ricercaDomandaDaBambino(cfBambino);
             if (domanda == null)
                 throw new DomandaIscrizioneException("Domanda non trovata");
-            //Posso rinunciare solo se ho inviato la domanda, o non sono stato gi‡ rifiutato o accettato.
-             if(domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA)
-                     || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_RIFIUTATA)
-                     || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_ACCETTATA))
-                 throw new DomandaIscrizioneException("La domanda non Ë nello stato corretto.");
-             
-            if(!ControlGestioneBando.getIstance().rinunceAperte())
-            {
-                throw new DomandaIscrizioneException("Impossibile rinunciare alla domanda. I termini di rinuncia sono scaduti.");
-            }
             
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
+            
+            if(!ControlGestioneBando.getIstance().domandaPresentataNelBandoCorrente(domanda))
+            {
+                throw new DomandaIscrizioneException("La domanda per la rinuncia non appartiene al bando corrente");
+            }
+            if(!giaIscritto)
+            {
+                //Posso rinunciare solo se ho inviato la domanda, o non sono stato gi‡ rifiutato.
+                //Posso rinunciare se la mia domanda Ë stata gi‡ accettata a patto che sia entro i termini del bando
+                 if(domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA)
+                         || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_RIFIUTATA))
+                     throw new DomandaIscrizioneException("La domanda non Ë nello stato corretto.");
+                 //Posso rinunciare solo se sono entro i termini del bando
+                if(!ControlGestioneBando.getIstance().rinunceAperte())
+                {
+                    throw new DomandaIscrizioneException("Impossibile rinunciare alla domanda. I termini di rinuncia sono scaduti.");
+                }
+                
+                
+            }
+            else
+            {
+                //Sono gi‡ iscritto, sto effettuando la rinuncia durante l'anno scolastico
+                if(domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_ACCETTATA))
+                    throw new DomandaIscrizioneException("La domanda non Ë nello stato corretto.");  
+            }
             domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_RITIRATA);
             domandaModificata.setStatoDomanda("Ritirata");
             Bambino b = dbb.ricercaBambinoPerCodFiscale(domandaModificata.getBambino().getCodiceFiscale());
             b.setIscrizioneClasse(AtsiloConstants.ISCRIZIONE_CLASSE_RINUNCIATARIO);
             if (!dbb.replace(b, b))
-                throw new DomandaIscrizioneException("Modifica fallita");
+                throw new BambinoException("Modifica fallita");
             if (!bdDomandaIscrizione.replace(domanda, domandaModificata))
                 throw new DomandaIscrizioneException("Modifica fallita");
             return true;
