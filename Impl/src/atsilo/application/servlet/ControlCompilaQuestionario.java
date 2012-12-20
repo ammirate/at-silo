@@ -114,7 +114,7 @@ public class ControlCompilaQuestionario extends HttpServlet {
             response.reset();
             response.setHeader("Cache-Control","no-cache");
             
-            response.sendRedirect("prototipo/lista_questionari.jsp?success=4&type=genitore&codfis="+codfis);   
+            response.sendRedirect("prototipo/lista_questionari.jsp?success=4&type=genitore&cf="+codfis);   
 
 //                for(int f = 0; f<listR.size(); f++) {
 //                  System.out.println(listR.get(f).getValore());
