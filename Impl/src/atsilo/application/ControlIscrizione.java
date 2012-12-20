@@ -112,28 +112,18 @@ public class ControlIscrizione {
                 throw new DomandaIscrizioneException("Domanda già sottomessa, non è possibile modificare la domanda.");
             }
             DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
-            if(bambinoDisabile == true)
-                domandaModificata.setBambinoDisabile(bambinoDisabile);
-            if(genitoreInvalido == true)
-                domandaModificata.setGenitoreInvalido(genitoreInvalido);
-            if(genitoreSolo == true)
-                domandaModificata.setGenitoreSolo(genitoreSolo);
-            if(genitoreVedovo == true)
-                domandaModificata.setGenitoreVedovo(genitoreVedovo);
-            if(genitoreNubile == true)
-                domandaModificata.setGenitoreNubile(genitoreNubile);
-            if(genitoreSeparato == true)
-                domandaModificata.setGenitoreSeparato(genitoreSeparato);
-            if(figlioNonRiconosciuto == true)
-                domandaModificata.setFiglioNonRiconosciuto(figlioNonRiconosciuto);
-            if(affidoEsclusivo == true)
-                domandaModificata.setAffidoEsclusivo(affidoEsclusivo);
-            if(altriComponentiDisabili == true)
-                domandaModificata.setAltriComponentiDisabili(altriComponentiDisabili); 
+            domandaModificata.setBambinoDisabile(bambinoDisabile);
+            domandaModificata.setGenitoreInvalido(genitoreInvalido);
+            domandaModificata.setGenitoreSolo(genitoreSolo);
+            domandaModificata.setGenitoreVedovo(genitoreVedovo);
+            domandaModificata.setGenitoreNubile(genitoreNubile);
+            domandaModificata.setGenitoreSeparato(genitoreSeparato);
+            domandaModificata.setFiglioNonRiconosciuto(figlioNonRiconosciuto);
+            domandaModificata.setAffidoEsclusivo(affidoEsclusivo);
+            domandaModificata.setAltriComponentiDisabili(altriComponentiDisabili); 
             if(condizioniCalcoloPunteggio != null)
                 domandaModificata.setCondizioniCalcoloPunteggio(condizioniCalcoloPunteggio);
-            if(isee != -1)
-                domandaModificata.setIsee(isee);
+            domandaModificata.setIsee(isee);
 
             
             if(!db.apriConnessione())
