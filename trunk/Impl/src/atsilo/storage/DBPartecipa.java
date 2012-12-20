@@ -136,7 +136,7 @@ public class DBPartecipa extends DBBeans<Partecipa> {
             l.add(res.getInt("classe"));
         if(l.size()==0){
             res.close();
-            return null;
+            return l;
         }else{
             res.close();
             return l;    

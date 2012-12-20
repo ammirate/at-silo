@@ -109,7 +109,7 @@ public class ControlEvento {
                 Partecipa partecipa = new Partecipa(classe, evento.getId());
                 dbPartecipa.inserisci(partecipa);
             }
-            ControlNotificaMail control = ControlNotificaMail.getInstance();
+            /*ControlNotificaMail control = ControlNotificaMail.getInstance();
             Messaggio messaggio = new NotificaMailEvento(
                     convertiCC(evento.getCC()), "Creazione ", " ", evento);
             try {
@@ -120,7 +120,7 @@ public class ControlEvento {
             } catch (Throwable e) {
                 LOG.log(Level.SEVERE,
                         "<Errore nel invio del messaggio cauasato da: >", e);
-            }
+            }*/
             
         } finally {
             db.chiudiConnessione();
@@ -168,7 +168,7 @@ public class ControlEvento {
                     Partecipa partecipa = new Partecipa(classe, evento.getId());
                     dbPartecipa.inserisci(partecipa);
                 }
-                ControlNotificaMail control = ControlNotificaMail.getInstance();
+                /*ControlNotificaMail control = ControlNotificaMail.getInstance();
                 Messaggio messaggio = new NotificaMailEvento(
                         convertiCC(evento.getCC()), "Modifica", "", evento);
                 try {
@@ -179,7 +179,7 @@ public class ControlEvento {
                 } catch (Throwable e) {
                     LOG.log(Level.SEVERE,
                             "<Errore nel invio del messaggio cauasato da: >", e);
-                }
+                }*/
                 return true;
                 
                 
