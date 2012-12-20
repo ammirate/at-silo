@@ -66,7 +66,7 @@ public class ServletEventoModifica extends HttpServlet {
             String elencoClassi[] = request.getParameterValues("classe");
             String YYYYMMDD[];
             YYYYMMDD = dataIntera.split("/");
-            Date data = new Date(Integer.parseInt(YYYYMMDD[2]), Integer.parseInt(YYYYMMDD[1]), Integer.parseInt(YYYYMMDD[0]));
+            Date data = new Date(Integer.parseInt(YYYYMMDD[2])-1900, Integer.parseInt(YYYYMMDD[1])-1, Integer.parseInt(YYYYMMDD[0]));
             Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, oldEvn.getOrganizzatore(), oldEvn.getPath());
             List<Classe> classi = new ArrayList<Classe>();
             for(int k=0; k<elencoClassi.length;k++){
@@ -75,7 +75,7 @@ public class ServletEventoModifica extends HttpServlet {
             nuovoEvn.setClassi(classi);
             if(crt.modificaEvento(oldEvn, nuovoEvn) == true){
                 response.setStatus(response.SC_MOVED_TEMPORARILY);
-                response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y");      
+                response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y");
 
             }
             else{
