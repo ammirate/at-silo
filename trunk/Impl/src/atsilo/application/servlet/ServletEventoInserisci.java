@@ -69,7 +69,7 @@ public class ServletEventoInserisci extends HttpServlet {
             String cC = request.getParameter("cc");
             String elencoClassi[] = request.getParameterValues("classe");
             String YYYYMMDD[];
-            YYYYMMDD = dataIntera.split("-");
+            YYYYMMDD = dataIntera.split("/");
             Date data = new Date(Integer.parseInt(YYYYMMDD[0]), Integer.parseInt(YYYYMMDD[1]), Integer.parseInt(YYYYMMDD[2]));
             String tipologia = request.getParameter("tipologia");
             String username = request.getParameter("user");
