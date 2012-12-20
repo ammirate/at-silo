@@ -66,7 +66,7 @@ catch (Exception e) {}
 </tr>
 
 <%
-	
+
 	boolean g = false;
 	String cf = "";
 	ControlQuestionario q = ControlQuestionario.getIstance();
@@ -98,17 +98,26 @@ catch (Exception e) {}
 		}
 	} catch (Exception e) {
 	}
-	List<Questionario> list = null;
+	List<Questionario> list = new ArrayList<Questionario>();
 	if (g)
-		list = q.getQuestionariDaCompilare(cf);
+		{	
+			list = q.getQuestionariDaCompilare(cf);
+			System.out.println(list);
+					
+		}
 	else {
+		
 		list = q.getAllQuestionari();
+		
 	}
 	if (list.size() == 0)
-		out.println("<tr><td colspan=5>Non sono presenti Questionari in archivio.</td></tr>");
+		{out.println("<tr><td colspan=5>Non sono presenti Questionari in archivio.</td></tr>");}
+	
+	
 	String datainizio = "";
 	String datafine = "";
 	for (int i = 0; i < list.size(); i++) {
+		
 		datainizio = list.get(i).getPeriodo_inizio().toString();
 		String[] dt = datainizio.split("-");
 		datainizio = dt[2] + "/" + dt[1] + "/" + dt[0];

@@ -94,6 +94,8 @@ public class servletControlQuestionario extends HttpServlet {
                     break;
                 } 
                 d=new DomandaQuestionario(0,0,domanda, null);
+                int sent=0;
+                
                 String[] opzione = request.getParameterValues("opzione"+x+"[]");
                 String tipo = request.getParameter("tipo"+x);
                 if (tipo.equals("1")) tipo = "checkbox";
@@ -103,8 +105,15 @@ public class servletControlQuestionario extends HttpServlet {
                 for(int i = 0; i<opzione.length; i++) {
                     c1.add(new CampoDomandaQuestionario(tipo, opzione[i], opzione[i], x));
                 }
-                d.setCampi(c1);
-                quest.aggiungiDomanda(d);
+                if(((domanda.equals(""))&&(opzione.length==0))||(((domanda.equals("")))&&(opzione.length!=0))||(!(domanda.equals(""))&&(opzione.length==0)))
+                { System.out.println("domanda::: "+domanda+"campi:::"+opzione.length);
+                   sent++;
+                }
+                if(sent==0)
+                {
+                    d.setCampi(c1);
+                    quest.aggiungiDomanda(d);
+                }
                 x++;
             }
            
@@ -113,9 +122,8 @@ public class servletControlQuestionario extends HttpServlet {
             {
                 System.out.println(quest.getId());
                 q.modificaQuestionario(quest.getId(), quest);
-      
                 response.sendRedirect("prototipo/lista_questionari.jsp?success=2");   
-
+                
             }   
             else {
                 q.inserisciQuestionario(quest);
