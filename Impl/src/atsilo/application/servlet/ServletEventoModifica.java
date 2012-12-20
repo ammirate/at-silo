@@ -66,7 +66,7 @@ public class ServletEventoModifica extends HttpServlet {
             String elencoClassi[] = request.getParameterValues("classe");
             String YYYYMMDD[];
             YYYYMMDD = dataIntera.split("/");
-            Date data = new Date(Integer.parseInt(YYYYMMDD[0]), Integer.parseInt(YYYYMMDD[1]), Integer.parseInt(YYYYMMDD[2]));
+            Date data = new Date(Integer.parseInt(YYYYMMDD[2]), Integer.parseInt(YYYYMMDD[1]), Integer.parseInt(YYYYMMDD[0]));
             Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, oldEvn.getOrganizzatore(), oldEvn.getPath());
             List<Classe> classi = new ArrayList<Classe>();
             for(int k=0; k<elencoClassi.length;k++){
