@@ -56,6 +56,7 @@ public class ControlQuestionario {
     /**
      * Adds a new questionnaire in the database
      * @param questionario is the questionnaire to add
+     * @pre questionario != null
      * @return true if the questionnaire was added correctly, else false
      */
     public void inserisciQuestionario(Questionario questionario) throws DBConnectionException, QuestionarioException {
@@ -78,10 +79,10 @@ public class ControlQuestionario {
                 d.setIdQuestionario(questionario.getId());
                 storageD.inserisci(d);
                 campi = d.getCampi();
-                 for(CampoDomandaQuestionario c : campi)
-                  {   c.setIdDomandaQuestionario(d.getId());  
-                      storageC.inserisci(c);
-                  }
+                for(CampoDomandaQuestionario c : campi)
+                {   c.setIdDomandaQuestionario(d.getId());  
+                storageC.inserisci(c);
+                }
             }
         }
         finally{
@@ -94,13 +95,14 @@ public class ControlQuestionario {
      * Deletes a quiestionnaire from the database if the questionnaire is not active
      * (the actually date is not between the start date and the end date)
      * @param id is the quiestionnaire identificative
+     * @pre id > 0
      * @return the questionnaire deleted
      */
     public void eliminaQuestionario(int id) throws DBConnectionException, QuestionarioException {
         
         Database db = new Database();
         DBQuestionario storageQ = new DBQuestionario(db);
-
+        
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -113,7 +115,7 @@ public class ControlQuestionario {
                     throw new QuestionarioException("Impossibile eliminare un questionario attivo");
                 }
                 else {
-                storageQ.delete(daCancellare);
+                    storageQ.delete(daCancellare);
                 }
             } catch (SQLException e) {
                 throw new QuestionarioException("Questionario non trovato");
@@ -123,11 +125,15 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
+    
+    
+    
     /**
      * This method check if the questionario is editable
      * A questionario is editable if the actual date is before the inital date of questionario
      * and the actual date is after the final date of questionario
      * @param Questionario 
+     * @pre q != null
      * @return true if the questionario is deletable, false is the questionario isnt deletable
      */
     public boolean isEditable(Questionario q)
@@ -151,12 +157,13 @@ public class ControlQuestionario {
         
     }
     
-   
+    
     /**
      * Substitutes the questionnaire questions list with a new quiestions list
      * 
      * @param idQquestionario is the quiestionnaire identificative
      * @param domande is the new quistions list to add
+     * @pre id>0 AND newQuestionario != null
      * @return true if the list was substituted correctly, else false
      */
     public void modificaQuestionario(int idQuestionario, Questionario newQuestionario) throws DBConnectionException,
@@ -183,7 +190,7 @@ public class ControlQuestionario {
                         for(CampoDomandaQuestionario c:campi)
                             storageC.inserisci(c);
                     }
-                        
+                
                 
                 
                 
@@ -200,6 +207,7 @@ public class ControlQuestionario {
     /**
      * Changes the questionnaire start date
      * @param newData is the new start date
+     * @pre id>0 AND newData != null
      * @return true if the date was set correctly, else false
      */
     public void spostaDataInizio(int idQuestionario, Date newData) throws DBConnectionException,
@@ -229,6 +237,7 @@ public class ControlQuestionario {
     /**
      * Changes the questionnaire end date
      * @param newData is the new end date
+     * @pre id>0 AND newData != null
      * @return true if the date was set correctly, else false
      */
     public void spostaDataFine(int idQuestionario, Date newData) throws DBConnectionException,
@@ -295,13 +304,14 @@ public class ControlQuestionario {
      * @param questionario is the questionnaire compiled
      * @param risposte is a answers list
      * @param CFchiCompila is the parent key
+     * @pre id>0 AND risposte != null AND CFchiCompila != null
      * @return true if the list was added correctly, else false
      * @throws DBConnectionException 
      * @throws QuestionarioException 
      */
     public void compilaQuestionario(int idQuestionario, List<RispostaQuestionario> risposte, String CFchiCompila) throws DBConnectionException, QuestionarioException{
         Database db = new Database();    
-       
+        
         DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
         DBCompilaQuestionario storageCompila = new DBCompilaQuestionario(db);
         
@@ -332,6 +342,7 @@ public class ControlQuestionario {
      * Gets all the questionnaires not yet compiled by a 
      * parent from all questionnaires compilable
      * @param genitore is the parent
+     * @pre CFgenitore != null
      * @return a questionnaires list
      * @throws QuestionarioException 
      */
@@ -344,8 +355,8 @@ public class ControlQuestionario {
         
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
-       try{
-           allQuestComp = storage.visualizzaQuestionariCompilabili();
+        try{
+            allQuestComp = storage.visualizzaQuestionariCompilabili();
             for(Questionario q : allQuestComp)
             {
                 //controllo se quel questionario non è gia stato compilato in precedenza
@@ -363,7 +374,7 @@ public class ControlQuestionario {
         finally{
             db.chiudiConnessione();
         }
-       return toReturn;
+        return toReturn;
     }
     
     
@@ -372,6 +383,8 @@ public class ControlQuestionario {
      * This method has to be called when you want a full questionnaire
      * @param idQuestionario is the questionnaire key
      * @param CFgenitore is the parent key for whom the method loads the questionnaires
+     * @pre id>0 AND CFgenitore != null
+     * @post return Questionario != null
      * @return a full questionnaire with all questions and all question fields
      * @throws DBConnectionException
      * @throws SQLException 
@@ -402,11 +415,11 @@ public class ControlQuestionario {
             
             //setto i campi per ogni domanda
             for(DomandaQuestionario d : toReturn.getDomande()){
-                 campi = storageCampi.getCampiDomandaQuestionario(d.getId());
-                 this.precaricaDomande(toReturn,campi,db,CFgenitore);
-                 d.setCampi(campi);
+                campi = storageCampi.getCampiDomandaQuestionario(d.getId());
+                this.precaricaDomande(toReturn,campi,db,CFgenitore);
+                d.setCampi(campi);
             }
-          
+            
             return toReturn;
             
         }
@@ -414,21 +427,26 @@ public class ControlQuestionario {
             db.chiudiConnessione();
         }
     }
-   /**
-    *  
-    * @param q
- * @throws SQLException 
-    */
+    
+    
+    /**
+     * Sets an answer to the relative question
+     * @param q is the questionnaire to compile
+     * @param campi is a list of a question field 
+     * @param cf is the parent key
+     * @pre q!=null AND campi!=null AND cf!=null
+     * @throws SQLException
+     */
     private void precaricaDomande (Questionario q,List<CampoDomandaQuestionario> campi, Database db, String cf) throws SQLException
     {
-       
+        
         DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
         DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
         DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
         List<RispostaQuestionario> risposte= storageRisposte.getRisposteGenitore(cf);
-       //per tutte le risposte mai date dal genitore
+        //per tutte le risposte mai date dal genitore
         for(RispostaQuestionario r : risposte){
-          
+            
             DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());
             domandaRisposta.setCampi(storageCampi.getCampiDomandaQuestionario(domandaRisposta.getId()));
             
@@ -439,112 +457,120 @@ public class ControlQuestionario {
         }
         
     }
+    
+    
+    
     /**
-     * 
-     * @param d
-     * @param d1
-     * @return
-     * @throws SQLException 
+     * Controls if two questions are equals
+     * @param idDomanda is question key to compare
+     * @param d1 is the quistion to compare with d1
+     * @pre idDomanda>0 AND d1!=null
+     * @return true if the questions are equals, else false
+     * @throws SQLException
      */
-
     public boolean domandaIsEqual(int idDomanda, DomandaQuestionario d1) throws SQLException
     { 
-       Database db = new Database();
-       db.apriConnessione();
-       DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
-       DBDomandaQuestionario storageDomanda= new DBDomandaQuestionario(db);
-       DomandaQuestionario d = storageDomanda.getDomanda(idDomanda);
-       
-       int sent=0;
-       List<CampoDomandaQuestionario> campi =storageCampi.getCampiDomandaQuestionario(d.getId());
-       d.setCampi(campi);
-       List<CampoDomandaQuestionario> campi2 =storageCampi.getCampiDomandaQuestionario(d1.getId());
-       d1.setCampi(campi2);
-       
-       
-       
-       int numCampiDomanda = campi.size();
-       int numCampiDomanda2 = campi2.size();
-       String descr1= d.getDescrizione();
-       if(d.getDescrizione().contains("'"))
-       {
-           descr1  = d.getDescrizione().replace("'", "");
-       }
-       System.out.println("domanda 1: "+descr1+" domanda 2:"+d1.getDescrizione());
-       if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
-               {
-                   return false;
-               }
-       
-       if(numCampiDomanda != numCampiDomanda2)
-       {
-           return false;
-       }
-       
-       for(CampoDomandaQuestionario campiGenitore : campi)
-       {
-           for(CampoDomandaQuestionario campiQuest : campi2)
-           {
-               if((campiQuest.getDescrizione().equals(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
-                  sent ++;
-               }
-               
-           }
-           
-       }
-       db.chiudiConnessione();
-       if(sent==campi.size())
-       {
-          // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
-          return true;
-       }
-       else
-       {
-           return false;
-       }
-       
+        Database db = new Database();
+        db.apriConnessione();
+        DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+        DBDomandaQuestionario storageDomanda= new DBDomandaQuestionario(db);
+        DomandaQuestionario d = storageDomanda.getDomanda(idDomanda);
+        
+        int sent=0;
+        List<CampoDomandaQuestionario> campi =storageCampi.getCampiDomandaQuestionario(d.getId());
+        d.setCampi(campi);
+        List<CampoDomandaQuestionario> campi2 =storageCampi.getCampiDomandaQuestionario(d1.getId());
+        d1.setCampi(campi2);
+        
+        
+        
+        int numCampiDomanda = campi.size();
+        int numCampiDomanda2 = campi2.size();
+        String descr1= d.getDescrizione();
+        if(d.getDescrizione().contains("'"))
+        {
+            descr1  = d.getDescrizione().replace("'", "");
+        }
+        //System.out.println("domanda 1: "+descr1+" domanda 2:"+d1.getDescrizione());
+        if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
+        {
+            return false;
+        }
+        
+        if(numCampiDomanda != numCampiDomanda2)
+        {
+            return false;
+        }
+        
+        for(CampoDomandaQuestionario campiGenitore : campi)
+        {
+            for(CampoDomandaQuestionario campiQuest : campi2)
+            {
+                if((campiQuest.getDescrizione().equals(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
+                    sent ++;
+                }
+                
+            }
+            
+        }
+        db.chiudiConnessione();
+        if(sent==campi.size())
+        {
+            // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
     }
+    
+    
+    
+    
     /**
-     * 
-     * @param d domanda risposta dal genitore
-     * @param c campi del questionario da compilare
+     * Controls if a question has a precise list of fields
+     * @param d question to compare
+     * @param c are the fields to compare with the question fields
+     * @pre D!= null AND c!=null
      * @param db connessione al db
-     * @return
+     * @return true if the fields are equals, else false
      */
     private boolean domandaIsEqual(DomandaQuestionario d, List<CampoDomandaQuestionario> c,Database db)
     {
-       int sent=0;
-       List<CampoDomandaQuestionario> campi =d.getCampi();
-      
-       if(campi==null)
-       {return false;}
-       
-       int numCampiDomanda =campi.size();
-       
-       if(numCampiDomanda != c.size())
-       {
-           return false;
-       }
-       
-       for(CampoDomandaQuestionario campiGenitore : campi)
-       {
-           for(CampoDomandaQuestionario campiQuest : c)
-           {
-               if((campiQuest.getDescrizione().equalsIgnoreCase(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
-                  sent ++;
-               }
-               
-           }
-           
-       }
-       if(sent==campi.size())
-       {
-          // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
-           return true;
-       }
-       else
-       {return false;}
-       
+        int sent=0;
+        List<CampoDomandaQuestionario> campi =d.getCampi();
+        
+        if(campi==null)
+        {return false;}
+        
+        int numCampiDomanda =campi.size();
+        
+        if(numCampiDomanda != c.size())
+        {
+            return false;
+        }
+        
+        for(CampoDomandaQuestionario campiGenitore : campi)
+        {
+            for(CampoDomandaQuestionario campiQuest : c)
+            {
+                if((campiQuest.getDescrizione().equalsIgnoreCase(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
+                    sent ++;
+                }
+                
+            }
+            
+        }
+        if(sent==campi.size())
+        {
+            // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
+            return true;
+        }
+        else
+        {return false;}
+        
     }
     
     /**
@@ -552,6 +578,8 @@ public class ControlQuestionario {
      * if the fields is null or empty, the method exit with a QuestionarioException
      * @param idQuestionario is the questionnaire identifier
      * @param domanda is the question to add in the questionnaire
+     * @pre idQuestionario>0 AND domanda != null
+     * @post questionario.getDomande.size() = @pre questionario.getDomande.size() +1
      * @throws DBConnectionException
      * @throws QuestionarioException
      */
@@ -565,7 +593,7 @@ public class ControlQuestionario {
         try{
             if(domanda.getCampi()==null || domanda.getCampi().isEmpty())
                 throw new QuestionarioException("Campi domanda non validi");
-
+            
             if(!storageDomanda.inserisci(domanda))
                 throw new QuestionarioException("Errore inserimento domanda in questionario");
             
@@ -577,7 +605,7 @@ public class ControlQuestionario {
         }
     }
     
-
+    
     
     
     
@@ -585,6 +613,8 @@ public class ControlQuestionario {
     /**
      * Delete a question from a questionnaire
      * @param idDomanda is the question identifier
+     * @pre idDomanda>0
+     * @post questionario.getDomande.size() = @pre questionario.getDomande.size() -1
      * @throws DBConnectionException
      * @throws QuestionarioException
      */
@@ -615,6 +645,7 @@ public class ControlQuestionario {
      * Replace an old question with a new one
      * @param idVecchiaDomanda is the old question identifier
      * @param newDomanda is the new question 
+     * @pre idVecchiDomanda>0 AND new Domanda!=null
      * @throws DBConnectionException
      * @throws QuestionarioException
      */
@@ -643,6 +674,7 @@ public class ControlQuestionario {
     /**
      * Gets the statistics from a questionnaire
      * @param questionario is the questionnaire to analyze
+     * @pre idQuestionario>0
      * @return the questionnaire statistics 
      * @throws QuestionarioException 
      */
@@ -650,14 +682,14 @@ public class ControlQuestionario {
         Database db = new Database();
         db.apriConnessione();
         StatisticheQuestionario statq= new StatisticheQuestionario();
-       
+        
         DBQuestionario dbq =new DBQuestionario (db);
         DBCompilaQuestionario dbcq=new DBCompilaQuestionario(db);
         DBDomandaQuestionario dbdq = new DBDomandaQuestionario(db);
         DBRispostaQuestionario dbrq =new DBRispostaQuestionario(db);
         DBCampoDomandaQuestionario dbcmp = new DBCampoDomandaQuestionario(db);
         HashMap<Integer,Map<Integer, Integer>> statistiche = new HashMap<Integer,Map<Integer, Integer>>();
-       
+        
         try {
             Questionario sq= dbq.getQuestionario(idQuestionario);
             statq.setQuestionario(sq);
@@ -667,41 +699,41 @@ public class ControlQuestionario {
             
             for(DomandaQuestionario d : domande)
             {
-               //data una domanda prelevo le risposte possibili
-               List<CampoDomandaQuestionario> campi = dbcmp.getCampiDomandaQuestionario(d.getId());
-               HashMap<Integer, Integer> statistiche_risposte =new HashMap<Integer, Integer>();
-              //data un campo prelevo le risposte che sono associate a quel campo
-               int sentinella=0;
-               
-               for(CampoDomandaQuestionario c: campi)
-               {
-                   if((c.getTipo().equals("text")))
-                       {
-                           sentinella=1;
-                           break;
-                       }
-                   if((statq.getNumeroComp()!=0))
-                   {
-                       int num_risp = dbrq.getNumberOfCompiler(d.getId(), c.getValore());
-                       int perc_num_risp= num_risp;
-                     //  System.out.println("campo id: "+c.getId());
-                     //  System.out.println("perc: "+perc_num_risp);
-                       statistiche_risposte.put(c.getId(), perc_num_risp);
-                   }
-                   else
-                   {
-                       statistiche_risposte.put(c.getId(),0);
-                   }
-                 
-                   
-               }
-               if(sentinella!=1)
-                   {statistiche.put(d.getId(), statistiche_risposte);}
-               else
-                   {sentinella=0;}
-              
+                //data una domanda prelevo le risposte possibili
+                List<CampoDomandaQuestionario> campi = dbcmp.getCampiDomandaQuestionario(d.getId());
+                HashMap<Integer, Integer> statistiche_risposte =new HashMap<Integer, Integer>();
+                //data un campo prelevo le risposte che sono associate a quel campo
+                int sentinella=0;
+                
+                for(CampoDomandaQuestionario c: campi)
+                {
+                    if((c.getTipo().equals("text")))
+                    {
+                        sentinella=1;
+                        break;
+                    }
+                    if((statq.getNumeroComp()!=0))
+                    {
+                        int num_risp = dbrq.getNumberOfCompiler(d.getId(), c.getValore());
+                        int perc_num_risp= num_risp;
+                        //  System.out.println("campo id: "+c.getId());
+                        //  System.out.println("perc: "+perc_num_risp);
+                        statistiche_risposte.put(c.getId(), perc_num_risp);
+                    }
+                    else
+                    {
+                        statistiche_risposte.put(c.getId(),0);
+                    }
+                    
+                    
+                }
+                if(sentinella!=1)
+                {statistiche.put(d.getId(), statistiche_risposte);}
+                else
+                {sentinella=0;}
+                
             }
-           
+            
             statq.setRisposte(statistiche);
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
@@ -715,7 +747,7 @@ public class ControlQuestionario {
     
     /**
      * Gets all the questionnaires 
-     * @return 
+     * @return a list of all questionnaire in the database
      * @throws DBConnectionException
      */
     public List<Questionario> getAllQuestionari() throws DBConnectionException{
@@ -742,7 +774,7 @@ public class ControlQuestionario {
     
     
     /**
-     * Gets all the qyestions answered by a parent
+     * Gets all the questions answered by a parent
      * @param CFgenitore is the parent key
      * @return a List of DomandaQuestionario
      * @throws DBConnectionException
@@ -752,10 +784,10 @@ public class ControlQuestionario {
         Database db = new Database();
         DBRispostaQuestionario storageR = new DBRispostaQuestionario(db);
         DBDomandaQuestionario storageD = new DBDomandaQuestionario(db);
-                
+        
         if(!db.apriConnessione())
-                throw new DBConnectionException("Connessione al DB fallita");
-                       
+            throw new DBConnectionException("Connessione al DB fallita");
+        
         try{
             List<RispostaQuestionario> risposte = storageR.getRisposteGenitore(CFgenitore);
             List<DomandaQuestionario> toReturn = new ArrayList<DomandaQuestionario>();
@@ -779,15 +811,16 @@ public class ControlQuestionario {
      * @throws DBConnectionException 
      * @throws SQLException 
      */
-    public ArrayList<String> getRisposteAperte(int idDomanda) throws DBConnectionException, SQLException
-    {  Database db = new Database();
+    public List<String> getRisposteAperte(int idDomanda) throws DBConnectionException, SQLException
+    {  
+        Database db = new Database();
         ArrayList<String> toReturn = new ArrayList<String>();
         if(!db.apriConnessione())
-            {throw new DBConnectionException("Connessione al DB fallita");}
-        
-        
+        {
+            throw new DBConnectionException("Connessione al DB fallita");
+        }
         try {
-           
+            
             DBCampoDomandaQuestionario dbcd= new DBCampoDomandaQuestionario(db);
             List<CampoDomandaQuestionario> campo= dbcd.getCampiDomandaQuestionario(idDomanda);
             
@@ -824,11 +857,14 @@ public class ControlQuestionario {
     public static ControlQuestionario getIstance(){
         return INSTANCE;
     }
-
-
+    
+    
+    
     /**
-     * @param id
-     * @return
+     * Gets a questionnaire with a precise id 
+     * @param id id the questionnaire id to get
+     * @pre id>0
+     * @return a questionnaire
      * @throws SQLException 
      */
     public Questionario getQuestionario(int id) throws SQLException {
