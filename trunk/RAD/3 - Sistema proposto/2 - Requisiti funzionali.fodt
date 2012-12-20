@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/3.5$Linux_X86_64 LibreOffice_project/350m1$Build-2</meta:generator><meta:initial-creator>Giulio Franco</meta:initial-creator><meta:creation-date>2012-10-13T01:29:43</meta:creation-date><dc:date>2012-12-06T20:55:17</dc:date><meta:editing-duration>PT51M23S</meta:editing-duration><meta:editing-cycles>31</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="4" meta:paragraph-count="75" meta:word-count="1010" meta:character-count="5009" meta:non-whitespace-character-count="6513"/></office:meta>
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
+ <office:meta><meta:generator>LibreOffice/3.6$Windows_x86 LibreOffice_project/da8c1e6-fd468f4-454e206-f42a4a9-143cfd</meta:generator><meta:initial-creator>Giulio Franco</meta:initial-creator><meta:creation-date>2012-10-13T01:29:43</meta:creation-date><dc:date>2012-12-20T21:12:12.42</dc:date><meta:editing-duration>PT51M23S</meta:editing-duration><meta:editing-cycles>32</meta:editing-cycles><meta:document-statistic meta:table-count="0" meta:image-count="0" meta:object-count="0" meta:page-count="5" meta:paragraph-count="75" meta:word-count="1009" meta:character-count="7732" meta:non-whitespace-character-count="6518"/><dc:creator>Mariella </dc:creator></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">80998</config:config-item>
-   <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">46427</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">18523</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="int">31327</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="int">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="int">49250</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="int">22474</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">19114</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">87323</config:config-item>
-     <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">80998</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">46426</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">99519</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="int">25726</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="int">46588</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="int">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="int">31327</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="int">49248</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="int">53799</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -28,51 +28,51 @@
    </config:config-item-map-indexed>
   </config:config-item-set>
   <config:config-item-set config:name="ooo:configuration-settings">
-   <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
    <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1143241</config:config-item>
    <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrintTextPlaceholder" config:type="boolean">false</config:config-item>
    <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
    <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
+   <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintBlackFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
    <config:config-item config:name="SmallCapsPercentage66" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
    <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
    <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
    <config:config-item config:name="UseFormerTextWrapping" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintEmptyPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="UnbreakableNumberings" config:type="boolean">false</config:config-item>
    <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
    <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
    <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
-   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
+   <config:config-item config:name="RsidRoot" config:type="int">1143241</config:config-item>
    <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
    <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
    <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
    <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
-   <config:config-item config:name="PrinterName" config:type="string"/>
-   <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
    <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
    <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string"/>
    <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintPageBackground" config:type="boolean">true</config:config-item>
    <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
@@ -82,19 +82,21 @@
    <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
    <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintFaxName" config:type="string"/>
-   <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
    <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
    <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
    <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
    <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
    <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
    <config:config-item config:name="CurrentDatabaseDataSource" config:type="string"/>
-   <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
    <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
    <config:config-item config:name="CurrentDatabaseCommandType" config:type="int">0</config:config-item>
    <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
    <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
   </config:config-item-set>
  </office:settings>
  <office:scripts>
@@ -132,17 +134,17 @@
   </style:default-style>
   <style:style style:name="Standard" style:family="paragraph" style:class="text"/>
   <style:style style:name="Heading" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Text_20_body" style:class="text">
-   <style:paragraph-properties fo:margin-top="0.423cm" fo:margin-bottom="0.212cm" fo:keep-with-next="always"/>
+   <style:paragraph-properties fo:margin-top="0.423cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" fo:keep-with-next="always"/>
    <style:text-properties style:font-name="Arial" fo:font-size="14pt" style:font-name-asian="Droid Sans" style:font-size-asian="14pt" style:font-name-complex="Lohit Hindi" style:font-size-complex="14pt"/>
   </style:style>
   <style:style style:name="Text_20_body" style:display-name="Text body" style:family="paragraph" style:parent-style-name="Standard" style:class="text">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0.212cm"/>
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false"/>
   </style:style>
   <style:style style:name="List" style:family="paragraph" style:parent-style-name="Text_20_body" style:class="list">
    <style:text-properties style:font-size-asian="12pt" style:font-name-complex="Lohit Hindi1"/>
   </style:style>
   <style:style style:name="Caption" style:family="paragraph" style:parent-style-name="Standard" style:class="extra">
-   <style:paragraph-properties fo:margin-top="0.212cm" fo:margin-bottom="0.212cm" text:number-lines="false" text:line-number="0"/>
+   <style:paragraph-properties fo:margin-top="0.212cm" fo:margin-bottom="0.212cm" style:contextual-spacing="false" text:number-lines="false" text:line-number="0"/>
    <style:text-properties fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Lohit Hindi1" style:font-size-complex="12pt" style:font-style-complex="italic"/>
   </style:style>
   <style:style style:name="Index" style:family="paragraph" style:parent-style-name="Standard" style:class="index">
@@ -355,84 +357,103 @@
    </style:paragraph-properties>
    <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
-   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT"/>
-  </style:style>
-  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:language-asian="zxx" style:country-asian="none" style:font-style-asian="normal" style:font-weight-asian="normal" style:language-complex="zxx" style:country-complex="none" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Heading_20_2">
-   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
-   <style:text-properties fo:language="it" fo:country="IT"/>
-  </style:style>
-  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="3.387cm" fo:margin-right="0cm" fo:text-indent="-1.961cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="3.387cm" fo:margin-right="0cm" fo:text-indent="-1.961cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:language-asian="zxx" style:country-asian="none" style:font-style-asian="normal" style:font-weight-asian="normal" style:language-complex="zxx" style:country-complex="none" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="0.416cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:language-asian="zxx" style:country-asian="none" style:font-style-asian="normal" style:font-weight-asian="normal" style:language-complex="zxx" style:country-complex="none" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-left="5.228cm" fo:margin-right="0cm" fo:text-indent="-1.961cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="Numerazione_20_RF_5f_M"/>
-  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:text-properties fo:language="it" fo:country="IT"/>
-  </style:style>
-  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="0.63cm" fo:margin-right="0cm" fo:text-indent="-0.63cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT" style:language-asian="zxx" style:country-asian="none" style:language-complex="zxx" style:country-complex="none"/>
-  </style:style>
-  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="0.63cm" fo:margin-right="0cm" fo:text-indent="-0.63cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT"/>
-  </style:style>
-  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
-    <style:tab-stops/>
-   </style:paragraph-properties>
-   <style:text-properties fo:language="it" fo:country="IT"/>
-  </style:style>
-  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+  <style:style style:name="P12" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" fo:break-before="page">
     <style:tab-stops/>
    </style:paragraph-properties>
    <style:text-properties fo:language="it" fo:country="IT"/>
   </style:style>
-  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P13" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" style:page-number="auto">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P14" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
   </style:style>
-  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P15" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P16" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:language-asian="zxx" style:country-asian="none" style:font-style-asian="normal" style:font-weight-asian="normal" style:language-complex="zxx" style:country-complex="none" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Heading_20_2">
+   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="3.387cm" fo:margin-right="0cm" fo:text-indent="-1.961cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="3.387cm" fo:margin-right="0cm" fo:text-indent="-1.961cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:language-asian="zxx" style:country-asian="none" style:font-style-asian="normal" style:font-weight-asian="normal" style:language-complex="zxx" style:country-complex="none" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0.416cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:language-asian="zxx" style:country-asian="none" style:font-style-asian="normal" style:font-weight-asian="normal" style:language-complex="zxx" style:country-complex="none" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="5.228cm" fo:margin-right="0cm" fo:text-indent="-1.961cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-style-complex="normal" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="Numerazione_20_RF_5f_M"/>
+  <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="Numerazione_20_RF_5f_M">
+   <style:text-properties officeooo:paragraph-rsid="001171c9"/>
+  </style:style>
+  <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="0.63cm" fo:margin-right="0cm" fo:text-indent="-0.63cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" style:language-asian="zxx" style:country-asian="none" style:language-complex="zxx" style:country-complex="none"/>
+  </style:style>
+  <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="0.63cm" fo:margin-right="0cm" fo:text-indent="-0.63cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT" fo:font-weight="bold" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Text_20_body" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false" fo:break-before="page">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:paragraph-properties fo:margin-left="0.39cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties fo:language="it" fo:country="IT"/>
   </style:style>
@@ -462,6 +483,9 @@
   </style:style>
   <style:style style:name="T9" style:family="text">
    <style:text-properties fo:language="it" fo:country="IT"/>
+  </style:style>
+  <style:style style:name="T10" style:family="text">
+   <style:text-properties officeooo:rsid="001171c9"/>
   </style:style>
   <text:list-style style:name="L1">
    <text:list-level-style-number text:level="1" text:style-name="Numbering_20_Symbols" style:num-suffix="." style:num-format="1">
@@ -535,167 +559,167 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:h text:style-name="P15" text:outline-level="2">Requisiti funzionali</text:h>
-   <text:p text:style-name="P26"><text:span text:style-name="T9">In questo paragrafo sono dettagliati i requisiti funzionali individuati associati alle rispetive priorità: Alta, Media, Bassa.</text:span></text:p>
-   <text:p text:style-name="P12"><text:s/><text:span text:style-name="T7">RF_A_1</text:span><text:span text:style-name="T6"> </text:span><text:span text:style-name="T7">[Alta]</text:span><text:span text:style-name="T6">- semplificare la presentazione di richieste di iscrizione da parte degli utenti e l&apos;elaborazione di queste;B</text:span></text:p>
-   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_1.1</text:span> - aumentare l&apos;automatismo nella trasmissione delle richieste da un ente all&apos;altro;</text:p>
-   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_1.2 </text:span>- automatizzare il reperimento delle informazioni necessarie all&apos;evasione delle richieste, in accordo alle procedure decisionali già in vigore e previste dal regolamento della struttura;</text:p>
-   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_1.3 </text:span>- consentire l&apos;accesso alla potenziale clientela proveniente dall&apos;Università, dal Comune di Fisciano e da altri comuni;</text:p>
-   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_1.4</text:span> - possibilità di inserire i termini temporali del bando, affinché non vi siano domande presentate fuori dal bando .</text:p>
-   <text:p text:style-name="P13"><text:span text:style-name="T1">RF_A_2</text:span> <text:span text:style-name="T1">[Media] </text:span>–presenza di meccanismo di ricerca per;</text:p>
-   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_2.1</text:span> – facilitare la comunicazione tra genitori ;</text:p>
-   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_2.2 </text:span>– fornire informazione ai genitori riguardo il personale educativo;</text:p>
-   <text:p text:style-name="P14"><text:span text:style-name="T1">RF_A_3</text:span> <text:s/><text:span text:style-name="T1">[Media]</text:span>- presenza di un&apos;interfaccia di amministrazione che permetta di visualizzare, modificare, eliminare i dati sensibili;</text:p>
-   <text:p text:style-name="P17"><text:span text:style-name="T1">RF_A_3.1</text:span> -il tutto,dovrà <text:s/>rispettare delle normative vigenti in materia di privacy e protezione;</text:p>
-   <text:p text:style-name="P18"><text:tab/>I dati sensibili <text:s/>riguarderanno:</text:p>
-   <text:p text:style-name="P19"><text:span text:style-name="T2">RF_A_3.1.1</text:span><text:span text:style-name="T8"> - </text:span><text:s/>utenti del servizio ammessi tramite bando di partecipazione, e rimossi tramite ritiro della domanda, formale richiesta di rinuncia o alla fine del loro ciclo scolastico;</text:p>
-   <text:p text:style-name="P19"><text:span text:style-name="T2">RF_A_3.1.2 </text:span><text:span text:style-name="T8">- </text:span>la categoria cui essi appartengono,</text:p>
-   <text:p text:style-name="P19"><text:span text:style-name="T2">RF_A_3.1.3</text:span><text:span text:style-name="T8"> - </text:span>le tipologie di servizi di cui usufruiscono,</text:p>
-   <text:p text:style-name="P19"><text:span text:style-name="T2">RF_A_3.1.4</text:span><text:span text:style-name="T8"> - il</text:span> personale che gestisce il servizio, il quale viene inserito, gestito e licenziato dall&apos;ufficio dell&apos;istituto;</text:p>
+   <text:h text:style-name="P17" text:outline-level="2">Requisiti funzionali</text:h>
+   <text:p text:style-name="P22">In questo paragrafo sono dettagliati i requisiti funzionali individuati associati alle rispetive priorità: Alta, Media, Bassa.</text:p>
+   <text:p text:style-name="P13"><text:s/><text:span text:style-name="T7">RF_A_1</text:span><text:span text:style-name="T6"> </text:span><text:span text:style-name="T7">[Alta]</text:span><text:span text:style-name="T6">- semplificare la presentazione di richieste di iscrizione da parte degli utenti e l&apos;elaborazione di queste;B</text:span></text:p>
+   <text:p text:style-name="P18"><text:span text:style-name="T1">RF_A_1.1</text:span> - aumentare l&apos;automatismo nella trasmissione delle richieste da un ente all&apos;altro;</text:p>
+   <text:p text:style-name="P18"><text:span text:style-name="T1">RF_A_1.2 </text:span>- automatizzare il reperimento delle informazioni necessarie all&apos;evasione delle richieste, in accordo alle procedure decisionali già in vigore e previste dal regolamento della struttura;</text:p>
+   <text:p text:style-name="P18"><text:span text:style-name="T1">RF_A_1.3 </text:span>- consentire l&apos;accesso alla potenziale clientela proveniente dall&apos;Università, dal Comune di Fisciano e da altri comuni;</text:p>
+   <text:p text:style-name="P18"><text:span text:style-name="T1">RF_A_1.4</text:span> - possibilità di inserire i termini temporali del bando, affinché non vi siano domande presentate fuori dal bando .</text:p>
+   <text:p text:style-name="P15"><text:span text:style-name="T1">RF_A_2</text:span> <text:span text:style-name="T1">[Media] </text:span>–presenza di meccanismo di ricerca per;</text:p>
+   <text:p text:style-name="P18"><text:span text:style-name="T1">RF_A_2.1</text:span> – facilitare la comunicazione tra genitori ;</text:p>
+   <text:p text:style-name="P18"><text:span text:style-name="T1">RF_A_2.2 </text:span>– fornire informazione ai genitori riguardo il personale educativo;</text:p>
+   <text:p text:style-name="P16"><text:span text:style-name="T1">RF_A_3</text:span> <text:s/><text:span text:style-name="T1">[Media]</text:span>- presenza di un&apos;interfaccia di amministrazione che permetta di visualizzare, modificare, eliminare i dati sensibili;</text:p>
+   <text:p text:style-name="P19"><text:span text:style-name="T1">RF_A_3.1</text:span> -il tutto,dovrà <text:s/>rispettare delle normative vigenti in materia di privacy e protezione;</text:p>
+   <text:p text:style-name="P20"><text:tab/>I dati sensibili <text:s/>riguarderanno:</text:p>
+   <text:p text:style-name="P21"><text:span text:style-name="T2">RF_A_3.1.1</text:span><text:span text:style-name="T8"> - </text:span><text:s/>utenti del servizio ammessi tramite bando di partecipazione, e rimossi tramite ritiro della domanda, formale richiesta di rinuncia o alla fine del loro ciclo scolastico;</text:p>
+   <text:p text:style-name="P21"><text:span text:style-name="T2">RF_A_3.1.2 </text:span><text:span text:style-name="T8">- </text:span>la categoria cui essi appartengono,</text:p>
+   <text:p text:style-name="P21"><text:span text:style-name="T2">RF_A_3.1.3</text:span><text:span text:style-name="T8"> - </text:span>le tipologie di servizi di cui usufruiscono,</text:p>
+   <text:p text:style-name="P21"><text:span text:style-name="T2">RF_A_3.1.4</text:span><text:span text:style-name="T8"> - il</text:span> personale che gestisce il servizio, il quale viene inserito, gestito e licenziato dall&apos;ufficio dell&apos;istituto;</text:p>
    <text:p text:style-name="P11"><text:tab/><text:span text:style-name="T1">RF_A_3.2 [Alta]</text:span> – aggiungere, modificare, eliminare gli iscritti all&apos;asilo e le classi ad essi associate, spostare gli iscritti tra le classi.</text:p>
-   <text:list xml:id="list266062949" text:style-name="L1">
+   <text:list xml:id="list41163707" text:style-name="L1">
     <text:list-header>
-     <text:p text:style-name="P22">Deve inoltre essere presente un sistema di<text:span text:style-name="T1"> gestione del servizio,</text:span> il quale si preoccupa di verificare:</text:p>
+     <text:p text:style-name="P26">Deve inoltre essere presente un sistema di<text:span text:style-name="T1"> gestione del servizio,</text:span> il quale si preoccupa di verificare:</text:p>
     </text:list-header>
    </text:list>
-   <text:list xml:id="list2031503331" text:style-name="Numerazione_20_RF_5f_M">
+   <text:list xml:id="list41169240" text:style-name="Numerazione_20_RF_5f_M">
     <text:list-item text:start-value="1">
-     <text:p text:style-name="P20"><text:span text:style-name="T1">[Media]</text:span><text:span text:style-name="T3"> lo</text:span> <text:span text:style-name="T1">stato dei pagamenti delle rette previste</text:span></text:p>
+     <text:p text:style-name="P23"><text:span text:style-name="T1">[Media]</text:span><text:span text:style-name="T3"> lo</text:span> <text:span text:style-name="T1">stato dei pagamenti delle rette previste</text:span></text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P20">Possono essere visionati tutti gli iscritti che non hanno ancora provveduto al pagamento con l&apos;eventualità di aggiunta di una mail di promemoria;</text:p>
+       <text:p text:style-name="P23">Possono essere visionati tutti gli iscritti che non hanno ancora provveduto al pagamento con l&apos;eventualità di aggiunta di una mail di promemoria;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di fatturare i pagamenti mensili con l&apos;eventualità di aggiunta di una mail di promemoria;</text:p>
+       <text:p text:style-name="P23">Possibilità di fatturare i pagamenti mensili con l&apos;eventualità di aggiunta di una mail di promemoria;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">I Genitori possono visionare lo storico dei pagamenti effettuati;</text:p>
+       <text:p text:style-name="P23">I Genitori possono visionare lo storico dei pagamenti effettuati;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">automatizzare la gestione delle rette per il servizio e permettere la personalizzazione delle rette da parte del direttore dell&apos;asilo</text:p>
+       <text:p text:style-name="P23">automatizzare la gestione delle rette per il servizio e permettere la personalizzazione delle rette da parte del direttore dell&apos;asilo</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modificare manualmente la registrazione di un pagamento; </text:p>
+       <text:p text:style-name="P23">Possibilità di modificare manualmente la registrazione di un pagamento; </text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P20"><text:soft-page-break/><text:span text:style-name="T1">[Bassa]</text:span> semplificare la gestione di <text:span text:style-name="T1">tirocinanti</text:span>, da parte di Scienze della Formazione, permettendo l&apos;inserimento di tirocinanti e l&apos;invio di feedback da parte dell&apos;asilo.</text:p>
+     <text:p text:style-name="P23"><text:soft-page-break/><text:span text:style-name="T1">[Bassa]</text:span> semplificare la gestione di <text:span text:style-name="T1">tirocinanti</text:span>, da parte di Scienze della Formazione, permettendo l&apos;inserimento di tirocinanti e l&apos;invio di feedback da parte dell&apos;asilo.</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di aggiunta dei tirocinanti alla lista;</text:p>
+       <text:p text:style-name="P23">Possibilità di aggiunta dei tirocinanti alla lista;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modifica dei dati dei tirocinanti;</text:p>
+       <text:p text:style-name="P23">Possibilità di modifica dei dati dei tirocinanti;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di eliminazione di tirocinanti dalla lista;</text:p>
+       <text:p text:style-name="P23">Possibilità di eliminazione di tirocinanti dalla lista;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di visione della lista dei tirocinanti;</text:p>
+       <text:p text:style-name="P23">Possibilità di visione della lista dei tirocinanti;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di richiesta di un tirocinante da parte di un impiegato per casi straordinari;</text:p>
+       <text:p text:style-name="P23">Possibilità di richiesta di un tirocinante da parte di un impiegato per casi straordinari;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di aggiungere il feedback di un tirocinante;</text:p>
+       <text:p text:style-name="P23">Possibilità di aggiungere il feedback <text:span text:style-name="T10">sulla schedulazione</text:span> di un tirocinante <text:span text:style-name="T10">da parte del responsabile tirocini</text:span>;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di aggiungere un registro delle attività al tirocinante;</text:p>
+       <text:p text:style-name="P23">Possibilità di aggiungere <text:span text:style-name="T10">le attività nel registro tirocinante;</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modificare il registro delle attività;</text:p>
+       <text:p text:style-name="P23">Possibilità di modificare <text:span text:style-name="T10">le attività del registro tirocinante;</text:span></text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di rimuovere le attività del tirocinante;</text:p>
+       <text:p text:style-name="P23">Possibilità di rimuovere le attività del tirocinante;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di visualizzare il registro delle attività del tirocinante da parte del tirocinante, responsabile tirocini e della segreteria dell&apos;asilo;</text:p>
+       <text:p text:style-name="P23">Possibilità di visualizzare il registro delle attività del tirocinante da parte del tirocinante, responsabile tirocini e della segreteria dell&apos;asilo;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di rispondere ad una richiesta di tirocinanti per casi straordinari;</text:p>
+       <text:p text:style-name="P23">Possibilità di rispondere ad una richiesta di tirocinanti per casi straordinari;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di visualizzare la pianificazione delle attività dei tirocinanti da parte del responsabile tirocini e dalla segreteria dell&apos;asilo e del tirocinante.</text:p>
+       <text:p text:style-name="P24">Possibilità di visualizzare la <text:span text:style-name="T10">schedulazione </text:span>de<text:span text:style-name="T10">i</text:span> tirocinant<text:span text:style-name="T10">i </text:span>da parte del responsabile tirocini e dalla segreteria dell&apos;asilo e del tirocinante.</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di inserimento della pianificazione delle attività del tirocinante da parte del responsabile dei tirocini.</text:p>
+       <text:p text:style-name="P23">Possibilità di inserimento della <text:span text:style-name="T10">schedulazione </text:span>de<text:span text:style-name="T10">i</text:span> tirocinant<text:span text:style-name="T10">i</text:span> d<text:span text:style-name="T10">a</text:span> parte del responsabile tirocini.</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di poter contestare l&apos;allocazione da parte del tirocinate.</text:p>
+       <text:p text:style-name="P23">Possibilità di poter contestare l&apos;allocazione da parte del tirocinate.</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modifica della pianificazione delle attività del tirocinante da parte del responsabile dei tirocini.</text:p>
+       <text:p text:style-name="P24">Possibilità di modifica della <text:span text:style-name="T10">schedulazione </text:span>de<text:span text:style-name="T10">i</text:span> tirocinant<text:span text:style-name="T10">i </text:span>da parte del responsabile tirocini.</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P20"><text:span text:style-name="T1">[Media]</text:span> specificare e gestire le <text:span text:style-name="T1">variazioni delle tipologie dei servizi</text:span> che gli utenti desiderano ricevere per i propri bambini.</text:p>
+     <text:p text:style-name="P23"><text:span text:style-name="T1">[Media]</text:span> specificare e gestire le <text:span text:style-name="T1">variazioni delle tipologie dei servizi</text:span> che gli utenti desiderano ricevere per i propri bambini.</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modificare il piano-pasto di default;</text:p>
+       <text:p text:style-name="P23">Possibilità di modificare il piano-pasto di default;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di richiesta di modificare il piano-pasto di un bambino con l&apos;eventuale aggiunta del certificato di un pediatra;</text:p>
+       <text:p text:style-name="P23">Possibilità di richiesta di modificare il piano-pasto di un bambino con l&apos;eventuale aggiunta del certificato di un pediatra;</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
     <text:list-item>
-     <text:p text:style-name="P20"><text:span text:style-name="T1">[Media]</text:span> possibilità di modificare la fascia oraria a seconda delle proprie esigenze come riportato negli articoli 4, 6, 7 del bando di concorso.</text:p>
+     <text:p text:style-name="P23"><text:span text:style-name="T1">[Media]</text:span> possibilità di modificare la fascia oraria a seconda delle proprie esigenze come riportato negli articoli 4, 6, 7 del bando di concorso.</text:p>
      <text:list>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di variazioni extra;</text:p>
+       <text:p text:style-name="P23">Possibilità di variazioni extra;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di visionare l&apos;elenco di tutti i piani-pasto;</text:p>
+       <text:p text:style-name="P23">Possibilità di visionare l&apos;elenco di tutti i piani-pasto;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modificare un piano-pasto;</text:p>
+       <text:p text:style-name="P23">Possibilità di modificare un piano-pasto;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di visionare l&apos;orario di ogni bambino;</text:p>
+       <text:p text:style-name="P23">Possibilità di visionare l&apos;orario di ogni bambino;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di richiesta di una modifica dell&apos;orario di un bambino;</text:p>
+       <text:p text:style-name="P23">Possibilità di richiesta di una modifica dell&apos;orario di un bambino;</text:p>
       </text:list-item>
       <text:list-item>
-       <text:p text:style-name="P20">Possibilità di modificare l&apos;orario di un bambino;</text:p>
+       <text:p text:style-name="P23">Possibilità di modificare l&apos;orario di un bambino;</text:p>
       </text:list-item>
      </text:list>
     </text:list-item>
    </text:list>
-   <text:list xml:id="list1794030527" text:continue-list="list266062949" text:style-name="L1">
+   <text:list xml:id="list41274617" text:continue-list="list41163707" text:style-name="L1">
     <text:list-header>
-     <text:p text:style-name="P23"><text:span text:style-name="T8">In ultimo, è richiesto un </text:span><text:span text:style-name="T2">portale pubblico</text:span><text:span text:style-name="T8">, che permetta utilizzo dei servizi precedentemente illustrati e fornisca:</text:span></text:p>
-     <text:p text:style-name="P24"/>
-     <text:p text:style-name="P24"><text:span text:style-name="T1"/></text:p>
-     <text:p text:style-name="P25"><text:span text:style-name="T1"><text:s text:c="6"/>RF_H_8 [Media] </text:span>la possibilità di <text:span text:style-name="T1">scambiare informazioni ed esperienze</text:span> tra utenti del servizio e il <text:tab/><text:tab/> <text:s text:c="6"/>personale della struttura tramite un Forum, in cui ciascun utente può:</text:p>
-     <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s/><text:tab/><text:tab/><text:tab/>RF_H_8.1 <text:s/></text:span>inserire,modificare e visualizzare un argomento di discussione</text:p>
+     <text:p text:style-name="P27"><text:span text:style-name="T8">In ultimo, è richiesto un </text:span><text:span text:style-name="T2">portale pubblico</text:span><text:span text:style-name="T8">, che permetta utilizzo dei servizi precedentemente illustrati e fornisca:</text:span></text:p>
+     <text:p text:style-name="P28"/>
+     <text:p text:style-name="P29"><text:soft-page-break/></text:p>
+     <text:p text:style-name="P30"><text:span text:style-name="T1"><text:s text:c="6"/>RF_H_8 [Media] </text:span>la possibilità di <text:span text:style-name="T1">scambiare informazioni ed esperienze</text:span> tra utenti del servizio e il <text:tab/><text:tab/> <text:s text:c="6"/>personale della struttura tramite un Forum, in cui ciascun utente può:</text:p>
+     <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s/><text:tab/><text:tab/><text:tab/>RF_H_8.1 <text:s/></text:span>inserire,modificare e visualizzare un argomento di discussione</text:p>
      <text:list>
       <text:list-item>
        <text:list>
         <text:list-header>
-         <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_8.2 <text:s/></text:span>inserire,modificare un commento in un argomento</text:p>
-         <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_8.3 <text:s/></text:span>ricercare un argomento inserendo una parola chiave</text:p>
-         <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="6"/>RF_H_9 [Alta] </text:span>ai genitori, la possibilità di <text:span text:style-name="T1">compilare questionari</text:span>, proposti dall&apos;amministrazione <text:tab/><text:tab/> <text:s text:c="8"/>dell&apos;asilo, in cui essi possono esprimere un <text:span text:style-name="T1">giudizio sulla qualità del servizio:</text:span></text:p>
+         <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_8.2 <text:s/></text:span>inserire,modificare un commento in un argomento</text:p>
+         <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_8.3 <text:s/></text:span>ricercare un argomento inserendo una parola chiave</text:p>
+         <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="6"/>RF_H_9 [Alta] </text:span>ai genitori, la possibilità di <text:span text:style-name="T1">compilare questionari</text:span>, proposti dall&apos;amministrazione <text:tab/><text:tab/> <text:s text:c="8"/>dell&apos;asilo, in cui essi possono esprimere un <text:span text:style-name="T1">giudizio sulla qualità del servizio:</text:span></text:p>
          <text:list>
           <text:list-header>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_9.1 <text:s/></text:span><text:span text:style-name="T3">l&apos;amministrazione può inserire, modificare e cancellare un <text:tab/><text:tab/><text:tab/><text:tab/>questionario</text:span></text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T3"><text:s text:c="12"/><text:tab/><text:tab/></text:span><text:span text:style-name="T1">RF_H_9.2 <text:s/></text:span><text:span text:style-name="T3">il genitore può compilare e visualizzare le statistiche di un <text:tab/><text:tab/><text:tab/><text:tab/>questionario</text:span></text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T3"><text:s text:c="6"/></text:span><text:span text:style-name="T1">RF_H_10 [Alta] <text:s/></text:span>il servizio di <text:span text:style-name="T1">salvataggio, sintesi e presentazione delle risposte ai sopracitati <text:tab/> <text:s text:c="2"/><text:tab/><text:tab/>questionari </text:span>al somministratore, in accordo alla normativa vigente in materia di <text:tab/><text:tab/><text:tab/>privacy.</text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="6"/>RF_H_11 <text:s/>[Media] </text:span>Il supporto di un <text:span text:style-name="T1">registro</text:span> <text:span text:style-name="T1">telematico</text:span> per l&apos;educatore didattico collegato al <text:tab/><text:tab/><text:tab/>programma educativo indicato dallo psico-pedagogo:</text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_11.1 <text:s/></text:span>lo psico-pedagogo inserisce le attività didattiche nel programma <text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="8"/>educativo</text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="11"/><text:tab/><text:tab/><text:tab/>RF_H_11.2 <text:s/></text:span>lo psico-pedagogo ha la possibilità di modificare le attività <text:tab/><text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="9"/>inserite nel programma educativo</text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="9"/><text:tab/><text:tab/><text:tab/>RF_H_11.3 <text:s/></text:span>lo psico-pedagogo visionerà il lavoro dell&apos;educatore per <text:tab/><text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="8"/>controllare che l&apos;educatore rispetti nei limiti il programma <text:tab/><text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="8"/>educativo</text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="12"/>RF_H_11.4 <text:s/></text:span>l&apos;educatore aggiornerà quotidianamente il registro telematico aggiungendo <text:tab/><text:tab/><text:tab/> <text:s text:c="9"/>l&apos;attività svolta,con la possibilità di inserire un allegato, registrare le assenze <text:tab/><text:tab/> <text:s text:c="8"/>del giorno.</text:p>
-           <text:p text:style-name="P24"><text:span text:style-name="T1"><text:s text:c="9"/><text:tab/><text:tab/><text:tab/>RF_H_11.6 <text:s/></text:span>Genitore, educatore e psico-pedagogo hanno la possibilità di <text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="9"/>visualizzare lo storico del registro telematico </text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_9.1 <text:s/></text:span><text:span text:style-name="T3">l&apos;amministrazione può inserire, modificare e cancellare un <text:tab/><text:tab/><text:tab/><text:tab/>questionario</text:span></text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T3"><text:s text:c="12"/><text:tab/><text:tab/></text:span><text:span text:style-name="T1">RF_H_9.2 <text:s/></text:span><text:span text:style-name="T3">il genitore può compilare e visualizzare le statistiche di un <text:tab/><text:tab/><text:tab/><text:tab/>questionario</text:span></text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T3"><text:s text:c="6"/></text:span><text:span text:style-name="T1">RF_H_10 [Alta] <text:s/></text:span>il servizio di <text:span text:style-name="T1">salvataggio, sintesi e presentazione delle risposte ai sopracitati <text:tab/> <text:s text:c="2"/><text:tab/><text:tab/>questionari </text:span>al somministratore, in accordo alla normativa vigente in materia di <text:tab/><text:tab/><text:tab/>privacy.</text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="6"/>RF_H_11 <text:s/>[Media] </text:span>Il supporto di un <text:span text:style-name="T1">registro</text:span> <text:span text:style-name="T1">telematico</text:span> per l&apos;educatore didattico collegato al <text:tab/><text:tab/><text:tab/>programma educativo indicato dallo psico-pedagogo:</text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="12"/><text:tab/><text:tab/>RF_H_11.1 <text:s/></text:span>lo psico-pedagogo inserisce le attività didattiche nel programma <text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="8"/>educativo</text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="11"/><text:tab/><text:tab/><text:tab/>RF_H_11.2 <text:s/></text:span>lo psico-pedagogo ha la possibilità di modificare le attività <text:tab/><text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="9"/>inserite nel programma educativo</text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="9"/><text:tab/><text:tab/><text:tab/>RF_H_11.3 <text:s/></text:span>lo psico-pedagogo visionerà il lavoro dell&apos;educatore per <text:tab/><text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="8"/>controllare che l&apos;educatore rispetti nei limiti il programma <text:tab/><text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="8"/>educativo</text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="12"/>RF_H_11.4 <text:s/></text:span>l&apos;educatore aggiornerà quotidianamente il registro telematico aggiungendo <text:tab/><text:tab/><text:tab/> <text:s text:c="9"/>l&apos;attività svolta,con la possibilità di inserire un allegato, registrare le assenze <text:tab/><text:tab/> <text:s text:c="8"/>del giorno.</text:p>
+           <text:p text:style-name="P28"><text:span text:style-name="T1"><text:s text:c="9"/><text:tab/><text:tab/><text:tab/>RF_H_11.6 <text:s/></text:span>Genitore, educatore e psico-pedagogo hanno la possibilità di <text:tab/><text:tab/><text:tab/><text:tab/> <text:s text:c="9"/>visualizzare lo storico del registro telematico </text:p>
           </text:list-header>
          </text:list>
         </text:list-header>
        </text:list>
       </text:list-item>
      </text:list>
-     <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_12 [Media] <text:s/></text:span>La possibilità di inserire e visualizzare <text:span text:style-name="T1">eventi</text:span> periodici, come recite di fine anno o gite scolastiche:</text:p>
+     <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_12 [Media] <text:s/></text:span>La possibilità di inserire e visualizzare <text:span text:style-name="T1">eventi</text:span> periodici, come recite di fine anno o gite scolastiche:</text:p>
      <text:list>
       <text:list-item>
        <text:list>
@@ -704,10 +728,10 @@
           <text:list-item>
            <text:list>
             <text:list-header>
-             <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_12.1 <text:s/></text:span>inserimento dell&apos;evento programmato</text:p>
-             <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_12.2 <text:s/></text:span>modifica dell&apos;evento programmato</text:p>
-             <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_12.3 <text:s/></text:span>rimozione dell&apos;evento programmato inserito</text:p>
-             <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_12.4 <text:s/>v</text:span>isualizzare ,ricercando tra gli eventi, o dettagli di un evento programmato</text:p>
+             <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_12.1 <text:s/></text:span>inserimento dell&apos;evento programmato</text:p>
+             <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_12.2 <text:s/></text:span>modifica dell&apos;evento programmato</text:p>
+             <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_12.3 <text:s/></text:span>rimozione dell&apos;evento programmato inserito</text:p>
+             <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_12.4 <text:s/>v</text:span>isualizzare ,ricercando tra gli eventi, o dettagli di un evento programmato</text:p>
             </text:list-header>
            </text:list>
           </text:list-item>
@@ -719,10 +743,10 @@
     </text:list-header>
    </text:list>
    <text:p text:style-name="P1"/>
-   <text:list xml:id="list370302486" text:continue-numbering="true" text:style-name="L1">
+   <text:list xml:id="list41250914" text:continue-numbering="true" text:style-name="L1">
     <text:list-header>
-     <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_13 <text:s/>[Media] </text:span>Sarà inoltre presente una funzionalità di <text:span text:style-name="T1">notifiche</text:span> che avvisa, tramite email e messaggi nelle apposite aree del portale web, il personale dell&apos;asilo dell&apos;avvicinarsi di un evento.</text:p>
-     <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_14 <text:s/>[Bassa] </text:span>La possibilità di pubblicazione del menù della mensa dell&apos;asilo nido con la facoltà di:</text:p>
+     <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_13 <text:s/>[Media] </text:span>Sarà inoltre presente una funzionalità di <text:span text:style-name="T1">notifiche</text:span> che avvisa, tramite email e messaggi nelle apposite aree del portale web, il personale dell&apos;asilo dell&apos;avvicinarsi di un evento.</text:p>
+     <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_14 <text:s/>[Bassa] </text:span>La possibilità di pubblicazione del menù della mensa dell&apos;asilo nido con la facoltà di:</text:p>
      <text:list>
       <text:list-item>
        <text:list>
@@ -731,8 +755,8 @@
           <text:list-item>
            <text:list>
             <text:list-header>
-             <text:p text:style-name="P21"><text:span text:style-name="T1">RF_H_14.1 <text:s/></text:span>inserire, modificare,cancellare il menù da parte dell&apos;impiegato </text:p>
-             <text:p text:style-name="P21"><text:soft-page-break/><text:span text:style-name="T1">RF_H_14.2 <text:s/></text:span>visualizzare il menù da parte di ciascun utente autenticato al sistema</text:p>
+             <text:p text:style-name="P25"><text:span text:style-name="T1">RF_H_14.1 <text:s/></text:span>inserire, modificare,cancellare il menù da parte dell&apos;impiegato </text:p>
+             <text:p text:style-name="P25"><text:soft-page-break/><text:span text:style-name="T1">RF_H_14.2 <text:s/></text:span>visualizzare il menù da parte di ciascun utente autenticato al sistema</text:p>
             </text:list-header>
            </text:list>
           </text:list-item>
