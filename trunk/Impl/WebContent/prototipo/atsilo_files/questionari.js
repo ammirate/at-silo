@@ -1,6 +1,5 @@
 var arrInput = new Array(0);
 var arrInputValue = new Array(0);
-
 v=1;
 n=0;
 c=0;
@@ -31,7 +30,9 @@ function addDomanda() {
 	 
 	  frm = document.getElementById("formdomande");
 	  div = document.createElement("div");
-	  div.setAttribute("id", "domanda_header" + v);
+	 
+	  div.setAttribute("id", "domanda_header"+v);
+	  
 	  nome = "parah" + v;
 	  str = "<br><br><fieldset><table id="+nome+"><tr><td><h3>Domanda: </h3><td><input type=text name='domanda"+v+"' size=80><tr><td> Opzione  <td> <input type=text name=opzione"+v+"[] ></table><br><br>";
 	  str += "<Select name=tipo"+v+" onchange=\"abilitaAdd(this.value, this.name, "+v+")\">" +
@@ -39,8 +40,11 @@ function addDomanda() {
 	  		"		<option value=1>Selezione Multipla</option>" +
 	  		"		<option value=2>Selezione Unica</option>" +
 	  		"		<option value=3>Risposta Aperta</option>" +
-	  		"		</Select><input type=button disabled = disabled id='addCampo"+v+"' value='Aggiungi Campo' onclick=\"display('"+nome+"', "+v+" );\"></fieldset><br><br>";
+	  		"		</Select><input type=button disabled = disabled id='addCampo"+v+"' value='Aggiungi Campo' onclick=\"display('"+nome+"', "+v+" );\">" +
+	  	    "		<input type=button value='Elimina Domanda' onClick='eliminaDomanda("+  v+")'>"+
+	  		"</fieldset><br><br>";
 	  frm.appendChild(div);
+	 
 	  document.getElementById("domanda_header" + v).innerHTML=str;
 	  v++;
 	  
@@ -48,6 +52,22 @@ function addDomanda() {
 function setv(i) {
 	v=i;
 }
+
+
+function eliminaDomanda(id) {
+	
+	
+	var dom=id;
+	var idDom="domanda_header"+dom
+		
+		var d = document.getElementById(idDom);
+		d.parentNode.removeChild(d);
+	
+	
+	
+}
+
+
 
 function abilitaAdd(value, name, b) {
 	frm = document.forms[0];

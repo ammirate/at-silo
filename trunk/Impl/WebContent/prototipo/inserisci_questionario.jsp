@@ -69,6 +69,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	<br><br>
 </div>
 	<input type=button value="Aggiungi Domanda" onclick="addDomanda()">
+	
 	<center><input type=submit value="Crea Questionario" onclick="return controlData();"></center>
 </form>
 <p><strong><br />
