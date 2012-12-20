@@ -3,7 +3,7 @@
 <%@ page import="atsilo.application.*,atsilo.entity.*"%>
 
 <%
-	if ((request.getParameter("successo")) != null) {
+	if  {
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}
@@ -48,7 +48,7 @@ ControlClassi crt = ControlClassi.getIstance();
 int i=0;
 int n= crt.getClassi().size();
 if(n == 0){
-	out.print("<h1> Non è presente nessuna classe da cancellare</h1>");
+	out.print("<h1> Non Ã¨ presente nessuna classe da cancellare</h1>");
 }
 String input = "<input type='checkbox' name='classi' value='";
 String endInput = "' />";

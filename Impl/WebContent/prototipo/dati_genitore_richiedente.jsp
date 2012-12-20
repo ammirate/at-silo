@@ -32,7 +32,7 @@ function settaAttributi(slf){
 }
 </script>	
 <%
-	if ((request.getParameter("successo")) != null) {
+	if ( request.getParameter("successo") != null && !temp_nome_chiamante.equals("dati_genitore_richiedente.jsp") ) { 
 		if (request.getParameter("successo").equals("ok")) {
 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
 		}

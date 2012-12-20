@@ -39,7 +39,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
 	  }
 	 %>
  <%
- 	if ((request.getParameter("successo")) != null) {
+ 	if  (request.getParameter("successo") != null && !temp_nome_chiamante.equals("presenta_iscrizione.jsp") ) { 
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Presentazione domanda effettuata con successo')</script>");
  		} else {

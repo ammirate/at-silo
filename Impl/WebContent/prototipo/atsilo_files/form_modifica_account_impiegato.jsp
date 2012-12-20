@@ -10,7 +10,7 @@ function risettaAttributi(slf){
 }
 </script>	
 <%
-	if ((request.getParameter("successo")) != null) {
+	if (request.getParameter("successo") != null && !temp_nome_chiamante.equals("account_delegato_rettore.jsp")  && !temp_nome_chiamante.equals("account_delegato_sciform.jsp")  && !temp_nome_chiamante.equals("account_educatore.jsp")  && !temp_nome_chiamante.equals("account_impiegato.jsp")  && !temp_nome_chiamante.equals("account_impiegato_bando.jsp") ) {
 		if (request.getParameter("successo").equals("ok")) {
 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
 		}

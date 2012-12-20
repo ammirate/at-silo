@@ -138,7 +138,7 @@ function calendarOpenerN()
 
 </script>
      <%
- 	if ((request.getParameter("successo")) != null) {
+ 	if (request.getParameter("successo") != null && !temp_nome_chiamante.equals("dati_bambino.jsp") )  {
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
  		} else {
