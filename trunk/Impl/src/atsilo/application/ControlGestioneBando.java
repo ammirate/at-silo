@@ -77,6 +77,25 @@ public class ControlGestioneBando {
         return (now.before(data_fine) && now.after(data_inizio));
     }
     
+    public boolean domandaPresentataNelBandoCorrente(DomandaIscrizione di) throws SQLException
+    {
+        Database db= new Database();
+        DBBando dbb = new DBBando(db);
+        db.apriConnessione();
+        Bando b = dbb.getBando();
+        String inizio = b.getDataInizioBando();
+        String fine = b.getDataFineBando();
+        String[] ggmmaa_inizio = inizio.split("-");
+        String[] ggmmaa_fine = fine.split("-");
+        Date data_inizio = new Date(Integer.parseInt(ggmmaa_inizio[0])-1900,
+                Integer.parseInt(ggmmaa_inizio[1])-1,
+                Integer.parseInt( ggmmaa_inizio[2]));
+        Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
+        Date now = di.getDataPresentazione();
+        
+        return (now.before(data_fine) && now.after(data_inizio));
+    }
+    
     public boolean rinunceAperte() throws SQLException
     {
         Database db= new Database();
