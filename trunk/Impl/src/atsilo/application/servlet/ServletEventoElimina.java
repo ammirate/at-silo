@@ -57,7 +57,7 @@ public class ServletEventoElimina extends HttpServlet {
         evn.setId(Integer.parseInt(idEvn));
         crt.eliminaEvento(evn);
         response.setStatus(response.SC_MOVED_TEMPORARILY);
-        response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y");
+        response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y&year="+(evn.getData().getYear()+1900)+"&month="+(evn.getData().getMonth())+"&day="+evn.getData().getDate());     
         
     }
 }
