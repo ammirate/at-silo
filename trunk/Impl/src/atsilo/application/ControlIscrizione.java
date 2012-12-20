@@ -480,7 +480,8 @@ public class ControlIscrizione {
             
             boolean giaIscritto=false;
             if(domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA)
-                    || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_RIFIUTATA))
+                    || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_RIFIUTATA)
+                    || domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_RITIRATA))
                 throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
             
             if(domanda.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_PRIMO_STEP)
