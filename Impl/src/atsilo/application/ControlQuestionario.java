@@ -181,20 +181,68 @@ public class ControlQuestionario {
                     throw new QuestionarioException("Inserimento domande nel questionario fallito");
                 if(!isEditable(storage.getQuestionario(idQuestionario)))
                     throw new QuestionarioException("Impossibile modificare un questionario attivo");
-                List<DomandaQuestionario> domande = newQuestionario.getDomande();
+                List<DomandaQuestionario> domande_nuove = newQuestionario.getDomande();
+                List<DomandaQuestionario> domande_vecchie = storageD.getDomandeQuestionario(idQuestionario);
                 
-                for(DomandaQuestionario d: domande)
-                    if(!storageD.isDomandaInQuestionario(d.getId(), idQuestionario)){
-                        storageD.inserisci(d);                       
-                        List<CampoDomandaQuestionario> campi = d.getCampi();
-                        for(CampoDomandaQuestionario c:campi)
-                            storageC.inserisci(c);
+                //cancello le domande vecchie
+                for(DomandaQuestionario domanda_vecchia : domande_vecchie )
+                {
+                    storageD.delete(domanda_vecchia);
+                }
+                //inserisco le domande nuove
+                for(DomandaQuestionario domanda_nuova : domande_nuove )
+                {
+                    domanda_nuova.setId(0);
+                    domanda_nuova.setIdQuestionario(newQuestionario.getId());
+                    storageD.inserisci(domanda_nuova);
+                }
+                
+                //cancello i campi vecchi
+                for(DomandaQuestionario domanda_vecchia : domande_vecchie)
+                {
+                    List<CampoDomandaQuestionario> campi_vecchi = storageC.getCampiDomandaQuestionario(domanda_vecchia.getId());
+                    for(CampoDomandaQuestionario c : campi_vecchi)
+                    {
+                        storageC.delete(c);
                     }
+                }
+                
+                //inserisco i campi nuovi
+                for(DomandaQuestionario domanda_nuova : domande_nuove)
+                {
+                    List<CampoDomandaQuestionario> campi_nuovi = domanda_nuova.getCampi();
+                    for(CampoDomandaQuestionario c : campi_nuovi)
+                    {
+                        c.setIdDomandaQuestionario(domanda_nuova.getId());
+                        c.setId(0);
+                        storageC.inserisci(c);
+                    }
+                }
+               
+                /*
+                for(DomandaQuestionario d: domande){
+                    
+                        DomandaQuestionario vecchia = storageD.getDomanda(d.getId());
+                        storageD.replace(vecchia,d);
+                        List<CampoDomandaQuestionario> campi_nuovi = d.getCampi();
+                        List<CampoDomandaQuestionario> campi_vecchi = vecchia.getCampi();
+                        
+                        for(CampoDomandaQuestionario c:campi_vecchi){
+                        
+                           storageC.delete(c);
+                        }
+                        
+                        for(CampoDomandaQuestionario c:campi_nuovi){
+                            
+                            storageC.inserisci(c);
+                         }
+                    
                 
                 
+                }*/
+            }
                 
-                
-            } catch (SQLException e) {
+             catch (SQLException e) {
                 new QuestionarioException("Impossibile scrivere nel Database");
             }
         }

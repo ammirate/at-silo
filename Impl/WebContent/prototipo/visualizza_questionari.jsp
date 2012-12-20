@@ -30,7 +30,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
-<h2 align=center >Compila Questionario</h2>
+
 
 <%
 	int id;
