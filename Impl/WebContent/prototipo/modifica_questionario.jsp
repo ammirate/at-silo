@@ -93,7 +93,6 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			}
 			out.println("</table><br><br>");
 			String 	type = "<Select name='tipo"+i+"' onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option value=1>Selezione Multipla</option><option value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select>";
-
 			if(quest.getDomande().get(i).getCampi().get(0).getTipo().equals("radio"))
 				 type = "<Select name='tipo"+i+"'	 onchange='abilitaAdd(this.value, this.name, "+i+")'><option>Seleziona</option><option value=1>Selezione Multipla</option><option selected=selected value=2>Selezione Unica</option><option value=3>Risposta Aperta</option></Select><input type=button value='Aggiungi Campo ' id='addCampo"+i+"'	onclick=\"display('parah"+i+"', " + i +");\">";
 			 else if (quest.getDomande().get(i).getCampi().get(0).getTipo().equals("checkbox"))

@@ -535,11 +535,12 @@ public class ControlQuestionario {
         int numCampiDomanda = campi.size();
         int numCampiDomanda2 = campi2.size();
         String descr1= d.getDescrizione();
-        if(d.getDescrizione().contains("'"))
+     
+        if(d.getDescrizione().endsWith("'"))
         {
-            descr1  = d.getDescrizione().replace("'", "");
+            descr1  = d.getDescrizione().substring(1,d.getDescrizione().length()-1);
         }
-        //System.out.println("domanda 1: "+descr1+" domanda 2:"+d1.getDescrizione());
+     
         if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
         {
             return false;
@@ -564,7 +565,7 @@ public class ControlQuestionario {
         db.chiudiConnessione();
         if(sent==campi.size())
         {
-            // System.out.println("si sono uguali:id domanda del genitore passata:::"+d.getId());
+           
             return true;
         }
         else
