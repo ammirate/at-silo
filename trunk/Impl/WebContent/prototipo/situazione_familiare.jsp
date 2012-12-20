@@ -36,15 +36,15 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
  	
  	    String cfb=null;
 	    String isee="";
-        String bambino_disabile="false";
-        String genitore_invalido="false";
-        String genitore_solo="false";
-        String vedovo="false";
-        String nubile="false";
-        String separato="false";
-        String figlio_non_riconosciuto="false";
-        String affido_esclusivo="false";
-        String altri_figli_disabili="false";
+        boolean bambino_disabile=false;
+        boolean genitore_invalido=false;
+        boolean genitore_solo=false;
+        boolean vedovo=false;
+        boolean nubile=false;
+        boolean separato=false;
+        boolean figlio_non_riconosciuto=false;
+        boolean affido_esclusivo=false;
+        boolean altri_figli_disabili=false;
         String altre_condizioni_calcolo_punteggio="";
  		
  	 if (request.getParameter("select_bambini")!=null)
@@ -59,7 +59,17 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
     	DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(cfb);
        	if (domandaIscrizione!=null){
        	   Float isee_temp=domandaIscrizione.getIsee();
-       	isee=isee_temp.toString();
+       	   isee=isee_temp.toString();
+       	   bambino_disabile=domandaIscrizione.getBambinoDisabile();
+          genitore_invalido=domandaIscrizione.getGenitoreInvalido();
+       	  genitore_solo=domandaIscrizione.getGenitoreSolo();
+          vedovo=domandaIscrizione.getGenitoreVedovo();
+          nubile=domandaIscrizione.getGenitoreVedovo();
+          separato=domandaIscrizione.getGenitoreSeparato();
+          figlio_non_riconosciuto=domandaIscrizione.getFiglioNonRiconosciuto();
+          affido_esclusivo=domandaIscrizione.getAffidoEsclusivo();
+          altri_figli_disabili=domandaIscrizione.getAltriComponentiDisabili();
+          altre_condizioni_calcolo_punteggio=domandaIscrizione.getCondizioniCalcoloPunteggio();
  	 	}
  	 }
  %> <!--Script per gestire i form --> <!--Script per gestire i form -->
@@ -138,13 +148,19 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 					Psichiatria Infantile, ovvero certificazione ex L. 104/92 di presa
 					in carico dell'Asl)</td>
 			</tr>
-			<tr>
-				<td colspan="2"><input name="bambino_disabile"
-					id="bambino_disabile" value="false" checked="checked" type="radio">
-					No <span id="bambino_disabile"> <input
-						name="bambino_disabile" id="bambino_disabile" value="true"
-						type="radio"> Si
-				</span></td>
+			<tr><% 
+			
+				out.append("<td colspan='2'><input name='bambino_disabile'")
+				.append(" id='bambino_disabile' value='false' checked='checked' type='radio'>")
+				.append("	No");
+					
+					String checked="";
+					if (bambino_disabile)
+						checked="checked='checked'";
+					out.append("<input")
+					.append(" name='bambino_disabile' id='bambino_disabile' value='true' "+checked)
+					.append(" type='radio'> Si </td> ");
+				%>
 
 			</tr>
 
@@ -156,47 +172,60 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 					allegare in busta chiusa certificazione dell'Asl</td>
 			</tr>
 			<tr>
-				<td colspan="2" id="genitore_invalido"><input
-					name="genitore_invalido" id="genitore_invalido" value="false"
-					checked="checked" type="radio"> No <input
-					name="genitore_invalido" id="genitore_invalido" value="true"
-					type="radio"> Si</td>
+				<% 
+			
+				out.append("<td colspan='2'><input name='genitore_invalido'")
+				.append(" id='genitore_invalido' value='false' checked='checked' type='radio'>")
+				.append("	No");
+					
+					 checked="";
+					if (genitore_invalido)
+						checked="checked='checked'";
+					out.append("<input")
+					.append(" name='genitore_invalido' id='genitore_invalido' value='true' "+checked)
+					.append(" type='radio'> Si </td> ");
+				%>
 			</tr>
 			<tr>
-				<td colspan="2">Il padre/la madre &egrave; genitore solo</td>
-				<td colspan="2"><span id="genitore_solo"> <input
-						name="genitore_solo" id="genitore_solo" value="false"
-						checked="checked" type="radio"> No
-				</span> <input name="genitore_solo" id="genitore_solo" value="true"
-					type="radio"> Si</td>
+				<td colspan="1">Il padre/la madre &egrave; genitore solo</td> 
+				<td colspan="2">
+					<%
+						out.print("<select name='select_genitore_solo' id='select_genitore_solo' ><option value='false'  >Selezionare </option>");
+						String selected = "";
+
+						if (vedovo)
+							selected = "selected";
+						out.print("<option value='vedovo'"
+								+ selected + " > Vedovo </option>");
+						selected = "";
+						
+						if (nubile)
+							selected = "selected";
+						out.print("<option value='nubile'"
+								+ selected + " > Nubile </option>");
+						selected = "";
+						
+						if (separato)
+							selected = "selected";
+						out.print("<option value='separato'"
+								+ selected + " > Separato </option>");
+						selected = "";
+						
+						if (figlio_non_riconosciuto)
+							selected = "selected";
+						out.print("<option value='figlio_non_riconosciuto'"
+								+ selected + " > Figlio non riconosciuto </option>");
+						selected = "";
+						
+						if (affido_esclusivo)
+							selected = "selected";
+						out.print("<option value='affido_esclusivo'"
+								+ selected + " > Affido esclusivo </option>");
+						selected = "";
+					%> </select>
 			</tr>
 			<tr>
-				<td colspan="4"><p>
-						vedova/o <input id="vedovo" name="vedovo" type="checkbox">
-					</p>
-					<p>
-						nubile <input id="nubile" name="nubile" type="checkbox">
-					</p>
-					<p>
-						separato/divorziato con affido del minore <input id="separato"
-							name="separato" type="checkbox">
-					</p>
-					<p>
-						genitore solo con figlio non riconosciuto dall'altro genitore <input
-							id="figlio_non_riconosciuto" name="figlio_non_riconosciuto"
-							type="checkbox">
-					</p>
-					<p>
-						genitore solo con figlio riconosciuto dall'altro genitore che non
-						contribuisce n&egrave; all'educazione, n&egrave; al mantenimento,
-						in possesso di dichiarazione di "affido esclusivo" <input
-							id="affido_esclusivo" name="affido_esclusivo" type="checkbox">
-					</p></td>
-
-			</tr>
-
-
-			<tr>
+		
 				<td>&nbsp;</td>
 				<td></td>
 			</tr>
@@ -207,17 +236,26 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 						certificazione dell'Asl) </label> <br></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input name="altri_figli_disabili"
-					id="altri_figli_disabili" value="false" checked="checked"
-					type="radio"> No <input name="altri_figli_disabili"
-					id="altri_figli_disabili" value="true" type="radio"> Si</td>
+				<% 
+			
+				out.append("<td colspan='2'><input name='altri_figli_disabili'")
+				.append(" id='altri_figli_disabili' value='false' checked='checked' type='radio'>")
+				.append("	No");
+					
+					 checked="";
+					if (altri_figli_disabili)
+						checked="checked='checked'";
+					out.append("<input")
+					.append(" name='altri_figli_disabili' id='altri_figli_disabili' value='true' "+checked)
+					.append(" type='radio'> Si </td> ");
+				%>
 			</tr>
 			<tr>
-				<td colspan="2">ALTRE CONDIZIONI RILEVANTI AI FINI DEL
+				<td colspan="1">ALTRE CONDIZIONI RILEVANTI AI FINI DEL
 					PUNTEGGIO</td>
 				<td colspan="1"><textarea
 						name="altre_condizioni_calcolo_punteggio" cols="50" rows="5"
-						readonly="readonly"></textarea></td>
+						readonly="readonly"><%=altre_condizioni_calcolo_punteggio %></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2">&nbsp;</td>
