@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 19, 2012 alle 23:04
+-- Generato il: Dic 20, 2012 alle 01:48
 -- Versione del server: 5.5.27-log
 -- Versione PHP: 5.4.6
 
@@ -65,7 +65,6 @@ INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `p
 ('g.dicostanzo', 'giovannadc', 'DCSGVN74A23B224X', NULL, NULL, NULL, NULL, NULL, NULL),
 ('l.sessa', 'lorellas', NULL, NULL, NULL, NULL, NULL, NULL, 'SSSLRL78B19B908X'),
 ('l.vella', 'laurav', 'VLLLRU83A24T928B', NULL, NULL, NULL, NULL, NULL, NULL),
-('M.Alfonso', 'Murolo-798230754', 'MRLLNS90C02F839L', NULL, NULL, NULL, NULL, NULL, NULL),
 ('m.chiavelli', 'mauroc', 'CVLMRA69A23B333C', NULL, NULL, NULL, NULL, NULL, NULL),
 ('m.sisillo', 'mauros', NULL, NULL, NULL, NULL, NULL, NULL, 'SLLMRA90A29N830P'),
 ('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL, NULL),
@@ -176,7 +175,7 @@ CREATE TABLE IF NOT EXISTS `bambino` (
   `comune_domicilio` varchar(100) DEFAULT NULL,
   `provincia_domicilio` varchar(50) DEFAULT NULL,
   `cf_genitore_nonrichiedente` varchar(50) DEFAULT NULL,
-  `iscrizione_classe` enum('Assegnato','NonAssegnato','ClasseDaConvalidare') DEFAULT 'NonAssegnato',
+  `iscrizione_classe` enum('Assegnato','NonAssegnato','ClasseDaConvalidare','Rinunciatario') DEFAULT 'NonAssegnato',
   PRIMARY KEY (`codice_fiscale`),
   KEY `classe` (`classe`),
   KEY `genitore` (`genitore`),
@@ -340,7 +339,7 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   `altri_componenti_disabili` tinyint(1) DEFAULT NULL,
   `condizioni_calcolo_punteggio` text,
   `isee` float DEFAULT NULL,
-  `stato_convalidazione` enum('DomandaNonCompilata','DomandaInviataInAttesaDiGraduatoria','DomandaRifiutata','IscrizioneConfermataInAttesaDiAltriDati','DomandaNonInviata','DomandaAccettata','AttesaPresentazioneDocumenti') DEFAULT 'DomandaNonCompilata',
+  `stato_convalidazione` enum('DomandaNonCompilata','DomandaInviataInAttesaDiGraduatoria','DomandaRifiutata','IscrizioneConfermataInAttesaDiAltriDati','DomandaNonInviata','DomandaAccettata','AttesaPresentazioneDocumenti','DomandaRitirata') DEFAULT 'DomandaNonCompilata',
   `cf_genitore_non_richiedente` varchar(16) DEFAULT NULL,
   `vaccinazioni` varchar(300) DEFAULT NULL,
   `malattie_infettive` varchar(300) DEFAULT NULL,
@@ -348,14 +347,14 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
   KEY `genitore` (`genitore`),
   KEY `bambino` (`bambino`),
   KEY `servizio` (`servizio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dump dei dati per la tabella `domanda_iscrizione`
 --
 
 INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`, `punteggio`, `posizione`, `genitore`, `servizio`, `bambino`, `stato_domanda`, `certificato_malattie`, `certificato_vaccinazioni`, `certificato_privacy`, `bambino_disabile`, `genitore_invalido`, `genitore_solo`, `genitore_vedovo`, `genitore_nubile`, `genitore_separato`, `figlio_non_riconosciuto`, `affido_esclusivo`, `altri_componenti_disabili`, `condizioni_calcolo_punteggio`, `isee`, `stato_convalidazione`, `cf_genitore_non_richiedente`, `vaccinazioni`, `malattie_infettive`) VALUES
-(1, NULL, '2012-11-19', 99, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sdfdsds', 5220, 'IscrizioneConfermataInAttesaDiAltriDati', NULL, 'asfdasfads', 'sdCDFas'),
+(1, NULL, '2012-11-19', 99, 1, 'CVLMRA69A23B333C', 1, 'CVLRRA12A23B333C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sdfdsds', 5220, 'DomandaInviataInAttesaDiGraduatoria', NULL, 'asfdasfads', 'sdCDFas'),
 (2, NULL, '2012-08-13', 97, 2, 'DBNGPP69A23B222C', 7, 'DBNLCU11A23B222C', 'DomandaAccettata', 'Consegnato', 'NonConsegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sTARS TRE', 17122, 'AttesaPresentazioneDocumenti', NULL, 'sdafdsa', 'dsafwertew '),
 (3, NULL, '2012-08-13', 95, 3, 'DBNGPP69A23B222C', 8, 'DBNMRA11A23B222C', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'fae EWVF92', 17122, NULL, NULL, 'afv asdf', 'ewrewrew'),
 (4, NULL, '2012-11-01', 92, 4, 'DFZNDR91L14A909D', 2, 'DFZGNN12L14A909D', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 0, 0, 0, 0, 0, 0, 0, ' Seve ESSE sa', 35323, 'DomandaNonCompilata', NULL, 'asDSGHF', 'WERTYU'),
@@ -363,7 +362,8 @@ INSERT INTO `domanda_iscrizione` (`id`, `nota_esclusione`, `data_presentazione`,
 (6, NULL, '2012-09-25', 88, 6, 'VLLLRU83A24T928B', 6, 'MSCLGU12A24T928B', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, 'aevmovejpivejmpi', 34523, 'DomandaNonCompilata', NULL, 'earveasb', 'tvosijf p'),
 (7, NULL, '2012-08-01', 84, 7, 'DCSGVN74A23B224X', 9, 'PLTMRC11A23B224X ', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, 'facfeaafcse', 23423, 'DomandaNonCompilata', NULL, 'dsfa uiopas', 'dofiha '),
 (8, NULL, '2012-08-28', 73, 8, 'PSSSNN85L98A980I', 4, 'SCLMTT12L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, 'eaEV', 72353, 'DomandaNonCompilata', NULL, 'dfap disj ', 'repij ar'),
-(9, 'asd', '2012-08-28', 10, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, '', 72353, 'DomandaAccettata', NULL, NULL, NULL);
+(9, 'asd', '2012-08-28', 10, 9, 'PSSSNN85L98A980I', 3, 'SCLNNA11L98A980I', 'Approvata', 'Consegnato', 'Consegnato', 'Consegnato', 0, 0, 1, 1, 0, 0, 0, 0, 0, '', 72353, 'DomandaAccettata', NULL, NULL, NULL),
+(11, NULL, NULL, 0, 0, 'DFZNDR91L14A909D', 0, 'MRTPZT5198ASF359', 'Non compilata', NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, NULL, 0, 'DomandaNonCompilata', 'MRTLRU83A24T928B', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -574,12 +574,12 @@ CREATE TABLE IF NOT EXISTS `genitore` (
 
 INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`, `condizione_lavorativa`, `tipo_contratto`) VALUES
 ('Federica', 'Cella', 'CLLFDR88X11C999X', '0823120345', 'fcella@y.it', '1988-12-28', 'Verona', 'via delle Y', NULL, NULL, 'Italiana', 'Avellino', '10', '83100', 'AV', 'Avellino', 'via delle Y', '10', '83100', 'AV', 'fsfsf', 'weè08u9arep', '4w3''985n043p ', 'Madre', 0, '2012-12-13', 'ertyui', '30984n2'),
-('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano', 'via Roma', 'residenti_fisciano', 'ISCRITTO', 'Italiana', 'Fisciano', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Agenzia X', 'Nessun rapporto precedente', 'Residente del comune di Fisciano', 'Padre', 0, '2013-12-21', 'X', 'Tempo indeterminato'),
+('Mauro', 'Chiavelli', 'CVLMRA69A23B333C', '0899601239', 'mchiav@hotmail.it', '1969-11-20', 'Pontecagnano', 'via Roma', 'residenti_fisciano', 'ISCRITTO', 'Italiana', 'Fisciano', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Agenzia X', 'Nessun rapporto precedente', 'Residente del comune di Fisciano', 'Padre', -1, '2013-12-21', 'X', 'Tempo indeterminato'),
 ('Giuseppe', 'Del Buono', 'DBNGPP69A23B222C', '0612345678', 'gdb@msn.it', '1969-11-06', 'Roma', 'via degli Ulivi', 'personale', 'ISCRITTO', 'Italiana', 'Roma', '16', '00100', 'RM', 'Roma', 'via degli Ulivi', '16', '00100', 'RM', 'asd', 'Gne gne gne', 'Bla bla bla.', 'Padre', 0, '2013-12-21', ':3', 'X'),
 ('Giovanna', 'Di Costanzo', 'DCSGVN74A23B224X', '0899601239	', 'gds@hotmail.it', '1974-12-30', 'Barano d''Ischia', 'via Roma', '', '', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'Fisciano', 'via Roma', '2', '84084', 'SA', 'X', 'XYZ', 'ABCDE', 'Madre', 0, '2013-12-26', 'Non lo so ', 'BUH!'),
-('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania', 'via delle X', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Vallo della Lucania', '69', '84084', 'SA', 'Vallo della Lucania', 'via delle X', '69', '84084', 'SA', 'A X', 'sojf dsiluhfd l', 'eouia LORHE TWPOIW ', 'Padre', 0, '2013-12-28', 'Mamama', 'LReoiuw'),
+('Andrea', 'De Fazio', 'DFZNDR91L14A909D', '0894215524', 'adf@msn.com', '1991-11-22', 'Vallo della Lucania', 'via delle X', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Vallo della Lucania', '69', '84084', 'SA', 'Vallo della Lucania', 'Vallo della Lucania', '69', '84084', 'SA', 'A X', 'sojf dsiluhfd l', 'eouia LORHE TWPOIW ', 'Padre', 1, '2013-12-31', 'Mamama', 'LReoiuw'),
 ('Santo', 'Del Regno', 'DRGSNT81A26B045C', '0823120345', 'sdr@msn.com', '1981-10-04', 'Avellino', 'via delle Y', 'altro', 'ISCRITTO', 'Italiana', 'Avellino', '10', '83100', 'AV', 'Avellino', 'via delle Y', '10', '83100', 'AV', 'P X A B', 'sepoifjsp', 'oiurabp ouhs òa', 'Padre', 0, '2013-12-21', 'asd', 'rotfl'),
-('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Napoli', '1', '07082', 'NA', 'Napoli', 'piazza Risorgimento', '1', '07802', 'NA', 'asi p', 'asd wpif yew', 'WTF?', 'Madre', 0, '2013-04-03', 'guuuu', 'XY'),
+('Laura', 'Martini', 'MRTLRU83A24T928B', '0819718200', 'lauram@yahoo.it', '1983-03-21', 'Napoli', 'piazza Risorgimento', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Napoli', '1', '07082', 'NA', 'Napoli', 'piazza Risorgimento', '1', '07802', 'NA', 'asi p', 'asd wpif yew', 'WTF?', 'Madre', 0, '2013-04-03', 'guuuu', 'null'),
 ('Susanna', 'Passaro', 'PSSSNN85L98A980I', '0822334556', 'spassaro@virgilio.it', '1985-11-08', 'Salerno', 'piazza Malta', 'personale_studenti', 'ISCRITTO', 'Italiana', 'Salerno', '23', '84100', 'SA', 'Salerno', 'piazza Malta', '23', '84100', 'SA', 'aepr im0', 'gne gne gne', 'asd bla X', 'Madre', 0, '2013-12-26', 'qp08wr7 ', 'soòigdjf lera'),
 ('Maria', 'Vacca', 'VCCMRU84T19A222B', '0612345678', 'mvacca@X.it', '1984-12-12', 'Roma', 'via degli Ulivi', NULL, NULL, 'Italiana', 'Roma', '16', '00100', 'RM', 'Roma', 'via degli Ulivi', '16', '00100', 'RM', 'wi', 'sfis dfds', 'wpip enwsòf', 'Madre', 0, '2012-12-13', 'dsfadfs', 'qwe'),
 ('Laura', 'Vella', 'VLLLRU83A24T928B', '0829718235', 'laurav@yahoo.it', '1983-03-15', 'Cautano (BN)', 'piazza Risorgimento', 'personale', 'ISCRITTO', 'Italiana', 'Benevento', '1', '82100', 'BN', 'Benevento', 'piazza Risorgimento', '1', '82100', 'BN', 'sdf', 'weèitu0narepw', 'esp0itua òoij', 'Madre', 0, '2013-12-21', 'seròaijo ', 'FEDLOL');
@@ -4249,7 +4249,7 @@ CREATE TABLE IF NOT EXISTS `phpbb_users` (
   KEY `user_birthday` (`user_birthday`),
   KEY `user_email_hash` (`user_email_hash`),
   KEY `user_type` (`user_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=63 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=64 ;
 
 --
 -- Dump dei dati per la tabella `phpbb_users`
