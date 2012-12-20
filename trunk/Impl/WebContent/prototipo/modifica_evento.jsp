@@ -82,10 +82,12 @@ ControlEvento crtEvn = ControlEvento.getIstance();
 Evento oldEvn = crtEvn.getEventoPerId(id);
 String data = request.getParameter("data");
 ControlClassi crtClass = ControlClassi.getIstance();
+String dataOld = oldEvn.getData().toString();
+String dataVisualizza[] = dataOld.split("-");
 %>
 <fildset><legend>Modifica Evento</legend>
 Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
-<br />Data : <input type"text" name="data" value="<%= oldEvn.getData().toString() %>" onblur="return checkForm()"/>
+<br />Data : <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" readonly="readonly"/>
 <br />Descrizione : <input type="textarea" name="desc" value="<%= oldEvn.getDescrizione() %>" />
 <br />Tipo : <input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" />
 <br />CC : <input type="text" name="cc" value="<%= oldEvn.getCC() %>" />
