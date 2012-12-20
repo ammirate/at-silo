@@ -271,7 +271,7 @@ public class DBEvento extends DBBeans <Evento> {
         }
         if(l.size()==0){
             r.close();
-            return null;
+            return l;
         }else{
             
             r.close();
@@ -332,7 +332,7 @@ public class DBEvento extends DBBeans <Evento> {
         }
         if(l.size()==0){
             r.close();
-            return null;
+            return l;
         }else{
             
             r.close();
@@ -390,7 +390,7 @@ data.setMonth(data.getMonth()-1);
         }
         if(l.size()==0){
             r.close();
-            return null;
+            return l;
         }else{
             
             r.close();
@@ -446,7 +446,7 @@ List<Evento> l = new ArrayList<Evento>();
         }
         if(l.size()==0){
             r.close();
-            return null;
+            return l;
         }else{
             
             r.close();

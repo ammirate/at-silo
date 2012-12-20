@@ -25,7 +25,7 @@ function modificaForm(){
 	document.getElementById("frm").submit();
 }
 function inserisciForm(){
-	document.getElementById("ins").setAttribute("action","http://localhost:8080/Atsilo/prototipo/inserisci_evento.jsp");
+	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/inserisci_evento.jsp");
 	document.getElementById("frm").submit();
 }
 
@@ -97,6 +97,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 				out.print("<h2>Non hai i permessi per visualizzare gli eventi");
 				return;
 			}
+			System.out.println("asd");
 		String cfpAsilo = uAsilo.getCodiceFiscale();
 		java.util.List<Evento> eventi = crtEvn.getEventiInData(data);
 		int nEventi = eventi.size();
