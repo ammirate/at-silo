@@ -280,8 +280,19 @@ public class ControlEvento {
         }
         try{
             DBEvento dbEvento = new DBEvento(db);
+            DBPartecipa dbp = new DBPartecipa(db);
+            DBClasse dbc = new DBClasse(db);
             db.apriConnessione();
-                return dbEvento.ricercaEventoPerChiave(id);
+            Evento e =dbEvento.ricercaEventoPerChiave(id);
+            List<Integer> classi = dbp.getClassiPerEvento(e.getId());
+            List<Classe> toSet = new ArrayList<Classe>();
+            for(Integer idc : classi)
+            {
+                toSet.add(dbc.RicercaClassePerId(idc.intValue()));
+            }
+            e.setClassi(toSet);
+            
+            return e;
         }
         finally {
             db.chiudiConnessione();
