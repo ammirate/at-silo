@@ -97,7 +97,6 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 				out.print("<h2>Non hai i permessi per visualizzare gli eventi");
 				return;
 			}
-			System.out.println("asd");
 		String cfpAsilo = uAsilo.getCodiceFiscale();
 		java.util.List<Evento> eventi = crtEvn.getEventiInData(data);
 		int nEventi = eventi.size();
@@ -123,9 +122,10 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append(propriEventi.get(k).getDescrizione())
 					.append("</td></tr>");
 			}
+			out.print("</table>");
 			if(pEvenLun == 0){
 				out.print("<h2>Non ci sono eventi</h2>");
-			}
+			} 
 			else{
 				
 			
@@ -135,7 +135,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 			int aEvenLun = altriEventi.size();
 			out.print("<br /><br /> Resto degli eventi per questa data");
 			for(int j=0; j<aEvenLun;j++){
-				out.append("<tr><td>")
+				out.append("<tr><td></td><td>")
 				.append(altriEventi.get(j).getNome())
 				.append("</td><td>")
 				.append(altriEventi.get(j).getDescrizione())
@@ -147,7 +147,6 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 
 
 %>
-</table>
 </form>
 </td><td class="fasciadxvariabile"></td>
 </tr>

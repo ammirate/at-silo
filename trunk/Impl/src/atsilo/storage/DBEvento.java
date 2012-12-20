@@ -16,6 +16,7 @@
 
 package atsilo.storage;
 
+import atsilo.entity.Bambino;
 import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.EventPlanner;
 import atsilo.entity.Evento;
@@ -25,6 +26,7 @@ import atsilo.entity.Psicopedagogo;
 import atsilo.entity.ResponsabileQuestionario;
 import atsilo.entity.Tirocinante;
 import atsilo.entity.Utente;
+import atsilo.storage.DBBeans.Assegnazione;
 
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -454,7 +456,36 @@ List<Evento> l = new ArrayList<Evento>();
         }
     }
     
-    
+    protected Assegnazione[] creaAssegnazioni(Evento bean) {
+        String persA=null;
+        String psico=null;
+        String edu=null;
+        if(bean.getOrganizzatore()!=null)
+        {
+            if(bean.getOrganizzatore() instanceof PersonaleAsilo)
+                persA=((PersonaleAsilo)bean.getOrganizzatore()).getCodiceFiscale();
+            if(bean.getOrganizzatore() instanceof Psicopedagogo)
+                psico=((Psicopedagogo)bean.getOrganizzatore()).getCodiceFiscale();
+            if(bean.getOrganizzatore() instanceof EducatoreDidattico)
+                psico=((EducatoreDidattico)bean.getOrganizzatore()).getCodiceFiscale();
+        }
+        
+           
+        
+        
+        
+        Assegnazione a = new Assegnazione("personale_asilo",persA);
+        Assegnazione a1 = new Assegnazione("psico_pedagogo",psico);
+        Assegnazione a2 = new Assegnazione("educatore_didattico",edu);
+
+        Assegnazione[] DBAssign = new Assegnazione[3];
+       
+        DBAssign[0]=a;
+        DBAssign[1]=a1;
+        DBAssign[2]=a2;
+
+        return DBAssign;
+    }
     
     
 }
