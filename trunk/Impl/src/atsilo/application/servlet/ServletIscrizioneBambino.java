@@ -176,6 +176,37 @@ public class ServletIscrizioneBambino extends HttpServlet {
             
             
         }
+        if ( request.getParameter("chiamante").equals("rinuncia")){//se chiamante è la pagina di rinuncia
+            
+                try {
+                    if  (controlIscrizione.rinunciaIscrizione(select_bambini))
+                        pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=ok");//reindirizzo al chiamante della servlet
+                    else 
+                        pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                } catch (DomandaIscrizioneException e) {
+                    // TODO Blocco di catch autogenerato
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                } catch (InserimentoDatiException e) {
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                    // TODO Blocco di catch autogenerato
+                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                } catch (DBConnectionException e) {
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                    // TODO Blocco di catch autogenerato
+                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                } catch (SQLException e) {
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
+                    // TODO Blocco di catch autogenerato
+                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                } catch (BambinoException e) {
+                    // TODO Blocco di catch autogenerato
+                    pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+                    LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                }
+            
+        }
+        
      // Set response content type
         response.setContentType("text/html");
         // New location to be redirected
