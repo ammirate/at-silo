@@ -35,7 +35,7 @@ function fillInFields(month, day, year)
 }
 
 function inviaData(){
-	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/inserisci_evento.jsp");
+	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/lista_evento.jsp");
 	document.getElementById("frm").setAttribute("method","post");
 }
 

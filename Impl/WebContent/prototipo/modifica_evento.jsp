@@ -61,6 +61,7 @@ function checkForm(){
 
 </script>
 
+
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -73,18 +74,21 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <table width="100%">
 <tbody><tr>
 <td>
-<form action="http://localhost:8080/Atsilo/ServletEventoInserisci" method="post" >
+<form action="http://localhost:8080/Atsilo/ServletEventoModifica" method="post" >
 <%
+String idEvn = request.getParameter("evento");
+int id = Integer.parseInt(idEvn);
+ControlEvento crtEvn = ControlEvento.getIstance();
+Evento oldEvn = crtEvn.getEventoPerId(id);
 String data = request.getParameter("data");
 ControlClassi crtClass = ControlClassi.getIstance();
-
 %>
-<fildset><legend>Inserisci Evento</legend>
-Nome : <input type="text" name="nome" value="" />
-<br />Data : <input type"text" name="data" value="<%= data %>" onblur="return checkForm()" />
-<br />Descrizione : <input type="textarea" name="desc"  />
-<br />Tipo : <input type="text" name="tipo"  />
-<br />CC : <input type="text" name="cc"  />
+<fildset><legend>Modifica Evento</legend>
+Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
+<br />Data : <input type"text" name="data" value="<%= oldEvn.getData().toString() %>" onblur="return checkForm()"/>
+<br />Descrizione : <input type="textarea" name="desc" value="<%= oldEvn.getDescrizione() %>" />
+<br />Tipo : <input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" />
+<br />CC : <input type="text" name="cc" value="<%= oldEvn.getCC() %>" />
 <% 
 int lun = crtClass.getClassi().size();
 for(int i=0; i<lun ;i++){
@@ -94,10 +98,9 @@ for(int i=0; i<lun ;i++){
 		.append("<br />");
 }
 %>
-<input type="hidden" name="tipologia" value="<%= tipologia %>" />
-<input type="hidden" name="user" value="<%= username %>" />
+<input type="hidden" name="oldevento" value="<%= oldEvn.getId() %>" />
 </fildset>
-	<input type="submit" value="Inserisci Evento" name="inserisci" /> 
+	<input type="submit" value="Invia Modifica" name="modifica" /> 
 </form>
 </td><td class="fasciadxvariabile"></td>
 </tr>

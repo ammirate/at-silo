@@ -55,4 +55,3 @@ if (!tipologia.equals("responsabile_questionario") )
 </tr>
 
 </tbody></table>
-
