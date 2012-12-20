@@ -65,9 +65,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	<div id=datachooser2 >
 		<table>
 			<tr>
-				<td><b>Data Inizio: </b>	<td><input type=text name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
+				<td><b>Data Inizio: </b>	<td><input type=text value=<%quest.getPeriodo_inizio().toString(); %>name=dataIn onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />
 			<tr>
-				<td><b>Data Fine: </b> <td><input type=text name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />	
+				<td><b>Data Fine: </b> <td><input type=text value=<% quest.%>name=dataOu onclick="Calendar.show(this, '%d/%m/%Y', true)" onfocus="Calendar.show(this, '%d/%m/%Y', true)" onblur="Calendar.hide()" />	
 		</table>
 	</div>
 	<br><br><br><br>
@@ -75,6 +75,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		
 		out.println("<b>Descrizione</b>: \t<br><br><textarea rows=\"10\" cols=\"80\" name=descrizione>"
 				+ quest.getDescrizione() + "</textarea><br><br>");
+	 
 		for (int i = 0; i < quest.getDomande().size(); i++) {
 			out.println("<br><br><fieldset onMouseOver=\"set('parah"+i+"')\">");
 			out.println("<table id='parah"+i+"' >");
@@ -104,7 +105,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		}
 		out.println("<script type=\"text/javascript\">setv("+quest.getDomande().size()+")</script>");
 		out.println("</div><input type=button value=\"Aggiungi Domanda\" onclick=\"addDomanda()\"><br><br>");
-		out.println("<center><input type=submit value=\"Modifica Questionario\"></center>");
+		out.println("<center><input type=submit value='Modifica Questionario'></center>");
 		out.println("<input type=hidden name=action value=modify>");
 		out.println("<input type=hidden name=identificativo value='"+quest.getId()+"'>");
 

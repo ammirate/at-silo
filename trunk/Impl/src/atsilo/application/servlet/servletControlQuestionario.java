@@ -113,6 +113,7 @@ public class servletControlQuestionario extends HttpServlet {
             {
                 System.out.println(quest.getId());
                 q.modificaQuestionario(quest.getId(), quest);
+      
                 response.sendRedirect("prototipo/lista_questionari.jsp?success=2");   
 
             }   
