@@ -65,7 +65,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 				Integer p = stat.getPercentualiFromCampo(quest.getDomande().get(i).getId(), quest.getDomande().get(i).getCampi().get(j).getId());
 				out.println("<tr><td width=500>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td>");
 				if(p==null ) {
-					out.println("<td colspan = 2> Statistiche non disponibili per questa domanda</td></tr>");
+					out.println("<td colspan = 2><a href=\"statistiche_risposte_aperte.jsp?idDomanda="+quest.getDomande().get(i).getId()+"&idQuestionario="+quest.getId()+"\">Clicca qui per queste statistiche</a></td></tr>");
 				}
 				else
 				{

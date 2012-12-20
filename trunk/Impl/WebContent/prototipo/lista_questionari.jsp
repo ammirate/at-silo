@@ -31,6 +31,8 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 </tbody></table>
 
 <%
+List<Questionario> list = new ArrayList<Questionario>();
+ControlQuestionario q = ControlQuestionario.getIstance();
 try {
 if(request.getParameter("success").equals("1")) {
 	out.println("<div style='background: #b5f1af; width: 100%; height: 30px; text-align: center'>Questionario inserito con successo</div>");
@@ -66,10 +68,10 @@ catch (Exception e) {}
 </tr>
 
 <%
-
+	
 	boolean g = false;
 	String cf = "";
-	ControlQuestionario q = ControlQuestionario.getIstance();
+	
 	try {
 		if (request.getParameter("error").equals("1")) {
 			out.println("<script type='text/javascript'>alert('Errore: non puoi modificare questo questionario')</script>");
@@ -98,11 +100,9 @@ catch (Exception e) {}
 		}
 	} catch (Exception e) {
 	}
-	List<Questionario> list = new ArrayList<Questionario>();
 	if (g)
 		{	
 			list = q.getQuestionariDaCompilare(cf);
-			System.out.println(list);
 					
 		}
 	else {
@@ -110,6 +110,7 @@ catch (Exception e) {}
 		list = q.getAllQuestionari();
 		
 	}
+
 	if (list.size() == 0)
 		{out.println("<tr><td colspan=5>Non sono presenti Questionari in archivio.</td></tr>");}
 	
