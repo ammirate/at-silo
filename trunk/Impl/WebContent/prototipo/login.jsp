@@ -96,7 +96,7 @@
 <tbody><tr>
 <td class="tplHeader">
 <%
-	if ((request.getParameter("successo")) != null) {
+	if  (request.getParameter("successo") != null && !temp_nome_chiamante.equals("login.jsp") ) { 
 		if (request.getParameter("successo").equals("failed")) {
 			out.print("<script type=text/javascript>alert('Controlla le credenziali di accesso')</script>");
 		}

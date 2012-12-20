@@ -3,7 +3,7 @@
 <%@ page import="atsilo.application.*,atsilo.entity.*"%>
 
 <%
-	if ((request.getParameter("successo")) != null) {
+	if  (request.getParameter("successo") != null && !temp_nome_chiamante.equals("lista_punteggio.jsp") ) { 
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}

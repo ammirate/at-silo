@@ -75,7 +75,7 @@
 
 
 <%
-	if ((request.getParameter("successo")) != null) {
+	if  (request.getParameter("successo") != null && !temp_nome_chiamante.equals("specifiche_bando.jsp") ) { 
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}

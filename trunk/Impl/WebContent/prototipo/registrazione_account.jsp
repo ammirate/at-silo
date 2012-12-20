@@ -19,7 +19,7 @@ function ControllaForm(){
 
 </script>
 <%
-	if ((request.getParameter("successo")) != null) {
+	if  (request.getParameter("successo") != null && !temp_nome_chiamante.equals("registrazione_account.jsp") ) { 
 		if (request.getParameter("successo").equals("failed")) {
 			out.print("<script type=text/javascript>alert('Errore creazione nuovo account')</script>");
 		}

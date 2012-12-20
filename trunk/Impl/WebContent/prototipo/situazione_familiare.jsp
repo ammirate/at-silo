@@ -81,7 +81,8 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 			return false;
 		}
 	</script> <%
- 	if ((request.getParameter("successo")) != null) {
+ 	if ((request.getParameter("successo")) != null && !temp_nome_chiamante.equals("situazione_familiare.jsp") ) {
+		java.lang.System.out.print(temp_nome_chiamante);
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
  		} else {
