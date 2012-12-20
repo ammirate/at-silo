@@ -3,10 +3,12 @@ package atsilo.application;
 import atsilo.application.notificheMail.ControlNotificaMail;
 import atsilo.application.notificheMail.Messaggio;
 import atsilo.application.notificheMail.NotificaMailEvento;
+import atsilo.entity.Bambino;
 import atsilo.entity.Classe;
 import atsilo.entity.EducatoreDidattico;
 import atsilo.entity.EventPlanner;
 import atsilo.entity.Evento;
+import atsilo.entity.Genitore;
 import atsilo.entity.Partecipa;
 import atsilo.entity.PersonaleAsilo;
 import atsilo.entity.Psicopedagogo;
@@ -17,6 +19,8 @@ import atsilo.exception.EventoException;
 import atsilo.storage.*;
 
 import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.util.ArrayList;
@@ -254,6 +258,92 @@ public class ControlEvento {
         }
     }
     
+    
+    /**
+     * Gets all the events given its ud
+     * 
+     * @param pers
+     *            is the event owner teacher
+     * @return an event list about teacher
+     * @throws SQLException
+     * @throws DBConnectionException
+     * @throws EventoException
+     */
+    public Evento getEventoPerId(int id)
+            throws SQLException {
+        Database db = new Database();
+        
+        if (!db.apriConnessione()) {
+            LOG.log(Level.SEVERE,
+                    "Errore di esecuzione della query. Causato da: connessione fallita");
+            return null;
+        }
+        try{
+            DBEvento dbEvento = new DBEvento(db);
+            db.apriConnessione();
+                return dbEvento.ricercaEventoPerChiave(id);
+        }
+        finally {
+            db.chiudiConnessione();
+        }
+    }
+    
+    /**
+     * Restituisce gli eventi di un genitore in una data
+     * @param codiceFiscale codice fiscale del genitore
+     * @param data la data in cui si cercano gli eventi
+     * @return
+     * @throws SQLException
+     * @throws DBConnectionException
+     * @throws EventoException
+     */
+    public List<Evento> getEventiPerGenitoreInData(String codiceFiscale, Date data)
+            throws SQLException, DBConnectionException, EventoException {
+        Database db = new Database();
+        
+        if (!db.apriConnessione()) {
+            LOG.log(Level.SEVERE,
+                    "Errore di esecuzione della query. Causato da: connessione fallita");
+            return null;
+        }
+        try{
+            DBGenitore dbg = new DBGenitore(db);
+            DBBambino dbb = new DBBambino(db);
+            DBPartecipa dbp = new DBPartecipa(db);
+            List<Evento> toReturn = new ArrayList<Evento>();
+            db.apriConnessione();
+            Genitore g = dbg.getGenitorePerCF(codiceFiscale);
+            List<Bambino> lb = dbb.ricercaFigliGenitore(codiceFiscale);
+            List<Evento> eventiInData = getEventiInData(data);
+            //Filtro prima per email sui CC
+            for(Evento e : eventiInData)
+            {
+                if(e.getCC().contains(g.getEmail()))
+                {
+                    toReturn.add(e);
+                }
+            }
+            //Controllo se i figli del genitore sono legati ad alcuno degli eventi prelevati
+            for(Evento e : eventiInData)
+            {
+                List<Integer> idClassi = dbp.getClassiPerEvento(e.getId());
+                for(Bambino b : lb)
+                {
+                    if(idClassi.contains(b.getClasse()) && !toReturn.contains(e))
+                    {
+                        //Una volta trovato che uno dei figli porta il genitore nell'evento stop
+                        toReturn.add(e);
+                        break;    
+                    }
+                }
+            }
+            
+            return toReturn;
+        }
+        finally {
+            db.chiudiConnessione();
+        }
+    }
     
     /**
      * Gets all the events about a teacher
