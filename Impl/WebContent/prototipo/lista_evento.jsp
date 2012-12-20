@@ -21,7 +21,7 @@
 
 <script type="text/javascript">
 function modificaForm(){
-	document.getElementById("mod").setAttribute("action","http://localhost:8080/Atsilo/prototipo/modifica_evento.jsp");
+	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/modifica_evento.jsp");
 	document.getElementById("frm").submit();
 }
 function inserisciForm(){
@@ -141,6 +141,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 				.append(altriEventi.get(j).getDescrizione())
 				.append("</td></tr>");
 			}
+		}
 	
 	} //Fine Eventi Impiegato Asilo
 
