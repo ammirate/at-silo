@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -31,6 +32,7 @@ public class ServletEventoInserisci extends HttpServlet {
     private ControlEvento crt;
     private ControlClassi crtClass;
     private ControlDatiPersonali crtPers;
+    private static final Logger LOG = Logger.getLogger("global");
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -58,10 +60,7 @@ public class ServletEventoInserisci extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        String id= request.getParameter("oldevento");
-        Evento oldEvn;
         try {
-            oldEvn = crt.getEventoPerId(Integer.parseInt(id));
             String descrizione = request.getParameter("desc");
             String dataIntera = request.getParameter("data");
             String nome = request.getParameter("nome");
@@ -70,7 +69,7 @@ public class ServletEventoInserisci extends HttpServlet {
             String elencoClassi[] = request.getParameterValues("classe");
             String YYYYMMDD[];
             YYYYMMDD = dataIntera.split("/");
-            Date data = new Date(Integer.parseInt(YYYYMMDD[0]), Integer.parseInt(YYYYMMDD[1]), Integer.parseInt(YYYYMMDD[2]));
+            Date data = new Date(Integer.parseInt(YYYYMMDD[2])-1900, Integer.parseInt(YYYYMMDD[1])-1, Integer.parseInt(YYYYMMDD[0]));
             String tipologia = request.getParameter("tipologia");
             String username = request.getParameter("user");
             EventPlanner pers = null;
@@ -99,24 +98,31 @@ public class ServletEventoInserisci extends HttpServlet {
         } catch (NumberFormatException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/errore.html"); 
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (SQLException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/errore.html"); 
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (DBConnectionException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/errore.html"); 
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (ClasseException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/errore.html"); 
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (UtenteException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/errore.html");
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (InserimentoDatiException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/errore.html");
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (Exception e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/errore.html");
+            LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         }
         
     }

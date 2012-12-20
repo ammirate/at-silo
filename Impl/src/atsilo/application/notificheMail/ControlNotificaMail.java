@@ -98,13 +98,16 @@ public class ControlNotificaMail {
         // Aggiunta degli indirizzi del mittente e del destinatario
         InternetAddress fromAddress = new InternetAddress(mittente,
                 intestazione);
-        for (Utente utente : destinatari) {
-            InternetAddress toAddress = new InternetAddress(utente.getEmail());
-            message.setFrom(fromAddress);
-            message.setRecipient(Message.RecipientType.TO, toAddress);
-            
-            // Invio del messaggio
-            Transport.send(message);
+        if(destinatari!=null && destinatari.size()>0)
+        {
+            for (Utente utente : destinatari) {
+                InternetAddress toAddress = new InternetAddress(utente.getEmail());
+                message.setFrom(fromAddress);
+                message.setRecipient(Message.RecipientType.TO, toAddress);
+                
+                // Invio del messaggio
+                Transport.send(message);
+            }
         }
     }
     
