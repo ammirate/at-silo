@@ -238,20 +238,22 @@ public class ControlEvento {
             }
             
             dbEvento.delete(evento);
-            ControlNotificaMail control = ControlNotificaMail.getInstance();
-            Messaggio messaggio = new NotificaMailEvento(
-                    convertiCC(evento.getCC()), "Cancellazione ",
-                    "\n l'evento sopra descritto è stato cancellato", evento);
-            try {
-                control.inviaMail(messaggio);
-            } catch (MessagingException e) {
-                LOG.log(Level.SEVERE,
-                        "<Errore nel invio del messaggio cauasato da: >", e);
-            } catch (Throwable e) {
-                LOG.log(Level.SEVERE,
-                        "<Errore nel invio del messaggio cauasato da: >", e);
+            if(evento.getCC()!=null)
+            {
+                ControlNotificaMail control = ControlNotificaMail.getInstance();
+                Messaggio messaggio = new NotificaMailEvento(
+                        convertiCC(evento.getCC()), "Cancellazione ",
+                        "\n l'evento sopra descritto è stato cancellato", evento);
+                try {
+                    control.inviaMail(messaggio);
+                } catch (MessagingException e) {
+                    LOG.log(Level.SEVERE,
+                            "<Errore nel invio del messaggio cauasato da: >", e);
+                } catch (Throwable e) {
+                    LOG.log(Level.SEVERE,
+                            "<Errore nel invio del messaggio cauasato da: >", e);
+                }
             }
-            
             return evento;
         } finally {
             db.chiudiConnessione();

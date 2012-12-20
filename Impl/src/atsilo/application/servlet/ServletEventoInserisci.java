@@ -92,8 +92,8 @@ public class ServletEventoInserisci extends HttpServlet {
             nuovoEvn.setClassi(classi);
             crt.inserisciEvento(nuovoEvn);
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y");     
-         
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate());     
+            
          
         } catch (NumberFormatException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
