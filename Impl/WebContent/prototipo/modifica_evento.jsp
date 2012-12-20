@@ -92,10 +92,18 @@ Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
 <% 
 int lun = crtClass.getClassi().size();
 for(int i=0; i<lun ;i++){
+	if(crtClass.getClassi().get(i).equals(oldEvn.getClassi().get(i)) == true){
+		out.append("<input type='checkbox' name='classe' value='")
+		.append(""+crtClass.getClassi().get(i).getId())
+		.append("' checked />"+crtClass.getClassi().get(i).getSezione())
+		.append("<br />");
+	}
+	else{
 	out.append("<input type='checkbox' name='classe' value='")
 		.append(""+crtClass.getClassi().get(i).getId())
 		.append("' />"+crtClass.getClassi().get(i).getSezione())
 		.append("<br />");
+	}
 }
 %>
 <input type="hidden" name="oldevento" value="<%= oldEvn.getId() %>" />
