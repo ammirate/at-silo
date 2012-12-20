@@ -131,9 +131,9 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 			
 			out.print("<input type='submit' value='Modifica' id='mod' name='modifica' onclick='modificaForm()' />");
 			out.print("<input type='submit' value='Elimina' name='elimina' id='mod' />");
-			}
-		int aEvenLun = altriEventi.size();
-		out.print("<br /><br /> Resto degli eventi per questa data");
+		
+			int aEvenLun = altriEventi.size();
+			out.print("<br /><br /> Resto degli eventi per questa data");
 			for(int j=0; j<aEvenLun;j++){
 				out.append("<tr><td>")
 				.append(altriEventi.get(j).getNome())
