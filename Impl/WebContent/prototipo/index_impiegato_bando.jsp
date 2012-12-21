@@ -20,7 +20,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"
 <table width="100%">
 <tbody><tr>
 <td>
-<div class="titolopagina">Benvenuto XXX</div>
+<div class="titolopagina">Benvenuto, Impiegato del Diritto allo Studio</div>
 </td><td class="fasciadxvariabile"></td>
 </tr>
 </tbody></table>

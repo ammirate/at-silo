@@ -17,7 +17,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <table width="100%">
 <tbody><tr>
 <td>
-<div class="titolopagina">Benvenuto XXX</div>
+<div class="titolopagina">Benvenuto, Impiegato dell'asilo</div>
 </td><td class="fasciadxvariabile"></td>
 </tr>
 </tbody></table>
