@@ -56,7 +56,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			<tr><td> Opzione  <td> <input type=text name=opzione0[] >
 		</table>
 		<br><br>
-		<Select   name=tipo0 onchange="abilitaAdd(this.value, this.name, 0)">
+		<Select name=tipo0 onchange="abilitaAdd(this.value, this.name, 0)">
 		<option >Seleziona</option>
 		<option value=1 >Selezione Multipla</option>
 		<option value=2>Selezione Unica</option>
