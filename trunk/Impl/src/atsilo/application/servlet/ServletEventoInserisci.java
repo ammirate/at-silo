@@ -1,6 +1,9 @@
 package atsilo.application.servlet;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.sql.SQLException;
@@ -14,6 +17,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import atsilo.application.*;
 import atsilo.entity.*;
@@ -60,18 +68,87 @@ public class ServletEventoInserisci extends HttpServlet {
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
+        boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+        String filepath="";
+        String descrizione="";
+        String dataIntera="";
+        String nome="";
+        String tipo="";
+        String cC="";
+        String tipologia =""; 
+        String username ="";
+        ArrayList<String> elencoClassi=new ArrayList<String>();
         try {
-            String descrizione = request.getParameter("desc");
-            String dataIntera = request.getParameter("data");
-            String nome = request.getParameter("nome");
-            String tipo = request.getParameter("tipo");
-            String cC = request.getParameter("cc");
-            String elencoClassi[] = request.getParameterValues("classe");
+            // Create a factory for disk-based file items
+            FileItemFactory factory = new DiskFileItemFactory();
+            // Create a new file upload handler
+            ServletFileUpload upload = new ServletFileUpload(factory);
+
+            // Parse the request
+            List<FileItem> items = upload.parseRequest(request);
+            
+            int numClassi=0;
+             for (FileItem item : items) {
+                if (item.isFormField()) {
+                    String fieldname = item.getFieldName();
+                    if(fieldname.equals("desc"))
+                        descrizione=item.getString();
+                    else if(fieldname.equals("data"))
+                        dataIntera=item.getString();
+                    else if(fieldname.equals("nome"))
+                        nome=item.getString();
+                    else if(fieldname.equals("tipo"))
+                        tipo=item.getString();
+                    else if(fieldname.equals("cc"))
+                        cC=item.getString();
+                    else if(fieldname.equals("tipologia"))
+                        tipologia=item.getString();
+                    else if(fieldname.equals("user"))
+                        username=item.getString();
+                    else if(fieldname.equals("classe"))
+                    {
+                        //checkbox
+                        elencoClassi.add(item.getString());
+                        numClassi++;
+                    }
+                } else {
+                    // Process form file field (input type="file").
+                    String fieldname = item.getFieldName();
+                    String filename = item.getName();
+                    if(filename!=null)
+                    {
+                        InputStream filecontent = item.getInputStream();
+                        String filedir = "atsiloupload";
+                        File dir = new File(getServletContext().getRealPath(".")+File.separator+filedir);
+                        if(!dir.exists())
+                        {
+                            dir.mkdir();
+                        }
+                        File f = new File(getServletContext().getRealPath(".")+File.separator+filedir+File.separator+filename);
+                        if(f.exists())
+                        {
+                            f.delete();
+                        }
+                        filepath=getServletContext().getRealPath(".")+File.separator+filedir+File.separator+filename;
+                        System.out.println(filepath);
+                        filepath=filepath.substring(filepath.indexOf(filedir));
+                        FileOutputStream fos = new FileOutputStream(f);
+                        int b;
+                        b=filecontent.read();
+                        while(b!=-1)
+                        {
+                            fos.write(b);
+                            b=filecontent.read();
+                        }
+                        fos.close();
+                    }
+                }
+             }
+            
             String YYYYMMDD[];
             YYYYMMDD = dataIntera.split("/");
             Date data = new Date(Integer.parseInt(YYYYMMDD[2])-1900, Integer.parseInt(YYYYMMDD[1])-1, Integer.parseInt(YYYYMMDD[0]));
-            String tipologia = request.getParameter("tipologia");
-            String username = request.getParameter("user");
+            
             EventPlanner pers = null;
             if(tipologia.compareTo(AtsiloConstants.CAT_IMP_ASILO) == 0){
               pers = (PersonaleAsilo)  crtPers.getPersonaleAsiloFromUsername(username);
@@ -84,12 +161,12 @@ public class ServletEventoInserisci extends HttpServlet {
              }
  
             
-            Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, pers, null);
+            Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, pers, filepath);
             if(elencoClassi!=null)
             {
                 List<Classe> classi = new ArrayList<Classe>();
-                for(int k=0; k<elencoClassi.length;k++){
-                   classi.add(crtClass.getClasseById(Integer.parseInt(elencoClassi[k])));
+                for(int k=0; k<elencoClassi.size();k++){
+                   classi.add(crtClass.getClasseById(Integer.parseInt(elencoClassi.get(k))));
                 }
                 nuovoEvn.setClassi(classi);
             }
