@@ -10,6 +10,17 @@
 
 <script type="text/javascript">
 
+function checkForm(){
+	var campi = ["data"];
+ 	
+	for (var i in campi) {
+		if (!checkDate(campi[i], document.getElementById(campi[i]))) {
+			return false;
+		}
+	}
+
+}
+
 function checkDate(name, field) {
 	var date = field.value;
 	var reg = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/([0-9]{4})/;
@@ -48,16 +59,7 @@ function checkDate(name, field) {
 	return true;
 }
 
-function checkForm(){
-	var campi = ["data"];
- 	
-	for (var i in campi) {
-		if (!checkDate(campi[i], document.getElementById(campi[i]))) {
-			return false;
-		}
-	}
 
-}
 
 </script>
 
