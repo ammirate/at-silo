@@ -123,9 +123,9 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append(""+propriEventi.get(k).getId())
 					.append("'"+checked+" />")
 					.append("<span style='font-size:14px'><b>"+propriEventi.get(k).getNome()+"</b></span>")
-					.append("")
+					.append("<pre>")
 					.append(propriEventi.get(k).getDescrizione())
-					.append("</td></tr>");
+					.append("</pre></td></tr>");
 			}
 			out.print("</table>");
 			if(pEvenLun == 0){
