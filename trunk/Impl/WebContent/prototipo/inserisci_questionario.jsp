@@ -30,6 +30,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <td class="tplHeader">
 
 <h2 align=center >Inserisci nuovo Questionario</h2>
+<h3 align =left>Verranno inserite, all'interno del sistema, unicamente le domande che non hanno campi vuoti</h3>
 <br><br>
 <form action="http://localhost:8080/Atsilo/servletControlQuestionario" method="POST" >
 <div id=formdomande>
