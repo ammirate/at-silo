@@ -122,7 +122,6 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append("<input type='radio' name='evento' value='")
 					.append(""+propriEventi.get(k).getId())
 					.append("'"+checked+" />")
-					.append("</td><td>")
 					.append("<h3><b>"+propriEventi.get(k).getNome()+"</b></h3>")
 					.append("")
 					.append(propriEventi.get(k).getDescrizione())
