@@ -33,10 +33,10 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  <%
  	if   (request.getParameter("successo") != null && !temp_nome_chiamante.equals("presenta_bando.jsp") ) { 
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript>alert('Pre iscrizione effettuata con successo')</script>");
+ 			out.print("<script type=text/javascript>alert('Pre iscrizione effettuata con successo');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
  			String mess=request.getParameter("errore");
- 			out.print("<script type=text/javascript>alert('"+mess+"')</script>");
+ 			out.print("<script type=text/javascript>alert('"+mess+"');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		}
  	}
  %>

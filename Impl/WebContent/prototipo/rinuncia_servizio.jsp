@@ -11,11 +11,7 @@
 include file="atsilo_files/sidebar_genitore.jsp"
  %>
  
-<img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff">
-<%@
-include file="atsilo_files/sidebar_top_iscrizione.jsp"
- %>
- <%@ page
+<img width="209" border="0" alt="" height="1" src="atsilo_images/clearpixel.gif"></td><td class="content" valign="top" bgcolor="#ffffff"><%@ page
 		import="java.util.*,atsilo.application.*,atsilo.entity.*"%>
  <% // setto select bambino
 		ControlDatiPersonali cdt= ControlDatiPersonali.getIstance();
@@ -31,16 +27,16 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
 	  cfb=(String)request.getParameter("select_bambini");
 	 %>
  <%
- 	if   (request.getParameter("successo") != null && !temp_nome_chiamante.equals("presenta_bando.jsp") ) { 
+ 	if   (request.getParameter("successo") != null  ) { 
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript>alert('Rinuncia effettuata con successo')</script>");
+ 			out.print("<script type=text/javascript>alert('Pre iscrizione effettuata con successo');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
  			String mess=request.getParameter("errore");
- 			out.print("<script type=text/javascript>alert('"+mess+"')</script>");
+ 			out.print("<script type=text/javascript>alert('"+mess+"');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		}
  	}
  %>
- <form name="presenta_domanda_bando" action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentare la richiesta di rinuncia del servizio?');">
+ <form name="presenta_domanda_bando" action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Sei sicuro di voler rinunciare all'iscrizione? ');">
  <input name="chiamante" type="hidden" id="chiamante"
 			value="rinuncia">
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
@@ -51,8 +47,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
         <tbody>
         
       	    <tr>
-    <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vuole inviare la domanda di iscrizione</label>
-      <br></td>
+    <td colspan="4"><label for="altrifisglinido_1">Selezionare il figlio per il quale si vuole rinunciare all'iscrizione</label><br></td>
       
   </tr>
   <tr>
@@ -78,7 +73,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
      <td>&nbsp;</td>
   </tr>
           <tr>
-            <td >Si ricorda che per presentare la domanda di iscrizione &egrave; necessario aver compilato tutti i campi relativi a Dati Account e Dati Bambino ed &egrave; obbligatorio l'invio della stessa entro i termini indicati dal bando.</td>
+            <td >Si ricorda che per presentare la domanda di rinuncia &egrave; necessario aver inserito un bambino</td>
             
             </tr>
             <tr>
@@ -87,8 +82,6 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
              <tr>
             <td >
            <input type='submit' value='Invio Domanda Iscrizione'>
-       
-            	
            </td>
             
             </tr>
