@@ -21,7 +21,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <table width="100%">
 <tbody><tr>
 <td>
-<form action="http://localhost:8080/Atsilo/ServletEventoInserisci" method="post" >
+<form action="http://localhost:8080/Atsilo/ServletEventoInserisci" method="post" enctype="multipart/form-data" >
 <%
 String data = request.getParameter("data");
 ControlClassi crtClass = ControlClassi.getIstance();
@@ -55,15 +55,14 @@ for(int i=0; i<lun ;i++){
 		.append("<br />");
 }
 %>
+<br />
+Carica Allegato :  <input type="file" name="file" />
 <input type="hidden" name="tipologia" value="<%= tipologia %>" />
 <input type="hidden" name="user" value="<%= username %>" />
 </fildset>
 	<input type="submit" value="Inserisci Evento" name="inserisci" /> 
 </form>
-<form action="upload" method="post" enctype="multipart/form-data">
-   Carica Allegato :  <input type="file" name="file" />
-    <input type="submit" />
-</form>
+
 </td><td class="fasciadxvariabile"></td>
 </tr>
 </tbody></table>
