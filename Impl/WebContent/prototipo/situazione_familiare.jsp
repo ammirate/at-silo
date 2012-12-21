@@ -96,7 +96,7 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 	</script> <%
  	if ((request.getParameter("successo")) != null  ) {
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript> alert('Modifica effettuata con successo');window.location='"+temp_nome_chiamante+"';;window.location='"+temp_nome_chiamante+"';</script>");
+ 			out.print("<script type=text/javascript> alert('Modifica effettuata con successo');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
  			if ((request.getParameter("errore")) != null) {
  				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
