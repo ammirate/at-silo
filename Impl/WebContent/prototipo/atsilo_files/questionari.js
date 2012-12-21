@@ -1,5 +1,6 @@
 var arrInput = new Array(0);
 var arrInputValue = new Array(0);
+
 v=1;
 n=0;
 c=0;
@@ -11,14 +12,11 @@ function addInput(id) {
   display(id);
   c++;
 }
-function createToolTip(){
-	
-	var i=10;
-}
+
 function set(id) {
 		if(idM!=id) {
 			idM=id;
-			frm = document.forms[0]
+			frm = document.forms[0];
 			tbl = document.getElementById(id);
 		}
 	
@@ -43,7 +41,7 @@ function addDomanda() {
 	  		"		<option value=2>Selezione Unica</option>" +
 	  		"		<option value=3 selected>Risposta Aperta</option>" +
 	  		"		</Select><input type=button disabled = disabled id='addCampo"+v+"' value='Aggiungi Campo' onclick=\"display('"+nome+"', "+v+" );\">" +
-	  	    "		<input type=button value='Elimina Domanda' onClick='eliminaDomanda("+  v+")'>"+
+	  	    "		<input type=button value='Elimina Domanda' onClick='eliminaDomanda("+v+")'>"+
 	  		"</fieldset><br><br>";
 	  frm.appendChild(div);
 	 
@@ -60,12 +58,10 @@ function eliminaDomanda(id) {
 	
 	
 	var dom=id;
-	var idDom="domanda_header"+dom
-		
-		var d = document.getElementById(idDom);
-		d.parentNode.removeChild(d);
-	
-	
+	var idDom="domanda_header"+dom;
+	var d = document.getElementById(idDom);
+	v=v-1;
+	d.parentNode.removeChild(d);
 	
 }
 
