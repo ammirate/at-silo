@@ -17,7 +17,8 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
       <td><table border="0">
         <tbody>
           <tr>
-            <td class="tplTitolo"><form name="creazione_account" action="" method="post">
+            <td class="tplTitolo">
+            <form action="http://localhost:8080/Atsilo/ServletBandoCarica" method="post" enctype="multipart/form-data">
         <table class="tabelle_form">
           <tr> 
         	<td colspan="2"><p>Selezionare il pdf del bando da caricare sul sito</p>
@@ -25,7 +26,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
        	 	
           </tr>
           <tr> 
-        	<td colspan="2"><input name="password" type="file" id="password" maxlength="20"  /></td>
+        	<td colspan="2"><input name="file" type="file" id="file"   /></td>
        	 	
           </tr>
          
@@ -34,8 +35,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
        	 	<td>&nbsp;</td>
           </tr>
         	<td></td>
-       	 	<td><input type="submit" name="modifica" value="Modifica dati " />
-                <input type="reset" name="reset" value="Annulla" />
+       	 	<td><input type="submit" name="carica" value="Carica Bando" />
             </td>
           </tr>
           
