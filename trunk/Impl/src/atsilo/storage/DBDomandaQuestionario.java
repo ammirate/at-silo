@@ -119,7 +119,6 @@ public class DBDomandaQuestionario extends DBBeans<DomandaQuestionario> {
         PreparedStatement stmt = tabella.prepareStatement(
                 "SELECT * FROM " +  tabella.getNomeTabella()  + " WHERE id = ?");
         tabella.setParam(stmt, 1, "id", idDomanda);
-        
         ResultSet res = stmt.executeQuery();
         
         while(res.next()){

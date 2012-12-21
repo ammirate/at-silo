@@ -66,13 +66,14 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 				double p_double=0.0;
 				if(p!=null)
 				{		p_double=p.doubleValue();}
+				
 				double perc=0.0;
 				if((stat.getNumber_comp()!=0)&&(p_double!=0.0))
 					{ perc = p_double/stat.getNumber_comp();}
 				
-				System.out.println("p_double:"+p_double+"perc"+perc+"numcom"+stat.getNumber_comp());
+				
 				out.println("<tr><td width=500>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td>");
-				if(p==null ) {
+				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("text")) {
 					
 					out.println("<td colspan = 2><a href=\"statistiche_risposte_aperte.jsp?idDomanda="+quest.getDomande().get(i).getId()+"&idQuestionario="+quest.getId()+"\">Clicca qui per queste statistiche</a></td></tr>");
 				}
