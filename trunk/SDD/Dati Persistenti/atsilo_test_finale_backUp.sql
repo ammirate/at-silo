@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 3.4.9
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Dic 22, 2012 alle 00:42
--- Versione del server: 5.5.27-log
--- Versione PHP: 5.4.6
+-- Generato il: Dic 21, 2012 alle 17:25
+-- Versione del server: 5.5.20
+-- Versione PHP: 5.3.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `atsilo`
 --
-CREATE DATABASE `atsilo` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
-USE `atsilo`;
 
 -- --------------------------------------------------------
 
@@ -53,7 +51,6 @@ CREATE TABLE IF NOT EXISTS `account` (
 --
 
 INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `psico_pedagogo`, `responsabile_questionario`, `responsabile_tirocini`, `tirocinante`, `educatore_didattico`) VALUES
-('a.cesarano', 'antonioc', 'csrntn91l26c129g', NULL, NULL, NULL, NULL, NULL, NULL),
 ('a.damelia', 'alfonsoda', NULL, NULL, 'DMLLFN71L12A333B', NULL, NULL, NULL, NULL),
 ('a.desantis', 'arturods', NULL, NULL, NULL, 'DSTRTR58L32A333B', NULL, NULL, NULL),
 ('a.senatore', 'antonellas', NULL, 'SNTNTN53N69B309D', NULL, NULL, NULL, NULL, NULL),
@@ -63,7 +60,6 @@ INSERT INTO `account` (`username`, `password`, `genitore`, `personale_asilo`, `p
 ('d.tranfa', 'domenicot', NULL, 'TRNDMN64L12T048Y', NULL, NULL, NULL, NULL, NULL),
 ('e.teresi', 'elenat', NULL, NULL, NULL, NULL, NULL, NULL, 'TRSLNE99S30X203Y'),
 ('g.deblasi', 'giovannidb', NULL, NULL, NULL, NULL, 'DBSGVN66B12C761W', NULL, NULL),
-('L.Dig', 'Linda703318566', 'ijijddjpodkdpodp', NULL, NULL, NULL, NULL, NULL, NULL),
 ('l.sessa', 'lorellas', NULL, NULL, NULL, NULL, NULL, NULL, 'SSSLRL78B19B908X'),
 ('m.sisillo', 'mauros', NULL, NULL, NULL, NULL, NULL, NULL, 'SLLMRA90A29N830P'),
 ('m.verrone', 'maddalenav', NULL, NULL, 'VRRMDD64T32A048N', NULL, NULL, NULL, NULL),
@@ -193,163 +189,12 @@ INSERT INTO `bando` (`id`, `data_inizio_bando`, `data_fine_bando`, `data_inizio_
 CREATE TABLE IF NOT EXISTS `campo_domanda_questionario` (
   `domanda_questionario` int(11) DEFAULT NULL,
   `tipo` varchar(50) DEFAULT NULL,
-  `descrizione` varchar(10000) DEFAULT NULL,
-  `valore` varchar(1000) DEFAULT NULL,
+  `descrizione` varchar(100) DEFAULT NULL,
+  `valore` varchar(50) DEFAULT NULL,
   `id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
   KEY `domanda_questionario` (`domanda_questionario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=658 ;
-
---
--- Dump dei dati per la tabella `campo_domanda_questionario`
---
-
-INSERT INTO `campo_domanda_questionario` (`domanda_questionario`, `tipo`, `descrizione`, `valore`, `id`) VALUES
-(0, 'text', 'Numero:', 'Numero:', 25),
-(159, 'radio', 'Padre', 'Padre', 514),
-(159, 'radio', 'Madre', 'Madre', 515),
-(159, 'radio', 'Entrambi', 'Entrambi', 516),
-(160, 'radio', 'Lattante', 'Lattante', 517),
-(160, 'radio', 'Semidivezzi', 'Semidivezzi', 518),
-(160, 'radio', 'Divezzi', 'Divezzi', 519),
-(161, 'radio', 'Part-time senza pranzo', 'Part-time senza pranzo', 520),
-(161, 'radio', 'Part-time con pranzo', 'Part-time con pranzo', 521),
-(161, 'radio', 'Full-time', 'Full-time', 522),
-(162, 'text', 'Numero:', 'Numero:', 523),
-(163, 'checkbox', 'Nessun titolo', 'Nessun titolo', 524),
-(163, 'checkbox', 'Licenza elementare', 'Licenza elementare', 525),
-(163, 'checkbox', 'Licenza media', 'Licenza media', 526),
-(163, 'checkbox', 'Qualifica professionale o Diploma di scuola superiore', 'Qualifica professionale o Diploma di scuola superiore', 527),
-(163, 'checkbox', 'Diploma di Laurea e/o Laurea', 'Diploma di Laurea e/o Laurea', 528),
-(163, 'checkbox', 'Master e/o Specializzazione postlaurea e/o Dottorato di ricerca', 'Master e/o Specializzazione postlaurea e/o Dottorato di ricerca', 529),
-(164, 'radio', 'Si', 'Si', 530),
-(164, 'radio', 'No', 'No', 531),
-(165, 'radio', 'Si', 'Si', 532),
-(165, 'radio', 'No', 'No', 533),
-(166, 'radio', 'No', 'No', 534),
-(166, 'radio', 'Un po''', 'Un po''', 535),
-(166, 'radio', 'Tanto', 'Tanto', 536),
-(167, 'checkbox', 'allegro', 'allegro', 537),
-(167, 'checkbox', 'giocoso', 'giocoso', 538),
-(167, 'checkbox', 'stanco', 'stanco', 539),
-(167, 'checkbox', 'triste', 'triste', 540),
-(167, 'checkbox', 'assonnato', 'assonnato', 541),
-(167, 'checkbox', 'nervoso', 'nervoso', 542),
-(167, 'checkbox', 'ben curato', 'ben curato', 543),
-(168, 'radio', 'Per niente', 'Per niente', 544),
-(168, 'radio', 'Poco', 'Poco', 545),
-(168, 'radio', 'Abbastanza', 'Abbastanza', 546),
-(168, 'radio', 'Frequentemente', 'Frequentemente', 547),
-(168, 'radio', 'Ogni giorno', 'Ogni giorno', 548),
-(169, 'radio', 'Padre', 'Padre', 549),
-(169, 'radio', 'Madre', 'Madre', 550),
-(169, 'radio', 'Entrambi', 'Entrambi', 551),
-(170, 'checkbox', 'Lattante', 'Lattante', 552),
-(170, 'checkbox', 'Semidivezzi', 'Semidivezzi', 553),
-(170, 'checkbox', 'Divezzi', 'Divezzi', 554),
-(171, 'radio', 'Full-time', 'Full-time', 555),
-(171, 'radio', 'Part-time con pranzo', 'Part-time con pranzo', 556),
-(171, 'radio', 'Part-time senza pranzo', 'Part-time senza pranzo', 557),
-(172, 'radio', 'Per niente', 'Per niente', 558),
-(172, 'radio', 'Poco', 'Poco', 559),
-(172, 'radio', 'Abbastanza', 'Abbastanza', 560),
-(172, 'radio', 'Molto', 'Molto', 561),
-(172, 'radio', 'Totalmente', 'Totalmente', 562),
-(173, 'radio', 'Si', 'Si', 563),
-(173, 'radio', 'Un po''', 'Un po''', 564),
-(173, 'radio', 'No', 'No', 565),
-(174, 'radio', 'Si', 'Si', 566),
-(174, 'radio', 'No', 'No', 567),
-(175, 'radio', 'Padre', 'Padre', 568),
-(175, 'radio', 'Madre', 'Madre', 569),
-(175, 'radio', 'Entrambi', 'Entrambi', 570),
-(176, 'radio', 'Lattante', 'Lattante', 571),
-(176, 'radio', 'Semidivezzi', 'Semidivezzi', 572),
-(176, 'radio', 'Divezzi', 'Divezzi', 573),
-(177, 'radio', 'Part-time senza pranzo', 'Part-time senza pranzo', 574),
-(177, 'radio', 'Part-time con pranzo', 'Part-time con pranzo', 575),
-(177, 'radio', 'Full-time', 'Full-time', 576),
-(178, 'text', 'Anno:', 'Anno:', 577),
-(179, 'text', 'Anno:', 'Anno:', 578),
-(180, 'text', 'Numero:', 'Numero:', 579),
-(181, 'checkbox', 'Nessun titolo', 'Nessun titolo', 580),
-(181, 'checkbox', 'Licenza elementare', 'Licenza elementare', 581),
-(181, 'checkbox', 'Licenza media', 'Licenza media', 582),
-(181, 'checkbox', 'Qualifica professionale o Diploma di scuola superiore', 'Qualifica professionale o Diploma di scuola superiore', 583),
-(181, 'checkbox', 'Diploma di Laurea e/o Laurea', 'Diploma di Laurea e/o Laurea', 584),
-(181, 'checkbox', 'Master e/o Specializzazione postlaurea e/o Dottorato di ricerca', 'Master e/o Specializzazione postlaurea e/o Dottorato di ricerca', 585),
-(182, 'checkbox', 'Nessun titolo', 'Nessun titolo', 586),
-(182, 'checkbox', 'Licenza elementare', 'Licenza elementare', 587),
-(182, 'checkbox', 'Licenza media', 'Licenza media', 588),
-(182, 'checkbox', 'Qualifica professionale o Diploma di scuola superiore', 'Qualifica professionale o Diploma di scuola superiore', 589),
-(182, 'checkbox', 'Diploma di Laurea e/o Laurea', 'Diploma di Laurea e/o Laurea', 590),
-(182, 'checkbox', 'Master e/o Specializzazione postlaurea e/o Dottorato di ricerca', 'Master e/o Specializzazione postlaurea e/o Dottorato di ricerca', 591),
-(183, 'radio', 'Si', 'Si', 592),
-(183, 'radio', 'No', 'No', 593),
-(184, 'radio', 'Personale TA', 'Personale TA', 594),
-(184, 'radio', 'Personale Docente', 'Personale Docente', 595),
-(184, 'radio', 'Ho risposto no alla domanda precedente', 'Ho risposto no alla domanda precedente', 596),
-(185, 'checkbox', 'non avevamo alternative', 'non avevamo alternative', 597),
-(185, 'checkbox', 'per esigenze di lavoro', 'per esigenze di lavoro', 598),
-(185, 'checkbox', 'condividiamo il progetto educativo', 'condividiamo il progetto educativo', 599),
-(185, 'checkbox', 'il costo è minore di una baby-sitter', 'il costo è minore di una baby-sitter', 600),
-(185, 'checkbox', 'l', 'l', 601),
-(185, 'checkbox', 'siamo stati consigliati dal pediatra', 'siamo stati consigliati dal pediatra', 602),
-(185, 'checkbox', 'siamo stati consigliati da altri genitori', 'siamo stati consigliati da altri genitori', 603),
-(185, 'checkbox', 'pensiamo sia di aiuto alla educazione del bambino', 'pensiamo sia di aiuto alla educazione del bambino', 604),
-(185, 'checkbox', 'conoscevamo l', 'conoscevamo l', 605),
-(186, 'checkbox', 'ci siamo rivolti direttamente all', 'ci siamo rivolti direttamente all', 606),
-(186, 'checkbox', 'ci siamo rivolti agli uffici comunali di Fisciano', 'ci siamo rivolti agli uffici comunali di Fisciano', 607),
-(186, 'checkbox', 'ci siamo rivolti all', 'ci siamo rivolti all', 608),
-(186, 'checkbox', 'ci siamo rivolti a conoscenti', 'ci siamo rivolti a conoscenti', 609),
-(186, 'checkbox', 'abbiamo consultato il sito dell', 'abbiamo consultato il sito dell', 610),
-(186, 'checkbox', 'Altro', 'Altro', 611),
-(187, 'radio', 'da 0 a 2 mesi', 'da 0 a 2 mesi', 612),
-(187, 'radio', 'da 2 a 4 mesi', 'da 2 a 4 mesi', 613),
-(187, 'radio', 'da 4 a 6 mesi', 'da 4 a 6 mesi', 614),
-(187, 'radio', 'da 6 a 8 mesi', 'da 6 a 8 mesi', 615),
-(187, 'radio', 'da 8 a 10 mesi', 'da 8 a 10 mesi', 616),
-(187, 'radio', 'oltre 10 mesi', 'oltre 10 mesi', 617),
-(188, 'radio', 'Si', 'Si', 618),
-(188, 'radio', 'No', 'No', 619),
-(189, 'text', 'Motivazione:', 'Motivazione:', 620),
-(190, 'radio', 'Si', 'Si', 621),
-(190, 'radio', 'No', 'No', 622),
-(191, 'radio', 'il bambino ha superato i limiti di età e intendo iscriverlo alla scuola dell', 'il bambino ha superato i limiti di età e intendo iscriverlo alla scuola dell', 623),
-(191, 'radio', 'il bambino non ha superato i limiti di età ma non intendo iscriverlo all?asilo dell?Università', 'il bambino non ha superato i limiti di età ma non intendo iscriverlo all?asilo dell?Università', 624),
-(191, 'radio', 'il bambino non ha superato i limiti di età ma intendo inscriverlo all', 'il bambino non ha superato i limiti di età ma intendo inscriverlo all', 625),
-(192, 'radio', 'Si', 'Si', 626),
-(192, 'radio', 'No', 'No', 627),
-(193, 'radio', 'Per niente ', 'Per niente ', 628),
-(193, 'radio', 'Poco ', 'Poco ', 629),
-(193, 'radio', 'Abbastanza', 'Abbastanza', 630),
-(193, 'radio', 'Molto', 'Molto', 631),
-(193, 'radio', 'Totalmente', 'Totalmente', 632),
-(194, 'radio', 'Per niente ', 'Per niente ', 633),
-(194, 'radio', 'Poco ', 'Poco ', 634),
-(194, 'radio', 'Abbastanza', 'Abbastanza', 635),
-(194, 'radio', 'Molto', 'Molto', 636),
-(194, 'radio', 'Totalmente', 'Totalmente', 637),
-(195, 'radio', 'Per niente ', 'Per niente ', 638),
-(195, 'radio', 'Poco ', 'Poco ', 639),
-(195, 'radio', 'Abbastanza', 'Abbastanza', 640),
-(195, 'radio', 'Molto', 'Molto', 641),
-(195, 'radio', 'Totalmente', 'Totalmente', 642),
-(196, 'radio', 'Per niente ', 'Per niente ', 643),
-(196, 'radio', 'Poco ', 'Poco ', 644),
-(196, 'radio', 'Abbastanza', 'Abbastanza', 645),
-(196, 'radio', 'Molto', 'Molto', 646),
-(196, 'radio', 'Totalmente', 'Totalmente', 647),
-(197, 'radio', 'Per niente ', 'Per niente ', 648),
-(197, 'radio', 'Poco ', 'Poco ', 649),
-(197, 'radio', 'Abbastanza', 'Abbastanza', 650),
-(197, 'radio', 'Molto', 'Molto', 651),
-(197, 'radio', 'Totalmente', 'Totalmente', 652),
-(198, 'radio', 'Per niente ', 'Per niente ', 653),
-(198, 'radio', 'Poco ', 'Poco ', 654),
-(198, 'radio', 'Abbastanza', 'Abbastanza', 655),
-(198, 'radio', 'Molto', 'Molto', 656),
-(198, 'radio', 'Totalmente', 'Totalmente', 657);
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -444,57 +289,11 @@ CREATE TABLE IF NOT EXISTS `domanda_iscrizione` (
 
 CREATE TABLE IF NOT EXISTS `domanda_questionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `descrizione` varchar(10000) DEFAULT NULL,
+  `descrizione` varchar(100) DEFAULT NULL,
   `questionario` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `questionario` (`questionario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=199 ;
-
---
--- Dump dei dati per la tabella `domanda_questionario`
---
-
-INSERT INTO `domanda_questionario` (`id`, `descrizione`, `questionario`) VALUES
-(159, 'Compila il questionario', 4),
-(160, 'Sezione di appartenenza del bambino', 4),
-(161, 'Regime di frequenza del bambino', 4),
-(162, 'Numero di componenti della famiglia', 4),
-(163, 'Titolo di studi padre', 4),
-(164, 'Almeno uno dei genitori è dipendente dell''Università degli Studi di Salerno?', 4),
-(165, 'Avete presentato rinuncia al servizio?', 4),
-(166, 'Pensa che l''asilo sia costoso?', 4),
-(167, 'Come vede suo figlio al ritorno dall''asilo?', 4),
-(168, 'Quanto utilizza mensilmente il sito dell''asilo?', 4),
-(169, 'Compila il questionario', 5),
-(170, 'Sezione di appartenenza del bambino', 5),
-(171, 'Regime di frequenza del bambino', 5),
-(172, 'Il servizio mensa le sembra efficiente?', 5),
-(173, 'Al rientro dall''asilo suo figlio ha fame?', 5),
-(174, 'Suo figlio presenta allergie alimentari?', 5),
-(175, 'Compila il questionario', 3),
-(176, 'Sezione di appartenenza del bambino', 3),
-(177, 'Regime di frequenza del bambino', 3),
-(178, 'Anno di nascita padre', 3),
-(179, 'Anno di nascita madre', 3),
-(180, 'Numero di componenti della famiglia', 3),
-(181, 'Titolo di studi padre', 3),
-(182, 'Titolo di studi madre', 3),
-(183, 'Almeno uno dei genitori è dipendente dell', 3),
-(184, 'Con quale profilo? ', 3),
-(185, 'Per quali motivi avete iscritto il Vostro bambino/bambina all', 3),
-(186, 'Per decidere di iscrivere il Vostro bambino/bambina come avete acquisito informazioni preventive?', 3),
-(187, 'Avete usufruito del servizio per circa mesi', 3),
-(188, 'Avete presentato rinuncia al servizio?', 3),
-(189, 'Indicate il motivo per cui avete deciso di presentare la domanda di rinuncia, o perchè non l', 3),
-(190, 'Pensate di iscrivere il bambino per l', 3),
-(191, 'Indicare la motivazione della risposta precedente', 3),
-(192, 'Ritenete utile l ampliamento del calendario educativo che da  la possibilità ai richiedenti di frequentare il Nido il mese di luglio con pacchetti personalizzati (settimanali)?         ', 3),
-(193, 'Quanto è soddisfatto dei Tempi per l', 3),
-(194, 'Quanto sono importanti per lei i Tempi per l', 3),
-(195, 'Quanto è soddisfatto delle modalità di inserimento del bambino?', 3),
-(196, 'Quanto sono importanti per lei le modalità di inserimento del bambino?', 3),
-(197, 'Quanto è soddisfatta della Discrezione e riservatezza del personale educativo?', 3),
-(198, 'Quanto sono importanti per lei la Discrezione e riservatezza del personale educativo?', 3);
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -663,13 +462,6 @@ CREATE TABLE IF NOT EXISTS `genitore` (
   `tipo_contratto` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`codice_fiscale`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dump dei dati per la tabella `genitore`
---
-
-INSERT INTO `genitore` (`nome`, `cognome`, `codice_fiscale`, `telefono`, `email`, `data_di_nascita`, `comune_di_nascita`, `indirizzo_residenza`, `tipo`, `categoria_appartenenza`, `cittadinanza`, `comune_residenza`, `numero_civico_residenza`, `cap_residenza`, `provincia_residenza`, `comune_domicilio`, `indirizzo_domicilio`, `numero_civico_domicilio`, `cap_domicilio`, `provincia_domicilio`, `dipendente_presso`, `rapporti_ateneo_salerno`, `rapporti_comune_fisciano`, `rapporto_parentela`, `status_lavorativo`, `scadenza_contratto`, `condizione_lavorativa`, `tipo_contratto`) VALUES
-('Linda', 'Dig', 'ijijddjpodkdpodp', NULL, 'hilindig@gmail.com', NULL, NULL, NULL, 'personale_studenti', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -2044,40 +1836,6 @@ INSERT INTO `phpbb_drafts` (`draft_id`, `user_id`, `topic_id`, `forum_id`, `save
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `phpbb_extension_groups`
---
-
-CREATE TABLE IF NOT EXISTS `phpbb_extension_groups` (
-  `group_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `group_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `cat_id` tinyint(2) NOT NULL DEFAULT '0',
-  `allow_group` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `download_mode` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  `upload_icon` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
-  `max_filesize` int(20) unsigned NOT NULL DEFAULT '0',
-  `allowed_forums` text COLLATE utf8_bin NOT NULL,
-  `allow_in_pm` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=10 ;
-
---
--- Dump dei dati per la tabella `phpbb_extension_groups`
---
-
-INSERT INTO `phpbb_extension_groups` (`group_id`, `group_name`, `cat_id`, `allow_group`, `download_mode`, `upload_icon`, `max_filesize`, `allowed_forums`, `allow_in_pm`) VALUES
-(1, 'IMAGES', 1, 1, 1, '', 0, '', 0),
-(2, 'ARCHIVES', 0, 1, 1, '', 0, '', 0),
-(3, 'PLAIN_TEXT', 0, 0, 1, '', 0, '', 0),
-(4, 'DOCUMENTS', 0, 0, 1, '', 0, '', 0),
-(5, 'REAL_MEDIA', 3, 0, 1, '', 0, '', 0),
-(6, 'WINDOWS_MEDIA', 2, 0, 1, '', 0, '', 0),
-(7, 'FLASH_FILES', 5, 0, 1, '', 0, '', 0),
-(8, 'QUICKTIME_MEDIA', 6, 0, 1, '', 0, '', 0),
-(9, 'DOWNLOADABLE_FILES', 0, 0, 1, '', 0, '', 0);
-
--- --------------------------------------------------------
-
---
 -- Struttura della tabella `phpbb_extensions`
 --
 
@@ -2159,6 +1917,40 @@ INSERT INTO `phpbb_extensions` (`extension_id`, `group_id`, `extension`) VALUES
 (64, 9, 'mp3'),
 (65, 9, 'ogg'),
 (66, 9, 'ogm');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `phpbb_extension_groups`
+--
+
+CREATE TABLE IF NOT EXISTS `phpbb_extension_groups` (
+  `group_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `group_name` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `cat_id` tinyint(2) NOT NULL DEFAULT '0',
+  `allow_group` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `download_mode` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `upload_icon` varchar(255) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `max_filesize` int(20) unsigned NOT NULL DEFAULT '0',
+  `allowed_forums` text COLLATE utf8_bin NOT NULL,
+  `allow_in_pm` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`group_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=10 ;
+
+--
+-- Dump dei dati per la tabella `phpbb_extension_groups`
+--
+
+INSERT INTO `phpbb_extension_groups` (`group_id`, `group_name`, `cat_id`, `allow_group`, `download_mode`, `upload_icon`, `max_filesize`, `allowed_forums`, `allow_in_pm`) VALUES
+(1, 'IMAGES', 1, 1, 1, '', 0, '', 0),
+(2, 'ARCHIVES', 0, 1, 1, '', 0, '', 0),
+(3, 'PLAIN_TEXT', 0, 0, 1, '', 0, '', 0),
+(4, 'DOCUMENTS', 0, 0, 1, '', 0, '', 0),
+(5, 'REAL_MEDIA', 3, 0, 1, '', 0, '', 0),
+(6, 'WINDOWS_MEDIA', 2, 0, 1, '', 0, '', 0),
+(7, 'FLASH_FILES', 5, 0, 1, '', 0, '', 0),
+(8, 'QUICKTIME_MEDIA', 6, 0, 1, '', 0, '', 0),
+(9, 'DOWNLOADABLE_FILES', 0, 0, 1, '', 0, '', 0);
 
 -- --------------------------------------------------------
 
@@ -4240,87 +4032,6 @@ CREATE TABLE IF NOT EXISTS `phpbb_topics_watch` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `phpbb_user_group`
---
-
-CREATE TABLE IF NOT EXISTS `phpbb_user_group` (
-  `group_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `user_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
-  `group_leader` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `user_pending` tinyint(1) unsigned NOT NULL DEFAULT '1',
-  KEY `group_id` (`group_id`),
-  KEY `user_id` (`user_id`),
-  KEY `group_leader` (`group_leader`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Dump dei dati per la tabella `phpbb_user_group`
---
-
-INSERT INTO `phpbb_user_group` (`group_id`, `user_id`, `group_leader`, `user_pending`) VALUES
-(2, 2, 0, 0),
-(4, 2, 0, 0),
-(5, 2, 1, 0),
-(6, 3, 0, 0),
-(6, 4, 0, 0),
-(6, 5, 0, 0),
-(6, 6, 0, 0),
-(6, 7, 0, 0),
-(6, 8, 0, 0),
-(6, 9, 0, 0),
-(6, 10, 0, 0),
-(6, 11, 0, 0),
-(6, 12, 0, 0),
-(6, 13, 0, 0),
-(6, 14, 0, 0),
-(6, 15, 0, 0),
-(6, 16, 0, 0),
-(6, 17, 0, 0),
-(6, 18, 0, 0),
-(6, 19, 0, 0),
-(6, 20, 0, 0),
-(6, 21, 0, 0),
-(6, 22, 0, 0),
-(6, 23, 0, 0),
-(6, 24, 0, 0),
-(6, 25, 0, 0),
-(6, 26, 0, 0),
-(6, 27, 0, 0),
-(6, 28, 0, 0),
-(6, 29, 0, 0),
-(6, 30, 0, 0),
-(6, 31, 0, 0),
-(6, 32, 0, 0),
-(6, 33, 0, 0),
-(6, 34, 0, 0),
-(6, 35, 0, 0),
-(6, 36, 0, 0),
-(6, 37, 0, 0),
-(6, 38, 0, 0),
-(6, 39, 0, 0),
-(6, 40, 0, 0),
-(6, 41, 0, 0),
-(6, 42, 0, 0),
-(6, 43, 0, 0),
-(6, 44, 0, 0),
-(6, 45, 0, 0),
-(6, 46, 0, 0),
-(6, 47, 0, 0),
-(6, 48, 0, 0),
-(6, 49, 0, 0),
-(6, 50, 0, 0),
-(6, 51, 0, 0),
-(6, 52, 0, 0),
-(6, 53, 0, 0),
-(2, 57, 0, 0),
-(2, 58, 0, 0),
-(7, 58, 0, 0),
-(2, 60, 0, 0),
-(7, 60, 0, 0);
-
--- --------------------------------------------------------
-
---
 -- Struttura della tabella `phpbb_users`
 --
 
@@ -4406,7 +4117,7 @@ CREATE TABLE IF NOT EXISTS `phpbb_users` (
   KEY `user_birthday` (`user_birthday`),
   KEY `user_email_hash` (`user_email_hash`),
   KEY `user_type` (`user_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=59 ;
 
 --
 -- Dump dei dati per la tabella `phpbb_users`
@@ -4469,8 +4180,88 @@ INSERT INTO `phpbb_users` (`user_id`, `user_type`, `group_id`, `user_permissions
 (54, 0, 3, '', 0, '', 0, 'Genitore1', '', '$H$9gks7rwydvAle.osMJlLvdYv2MfzdP/', 1355029237, 0, '', 0, '', 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, '', '0.00', 0, 'd M Y H:i', 0, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 0, 0),
 (56, 0, 2, '', 0, '::1', 1355162969, 'ciaomondo', 'ciaomondo', '$H$9hRJ0RE7VOMP3cWa2jQuP0YRIQoAdD0', 1355162969, 0, 'ciccio@tin.it', 123711018613, '', 1355163010, 1355162969, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'it', '0.00', 0, '|d/m/Y|, G:i', 4, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '4e0ddbcdf3ae7804', 1, 0, 0),
 (57, 0, 2, '', 0, '::1', 1355169220, 'genitore2', 'genitore2', '$H$91eJ/ZuYJXYpb/fqq2jm.pIm1LnTmW.', 1355169220, 0, 'prova@hotmail.it', 128444149616, '', 1355174037, 1355169220, 1355173113, '', '', 0, 0, 0, 0, 0, 0, 1, 'it', '0.00', 0, '|d/m/Y|, G:i', 4, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'e6d8a65c47a76ddc', 1, 0, 0),
-(58, 0, 2, '', 0, '::1', 1355174541, 'genitore1', 'genitore1', '$H$9uAZ8WUI4Pneo/uiBglHVN0JSCO5ui1', 1355174541, 0, 'a@tic.it', 32536018108, '', 1355181902, 1355174541, 1355174726, '', '', 0, 0, 0, 0, 0, 0, 1, 'it', '0.00', 0, '|d/m/Y|, G:i', 4, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0502a3cdd7af31c5', 1, 0, 0),
-(59, 0, 2, '', 0, '', 1356119120, 'L.Dig', 'l.dig', '3d6decaad1cd280b609b5f1d1aee6b5a', 0, 0, 'hilindig@gmail.com', 0, '', 0, 0, 0, '', '', 0, 0, 0, 0, 0, 0, 0, 'it', '1.00', 1, '|d/m/Y|, G:i', 0, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 0, 0);
+(58, 0, 2, '', 0, '::1', 1355174541, 'genitore1', 'genitore1', '$H$9uAZ8WUI4Pneo/uiBglHVN0JSCO5ui1', 1355174541, 0, 'a@tic.it', 32536018108, '', 1355181902, 1355174541, 1355174726, '', '', 0, 0, 0, 0, 0, 0, 1, 'it', '0.00', 0, '|d/m/Y|, G:i', 4, 0, '', 0, 0, 0, 0, -3, 0, 0, 't', 'd', 0, 't', 'a', 0, 1, 0, 1, 1, 1, 1, 230271, '', 0, 0, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '0502a3cdd7af31c5', 1, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `phpbb_user_group`
+--
+
+CREATE TABLE IF NOT EXISTS `phpbb_user_group` (
+  `group_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `user_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `group_leader` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `user_pending` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  KEY `group_id` (`group_id`),
+  KEY `user_id` (`user_id`),
+  KEY `group_leader` (`group_leader`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dump dei dati per la tabella `phpbb_user_group`
+--
+
+INSERT INTO `phpbb_user_group` (`group_id`, `user_id`, `group_leader`, `user_pending`) VALUES
+(2, 2, 0, 0),
+(4, 2, 0, 0),
+(5, 2, 1, 0),
+(6, 3, 0, 0),
+(6, 4, 0, 0),
+(6, 5, 0, 0),
+(6, 6, 0, 0),
+(6, 7, 0, 0),
+(6, 8, 0, 0),
+(6, 9, 0, 0),
+(6, 10, 0, 0),
+(6, 11, 0, 0),
+(6, 12, 0, 0),
+(6, 13, 0, 0),
+(6, 14, 0, 0),
+(6, 15, 0, 0),
+(6, 16, 0, 0),
+(6, 17, 0, 0),
+(6, 18, 0, 0),
+(6, 19, 0, 0),
+(6, 20, 0, 0),
+(6, 21, 0, 0),
+(6, 22, 0, 0),
+(6, 23, 0, 0),
+(6, 24, 0, 0),
+(6, 25, 0, 0),
+(6, 26, 0, 0),
+(6, 27, 0, 0),
+(6, 28, 0, 0),
+(6, 29, 0, 0),
+(6, 30, 0, 0),
+(6, 31, 0, 0),
+(6, 32, 0, 0),
+(6, 33, 0, 0),
+(6, 34, 0, 0),
+(6, 35, 0, 0),
+(6, 36, 0, 0),
+(6, 37, 0, 0),
+(6, 38, 0, 0),
+(6, 39, 0, 0),
+(6, 40, 0, 0),
+(6, 41, 0, 0),
+(6, 42, 0, 0),
+(6, 43, 0, 0),
+(6, 44, 0, 0),
+(6, 45, 0, 0),
+(6, 46, 0, 0),
+(6, 47, 0, 0),
+(6, 48, 0, 0),
+(6, 49, 0, 0),
+(6, 50, 0, 0),
+(6, 51, 0, 0),
+(6, 52, 0, 0),
+(6, 53, 0, 0),
+(2, 57, 0, 0),
+(2, 58, 0, 0),
+(7, 58, 0, 0),
+(2, 60, 0, 0),
+(7, 60, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -4611,19 +4402,10 @@ CREATE TABLE IF NOT EXISTS `questionario` (
   `pathname` varchar(100) DEFAULT NULL,
   `periodo_inizio` date DEFAULT NULL,
   `periodo_fine` date DEFAULT NULL,
-  `nome` varchar(200) DEFAULT NULL,
-  `descrizione` varchar(10000) DEFAULT NULL,
+  `nome` varchar(50) DEFAULT NULL,
+  `descrizione` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
-
---
--- Dump dei dati per la tabella `questionario`
---
-
-INSERT INTO `questionario` (`id`, `flag_rinuncia`, `pathname`, `periodo_inizio`, `periodo_fine`, `nome`, `descrizione`) VALUES
-(3, 'false', NULL, '2012-12-01', '2013-01-31', 'Questionario controllo qualità asilo nido Mazzetti, Gradimento Genitori ', 'Gentili Genitori,\r\nVi chiediamo cortesemente di rispondere alle domande del presente questionario: i dati raccolti permetteranno di effettuare un?analisi delle varie componenti che caratterizzano il Nido. Le indicazioni che emergeranno da parte dei genitori, potranno essere tenute in considerazione per un miglioramento del Servizio stesso. \r\n\r\nIl trattamento dei dati personali sarà effettuato in forma anonima e i dati verranno collezionati solo in forma cumulativa. \r\n'),
-(4, 'false', NULL, '2012-12-01', '2013-05-31', 'Questionario controllo qualità asilo nido Mazzetti, Gradimento Genitori secondo semestre', 'Gentili Genitori, Vi chiediamo cortesemente di rispondere alle domande del presente questionario: i dati raccolti permetteranno di effettuare un''analisi delle varie componenti che caratterizzano il Nido. Le indicazioni che emergeranno da parte dei genitori, potranno essere tenute in considerazione per un miglioramento del Servizio stesso. Il trattamento dei dati personali sarà effettuato in forma anonima e i dati verranno collezionati solo in forma cumulativa. '),
-(5, 'false', NULL, '2012-12-01', '2013-07-31', 'Questionario gradimento della Mensa, asilo nido Mazzetti', 'Gentili Genitori, Vi chiediamo cortesemente di rispondere alle domande del presente questionario: i dati raccolti permetteranno di effettuare un''analisi delle varie componenti che caratterizzano il Nido. Le indicazioni che emergeranno da parte dei genitori, potranno essere tenute in considerazione per un miglioramento del Servizio Mensa. \r\nIl trattamento dei dati personali sarà effettuato in forma anonima e i dati verranno collezionati solo in forma cumulativa.');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
 
@@ -4836,7 +4618,7 @@ INSERT INTO `richiesta_tirocinante` (`id`, `descrizione`, `data`, `ora_inizio`, 
 
 CREATE TABLE IF NOT EXISTS `risposta_questionario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `valore` varchar(10000) DEFAULT NULL,
+  `valore` varchar(50) DEFAULT NULL,
   `genitore` varchar(50) DEFAULT NULL,
   `domanda` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
