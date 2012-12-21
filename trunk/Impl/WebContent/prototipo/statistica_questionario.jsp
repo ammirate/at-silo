@@ -63,9 +63,11 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
 				Integer p = stat.getPercentualiFromCampo(quest.getDomande().get(i).getId(), quest.getDomande().get(i).getCampi().get(j).getId());
-				double p_double=p.doubleValue();
+				double p_double=0.0;
+				if(p!=null)
+				{		p_double=p.doubleValue();}
 				double perc=0.0;
-				if(stat.getNumber_comp()!=0)
+				if((stat.getNumber_comp()!=0)&&(p_double!=0.0))
 					{ perc = p_double/stat.getNumber_comp();}
 				
 				System.out.println("p_double:"+p_double+"perc"+perc+"numcom"+stat.getNumber_comp());
