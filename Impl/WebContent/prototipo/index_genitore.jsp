@@ -42,7 +42,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
     	if(path!=null && path!="")
     	{
     		out.append("Se vuoi consultare il regolamento del bando, visita ")
-    		.append("<a href='"+path+"' target='_blank'>questo indirizzo</a>.");
+    		.append("<a href='${pageContext.request.contextPath}/"+path+"' target='_blank'>questo indirizzo</a>.");
     	}
     %>  
     </pre>

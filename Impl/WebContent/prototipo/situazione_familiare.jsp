@@ -99,7 +99,7 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
  			out.print("<script type=text/javascript> alert('Modifica effettuata con successo');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
  			if ((request.getParameter("errore")) != null) {
- 				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
+ 				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"'); window.location='"+temp_nome_chiamante+"';</script>");
  		 	} else {
 			out.print("<script type=text/javascript>alert('Modifica fallita');window.location='"+temp_nome_chiamante+"';</script>");
 			}

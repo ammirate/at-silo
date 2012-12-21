@@ -132,7 +132,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 				String pathprint="";
 				if(propriEventi.get(k).getPath()!=null)
 				{
-					pathprint = "<a href='../"+propriEventi.get(k).getPath()+"'>Allegato</a>";
+					pathprint = "<a href='${pageContext.request.contextPath}/"+propriEventi.get(k).getPath()+"'>Allegato</a>";
 				}
 				out.append("<tr><td>")
 					.append("<input type='radio' name='evento' value='")
