@@ -1,7 +1,12 @@
 <%@
 	include file="atsilo_files/header.jsp" %>
 
-
+<%
+ Date dataCorrente = new Date(System.currentTimeMillis());
+  int anno = dataCorrente.getYear();
+  anno += 1900;
+  int mese = dataCorrente.getMonth();
+%>
 
 
 
@@ -75,22 +80,70 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 	<tr>
 		<td align="center">
 			<select name="month">
-				<option value="0">Gennaio</option>
-				<option value="1">Febbraio</option>
-				<option value="2">Marzo</option>
-				<option value="3">Aprile</option>
-				<option value="4">Maggio</option>
-				<option value="5">Giugno</option>
-				<option value="6">Luglio</option>
-				<option value="7">Agosto</option>
-				<option value="8">Settembre</option>
-				<option value="9">Ottobre</option>
-				<option value="10">Novembre</option>
-				<option value="11">Dicembre</option>
+			<%if (mese == 0){%>
+				<option value="0" selected>Gennaio</option>
+			<%}else{ %>
+			<option value="0" >Gennaio</option>
+			<%} %>
+			<%if (mese == 1){%>
+				<option value="1" selected>Febbraio</option>
+			<%}else{ %>
+			<option value="1" >Febbraio</option>
+			<%} %>
+			<%if (mese == 2){%>
+				<option value="2" selected>Marzo</option>
+			<%}else{ %>
+			<option value="2" >Marzo</option>
+			<%} %>
+			<%if (mese == 3){%>
+				<option value="3" selected>Aprile</option>
+			<%}else{ %>
+			<option value="3" >Aprile</option>
+			<%} %>
+			<%if (mese == 4){%>
+				<option value="4" selected>Maggio</option>
+			<%}else{ %>
+			<option value="4" >Maggio</option>
+			<%} %>
+			<%if (mese == 5){%>
+				<option value="5" selected>Giugno</option>
+			<%}else{ %>
+			<option value="5" >Giugno</option>
+			<%} %>
+			<%if (mese == 6){%>
+				<option value="6" selected>Luglio</option>
+			<%}else{ %>
+			<option value="6" >Luglio</option>
+			<%} %>
+			<%if (mese == 7){%>
+				<option value="7" selected>Agosto</option>
+			<%}else{ %>
+			<option value="7" >Agosto</option>
+			<%} %>
+			<%if (mese == 8){%>
+				<option value="8" selected>Settembre</option>
+			<%}else{ %>
+			<option value="8" >Settembre</option>
+			<%} %>
+			<%if (mese == 9){%>
+				<option value="9" selected>Ottobre</option>
+			<%}else{ %>
+			<option value="9" >Ottobre</option>
+			<%} %>
+			<%if (mese == 10){%>
+				<option value="10" selected>Novembre</option>
+			<%}else{ %>
+			<option value="10" >Novembre</option>
+			<%} %>
+			<%if (mese == 11){%>
+				<option value="11" selected>Dicembre</option>
+			<%}else{ %>
+			<option value="11" >Dicembre</option>
+			<%} %>
 			</select>
 		</td>
 		<td align="center"><input type="text" name="day" size="3" readonly="readonly"/></td>
-		<td align="center"><input type="text" name="year" size="5" value="2012" readonly="readonly" /></td>
+		<td align="center"><input type="text" name="year" size="5" value="<%= anno %>" readonly="readonly" /></td>
 	</tr>
 
 	<tr>
