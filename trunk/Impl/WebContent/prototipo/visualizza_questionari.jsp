@@ -81,9 +81,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			}
 			out.println("<br><br><fieldset>");
 			out.println("<table id='parah"+i+"'>");
-			out.println("<tr><td><h3>Domanda </h3><td><h3>"
+			out.println("<tr><td colspan="+(quest.getDomande().get(i).getCampi().size())+"><h3>Domanda: "
 					+ quest.getDomande().get(i).getDescrizione()
-					+ "'</h3></td></tr>");
+					+ "</h3></td></tr>");
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			quest.getDomande().get(i).getCampi().size();
 			int sentinella=0;
