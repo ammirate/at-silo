@@ -197,8 +197,7 @@ public class ControlQuestionario {
             try {
                 if(!storage.replace(storage.getQuestionario(idQuestionario), newQuestionario))
                     throw new QuestionarioException("Inserimento domande nel questionario fallito");
-                if(!isEditable(storage.getQuestionario(idQuestionario)))
-                    throw new QuestionarioException("Impossibile modificare un questionario attivo");
+                
                 List<DomandaQuestionario> domande_nuove = newQuestionario.getDomande();
                 List<DomandaQuestionario> domande_vecchie = storageD.getDomandeQuestionario(idQuestionario);
                 
