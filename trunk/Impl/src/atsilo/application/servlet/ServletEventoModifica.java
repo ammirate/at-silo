@@ -70,10 +70,13 @@ public class ServletEventoModifica extends HttpServlet {
             Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, oldEvn.getOrganizzatore(), oldEvn.getPath());
             nuovoEvn.setId(Integer.parseInt(id));
             List<Classe> classi = new ArrayList<Classe>();
-            for(int k=0; k<elencoClassi.length;k++){
-               classi.add(crtClass.getClasseById(Integer.parseInt(elencoClassi[k])));
+            if(elencoClassi!=null)
+            {
+                for(int k=0; k<elencoClassi.length;k++){
+                    classi.add(crtClass.getClasseById(Integer.parseInt(elencoClassi[k])));
+                }
+                nuovoEvn.setClassi(classi);
             }
-            nuovoEvn.setClassi(classi);
             if(crt.modificaEvento(oldEvn, nuovoEvn) == true){
                 response.setStatus(response.SC_MOVED_TEMPORARILY);
                 response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate());     

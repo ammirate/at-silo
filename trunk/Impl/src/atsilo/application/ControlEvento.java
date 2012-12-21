@@ -109,18 +109,21 @@ public class ControlEvento {
                 Partecipa partecipa = new Partecipa(classe, evento.getId());
                 dbPartecipa.inserisci(partecipa);
             }
-            /*ControlNotificaMail control = ControlNotificaMail.getInstance();
-            Messaggio messaggio = new NotificaMailEvento(
-                    convertiCC(evento.getCC()), "Creazione ", " ", evento);
-            try {
-                control.inviaMail(messaggio);
-            } catch (MessagingException e) {
-                LOG.log(Level.SEVERE,
-                        "<Errore nel invio del messaggio cauasato da: >", e);
-            } catch (Throwable e) {
-                LOG.log(Level.SEVERE,
-                        "<Errore nel invio del messaggio cauasato da: >", e);
-            }*/
+            if(evento.getCC()!=null)
+            {
+                ControlNotificaMail control = ControlNotificaMail.getInstance();
+                Messaggio messaggio = new NotificaMailEvento(
+                        convertiCC(evento.getCC()), "Creazione ", " ", evento);
+                try {
+                    control.inviaMail(messaggio);
+                } catch (MessagingException e) {
+                    LOG.log(Level.SEVERE,
+                            "<Errore nel invio del messaggio cauasato da: >", e);
+                } catch (Throwable e) {
+                    LOG.log(Level.SEVERE,
+                            "<Errore nel invio del messaggio cauasato da: >", e);
+                }
+            }
             
         } finally {
             db.chiudiConnessione();
@@ -154,7 +157,7 @@ public class ControlEvento {
             try {
                 Evento eventoOrigine = dbEvento.ricercaEventoPerChiave(evento
                         .getId());
-                
+                List<Integer> classiOrigine = dbPartecipa.getClassiPerEvento(eventoOrigine.getId());
                 dbEvento.replace(eventoOrigine, eventoModificato);
                 Iterable<Partecipa> classiDaCancellare = dbPartecipa.getAll();
                 Iterator<Partecipa> classiDelete = classiDaCancellare
@@ -164,22 +167,25 @@ public class ControlEvento {
                     if (partecipa.getEventoId() == eventoOrigine.getId())
                         dbPartecipa.delete(partecipa);
                 }
-                for (Classe classe : eventoOrigine.getClassi()) {
-                    Partecipa partecipa = new Partecipa(classe, evento.getId());
+                for (Classe classe : eventoModificato.getClassi()) {
+                    Partecipa partecipa = new Partecipa(classe, eventoModificato.getId());
                     dbPartecipa.inserisci(partecipa);
                 }
-                /*ControlNotificaMail control = ControlNotificaMail.getInstance();
-                Messaggio messaggio = new NotificaMailEvento(
-                        convertiCC(evento.getCC()), "Modifica", "", evento);
-                try {
-                    control.inviaMail(messaggio);
-                } catch (MessagingException e) {
-                    LOG.log(Level.SEVERE,
-                            "<Errore nel invio del messaggio cauasato da: >", e);
-                } catch (Throwable e) {
-                    LOG.log(Level.SEVERE,
-                            "<Errore nel invio del messaggio cauasato da: >", e);
-                }*/
+                if(evento.getCC()!=null)
+                {
+                    ControlNotificaMail control = ControlNotificaMail.getInstance();
+                    Messaggio messaggio = new NotificaMailEvento(
+                            convertiCC(evento.getCC()), "Modifica", "", evento);
+                    try {
+                        control.inviaMail(messaggio);
+                    } catch (MessagingException e) {
+                        LOG.log(Level.SEVERE,
+                                "<Errore nel invio del messaggio cauasato da: >", e);
+                    } catch (Throwable e) {
+                        LOG.log(Level.SEVERE,
+                                "<Errore nel invio del messaggio cauasato da: >", e);
+                    }
+                }
                 return true;
                 
                 
