@@ -12,17 +12,17 @@
 
 function checkDate(name, field) {
 	var date = field.value;
-	var reg = /^([0-9]{4})\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/;
+	var reg = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/([0-9]{4})/;
 	
 	var m = date.match(reg);
 	
 	if (m == null) {
-		alert('Campo ' + name + ': rispettare il formato YYYY-MM-DD inserendo una data corretta');
+		alert('Campo ' + name + ': rispettare il formato DD/MM/YYYY inserendo una data corretta');
 		return false;
 	}
 	
 
-	var anno = parseInt(m[1]);
+	var anno = parseInt(m[3]);
 	var bisestile = (anno % 4 == 0 && (anno % 100 != 0 || anno % 400 == 0));
 
 	var giorni_nel_mese = {
@@ -36,12 +36,12 @@ function checkDate(name, field) {
 	
 	var mesi = ["", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
 	
-	m[1] = parseInt(m[1]);
-	m[2] = parseInt(m[2]);
 	m[3] = parseInt(m[3]);
+	m[2] = parseInt(m[2]);
+	m[1] = parseInt(m[1]);
 	
-	if (giorni_nel_mese[m[2]] && m[3] > giorni_nel_mese[m[2]]) {
-		alert('Campo ' + name + ': il mese di ' + mesi[m[2]] + ' non ha il giorno ' + m[3]);
+	if (giorni_nel_mese[m[2]] && m[1] > giorni_nel_mese[m[2]]) {
+		alert('Campo ' + name + ': il mese di ' + mesi[m[2]] + ' non ha il giorno ' + m[1]);
 		return false;
 	}
 	
@@ -49,7 +49,7 @@ function checkDate(name, field) {
 }
 
 function checkForm(){
-	var campi = ["inizioB", "fineB", "inizioP", "fineP", "fineR"];
+	var campi = ["data"];
  	
 	for (var i in campi) {
 		if (!checkDate(campi[i], document.getElementById(campi[i]))) {
@@ -87,8 +87,8 @@ String dataVisualizza[] = dataOld.split("-");
 %>
 <fildset><legend>Modifica Evento</legend>
 Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
-<br />Data : <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" readonly="readonly"/>
-<br />Descrizione : <input type="textarea" name="desc" value="<%= oldEvn.getDescrizione() %>" />
+<br />Data : <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" />
+<br />Descrizione : <input type="textarea" name="desc" value="<%= oldEvn.getDescrizione() %>" rows="4" cols="50" />
 <br />Tipo : <input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" />
 <br />CC : <input type="text" name="cc" value="<%= oldEvn.getCC() %>" />
 <% 
@@ -115,7 +115,7 @@ for(int i=0; i<lun ;i++){
 %>
 <input type="hidden" name="oldevento" value="<%= oldEvn.getId() %>" />
 </fildset>
-	<input type="submit" value="Invia Modifica" name="modifica" /> 
+	<input type="submit" value="Invia Modifica" name="modifica" onclick="return checkForm()" /> 
 </form>
 </td><td class="fasciadxvariabile"></td>
 </tr>

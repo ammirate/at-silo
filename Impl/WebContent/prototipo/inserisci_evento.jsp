@@ -8,58 +8,6 @@
 	include file="atsilo_files/header.jsp"
 %>
 
-<script type="text/javascript">
-
-function checkDate(name, field) {
-	var date = field.value;
-	var reg = /^([0-9]{4})\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])/;
-	
-	var m = date.match(reg);
-	
-	if (m == null) {
-		alert('Campo ' + name + ': rispettare il formato YYYY-MM-DD inserendo una data corretta');
-		return false;
-	}
-	
-
-	var anno = parseInt(m[1]);
-	var bisestile = (anno % 4 == 0 && (anno % 100 != 0 || anno % 400 == 0));
-
-	var giorni_nel_mese = {
-		11:30,
-		4:30,
-		6:30,
-		9:30,
-		2:(bisestile) ? 29 : 28,
-		//Tutti gli altri ne han 31
-	};
-	
-	var mesi = ["", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
-	
-	m[1] = parseInt(m[1]);
-	m[2] = parseInt(m[2]);
-	m[3] = parseInt(m[3]);
-	
-	if (giorni_nel_mese[m[2]] && m[3] > giorni_nel_mese[m[2]]) {
-		alert('Campo ' + name + ': il mese di ' + mesi[m[2]] + ' non ha il giorno ' + m[3]);
-		return false;
-	}
-	
-	return true;
-}
-
-function checkForm(){
-	var campi = ["inizioB", "fineB", "inizioP", "fineP", "fineR"];
- 	
-	for (var i in campi) {
-		if (!checkDate(campi[i], document.getElementById(campi[i]))) {
-			return false;
-		}
-	}
-
-}
-
-</script>
 
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
@@ -81,8 +29,8 @@ ControlClassi crtClass = ControlClassi.getIstance();
 %>
 <fildset><legend>Inserisci Evento</legend>
 Nome : <input type="text" name="nome" value="" />
-<br />Data : <input type"text" name="data" value="<%= data %>" onblur="return checkForm()" />
-<br />Descrizione : <input type="textarea" name="desc"  />
+<br />Data : <input type"text" name="data" value="<%= data %>" readonly="readonly" />
+<br />Descrizione : <input type="textarea" rows="4" cols="50" name="desc"  />
 <br />Tipo : <input type="text" name="tipo"  />
 <br />CC : <input type="text" name="cc"  />
 <% 
