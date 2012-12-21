@@ -336,12 +336,18 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
                 
             } catch (GenitoreException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE, getServletName()+" Errore inserimento genitore", e);
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE,getServletName()+ " Errore connessione database", e);
             } catch (InserimentoDatiException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
         }//fine update dati genitore
@@ -352,6 +358,8 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
                 cf_genitore = (controlDatiPersonali.getValoriUtente(username_utente)).getCodiceFiscale();
             } catch (DBConnectionException e1) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e1.getMessage());
+
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e1);
             }
             Genitore genitore_richiedente=new Genitore();
@@ -365,17 +373,25 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
                     pagina_destinazione = new String("prototipo/"+nome_pagina_chiamante+"?successo=failed");
             } catch (DomandaIscrizioneException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } 
             catch (BambinoException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
             catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             } catch (InserimentoDatiException e) {
                 // TODO Blocco di catch autogenerato
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
             }
             

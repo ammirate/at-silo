@@ -173,6 +173,9 @@ public class ControlIscrizione {
         if(d == null)
             throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
         
+        if(!d.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONINVIATA))
+                throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
+        
         //il metodo valuta che tutti i campi dell'iscrizione siano stati inseriti
         Genitore richiedente = d.getGenitore();
         richiedente = dbg.getGenitorePerCF(richiedente.getCodiceFiscale());
@@ -275,8 +278,8 @@ public class ControlIscrizione {
             (bambino.getComuneDomicilio() == null) ||
             (bambino.getProvinciaDomicilio() == null) ||
             (bambino.getCategoriaAppartenenza() == null) ||*/
-            (bambino.getGenitore() == null) ||
-            (bambino.getGenitoreNonRichiedente() == null) 
+            (bambino.getGenitore() == null) /*||
+            (bambino.getGenitoreNonRichiedente() == null)*/ 
         )
             throw new BambinoException("Mancano alcune informazioni del bambino");  
    
