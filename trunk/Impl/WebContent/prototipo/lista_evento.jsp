@@ -9,7 +9,7 @@
 %>
 
 <%
-	if  (request.getParameter("successo") != null && !temp_nome_chiamante.equals("lista_domanda_confermata.jsp"))  { 
+	if (request.getParameter("successo") != null && !temp_nome_chiamante.equals("lista_domanda_confermata.jsp"))  { 
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}
@@ -21,6 +21,11 @@
 
 <script type="text/javascript">
 function modificaForm(){
+	var valoreRadio = document.getElementById("evento").value;
+	if(valoreRadio =''){
+		alert("Selezionare un evento");
+		return false;
+	}
 	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/modifica_evento.jsp");
 	document.getElementById("frm").submit();
 }
