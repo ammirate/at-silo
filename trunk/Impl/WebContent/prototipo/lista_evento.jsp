@@ -21,11 +21,6 @@
 
 <script type="text/javascript">
 function modificaForm(){
-	var valoreRadio = document.getElementById("evento").value;
-	if(valoreRadio ==''){
-		alert("Selezionare un evento");
-		return false;
-	}
 	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/modifica_evento.jsp");
 	document.getElementById("frm").submit();
 }
@@ -116,11 +111,18 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 			}
 		}
 		int pEvenLun = propriEventi.size();
+		String checked = "";
 			for(int k=0; k<pEvenLun;k++){
+				if(k==0){
+					checked="checked";
+				}
+				else{
+					checked="";
+				}
 				out.append("<tr><td>")
 					.append("<input type='radio' name='evento' value='")
 					.append(""+propriEventi.get(k).getId())
-					.append("' />")
+					.append("'"+checked+" />")
 					.append("</td><td>")
 					.append(propriEventi.get(k).getNome())
 					.append("</td><td>")
@@ -134,7 +136,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 			else{
 				
 			
-			out.print("<input type='submit' value='Modifica' id='mod' name='modifica' onclick='return modificaForm()' />");
+			out.print("<input type='submit' value='Modifica' id='mod' name='modifica' onclick='modificaForm()' />");
 			out.print("<input type='submit' value='Elimina' name='elimina' id='mod' />");
 		
 			int aEvenLun = altriEventi.size();
