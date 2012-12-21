@@ -76,7 +76,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <table width="100%">
 <tbody><tr>
 <td>
-<form action="http://localhost:8080/Atsilo/ServletEventoModifica" method="post" >
+<form action="http://localhost:8080/Atsilo/ServletEventoModifica" method="post" enctype="multipart/form-data">
 <%
 String idEvn = request.getParameter("evento");
 int id = Integer.parseInt(idEvn);
@@ -105,6 +105,7 @@ String dataVisualizza[] = dataOld.split("-");
 <tr>
 <td>Descrizione :</td><td> <textarea name="desc"  rows="4" cols="50"><%= oldEvn.getDescrizione() %></textarea></td>
 </tr>
+
 </table>
 <br />Classi Associate all'evento
 <% 
@@ -129,6 +130,8 @@ for(int i=0; i<lun ;i++){
 	}
 }
 %>
+<br />
+Carica Allegato :  <input type="file" name="file" />
 <input type="hidden" name="oldevento" value="<%= oldEvn.getId() %>" />
 </fildset>
 	<input type="submit" value="Invia Modifica" name="modifica" onclick="return checkForm()" /> 
