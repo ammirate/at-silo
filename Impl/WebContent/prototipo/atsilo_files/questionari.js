@@ -39,10 +39,9 @@ function addDomanda() {
 	  nome = "parah" + v;
 	  str = "<br><br><fieldset><table id="+nome+"><tr><td><h3>Domanda: </h3><td><input type=text name='domanda"+v+"' size=80><tr><td> Opzione  <td> <input type=text name=opzione"+v+"[] ></table><br><br>";
 	  str += "<Select name=tipo"+v+" onchange=\"abilitaAdd(this.value, this.name, "+v+")\">" +
-	  		"		<option>Seleziona</option>" +
 	  		"		<option value=1>Selezione Multipla</option>" +
 	  		"		<option value=2>Selezione Unica</option>" +
-	  		"		<option value=3>Risposta Aperta</option>" +
+	  		"		<option value=3 selected>Risposta Aperta</option>" +
 	  		"		</Select><input type=button disabled = disabled id='addCampo"+v+"' value='Aggiungi Campo' onclick=\"display('"+nome+"', "+v+" );\">" +
 	  	    "		<input type=button value='Elimina Domanda' onClick='eliminaDomanda("+  v+")'>"+
 	  		"</fieldset><br><br>";

@@ -57,10 +57,10 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		</table>
 		<br><br>
 		<Select name=tipo0 onchange="abilitaAdd(this.value, this.name, 0)">
-		<option >Seleziona</option>
+	
 		<option value=1 >Selezione Multipla</option>
 		<option value=2>Selezione Unica</option>
-		<option value=3>Risposta Aperta</option>
+		<option value=3 selected>Risposta Aperta</option>
 		</Select>
 	<input type=button id='addCampo0' disabled = disabled value="Aggiungi Campo" onclick="display('parah0', 0);">
 	</fieldset>
