@@ -28,11 +28,24 @@ ControlClassi crtClass = ControlClassi.getIstance();
 
 %>
 <fildset><legend>Inserisci Evento</legend>
-Nome : <input type="text" name="nome" value="" />
-<br />Data : <input type"text" name="data" value="<%= data %>" readonly="readonly" />
-<br />Descrizione : <input type="textarea" rows="4" cols="50" name="desc"  />
-<br />Tipo : <input type="text" name="tipo"  />
-<br />CC : <input type="text" name="cc"  />
+<table>
+<tr>
+<td>Nome :</td><td> <input type="text" name="nome" value="" /></td>
+</tr>
+<tr>
+<td>Data :</td><td>  <input type"text" name="data" value="<%= data %>" readonly="readonly" /></td>
+</tr>
+<tr>
+<td>CC :</td><td>  <input type="text" name="cc"  /></td>
+</tr>
+<tr>
+<td>Tipo :</td><td>  <input type="text" name="tipo"  /></td>
+</tr>
+<tr>
+<td>Descrizione :</td><td><textarea rows="4" cols="50" name="desc"> </textarea></td>
+</tr>
+</table>
+<br />Classi Associate all'evento
 <% 
 int lun = crtClass.getClassi().size();
 for(int i=0; i<lun ;i++){
