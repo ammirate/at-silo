@@ -1,9 +1,10 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+<link rel="stylesheet" type="text/css" href="atsilo_files/toolTip/style.css" />
+<script type="text/javascript" language="javascript" src="atsilo_files/toolTip/script.js"></script>
 <script type="text/javascript" src="atsilo_files/questionari.js"></script>
 <script type="text/javascript" src="atsilo_files/calendar.js"></script>
-
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -55,9 +56,9 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			<tr><td> Opzione  <td> <input type=text name=opzione0[] >
 		</table>
 		<br><br>
-		<Select name=tipo0 onchange="abilitaAdd(this.value, this.name, 0)">
-		<option>Seleziona</option>
-		<option value=1>Selezione Multipla</option>
+		<Select   name=tipo0 onchange="abilitaAdd(this.value, this.name, 0)">
+		<option >Seleziona</option>
+		<option value=1 >Selezione Multipla</option>
 		<option value=2>Selezione Unica</option>
 		<option value=3>Risposta Aperta</option>
 		</Select>

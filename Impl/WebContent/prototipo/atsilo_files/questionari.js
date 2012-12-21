@@ -11,7 +11,10 @@ function addInput(id) {
   display(id);
   c++;
 }
-
+function createToolTip(){
+	
+	var i=10;
+}
 function set(id) {
 		if(idM!=id) {
 			idM=id;

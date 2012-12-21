@@ -1,6 +1,7 @@
 
 <%@page import="atsilo.exception.QuestionarioException"%>
 <%@page import="atsilo.exception.DBConnectionException"%>
+
 <%@page import="java.sql.Date"%>
 <%@page import="atsilo.application.ControlQuestionario"%>
 <%@page import="atsilo.entity.*" %>
@@ -10,6 +11,9 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+<link rel="stylesheet" type="text/css" href="atsilo_files/toolTip/style.css" />
+<script type="text/javascript" language="javascript" src="atsilo_files/toolTip/script.js"></script>
+<script type="text/javascript" src="atsilo_files/questionari.js"></script>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>
@@ -58,6 +62,10 @@ if(request.getParameter("success").equals("4")) {
 }
 catch (Exception e) {}
 %>
+
+<% 
+if ((request.getParameter("type")==null)){out.println("<center><h2><b>Lista Questionari</b></h2></center><h4><b>I questionari attualmente in vigore non possono essere modificati o cancellati</b></h4>");}; 
+%>
 <br><br><br>
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
@@ -95,6 +103,7 @@ catch (Exception e) {}
 	}
 	try {
 		if (request.getParameter("type").equals("genitore")) {
+			
 			g = true;
 			cf = request.getParameter("cf");
 		}
@@ -133,30 +142,34 @@ catch (Exception e) {}
 					+ list.get(i).getId()
 					+ "&codfis="
 					+ cf
-					+ "'><img src='atsilo_images/visualizza.gif'></a></tr>");
+					+ "'><img src='atsilo_images/visualizza.gif' onmouseover=\"tooltip.show('Compila Questionario')\" onmouseout=\"tooltip.hide();\"></a></tr>");
 		} else {
 			
 			out.println("<td align=center style='padding: 10px'>");
 			if (q.isEditable(list.get(i))) {
 				out.println("<a href='modifica_questionario.jsp?id="
 						+ list.get(i).getId()
-						+ "'><img src='atsilo_images/modifica.png'></a><a href='lista_questionari.jsp?action=cancel&id="
+						+ " '><img src='atsilo_images/modifica.png' onmouseover=\"tooltip.show('Modifica Questionario')\" onmouseout=\"tooltip.hide();\"></a><a href='lista_questionari.jsp?action=cancel&id="
 						+ list.get(i).getId()
-						+ "&success=3'><img src='atsilo_images/cancella.png'></a>");
+						+ "&success=3'><img src='atsilo_images/cancella.png' onmouseover=\"tooltip.show('Cancella Questionario')\" onmouseout=\"tooltip.hide();\"></a>");
 			}
 			out.println("<a href='visualizza_questionari.jsp?id="
 					+ list.get(i).getId()
-					+ "'><img src='atsilo_images/visualizza.gif'></a><a href='statistica_questionario.jsp?id="
+					+ "'><img src='atsilo_images/visualizza.gif' onmouseover=\"tooltip.show('Visualizza Questionario')\" onmouseout=\"tooltip.hide();\"></a><a href='statistica_questionario.jsp?id="
 					+ list.get(i).getId()
-					+ "'><img src='atsilo_images/grafico.jpg' width=50 height=50></a>"
+					+ "'><img src='atsilo_images/grafico.jpg' onmouseover=\"tooltip.show('Visualizza Statistiche')\" onmouseout=\"tooltip.hide();\"width=50 height=50></a>"
 					+ "</tr>");
 		}
 	}
 	
 	
 %>
-</table>
-<p><strong><br />
+
+</table >
+<br><br><br><br>
+
+
+<p><strong>
 </strong></p>
 <p>&nbsp;</p></td>
 </tr>
