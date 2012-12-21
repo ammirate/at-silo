@@ -85,12 +85,25 @@ ControlClassi crtClass = ControlClassi.getIstance();
 String dataOld = oldEvn.getData().toString();
 String dataVisualizza[] = dataOld.split("-");
 %>
+
 <fildset><legend>Modifica Evento</legend>
-Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
-<br />Data : <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" />
-<br />Descrizione : <textarea name="desc"  rows="4" cols="50"></textarea>
-<br />Tipo : <input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" />
-<br />CC : <input type="text" name="cc" value="<%= oldEvn.getCC() %>" />
+<table>
+<tr>
+<td>Nome :</td><td> <input type="text" name="nome" value="<%= oldEvn.getNome() %>" /></td>
+</tr>
+<tr>
+<td>Data :</td><td> <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" /></td>
+</tr>
+<tr>
+<td>Tipo : </td><td><input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" /></td>
+</tr>
+<tr>
+<td>CC : </td><td><input type="text" name="cc" value="<%= oldEvn.getCC() %>" /></td>
+</tr>
+<tr>
+<td>Descrizione :</td><td> <textarea name="desc"  rows="4" cols="50"></textarea></td>
+</tr>
+</table>
 <% 
 List<Integer> lidc=new ArrayList<Integer>();
 for(Classe c : oldEvn.getClassi())
