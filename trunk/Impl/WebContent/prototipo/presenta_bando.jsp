@@ -31,7 +31,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
 	  cfb=(String)request.getParameter("select_bambini");
 	 %>
  <%
- 	if   (request.getParameter("successo") != null && !temp_nome_chiamante.equals("presenta_bando.jsp") ) { 
+ 	if   (request.getParameter("successo") != null ) { 
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Pre iscrizione effettuata con successo');window.location='"+temp_nome_chiamante+"';window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
