@@ -61,10 +61,10 @@ public class ServletEventoElimina extends HttpServlet {
             response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y&year="+(evn.getData().getYear()+1900)+"&month="+(evn.getData().getMonth())+"&day="+evn.getData().getDate());     
         } catch (NumberFormatException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
         } catch (SQLException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
         }
         
         
