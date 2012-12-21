@@ -99,8 +99,12 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
  		if (request.getParameter("successo").equals("ok")) {
  			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
  		} else {
- 			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
- 		}
+ 			if ((request.getParameter("errore")) != null) {
+ 				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
+ 		 	} else {
+			out.print("<script type=text/javascript>alert('Modifica fallita')</script>");
+			}
+		}
  	}
  %>
 	<form id="dati_bando" name="dati_bando" action="" method="post">

@@ -407,12 +407,17 @@ public class ServletCompilazioneDatiBando extends HttpServlet {
             } catch (DomandaIscrizioneException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, getServletName()+"Errore aggiornamento dati domanda iscrizione", e.getMessage());
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
             } catch (DBConnectionException e) {
                 // TODO Blocco di catch autogenerato
-                LOG.log(Level.SEVERE,getServletName()+ "Erroree connessioen al database", e.getMessage());
+                LOG.log(Level.SEVERE,getServletName()+ "Errore connessione al database", e.getMessage());
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
             } catch (SQLException e) {
                 // TODO Blocco di catch autogenerato
                 LOG.log(Level.SEVERE, "<Descrizione del problema>", e);
+                pagina_destinazione= new String("prototipo/"+nome_pagina_chiamante+"?successo=failed&errore="+e.getMessage());
+
             } 
             
         }//fine update sitauzione familiare
