@@ -101,16 +101,6 @@ def parse_attributes_description(f, ent)
 		
 		attr_name = m[1].strip.upcase
 		
-		if attr_name.downcase == "nome dell'entità" then
-			puts "ERROR: descrizione mancante per"
-			for a in attr.values
-				if  a.descrizione == nil then
-					puts "\t#{a.nome}"
-				end
-			end
-			exit 1
-		end
-		
 		while not attr.has_key?(attr_name)
 			puts "Attributo '#{attr_name}' non trovato in #{ent.nome}"
 			puts "Attributi disponibili:"
