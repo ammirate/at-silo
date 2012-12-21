@@ -3,6 +3,22 @@
 <%@
 	include file="atsilo_files/header.jsp"
 %>
+<%
+	if (request.getParameter("successo") != null && !temp_nome_chiamante.equals("lista_domanda_confermata.jsp"))  { 
+		if (request.getParameter("successo").equals("y")) {
+			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
+		}
+		else
+		{
+ 			if ((request.getParameter("errore")) != null) {
+ 				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
+ 		 	} else {
+			out.print("<script type=text/javascript>alert('Modifica fallita')</script>");
+			}
+		}
+	}
+%>
+
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
 <td class="breadcrumb " align="left"><p> </a></p>

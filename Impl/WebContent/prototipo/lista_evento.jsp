@@ -13,8 +13,13 @@
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}
-		else {
+		else
+		{
+ 			if ((request.getParameter("errore")) != null) {
+ 				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
+ 		 	} else {
 			out.print("<script type=text/javascript>alert('Modifica fallita')</script>");
+			}
 		}
 	}
 %>
@@ -118,6 +123,11 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 				else{
 					checked="";
 				}
+				String pathprint="";
+				if(propriEventi.get(k).getPath()!=null)
+				{
+					pathprint = "<a href='../"+propriEventi.get(k).getPath()+"'>Allegato</a>";
+				}
 				out.append("<tr><td>")
 					.append("<input type='radio' name='evento' value='")
 					.append(""+propriEventi.get(k).getId())
@@ -125,7 +135,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append("<span style='font-size:14px'><b>"+propriEventi.get(k).getNome()+"</b></span>")
 					.append("<pre>")
 					.append(propriEventi.get(k).getDescrizione())
-					.append("</pre></td><td><a href='../"+propriEventi.get(k).getPath()+"'>Allegato</a></td>"+"</tr>");
+					.append("</pre></td><td></td>"+pathprint+"</tr>");
 			}
 			out.print("</table>");
 			if(pEvenLun == 0){

@@ -118,7 +118,7 @@ public class ServletEventoModifica extends HttpServlet {
                     // Process form file field (input type="file").
                     String fieldname = item.getFieldName();
                     String filename = item.getName();
-                    if(filename!=null)
+                    if(filename!=null && !filename.equals(""))
                     {
                         InputStream filecontent = item.getInputStream();
                         String filedir = "atsiloupload";
@@ -133,7 +133,6 @@ public class ServletEventoModifica extends HttpServlet {
                             f.delete();
                         }
                         filepath=getServletContext().getRealPath(".")+File.separator+filedir+File.separator+filename;
-                        System.out.println(filepath);
                         filepath=filepath.substring(filepath.indexOf(filedir));
                         FileOutputStream fos = new FileOutputStream(f);
                         int b;
@@ -172,24 +171,24 @@ public class ServletEventoModifica extends HttpServlet {
             }
             else{
                 response.setStatus(response.SC_MOVED_TEMPORARILY);
-                response.setHeader("Location", "prototipo/errore.html"); 
+                response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore=Si è verificato un errore"); 
             }
         } catch (NumberFormatException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
         } catch (SQLException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
         } catch (DBConnectionException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
         } catch (ClasseException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
         } catch (FileUploadException e) {
             // TODO Blocco di catch autogenerato
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore=Errore di caricamento del file"); 
         }
     }
 }
