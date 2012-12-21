@@ -33,48 +33,48 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 		}
 	</script> <%
  	//setta campi form una volta selezionato il nome del bambino
- 	
- 	    String cfb=null;
-	    String isee="";
-        boolean bambino_disabile=false;
-        boolean genitore_invalido=false;
-        boolean genitore_solo=false;
-        boolean vedovo=false;
-        boolean nubile=false;
-        boolean separato=false;
-        boolean figlio_non_riconosciuto=false;
-        boolean affido_esclusivo=false;
-        boolean altri_figli_disabili=false;
-        String altre_condizioni_calcolo_punteggio="";
- 		
- 	 if (request.getParameter("select_bambini")!=null)
- 	   cfb=(String)request.getParameter("select_bambini");
- 	 
- 	 cdt=ControlDatiPersonali.getIstance();
- 	 Genitore genitore=new Genitore();
- 	
- 	if (cfb!=null && !cfb.equals("null")){ 
- 		Bambino bambino_selezionato=new Bambino();
-    	bambino_selezionato=cdt.getDatiBambino(cfb);
-    	DomandaIscrizione domandaIscrizione= cisc.getDomandaIscrizione(cfb);
-       	if (domandaIscrizione!=null){
-       	   Float isee_temp=domandaIscrizione.getIsee();
-       	   isee=isee_temp.toString();
-       	   bambino_disabile=domandaIscrizione.getBambinoDisabile();
-          genitore_invalido=domandaIscrizione.getGenitoreInvalido();
-       	  genitore_solo=domandaIscrizione.getGenitoreSolo();
-          vedovo=domandaIscrizione.getGenitoreVedovo();
-          nubile=domandaIscrizione.getGenitoreVedovo();
-          separato=domandaIscrizione.getGenitoreSeparato();
-          figlio_non_riconosciuto=domandaIscrizione.getFiglioNonRiconosciuto();
-          affido_esclusivo=domandaIscrizione.getAffidoEsclusivo();
-          altri_figli_disabili=domandaIscrizione.getAltriComponentiDisabili();
-          java.lang.System.out.println("ecc "+altre_condizioni_calcolo_punteggio);
-		  if (domandaIscrizione.getCondizioniCalcoloPunteggio()!=null) 
-          	altre_condizioni_calcolo_punteggio=domandaIscrizione.getCondizioniCalcoloPunteggio();
-		   
- 	 	}
- 	 }
+  	
+  	    String cfb=null;
+ 	    String isee="";
+         boolean bambino_disabile=false;
+         boolean genitore_invalido=false;
+         boolean genitore_solo=false;
+         boolean vedovo=false;
+         boolean nubile=false;
+         boolean separato=false;
+         boolean figlio_non_riconosciuto=false;
+         boolean affido_esclusivo=false;
+         boolean altri_figli_disabili=false;
+         String altre_condizioni_calcolo_punteggio="";
+  		
+  	 if (request.getParameter("select_bambini")!=null)
+  	   cfb=(String)request.getParameter("select_bambini");
+  	 
+  	 cdt=ControlDatiPersonali.getIstance();
+  	 Genitore genitore=new Genitore();
+  	
+ 	if (cfb != null && !cfb.equals("null")) {
+ 		Bambino bambino_selezionato = new Bambino();
+ 		bambino_selezionato = cdt.getDatiBambino(cfb);
+ 		DomandaIscrizione domandaIscrizione = cisc
+ 				.getDomandaIscrizione(cfb);
+ 		if (domandaIscrizione != null) {
+ 			Float isee_temp = domandaIscrizione.getIsee();
+ 			isee = isee_temp.toString();
+ 			bambino_disabile = domandaIscrizione.getBambinoDisabile();
+ 			genitore_invalido = domandaIscrizione.getGenitoreInvalido();
+ 			genitore_solo = domandaIscrizione.getGenitoreSolo();
+ 			vedovo = domandaIscrizione.getGenitoreVedovo();
+ 			nubile = domandaIscrizione.getGenitoreNubile();
+ 			separato = domandaIscrizione.getGenitoreSeparato();
+ 			figlio_non_riconosciuto = domandaIscrizione.getFiglioNonRiconosciuto();
+ 			affido_esclusivo = domandaIscrizione.getAffidoEsclusivo();
+ 			altri_figli_disabili = domandaIscrizione.getAltriComponentiDisabili();
+ 			if (domandaIscrizione.getCondizioniCalcoloPunteggio() != null)
+ 				altre_condizioni_calcolo_punteggio = domandaIscrizione.getCondizioniCalcoloPunteggio();
+
+ 		}
+ 	}
  %> <!--Script per gestire i form --> <!--Script per gestire i form -->
 	<script type="text/javascript">
 		function settaAttributi(slf) {
