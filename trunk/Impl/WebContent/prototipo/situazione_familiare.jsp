@@ -94,15 +94,14 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 			return false;
 		}
 	</script> <%
- 	if ((request.getParameter("successo")) != null && !temp_nome_chiamante.equals("situazione_familiare.jsp") ) {
-		java.lang.System.out.print(temp_nome_chiamante);
+ 	if ((request.getParameter("successo")) != null  ) {
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+ 			out.print("<script type=text/javascript> alert('Modifica effettuata con successo');window.location='"+temp_nome_chiamante+"';;window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
  			if ((request.getParameter("errore")) != null) {
  				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
  		 	} else {
-			out.print("<script type=text/javascript>alert('Modifica fallita')</script>");
+			out.print("<script type=text/javascript>alert('Modifica fallita');;window.location='"+temp_nome_chiamante+"';</script>");
 			}
 		}
  	}
@@ -268,13 +267,14 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 				<td colspan="2">&nbsp;</td>
 				<td colspan="2"></td>
 			</tr>
-			<tr>
-				<td></td>
-				<td><input type="submit" name="bottone_submit"
-					id="bottone_submit" value="Modifica"
-					onClick="return settaAttributi(this)" /> <input type="reset"
-					name="reset" value="Annulla" /></td>
-			</tr>
+						<%  if (cfb!=null && cfb!="null"){
+			out.append("<tr>")
+				.append("<td></td>")
+				.append("<td><input type='submit' name='bottone_submit'")
+				.append(" id='bottone_submit' value='Modifica' ") 
+				 .append(" onClick='return settaAttributi(this)' /> ")
+				.append("<input type='reset' name='reset' value='Annulla' /></td></tr>");
+			}%>
 		</table>
 
 	</form></td>
