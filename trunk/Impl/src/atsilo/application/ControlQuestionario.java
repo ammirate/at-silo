@@ -549,10 +549,7 @@ public class ControlQuestionario {
         int numCampiDomanda2 = campi2.size();
         String descr1= d.getDescrizione();
      
-        if(d.getDescrizione().endsWith("'"))
-        {
-            descr1  = d.getDescrizione().substring(1,d.getDescrizione().length()-1);
-        }
+       
      
         if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
         {
@@ -615,10 +612,7 @@ public class ControlQuestionario {
         int numCampiDomanda2 = campi2.size();
         String descr1= d.getDescrizione();
      
-        if(d.getDescrizione().endsWith("'"))
-        {
-            descr1  = d.getDescrizione().substring(1,d.getDescrizione().length()-1);
-        }
+      
      
         if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
         {
