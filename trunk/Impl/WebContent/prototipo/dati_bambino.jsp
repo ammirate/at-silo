@@ -124,7 +124,7 @@ function calendarOpenerN()
 		var y = document.getElementById("year").value;
 		var showMonth = true;
 		if (m == ""|| d == "" || y == "")
-			calendarTry.createMonth(0, 1, 1970);
+			calendarTry.createMonth(0, 1, 2010);
 		else
 			calendarTry.createMonth(m - 1, d, y);
 	}
