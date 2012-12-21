@@ -23,6 +23,10 @@ import atsilo.entity.CampoDomandaQuestionario;
 import atsilo.entity.DomandaQuestionario;
 import atsilo.entity.RispostaQuestionario;
 import atsilo.exception.DBConnectionException;
+import atsilo.storage.DBCampoDomandaQuestionario;
+import atsilo.storage.DBDomandaQuestionario;
+import atsilo.storage.DBRispostaQuestionario;
+import atsilo.storage.Database;
 
 
 /**
@@ -57,28 +61,46 @@ public class ControlData {
    
    public String isEqualCampo(CampoDomandaQuestionario c, List<RispostaQuestionario> r) throws SQLException
    { 
-              for(RispostaQuestionario risposta : r)
+       ControlQuestionario controlQ = ControlQuestionario.getIstance();
+     
+       Database db = new Database();
+       db.apriConnessione();
+     for(RispostaQuestionario risposta : r)
       {
-          
-           String risposta_valore= risposta.getValore();
-           String risposta_val_spazi= new String(risposta.getValore());
-           String c_valore= c.getValore();
-           if(risposta_valore.contains(" "))
+           
+           
+           
+           
+           DBDomandaQuestionario campoD = new DBDomandaQuestionario(db);
+           DomandaQuestionario domanda=  campoD.getDomanda(c.getIdDomandaQuestionario());
+           
+           DomandaQuestionario dom_ris=campoD.getDomanda(risposta.getIdDomanda());
+           
+           if((controlQ.domandaIsEqual(dom_ris.getId(), domanda)))
            {
-               risposta_val_spazi=risposta_valore.replaceAll(" ", "");
-           }
-           if(c_valore.contains(" "))
-           {
-               c_valore.replaceAll(" ", "");
-           }
-       
-          if(risposta_val_spazi.equals(c_valore))
-          {
-                 return risposta.getValore();
+               String risposta_valore= risposta.getValore();
+               String risposta_val_spazi= new String(risposta.getValore());
+               String c_valore= c.getValore();
+               if(risposta_valore.contains(" "))
+               {
+                   risposta_val_spazi=risposta_valore.replaceAll(" ", "");
+               }
+               if(c_valore.contains(" "))
+               {
+                   c_valore.replaceAll(" ", "");
+               }
+               
+               if(risposta_val_spazi.equals(c_valore))
+               {   db.chiudiConnessione();
+                   return risposta.getValore();
+               
+               }
+              
           }
-         
+             
       }
-      
+     db.chiudiConnessione();
+    
       return null;
    }
    
