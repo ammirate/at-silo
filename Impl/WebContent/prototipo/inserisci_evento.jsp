@@ -45,7 +45,7 @@ ControlClassi crtClass = ControlClassi.getIstance();
 <td>Descrizione :</td><td><textarea rows="4" cols="50" name="desc"> </textarea></td>
 </tr>
 </table>
-<br />Classi Associate all'evento
+<br />Classi Associate all'evento<br>
 <% 
 int lun = crtClass.getClassi().size();
 for(int i=0; i<lun ;i++){

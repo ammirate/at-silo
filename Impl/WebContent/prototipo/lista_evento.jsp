@@ -75,10 +75,16 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 		String cfGen = genitore.getCodiceFiscale();
 		java.util.List<Evento> eventiGenitore = crtEvn.getEventiPerGenitoreInData(cfGen, data);
 		for(int j=0; j<eventiGenitore.size();j++){
+			String pathprint="";
+			if(eventiGenitore.get(j).getPath()!=null)
+			{
+				pathprint = "<a href='../"+eventiGenitore.get(j).getPath()+"'>Allegato</a>";
+			}
 			out.append("<tr><td>")
-			.append("<h3><b>"+eventiGenitore.get(j).getNome()+"</b></h3>")
+			.append("<span style='font-size:14px'><b>"+eventiGenitore.get(j).getNome()+"</b></span>")
+			.append("<pre>")
 			.append(eventiGenitore.get(j).getDescrizione())
-			.append("</td></tr>");
+			.append("</pre></td><td>"+pathprint+"</td></tr>");
 		}
 		
 	}
@@ -135,7 +141,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append("<span style='font-size:14px'><b>"+propriEventi.get(k).getNome()+"</b></span>")
 					.append("<pre>")
 					.append(propriEventi.get(k).getDescrizione())
-					.append("</pre></td><td></td>"+pathprint+"</tr>");
+					.append("</pre></td><td>"+pathprint+"</td></tr>");
 			}
 			out.print("</table>");
 			if(pEvenLun == 0){
@@ -149,12 +155,19 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 		
 			int aEvenLun = altriEventi.size();
 			out.print("<br /><br /> Resto degli eventi per questa data");
+			
+			
 			for(int j=0; j<aEvenLun;j++){
+				String pathprint="";
+				if(altriEventi.get(j).getPath()!=null)
+				{
+					pathprint = "<a href='../"+altriEventi.get(j).getPath()+"'>Allegato</a>";
+				}
 				out.append("<tr><td>")
-				.append("<h3><b>"+altriEventi.get(j).getNome()+"</b></h3>")
-				.append("")
+				.append("<span style='font-size:14px'><b>"+altriEventi.get(j).getNome()+"</b></span>")
+				.append("<pre>")
 				.append(altriEventi.get(j).getDescrizione())
-				.append("</td></tr>");
+				.append("</pre></td><td>"+pathprint+"</td></tr>");
 			}
 		}
 	

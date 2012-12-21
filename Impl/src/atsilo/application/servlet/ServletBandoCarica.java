@@ -20,6 +20,9 @@ import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
+import atsilo.application.ControlGestioneBando;
+import atsilo.exception.BandoException;
+
 /**
  * Servlet implementation class ServletCaricaBando
  */
@@ -101,6 +104,8 @@ public class ServletBandoCarica extends HttpServlet {
                     }
                 }
              }
+             
+             ControlGestioneBando.getIstance().modificaPath(filepath);
 	 }
 	
 	catch (FileUploadException e)
@@ -108,7 +113,11 @@ public class ServletBandoCarica extends HttpServlet {
 	    response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/caricamento_bando.jsp?successo=failed&errore=Errore di caricamento del file"); 
             LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
-	}
+	} catch (BandoException e) {
+        // TODO Blocco di catch autogenerato
+        LOG.log(Level.SEVERE, "Bando non modificato", e);
+        response.setHeader("Location", "prototipo/caricamento_bando.jsp?successo=failed&errore=Errore di modifica del bando"); 
+    }
 	    
 	    response.setStatus(response.SC_MOVED_TEMPORARILY);
             response.setHeader("Location", "prototipo/caricamento_bando.jsp?successo=y"); 

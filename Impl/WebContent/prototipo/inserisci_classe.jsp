@@ -4,7 +4,7 @@
 
 
 <%
-	if   {
+	if(request.getParameter("successo")!=null) {
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}
@@ -52,12 +52,23 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 								<td class="tplTitolo">
 <form action="http://localhost:8080/Atsilo/ServletControlClasseIns" method="post">
 
-Le seguenti classi sono gi√† presenti : <br />
+Le seguenti classi sono gi‡† presenti : <br />
 <%
 	ControlClassi crt = ControlClassi.getIstance();
 	int n=  crt.getClassi().size();
-	for(int i=0; i<n;i++){
-	out.print(crt.getClassi().get(i).getSezione()+", ");
+	if(n==0)
+	{
+		out.print("<b>Nessuna classe presente</b>");
+	}
+	else
+	{
+		for(int i=0; i<n;i++){
+			out.print(crt.getClassi().get(i).getSezione());
+			if(i!=n-1)
+			{
+				out.print(", ");
+			}
+		}
 	}
 %>
 

@@ -101,13 +101,14 @@ public class DBClasse extends DBBeans<Classe>
          */
             public List<Classe> RicercaClassi () throws SQLException{
                 
-                Classe cla=new Classe();
+                
                 List<Classe> lcla = new ArrayList<Classe>();
                 PreparedStatement stmt = tabella.prepareStatement(
                         "SELECT * FROM " + tabella.getNomeTabella());
                     //System.out.println("query"+stmt);
                     ResultSet res = stmt.executeQuery();
-                if(res.next()){
+                while(res.next()){
+                   Classe cla=new Classe();
                    cla.setId(res.getInt("id"));
                    cla.setSezione(res.getString("sezione"));
                    // si dovrebbero inserire anche le due liste(educatori ed eventi)

@@ -3,7 +3,7 @@
 <%@ page import="atsilo.application.*,atsilo.entity.*"%>
 
 <%
-	if  {
+	if(request.getParameter("succcesso")!=null)  {
 		if (request.getParameter("successo").equals("y")) {
 			out.print("<script type=text/javascript>alert('Modifica salvata con successo')</script>");
 		}
