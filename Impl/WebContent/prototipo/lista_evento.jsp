@@ -22,7 +22,7 @@
 <script type="text/javascript">
 function modificaForm(){
 	var valoreRadio = document.getElementById("evento").value;
-	if(valoreRadio =''){
+	if(valoreRadio ==''){
 		alert("Selezionare un evento");
 		return false;
 	}
