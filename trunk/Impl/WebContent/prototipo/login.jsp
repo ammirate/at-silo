@@ -76,7 +76,7 @@
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="registrazione.html">Registrazione</a></td>
 </tr>
 <tr>
-<td class="menusecondosel">&nbsp;<a class="linkmenusecondo" href="login.jsp">Login</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="login.jsp">Login</a></td>
 </tr>
 <tr>
 <td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="password_dimenticata.html">Password dimenticata</a></td>
@@ -102,7 +102,7 @@
 <%
 	if  (request.getParameter("successo") != null ) { 
 		if (request.getParameter("successo").equals("failed")) {
-			out.print("<script type=text/javascript>alert('Controlla le credenziali di accesso')</script>");
+			out.print("<script type=text/javascript>alert('Controlla le credenziali di accesso');window.location='"+temp_nome_chiamante+"';</script>");
 		}
 	}
 %>	
