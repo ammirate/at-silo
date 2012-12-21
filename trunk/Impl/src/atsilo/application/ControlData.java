@@ -90,7 +90,7 @@ public class ControlData {
                    c_valore.replaceAll(" ", "");
                }
                
-               if(risposta_val_spazi.equals(c_valore))
+               if(risposta_val_spazi.equals(c_valore.replaceAll(" ", "")))
                {   db.chiudiConnessione();
                    return risposta.getValore();
                
