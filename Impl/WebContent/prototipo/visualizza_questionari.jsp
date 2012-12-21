@@ -86,7 +86,10 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 					+ "'</h3></td></tr>");
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			quest.getDomande().get(i).getCampi().size();
+			int sentinella=0;
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
+				ControlCampiRadioCheck controlRadio = new ControlCampiRadioCheck(quest.getDomande().get(i).getCampi());
+			
 				ControlData cd = new ControlData();
 				boolean isEqualCampo=cd.isEqual(quest.getDomande().get(i), l);
 				boolean precarica=false;
@@ -98,18 +101,30 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 					precarica=true;
 				}
 				
-			
+				if(controlRadio.isAllignableInRow()&&(j==0))
+				{
+					sentinella++;
+					out.println("<tr>");
+				}
+				
 				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("radio") || quest.getDomande().get(i).getCampi().get(j).getTipo().equals("checkbox")) {
-					if(precarica) 
-						out.println("<tr><td colspan=2><input  checked=checked type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
-					else
-						out.println("<tr><td colspan=2><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
-		
+					if(precarica) {
+						if(sentinella!=0)
+							{out.println("<td width='10%'><input  checked=checked type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td>");}
+						else
+						    {out.println("<tr><td colspan=2><input  checked=checked type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");}
+						
+					}else
+						if(sentinella!=0)
+						{out.println("<td width='10%'><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td>");}
+						else{out.println("<tr><td colspan=2><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");}
+
 				}
 				else
 					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + resp1 + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
-
+			
 			}
+			sentinella=0;
 			out.println("</table><br><br>");
 			out.println("</fieldset><br><br>");
 		}
