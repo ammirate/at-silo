@@ -88,7 +88,7 @@ String dataVisualizza[] = dataOld.split("-");
 <fildset><legend>Modifica Evento</legend>
 Nome : <input type="text" name="nome" value="<%= oldEvn.getNome() %>" />
 <br />Data : <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" />
-<br />Descrizione : <input type="textarea" name="desc" value="<%= oldEvn.getDescrizione() %>" rows="4" cols="50" />
+<br />Descrizione : <textarea name="desc"  rows="4" cols="50"></textarea>
 <br />Tipo : <input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" />
 <br />CC : <input type="text" name="cc" value="<%= oldEvn.getCC() %>" />
 <% 
