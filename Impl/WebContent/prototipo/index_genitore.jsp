@@ -33,7 +33,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
     Una volta compilato, potrai presentare la domanda di pre-iscrizione cliccando su <b>Effettua Iscrizione -> Presenta pre-iscrizione</b>.
     <br>
     <br>
-    Una volta che il bando si sarà concluso e ti verrà assegnato un punteggio, potrai presentare la domanda di iscrizione vera e propria cliccando su <b>Effettua Iscrizione -> Presenta Domanda Iscrizione Completa</b>.
+    Una volta che il bando si sar&agrave; concluso e ti verrà assegnato un punteggio, potrai presentare la domanda di iscrizione vera e propria cliccando su <b>Effettua Iscrizione -> Presenta Domanda Iscrizione Completa</b>.
     <br><br>
     Per concludere la tua iscrizione dovrai consegnare dei certificati cartacei all'asilo.
     <br>
