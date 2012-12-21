@@ -48,7 +48,7 @@ ControlClassi crt = ControlClassi.getIstance();
 int i=0;
 int n= crt.bambiniConClasseDaConvalidare().size();
 if(n == 0){
-	out.print("<h1> Non è presente nessuna classe da convalidare</h1>");
+	out.print("<h1> Non &egrave; presente nessuna classe da convalidare</h1>");
 }
 else{
 String input = "<input type='checkbox' name='classi' value='";
