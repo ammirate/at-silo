@@ -64,7 +64,7 @@ catch (Exception e) {}
 %>
 
 <% 
-if ((request.getParameter("type")==null)){out.println("<center><h2><b>Lista Questionari</b></h2></center><h4><b>I questionari attualmente in vigore non possono essere modificati o cancellati</b></h4>");}; 
+if ((request.getParameter("type")==null)){out.println("<center><h2><b>Lista Questionari</b></h2></center><h4><b><table onmouseover=\"tooltip.show('<h5>Un questionario è attulmente in vigore se la data odierna<br> è compresa tra la data inizio e la data fine del questionario stesso</h5>')\" onmouseout=\"tooltip.hide();\"><tr><td>I questionari attualmente in vigore non possono essere modificati o cancellati</td></tr></table></b></h4>");}; 
 %>
 <br><br><br>
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
