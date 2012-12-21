@@ -66,6 +66,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		for (int i = 0; i < quest.getDomande().size(); i++) {
 			System.out.println("prova jsp"+quest.getDomande().size());
 			String resp = "";
+			String resp1="";
 			for (int j = l.size()-1; j>=0; j--) {
 				System.out.println("prova jsp2 "+l.size());
 				//DomandaQuestionario domanda = new DomandaQuestionario();
@@ -74,7 +75,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			
 				if(q.domandaIsEqual(l.get(j).getIdDomanda(), domanda_corrente))
 				{
-					resp = l.get(j).getValore();
+					resp1 = l.get(j).getValore();
 					break;
 				}
 			}
@@ -86,19 +87,17 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			quest.getDomande().get(i).getCampi().size();
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
-				
 				ControlData cd = new ControlData();
 				boolean isEqualCampo=cd.isEqual(quest.getDomande().get(i), l);
 				boolean precarica=false;
-				if(cd.isEqual(quest.getDomande().get(i), l))
-				{
-					resp=cd.isEqualCampo(quest.getDomande().get(i).getCampi().get(j),l);
 				
-					if(resp!=null)
-					{
-						precarica=true;
-					}
+				resp=cd.isEqualCampo(quest.getDomande().get(i).getCampi().get(j),l);
+				
+				if(resp!=null)
+				{
+					precarica=true;
 				}
+				
 			
 				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("radio") || quest.getDomande().get(i).getCampi().get(j).getTipo().equals("checkbox")) {
 					if(precarica) 
@@ -108,7 +107,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 		
 				}
 				else
-					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + resp + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
+					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + resp1 + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
 
 			}
 			out.println("</table><br><br>");

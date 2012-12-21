@@ -523,8 +523,69 @@ public class ControlQuestionario {
         }
         
     }
-    
-    
+    /**
+     * 
+     * @param idDomanda
+     * @param d1
+     * @param db
+     * @return
+     * @throws SQLException
+     */
+    public boolean domandaIsEqual(int idDomanda, DomandaQuestionario d1,Database db) throws SQLException
+    {
+        DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
+        DBDomandaQuestionario storageDomanda= new DBDomandaQuestionario(db);
+        DomandaQuestionario d = storageDomanda.getDomanda(idDomanda);
+        
+        int sent=0;
+        List<CampoDomandaQuestionario> campi =storageCampi.getCampiDomandaQuestionario(d.getId());
+        d.setCampi(campi);
+        List<CampoDomandaQuestionario> campi2 =storageCampi.getCampiDomandaQuestionario(d1.getId());
+        d1.setCampi(campi2);
+        
+        
+        
+        int numCampiDomanda = campi.size();
+        int numCampiDomanda2 = campi2.size();
+        String descr1= d.getDescrizione();
+     
+        if(d.getDescrizione().endsWith("'"))
+        {
+            descr1  = d.getDescrizione().substring(1,d.getDescrizione().length()-1);
+        }
+     
+        if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
+        {
+            return false;
+        }
+        
+        if(numCampiDomanda != numCampiDomanda2)
+        {
+            return false;
+        }
+        
+        for(CampoDomandaQuestionario campiGenitore : campi)
+        {
+            for(CampoDomandaQuestionario campiQuest : campi2)
+            {
+                if((campiQuest.getDescrizione().equals(campiGenitore.getDescrizione()))&&((campiQuest.getTipo().equals(campiGenitore.getTipo())))){
+                    sent ++;
+                }
+                
+            }
+            
+        }
+       
+        if(sent==campi.size())
+        {
+           
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
     /**
      * Controls if two questions are equals
