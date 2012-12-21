@@ -94,7 +94,7 @@ String dataVisualizza[] = dataOld.split("-");
 <td>Nome :</td><td> <input type="text" name="nome" value="<%= oldEvn.getNome() %>" /></td>
 </tr>
 <tr>
-<td>Data :</td><td> <input type"text" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" /></td>
+<td>Data :</td><td> <input type"text" id="data" name="data" value="<%= dataVisualizza[2]+"/"+dataVisualizza[1]+"/"+dataVisualizza[0] %>" /></td>
 </tr>
 <tr>
 <td>Tipo : </td><td><input type="text" name="tipo" value="<%= oldEvn.getTipo() %>" /></td>
