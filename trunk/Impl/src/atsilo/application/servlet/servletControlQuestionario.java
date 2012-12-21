@@ -103,10 +103,21 @@ public class servletControlQuestionario extends HttpServlet {
                 else if (tipo.equals("3")) tipo = "text";
                 ArrayList<CampoDomandaQuestionario> c1 = new ArrayList<CampoDomandaQuestionario>();
                 for(int i = 0; i<opzione.length; i++) {
-                    c1.add(new CampoDomandaQuestionario(tipo, opzione[i], opzione[i], x));
+                    CampoDomandaQuestionario campo =new CampoDomandaQuestionario(tipo, opzione[i], opzione[i], x);
+                    c1.add(campo);
+                  
+                    if(campo.getDescrizione().equals(""))
+                    {
+                        sent++;
+                    }
+                    if(c1.size()>1)
+                    {
+                        sent=0;
+                    }
                 }
-                if(((domanda.equals(""))&&(opzione.length==0))||(((domanda.equals("")))&&(opzione.length!=0))||(!(domanda.equals(""))&&(opzione.length==0)))
-                { System.out.println("domanda::: "+domanda+"campi:::"+opzione.length);
+
+                if(domanda.equals(""))
+                { 
                    sent++;
                 }
                 if(sent==0)
