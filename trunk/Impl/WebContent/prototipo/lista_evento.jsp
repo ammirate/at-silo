@@ -65,7 +65,7 @@ ControlEvento crtEvn = ControlEvento.getIstance();
 <% 
 if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 %>
-<input type="button" value="Inserisci Nuovo Evento" name="inserisci" id="ins" onclick="inserisciForm()" />
+<input type="button" value="Inserisci Nuovo Evento" name="inserisci" id="ins" onclick="return inserisciForm()" />
 <%} %>
 </div>
 <table>
