@@ -14,7 +14,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <form>
   <table width="80%" border="0" cellspacing="0">
     <tr>
-    <td colspan="4">index</td>
+    <td colspan="4">Benvenuto, Responsabile Questionari</td>
       
   </tr>
   <tr>

@@ -363,6 +363,24 @@ public class ControlIscrizione {
           {
               throw new DomandaIscrizioneException("La domanda non è risultata accettata in graduatoria");
           }
+          
+          //Ora controllo se è negli idonei
+          List<DomandaIscrizione> idonei = ControlGestioneBando.getIstance().getGraduatoriaIdonei();
+          boolean trovato=false;
+          for(DomandaIscrizione idoneo : idonei)
+          {
+              if(idoneo.getBambino().getCodiceFiscale().equals(cf_bambino))
+              {
+                  trovato=true;
+                  break;
+              }
+          }
+          
+          if(!trovato)
+          {
+              throw new DomandaIscrizioneException("Il bambino non risulta tra gli idonei");
+          }
+          
           DomandaIscrizione domandaModificata = (DomandaIscrizione) domanda.clone();
           
           domandaModificata.setStato_convalidazione(AtsiloConstants.STATO_DOMANDA_PRESENTAZIONE_DOCUMENTI);
