@@ -60,6 +60,10 @@ for(int i=0; i<lun ;i++){
 </fildset>
 	<input type="submit" value="Inserisci Evento" name="inserisci" /> 
 </form>
+<form action="upload" method="post" enctype="multipart/form-data">
+   Carica Allegato :  <input type="file" name="file" />
+    <input type="submit" />
+</form>
 </td><td class="fasciadxvariabile"></td>
 </tr>
 </tbody></table>
