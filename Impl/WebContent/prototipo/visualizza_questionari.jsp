@@ -87,13 +87,25 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			quest.getDomande().get(i).getCampi().size();
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
 				
+				ControlData cd = new ControlData();
+				boolean isEqualCampo=cd.isEqual(quest.getDomande().get(i), l);
+				boolean precarica=false;
+				if(cd.isEqual(quest.getDomande().get(i), l))
+				{
+					resp=cd.isEqualCampo(quest.getDomande().get(i).getCampi().get(j),l);
 				
+					if(resp!=null)
+					{
+						precarica=true;
+					}
+				}
+			
 				if(quest.getDomande().get(i).getCampi().get(j).getTipo().equals("radio") || quest.getDomande().get(i).getCampi().get(j).getTipo().equals("checkbox")) {
-					if(quest.getDomande().get(i).getCampi().get(j).getDescrizione().equals(resp)) 
+					if(precarica) 
 						out.println("<tr><td colspan=2><input  checked=checked type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
 					else
 						out.println("<tr><td colspan=2><input  type=\""+quest.getDomande().get(i).getCampi().get(j).getTipo() +"\" name=\"opzione" + quest.getDomande().get(i).getId() + "\" value = '" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");
-
+		
 				}
 				else
 					out.println("<tr><td colspan=2><input  type=\"text\" name=\"opzione" + quest.getDomande().get(i).getId() + "["+j+"]\" value = '" + resp + "' >" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td></tr>");

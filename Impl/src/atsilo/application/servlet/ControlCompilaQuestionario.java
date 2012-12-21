@@ -75,9 +75,14 @@ public class ControlCompilaQuestionario extends HttpServlet {
 	                    int a = entry.getKey().indexOf("[");
 	                    if (a==-1) idDomanda = Integer.parseInt(entry.getKey().substring(7));
 	                    else idDomanda = Integer.parseInt(entry.getKey().substring(7, a));
-	                    System.out.println(idDomanda);
-	                    RispostaQuestionario resp = new RispostaQuestionario(Arrays.toString(entry.getValue()).substring(1,Arrays.toString(entry.getValue()).length()-1 ), idDomanda, codfis);
-	                    listR.add(resp);
+	                    String toSplit =Arrays.toString(entry.getValue()).substring(1,Arrays.toString(entry.getValue()).length()-1 );
+	                    String [] splittato =toSplit.split(",");
+	                    for(String s : splittato)
+	                    {
+	                        RispostaQuestionario resp = new RispostaQuestionario(s, idDomanda, codfis);
+	                       listR.add(resp);
+	                    }
+	                    
 	                }
 	            }
 	            catch (Exception e) {

@@ -30,17 +30,54 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
-<h2 align=center >Statistiche Risposte Aperte</h2>
-<br><br>
 <%
 	int idDomanda=0, idQuestionario=0;
+	String nome_domanda="";
+	String nome_questionario="";
 	try {
+		
 		idDomanda = Integer.parseInt(request.getParameter("idDomanda"));
 		idQuestionario = Integer.parseInt(request.getParameter(("idQuestionario")));
+		nome_domanda= request.getParameter("questionarioNome");
+		ControlQuestionario controlQ = ControlQuestionario.getIstance();
+		nome_questionario=controlQ.getQuestionario(idQuestionario).getNome();
+	    DomandaQuestionario domanda =  controlQ.getDomanda(idDomanda);
+		nome_domanda = domanda.getDescrizione();
+		
+	
 	}
 	catch (Exception e) {}
-	out.println("ID Domanda: " + idDomanda + "<br>");
-	out.println("ID Questionario: " + idQuestionario + "<br>");
 
 %>
+<h1 align=center >Statistiche per il Questionario: <%  out.println(nome_questionario);%></h2>
+<h2 align=left >Domanda:<% out.println(nome_domanda); %></h2>
+<br><br>
+<table width=100% >
+<tr>
+<td width=30% ><b><h3>Numero Risposta</h4></b></td>
+<td width=70%><b><h3>Risposta</h4></b></td>
+</tr>
+<%
+ControlQuestionario q = ControlQuestionario.getIstance();
+List<String> risposte = q.getRisposteAperte(idDomanda);
+if(risposte.size()==0)
+{
+	out.println("<tr><td>Attualmente non sono presenti risposte per questa domanda</td><td></td></tr>");
+}
+else{
+	for(int i=0;i<risposte.size();i++)
+	{
+		int numDom =i+1;
+		out.println("<tr>");
+		out.println("<td >"+numDom+"</td>");
+		out.println("<td >"+risposte.get(i)+"</td>");
+		out.println("</tr>");
+	}
+}
+out.println("</table>");
+%>
+</table>
+
+<br><br>
+
 

@@ -30,13 +30,12 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <table cellspacing="10" cellpadding="0" border="0" width="100%">
 <tbody><tr>
 <td class="tplHeader">
-<h2 align=center >Statistiche Questionario</h2>
-<br><br>
+
 
 <%
 	int id;
 
-	StatisticheQuestionario stat = new StatisticheQuestionario();
+	
 	ControlQuestionario q = ControlQuestionario.getIstance();
 	try {
 		id = Integer.parseInt(request.getParameter("id"));
@@ -46,12 +45,13 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	}
 	
 	Questionario quest = q.caricaQuestionarioDaCompilare(id, "DFZNDR91L14A909D");
+	StatisticheQuestionario stat = new StatisticheQuestionario();
 	stat = q.getStatistische(id);
 	if (quest == null) {
 		out.println("<center> <img width=200 height=200 src = atsilo_images/errore.jpg><br><br><h2>Nessun questionario corrispondente</h2></center><br><br>");
 	}
 	else {
-		out.println("<H2 align=center>Titolo Questionario: " + quest.getNome()+ "</h2><br><br><BR><BR>");
+		out.println("<H2 align=center>Statistiche del questionario: " + quest.getNome()+ "</h2><br><br><BR><BR>");
 		out.println("Descrizione del questionario: \t<br><br><p style=\"border: 1px solid black; height: 100px\">"
 				+ quest.getDescrizione() + "</p><br><br>");
 		for (int i = 0; i < quest.getDomande().size(); i++) {
@@ -63,13 +63,20 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 			out.println("<input type=hidden name='domanda"+i+"' value = '" + quest.getDomande().get(i).getId() + "'>");
 			for (int j = 0; j < quest.getDomande().get(i).getCampi().size(); j++) {
 				Integer p = stat.getPercentualiFromCampo(quest.getDomande().get(i).getId(), quest.getDomande().get(i).getCampi().get(j).getId());
+				double p_double=p.doubleValue();
+				double perc=0.0;
+				if(stat.getNumber_comp()!=0)
+					{ perc = p_double/stat.getNumber_comp();}
+				
+				System.out.println("p_double:"+p_double+"perc"+perc+"numcom"+stat.getNumber_comp());
 				out.println("<tr><td width=500>" + quest.getDomande().get(i).getCampi().get(j).getDescrizione() + "</td>");
 				if(p==null ) {
+					
 					out.println("<td colspan = 2><a href=\"statistiche_risposte_aperte.jsp?idDomanda="+quest.getDomande().get(i).getId()+"&idQuestionario="+quest.getId()+"\">Clicca qui per queste statistiche</a></td></tr>");
 				}
 				else
 				{
-					out.println("<td width=200><div style='background-color: red; width: "+(p*100)+"%; height: 20px'></div><td width=100 align=center>"+(p*100)+"%</tr>");
+					out.println("<td width=200><div style='background-color: red; width: "+(perc*100)+"%; height: 20px'></div><td width=100 align=center>"+(perc*100)+"%</tr>");
 
 				}
 			}

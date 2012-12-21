@@ -90,7 +90,15 @@ public class ControlQuestionario {
         }
     }
     
-    
+    public DomandaQuestionario getDomanda(int idDomanda) throws DBConnectionException, SQLException
+    {
+        Database db = new Database();
+        DBDomandaQuestionario dbdomande = new DBDomandaQuestionario(db);
+        if(!db.apriConnessione())
+        { throw new DBConnectionException("Connessione al DB fallita");}
+        DomandaQuestionario domanda = dbdomande.getDomanda(idDomanda);
+        return domanda;
+    }
     /**
      * Deletes a quiestionnaire from the database if the questionnaire is not active
      * (the actually date is not between the start date and the end date)
@@ -102,7 +110,8 @@ public class ControlQuestionario {
         
         Database db = new Database();
         DBQuestionario storageQ = new DBQuestionario(db);
-        
+        DBRispostaQuestionario storageR= new DBRispostaQuestionario(db);
+        DBDomandaQuestionario storageD= new DBDomandaQuestionario(db);
         if(!db.apriConnessione())
             throw new DBConnectionException("Connessione al DB fallita");
         try{
@@ -110,7 +119,16 @@ public class ControlQuestionario {
             try {
                 
                 Questionario daCancellare = storageQ.getQuestionario(id);
+                List<DomandaQuestionario> domande = storageD.getDomandeQuestionario(id);
                 
+                for(DomandaQuestionario domanda : domande)
+                {
+                    List<RispostaQuestionario> risposte_domanda = storageR.getRisposteDomandaSpecifica(domanda.getId());
+                    for(RispostaQuestionario risposta_domanda : risposte_domanda)
+                    {
+                        storageR.delete(risposta_domanda);
+                    }
+                }
                 if(!this.isEditable(daCancellare)){
                     throw new QuestionarioException("Impossibile eliminare un questionario attivo");
                 }
@@ -487,7 +505,6 @@ public class ControlQuestionario {
      */
     private void precaricaDomande (Questionario q,List<CampoDomandaQuestionario> campi, Database db, String cf) throws SQLException
     {
-        
         DBDomandaQuestionario storageDomande= new DBDomandaQuestionario(db);
         DBRispostaQuestionario storageRisposte = new DBRispostaQuestionario(db);
         DBCampoDomandaQuestionario storageCampi = new DBCampoDomandaQuestionario(db);
@@ -498,8 +515,10 @@ public class ControlQuestionario {
             DomandaQuestionario domandaRisposta = storageDomande.getDomanda(r.getIdDomanda());
             domandaRisposta.setCampi(storageCampi.getCampiDomandaQuestionario(domandaRisposta.getId()));
             
+            
             if(domandaIsEqual(domandaRisposta,campi,db))
             {
+             
                 q.precaricaRispostaAllaDomanda(r);
             }
         }
@@ -765,8 +784,8 @@ public class ControlQuestionario {
                     {
                         int num_risp = dbrq.getNumberOfCompiler(d.getId(), c.getValore());
                         int perc_num_risp= num_risp;
-                        //  System.out.println("campo id: "+c.getId());
-                        //  System.out.println("perc: "+perc_num_risp);
+                        //System.out.println("campo id: "+c.getId());
+                        //System.out.println("perc: "+perc_num_risp);
                         statistiche_risposte.put(c.getId(), perc_num_risp);
                     }
                     else

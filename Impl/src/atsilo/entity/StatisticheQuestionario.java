@@ -35,6 +35,15 @@ public class StatisticheQuestionario {
         this.number_comp=0;
      }
     /**
+     * Costruttore
+     * @param questionario
+     */
+    public StatisticheQuestionario(Questionario questionario){
+       this.questionario= questionario;
+       risposte = new HashMap<Integer,Map<Integer, Integer>>();
+       this.number_comp=0;
+    }
+    /**
      * @return questionario
      */
     public Questionario getQuestionario() {
@@ -58,15 +67,7 @@ public class StatisticheQuestionario {
     public void setNumber_comp(int number_comp) {
         this.number_comp = number_comp;
     }
-    /**
-     * Costruttore
-     * @param questionario
-     */
-    public StatisticheQuestionario(Questionario questionario){
-       this.questionario= questionario;
-       risposte = new HashMap<Integer,Map<Integer, Integer>>();
-       this.number_comp=0;
-    }
+ 
     /**
      * 
      * @param questionario
