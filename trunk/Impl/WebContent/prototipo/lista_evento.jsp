@@ -71,8 +71,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 		java.util.List<Evento> eventiGenitore = crtEvn.getEventiPerGenitoreInData(cfGen, data);
 		for(int j=0; j<eventiGenitore.size();j++){
 			out.append("<tr><td>")
-			.append(eventiGenitore.get(j).getNome())
-			.append("</td><td>")
+			.append("<h3><b>"+eventiGenitore.get(j).getNome()+"</b></h3>")
 			.append(eventiGenitore.get(j).getDescrizione())
 			.append("</td></tr>");
 		}
@@ -124,8 +123,8 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 					.append(""+propriEventi.get(k).getId())
 					.append("'"+checked+" />")
 					.append("</td><td>")
-					.append(propriEventi.get(k).getNome())
-					.append("</td><td>")
+					.append("<h3><b>"+propriEventi.get(k).getNome()+"</b></h3>")
+					.append("")
 					.append(propriEventi.get(k).getDescrizione())
 					.append("</td></tr>");
 			}
@@ -142,9 +141,9 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 			int aEvenLun = altriEventi.size();
 			out.print("<br /><br /> Resto degli eventi per questa data");
 			for(int j=0; j<aEvenLun;j++){
-				out.append("<tr><td></td><td>")
-				.append(altriEventi.get(j).getNome())
-				.append("</td><td>")
+				out.append("<tr><td>")
+				.append("<h3><b>"+altriEventi.get(j).getNome()+"</b></h3>")
+				.append("")
 				.append(altriEventi.get(j).getDescrizione())
 				.append("</td></tr>");
 			}
