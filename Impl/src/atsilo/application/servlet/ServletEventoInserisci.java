@@ -77,6 +77,7 @@ public class ServletEventoInserisci extends HttpServlet {
         String cC="";
         String tipologia =""; 
         String username ="";
+        Evento nuovoEvn=null;
         ArrayList<String> elencoClassi=new ArrayList<String>();
         try {
             // Create a factory for disk-based file items
@@ -160,7 +161,7 @@ public class ServletEventoInserisci extends HttpServlet {
              }
  
             
-            Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, pers, filepath);
+            nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, pers, filepath);
             if(elencoClassi!=null)
             {
                 List<Classe> classi = new ArrayList<Classe>();
@@ -176,32 +177,33 @@ public class ServletEventoInserisci extends HttpServlet {
          
         } catch (NumberFormatException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
             LOG.log(Level.SEVERE, getServletName()+e.getMessage(), e);
         } catch (SQLException e) {
-            response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+            response.setStatus(response.SC_MOVED_TEMPORARILY); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (DBConnectionException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+ 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (ClasseException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html"); 
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (UtenteException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html");
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (InserimentoDatiException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html");
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (Exception e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/errore.html");
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         }
         
     }
