@@ -101,7 +101,7 @@ String dataVisualizza[] = dataOld.split("-");
 <td>CC : </td><td><input type="text" name="cc" value="<%= oldEvn.getCC() %>" /></td>
 </tr>
 <tr>
-<td>Descrizione :</td><td> <textarea name="desc"  rows="4" cols="50"></textarea></td>
+<td>Descrizione :</td><td> <textarea name="desc" value="<%= oldEvn.getDescrizione() %>"  rows="4" cols="50"></textarea></td>
 </tr>
 </table>
 <br />Classi Associate all'evento
