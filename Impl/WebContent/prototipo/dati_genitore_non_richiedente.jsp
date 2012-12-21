@@ -170,11 +170,11 @@ function calendarOpenerN()
 
 </script>
      <%
- 	if (request.getParameter("successo") != null && !temp_nome_chiamante.equals("dati_genitore_non_richiedente.jsp") )  {
+ 	if (request.getParameter("successo") != null  ) {
  		if (request.getParameter("successo").equals("ok")) {
- 			out.print("<script type=text/javascript>alert('Modifica effettuata con successo')</script>");
+ 			out.print("<script type=text/javascript> alert('Modifica effettuata con successo');window.location='"+temp_nome_chiamante+"';</script>");
  		} else {
- 			out.print("<script type=text/javascript>alert('Modifica fallita. Compila correttamente i campi')</script>");
+ 			out.print("<script type=text/javascript>alert('Modifica fallita');window.location='"+temp_nome_chiamante+"';</script>");
  		}
  	}
  %>
