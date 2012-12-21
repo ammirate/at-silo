@@ -104,6 +104,7 @@ String dataVisualizza[] = dataOld.split("-");
 <td>Descrizione :</td><td> <textarea name="desc"  rows="4" cols="50"></textarea></td>
 </tr>
 </table>
+<br />Classi Associate all'evento
 <% 
 List<Integer> lidc=new ArrayList<Integer>();
 for(Classe c : oldEvn.getClassi())
