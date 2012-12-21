@@ -36,13 +36,13 @@ String cf = (String) session.getAttribute("codFis");
 <td align="left" class="menuprimosel">&nbsp;<b>'Area Utente</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_account_genitore.jsp">Dati Account</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_account_genitore.jsp">Dati Personali</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_bambino.jsp">Dati Bambino</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="dati_bambino.jsp">Dati Iscrizione Bambino</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="iscrizione.jsp">Iscrizione</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="iscrizione.jsp">Effettua Iscrizione</a></td>
 </tr>
 
 <tr>
