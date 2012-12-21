@@ -78,7 +78,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
      <td>&nbsp;</td>
   </tr>
           <tr>
-            <td >Si ricorda che per presentare la domanda di iscrizione &egrave; necessario aver compilato tutti i campi relativi a Dati Account e Dati Bambino ed &egrave; obbligatorio l'invio della stessa entro i termini indicati dal bando.</td>
+            <td >Si ricorda che per presentare la domanda di iscrizione &egrave; necessario aver compilato tutti i campi relativi a Dati Personali e Dati Iscrizione Bambino ed &egrave; obbligatorio l'invio della stessa entro i termini indicati dal bando.</td>
             
             </tr>
             <tr>
