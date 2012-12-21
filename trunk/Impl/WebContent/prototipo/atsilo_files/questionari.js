@@ -14,12 +14,9 @@ function addInput(id) {
 }
 
 function set(id) {
-		if(idM!=id) {
-			idM=id;
-			frm = document.forms[0];
-			tbl = document.getElementById(id);
-		}
-	
+	idM=id;
+	frm = document.forms[0];
+	tbl = document.getElementById(id);
 }
 function display(id , n) {
 	set(id);
@@ -31,7 +28,7 @@ function addDomanda() {
 	 
 	  frm = document.getElementById("formdomande");
 	  div = document.createElement("div");
-	 
+	  
 	  div.setAttribute("id", "domanda_header"+v);
 	  
 	  nome = "parah" + v;
@@ -60,9 +57,14 @@ function eliminaDomanda(id) {
 	var dom=id;
 	var idDom="domanda_header"+dom;
 	var d = document.getElementById(idDom);
+	var tb = document.getElementById("parah" + (v-1));
+	x = tb.rows.length;
+	for(var i = 0; i<x-2; i++ ) {
+		tb.deleteRow(-1);
+	}
 	v=v-1;
 	d.parentNode.removeChild(d);
-	
+
 }
 
 
