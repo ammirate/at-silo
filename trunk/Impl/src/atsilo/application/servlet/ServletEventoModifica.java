@@ -75,6 +75,7 @@ public class ServletEventoModifica extends HttpServlet {
         String cC="";
         String tipologia =""; 
         String username ="";
+        Evento nuovoEvn=null;
         ArrayList<String> elencoClassi=new ArrayList<String>();
         try {
          // Create a factory for disk-based file items
@@ -154,7 +155,7 @@ public class ServletEventoModifica extends HttpServlet {
             String YYYYMMDD[];
             YYYYMMDD = dataIntera.split("/");
             Date data = new Date(Integer.parseInt(YYYYMMDD[2])-1900, Integer.parseInt(YYYYMMDD[1])-1, Integer.parseInt(YYYYMMDD[0]));
-            Evento nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, oldEvn.getOrganizzatore(), filepath);
+            nuovoEvn = new Evento(descrizione, nome, cC, data, tipo, oldEvn.getOrganizzatore(), filepath);
             nuovoEvn.setId(Integer.parseInt(id));
             List<Classe> classi = new ArrayList<Classe>();
             if(elencoClassi!=null)
@@ -175,16 +176,20 @@ public class ServletEventoModifica extends HttpServlet {
             }
         } catch (NumberFormatException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage());
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (SQLException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (DBConnectionException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (ClasseException e) {
             response.setStatus(response.SC_MOVED_TEMPORARILY);
-            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()); 
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=failed&errore="+e.getMessage()+"&year="+(nuovoEvn.getData().getYear()+1900)+"&month="+(nuovoEvn.getData().getMonth())+"&day="+nuovoEvn.getData().getDate()); 
+            
         } catch (FileUploadException e) {
             // TODO Blocco di catch autogenerato
             response.setStatus(response.SC_MOVED_TEMPORARILY);
