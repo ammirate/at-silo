@@ -53,11 +53,20 @@ public class ServletEventoElimina extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
         String idEvn = request.getParameter("evento");
-        Evento evn = new Evento();
-        evn.setId(Integer.parseInt(idEvn));
-        crt.eliminaEvento(evn);
-        response.setStatus(response.SC_MOVED_TEMPORARILY);
-        response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y&year="+(evn.getData().getYear()+1900)+"&month="+(evn.getData().getMonth())+"&day="+evn.getData().getDate());     
+        Evento evn;
+        try {
+            evn = crt.getEventoPerId(Integer.parseInt(idEvn));
+            crt.eliminaEvento(evn);
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/lista_evento.jsp?"+"successo=y&year="+(evn.getData().getYear()+1900)+"&month="+(evn.getData().getMonth())+"&day="+evn.getData().getDate());     
+        } catch (NumberFormatException e) {
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/errore.html"); 
+        } catch (SQLException e) {
+            response.setStatus(response.SC_MOVED_TEMPORARILY);
+            response.setHeader("Location", "prototipo/errore.html"); 
+        }
+        
         
     }
 }
