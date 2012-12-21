@@ -408,7 +408,6 @@ public abstract class DBBeans<B> implements Iterable<B>,DBBeansInterface<B> {
             for (Map.Entry<String, Integer> ent : meta.entrySet()) {
                 String col = ent.getKey();
                 Object val = values.get(col);
-                System.out.println("setto la colonna "+col+ " al valore "+val);
                 tabella.setParam(stmt, ent.getValue(), col, val);
             }
             
@@ -425,7 +424,6 @@ public abstract class DBBeans<B> implements Iterable<B>,DBBeansInterface<B> {
                 
                 tabella.setParam(stmt, colid, a.colonna, a.valore);
             }
-            System.out.println(stmt);
             int res = stmt.executeUpdate();
             
             if (res == 1) {
