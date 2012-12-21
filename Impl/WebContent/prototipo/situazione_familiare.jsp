@@ -69,7 +69,10 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
           figlio_non_riconosciuto=domandaIscrizione.getFiglioNonRiconosciuto();
           affido_esclusivo=domandaIscrizione.getAffidoEsclusivo();
           altri_figli_disabili=domandaIscrizione.getAltriComponentiDisabili();
-          altre_condizioni_calcolo_punteggio=domandaIscrizione.getCondizioniCalcoloPunteggio();
+          java.lang.System.out.println("ecc "+altre_condizioni_calcolo_punteggio);
+		  if (domandaIscrizione.getCondizioniCalcoloPunteggio()!=null) 
+          	altre_condizioni_calcolo_punteggio=domandaIscrizione.getCondizioniCalcoloPunteggio();
+		   
  	 	}
  	 }
  %> <!--Script per gestire i form --> <!--Script per gestire i form -->
