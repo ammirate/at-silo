@@ -101,7 +101,7 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
  			if ((request.getParameter("errore")) != null) {
  				out.print("<script type=text/javascript>alert('"+request.getParameter("errore").toString()+"')</script>");
  		 	} else {
-			out.print("<script type=text/javascript>alert('Modifica fallita');;window.location='"+temp_nome_chiamante+"';</script>");
+			out.print("<script type=text/javascript>alert('Modifica fallita');window.location='"+temp_nome_chiamante+"';</script>");
 			}
 		}
  	}
