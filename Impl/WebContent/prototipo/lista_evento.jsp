@@ -65,7 +65,7 @@ ControlEvento crtEvn = ControlEvento.getIstance();
 <% 
 if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 %>
-<input type="button" value="Inserisci Nuovo Evento" name="inserisci" id="ins" onclick="return inserisciForm()" />
+<input type="button" value="Inserisci Nuovo Evento" name="inserisci" id="ins" onclick="inserisciForm()" />
 <%} %>
 </div>
 <table>
@@ -134,7 +134,7 @@ if(tipologia.compareTo(AtsiloConstants.CAT_GENITORE) != 0){
 			else{
 				
 			
-			out.print("<input type='submit' value='Modifica' id='mod' name='modifica' onclick='modificaForm()' />");
+			out.print("<input type='submit' value='Modifica' id='mod' name='modifica' onclick='return modificaForm()' />");
 			out.print("<input type='submit' value='Elimina' name='elimina' id='mod' />");
 		
 			int aEvenLun = altriEventi.size();
