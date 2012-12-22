@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `atsilo`
 --
-CREATE DATABASE `atsilo` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
-USE `atsilo`;
+CREATE DATABASE `Atsilo` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
+USE `Atsilo`;
 
 -- --------------------------------------------------------
 
