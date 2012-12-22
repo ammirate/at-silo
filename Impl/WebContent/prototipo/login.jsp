@@ -107,7 +107,7 @@
 	}
 %>	
 <div id="formLogin">
- <form id="login" name="login" method="post" action="http://localhost:8080/Atsilo/ServletControlLogin">
+ <form id="login" name="login" method="post" action="<%=request.getContextPath()%>/ServletControlLogin">
   <p>
     Username
     <input type="text" name="username_login">
