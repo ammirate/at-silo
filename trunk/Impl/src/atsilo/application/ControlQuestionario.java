@@ -97,6 +97,7 @@ public class ControlQuestionario {
         if(!db.apriConnessione())
         { throw new DBConnectionException("Connessione al DB fallita");}
         DomandaQuestionario domanda = dbdomande.getDomanda(idDomanda);
+        db.chiudiConnessione();
         return domanda;
     }
     /**
