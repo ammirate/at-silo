@@ -19,3 +19,5 @@ Una volta creato il database, è possibile importare lo script tramite il comand
 	| s.buselli    | silvanab   | imp. asilo       |
 	| v.mars       | veronicam  | imp dir. studio  |
 	+--------------+------------+------------------+
+
+5) Per deployare il forum, inserirlo in un webserver apache situato sulla STESSA MACCHINA di tomcat. Successivamente configurare il file webapps/Atsilo/WEB-INF/classes/atsilo/application/forum/forum.properties impostando nome del dominio e percorso interno per raggiungere il forum. Infine riavviare tomcat.
