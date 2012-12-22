@@ -73,7 +73,7 @@ public class ControlGestioneBando {
                 Integer.parseInt( ggmmaa_inizio[2]));
         Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
         Date now = new Date(System.currentTimeMillis());
-        
+        db.chiudiConnessione();
         return (now.before(data_fine) && now.after(data_inizio));
     }
     
@@ -92,7 +92,7 @@ public class ControlGestioneBando {
                 Integer.parseInt( ggmmaa_inizio[2]));
         Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
         Date now = di.getDataPresentazione();
-        
+        db.chiudiConnessione();
         return (now.before(data_fine) && now.after(data_inizio));
     }
     
@@ -111,7 +111,7 @@ public class ControlGestioneBando {
                 Integer.parseInt( ggmmaa_inizio[2]));
         Date data_fine = new Date(Integer.parseInt(ggmmaa_fine[0])-1900,Integer.parseInt(ggmmaa_fine[1])-1,Integer.parseInt(ggmmaa_fine[2]));
         Date now = new Date(System.currentTimeMillis());
-        
+        db.chiudiConnessione();
         return (now.before(data_fine) && now.after(data_inizio));
     }
     
@@ -142,7 +142,7 @@ public class ControlGestioneBando {
             {
                 di.setGenitoreNonRichiedente(dbg.getGenitorePerCF(gnr.getCodiceFiscale()));
             }
-            
+            db.chiudiConnessione();
             return di;
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
@@ -230,11 +230,12 @@ public class ControlGestioneBando {
                     Genitore gr = dom.getGenitore();
                     dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
                 }
-                
+                db.chiudiConnessione();
                 return ldi.subList(0, Math.min(posti, ldi.size()));
             }
             else
             {
+                db.chiudiConnessione();
                 return null;
             }
         } catch (SQLException e) {
@@ -266,6 +267,7 @@ public class ControlGestioneBando {
             {
                 //Non mostriamo le graduatorie.. dobbiamo ancora terminare di assegnare i punteggi a tutte
                 //le domande
+                db.chiudiConnessione();
                 return null;
             }
             Bando bando = dbbando.getBando();
@@ -311,10 +313,12 @@ public class ControlGestioneBando {
                 }
                 //aggiungo gli esclusi agli ammessi che non hanno punteggio sufficiente
                 buoniMaFuori.addAll(ldi);
+                db.chiudiConnessione();
                 return buoniMaFuori;
             }
             else
             {
+                db.chiudiConnessione();
                 return null;
             }
         } catch (SQLException e) {
@@ -353,7 +357,7 @@ public class ControlGestioneBando {
                 Genitore gr = dom.getGenitore();
                 dom.setGenitore(dbg.getGenitorePerCF(gr.getCodiceFiscale()));
             }
-            
+            db.chiudiConnessione();
             return ldi;
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
@@ -397,8 +401,10 @@ public class ControlGestioneBando {
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
+                db.chiudiConnessione();
                 throw new BandoException("Connessione Fallita");
             }
+            db.chiudiConnessione();
             return true;
         } finally {
             db.chiudiConnessione();
@@ -433,8 +439,10 @@ public class ControlGestioneBando {
                 dbDomandaIscrizione.replace(iscrizione, domandaDaModificare);
             } catch (SQLException e) 
             {
+                db.chiudiConnessione();
                 throw new BandoException("Connessione Fallita");
             }
+            db.chiudiConnessione();
             return true;
         } finally {
             db.chiudiConnessione();
@@ -462,16 +470,18 @@ public class ControlGestioneBando {
                             inizioPresentazione, finePresentazione, fineRinuncia,
                             posti, null);
                     dbBando.inserisci(bandoDaModificare);
+                    db.chiudiConnessione();
                     return true;
                 } else {
                     bandoDaModificare = new Bando(1, inizioBando, fineBando,
                             inizioPresentazione, finePresentazione, fineRinuncia,
                             posti, null);
                     dbBando.replace(bando, bandoDaModificare);
-                    
+                    db.chiudiConnessione();
                     return true;
                 }
             } catch (SQLException e) {
+                db.chiudiConnessione();
                 throw new BandoException("Connessione Fallita");
             }
         } finally {
@@ -491,15 +501,18 @@ public class ControlGestioneBando {
             
             try {
                 if (dbBando.getBando() == null) {
+                    db.chiudiConnessione();
                     throw new BandoException("Bando non presente impossibile modificare/o inserire il path");
                 } else {
                     
                     Bando bando = dbBando.getBando();
                     bando.setPath(path);
                     dbBando.replace(dbBando.getBando(), bando);
+                    db.chiudiConnessione();
                     return true;
                 }
             } catch (SQLException e) {
+                db.chiudiConnessione();
                 throw new BandoException("Connessione Fallita");
             }
         } finally {
@@ -521,9 +534,12 @@ public class ControlGestioneBando {
         }
         try {
             DBBando dbBando = new DBBando(db);
-            return dbBando.getBando();   
+            Bando b= dbBando.getBando();
+            db.chiudiConnessione();
+            return b;
         } catch (SQLException e) 
         {
+            db.chiudiConnessione();
             throw new BandoException("Connessione Fallita");
         }
         finally {

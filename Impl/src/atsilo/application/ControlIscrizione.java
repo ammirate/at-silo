@@ -99,7 +99,10 @@ public class ControlIscrizione {
             try{
                 
                 if(!bdDomandaIscrizione.inserisci(domanda))
+                {
+                    db.chiudiConnessione();
                     throw new DomandaIscrizioneException("Inserimento fallito");
+                }
             }
             finally{
                 db.chiudiConnessione();
@@ -130,7 +133,10 @@ public class ControlIscrizione {
                 throw new DBConnectionException("Connessione al DB fallita");
             try{                
                 if(!bdDomandaIscrizione.replace(domanda, domandaModificata))
+                {
+                    db.chiudiConnessione();
                     throw new DomandaIscrizioneException("Modifica fallita");
+                }
             }
             finally{
                 db.chiudiConnessione();

@@ -84,8 +84,10 @@ public class ControlDatiPersonali {
                 DBDomandaIscrizione dbdi = new DBDomandaIscrizione(db);
                 DomandaIscrizione di = null;
                 if(cfBambino==null || cfBambino.length() != 16)
+                {
+                    db.chiudiConnessione();
                     throw new InserimentoDatiException("Il codice fiscale del bambino non è valido");
-                
+                }
                 Bambino b=null;//Non sicuro ma volontario
                 try {
                     if(!firstResult)
@@ -94,6 +96,8 @@ public class ControlDatiPersonali {
                         Genitore giaPresente = dbgen.getGenitorePerCF(codiceFiscale);
                         if(giaPresente==null)
                         {
+                            db.chiudiConnessione();
+
                             throw new GenitoreException("Genitore non richiedente non inserito .");
                         }
                         
@@ -107,6 +111,8 @@ public class ControlDatiPersonali {
                 
                 if(b==null)
                 {
+                    db.chiudiConnessione();
+
                     throw new InserimentoDatiException("CF Bambino non corretto");
                 }
                 else
@@ -125,6 +131,7 @@ public class ControlDatiPersonali {
                         di.setGenitoreNonRichiedente(g);
                         dbbamb.replace(b, b);
                         dbdi.replace(di, di);
+                        db.chiudiConnessione();
                         return true;
                     }
                     
@@ -170,8 +177,10 @@ public class ControlDatiPersonali {
         db.apriConnessione();
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale==null || codiceFiscale.length() != 16)
+        {
+            db.chiudiConnessione();
             throw new InserimentoDatiException("Il codice fiscale non è valido");
-        
+        }
        
         
         //controllo sul cap, in attesa di sapere se può essere un numero o una stringa
@@ -210,7 +219,10 @@ public class ControlDatiPersonali {
                 Matcher m = p.matcher(email);
                 boolean matchFound = m.matches();
                 if (!matchFound)
+                {
+                    db.chiudiConnessione();
                     throw new InserimentoDatiException("La mail inserita non è valida");
+                }
             }
             if(comuneNascita!=null && comuneNascita.length()!=0)
             {
@@ -332,13 +344,19 @@ public class ControlDatiPersonali {
             {
                 //Inserisci nuovo genitore
                 if(!dbgen.inserisci(genitore))
+                {
+                    db.chiudiConnessione();
                     throw new GenitoreException("Inserimento fallito");
+                }
             }
             else
             {
                 //Aggiorna il precedente
                 if(!dbgen.replace(lettoDalDb, genitore))
+                {
+                    db.chiudiConnessione();
                     throw new GenitoreException("Aggiornamento genitore fallito");
+                }
             }
         } 
         finally{
@@ -405,7 +423,12 @@ public class ControlDatiPersonali {
                     .getCodiceFiscale());
             
             if (g == null)
+            {    
+                db.chiudiConnessione();
+
                 throw new GenitoreException("Genitore non trovato");
+            }
+            db.chiudiConnessione();
             return g;
         } finally {
             db.chiudiConnessione();
@@ -431,7 +454,12 @@ public class ControlDatiPersonali {
                     .getCodiceFiscale());
             
             if (g == null)
+            {
+                db.chiudiConnessione();
                 throw new Exception("Genitore non trovato");
+            }
+
+            db.chiudiConnessione();
             return g;
         } finally {
             db.chiudiConnessione();
@@ -456,7 +484,11 @@ public class ControlDatiPersonali {
                     .getCodiceFiscale());
             
             if (g == null)
+            {
+                db.chiudiConnessione();
                 throw new Exception("Psicopedagogo non trovato");
+            }
+            db.chiudiConnessione();
             return g;
         } finally {
             db.chiudiConnessione();
@@ -481,7 +513,10 @@ public class ControlDatiPersonali {
                     .getCodiceFiscale());
             
             if (g == null)
+            {
+                db.chiudiConnessione();
                 throw new Exception("Educatore non trovato");
+            }
             return g;
         } finally {
             db.chiudiConnessione();
@@ -553,8 +588,10 @@ public class ControlDatiPersonali {
             throw new DBConnectionException("Connessione al DB fallita");
         //controllo sul codice fiscale che deve essere a 16 cifre
         if(codiceFiscale == null || codiceFiscale.length() != 16)
+        {
+            db.chiudiConnessione();
             throw new InserimentoDatiException("Il codice fiscale non è valido");
-
+        }
          Bambino bambino;
          DomandaIscrizione di = new DomandaIscrizione();
          DomandaIscrizione nuovaDomanda = new DomandaIscrizione();
@@ -675,9 +712,13 @@ public class ControlDatiPersonali {
             {
                 //Inserisci nuovo bambino
                 if(!dbbamb.inserisci(bambino))
+                {
+                    db.chiudiConnessione();
                     throw new BambinoException("Inserimento fallito");
+                }
                 if(!dbdi.inserisci(di))
                 {
+                    db.chiudiConnessione();
                     throw new DomandaIscrizioneException("Impossibile inserire domanda iscrizione");
                 }
             }
@@ -685,7 +726,10 @@ public class ControlDatiPersonali {
             {
                 //Aggiorna il precedente
                 if(!dbbamb.replace(lettoDalDb, bambino))
+                {
+                    db.chiudiConnessione();
                     throw new BambinoException("Aggiornamento bambino fallito");
+                }
             }
         }
         finally{
@@ -717,10 +761,18 @@ public class ControlDatiPersonali {
         try{
             Bambino bambino = stub.ricercaBambino(cf);
             if(bambino == null)
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Bambino inesistente");
+            }
             Boolean toReturn = stub.delete(bambino);
             if(!toReturn)
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Cancellazione bambino fallita");
+            }
+            
+            db.chiudiConnessione();
             return bambino;
         }
         finally{
@@ -757,6 +809,7 @@ public class ControlDatiPersonali {
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "Errore query", e.getMessage());
+            db.chiudiConnessione();
             return b;
         }
         
@@ -792,7 +845,11 @@ public class ControlDatiPersonali {
             
             Utente u = stub.ricercaUtente(cf);
             if (u == null)
+            {
+                db.chiudiConnessione();
                 throw new UtenteException("Utente non trovato");
+            }
+            db.chiudiConnessione();
             return u;
         } finally {
             db.chiudiConnessione();
@@ -829,6 +886,7 @@ public class ControlDatiPersonali {
         } catch (SQLException e) {
             // TODO Blocco di catch autogenerato
             LOG.log(Level.SEVERE, "Errore query", e.getMessage());
+            db.chiudiConnessione();
             return utente;
         } finally {
             db.chiudiConnessione();
@@ -1003,7 +1061,10 @@ public class ControlDatiPersonali {
             
             if (!dbAccount.replace(dbAccount.ricercaPerUsername(username),
                     newAccount))// modifica dati account
+            {
+                db.chiudiConnessione();
                 return false;
+            }
             
             // controlla se utente è Personale asilo ed in quel caso aggiorna la
             // mail
@@ -1051,7 +1112,9 @@ public class ControlDatiPersonali {
         
         try{
             db.apriConnessione();
-            return dbAccount.ricercaPerCodiceFiscale(cf);
+            Account a = dbAccount.ricercaPerCodiceFiscale(cf);
+            db.chiudiConnessione();
+            return a;
             
         }finally {
             db.chiudiConnessione();
