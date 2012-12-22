@@ -50,7 +50,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniIdonei();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -74,7 +78,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniNonIdonei();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -99,7 +107,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniRichiestaPrimoAnno();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -124,7 +136,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniAnniPrecedenti();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -149,7 +165,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniFineCicloScolastico();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -174,7 +194,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniRinunciatari();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -198,7 +222,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniServizioMensa();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -223,7 +251,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniServizioPartTime();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -248,7 +280,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniServizioFullTime();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
@@ -273,7 +309,11 @@ public class ControlIscritti {
         try{
             List<Bambino> b = stub.ricercaBambiniServizioDisabili();
             if(b.isEmpty())
+            {
+                db.chiudiConnessione();
                 throw new BambinoException("Lista vuota");
+            }
+            db.chiudiConnessione();
             return b;
         }
         finally{
