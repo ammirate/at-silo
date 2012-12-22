@@ -617,13 +617,13 @@ public class ControlQuestionario {
      
         if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
         {
-            db.apriConnessione();
+            db.chiudiConnessione();
             return false;
         }
         
         if(numCampiDomanda != numCampiDomanda2)
         {
-            db.apriConnessione();
+            db.chiudiConnessione();
             return false;
         }
         
@@ -889,6 +889,7 @@ public class ControlQuestionario {
             Iterator<Questionario>itq =iter.iterator();
             while(itq.hasNext())
                 toReturn.add(itq.next());
+            db.chiudiConnessione();
             return toReturn;
         } 
         finally{
@@ -920,6 +921,7 @@ public class ControlQuestionario {
             for(RispostaQuestionario r : risposte)
                 toReturn.add(storageD.getDomanda(r.getIdDomanda()));
             
+            db.chiudiConnessione();
             return toReturn;
         } 
         finally{
@@ -962,7 +964,7 @@ public class ControlQuestionario {
                     }
                 }
             }
-            
+            db.chiudiConnessione();
             return toReturn;
             
         } finally{
