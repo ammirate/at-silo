@@ -1,0 +1,21 @@
+1) Il file Atsilo.war può essere normalmente installato in un container JSP seguendo la procedura standard.
+
+2) Il database "atsilo_test_finale.sql" deve essere importato in un database già creato. Per evitare inconvenienti, consiglio di usare una collation case insensitive.
+Una volta creato il database, è possibile importare lo script tramite il comando
+	mysql <nomedb> -u <username> --password=<password> < "atsilo_test_finale.sql"
+
+3) Per permettere ad Atsilo di connettersi al database, è necessario modificare il file db.properties, collocato nella cartella relativa al package atsilo.storage (in Tomcat è webapps/Atsilo/WEB-INF/classes/atsilo/storage/db.properties)
+
+4) Per entrare nel sistema, visitare la pagina prototipo/login.jsp (non c'è redirect automatico)
+	Gli utenti del sistema sono nella tabella utenti del database, con le password in chiaro. Riporto qui le informazioni per comodità. Sono aggiornate al 11/12/12.	
+	+--------------+------------+------------------+
+	| username     | password   | tipo             |
+	+--------------+------------+------------------+
+	| a.damelia    | alfonsoda  | psico_pedagogo   |
+	| a.desantis   | arturods   | resp. question.  |
+	| a.senatore   | antonellas | pers. asilo      |
+	| d.tranfa     | domenicot  | del. rett        |
+	| m.verrone    | maddalenav | psico_pedagogo   |
+	| s.buselli    | silvanab   | imp. asilo       |
+	| v.mars       | veronicam  | imp dir. studio  |
+	+--------------+------------+------------------+
