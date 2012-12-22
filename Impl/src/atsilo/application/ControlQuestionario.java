@@ -617,11 +617,13 @@ public class ControlQuestionario {
      
         if(!(descr1.equalsIgnoreCase(d1.getDescrizione())))
         {
+            db.apriConnessione();
             return false;
         }
         
         if(numCampiDomanda != numCampiDomanda2)
         {
+            db.apriConnessione();
             return false;
         }
         
