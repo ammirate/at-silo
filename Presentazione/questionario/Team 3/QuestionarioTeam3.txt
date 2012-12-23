@@ -1,6 +1,6 @@
 Andate su questa pagina
 
-	https://docs.google.com/spreadsheet/gform?	key=0AkZd0_hlO4iedFFjbHRYN3h1SFVNSndpemlVNUFtSkE&hl=en#edit
+	https://docs.google.com/spreadsheet/viewform?	formkey=dFFjbHRYN3h1SFVNSndpemlVNUFtSkE6MQ
 
 Chiedete l'autorizzazione a visualizzare il questionario
 
