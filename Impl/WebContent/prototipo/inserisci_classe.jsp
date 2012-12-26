@@ -50,7 +50,7 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
-<form action="http://localhost:8080/Atsilo/ServletControlClasseIns" method="post">
+<form action="<%=request.getContextPath()%>/ServletControlClasseIns" method="post">
 
 Le seguenti classi sono già  presenti : <br />
 <%

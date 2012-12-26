@@ -39,6 +39,8 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 	} else {
 		int n = crt.getGraduatoriaEsclusi().size();
 		int k=1;
+		out.print("<thead><td><b>Pos.</b></td><td><b>Nome</b></td><td><b>Cognome</b></td><td><b>Punteggio</b></td><td><b>Nota esclusione</b></td></thead>");
+		
 		for(int i=0;i<n;i++){
 			out.append("<tr><td>")
 			.append("Escluso "+k)
@@ -48,6 +50,8 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 			.append(crt.getGraduatoriaEsclusi().get(i).getBambino().getCognome())
 			.append("</td><td>")
 			.append(""+crt.getGraduatoriaEsclusi().get(i).getPunteggio())
+			.append("</td><td>")
+			.append(""+crt.getGraduatoriaEsclusi().get(i).getNotaEsclusione())
 			.append("</td></tr>");
 		k++;
 		}

@@ -36,7 +36,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
-<form action="http://localhost:8080/Atsilo/prototipo/invia_punteggio.jsp" method="post">
+<form action="<%=request.getContextPath()%>/prototipo/invia_punteggio.jsp" method="post">
 <table class="tabella_form">
 
 <%

@@ -76,7 +76,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <table width="100%">
 <tbody><tr>
 <td>
-<form action="http://localhost:8080/Atsilo/ServletEventoModifica" method="post" enctype="multipart/form-data">
+<form action="<%=request.getContextPath()%>/ServletEventoModifica" method="post" enctype="multipart/form-data">
 <%
 String idEvn = request.getParameter("evento");
 int id = Integer.parseInt(idEvn);

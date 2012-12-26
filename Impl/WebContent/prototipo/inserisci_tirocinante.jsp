@@ -25,7 +25,7 @@ include file="atsilo_files/sidebar_scienzeformazione.jsp"
 
 <!-- INIZIO PAGINA JSP/HTML -->
 
-<form action="http://localhost:8080/Atsilo/ServletControlTirocinantiInserisci" method="post">
+<form action="<%=request.getContextPath()%>/ServletControlTirocinantiInserisci" method="post">
 Inserisci un Tirocinante<br />
 	<table class="tabelle_form">
 	<tr>

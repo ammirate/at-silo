@@ -36,7 +36,7 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
-<form action="http://localhost:8080/Atsilo/prototipo/invia_domanda_confermata.jsp" method="post">
+<form action="<%=request.getContextPath()%>/prototipo/invia_domanda_confermata.jsp" method="post">
 <table class="tabella_form">
 
 <%

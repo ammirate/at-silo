@@ -12,7 +12,7 @@
  <!--Script per gestire i form -->
  <script type="text/javascript">
 function settaAttributi(slf){
-	 document.getElementById("dati_bando").setAttribute("action","http://localhost:8080/Atsilo/ServletCompilazioneDatiBando");
+	 document.getElementById("dati_bando").setAttribute("action","<%=request.getContextPath()%>/ServletCompilazioneDatiBando");
 	 document.getElementById("bottone_submit").setAttribute("value","Salva");
 	 var f = document.forms[0];
 	 var n = f.elements.length;

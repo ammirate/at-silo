@@ -179,7 +179,7 @@ public class ControlIscrizione {
         if(d == null)
             throw new DomandaIscrizioneException("Domanda di iscrizione non trovata");
         
-        if(!d.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONINVIATA))
+        if(!d.getStato_convalidazione().equals(AtsiloConstants.STATO_DOMANDA_NONCOMPILATA))
                 throw new DomandaIscrizioneException("La domanda non è nello stato corretto.");
         
         //il metodo valuta che tutti i campi dell'iscrizione siano stati inseriti
@@ -234,28 +234,28 @@ public class ControlIscrizione {
                 (nonRichiedente.getCodiceFiscale() == null) ||
                 //(nonRichiedente.getEmail() == null) ||
                 (nonRichiedente.getComuneNascita() == null) ||
-                (nonRichiedente.getTelefono() == null) || 
+                //(nonRichiedente.getTelefono() == null) || 
                 (nonRichiedente.getcittadinanza() == null) ||
                 (nonRichiedente.getIndirizzoResidenza() == null) ||
                 (nonRichiedente.getNumeroCivicoResidenza() == null) ||
                 (nonRichiedente.getCapResidenza() == null) ||
                 (nonRichiedente.getComuneResidenza() == null) ||
-                (nonRichiedente.getProvinciaResidenza() == null) ||
-                /*(nonRichiedente.getIndirizzoDomicilio() == null) ||
+                (nonRichiedente.getProvinciaResidenza() == null) /*||
+                (nonRichiedente.getIndirizzoDomicilio() == null) ||
                 (nonRichiedente.getNumeroCivicoDomicilio() == null) ||
                 (nonRichiedente.getCapDomicilio() == null) ||
                 (nonRichiedente.getComuneDomicilio() == null) ||
                 (nonRichiedente.getProvinciaDomicilio() == null) ||
-                (nonRichiedente.getTipo() == null) ||*/
+                (nonRichiedente.getTipo() == null) ||
                 (nonRichiedente.getDipendentePresso() == null) ||
-                /*(nonRichiedente.getRapportiAteneoSalerno() == null) ||
+                (nonRichiedente.getRapportiAteneoSalerno() == null) ||
                 (nonRichiedente.getRapportiComuneFisciano() == null) ||
                 (nonRichiedente.getStatusLavorativo()>0) ||
                 (nonRichiedente.getScadenzaContratto() == null) ||
-                (nonRichiedente.getCategoriaAppartenenza() == null) ||*/
+                (nonRichiedente.getCategoriaAppartenenza() == null) ||
                 (nonRichiedente.getRapportoParentela() == null) ||
                 (nonRichiedente.getCondizioneLavorativa() == null) ||
-                (nonRichiedente.getTipoContratto() == null) /*||
+                (nonRichiedente.getTipoContratto() == null) ||
                 (nonRichiedente.getFigli().isEmpty())*/
             )
                 throw new GenitoreException("Mancano alcune informazioni del genitore non richiedente");
@@ -376,6 +376,11 @@ public class ControlIscrizione {
           //Ora controllo se è negli idonei
           List<DomandaIscrizione> idonei = ControlGestioneBando.getIstance().getGraduatoriaIdonei();
           boolean trovato=false;
+          if(idonei==null)
+          {
+              throw new DomandaIscrizioneException("Il bando non è terminato");
+
+          }
           for(DomandaIscrizione idoneo : idonei)
           {
               if(idoneo.getBambino().getCodiceFiscale().equals(cf_bambino))

@@ -377,7 +377,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
 
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nota_esclusione IS NULL AND data_presentazione NOT NULL AND stato_convalidazione=?");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nota_esclusione IS NULL AND data_presentazione IS NOT NULL AND stato_convalidazione=?");
         tabella.setParam(stmt, 1, "stato_convalidazione", AtsiloConstants.STATO_DOMANDA_PRIMO_STEP);
         ResultSet r= stmt.executeQuery();
         
@@ -490,7 +490,7 @@ public class DBDomandaIscrizione extends DBBeans<DomandaIscrizione> {
         ArrayList<DomandaIscrizione> toReturn = new ArrayList<DomandaIscrizione>();
 
         PreparedStatement stmt = tabella.prepareStatement(
-                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nota_esclusione IS NULL AND data_presentazione NOT NULL ORDER BY punteggio DESC");
+                "SELECT * FROM " + tabella.getNomeTabella() + " WHERE nota_esclusione IS NULL AND data_presentazione IS NOT NULL ORDER BY punteggio DESC");
         ResultSet r= stmt.executeQuery();
         String[] ggmmaa_inizio = inizio.split("-");
         String[] ggmmaa_fine = fine.split("-");

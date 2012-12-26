@@ -34,7 +34,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
         <tbody>
           <tr>
             <td class="tplTitolo">
-            <form action="http://localhost:8080/Atsilo/ServletBandoCarica" method="post" enctype="multipart/form-data">
+            <form action="<%=request.getContextPath()%>/ServletBandoCarica" method="post" enctype="multipart/form-data">
         <table class="tabelle_form">
           <tr> 
         	<td colspan="2"><p>Selezionare il pdf del bando da caricare sul sito</p>

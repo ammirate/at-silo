@@ -81,7 +81,7 @@ include file="atsilo_files/sidebar_genitore.jsp"%>
 			document
 					.getElementById("dati_bando")
 					.setAttribute("action",
-							"http://localhost:8080/Atsilo/ServletCompilazioneDatiBando");
+							"<%=request.getContextPath()%>/ServletCompilazioneDatiBando");
 			document.getElementById("bottone_submit").setAttribute("value",
 					"Salva");
 			var f = document.forms[0];
