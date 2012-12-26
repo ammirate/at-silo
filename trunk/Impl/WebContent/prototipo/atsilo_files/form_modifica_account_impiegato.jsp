@@ -1,7 +1,7 @@
 <script type="text/javascript">
 function risettaAttributi(slf){
 	alert("fgd");
-	 document.getElementById("modifica_account").setAttribute("action","http://localhost:8080/Atsilo/ServletModificaDatiAccount");
+	 document.getElementById("modifica_account").setAttribute("action","<%=request.getContextPath()%>ServletModificaDatiAccount");
 	 document.getElementById("password").removeAttribute("readonly");
 	 document.getElementById("indirizzo_email").removeAttribute("readonly");
 	 document.getElementById("bottone_submit").setAttribute("value","Salva");

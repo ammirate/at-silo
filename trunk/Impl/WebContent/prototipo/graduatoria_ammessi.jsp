@@ -40,6 +40,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 		int n = crt.getGraduatoriaIdonei().size();
 		int k=1;
 		java.util.List<DomandaIscrizione> l = crt.getGraduatoriaIdonei();
+		out.print("<thead><td><b>Pos.</b></td><td><b>Nome</b></td><td><b>Cognome</b></td><td><b>Punteggio</b></td></thead>");
 		for(int i=0;i<n;i++){
 			out.append("<tr><td>")
 			.append(""+k)

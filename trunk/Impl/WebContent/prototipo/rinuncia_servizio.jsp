@@ -36,7 +36,7 @@ include file="atsilo_files/sidebar_genitore.jsp"
  		}
  	}
  %>
- <form name="presenta_domanda_bando" action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Sei sicuro di voler rinunciare all'iscrizione? ');">
+ <form name="presenta_domanda_bando" action="<%=request.getContextPath()%>/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Sei sicuro di voler rinunciare all'iscrizione? ');">
  <input name="chiamante" type="hidden" id="chiamante"
 			value="rinuncia">
 <table cellspacing="10" cellpadding="0" border="0" width="100%">

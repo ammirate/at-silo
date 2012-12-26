@@ -92,7 +92,7 @@ include file="atsilo_files/sidebar_index.jsp"
     
     	
 
-<form method="post" name="creazione_account" action="http://localhost:8080/Atsilo/ServletRegistrazioneAccount" OnSubmit="return ControllaForm(this)">
+<form method="post" name="creazione_account" action="<%=request.getContextPath()%>/ServletRegistrazioneAccount" OnSubmit="return ControllaForm(this)">
   <table class="tabelle_form">
           <tr> 
         	<td>Codice Fiscale</td>

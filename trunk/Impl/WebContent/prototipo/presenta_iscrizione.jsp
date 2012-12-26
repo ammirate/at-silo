@@ -67,7 +67,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
               <p><br>
                 N.B.: Per completare l'invio della domanda &egrave; necessario compilare i seguenti campi:</p>
                
-            <form name="presenta_domanda_iscrizione"  action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&uacute; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
+            <form name="presenta_domanda_iscrizione"  action="<%=request.getContextPath()%>/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&uacute; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
             
                 <input name="chiamante" type="hidden" id="chiamante"
 			value="iscrizione_completa">

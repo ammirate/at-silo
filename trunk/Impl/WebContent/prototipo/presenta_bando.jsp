@@ -40,7 +40,7 @@ include file="atsilo_files/sidebar_top_iscrizione.jsp"
  		}
  	}
  %>
- <form name="presenta_domanda_bando" action="http://localhost:8080/Atsilo/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&ugrave; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
+ <form name="presenta_domanda_bando" action="<%=request.getContextPath()%>/ServletIscrizioneBambino" method="post" onSubmit="return confirm('Presentando la domanda ora non potrai pi&ugrave; modificare i tuoi dati.Sei sicuro di volerla presentare? ');">
  <input name="chiamante" type="hidden" id="chiamante"
 			value="pre_iscrizione">
 <table cellspacing="10" cellpadding="0" border="0" width="100%">

@@ -21,7 +21,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 <table width="100%">
 <tbody><tr>
 <td>
-<form action="http://localhost:8080/Atsilo/ServletEventoInserisci" method="post" enctype="multipart/form-data" >
+<form action="<%=request.getContextPath()%>/ServletEventoInserisci" method="post" enctype="multipart/form-data" >
 <%
 String data = request.getParameter("data");
 ControlClassi crtClass = ControlClassi.getIstance();

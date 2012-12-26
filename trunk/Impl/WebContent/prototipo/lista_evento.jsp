@@ -26,11 +26,11 @@
 
 <script type="text/javascript">
 function modificaForm(){
-	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/modifica_evento.jsp");
+	document.getElementById("frm").setAttribute("action","<%=request.getContextPath()%>/prototipo/modifica_evento.jsp");
 	document.getElementById("frm").submit();
 }
 function inserisciForm(){
-	document.getElementById("frm").setAttribute("action","http://localhost:8080/Atsilo/prototipo/inserisci_evento.jsp");
+	document.getElementById("frm").setAttribute("action","<%=request.getContextPath()%>/prototipo/inserisci_evento.jsp");
 	document.getElementById("frm").submit();
 }
 
@@ -59,7 +59,7 @@ ControlDatiPersonali crtPers = ControlDatiPersonali.getIstance();
 ControlEvento crtEvn = ControlEvento.getIstance();
 %>
 <h1>Lista degli eventi del <%= giorno %>/<%= ""+m %>/<%=anno %></h1>
-<form id="frm" action="http://localhost:8080/Atsilo/ServletEventoElimina" method="post" >
+<form id="frm" action="<%=request.getContextPath()%>/ServletEventoElimina" method="post" >
 <input type="hidden" value="<%= giorno+"/"+m+"/"+anno %>" name="data" />
 <div align="center">
 <% 

@@ -57,7 +57,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 	}
 	else {
 
-		out.println("<form action=\"http://localhost:8080/Atsilo/ControlCompilaQuestionario\" method='POST' name=formBello>");
+		out.println("<form action=\""+request.getContextPath()+"/ControlCompilaQuestionario\" method='POST' name=formBello>");
 		out.println("<div id=formdomande>");
 
 		out.println("<H2>Titolo Questionario: " + quest.getNome()+ "</h2><br><br><BR><BR>");

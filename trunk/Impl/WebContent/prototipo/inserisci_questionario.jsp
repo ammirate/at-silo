@@ -32,7 +32,7 @@ include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"
 <h2 align=center >Inserisci nuovo Questionario</h2>
 <h3 align =left>Verranno inserite all'interno del sistema, unicamente le domande che non hanno campi vuoti</h3>
 <br><br>
-<form action="http://localhost:8080/Atsilo/servletControlQuestionario" method="POST" >
+<form action="<%=request.getContextPath()%>/servletControlQuestionario" method="POST" >
 <div id=formdomande>
 	<H2>Titolo Questionario:</H2> <input type=text name="titolo" size=100 style="height: 25px; font-size: 22px; font-family: Times; font-weight: bold;"><br><br><BR><BR>
 	<div id=datachooser2 >

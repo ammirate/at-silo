@@ -49,7 +49,7 @@ include file="atsilo_files/sidebar_impiegato_bando.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
-<form action="http://localhost:8080/Atsilo/ServletAggiungiPunteggio" method="post">
+<form action="<%=request.getContextPath()%>/ServletAggiungiPunteggio" method="post">
 <%
 	String r = request.getParameter("domanda");
 	int id = Integer.parseInt(r);

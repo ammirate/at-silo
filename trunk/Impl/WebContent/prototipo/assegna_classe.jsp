@@ -38,7 +38,7 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 						<tbody>
 							<tr>
 								<td class="tplTitolo">
-<form action="http://localhost:8080/Atsilo/ServletControlClasseAss" method="post">
+<form action="<%=request.getContextPath()%>/ServletControlClasseAss" method="post">
 <table class="tabella_form">
 
 <%

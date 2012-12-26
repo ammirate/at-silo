@@ -28,7 +28,7 @@ include file="atsilo_files/sidebar_impiegato.jsp"%>
 							<tr>
 								<td class="tplTitolo">
 								
-<form action="http://localhost:8080/Atsilo/ServletDomandaIscrizioneConvalida" method="post">
+<form action="<%=request.getContextPath()%>/ServletDomandaIscrizioneConvalida" method="post">
 <% 
 %>
 <table class="tabella_form">

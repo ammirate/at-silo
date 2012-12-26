@@ -38,7 +38,7 @@ include file="atsilo_files/sidebar_delegato.jsp"%>
 							<tr>
 								<td class="tplTitolo">
 								
-<form action="http://localhost:8080/Atsilo/ServletConvalidaClasseBambino" method="post">
+<form action="<%=request.getContextPath()%>/ServletConvalidaClasseBambino" method="post">
 <% 
 %>
 <table class="tabella_form">
