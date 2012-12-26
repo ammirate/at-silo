@@ -4,39 +4,60 @@ REQUISITI SOFTWARE DELLA MACCHINA IN CUI VERRA' INSTALLATO ATSILO:
 -Mysql 5.5.27
 -Apache con supporto PHP >4
 
-La guida prende come esempio un sistema Linux.
+La guida prende come esempio un sistema Linux (Ubuntu Server 12.04).
 
 1) Il file Atsilo.war può essere normalmente installato in un container JSP seguendo la procedura standard:
 a. Copiare il file Atsilo.war nella cartella tomcat7\webapps\
 
 2) Il database "atsilo_test_finale.sql" deve essere importato in un server mysql.
-Per importare il file è necessario accedere alla riga di comando di mysql (generalmente col comando mysql) e, 
-supponendo che il file sia nella cartella ~/Atsilo_deployment,  lanciare:
-	>source /home/$USER/Atsilo_deployment/atsilo_test_finale.sql
-oppure tramite
-	mysql <nomedb> -u <username> --password=<password> < "/home/$USER/Atsilo_deployment/atsilo_test_finale.sql"
+	Per importare il file è necessario accedere alla riga di comando di mysql 
+		mysql 		(oppure)		sudo mysql
+	supponendo che il file sia nella cartella ~/Atsilo_deployment,  lanciare:
+		source /home/$USER/Atsilo_deployment/atsilo_test_finale.sql
+	oppure tramite
+		mysql <nomedb> -u <username> --password=<password> < "/home/$USER/Atsilo_deployment/atsilo_test_finale.sql"
 
-Questo file creerà automaticamente il database associato di nome 'atsilo'.
+	Questo file creerà automaticamente il database associato di nome 'Atsilo'.
 
-3) Per permettere ad Atsilo di connettersi al database, è necessario modificare il file db.properties, 
+3) Avviare il servizio di tomcat7 lanciando
+		sudo service tomcat7 start
+	Successivamente ri-arrestarlo lanciando
+		sudo service tomcat7 stop
+
+4) Per permettere ad Atsilo di connettersi al database, è necessario modificare il file db.properties, 
 collocato nella cartella relativa al package atsilo.storage (in Tomcat è webapps/Atsilo/WEB-INF/classes/atsilo/storage/db.properties)
 in cui dovranno essere specificati username e password per accedere a mysql.
 
-4) Per installare il forum, scompattare l'archivio forum.zip nella directory pubblica di un webserver apache  (www/ oppure htdocs/, supponiamo www/)
-installato sulla STESSA MACCHINA di tomcat e di mysql
+5) Per installare il forum, scompattare l'archivio forum.zip usando il comando
+		unzip forum.zip 
+	copiare il contenuto della cartella scompattata forum/ nella directory pubblica di un webserver apache  
+	(www/ oppure htdocs/, supponiamo www/) installato sulla STESSA MACCHINA di tomcat e di mysql lanciando:
+
+		sudo cp -r /home/$USER/Atsilo_deployment/forum /var/www
+
 
 5) Modificare il file www/forum/config.php specificando le seguenti righe:
-$dbuser = 'root';
-$dbpasswd = '';
-specificando username e password come specificati al passo 3.
+		$dbuser = 'root';
+		dbpasswd = '';
+	specificando username e password come specificati al passo 3.
 
 6) Successivamente configurare il file webapps/Atsilo/WEB-INF/classes/atsilo/application/forum/forum.properties 
 impostando nome del dominio e percorso interno al dominio per raggiungere il forum. 
 
-7) Riavviare tomcat.
+		atsilo.forum.host=www.tuodominio.it
+		tsilo.forum.internal_url=forum/index.php
+	
+	Nel caso in cui risulti un errore:"Could not get style data", posizionarsi nella cartella forum/ 
+	appena copiata e lanciare:
+		chmod 777 cache/ -R
+	
+7) Riavviare tomcat e apache col comando
+	sudo service tomcat7 restart
+	sudo service apache2 restart
 
 8) Per entrare nel sistema, visitare la pagina prototipo/login.jsp (non c'è redirect automatico)
-	Gli utenti del sistema sono nella tabella utenti del database, con le password in chiaro. Riporto qui le informazioni per comodità. 
+	Gli utenti del sistema sono nella tabella utenti del database, con le password in chiaro. 
+	Riporto qui le informazioni per comodità. 
 	Sono aggiornate al 21/12/12.	
 	+--------------+------------+---------------------+
 	| username     | password      | tipo             |
