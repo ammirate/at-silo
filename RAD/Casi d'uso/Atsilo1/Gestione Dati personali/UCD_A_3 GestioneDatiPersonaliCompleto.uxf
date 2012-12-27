@@ -149,7 +149,7 @@ Compilazione
       <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>30;30;190;70</additional_attributes>
   </element>
   <element>
@@ -161,7 +161,7 @@ Compilazione
       <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>30;60;190;30</additional_attributes>
   </element>
   <element>
@@ -173,7 +173,7 @@ Compilazione
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>30;90;210;30</additional_attributes>
   </element>
   <element>
@@ -283,11 +283,11 @@ iscrizione</panel_attributes>
     <coordinates>
       <x>670</x>
       <y>200</y>
-      <w>140</w>
+      <w>132</w>
       <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>90;180;60;30</additional_attributes>
   </element>
   <element>
@@ -299,7 +299,7 @@ iscrizione</panel_attributes>
       <h>310</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>310;290;30;30</additional_attributes>
   </element>
   <element>
@@ -311,7 +311,7 @@ iscrizione</panel_attributes>
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>30;30;260;140</additional_attributes>
   </element>
   <element>
@@ -440,11 +440,11 @@ bambino</panel_attributes>
     <coordinates>
       <x>580</x>
       <y>200</y>
-      <w>130</w>
+      <w>132</w>
       <h>300</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>40;280;100;30</additional_attributes>
   </element>
   <element>
