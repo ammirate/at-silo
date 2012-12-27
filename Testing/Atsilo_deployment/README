@@ -1,7 +1,7 @@
 REQUISITI SOFTWARE DELLA MACCHINA IN CUI VERRA' INSTALLATO ATSILO:
--Java 6
+-Java 6.x o 7.x
 -Tomcat 7
--Mysql 5.5.27
+-Mysql 5.x
 -Apache con supporto PHP >4
 
 La guida prende come esempio un sistema Linux (Ubuntu Server 12.04).
@@ -45,7 +45,7 @@ in cui dovranno essere specificati username e password per accedere a mysql.
 impostando nome del dominio e percorso interno al dominio per raggiungere il forum. 
 
 		atsilo.forum.host=www.tuodominio.it
-		tsilo.forum.internal_url=forum/index.php
+		atsilo.forum.internal_url=forum/index.php
 	
 	Nel caso in cui risulti un errore:"Could not get style data", posizionarsi nella cartella forum/ 
 	appena copiata e lanciare:
@@ -66,7 +66,7 @@ impostando nome del dominio e percorso interno al dominio per raggiungere il for
 	| a.desantis   | arturods      | resp. question.  |
 	| a.senatore   | antonellas    | pers. asilo      |
 	| d.tranfa     | domenicot     | del. rett        |
-	| L.Dig		   | Linda703318566| genitore  		  |
+	| L.Dig        | linda703318566| genitore         |
 	| m.verrone    | maddalenav    | psico_pedagogo   |
 	| s.buselli    | silvanab      | imp. asilo       |
 	| v.mars       | veronicam     | imp dir. studio  |
