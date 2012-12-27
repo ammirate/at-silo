@@ -19,7 +19,9 @@ a. Copiare il file Atsilo.war nella cartella tomcat7\webapps\
 
 	Questo file creerà automaticamente il database associato di nome 'Atsilo'.
 
-3) Avviare il servizio di tomcat7 lanciando
+3) Ora è necessario che Tomcat scompatti il file Atsilo.war importato. Successivamente fermeremo tomcat
+   in modo da modificare i files di configurazione scompattati.
+	Avviare dunque il servizio di tomcat7 lanciando
 		sudo service tomcat7 start
 	Successivamente ri-arrestarlo lanciando
 		sudo service tomcat7 stop
