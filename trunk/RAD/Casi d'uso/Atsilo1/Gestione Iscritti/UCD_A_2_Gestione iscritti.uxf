@@ -131,7 +131,7 @@ sistema</panel_attributes>
       <h>89</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;72;198;27</additional_attributes>
   </element>
   <element>
@@ -139,11 +139,11 @@ sistema</panel_attributes>
     <coordinates>
       <x>495</x>
       <y>27</y>
-      <w>207</w>
-      <h>72</h>
+      <w>215</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;27;198;63</additional_attributes>
   </element>
   <element>
@@ -155,7 +155,7 @@ sistema</panel_attributes>
       <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;135;207;27</additional_attributes>
   </element>
   <element>
@@ -167,7 +167,7 @@ sistema</panel_attributes>
       <h>260</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;27;216;243</additional_attributes>
   </element>
   <element>
@@ -179,7 +179,7 @@ sistema</panel_attributes>
       <h>350</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;27;207;333</additional_attributes>
   </element>
   <element>
@@ -191,7 +191,7 @@ sistema</panel_attributes>
       <h>206</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;27;216;189</additional_attributes>
   </element>
   <element>
@@ -199,8 +199,8 @@ sistema</panel_attributes>
     <coordinates>
       <x>135</x>
       <y>36</y>
-      <w>243</w>
-      <h>36</h>
+      <w>251</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>27;27;234;27</additional_attributes>
@@ -260,7 +260,7 @@ a più iscritti
       <h>206</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;189;189;27</additional_attributes>
   </element>
   <element>
@@ -272,7 +272,7 @@ a più iscritti
       <h>314</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;297;180;27</additional_attributes>
   </element>
   <element>
@@ -284,7 +284,7 @@ a più iscritti
       <h>134</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;27;180;117</additional_attributes>
   </element>
   <element>
@@ -296,7 +296,7 @@ a più iscritti
       <h>63</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;45;189;45</additional_attributes>
   </element>
   <element>
@@ -319,7 +319,7 @@ a più iscritti
       <h>143</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;126;180;27</additional_attributes>
   </element>
   <element>
@@ -342,7 +342,7 @@ a più iscritti
       <h>206</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;189;180;27</additional_attributes>
   </element>
   <element>
@@ -378,7 +378,7 @@ Classe</panel_attributes>
       <h>278</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;261;171;27</additional_attributes>
   </element>
   <element>
@@ -390,7 +390,7 @@ Classe</panel_attributes>
       <h>341</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
-&lt;&lt;extends&gt;&gt;</panel_attributes>
+&lt;&lt;extend&gt;&gt;</panel_attributes>
     <additional_attributes>27;324;198;27</additional_attributes>
   </element>
   <element>
