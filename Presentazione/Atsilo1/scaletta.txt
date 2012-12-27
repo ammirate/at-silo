@@ -1,16 +1,27 @@
 Nell'ordine presenteranno:
 
 DI PALMA    - Introduzione al progetto, obiettivo di analisi: perfetta aderenza ai processi di business specificati dal committente.
-	      "Le richieste erano queste quì!" e ne mostri alcune di priorità elevata
+	      "Le richieste erano queste quì!" e ne mostri alcune di priorità elevata. 
+	      Inoltre mostri il diagramma degli attori e due o tre diagramma per packages di casi d'uso collegati agli attori..
+	      Il primo diagramma dei package collega gli attori della prima versione del RAD ai loro packages di casi d'uso..
+	      I successivi mostrano come si è evoluto il rad (vedi la presentazione di esempio caricata da Linda)
+
 BARBA 	    - Casi d'uso descritti con una vista di alto livello: pre-iscrizione, assegnazione punteggio/esclusione, iscrizione, 
 	      convalida certificati, assegnazione a classe con conferma del delegato del rettore.
-MICCO       - Design goals per gli attori da noi usati, i nostri sottosistemi individuati, la nostra base dati che rispecchia la complessità del dominio del problema
+	      Mostra anche un caso d'uso di esempio per mostrare come abbiamo scritto i casi d'uso (e sottolinea il meccanismo delle generalizzazioni degli attori)
+	      Mostra le nostre regole di tracciabilità (nella presentazione di esempio trovi un suggerimento) e un sequence diagram.
+
+MICCO       - Design goals per gli attori da noi usati, i tradeoffs individuati, i nostri sottosistemi e l'architettura (magari il deployment), la nostra base dati che rispecchia la complessità del dominio del problema
 	      tenendo in considerazione ogni suo dettaglio.
+	      Inoltre dovresti mostrare la tracciabilità dei design goals.. (trovi un esempio nella presentazione)
+	      Eventuali pregi e difetti del nostro SDD
+
 SCAFURO     - Introduzione alla fase di Object Design e presentazione del framework estendibile per storage: DBBeans (obiettivi, diagramma, vantaggi)
 D'EUGENIO   - Separazione delle responsabilità del livello application: i vari control per gestire bandi, iscrizione, etc. per implementare i processi di business
 	      dell'asilo. Mostra lo strategy per la ricerca e introduci il control per le e-mail, che verrà descritto poi da Gianfranco.
 BOTTIGLIERI - Control delle EMAIL: presentazione del bridge pattern associato, motivi per cui è stato applicato e che vantaggi ne abbiamo tratto (facilità per la creazione di
 	      nuovi messaggi email)
+DI PALMA    - Conclusioni: cosa è andato bene nel nostro progetto, cosa è andato male, quanto è "buono" il nostro sistema (tantissimo!) insomma.. un po' di gnignignigni
 
 
 questo file potrebbe cambiare in relazione a ciò che la prof vuole/desidera vedere in una presentazione... quindi tenetelo d'occhio :)
