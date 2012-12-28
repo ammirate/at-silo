@@ -18,7 +18,9 @@ MICCO       - Design goals per gli attori da noi usati, i tradeoffs individuati,
 
 SCAFURO     - Introduzione alla fase di Object Design e presentazione del framework estendibile per storage: DBBeans (obiettivi, diagramma, vantaggi)
 D'EUGENIO   - Separazione delle responsabilità del livello application: i vari control per gestire bandi, iscrizione, etc. per implementare i processi di business
-	      dell'asilo. Mostra lo strategy per la ricerca e introduci il control per le e-mail, che verrà descritto poi da Gianfranco.
+	      dell'asilo. 
+	      Mostra un esempio di OCL (probabilmente dovrai inventartelo) per uno dei nostri metodi realizzati (uno semplice).
+	      Mostra lo strategy per la ricerca e introduci il control per le e-mail, che verrà descritto poi da Gianfranco.
 BOTTIGLIERI - Control delle EMAIL: presentazione del bridge pattern associato, motivi per cui è stato applicato e che vantaggi ne abbiamo tratto (facilità per la creazione di
 	      nuovi messaggi email)
 DI PALMA    - Conclusioni: cosa è andato bene nel nostro progetto, cosa è andato male, quanto è "buono" il nostro sistema (tantissimo!) insomma.. un po' di gnignignigni
