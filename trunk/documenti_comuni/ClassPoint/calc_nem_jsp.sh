@@ -1,0 +1,1 @@
+find $1 -name '*.jsp' -print | cut --complement -b 1-${#1} | sed 's/$/;1/'
