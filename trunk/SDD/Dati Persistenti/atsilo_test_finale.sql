@@ -19,8 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `atsilo`
 --
-CREATE DATABASE `atsilo` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
-USE `atsilo`;
+CREATE DATABASE `Atsilo` DEFAULT CHARACTER SET latin1 COLLATE latin1_general_ci;
+USE `Atsilo`;
 
 -- --------------------------------------------------------
 
@@ -479,21 +479,21 @@ INSERT INTO `domanda_questionario` (`id`, `descrizione`, `questionario`) VALUES
 (180, 'Numero di componenti della famiglia', 3),
 (181, 'Titolo di studi padre', 3),
 (182, 'Titolo di studi madre', 3),
-(183, 'Almeno uno dei genitori è dipendente dell''asilo?', 3),
+(183, 'Almeno uno dei genitori è dipendente dell', 3),
 (184, 'Con quale profilo? ', 3),
-(185, 'Per quali motivi avete iscritto il Vostro bambino/bambina all''asilo?', 3),
+(185, 'Per quali motivi avete iscritto il Vostro bambino/bambina all', 3),
 (186, 'Per decidere di iscrivere il Vostro bambino/bambina come avete acquisito informazioni preventive?', 3),
 (187, 'Avete usufruito del servizio per circa mesi', 3),
 (188, 'Avete presentato rinuncia al servizio?', 3),
-(189, 'Indicate il motivo per cui avete deciso di presentare la domanda di rinuncia, o perchè non l''avete fatto', 3),
-(190, 'Pensate di iscrivere il bambino per l''anno prossimo all''asilo?', 3),
+(189, 'Indicate il motivo per cui avete deciso di presentare la domanda di rinuncia, o perchè non l', 3),
+(190, 'Pensate di iscrivere il bambino per l', 3),
 (191, 'Indicare la motivazione della risposta precedente', 3),
-(192, 'Ritenete utile l''ampliamento del calendario educativo che da la possibilità ai richiedenti di frequentare il Nido il mese di luglio con pacchetti personalizzati (settimanali)?         ', 3),
-(193, 'Quanto è soddisfatto dei Tempi per l''inserimemto del bambino?', 3),
-(194, 'Quanto sono importanti per lei i tempi per l''inserimento del bambino?', 3),
+(192, 'Ritenete utile l ampliamento del calendario educativo che da  la possibilità ai richiedenti di frequentare il Nido il mese di luglio con pacchetti personalizzati (settimanali)?         ', 3),
+(193, 'Quanto è soddisfatto dei Tempi per l', 3),
+(194, 'Quanto sono importanti per lei i Tempi per l', 3),
 (195, 'Quanto è soddisfatto delle modalità di inserimento del bambino?', 3),
 (196, 'Quanto sono importanti per lei le modalità di inserimento del bambino?', 3),
-(197, 'Quanto è soddisfatto della Discrezione e riservatezza del personale educativo?', 3),
+(197, 'Quanto è soddisfatta della Discrezione e riservatezza del personale educativo?', 3),
 (198, 'Quanto sono importanti per lei la Discrezione e riservatezza del personale educativo?', 3);
 
 -- --------------------------------------------------------
@@ -852,7 +852,7 @@ INSERT INTO `personale_asilo` (`nome`, `cognome`, `codice_fiscale`, `categoria_a
 ('Silvana', 'Buselli', 'BSLSVN62L12B099E', 'impiegato_asilo', 'sbuselli@yahoo.it', '1975-12-23', 'Caserta', '1234567678', 'via XY', '69', '56789', 'Caserta', 'CE', 'via XY', '69', '56789', 'Caserta', 'CE', 'Italiana', NULL, NULL),
 ('Domenico', 'Crisi', 'CRSDMN64L12T019Y', 'responsabile_scientifico', 'dcrisi@yahoo.it', '1990-05-14', 'Salerno', '3456789012', 'via Lol', '1', '84100', 'Salerno', 'SA', 'via Lol', '1', '84100', 'Salerno', 'SA', 'Italiana', NULL, NULL),
 ('Veronica', 'Mars', 'MRSVRN90A32B235B', 'impiegato_bando', 'vmars@libero.it', '1991-04-25', 'Benevento', '2345678901', 'via Via', '8', '82100', 'Benevento', 'BN', 'via Via', '8', '82100', 'Benevento', 'BN', 'Italiana', NULL, NULL),
-('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'Direttore', 'asenatore@yahoo.it', '1972-11-06', 'Avellino', '5678901234', 'via No', '29', '83100', 'Avellino', 'AV', 'via No', '29', '83100', 'Avellino', 'AV', 'Italiana', NULL, NULL),
+('Antonella', 'Senatore', 'SNTNTN53N69B309D', 'direttore', 'asenatore@yahoo.it', '1972-11-06', 'Avellino', '5678901234', 'via No', '29', '83100', 'Avellino', 'AV', 'via No', '29', '83100', 'Avellino', 'AV', 'Italiana', NULL, NULL),
 ('Domenico', 'Tranfa', 'TRNDMN64L12T048Y', 'delegato_rettore', 'dtranfa@yahoo.it', '1971-11-04', 'Napoli', '7890123456', 'piazza Garibaldi', '123', '07082', 'Napoli', 'NA', 'piazza Garibaldi', '123', '07082', 'Napoli', 'NA', 'Italiana', NULL, NULL);
 
 -- --------------------------------------------------------

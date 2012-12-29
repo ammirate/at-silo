@@ -25,7 +25,7 @@
 	</tbody>
 </table>
 <%@
-include file="atsilo_files/sidebar_impiegato.jsp"%>
+include file="atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp"%>
 
 <img width="209" border="0" alt="" height="1"
 	src="atsilo_images/clearpixel.gif">

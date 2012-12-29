@@ -33,7 +33,7 @@ public class AtsiloConstants {
     /**
      * 
      */
-    public static final String CAT_DIRETTORE="Direttore";
+    public static final String CAT_DIRETTORE="direttore";
     public static final String CAT_GENITORE="genitore";
     public static final String CAT_EDUCATORE="educatore";
     public static final String CAT_PSICOPEDAGOGO="psicopedagogo";
