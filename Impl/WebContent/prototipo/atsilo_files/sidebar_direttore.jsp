@@ -148,27 +148,24 @@ if (!tipologia.equals("direttore") )
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="left" class="menuprimosel">&nbsp;<b>Gestione Bando</b></td>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Classi</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="caricamento_bando.jsp">Caricamento Bando</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_classe.jsp">Inserisci Classe</a></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="specifiche_bando.jsp">Modifica Specifiche</a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="assegna_classe.jsp">Assegna Classe</a></td>
+</tr>
+<tr>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="cancella_classe.jsp">Cancella Classe</a></td>
 </tr>
 </tbody></table>
 <table class="lineadivisoria" width="100%" cellspacing="0" cellpadding="0" border="0">
 <tbody><tr>
-<td align="left" class="menuprimosel">&nbsp;<b>Evento</b></td>
+<td align="left" class="menuprimosel">&nbsp;<b>Gestione Eventi</b></td>
 </tr>
 <tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="inserisci_evento.jsp">Inserisci </a></td>
-</tr>
-<tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="modifica_evento.jsp">Modifica </a></td>
-</tr>
-<tr>
-<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="elimina_evento.jsp.jsp">Elimina </a></td>
+<td class="menusecondo">&nbsp;<a class="linkmenusecondo" href="eventi.jsp">Visualizza Eventi</a></td>
 </tr>
 
 <td align="left" class="menuprimosel">&nbsp;<b>Programma Didattico</b></td>
