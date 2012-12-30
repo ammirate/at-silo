@@ -1,0 +1,1 @@
+find $1 -name '*.java' -exec grep -c -E '(public|protected) +[A-Za-z0-9_]+ +[A-Za-z0-9_]+\(' {} + | cut --complement -b 1-${#1}

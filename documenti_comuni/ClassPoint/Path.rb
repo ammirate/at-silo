@@ -29,15 +29,14 @@ class Path
 		end
 	end
 	
-	def self.iterate_dir(d, &blk)
+	private
+	def iterate_dir(d, &blk)
 		d.each_child do |c|
 			if c.directory?
-				iterate_dir(c, blk)
+				iterate_dir(c, &blk)
 			else
 				yield c
 			end
 		end
 	end
-	
-	private_class_method :iterate_dir
 end
