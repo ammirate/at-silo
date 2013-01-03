@@ -105,7 +105,7 @@ bg=gray</panel_attributes>
       <w>96</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m2=N</panel_attributes>
     <additional_attributes>24;24;80;24</additional_attributes>
   </element>
   <element>
@@ -116,7 +116,7 @@ bg=gray</panel_attributes>
       <w>120</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m1=N</panel_attributes>
     <additional_attributes>24;24;104;24</additional_attributes>
   </element>
   <element>
@@ -127,7 +127,7 @@ bg=gray</panel_attributes>
       <w>40</w>
       <h>160</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m2=  N</panel_attributes>
     <additional_attributes>24;24;24;144</additional_attributes>
   </element>
   <element>
@@ -150,7 +150,7 @@ bg=gray</panel_attributes>
       <w>96</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m2=1</panel_attributes>
     <additional_attributes>24;24;80;24</additional_attributes>
   </element>
   <element>
@@ -161,7 +161,7 @@ bg=gray</panel_attributes>
       <w>40</w>
       <h>152</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m1=  N</panel_attributes>
     <additional_attributes>24;24;24;136</additional_attributes>
   </element>
   <element>
@@ -184,7 +184,7 @@ bg=gray</panel_attributes>
       <w>112</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m2=1</panel_attributes>
     <additional_attributes>24;24;96;24</additional_attributes>
   </element>
   <element>
@@ -195,7 +195,7 @@ bg=gray</panel_attributes>
       <w>96</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m1=1</panel_attributes>
     <additional_attributes>24;24;80;24</additional_attributes>
   </element>
   <element>
@@ -218,7 +218,7 @@ bg=gray</panel_attributes>
       <w>88</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m2=N</panel_attributes>
     <additional_attributes>24;24;72;24</additional_attributes>
   </element>
   <element>
@@ -229,7 +229,7 @@ bg=gray</panel_attributes>
       <w>96</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m1=N</panel_attributes>
     <additional_attributes>24;24;80;24</additional_attributes>
   </element>
   <element>
@@ -252,7 +252,7 @@ bg=gray</panel_attributes>
       <w>40</w>
       <h>160</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>m2=  1</panel_attributes>
     <additional_attributes>24;144;24;24</additional_attributes>
   </element>
 </diagram>
