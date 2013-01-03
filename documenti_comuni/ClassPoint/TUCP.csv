@@ -1,272 +1,272 @@
-File;NSR;NEM;NOA;COMPLEX;TIPO
-atsilo.util.IterableOnlyOnce.java;0;1;2;1;
-atsilo.util.AtsiloConstants.java;0;0;0;1;
-atsilo.application.AlgoritmoRicerca.java;0;0;0;1;
-atsilo.application.AlgoritmoRicercaUtente.java;1;0;0;1;
-atsilo.application.ControlRispostaQuestionario.java;0;3;0;1;
-atsilo.application.AlgoritmoRicercaPersonaleAsilo.java;1;0;0;1;
-atsilo.application.AlgoritmoRicercaBambino.java;1;0;0;1;
-atsilo.application.ControlDatiPersonali.java;84;15;0;2;
-atsilo.application.ControlGestionePersonale.java;0;0;0;1;
-atsilo.application.notificheMail.NotificaMailComposizioneClasse.java;3;2;1;1;
-atsilo.application.notificheMail.NotificaMail.java;0;2;3;1;
-atsilo.application.notificheMail.ControlNotificaMail.java;14;2;0;1;
-atsilo.application.notificheMail.NotificaMailRegistrazione.java;2;2;2;1;
-atsilo.application.notificheMail.Messaggio.java;0;0;0;1;
-atsilo.application.notificheMail.Testnotifichemail.java;6;0;0;1;
-atsilo.application.notificheMail.NotificaMailEvento.java;8;2;1;1;
-atsilo.application.notificheMail.NotificaMailLicenziamento.java;4;2;1;1;
-atsilo.application.ControlEvento.java;37;5;0;1;
-atsilo.application.AlgoritmoRicercaPersonaleFormazione.java;1;0;0;1;
-atsilo.application.ControlDomandaQuestionario.java;0;5;0;1;
-atsilo.application.ControlServizio.java;0;4;0;1;
-atsilo.application.ControlClassi.java;20;11;0;2;
-atsilo.application.ControlMensa.java;13;4;1;1;
-atsilo.application.ControlLogin.java;16;1;0;1;
-atsilo.application.ControlAttivita.java;0;5;0;1;
-atsilo.application.ControlAssenza.java;0;3;0;1;
-atsilo.application.ControlMenu.java;0;1;0;1;
-atsilo.application.ControlTirocinante.java;0;4;0;1;
-atsilo.application.ControlRegistro.java;7;3;0;1;
-atsilo.application.ContestoRicerca.java;0;1;1;1;
-atsilo.application.ControlIscrizione.java;93;11;0;2;
-atsilo.application.ControlIscritti.java;13;0;0;1;
-atsilo.application.ControlRicercaDati.java;0;1;0;1;
-atsilo.application.ControlOrario.java;4;7;0;1;
-atsilo.application.ControlData.java;12;2;0;1;
-atsilo.application.ControlQuestionario.java;55;16;0;2;
-atsilo.application.forum.ControlForum.java;6;1;0;1;
-atsilo.application.servlet.ServletControlTirocinantiInserisci.java;10;3;1;1;
-atsilo.application.servlet.ServletAggiungiPunteggio.java;12;2;1;1;
-atsilo.application.servlet.ServletEventoModifica.java;40;2;2;1;
-atsilo.application.servlet.ServletModificaDatiAccount.java;11;2;1;1;
-atsilo.application.servlet.ServletDomandaIscrizioneConvalida.java;11;2;1;1;
-atsilo.application.servlet.ServletEventoInserisci.java;42;2;3;1;
-atsilo.application.servlet.ControlCompilaQuestionario.java;28;2;0;1;
-atsilo.application.servlet.servletControlQuestionario.java;22;2;0;1;
-atsilo.application.servlet.ServletControlClasseIns.java;8;2;1;1;
-atsilo.application.servlet.ServletControlClasseCanc.java;10;2;1;1;
-atsilo.application.servlet.ServletControlLogin.java;14;2;1;1;
-atsilo.application.servlet.ServletEventoElimina.java;15;2;1;1;
-atsilo.application.servlet.ServletCompilazioneDatiBando.java;24;2;2;1;
-atsilo.application.servlet.ServletControlBandoIM.java;9;2;1;1;
-atsilo.application.servlet.ServletBandoCarica.java;22;2;0;1;
-atsilo.application.servlet.ServletConvalidaClasseBambino.java;15;2;1;1;
-atsilo.application.servlet.ServletControlClasseAss.java;18;2;1;1;
-atsilo.application.servlet.ServletRegistrazioneAccount.java;14;2;1;1;
-atsilo.application.servlet.ServletIscrizioneBambino.java;16;2;1;1;
-atsilo.application.servlet.ServletControlEliminaQuestionario.java;9;2;0;1;
-atsilo.application.ControlGestioneBando.java;47;10;0;2;
-atsilo.application.ControlProgrammaEducativo.java;0;4;0;1;
-atsilo.application.ControlCampiRadioCheck.java;4;1;1;1;
-atsilo.entity.RegistroTirocinante.java;0;10;6;3;
-atsilo.entity.RispostaQuestionario.java;0;9;4;2;
-atsilo.entity.Utente.java;0;36;18;3;
-atsilo.entity.OrarioUtente.java;0;16;8;3;
-atsilo.entity.ResponsabileQuestionario.java;0;0;0;1;
-atsilo.entity.EducatoreDidattico.java;0;3;2;1;
-atsilo.entity.ResponsabileTirocini.java;0;0;0;1;
-atsilo.entity.CompilaQuestionario.java;0;4;2;1;
-atsilo.entity.Insegna.java;2;4;2;1;
-atsilo.entity.Bambino.java;0;43;22;3;
-atsilo.entity.Account.java;0;6;3;1;
-atsilo.entity.Attivita.java;0;13;7;3;
-atsilo.entity.Servizio.java;0;12;6;3;
-atsilo.entity.Nota.java;0;4;2;1;
-atsilo.entity.Fattura.java;0;6;3;1;
-atsilo.entity.PersonaleAsilo.java;0;4;3;1;
-atsilo.entity.phpbb_user.java;3;154;77;3;
-atsilo.entity.Beans.java;0;0;0;1;
-atsilo.entity.Massimo.java;0;6;3;1;
-atsilo.entity.StatisticheQuestionario.java;2;5;3;1;
-atsilo.entity.MenuMensa.java;0;16;8;3;
-atsilo.entity.Registro.java;0;9;5;2;
-atsilo.entity.AttivitaTirocinante.java;0;12;6;3;
-atsilo.entity.Genitore.java;1;23;12;3;
-atsilo.entity.ProgrammaEducativoSettimanale.java;0;11;6;3;
-atsilo.entity.Assenza.java;0;4;2;1;
-atsilo.entity.Schedulazione.java;0;5;3;1;
-atsilo.entity.DomandaQuestionario.java;3;9;4;2;
-atsilo.entity.Retta.java;0;17;9;3;
-atsilo.entity.Extra.java;0;11;6;3;
-atsilo.entity.Questionario.java;8;21;9;3;
-atsilo.entity.EventPlanner.java;0;0;0;1;
-atsilo.entity.DomandaIscrizione.java;0;55;27;3;
-atsilo.entity.Evento.java;1;18;9;3;
-atsilo.entity.CampoDomandaQuestionario.java;0;11;5;2;
-atsilo.entity.RichiestaTirocinante.java;0;12;6;3;
-atsilo.entity.Psicopedagogo.java;0;2;1;1;
-atsilo.entity.Feedback.java;0;6;3;1;
-atsilo.entity.Richiesta.java;0;14;7;3;
-atsilo.entity.Contestazione.java;0;6;3;1;
-atsilo.entity.Partecipa.java;2;4;2;1;
-atsilo.entity.Classe.java;1;7;4;1;
-atsilo.entity.Tirocinante.java;0;19;10;3;
-atsilo.entity.Bando.java;0;16;8;3;
-atsilo.storage.DBTirocinante.java;39;4;0;1;
-atsilo.storage.DBCompilaQuestionario.java;17;2;0;1;
-atsilo.storage.DBQuestionario.java;26;2;0;1;
-atsilo.storage.DBBambino.java;40;5;0;1;
-atsilo.storage.ManagerDB.java;0;5;0;1;
-atsilo.storage.DBCampoDomandaQuestionario.java;19;3;0;1;
-atsilo.storage.DBBando.java;20;5;0;1;
-atsilo.storage.DBClasse.java;16;1;0;1;
-atsilo.storage.DBAssenza.java;16;3;0;1;
-atsilo.storage.DBEducatoreDidattico.java;30;4;0;1;
-atsilo.storage.DBGenitore.java;42;3;0;1;
-atsilo.storage.DBRichiesta.java;21;4;0;1;
-atsilo.storage.DBMenuMensa.java;0;3;0;1;
-atsilo.storage.DBPartecipa.java;19;1;0;1;
-atsilo.storage.DBPsicopedagogo.java;31;4;0;1;
-atsilo.storage.DBAttivita.java;22;4;0;1;
-atsilo.storage.DBRetta.java;19;3;0;1;
-atsilo.storage.DBFattura.java;2;4;0;1;
-atsilo.storage.DBBeansInterface.java;0;3;0;1;
-atsilo.storage.DBRispostaQuestionario.java;20;4;0;1;
-atsilo.storage.DBEvento.java;30;3;0;1;
-atsilo.storage.DBDomandaQuestionario.java;17;5;0;1;
-atsilo.storage.Database.java;21;7;2;2;
-atsilo.storage.DBInsegna.java;21;1;0;1;
-atsilo.storage.DBFeedback.java;0;3;0;1;
-atsilo.storage.DBExtra.java;2;4;0;1;
-atsilo.storage.DBResponsabileQuestionario.java;29;4;0;1;
-atsilo.storage.DBProgrammaEducativoSettimanale.java;0;3;0;1;
-atsilo.storage.DBRegistro.java;17;6;0;1;
-atsilo.storage.DBphpbb_users.java;4;1;0;1;
-atsilo.storage.DBServizio.java;19;4;0;1;
-atsilo.storage.Tabella.java;24;5;3;1;
-atsilo.storage.DBAccount.java;17;3;0;1;
-atsilo.storage.DBDomandaIscrizione.java;57;5;0;1;
-atsilo.storage.DBOrarioUtente.java;20;4;0;1;
-atsilo.storage.DBBeans.java;44;7;13;3;
-atsilo.storage.DBPersonaleAsilo.java;32;6;0;1;
-atsilo.exception.AccountException.java;0;0;0;1;
-atsilo.exception.UtenteException.java;0;0;0;1;
-atsilo.exception.BandoException.java;0;0;0;1;
-atsilo.exception.LoginException.java;0;0;0;1;
-atsilo.exception.InserimentoDatiException.java;0;0;0;1;
-atsilo.exception.DBConnectionException.java;0;0;0;1;
-atsilo.exception.RegistroException.java;0;0;0;1;
-atsilo.exception.QuestionarioException.java;0;0;0;1;
-atsilo.exception.GenitoreException.java;0;0;0;1;
-atsilo.exception.DatiPersonaliException.java;0;0;0;1;
-atsilo.exception.ServizioException.java;0;0;0;1;
-atsilo.exception.ClasseException.java;0;0;0;1;
-atsilo.exception.BambinoException.java;0;0;0;1;
-atsilo.exception.EventoException.java;0;0;0;1;
-atsilo.exception.DomandaIscrizioneException.java;0;0;0;1;
-/prototipo/inserisci_fascia_oraria.jsp;0;1;0;1;
-/prototipo/invia_domanda_confermata.jsp;10;1;0;1;
-/prototipo/storico_pagamenti.jsp;0;1;0;1;
-/prototipo/storico_attivita.jsp;0;1;0;1;
-/prototipo/presenta_bando.jsp;13;1;0;1;
-/prototipo/index_delegato_rettore.jsp;0;1;0;1;
-/prototipo/specifiche_bando.jsp;6;1;0;1;
-/prototipo/visualizza_questionari.jsp;24;1;0;1;
-/prototipo/inserisci_personale.jsp;0;1;0;1;
-/prototipo/approva_richieste.jsp;0;1;0;1;
-/prototipo/index_delegato_scfm.jsp;0;1;0;1;
-/prototipo/visualizza_orario_servizi.jsp;0;1;0;1;
-/prototipo/fattura_pagamenti.jsp;0;1;0;1;
-/prototipo/modifica_orario.jsp;0;1;0;1;
-/prototipo/inserisci_classe.jsp;11;1;0;1;
-/prototipo/inserisci_programma.jsp;0;1;0;1;
-/prototipo/invia_punteggio.jsp;31;1;0;1;
-/prototipo/graduatoria_rifiutati.jsp;11;1;0;1;
-/prototipo/statistiche_risposte_aperte.jsp;11;1;0;1;
-/prototipo/lista_questionari.jsp;20;1;0;1;
-/prototipo/rinuncia_servizio.jsp;12;1;0;1;
-/prototipo/modifica_programma.jsp;0;1;0;1;
-/prototipo/modifica_tirocinante.jsp;0;1;0;1;
-/prototipo/inserisci_questionario.jsp;3;1;0;1;
-/prototipo/modifica_orario_servizio.jsp;0;1;0;1;
-/prototipo/modifica_piano_pasto.jsp;0;1;0;1;
-/prototipo/ricerca_utente.jsp;0;1;0;1;
-/prototipo/dati_genitore_non_richiedente.jsp;45;1;0;1;
-/prototipo/cancella_programma.jsp;0;1;0;1;
-/prototipo/index_psicopedagoga.jsp;0;1;0;1;
-/prototipo/approva_tirocinante.jsp;0;1;0;1;
-/prototipo/index_genitore.jsp;5;1;0;1;
-/prototipo/registro_pagamenti.jsp;0;1;0;1;
-/prototipo/attivita_odierna.jsp;0;1;0;1;
-/prototipo/errore.jsp;1;1;0;1;
-/prototipo/account_educatore.jsp;0;1;0;1;
-/prototipo/modifica_questionario.jsp;21;1;0;1;
-/prototipo/dati_account_genitore.jsp;7;1;0;1;
-/prototipo/lista_punteggio.jsp;15;1;0;1;
-/prototipo/account_delegato_sciform.jsp;0;1;0;1;
-/prototipo/account_delegato_rettore.jsp;0;1;0;1;
-/prototipo/dati_genitore_richiedente.jsp;12;1;0;1;
-/prototipo/registro_presenze.jsp;0;1;0;1;
-/prototipo/lista_domanda_confermata.jsp;14;1;0;1;
-/prototipo/storico_registro_ped.jsp;2;1;0;1;
-/prototipo/index_impiegato_asilo.jsp;0;1;0;1;
-/prototipo/inserisci_tirocinante.jsp;1;1;0;1;
-/prototipo/atsilo_files/dati_genitore_richiedente_residenti_fisciano.jsp;33;1;0;1;
-/prototipo/atsilo_files/sidebar_impiegato.jsp;3;1;0;1;
-/prototipo/atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp;1;1;0;1;
-/prototipo/atsilo_files/sidebar_impiegato_bando.jsp;1;1;0;1;
-/prototipo/atsilo_files/includi_sidebar_giusta_tipologia.jsp;1;1;0;1;
-/prototipo/atsilo_files/header.jsp;12;1;0;1;
-/prototipo/atsilo_files/dati_genitore_richiedente_altro.jsp;36;1;0;1;
-/prototipo/atsilo_files/sidebar_top_iscrizione.jsp;0;1;0;1;
-/prototipo/atsilo_files/sidebar_genitore.jsp;6;1;0;1;
-/prototipo/atsilo_files/footer.jsp;0;1;0;1;
-/prototipo/atsilo_files/sidebar_top_bambino.jsp;0;1;0;1;
-/prototipo/atsilo_files/sidebar_index.jsp;0;1;0;1;
-/prototipo/atsilo_files/form_ricerca_personale_da_personale.jsp;0;1;0;1;
-/prototipo/atsilo_files/sidebar_delegato.jsp;3;1;0;1;
-/prototipo/atsilo_files/dati_genitore_richiedente_personale.jsp;35;1;0;1;
-/prototipo/atsilo_files/sidebar_direttore.jsp;3;1;0;1;
-/prototipo/atsilo_files/modifica_dati_account.jsp;7;1;0;1;
-/prototipo/atsilo_files/sidebar.jsp;3;1;0;1;
-/prototipo/atsilo_files/form_modifica_account_impiegato.jsp;7;1;0;1;
-/prototipo/atsilo_files/sidebar_top_genitore.jsp;0;1;0;1;
-/prototipo/atsilo_files/sidebar_scienzeformazione.jsp;3;1;0;1;
-/prototipo/atsilo_files/sidebar_ped.jsp;3;1;0;1;
-/prototipo/atsilo_files/form_ricerca_genitore.jsp;2;1;0;1;
-/prototipo/atsilo_files/modifica_specifiche_bando.jsp;8;1;0;1;
-/prototipo/atsilo_files/sidebar_delegato_rettore.jsp;3;1;0;1;
-/prototipo/atsilo_files/form_ricerca_personale_da_genitore.jsp;0;1;0;1;
-/prototipo/login.jsp;6;1;0;1;
-/prototipo/licenzia.jsp;0;1;0;1;
-/prototipo/modifica_evento.jsp;22;1;0;1;
-/prototipo/eventi.jsp;12;1;0;1;
-/prototipo/comunicazioni.jsp;0;1;0;1;
-/prototipo/logout.jsp;2;1;0;1;
-/prototipo/modifica_fascia_oraria.jsp;0;1;0;1;
-/prototipo/account_impiegato.jsp;0;1;0;1;
-/prototipo/cancella_iscritto.jsp;0;1;0;1;
-/prototipo/inserimento_giudizio_tirocinante.jsp;0;1;0;1;
-/prototipo/caricamento_bando.jsp;5;1;0;1;
-/prototipo/richieste_tirocinanti.jsp;0;1;0;1;
-/prototipo/lista_evento.jsp;27;1;0;1;
-/prototipo/index_impiegato_bando.jsp;0;1;0;1;
-/prototipo/modifica_iscritto.jsp;0;1;0;1;
-/prototipo/index_educatore.jsp;0;1;0;1;
-/prototipo/index_direttore.jsp;0;1;0;1;
-/prototipo/convalida_classe_bambino.jsp;16;1;0;1;
-/prototipo/modifica_pasti.jsp;0;1;0;1;
-/prototipo/graduatoria_ammessi.jsp;10;1;0;1;
-/prototipo/inserisci_iscritto.jsp;0;1;0;1;
-/prototipo/prova.jsp;5;1;0;1;
-/prototipo/index_delegato.jsp;0;1;0;1;
-/prototipo/account_impiegato_bando.jsp;0;1;0;1;
-/prototipo/modifica_specifiche_bando.jsp;0;1;0;1;
-/prototipo/cancella_fascia_oraria.jsp;0;1;0;1;
-/prototipo/index_responsabile_questionario.jsp;0;1;0;1;
-/prototipo/dati_bambino.jsp;29;1;0;1;
-/prototipo/visualizza_tirocinanti.jsp;0;1;0;1;
-/prototipo/statistica_questionario.jsp;18;1;0;1;
-/prototipo/cancella_classe.jsp;11;1;0;1;
-/prototipo/presenta_iscrizione.jsp;16;1;0;1;
-/prototipo/fattura_mensile.jsp;0;1;0;1;
-/prototipo/iscrizione.jsp;14;1;0;1;
-/prototipo/situazione_familiare.jsp;31;1;0;1;
-/prototipo/modifica_personale.jsp;0;1;0;1;
-/prototipo/servizi_attivi.jsp;0;1;0;1;
-/prototipo/inserisci_evento.jsp;9;1;0;1;
-/prototipo/stato_pagamenti.jsp;0;1;0;1;
-/prototipo/assegna_classe.jsp;15;1;0;1;
-/prototipo/storico_registro.jsp;2;1;0;1;
-/prototipo/registrazione_account.jsp;4;1;0;1;
+File	NSR	NEM	NOA	COMPLEX	TIPO
+/prototipo/account_delegato_rettore.jsp	0	1	0	1	HIT
+/prototipo/account_delegato_sciform.jsp	0	1	0	1	HIT
+/prototipo/account_educatore.jsp	0	1	0	1	HIT
+/prototipo/account_impiegato_bando.jsp	0	1	0	1	HIT
+/prototipo/account_impiegato.jsp	0	1	0	1	HIT
+/prototipo/approva_richieste.jsp	0	1	0	1	HIT
+/prototipo/approva_tirocinante.jsp	0	1	0	1	HIT
+/prototipo/assegna_classe.jsp	15	1	0	1	HIT
+/prototipo/atsilo_files/autoinclude_sidebar_giusta_tipologia.jsp	1	1	0	1	HIT
+/prototipo/atsilo_files/dati_genitore_richiedente_altro.jsp	36	1	0	1	HIT
+/prototipo/atsilo_files/dati_genitore_richiedente_personale.jsp	35	1	0	1	HIT
+/prototipo/atsilo_files/dati_genitore_richiedente_residenti_fisciano.jsp	33	1	0	1	HIT
+/prototipo/atsilo_files/footer.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/form_modifica_account_impiegato.jsp	7	1	0	1	HIT
+/prototipo/atsilo_files/form_ricerca_genitore.jsp	2	1	0	1	HIT
+/prototipo/atsilo_files/form_ricerca_personale_da_genitore.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/form_ricerca_personale_da_personale.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/header.jsp	12	1	0	1	HIT
+/prototipo/atsilo_files/includi_sidebar_giusta_tipologia.jsp	1	1	0	1	HIT
+/prototipo/atsilo_files/modifica_dati_account.jsp	7	1	0	1	HIT
+/prototipo/atsilo_files/modifica_specifiche_bando.jsp	8	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_delegato_rettore.jsp	3	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_delegato.jsp	3	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_direttore.jsp	3	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_genitore.jsp	6	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_impiegato_bando.jsp	1	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_impiegato.jsp	3	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_index.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_ped.jsp	3	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_scienzeformazione.jsp	3	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_top_bambino.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_top_genitore.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/sidebar_top_iscrizione.jsp	0	1	0	1	HIT
+/prototipo/atsilo_files/sidebar.jsp	3	1	0	1	HIT
+/prototipo/attivita_odierna.jsp	0	1	0	1	HIT
+/prototipo/cancella_classe.jsp	11	1	0	1	HIT
+/prototipo/cancella_fascia_oraria.jsp	0	1	0	1	HIT
+/prototipo/cancella_iscritto.jsp	0	1	0	1	HIT
+/prototipo/cancella_programma.jsp	0	1	0	1	HIT
+/prototipo/caricamento_bando.jsp	5	1	0	1	HIT
+/prototipo/comunicazioni.jsp	0	1	0	1	HIT
+/prototipo/convalida_classe_bambino.jsp	16	1	0	1	HIT
+/prototipo/dati_account_genitore.jsp	7	1	0	1	HIT
+/prototipo/dati_bambino.jsp	29	1	0	1	HIT
+/prototipo/dati_genitore_non_richiedente.jsp	45	1	0	1	HIT
+/prototipo/dati_genitore_richiedente.jsp	12	1	0	1	HIT
+/prototipo/errore.jsp	1	1	0	1	HIT
+/prototipo/eventi.jsp	12	1	0	1	HIT
+/prototipo/fattura_mensile.jsp	0	1	0	1	HIT
+/prototipo/fattura_pagamenti.jsp	0	1	0	1	HIT
+/prototipo/graduatoria_ammessi.jsp	10	1	0	1	HIT
+/prototipo/graduatoria_rifiutati.jsp	11	1	0	1	HIT
+/prototipo/index_delegato_rettore.jsp	0	1	0	1	HIT
+/prototipo/index_delegato_scfm.jsp	0	1	0	1	HIT
+/prototipo/index_delegato.jsp	0	1	0	1	HIT
+/prototipo/index_direttore.jsp	0	1	0	1	HIT
+/prototipo/index_educatore.jsp	0	1	0	1	HIT
+/prototipo/index_genitore.jsp	5	1	0	1	HIT
+/prototipo/index_impiegato_asilo.jsp	0	1	0	1	HIT
+/prototipo/index_impiegato_bando.jsp	0	1	0	1	HIT
+/prototipo/index_psicopedagoga.jsp	0	1	0	1	HIT
+/prototipo/index_responsabile_questionario.jsp	0	1	0	1	HIT
+/prototipo/inserimento_giudizio_tirocinante.jsp	0	1	0	1	HIT
+/prototipo/inserisci_classe.jsp	11	1	0	1	HIT
+/prototipo/inserisci_evento.jsp	9	1	0	1	HIT
+/prototipo/inserisci_fascia_oraria.jsp	0	1	0	1	HIT
+/prototipo/inserisci_iscritto.jsp	0	1	0	1	HIT
+/prototipo/inserisci_personale.jsp	0	1	0	1	HIT
+/prototipo/inserisci_programma.jsp	0	1	0	1	HIT
+/prototipo/inserisci_questionario.jsp	3	1	0	1	HIT
+/prototipo/inserisci_tirocinante.jsp	1	1	0	1	HIT
+/prototipo/invia_domanda_confermata.jsp	10	1	0	1	HIT
+/prototipo/invia_punteggio.jsp	31	1	0	1	HIT
+/prototipo/iscrizione.jsp	14	1	0	1	HIT
+/prototipo/licenzia.jsp	0	1	0	1	HIT
+/prototipo/lista_domanda_confermata.jsp	14	1	0	1	HIT
+/prototipo/lista_evento.jsp	27	1	0	1	HIT
+/prototipo/lista_punteggio.jsp	15	1	0	1	HIT
+/prototipo/lista_questionari.jsp	20	1	0	1	HIT
+/prototipo/login.jsp	6	1	0	1	HIT
+/prototipo/logout.jsp	2	1	0	1	HIT
+/prototipo/modifica_evento.jsp	22	1	0	1	HIT
+/prototipo/modifica_fascia_oraria.jsp	0	1	0	1	HIT
+/prototipo/modifica_iscritto.jsp	0	1	0	1	HIT
+/prototipo/modifica_orario_servizio.jsp	0	1	0	1	HIT
+/prototipo/modifica_orario.jsp	0	1	0	1	HIT
+/prototipo/modifica_pasti.jsp	0	1	0	1	HIT
+/prototipo/modifica_personale.jsp	0	1	0	1	HIT
+/prototipo/modifica_piano_pasto.jsp	0	1	0	1	HIT
+/prototipo/modifica_programma.jsp	0	1	0	1	HIT
+/prototipo/modifica_questionario.jsp	21	1	0	1	HIT
+/prototipo/modifica_specifiche_bando.jsp	0	1	0	1	HIT
+/prototipo/modifica_tirocinante.jsp	0	1	0	1	HIT
+/prototipo/presenta_bando.jsp	13	1	0	1	HIT
+/prototipo/presenta_iscrizione.jsp	16	1	0	1	HIT
+/prototipo/prova.jsp	5	1	0	1	HIT
+/prototipo/registrazione_account.jsp	4	1	0	1	HIT
+/prototipo/registro_pagamenti.jsp	0	1	0	1	HIT
+/prototipo/registro_presenze.jsp	0	1	0	1	HIT
+/prototipo/ricerca_utente.jsp	0	1	0	1	HIT
+/prototipo/richieste_tirocinanti.jsp	0	1	0	1	HIT
+/prototipo/rinuncia_servizio.jsp	12	1	0	1	HIT
+/prototipo/servizi_attivi.jsp	0	1	0	1	HIT
+/prototipo/situazione_familiare.jsp	31	1	0	1	HIT
+/prototipo/specifiche_bando.jsp	6	1	0	1	HIT
+/prototipo/statistica_questionario.jsp	18	1	0	1	HIT
+/prototipo/statistiche_risposte_aperte.jsp	11	1	0	1	HIT
+/prototipo/stato_pagamenti.jsp	0	1	0	1	HIT
+/prototipo/storico_attivita.jsp	0	1	0	1	HIT
+/prototipo/storico_pagamenti.jsp	0	1	0	1	HIT
+/prototipo/storico_registro_ped.jsp	2	1	0	1	HIT
+/prototipo/storico_registro.jsp	2	1	0	1	HIT
+/prototipo/visualizza_orario_servizi.jsp	0	1	0	1	HIT
+/prototipo/visualizza_questionari.jsp	24	1	0	1	HIT
+/prototipo/visualizza_tirocinanti.jsp	0	1	0	1	HIT
+atsilo.application.AlgoritmoRicerca.java	0	0	0	1	TMT
+atsilo.application.AlgoritmoRicercaBambino.java	1	0	0	1	TMT
+atsilo.application.AlgoritmoRicercaPersonaleAsilo.java	1	0	0	1	TMT
+atsilo.application.AlgoritmoRicercaPersonaleFormazione.java	1	0	0	1	TMT
+atsilo.application.AlgoritmoRicercaUtente.java	1	0	0	1	TMT
+atsilo.application.ContestoRicerca.java	0	1	1	1	TMT
+atsilo.application.ControlAssenza.java	0	3	0	1	TMT
+atsilo.application.ControlAttivita.java	0	5	0	1	TMT
+atsilo.application.ControlCampiRadioCheck.java	4	1	1	1	TMT
+atsilo.application.ControlClassi.java	20	11	0	2	TMT
+atsilo.application.ControlData.java	12	2	0	1	TMT
+atsilo.application.ControlDatiPersonali.java	84	15	0	2	TMT
+atsilo.application.ControlDomandaQuestionario.java	0	5	0	1	TMT
+atsilo.application.ControlEvento.java	37	5	0	1	TMT
+atsilo.application.ControlGestioneBando.java	47	10	0	2	TMT
+atsilo.application.ControlGestionePersonale.java	0	0	0	1	TMT
+atsilo.application.ControlIscritti.java	13	0	0	1	TMT
+atsilo.application.ControlIscrizione.java	93	11	0	2	TMT
+atsilo.application.ControlLogin.java	16	1	0	1	TMT
+atsilo.application.ControlMensa.java	13	4	1	1	TMT
+atsilo.application.ControlMenu.java	0	1	0	1	TMT
+atsilo.application.ControlOrario.java	4	7	0	1	TMT
+atsilo.application.ControlProgrammaEducativo.java	0	4	0	1	TMT
+atsilo.application.ControlQuestionario.java	55	16	0	2	TMT
+atsilo.application.ControlRegistro.java	7	3	0	1	TMT
+atsilo.application.ControlRicercaDati.java	0	1	0	1	TMT
+atsilo.application.ControlRispostaQuestionario.java	0	3	0	1	TMT
+atsilo.application.ControlServizio.java	0	4	0	1	TMT
+atsilo.application.ControlTirocinante.java	0	4	0	1	TMT
+atsilo.application.forum.ControlForum.java	6	1	0	1	TMT
+atsilo.application.notificheMail.ControlNotificaMail.java	14	2	0	1	TMT
+atsilo.application.notificheMail.Messaggio.java	0	0	0	1	TMT
+atsilo.application.notificheMail.NotificaMail.java	0	2	3	1	TMT
+atsilo.application.notificheMail.NotificaMailComposizioneClasse.java	3	2	1	1	TMT
+atsilo.application.notificheMail.NotificaMailEvento.java	8	2	1	1	TMT
+atsilo.application.notificheMail.NotificaMailLicenziamento.java	4	2	1	1	TMT
+atsilo.application.notificheMail.NotificaMailRegistrazione.java	2	2	2	1	TMT
+atsilo.application.notificheMail.Testnotifichemail.java	6	0	0	1	TMT
+atsilo.application.servlet.ControlCompilaQuestionario.java	28	2	0	1	TMT
+atsilo.application.servlet.ServletAggiungiPunteggio.java	12	2	1	1	TMT
+atsilo.application.servlet.ServletBandoCarica.java	22	2	0	1	TMT
+atsilo.application.servlet.ServletCompilazioneDatiBando.java	24	2	2	1	TMT
+atsilo.application.servlet.ServletControlBandoIM.java	9	2	1	1	TMT
+atsilo.application.servlet.ServletControlClasseAss.java	18	2	1	1	TMT
+atsilo.application.servlet.ServletControlClasseCanc.java	10	2	1	1	TMT
+atsilo.application.servlet.ServletControlClasseIns.java	8	2	1	1	TMT
+atsilo.application.servlet.ServletControlEliminaQuestionario.java	9	2	0	1	TMT
+atsilo.application.servlet.ServletControlLogin.java	14	2	1	1	TMT
+atsilo.application.servlet.servletControlQuestionario.java	22	2	0	1	TMT
+atsilo.application.servlet.ServletControlTirocinantiInserisci.java	10	3	1	1	TMT
+atsilo.application.servlet.ServletConvalidaClasseBambino.java	15	2	1	1	TMT
+atsilo.application.servlet.ServletDomandaIscrizioneConvalida.java	11	2	1	1	TMT
+atsilo.application.servlet.ServletEventoElimina.java	15	2	1	1	TMT
+atsilo.application.servlet.ServletEventoInserisci.java	42	2	3	1	TMT
+atsilo.application.servlet.ServletEventoModifica.java	40	2	2	1	TMT
+atsilo.application.servlet.ServletIscrizioneBambino.java	16	2	1	1	TMT
+atsilo.application.servlet.ServletModificaDatiAccount.java	11	2	1	1	TMT
+atsilo.application.servlet.ServletRegistrazioneAccount.java	14	2	1	1	TMT
+atsilo.entity.Account.java	0	6	3	1	PDT
+atsilo.entity.Assenza.java	0	4	2	1	PDT
+atsilo.entity.Attivita.java	0	13	7	3	PDT
+atsilo.entity.AttivitaTirocinante.java	0	12	6	3	PDT
+atsilo.entity.Bambino.java	0	43	22	3	PDT
+atsilo.entity.Bando.java	0	16	8	3	PDT
+atsilo.entity.Beans.java	0	0	0	1	PDT
+atsilo.entity.CampoDomandaQuestionario.java	0	11	5	2	PDT
+atsilo.entity.Classe.java	1	7	4	1	PDT
+atsilo.entity.CompilaQuestionario.java	0	4	2	1	PDT
+atsilo.entity.Contestazione.java	0	6	3	1	PDT
+atsilo.entity.DomandaIscrizione.java	0	55	27	3	PDT
+atsilo.entity.DomandaQuestionario.java	3	9	4	2	PDT
+atsilo.entity.EducatoreDidattico.java	0	3	2	1	PDT
+atsilo.entity.Evento.java	1	18	9	3	PDT
+atsilo.entity.EventPlanner.java	0	0	0	1	PDT
+atsilo.entity.Extra.java	0	11	6	3	PDT
+atsilo.entity.Fattura.java	0	6	3	1	PDT
+atsilo.entity.Feedback.java	0	6	3	1	PDT
+atsilo.entity.Genitore.java	1	23	12	3	PDT
+atsilo.entity.Insegna.java	2	4	2	1	PDT
+atsilo.entity.Massimo.java	0	6	3	1	PDT
+atsilo.entity.MenuMensa.java	0	16	8	3	PDT
+atsilo.entity.Nota.java	0	4	2	1	PDT
+atsilo.entity.OrarioUtente.java	0	16	8	3	PDT
+atsilo.entity.Partecipa.java	2	4	2	1	PDT
+atsilo.entity.PersonaleAsilo.java	0	4	3	1	PDT
+atsilo.entity.phpbb_user.java	3	154	77	3	PDT
+atsilo.entity.ProgrammaEducativoSettimanale.java	0	11	6	3	PDT
+atsilo.entity.Psicopedagogo.java	0	2	1	1	PDT
+atsilo.entity.Questionario.java	8	21	9	3	PDT
+atsilo.entity.Registro.java	0	9	5	2	PDT
+atsilo.entity.RegistroTirocinante.java	0	10	6	3	PDT
+atsilo.entity.ResponsabileQuestionario.java	0	0	0	1	PDT
+atsilo.entity.ResponsabileTirocini.java	0	0	0	1	PDT
+atsilo.entity.Retta.java	0	17	9	3	PDT
+atsilo.entity.Richiesta.java	0	14	7	3	PDT
+atsilo.entity.RichiestaTirocinante.java	0	12	6	3	PDT
+atsilo.entity.RispostaQuestionario.java	0	9	4	2	PDT
+atsilo.entity.Schedulazione.java	0	5	3	1	PDT
+atsilo.entity.Servizio.java	0	12	6	3	PDT
+atsilo.entity.StatisticheQuestionario.java	2	5	3	1	PDT
+atsilo.entity.Tirocinante.java	0	19	10	3	PDT
+atsilo.entity.Utente.java	0	36	18	3	PDT
+atsilo.exception.AccountException.java	0	0	0	1	PDT
+atsilo.exception.BambinoException.java	0	0	0	1	PDT
+atsilo.exception.BandoException.java	0	0	0	1	PDT
+atsilo.exception.ClasseException.java	0	0	0	1	PDT
+atsilo.exception.DatiPersonaliException.java	0	0	0	1	PDT
+atsilo.exception.DBConnectionException.java	0	0	0	1	PDT
+atsilo.exception.DomandaIscrizioneException.java	0	0	0	1	PDT
+atsilo.exception.EventoException.java	0	0	0	1	PDT
+atsilo.exception.GenitoreException.java	0	0	0	1	PDT
+atsilo.exception.InserimentoDatiException.java	0	0	0	1	PDT
+atsilo.exception.LoginException.java	0	0	0	1	PDT
+atsilo.exception.QuestionarioException.java	0	0	0	1	PDT
+atsilo.exception.RegistroException.java	0	0	0	1	PDT
+atsilo.exception.ServizioException.java	0	0	0	1	PDT
+atsilo.exception.UtenteException.java	0	0	0	1	PDT
+atsilo.storage.Database.java	21	7	2	2	DMT
+atsilo.storage.DBAccount.java	17	3	0	1	DMT
+atsilo.storage.DBAssenza.java	16	3	0	1	DMT
+atsilo.storage.DBAttivita.java	22	4	0	1	DMT
+atsilo.storage.DBBambino.java	40	5	0	1	DMT
+atsilo.storage.DBBando.java	20	5	0	1	DMT
+atsilo.storage.DBBeans.java	44	7	13	3	DMT
+atsilo.storage.DBBeansInterface.java	0	3	0	1	DMT
+atsilo.storage.DBCampoDomandaQuestionario.java	19	3	0	1	DMT
+atsilo.storage.DBClasse.java	16	1	0	1	DMT
+atsilo.storage.DBCompilaQuestionario.java	17	2	0	1	DMT
+atsilo.storage.DBDomandaIscrizione.java	57	5	0	1	DMT
+atsilo.storage.DBDomandaQuestionario.java	17	5	0	1	DMT
+atsilo.storage.DBEducatoreDidattico.java	30	4	0	1	DMT
+atsilo.storage.DBEvento.java	30	3	0	1	DMT
+atsilo.storage.DBExtra.java	2	4	0	1	DMT
+atsilo.storage.DBFattura.java	2	4	0	1	DMT
+atsilo.storage.DBFeedback.java	0	3	0	1	DMT
+atsilo.storage.DBGenitore.java	42	3	0	1	DMT
+atsilo.storage.DBInsegna.java	21	1	0	1	DMT
+atsilo.storage.DBMenuMensa.java	0	3	0	1	DMT
+atsilo.storage.DBOrarioUtente.java	20	4	0	1	DMT
+atsilo.storage.DBPartecipa.java	19	1	0	1	DMT
+atsilo.storage.DBPersonaleAsilo.java	32	6	0	1	DMT
+atsilo.storage.DBphpbb_users.java	4	1	0	1	DMT
+atsilo.storage.DBProgrammaEducativoSettimanale.java	0	3	0	1	DMT
+atsilo.storage.DBPsicopedagogo.java	31	4	0	1	DMT
+atsilo.storage.DBQuestionario.java	26	2	0	1	DMT
+atsilo.storage.DBRegistro.java	17	6	0	1	DMT
+atsilo.storage.DBResponsabileQuestionario.java	29	4	0	1	DMT
+atsilo.storage.DBRetta.java	19	3	0	1	DMT
+atsilo.storage.DBRichiesta.java	21	4	0	1	DMT
+atsilo.storage.DBRispostaQuestionario.java	20	4	0	1	DMT
+atsilo.storage.DBServizio.java	19	4	0	1	DMT
+atsilo.storage.DBTirocinante.java	39	4	0	1	DMT
+atsilo.storage.ManagerDB.java	0	5	0	1	DMT
+atsilo.storage.Tabella.java	24	5	3	1	DMT
+atsilo.util.AtsiloConstants.java	0	0	0	1	PDT
+atsilo.util.IterableOnlyOnce.java	0	1	2	1	TMT
