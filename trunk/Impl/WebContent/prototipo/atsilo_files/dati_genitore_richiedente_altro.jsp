@@ -179,9 +179,9 @@ function calendarOpenerN()
   </tr>
   
     <td>Domiciliato a</td>
-    <td><input name="domiciliato_a" type="text" id="domiciliato_a" value="<%=comuneDomicilio%>"  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="comuneDomicilio" type="text" id="comuneDomicilio" value="<%=comuneDomicilio%>"  size="25" maxlength="25" readonly="readonly" /></td>
     <td>Via/Piazza</td>
-    <td><input name="indirizzoDomicilio" type="text" id="indirizzoDomicilio" value="<%=comuneDomicilio%>"  size="25" maxlength="25" readonly="readonly" /></td>
+    <td><input name="indirizzoDomicilio" type="text" id="indirizzoDomicilio" value="<%=indirizzoDomicilio%>"  size="25" maxlength="25" readonly="readonly" /></td>
   </tr>
   <tr>
     <td>Numero civico</td>
