@@ -23,8 +23,10 @@ function settaAttributi(slf){
 	 document.getElementById("month").setAttribute("readonly","readonly");
 	 document.getElementById("bott_calendario").disabled=false;
 	 document.getElementById("rapportoParentela").disabled=false;
-	 document.getElementById("status_lavorativo").disabled=false;
-	 
+	 if(document.getElementById("status_lavorativo")!=null)
+	 {
+	 	document.getElementById("status_lavorativo").disabled=false;
+	 }
 	 
 	 slf.onclick=null;
 	 return false;
