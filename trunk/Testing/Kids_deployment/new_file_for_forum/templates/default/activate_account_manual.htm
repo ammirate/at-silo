@@ -1,0 +1,68 @@
+<#include "header2.htm"/>
+<script type="text/javascript">
+function validateForm(f)
+{
+	if (f.user_id.value == "") {
+		alert("${I18n.getMessage("ActivateAccount.fillUserId")}");
+		f.user_id.focus();
+		
+		return false;
+	}
+
+    if (isNaN(f.user_id.value)) {
+        alert("${I18n.getMessage("ActivateAccount.invalidUserId")}");
+		f.user_id.focus();
+		
+		return false;
+	}
+	
+	if (f.hash.value == "") {
+		alert("${I18n.getMessage("ActivateAccount.fillHash")}");
+		f.hash.focus();
+		
+		return false;
+	}
+
+	return true;
+}
+</script>
+
+<form id="formregister" accept-charset="${encoding}" name="formactivate" action="${JForumContext.encodeURL("/jforum")}" method="post" onsubmit="return validateForm(this);">
+<input type="hidden" name="action" value="activateAccount" />
+<input type="hidden" name="module" value="user" />
+
+<table cellspacing="2" cellpadding="2" width="100%" align="center" border="0">
+	<tr>
+		<td class="ForumList" align="left">
+			<span class="nav"><a class="nav" href="${JForumContext.encodeURL("/forums/list")}">${I18n.getMessage("ForumListing.forumIndex")}</a></span>
+		</td>
+	</tr>
+</table>
+		
+<table class="forumlin" cellspacing="1" cellpadding="3" width="1327" border="0">
+	<tr>
+		<th class="thhead" valign="middle" colspan="2" height="25" width="1319">${I18n.getMessage("ActivateAccount.title")}</th>
+	</tr>
+        
+	<tr>
+		<td class="row2" colspan="2" align="center" width="1319"><span class="gensmall"><font color="red">${I18n.getMessage("User.requiredFields")}</font></span></td>
+	</tr>
+        
+	<tr class="recupero">
+		<td class="recupero" width="674" align="right"><span class="gen">${I18n.getMessage("ActivateAccount.userId")}: 
+		<font color="#FF0000">*</font></span><p><span class="gen">${I18n.getMessage("ActivateAccount.hash")}: 
+		<font color="#FF0000">*</font></span></td>
+		<td class="recupero" width="638" align="right">
+		<p align="left"><input class="post" type="text" style="WIDTH: 200px" maxlength="25" size="25" name="user_id"/></p>
+		<p align="left"><input class="post" type="text" style="WIDTH: 200px" maxlength="255" size="25" name="hash"/></td>
+	</tr>
+        
+	<tr align="center">
+		<td class="catgrigio" colspan="2" height="28" width="1319">
+			<input class="mainoption" type="submit" value="${I18n.getMessage("User.submit")}" name="submit" />&nbsp;&nbsp;
+			<input class="liteoption" type="reset" value="${I18n.getMessage("User.reset")}" name="reset" />
+		</td>
+	</tr>
+</table>
+</form>
+<#include "bottom.htm"/>
